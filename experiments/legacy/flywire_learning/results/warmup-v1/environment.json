@@ -1,0 +1,94 @@
+{
+  "observed_at_utc": "2026-09-11T14:35:09.310806+00:00",
+  "scope": "Post-run host snapshot for the completed warmup v1 study; not an isolated benchmark.",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "git_head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "b05ed24f8c9f3651e60a6b67834a9e11fad7bf21",
+    "stderr": ""
+  },
+  "git_branch": {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "exit_code": 0,
+    "stdout": "codex/flywire-learning",
+    "stderr": ""
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0,
+    "stdout": "?? brian2-rust/experiments/flywire_learning/results/warmup-v1/",
+    "stderr": ""
+  },
+  "rustc": {
+    "command": [
+      "/atlas-home/0004/.rustup/toolchains/1.98.1-aarch64-apple-darwin/bin/rustc",
+      "-Vv"
+    ],
+    "exit_code": 0,
+    "stdout": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: aarch64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "stderr": ""
+  },
+  "source_sha256": {
+    "brian2-rust/experiments/flywire_learning/experiment.py": "f3abc5e53f0a41fa0464786f0d1524b968b707e13dda5016ae1b9284e46161b8",
+    "brian2-rust/experiments/flywire_learning/spiking.py": "c57e2d3121afe9f1efda31f772dcac972ce6f85461ebd35fb7cc509d17cbd08b",
+    "brian2-rust/experiments/flywire_learning/PROTOCOL.md": "433168ef1ba0a26f0f75afd616c1a26b9743a4d0f134a02bc3ea04def5478aa2",
+    "brian2-rust/experiments/flywire_learning/study.py": "62e3ab8f5b9d40ceea3eb83d45cee16b3adde58bee930198425df7adbef3aa15",
+    "brian2-rust/experiments/flywire_learning/report.py": "dc2b189ed95ec9c03de8ea98bc1c2280aa6f0e099dd6b1abfbc5a1482486a3ca",
+    "brian2-rust/experiments/flywire_learning/native_measure.py": "e5acd25f95343b0d6951ed3013b1694c0fc9857def5670c2f56428071cde4096",
+    "brian2-rust/experiments/flywire_learning/record_environment.py": "dede570c62d30966159ddd54327dafe4c340b2de06aa34230f45710447ef6bd8",
+    "brian2-rust/python/brian2_rust/device.py": "beb902d69a2e4013de96d6be482cc2a2404bc9ddcea62e0c04d310f66d2aac39",
+    "brian2-rust/python/brian2_rust/export.py": "c1429fc93e3cbfc256bbcedeb4600942f33d29b8f1d0f12cda7f2b63de479718",
+    "brian2-rust/experiments/flywire_learning/warmup_study.py": "78fa8621e19e9ffb80976e68c7b0f68ba1727dcb555fa7f685f30d0de9a36479",
+    "brian2-rust/experiments/flywire_learning/warmup_report.py": "dbb72894c3d973b611c812995b9793aa042581bb1454b6ea0c4ba0dc9ca24ad4",
+    "brian2-rust/experiments/flywire_learning/plot_warmup.py": "18b8193a12bdcddeb78bd6e11ab1900bc8b82cd680d21b84e6588697ec73d7f1",
+    "brian2-rust/experiments/flywire_learning/WARMUP_PROTOCOL.md": "f2eb52316bd21848e9ccc24cc604c162952dcc8f53ca6dae28e13fb9df8b4ede"
+  },
+  "measurement_notes": [
+    "Other workloads were active; per-case wall times include shared-host contention.",
+    "Generated outputs and Rust target are on external T7 storage.",
+    "Native peak RSS is measured by a fresh small wait4 supervisor.",
+    "Frontend and native peaks are separate; their maxima are not a process-tree peak."
+  ],
+  "hardware": {
+    "command": [
+      "/usr/sbin/sysctl",
+      "hw.model",
+      "hw.ncpu",
+      "hw.memsize",
+      "machdep.cpu.brand_string"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted"
+  },
+  "cpp_compiler": {
+    "command": [
+      "clang++",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+    "stderr": ""
+  },
+  "packages": {
+    "numpy": "2.5.2",
+    "Cython": "3.3.0",
+    "sympy": "1.14.0",
+    "matplotlib": "3.11.1"
+  }
+}

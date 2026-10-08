@@ -1,0 +1,752 @@
+[
+  {
+    "seed": 11,
+    "condition": "paired",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.9050928381259221,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 11,
+    "condition": "frozen",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 11,
+    "condition": "teaching_off",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 0,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 11,
+    "condition": "shuffled_reward",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 3,
+        "1": 3
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 3,
+        "1": 3
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8560568897792887,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 11,
+    "condition": "reversal",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 6
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.869529773818772,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 23,
+    "condition": "paired",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8714200117230719,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 23,
+    "condition": "frozen",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 23,
+    "condition": "teaching_off",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 0,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 23,
+    "condition": "shuffled_reward",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 4,
+        "1": 2
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 2,
+        "1": 4
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8790163964347675,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 23,
+    "condition": "reversal",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 6
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8824730647032907,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 47,
+    "condition": "paired",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.9064786377394358,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 47,
+    "condition": "frozen",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 47,
+    "condition": "teaching_off",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 0,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 47,
+    "condition": "shuffled_reward",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 3,
+        "1": 3
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 3,
+        "1": 3
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8916582036269883,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 47,
+    "condition": "reversal",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 6
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8818551453703938,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 83,
+    "condition": "paired",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8882623570653769,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 83,
+    "condition": "frozen",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 83,
+    "condition": "teaching_off",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 0,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 83,
+    "condition": "shuffled_reward",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 4,
+        "1": 2
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 3,
+        "1": 3
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8531824682229688,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 83,
+    "condition": "reversal",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 6
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8675416719622324,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 131,
+    "condition": "paired",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.9027084854467099,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 131,
+    "condition": "frozen",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 6,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 131,
+    "condition": "teaching_off",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 0,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 0
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 1.0,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 131,
+    "condition": "shuffled_reward",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 4,
+        "1": 2
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 5,
+        "1": 1
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8398195332291718,
+    "native_stages_measured": true
+  },
+  {
+    "seed": 131,
+    "condition": "reversal",
+    "test_learning_and_teaching_off": true,
+    "reward_counts_by_block_and_cue": {
+      "pre": {
+        "0": 0,
+        "1": 0
+      },
+      "acquisition": {
+        "0": 6,
+        "1": 0
+      },
+      "post": {
+        "0": 0,
+        "1": 0
+      },
+      "second": {
+        "0": 0,
+        "1": 6
+      },
+      "final": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    "all_test_gain_arrays_exact": true,
+    "contact_weighted_final_gain": 0.8838536140877847,
+    "native_stages_measured": true
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "selected_epochs": 7,
+  "validation_accuracy": 0.9874,
+  "protocol_sha256": "c35b189c6310995d465dd0a4ef577a22c09b51c2b3a5553069721d7f4aaab08f",
+  "official_test_used": false,
+  "model_sha256": "cf0b5ddf20a399082a0b9b48a6f41b7f1f44bd110800007cd455a2ffa71d2d88"
+}

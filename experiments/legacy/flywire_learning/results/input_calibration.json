@@ -1,0 +1,150 @@
+{
+  "40": {
+    "stages": [
+      {
+        "name": "pilot",
+        "end_ms": 1100.0,
+        "training": false,
+        "start_ms": 0.0,
+        "weights_frozen_exact": true,
+        "gain_min": 1.0,
+        "gain_mean": 1.0,
+        "gain_max": 1.0,
+        "native": {
+          "native_wall_seconds": 13.406177832977846,
+          "native_peak_rss_bytes": 289243136,
+          "exit_code": 0,
+          "pid": 95529
+        },
+        "timings": {
+          "initialization_seconds": 1.9608220840000001,
+          "simulation_and_recording_seconds": 10.527332459,
+          "dump_write_seconds": 0.034734125
+        }
+      }
+    ],
+    "trials": [
+      {
+        "block": "pilot",
+        "start_ms": 100.0,
+        "cue": 0,
+        "training": false,
+        "reward": 0,
+        "mbon_spikes": 0,
+        "mbon_hz": 0.0,
+        "kc_spikes": 1291,
+        "kc_hz": 0.9974888931813792,
+        "input_spikes": 756,
+        "input_hz": 44.470588235294116
+      },
+      {
+        "block": "pilot",
+        "start_ms": 600.0,
+        "cue": 1,
+        "training": false,
+        "reward": 0,
+        "mbon_spikes": 0,
+        "mbon_hz": 0.0,
+        "kc_spikes": 760,
+        "kc_hz": 0.5872126714313309,
+        "input_spikes": 723,
+        "input_hz": 53.55555555555556
+      }
+    ],
+    "contrasts": {
+      "pilot": {
+        "A_hz": 0.0,
+        "B_hz": 0.0,
+        "B_minus_A_hz": 0.0
+      }
+    },
+    "final_gain_min": 1.0,
+    "final_gain_mean": 1.0,
+    "changed_edges": 0,
+    "spikes": 282384,
+    "end_to_end_seconds": 31.35172804200556,
+    "frontend_peak_rss_bytes": 515850240,
+    "finite_states": true,
+    "nonnegative_conductances": true,
+    "final_voltage_min_mv": -68.88014845541599,
+    "final_voltage_max_mv": -45.00279833741542
+  },
+  "80": {
+    "stages": [
+      {
+        "name": "pilot",
+        "end_ms": 1100.0,
+        "training": false,
+        "start_ms": 0.0,
+        "weights_frozen_exact": true,
+        "gain_min": 1.0,
+        "gain_mean": 1.0,
+        "gain_max": 1.0,
+        "artifact_directory": "/atlas-storage/0002/codex-flywire-learning/output/learning-full-pilot80/project",
+        "native": {
+          "native_wall_seconds": 5.656818832969293,
+          "native_peak_rss_bytes": 292618240,
+          "exit_code": 0,
+          "pid": 98187
+        },
+        "timings": {
+          "initialization_seconds": 0.826615916,
+          "simulation_and_recording_seconds": 4.225345834,
+          "dump_write_seconds": 0.032505416
+        },
+        "build_timings": {
+          "validation_seconds": 1.7535722500178963,
+          "generate_seconds": 1.8334864169592038,
+          "compile_seconds": 3.7017868330003694
+        }
+      }
+    ],
+    "trials": [
+      {
+        "block": "pilot",
+        "start_ms": 100.0,
+        "cue": 0,
+        "training": false,
+        "reward": 0,
+        "mbon_spikes": 0,
+        "mbon_hz": 0.0,
+        "kc_spikes": 1580,
+        "kc_hz": 1.2207842379756615,
+        "input_spikes": 1198,
+        "input_hz": 70.47058823529412
+      },
+      {
+        "block": "pilot",
+        "start_ms": 600.0,
+        "cue": 1,
+        "training": false,
+        "reward": 0,
+        "mbon_spikes": 0,
+        "mbon_hz": 0.0,
+        "kc_spikes": 888,
+        "kc_hz": 0.6861116476723972,
+        "input_spikes": 1154,
+        "input_hz": 85.48148148148148
+      }
+    ],
+    "contrasts": {
+      "pilot": {
+        "A_hz": 0.0,
+        "B_hz": 0.0,
+        "B_minus_A_hz": 0.0
+      }
+    },
+    "final_gain_min": 1.0,
+    "final_gain_mean": 1.0,
+    "changed_edges": 0,
+    "spikes": 283517,
+    "end_to_end_seconds": 15.680493667023256,
+    "frontend_peak_rss_bytes": 490422272,
+    "finite_states": true,
+    "nonnegative_conductances": true,
+    "final_voltage_min_mv": -69.20387579442693,
+    "final_voltage_max_mv": -45.00038470131138
+  },
+  "selected_amplitude_mv": 40,
+  "selection_reason": "Neither candidate produced an MBON01 window spike; use predefined 40 mV fallback without expanding search."
+}

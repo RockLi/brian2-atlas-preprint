@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-11",
+  "branch": "codex/flywire-learning",
+  "base_commit": "0bc46a102290846836c5d1c76e19e6c027c34d2c",
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "numpy": "2.5.2",
+  "source_sha256": {
+    "test_mechanism.py": "d15b3c5a654120bfd752ed56aa737142f93a268bc3556828e8accebc9b7f1923",
+    "audit_connectome.py": "a57db178dcf2081b0d19566c0ce287944c0c0bdea7b82fc24dd0ef9256008eae",
+    "mechanism.py": "bbb9e5ec1806bbcfba3c4ac9b08279c9c05ecb900d6db959cb0722963dde81dc"
+  },
+  "tests": "7 passed; pytest test_mechanism.py",
+  "export_validation": "62,261 unique original edge IDs; source CSR intervals, targets, uint64 roots and weights match source exactly",
+  "notes": "No whole-brain learning simulation or backend performance measurement was run."
+}

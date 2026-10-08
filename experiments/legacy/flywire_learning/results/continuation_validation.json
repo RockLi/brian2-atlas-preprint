@@ -1,0 +1,12 @@
+{
+  "numpy-1-full": "passed",
+  "reference-1-full": "passed",
+  "reference-1-split": "passed",
+  "reference-1-restore": "passed",
+  "aot-1-full": "passed",
+  "aot-1-split": "passed",
+  "aot-1-restore": "passed",
+  "aot-4-full": "passed",
+  "aot-4-split": "passed",
+  "aot-4-restore": "passed"
+}

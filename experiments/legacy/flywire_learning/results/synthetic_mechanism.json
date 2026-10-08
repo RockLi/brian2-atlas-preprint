@@ -1,0 +1,1798 @@
+{
+  "schema": "flywire-learning-synthetic-reference-v1",
+  "scope": "Synthetic rate model; no FlyWire edges, LIF, Rust or behavioural validation.",
+  "source_sha256": "bbb9e5ec1806bbcfba3c4ac9b08279c9c05ecb900d6db959cb0722963dde81dc",
+  "numpy_version": "2.5.2",
+  "seeds": [
+    11,
+    23,
+    47,
+    83,
+    131
+  ],
+  "configuration": {
+    "kc": 128,
+    "mbon_channels": 2,
+    "active_kc": 16,
+    "shared_kc": 4,
+    "acquisition_trials": 160,
+    "test_trials": 400,
+    "eta": 0.15,
+    "weight_bounds": [
+      0,
+      1.5
+    ],
+    "eligibility_tau_seconds": 0.5,
+    "delayed_reward_seconds": 2.0
+  },
+  "summary": {
+    "paired": {
+      "mean_A_minus_B": 0.9985747017222618,
+      "seed_min": 0.9926560712525218,
+      "seed_max": 1.0105418170519704
+    },
+    "frozen": {
+      "mean_A_minus_B": 0.0,
+      "seed_min": 0.0,
+      "seed_max": 0.0
+    },
+    "gate_off": {
+      "mean_A_minus_B": 0.0,
+      "seed_min": 0.0,
+      "seed_max": 0.0
+    },
+    "shuffled_reward": {
+      "mean_A_minus_B": 0.02322675038392279,
+      "seed_min": -0.22616205395388417,
+      "seed_max": 0.29490260304231264
+    },
+    "delayed_reward": {
+      "mean_A_minus_B": 0.13759232214304506,
+      "seed_min": 0.13592103940946576,
+      "seed_max": 0.13912038097490373
+    },
+    "reversal": {
+      "mean_A_minus_B": -0.9933614493389242,
+      "seed_min": -1.0073086888072433,
+      "seed_max": -0.9765547321084526
+    }
+  },
+  "runs": [
+    {
+      "seed": 11,
+      "conditions": {
+        "paired": {
+          "A_mean": 1.0153835161825089,
+          "B_mean": 0.004841699130538434,
+          "A_minus_B": 1.0105418170519704,
+          "reward_prediction_mse": 0.0009838450526361408,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.8250695801499707,
+              "B_mean": 0.10302365226377312,
+              "A_minus_B": 0.7220459278861976,
+              "reward_prediction_mse": 0.021117982183803216
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.9478762192996217,
+              "B_mean": 0.04007020950607724,
+              "A_minus_B": 0.9078060097935445,
+              "reward_prediction_mse": 0.002894516071126747
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.9819417593315525,
+              "B_mean": 0.021199067882866275,
+              "A_minus_B": 0.9607426914486862,
+              "reward_prediction_mse": 0.0011870420913577318
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.9935010396605076,
+              "B_mean": 0.007361191884004013,
+              "A_minus_B": 0.9861398477765037,
+              "reward_prediction_mse": 0.0008738726513570161
+            },
+            {
+              "trial": 100,
+              "A_mean": 1.001178079782675,
+              "B_mean": 0.012667886667012827,
+              "A_minus_B": 0.9885101931156622,
+              "reward_prediction_mse": 0.0009050383895862534
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.9983434382263618,
+              "B_mean": 0.0011911423404570418,
+              "A_minus_B": 0.9971522958859048,
+              "reward_prediction_mse": 0.0008311231456159835
+            },
+            {
+              "trial": 140,
+              "A_mean": 1.000727355692333,
+              "B_mean": 0.008513297293080398,
+              "A_minus_B": 0.9922140583992527,
+              "reward_prediction_mse": 0.0008621070400145071
+            },
+            {
+              "trial": 160,
+              "A_mean": 1.0153835161825089,
+              "B_mean": 0.004841699130538434,
+              "A_minus_B": 1.0105418170519704,
+              "reward_prediction_mse": 0.0009838450526361408
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.1602942621323294,
+          "weight_max": 1.3397057378676696
+        },
+        "frozen": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "gate_off": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "shuffled_reward": {
+          "A_mean": 0.38675349783244906,
+          "B_mean": 0.3817573110249797,
+          "A_minus_B": 0.004996186807469383,
+          "reward_prediction_mse": 0.2613201555145814,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.5095420739673598,
+              "B_mean": 0.3268326530544421,
+              "A_minus_B": 0.18270942091291775,
+              "reward_prediction_mse": 0.1738157592965335
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.7565021788996315,
+              "B_mean": 0.5451637587038378,
+              "A_minus_B": 0.21133842019579363,
+              "reward_prediction_mse": 0.17862166750200725
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.41024955490476145,
+              "B_mean": 0.5202054741750283,
+              "A_minus_B": -0.10995591927026682,
+              "reward_prediction_mse": 0.30948169837051603
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.4287855757210339,
+              "B_mean": 0.4665346495791495,
+              "A_minus_B": -0.0377490738581156,
+              "reward_prediction_mse": 0.2722822171618367
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.5269356204790829,
+              "B_mean": 0.42213314446204664,
+              "A_minus_B": 0.1048024760170363,
+              "reward_prediction_mse": 0.20134751921967492
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.5013991632809783,
+              "B_mean": 0.27251919187101054,
+              "A_minus_B": 0.2288799714099678,
+              "reward_prediction_mse": 0.16181867549379284
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.41299840958442957,
+              "B_mean": 0.5305698502139382,
+              "A_minus_B": -0.11757144062950864,
+              "reward_prediction_mse": 0.3134142416547798
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.38675349783244906,
+              "B_mean": 0.3817573110249797,
+              "A_minus_B": 0.004996186807469383,
+              "reward_prediction_mse": 0.2613201555145814
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.33320580275063355,
+          "weight_max": 1.166794197249367
+        },
+        "delayed_reward": {
+          "A_mean": 0.1774557209955011,
+          "B_mean": 0.041534681586035356,
+          "A_minus_B": 0.13592103940946576,
+          "reward_prediction_mse": 0.33917603215721503,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.030327227904810846,
+              "B_mean": 0.007071766060133928,
+              "A_minus_B": 0.023255461844676917,
+              "reward_prediction_mse": 0.4701582991366818
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.05356139785447396,
+              "B_mean": 0.012916367584183438,
+              "A_minus_B": 0.040645030270290525,
+              "reward_prediction_mse": 0.4479584870807928
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.07652558484132536,
+              "B_mean": 0.0183563412014232,
+              "A_minus_B": 0.05816924363990217,
+              "reward_prediction_mse": 0.4265751757357321
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.09193374887576516,
+              "B_mean": 0.021741059836884978,
+              "A_minus_B": 0.07019268903888018,
+              "reward_prediction_mse": 0.4125347015966236
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.10529148882533476,
+              "B_mean": 0.024377402314666483,
+              "A_minus_B": 0.08091408651066828,
+              "reward_prediction_mse": 0.4005569885543237
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.1268605470891354,
+              "B_mean": 0.029252826657863596,
+              "A_minus_B": 0.09760772043127182,
+              "reward_prediction_mse": 0.381626160094303
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.15520352228425083,
+              "B_mean": 0.036098521785471155,
+              "A_minus_B": 0.11910500049877967,
+              "reward_prediction_mse": 0.3575100337520161
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.1774557209955011,
+              "B_mean": 0.041534681586035356,
+              "A_minus_B": 0.13592103940946576,
+              "reward_prediction_mse": 0.33917603215721503
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.654768369391836,
+          "weight_max": 0.845231630608164
+        },
+        "reversal": {
+          "A_mean": 0.024841530939385157,
+          "B_mean": 1.0013962630478377,
+          "A_minus_B": -0.9765547321084526,
+          "reward_prediction_mse": 0.001214861691988907
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "conditions": {
+        "paired": {
+          "A_mean": 0.9888154728089205,
+          "B_mean": -0.0038405984436012557,
+          "A_minus_B": 0.9926560712525218,
+          "reward_prediction_mse": 0.0009333550493420559,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.7362880588295414,
+              "B_mean": 0.11825205950268952,
+              "A_minus_B": 0.6180359993268518,
+              "reward_prediction_mse": 0.0422525962714663
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.9384521246468565,
+              "B_mean": 0.07322803968341834,
+              "A_minus_B": 0.8652240849634381,
+              "reward_prediction_mse": 0.005334508145287634
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.9693723696297625,
+              "B_mean": 0.011773410570279945,
+              "A_minus_B": 0.9575989590594826,
+              "reward_prediction_mse": 0.0013719728959338965
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.9824154920316184,
+              "B_mean": 0.0015072678991967803,
+              "A_minus_B": 0.9809082241324216,
+              "reward_prediction_mse": 0.001018687297862319
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.9859424348911909,
+              "B_mean": -0.0006977942621164168,
+              "A_minus_B": 0.9866402291533074,
+              "reward_prediction_mse": 0.0009654730571586236
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.9920925628764329,
+              "B_mean": 0.006601061023651617,
+              "A_minus_B": 0.9854915018527812,
+              "reward_prediction_mse": 0.0009138366520193901
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.9964157484949757,
+              "B_mean": 0.011431300870187414,
+              "A_minus_B": 0.9849844476247883,
+              "reward_prediction_mse": 0.0009342385802103801
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.9888154728089205,
+              "B_mean": -0.0038405984436012557,
+              "A_minus_B": 0.9926560712525218,
+              "reward_prediction_mse": 0.0009333550493420559
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.14960636726335397,
+          "weight_max": 1.3503936327366466
+        },
+        "frozen": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "gate_off": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "shuffled_reward": {
+          "A_mean": 0.3476282378974354,
+          "B_mean": 0.5737902918513196,
+          "A_minus_B": -0.22616205395388417,
+          "reward_prediction_mse": 0.3780226677614955,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.5629179901347894,
+              "B_mean": 0.5761116849478928,
+              "A_minus_B": -0.013193694813103396,
+              "reward_prediction_mse": 0.26188677479302597
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.22986404781660558,
+              "B_mean": 0.2506939560180128,
+              "A_minus_B": -0.020829908201407232,
+              "reward_prediction_mse": 0.32821158184401683
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.21586540375577346,
+              "B_mean": 0.4289081087500473,
+              "A_minus_B": -0.21304270499427386,
+              "reward_prediction_mse": 0.39983268375623615
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.48527347543207355,
+              "B_mean": 0.6792917010384594,
+              "A_minus_B": -0.19401822560638582,
+              "reward_prediction_mse": 0.36394693784268256
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.41535025377626666,
+              "B_mean": 0.834387648704096,
+              "A_minus_B": -0.4190373949278293,
+              "reward_prediction_mse": 0.5198498863671717
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.43930943664455924,
+              "B_mean": 0.680618902980133,
+              "A_minus_B": -0.2413094663355737,
+              "reward_prediction_mse": 0.38948344228519416
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.44308888291382814,
+              "B_mean": 0.8656630669272295,
+              "A_minus_B": -0.42257418401340135,
+              "reward_prediction_mse": 0.5306981585608038
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.3476282378974354,
+              "B_mean": 0.5737902918513196,
+              "A_minus_B": -0.22616205395388417,
+              "reward_prediction_mse": 0.3780226677614955
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.2739579367445675,
+          "weight_max": 1.2260420632554336
+        },
+        "delayed_reward": {
+          "A_mean": 0.1781862182551061,
+          "B_mean": 0.04073307899668447,
+          "A_minus_B": 0.13745313925842165,
+          "reward_prediction_mse": 0.33854016429452466,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.023766838695359,
+              "B_mean": 0.006325044056764084,
+              "A_minus_B": 0.017441794638594917,
+              "reward_prediction_mse": 0.4765360592005524
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.050937285370567444,
+              "B_mean": 0.012819802892698658,
+              "A_minus_B": 0.03811748247786879,
+              "reward_prediction_mse": 0.45044405171459473
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.07671053154042073,
+              "B_mean": 0.018700669654572934,
+              "A_minus_B": 0.0580098618858478,
+              "reward_prediction_mse": 0.42641057555667233
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.09593519317912996,
+              "B_mean": 0.023453739273710618,
+              "A_minus_B": 0.07248145390541935,
+              "reward_prediction_mse": 0.4089481595181437
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.11950967454749424,
+              "B_mean": 0.02840086141380974,
+              "A_minus_B": 0.0911088131336845,
+              "reward_prediction_mse": 0.3880446863456868
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.1395754568282882,
+              "B_mean": 0.03278126961827954,
+              "A_minus_B": 0.10679418721000866,
+              "reward_prediction_mse": 0.3707158019889965
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.15583099284011742,
+              "B_mean": 0.03584462455175058,
+              "A_minus_B": 0.11998636828836684,
+              "reward_prediction_mse": 0.3569696110844107
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.1781862182551061,
+              "B_mean": 0.04073307899668447,
+              "A_minus_B": 0.13745313925842165,
+              "reward_prediction_mse": 0.33854016429452466
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.6527554302225708,
+          "weight_max": 0.8472445697774292
+        },
+        "reversal": {
+          "A_mean": -0.009421117615200519,
+          "B_mean": 0.9978875711920427,
+          "A_minus_B": -1.0073086888072433,
+          "reward_prediction_mse": 0.0009006700615536389
+        }
+      }
+    },
+    {
+      "seed": 47,
+      "conditions": {
+        "paired": {
+          "A_mean": 1.0032774695948599,
+          "B_mean": 0.009770494960186898,
+          "A_minus_B": 0.993506974634673,
+          "reward_prediction_mse": 0.0012716522425814919,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.7574900087858711,
+              "B_mean": 0.1290142453119182,
+              "A_minus_B": 0.628475763473953,
+              "reward_prediction_mse": 0.03839227337260117
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.9392235292533955,
+              "B_mean": 0.06474404648685748,
+              "A_minus_B": 0.874479482766538,
+              "reward_prediction_mse": 0.005015085984257084
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.9700104699597134,
+              "B_mean": 0.008958537499849088,
+              "A_minus_B": 0.9610519324598643,
+              "reward_prediction_mse": 0.0016792853167375942
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.9855933375446733,
+              "B_mean": 0.004063070658857276,
+              "A_minus_B": 0.981530266885816,
+              "reward_prediction_mse": 0.0013293006328636667
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.9958049069524383,
+              "B_mean": -0.013114482986165505,
+              "A_minus_B": 1.0089193899386038,
+              "reward_prediction_mse": 0.0013477939126517505
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.9922599020457031,
+              "B_mean": -0.009805140031318629,
+              "A_minus_B": 1.0020650420770219,
+              "reward_prediction_mse": 0.0013015309131887887
+            },
+            {
+              "trial": 140,
+              "A_mean": 1.002258431088685,
+              "B_mean": -0.005073694842749629,
+              "A_minus_B": 1.0073321259314347,
+              "reward_prediction_mse": 0.0012586628496719832
+            },
+            {
+              "trial": 160,
+              "A_mean": 1.0032774695948599,
+              "B_mean": 0.009770494960186898,
+              "A_minus_B": 0.993506974634673,
+              "reward_prediction_mse": 0.0012716522425814919
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.15434024464037938,
+          "weight_max": 1.3456597553596206
+        },
+        "frozen": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "gate_off": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "shuffled_reward": {
+          "A_mean": 0.7335514542383027,
+          "B_mean": 0.5546918340822776,
+          "A_minus_B": 0.17885962015602508,
+          "reward_prediction_mse": 0.19037742472181823,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.4678825122138832,
+              "B_mean": 0.23622646981108708,
+              "A_minus_B": 0.23165604240279614,
+              "reward_prediction_mse": 0.169884181652247
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.35811575412534113,
+              "B_mean": 0.4132115924974119,
+              "A_minus_B": -0.05509583837207077,
+              "reward_prediction_mse": 0.29168278193930847
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.4497131924242547,
+              "B_mean": 0.44741858121695544,
+              "A_minus_B": 0.002294611207299291,
+              "reward_prediction_mse": 0.25187381383621327
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.6311571062948965,
+              "B_mean": 0.49912150084056783,
+              "A_minus_B": 0.13203560545432869,
+              "reward_prediction_mse": 0.19306895807265384
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.7958923734176895,
+              "B_mean": 0.6163939688433058,
+              "A_minus_B": 0.1794984045743837,
+              "reward_prediction_mse": 0.21165559894902738
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.4082676266468433,
+              "B_mean": 0.28780690516242935,
+              "A_minus_B": 0.12046072148441395,
+              "reward_prediction_mse": 0.21687217785713708
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.5688499108234879,
+              "B_mean": 0.3626678261497888,
+              "A_minus_B": 0.20618208467369908,
+              "reward_prediction_mse": 0.15938273901452324
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.7335514542383027,
+              "B_mean": 0.5546918340822776,
+              "A_minus_B": 0.17885962015602508,
+              "reward_prediction_mse": 0.19037742472181823
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.13803685562739437,
+          "weight_max": 1.3619631443726055
+        },
+        "delayed_reward": {
+          "A_mean": 0.17945315413266713,
+          "B_mean": 0.0403327731577634,
+          "A_minus_B": 0.13912038097490373,
+          "reward_prediction_mse": 0.3374969312531653,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.024324028953464236,
+              "B_mean": 0.006127055091618109,
+              "A_minus_B": 0.018196973861846127,
+              "reward_prediction_mse": 0.47599126291524485
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.05357860210045105,
+              "B_mean": 0.013275432522613474,
+              "A_minus_B": 0.04030316957783758,
+              "reward_prediction_mse": 0.4479481154779467
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0742989114181723,
+              "B_mean": 0.018026270257989734,
+              "A_minus_B": 0.05627264116018256,
+              "reward_prediction_mse": 0.4286299376819073
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.09014854786817049,
+              "B_mean": 0.021179880683300664,
+              "A_minus_B": 0.06896866718486983,
+              "reward_prediction_mse": 0.41414807530371756
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.11426061132822757,
+              "B_mean": 0.026682841902019413,
+              "A_minus_B": 0.08757776942620815,
+              "reward_prediction_mse": 0.39263755076758255
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.13435396531609992,
+              "B_mean": 0.03067985078154548,
+              "A_minus_B": 0.10367411453455444,
+              "reward_prediction_mse": 0.37516180923321274
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.15749099361102536,
+              "B_mean": 0.03571360726392822,
+              "A_minus_B": 0.12177738634709714,
+              "reward_prediction_mse": 0.35557554686660725
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.17945315413266713,
+              "B_mean": 0.0403327731577634,
+              "A_minus_B": 0.13912038097490373,
+              "reward_prediction_mse": 0.3374969312531653
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.6525716085206408,
+          "weight_max": 0.8474283914793592
+        },
+        "reversal": {
+          "A_mean": 0.0070257937148321655,
+          "B_mean": 0.9983065736152671,
+          "A_minus_B": -0.991280779900435,
+          "reward_prediction_mse": 0.0011254047467212237
+        }
+      }
+    },
+    {
+      "seed": 83,
+      "conditions": {
+        "paired": {
+          "A_mean": 0.9919982928259224,
+          "B_mean": -0.0024748374473171604,
+          "A_minus_B": 0.9944731302732396,
+          "reward_prediction_mse": 0.0010695449473367867,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.7727006455329498,
+              "B_mean": 0.11853128520744609,
+              "A_minus_B": 0.6541693603255038,
+              "reward_prediction_mse": 0.033445687077702145
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.9296858520415822,
+              "B_mean": 0.06934195580776377,
+              "A_minus_B": 0.8603438962338184,
+              "reward_prediction_mse": 0.005766987243225572
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.9713587960786354,
+              "B_mean": 0.030797703443791277,
+              "A_minus_B": 0.9405610926348441,
+              "reward_prediction_mse": 0.0018838725289072244
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.9909935477943472,
+              "B_mean": 0.017824642669624715,
+              "A_minus_B": 0.9731689051247225,
+              "reward_prediction_mse": 0.0012357408213544778
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.9964521907357278,
+              "B_mean": 0.020254661880918127,
+              "A_minus_B": 0.9761975288548096,
+              "reward_prediction_mse": 0.0012526160356172308
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.9973162153648374,
+              "B_mean": 0.019086763048302983,
+              "A_minus_B": 0.9782294523165344,
+              "reward_prediction_mse": 0.001217480593084258
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.9903942744470186,
+              "B_mean": -0.0028968248515731463,
+              "A_minus_B": 0.9932910992985917,
+              "reward_prediction_mse": 0.001083096992835576
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.9919982928259224,
+              "B_mean": -0.0024748374473171604,
+              "A_minus_B": 0.9944731302732396,
+              "reward_prediction_mse": 0.0010695449473367867
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.1811485367955761,
+          "weight_max": 1.3188514632044233
+        },
+        "frozen": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "gate_off": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "shuffled_reward": {
+          "A_mean": 0.49103509290987984,
+          "B_mean": 0.6274976970421888,
+          "A_minus_B": -0.13646260413230898,
+          "reward_prediction_mse": 0.3271276419013543,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.49577477324417346,
+              "B_mean": 0.5248410470086214,
+              "A_minus_B": -0.02906627376444798,
+              "reward_prediction_mse": 0.26518650306569524
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.38789424112775284,
+              "B_mean": 0.549201438430505,
+              "A_minus_B": -0.16130719730275211,
+              "reward_prediction_mse": 0.3383839873256364
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.41733492813070394,
+              "B_mean": 0.5897896991053218,
+              "A_minus_B": -0.1724547709746178,
+              "reward_prediction_mse": 0.3440095232304923
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.5592790805394591,
+              "B_mean": 0.5843210065327589,
+              "A_minus_B": -0.025041925993299796,
+              "reward_prediction_mse": 0.2682734633119876
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.430180144147579,
+              "B_mean": 0.5490072276038503,
+              "A_minus_B": -0.11882708345627135,
+              "reward_prediction_mse": 0.3134574583829563
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.5767523866612565,
+              "B_mean": 0.38530399450737124,
+              "A_minus_B": 0.19144839215388526,
+              "reward_prediction_mse": 0.1643869097955651
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.4078292645345602,
+              "B_mean": 0.5505076651459426,
+              "A_minus_B": -0.14267840061138243,
+              "reward_prediction_mse": 0.32747175003049805
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.49103509290987984,
+              "B_mean": 0.6274976970421888,
+              "A_minus_B": -0.13646260413230898,
+              "reward_prediction_mse": 0.3271276419013543
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.1643412484227064,
+          "weight_max": 1.3356587515772935
+        },
+        "delayed_reward": {
+          "A_mean": 0.17957334908088934,
+          "B_mean": 0.04148091069076859,
+          "A_minus_B": 0.13809243839012075,
+          "reward_prediction_mse": 0.33743888651410286,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.025730691319023516,
+              "B_mean": 0.006404431526190676,
+              "A_minus_B": 0.01932625979283284,
+              "reward_prediction_mse": 0.47462143360107545
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.04510715517313416,
+              "B_mean": 0.011094766024244309,
+              "A_minus_B": 0.034012389148889856,
+              "reward_prediction_mse": 0.455973489665286
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.06312989065659774,
+              "B_mean": 0.014849690138464764,
+              "A_minus_B": 0.048280200518132976,
+              "reward_prediction_mse": 0.43897644104146877
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.08964475839163967,
+              "B_mean": 0.02185535146505893,
+              "A_minus_B": 0.06778940692658074,
+              "reward_prediction_mse": 0.4146193477249126
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.11458423453140754,
+              "B_mean": 0.027578237339949015,
+              "A_minus_B": 0.08700599719145852,
+              "reward_prediction_mse": 0.39237245786493474
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.13406410331737229,
+              "B_mean": 0.03193056752047722,
+              "A_minus_B": 0.10213353579689508,
+              "reward_prediction_mse": 0.3754483339755208
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.1574634580632905,
+              "B_mean": 0.03686950588650733,
+              "A_minus_B": 0.12059395217678318,
+              "reward_prediction_mse": 0.3556355604719319
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.17957334908088934,
+              "B_mean": 0.04148091069076859,
+              "A_minus_B": 0.13809243839012075,
+              "reward_prediction_mse": 0.33743888651410286
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.6516042809338857,
+          "weight_max": 0.8483957190661143
+        },
+        "reversal": {
+          "A_mean": 0.003193392134593583,
+          "B_mean": 0.9940994494466596,
+          "A_minus_B": -0.990906057312066,
+          "reward_prediction_mse": 0.0010022256977986353
+        }
+      }
+    },
+    {
+      "seed": 131,
+      "conditions": {
+        "paired": {
+          "A_mean": 0.9976249936082127,
+          "B_mean": -0.004070521790691375,
+          "A_minus_B": 1.001695515398904,
+          "reward_prediction_mse": 0.0009337742184647718,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.8171205049403468,
+              "B_mean": 0.08987671631632001,
+              "A_minus_B": 0.7272437886240268,
+              "reward_prediction_mse": 0.021340340325054816
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.9206715242405127,
+              "B_mean": 0.026277444297315985,
+              "A_minus_B": 0.8943940799431968,
+              "reward_prediction_mse": 0.004272777970653379
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.9839559963555695,
+              "B_mean": 0.015715473574832443,
+              "A_minus_B": 0.968240522780737,
+              "reward_prediction_mse": 0.0011516027985598153
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.991511727915144,
+              "B_mean": -0.006887274248358204,
+              "A_minus_B": 0.9983990021635022,
+              "reward_prediction_mse": 0.0009845955914505567
+            },
+            {
+              "trial": 100,
+              "A_mean": 1.0033848298661545,
+              "B_mean": -0.004462713762288724,
+              "A_minus_B": 1.0078475436284433,
+              "reward_prediction_mse": 0.0009578530709146561
+            },
+            {
+              "trial": 120,
+              "A_mean": 1.0036672455933906,
+              "B_mean": -0.013218488831937596,
+              "A_minus_B": 1.0168857344253281,
+              "reward_prediction_mse": 0.001043140541746687
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.9996059560950412,
+              "B_mean": -0.004461767034859796,
+              "A_minus_B": 1.0040677231299011,
+              "reward_prediction_mse": 0.0009402400118269519
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.9976249936082127,
+              "B_mean": -0.004070521790691375,
+              "A_minus_B": 1.001695515398904,
+              "reward_prediction_mse": 0.0009337742184647718
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.1686708085554149,
+          "weight_max": 1.3313291914445855
+        },
+        "frozen": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "gate_off": {
+          "A_mean": 0.0,
+          "B_mean": 0.0,
+          "A_minus_B": 0.0,
+          "reward_prediction_mse": 0.5,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.0,
+              "B_mean": 0.0,
+              "A_minus_B": 0.0,
+              "reward_prediction_mse": 0.5
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.75,
+          "weight_max": 0.75
+        },
+        "shuffled_reward": {
+          "A_mean": 0.6129220709241525,
+          "B_mean": 0.3180194678818399,
+          "A_minus_B": 0.29490260304231264,
+          "reward_prediction_mse": 0.12607806429902754,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.5262116067976464,
+              "B_mean": 0.255388867088226,
+              "A_minus_B": 0.27082273970942045,
+              "reward_prediction_mse": 0.14513741666662855
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.3970455320789165,
+              "B_mean": 0.3408818251877224,
+              "A_minus_B": 0.0561637068911941,
+              "reward_prediction_mse": 0.24007545281890635
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.519256274176564,
+              "B_mean": 0.6289093248228174,
+              "A_minus_B": -0.10965305064625341,
+              "reward_prediction_mse": 0.3138742317530868
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.7466904648056152,
+              "B_mean": 0.46989894185701675,
+              "A_minus_B": 0.27679152294859843,
+              "reward_prediction_mse": 0.14303971766812687
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.5274492671483781,
+              "B_mean": 0.5082681774069031,
+              "A_minus_B": 0.019181089741475033,
+              "reward_prediction_mse": 0.24127050436289843
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.7028991958722445,
+              "B_mean": 0.4942090780047792,
+              "A_minus_B": 0.20869011786746527,
+              "reward_prediction_mse": 0.16689903661877586
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.5551644879163231,
+              "B_mean": 0.3675379732918924,
+              "A_minus_B": 0.1876265146244307,
+              "reward_prediction_mse": 0.16706435154485785
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.6129220709241525,
+              "B_mean": 0.3180194678818399,
+              "A_minus_B": 0.29490260304231264,
+              "reward_prediction_mse": 0.12607806429902754
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.18432539253096666,
+          "weight_max": 1.3156746074690333
+        },
+        "delayed_reward": {
+          "A_mean": 0.1788204211286456,
+          "B_mean": 0.041445808446332194,
+          "A_minus_B": 0.1373746126823134,
+          "reward_prediction_mse": 0.3380525846270875,
+          "learning_curve": [
+            {
+              "trial": 20,
+              "A_mean": 0.02986075940730296,
+              "B_mean": 0.007333426120474231,
+              "A_minus_B": 0.022527333286828728,
+              "reward_prediction_mse": 0.47061266557398723
+            },
+            {
+              "trial": 40,
+              "A_mean": 0.04609072180219892,
+              "B_mean": 0.011140349530752056,
+              "A_minus_B": 0.034950372271446865,
+              "reward_prediction_mse": 0.4550351969738318
+            },
+            {
+              "trial": 60,
+              "A_mean": 0.06885200258994637,
+              "B_mean": 0.01680907448276291,
+              "A_minus_B": 0.05204292810718346,
+              "reward_prediction_mse": 0.4336634169903432
+            },
+            {
+              "trial": 80,
+              "A_mean": 0.08947711608758777,
+              "B_mean": 0.021602214556572186,
+              "A_minus_B": 0.06787490153101558,
+              "reward_prediction_mse": 0.41476582304207954
+            },
+            {
+              "trial": 100,
+              "A_mean": 0.11343139245949688,
+              "B_mean": 0.027408227874065386,
+              "A_minus_B": 0.0860231645854315,
+              "reward_prediction_mse": 0.3933882104275535
+            },
+            {
+              "trial": 120,
+              "A_mean": 0.13560707871641214,
+              "B_mean": 0.032419736779642196,
+              "A_minus_B": 0.10318734193676996,
+              "reward_prediction_mse": 0.3741283315631484
+            },
+            {
+              "trial": 140,
+              "A_mean": 0.15227900257083912,
+              "B_mean": 0.035560635844346565,
+              "A_minus_B": 0.11671836672649255,
+              "reward_prediction_mse": 0.3599666833926139
+            },
+            {
+              "trial": 160,
+              "A_mean": 0.1788204211286456,
+              "B_mean": 0.041445808446332194,
+              "A_minus_B": 0.1373746126823134,
+              "reward_prediction_mse": 0.3380525846270875
+            }
+          ],
+          "test_weights_unchanged": true,
+          "weight_min": 0.6550162677227075,
+          "weight_max": 0.8449837322772925
+        },
+        "reversal": {
+          "A_mean": -0.005504657028773516,
+          "B_mean": 0.9952523315376505,
+          "A_minus_B": -1.000756988566424,
+          "reward_prediction_mse": 0.0011181847281663995
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Hyperparameters chosen as a mechanism check, not fitted physiology.",
+    "Probe curves are descriptive and were not used for parameter selection.",
+    "Frozen weight retention alone does not test biological consolidation.",
+    "Reward error and eligibility are supplied analytically, not by a DAN circuit."
+  ]
+}

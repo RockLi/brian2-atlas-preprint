@@ -1,0 +1,19 @@
+{
+  "final_report_sha256": "20c7a2f91c22c82ae1e27c21dbd3c4dc20f0fad056d422df8751107b45059b24",
+  "plot_source_sha256": "cc918e17968c953ecff863b4eec48f18cbc8cd2b600e5e99e70dcd4d577148ad",
+  "seeds": [
+    11,
+    23,
+    47,
+    83,
+    131
+  ],
+  "conditions": [
+    "paired",
+    "frozen",
+    "teaching_off",
+    "shuffled_reward",
+    "reversal"
+  ],
+  "note": "All five seeds shown; means are descriptive, not confidence intervals."
+}

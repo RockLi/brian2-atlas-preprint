@@ -1,0 +1,31 @@
+{
+  "schema": "mnist-cnn-v1",
+  "seed": 783,
+  "max_epochs": 10,
+  "batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "architecture": "conv5-16/pool2/conv5-32/pool2/fc128/fc10, ReLU",
+  "pixel_scaling": "uint8 / 255, no augmentation",
+  "device": "cpu",
+  "threads": 2,
+  "torch_version": "2.14.0",
+  "split_sha256": "093f1acee063032fb79e8e47bf47f72d6bbf7cae27628c3791d9b76989abca18",
+  "sources": {
+    "__init__.py": "ebc2c0ba1e6307891e384668d89a087bf54af4c2bcf94bb36678b728449f0546",
+    "__main__.py": "4227eea67c0b8915cb57ea8df314d43216f4cc0f77cab83882d2398a02d34082",
+    "backends/__init__.py": "527ac5eb5d4bcb4a81a604e1879738ce6222f74834d4c24dde4e9da4252c6960",
+    "backends/mpi.py": "6770202aa8b62c1c1238ea9c68717a2b7628fe94c5479ffc84ff900be56b515a",
+    "backends/mpi_worker.py": "7e5670989060b778f9c7faa1d24c00622953cbb5335e6e2b5e013aa1be24a66c",
+    "cnn.py": "a935100ed4013a16d4efd4479d3f4c984f4bfd1f2712e6ab12585c9aded9f39f",
+    "config.py": "0e33517ecae745e2b3f0cef79f5b783ba2c34ce6035d9049f6b416b9fe99ebea",
+    "dataset.py": "7a31459e0f89fd858a11788009c0ce7ccf2cfb58e88da1b408e84a86c8af183d",
+    "encoding.py": "cb85025863cee09307a51cf05123ff483185c51efcdbe9bc9396aca5ab241030",
+    "graph.py": "041a23d681f7adcab46105c50de4082081a07b800475b7deadcf20a1173855b8",
+    "model.py": "0065541998c365a15a0ede348f0b92ab55ffa6d0e4e4b93f92ad072e9389c2d9",
+    "protocol.py": "8d1fb99a81ab2ade1dcf8f2f367b9f156d2c9f191014440f51c4c4516f2ef2ba",
+    "readout.py": "ad32912753860ebaf158b070c8ecb4604cf127d02a7566e7fdde8fe9c24ebb07"
+  },
+  "selection": "best validation accuracy; earliest epoch wins ties",
+  "final_fit": "reinitialize then fit all official 60,000 at selected epoch count"
+}

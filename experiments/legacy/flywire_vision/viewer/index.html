@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101711"><title>FlyLab · Vision Lab</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/"><i></i>FlyLab <span>/ Vision Lab</span></a><div class="header-state"><span class="live-dot"></span><span id="backend">正在连接实验…</span></div></header>
+<main>
+<div class="intro"><div><p class="eyebrow">FLYWIRE · VISUAL CIRCUITS</p><h1>看见运动，追踪响应。</h1></div><span class="stage">01 / 视觉通路实验</span></div>
+<div id="notice" role="status" class="notice">正在读取真实仿真记录…</div>
+<div class="notice scope-warning">研究审查：当前轨迹的起点、终点位置可暴露方向标签，单帧规则在 4,000 个新片段上达到 100%。下方成绩是这套刺激的标签识别结果，尚不能证明网络利用了运动信息。</div>
+<div id="generalizationLink" class="notice" hidden><a href="/motion-generalization">查看未见速度研究：区间内与区间外的新速度 ↗</a></div>
+<div id="multispeedLink" class="notice" hidden><a href="/motion-speed">查看跨速度方向识别：新轨迹与冻结模型比较 ↗</a></div>
+<div id="refinementLink" class="notice" hidden><a href="/motion-v2">查看方向读出改进：新轨迹上的配对结果与消融 ↗</a></div>
+<div id="causalLink" class="notice" hidden><a href="/motion">查看新实验：端点平衡的周期运动、真实留出预测与因果消融 ↗</a></div>
+<div class="workspace">
+<section class="lab">
+<div class="section-head"><h2>刺激与神经活动</h2><span id="provenance">等待数据</span></div>
+<div class="views">
+<article class="view stimulus-view"><div class="view-label"><span>01 / 视觉刺激</span><b id="stimulusLabel">—</b></div><canvas id="stimulus" width="384" height="384" aria-label="当前视觉刺激画面"></canvas><p id="phase">准备</p></article>
+<article class="view eye-view"><div class="view-label"><span>02 / 右视叶输入细胞</span><select id="eyeMode" aria-label="输入细胞显示内容"><option value="spikes">实际放电</option><option value="drive">外部驱动</option></select></div><canvas id="eye" width="640" height="460" aria-label="按真实六角坐标排列的 Mi1 和 Tm1 输入细胞"></canvas><div class="legend"><span><i class="mi1"></i>Mi1</span><span><i class="tm1"></i>Tm1</span><span id="eyeCaption">每格 10 ms</span></div></article>
+</div>
+<div class="transport"><button id="play" class="play" disabled aria-label="播放时间轴">播放</button><input id="timeline" type="range" min="0" max="59" value="0" aria-label="仿真时间轴"><output id="time">0 ms / 600 ms</output><select id="speed" aria-label="回放速度"><option value="0.25">0.25×</option><option value="0.5" selected>0.5×</option><option value="1">1×</option></select></div>
+<div class="time-legend"><span>预热 100 ms</span><span>视觉刺激 400 ms</span><span>尾段 100 ms</span></div>
+<div class="section-head chart-head"><h2>下游神经响应</h2><div class="legend"><span><i class="mi1"></i>T4</span><span><i class="tm1"></i>T5</span><span><i class="lc4"></i>LC4</span><span class="compare-key">虚线 / 对照</span></div></div>
+<canvas id="response" width="1100" height="230" aria-label="T4 T5 LC4 每细胞平均放电率随时间变化"></canvas>
+<div class="section-head"><span class="muted">各亚型放电率 · Hz / neuron</span><span class="muted">10 ms 时间窗</span></div><canvas id="heatmap" width="1100" height="265" aria-label="各读出亚型的时间窗放电率热图"></canvas>
+</section>
+<aside>
+<section><div class="section-head"><h2>选择刺激</h2><span class="muted">输入条件</span></div><div id="kinds" class="kinds" role="group" aria-label="选择视觉刺激"></div></section>
+<section class="condition-section"><label class="label" for="condition">通路条件</label><select id="condition"><option value="intact">完整通路</option><option value="cut">切断 Mi1 / Tm1 输出</option></select><label class="check"><input id="compare" type="checkbox" checked> 显示配对对照</label><select id="reference" aria-label="配对对照类型"><option value="blank">同条件空白刺激</option><option value="opposite">另一通路条件</option></select><p id="comparisonNote" class="small"></p></section>
+<button id="compute" class="primary" disabled><span>重新仿真此刺激</span><span>↗</span></button><p id="computeStatus" role="status" class="small">检查实时计算能力…</p><div id="error" role="alert"></div>
+<section class="metrics"><div><span>实际仿真规模</span><strong id="neuronCount">—</strong><small id="edgeCount">—</small></div><div><span>下游活跃细胞 / 监测细胞</span><strong id="active">—</strong><small>刺激期 400 ms 内至少一次放电</small></div><div><span>外部输入脉冲</span><strong id="inputSpikes">—</strong><small>由图像编码得到</small></div><div><span>本次计算耗时</span><strong id="latency">—</strong><small>回放速度不代表计算速度</small></div></section>
+<section class="finding"><span class="eyebrow">实验读数</span><h3 id="findingTitle">等待真实响应</h3><p id="findingText"></p></section>
+<div class="task-state"><span>整段视频方向读出</span><b id="decoderStatus">尚未训练</b><strong id="prediction">—</strong><div id="directionScores"></div><p id="decoderNote">当前查看的是刺激引发的神经活动。</p></div>
+</aside>
+</div>
+<section id="robustnessStudy" class="direction-study" hidden aria-label="跨条件泛化与运动线索审查">
+<div class="section-head"><div><p class="eyebrow">AUDIT · GENERALIZATION</p><h2>换速度、位置和背景后，还能认对吗？</h2></div><span id="auditScope" class="muted"></span></div>
+<p id="auditSummary" class="study-summary"></p>
+<div id="auditConditions" class="audit-cards"></div>
+<h3 class="audit-subtitle">静止和乱序：是否仍能恢复原视频标签？</h3>
+<p class="small">这些对照没有原来的连贯运动。下列数值仅表示预测与原视频方向标签相同的比例，不能算作正确识别运动。</p>
+<div id="auditControls" class="audit-cards"></div>
+<p class="small">各条件复用同一批轨迹组，不能把所有片段当成独立样本合并统计。神经背景噪声保持固定；速度通过移动距离改变，因此路径长度也会改变。小样本区间只作描述，尚未校正多条件比较。</p>
+<a class="small" href="/api/audit" target="_blank">查看完整泛化审查记录 ↗</a>
+</section>
+<section id="directionStudy" class="direction-study" hidden aria-label="方向预测独立留出评估">
+<div class="section-head"><div><p class="eyebrow">DIRECTION · SIGNAL PATH</p><h2>方向信息在哪一层保留下来？</h2></div><span id="studyScope" class="muted"></span></div>
+<p id="studySummary" class="study-summary"></p>
+<div id="studyChange" class="notice" hidden></div><div id="pairedComparison" class="paired-comparison" hidden></div>
+<div id="pathResults" class="path-results"></div>
+<div class="study-detail"><div><h3>下游读出的预测分布</h3><p id="confusionNote" class="small">行是真实方向，列是预测方向。</p><div id="confusion" class="confusion"></div></div><div><h3>读出对照</h3><div id="studyControls"></div><p class="small">亚型汇总和时间求和是替代读出基线，与主模型的细胞筛选、缩放不同，不能当作只改变一个因素的时间消融。标签打乱只发生在训练组内。</p></div></div>
+<p id="studyLimits" class="small"></p><a class="small" href="/api/readout" target="_blank">查看本次读出评估记录 ↗</a>
+</section>
+<footer><span><i class="live-dot"></i>固定连接组 · 人工视觉输入 · 真实仿真记录</span><details><summary>数据与解释</summary><p id="about"></p><p>输入位置来自已发表的右视叶六角网格。Mi1 / Tm1 是人工刺激接入点，本实验跳过早期感光过程。画面为显示而量化，实际编码使用原始浮点图像。眼形图使用细胞空间位置；连线和坐标均不表示解剖全貌。分类结果仅适用于页面注明的人工刺激和评估范围，尚无自然视觉或结构优势结论。</p><p><a href="https://www.nature.com/articles/s41586-024-07953-5" target="_blank" rel="noreferrer">坐标来源</a> · <a href="https://www.nature.com/articles/s41586-024-07981-1" target="_blank" rel="noreferrer">细胞注释</a> · <a href="/api/manifest" target="_blank">运行记录</a></p></details></footer>
+</main><script type="module" src="/app.js"></script></body></html>

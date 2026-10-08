@@ -1,0 +1,22 @@
+{
+  "path_base": "repository root",
+  "scope": "Small warmup artifacts and relevant sources; excludes self and large raw outputs.",
+  "sha256": {
+    "brian2-rust/experiments/flywire_learning/WARMUP_PROTOCOL.md": "f2eb52316bd21848e9ccc24cc604c162952dcc8f53ca6dae28e13fb9df8b4ede",
+    "brian2-rust/experiments/flywire_learning/plot_warmup.py": "18b8193a12bdcddeb78bd6e11ab1900bc8b82cd680d21b84e6588697ec73d7f1",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/RESULTS.md": "602f778ba6f80f2e0bf8585248f786c44efab254396a2591921dee4cd2256dd0",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/delivery_audit.json": "709be94646b32161766e3c7df6411727a40fbcb13c6036f60f21d4b3fe820a1f",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/environment.json": "dacfdcb973c16b0e219199ad526a0e72c03c7f0b509079f5100acf8fba765a69",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/figure_provenance.json": "cf8cff7f4654dab95728300bfe83c63ad768f84abf1197828614d4cac48cf9a8",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/progress.json": "c22c8e84f35594a762700ac205923c1d4e78271977e02ad874595678ef8764ab",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/results.json": "3b8e9d78bf57d554d4bf0796d7560fdb922dea2990e7f456a2ec5478b5a0c20a",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/short_reference_equivalence.json": "2f80f76bad784f18f2eed784da06eea209ddd40491876fd4e4f1416f83ccd1b8",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/study_identity.json": "1c1854e5f5ebc821a20152908f720122c3a293669d9f77e22cc4c02945b9f59f",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_drift.pdf": "0283c0abed7c936be8c6d9729153eba9df870ec4ca13313a258398f806ccc8f1",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_drift.png": "4cc552b037d26b73cca870fbaad7aca8b1db39542f65065131938bf00ce0563e",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_responses.pdf": "a221434fedbfdf96ef988380ed0948cc9ddcef624976aa54ff944de74085184d",
+    "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_responses.png": "9e9c42fc1b2d3fd3c9e0892d4d2a9082cb65b975ab270bc99beea1619de65c4f",
+    "brian2-rust/experiments/flywire_learning/warmup_report.py": "dbb72894c3d973b611c812995b9793aa042581bb1454b6ea0c4ba0dc9ca24ad4",
+    "brian2-rust/experiments/flywire_learning/warmup_study.py": "78fa8621e19e9ffb80976e68c7b0f68ba1727dcb555fa7f685f30d0de9a36479"
+  }
+}

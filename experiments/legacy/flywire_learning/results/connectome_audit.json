@@ -1,0 +1,82 @@
+{
+  "schema": "flywire-learning-audit-v1",
+  "source_graph": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/output/flywire-v783-ei-sensory",
+  "csr_sha256": "b84a19b5c6d899181e6ade3a914eba89d53cb3a4cc36789702785b4cfa35ec38",
+  "annotation_source_sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6",
+  "derived_neurons_csv_sha256": "bacc822ba0a5beb9dd348bc2d39eeb68d3a3272f22a9d99cd1670f5e4b232b95",
+  "root_ids_sha256": "5daed2803738fd701d480786b59506f17c4b7fc58a0c09f08de5a2923e3dbcf7",
+  "derived_annotations_revalidated_against_original_tsv": true,
+  "neurons": 139255,
+  "whole_graph_edges": 15091983,
+  "groups": {
+    "kc": 5177,
+    "mbon": 96,
+    "dan": 331,
+    "pn": 685
+  },
+  "projections": {
+    "pn_to_kc": {
+      "edges": 27848,
+      "sources_with_edges": 319,
+      "targets_with_edges": 4887,
+      "positive_edges": 27575,
+      "negative_edges": 273,
+      "zero_fast_edges": 0,
+      "contacts": 329394
+    },
+    "kc_to_mbon": {
+      "edges": 62261,
+      "sources_with_edges": 5177,
+      "targets_with_edges": 96,
+      "positive_edges": 62261,
+      "negative_edges": 0,
+      "zero_fast_edges": 0,
+      "contacts": 256719
+    },
+    "dan_to_kc": {
+      "edges": 47404,
+      "sources_with_edges": 328,
+      "targets_with_edges": 5170,
+      "positive_edges": 0,
+      "negative_edges": 26,
+      "zero_fast_edges": 47378,
+      "contacts": null
+    },
+    "dan_to_mbon": {
+      "edges": 2016,
+      "sources_with_edges": 327,
+      "targets_with_edges": 96,
+      "positive_edges": 0,
+      "negative_edges": 4,
+      "zero_fast_edges": 2012,
+      "contacts": null
+    },
+    "mbon_to_dan": {
+      "edges": 2363,
+      "sources_with_edges": 96,
+      "targets_with_edges": 327,
+      "positive_edges": 915,
+      "negative_edges": 1448,
+      "zero_fast_edges": 0,
+      "contacts": 8912
+    },
+    "kc_to_dan": {
+      "edges": 81056,
+      "sources_with_edges": 5174,
+      "targets_with_edges": 328,
+      "positive_edges": 81056,
+      "negative_edges": 0,
+      "zero_fast_edges": 0,
+      "contacts": 125133
+    }
+  },
+  "kc_mbon_fraction_of_graph": 0.004125435338749057,
+  "four_extra_f64_states_bytes": 1992352,
+  "limitations": [
+    "DAN membership uses cell_class, not all dopamine predictions.",
+    "Pair-aggregated edges do not resolve mushroom body compartments or contacts.",
+    "Zero-fast edges preserve topology but not original contact multiplicity.",
+    "Anatomical DAN edges do not define a synaptic dopamine gating map.",
+    "Four-array estimate excludes topology, queues, monitors and runtime copies."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "full_graph_samples_exact_preoptimization": 10,
+  "two_worker_resume_then_one_worker": true,
+  "native_sidecar_no_per_sample_graph_copy": true,
+  "regression_passed": 34,
+  "subtests_passed": 21,
+  "platform_tests_not_rerun": [
+    "metal",
+    "mpi"
+  ],
+  "final_single_worker_probe": {
+    "phase": "extract-train",
+    "complete_images": 12,
+    "total_images": 60000,
+    "workers": 1,
+    "elapsed_seconds_this_launch": 21.49331966601312,
+    "images_per_second_this_launch": 0.18610433670351562,
+    "last_shard": {
+      "offset": 8,
+      "count": 4,
+      "wall_seconds": 11.751154249999672,
+      "mean_sample_seconds": 2.9194471352093387
+    }
+  }
+}

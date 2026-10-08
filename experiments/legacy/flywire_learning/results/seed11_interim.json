@@ -1,0 +1,326 @@
+{
+  "scope": "Interim first-seed evidence only; remaining 20 cases and full-brain recovery/replay remain required.",
+  "observed_at_utc": "2026-09-11T12:06:21.596974+00:00",
+  "seed": 11,
+  "completed_cases": 5,
+  "rows": [
+    {
+      "condition": "paired",
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 6.333333333333333,
+          "B_minus_A_hz": 3.333333333333333
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "final_gain_mean": 0.9122712711793565,
+      "changed_edges": 2281,
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 6.0,
+      "source_report_sha256": "90bdcee0bbab9292a646a230466e74ffca1142926ac1320b597a677c7bdd4676",
+      "source_configuration_sha256": "7ed4fdf711b2f46cf649c65f7c1ceccb551a017a685181395f293975561e7b2d",
+      "reward_counts": {
+        "pre": {
+          "0": 0,
+          "1": 0
+        },
+        "acquisition": {
+          "0": 6,
+          "1": 0
+        },
+        "post": {
+          "0": 0,
+          "1": 0
+        },
+        "second": {
+          "0": 6,
+          "1": 0
+        },
+        "final": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "trial_counts_independently_reproduced": 36,
+      "test_learning_teaching_zero": true,
+      "test_gains_exact": true
+    },
+    {
+      "condition": "frozen",
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.666666666666667,
+          "B_hz": 8.333333333333334,
+          "B_minus_A_hz": 2.666666666666667
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 4.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 8.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -6.0
+        }
+      },
+      "final_gain_mean": 1.0,
+      "changed_edges": 0,
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "source_report_sha256": "332ef019fdb32a7431c26407204c3634f6aeaeef98cf2906afa3eb270d16eae4",
+      "source_configuration_sha256": "e8f351917ab563ce3e9843128f6bfe23355463809881ac262530e2a95bc133e1",
+      "reward_counts": {
+        "pre": {
+          "0": 0,
+          "1": 0
+        },
+        "acquisition": {
+          "0": 6,
+          "1": 0
+        },
+        "post": {
+          "0": 0,
+          "1": 0
+        },
+        "second": {
+          "0": 6,
+          "1": 0
+        },
+        "final": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "trial_counts_independently_reproduced": 36,
+      "test_learning_teaching_zero": true,
+      "test_gains_exact": true
+    },
+    {
+      "condition": "teaching_off",
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.666666666666667,
+          "B_hz": 8.333333333333334,
+          "B_minus_A_hz": 2.666666666666667
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 4.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 8.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -6.0
+        }
+      },
+      "final_gain_mean": 1.0,
+      "changed_edges": 0,
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "source_report_sha256": "f1f5fc053eacd6c2d9d88676a8f9f3ca7d0cd9c9fab6f281850f871d0395e21e",
+      "source_configuration_sha256": "14d7535b84c462c0f6ca5af769ec8588a46e4461f08515584bf0651363ab131a",
+      "reward_counts": {
+        "pre": {
+          "0": 0,
+          "1": 0
+        },
+        "acquisition": {
+          "0": 0,
+          "1": 0
+        },
+        "post": {
+          "0": 0,
+          "1": 0
+        },
+        "second": {
+          "0": 0,
+          "1": 0
+        },
+        "final": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "trial_counts_independently_reproduced": 36,
+      "test_learning_teaching_zero": true,
+      "test_gains_exact": true
+    },
+    {
+      "condition": "shuffled_reward",
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 7.333333333333333,
+          "B_hz": 5.666666666666667,
+          "B_minus_A_hz": -1.666666666666666
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.3333333333333333
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "final_gain_mean": 0.8650695484227457,
+      "changed_edges": 2307,
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 6.0,
+      "source_report_sha256": "5047e6be963a573666f9893867c582310c86b1c4c8d6c860728f32eb3f7a3e72",
+      "source_configuration_sha256": "d4ff841d1464495fd54ea7be5e361b12778044e32d05e8dc57f1d4d8fd4b86ad",
+      "reward_counts": {
+        "pre": {
+          "0": 0,
+          "1": 0
+        },
+        "acquisition": {
+          "0": 3,
+          "1": 3
+        },
+        "post": {
+          "0": 0,
+          "1": 0
+        },
+        "second": {
+          "0": 3,
+          "1": 3
+        },
+        "final": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "trial_counts_independently_reproduced": 36,
+      "test_learning_teaching_zero": true,
+      "test_gains_exact": true
+    },
+    {
+      "condition": "reversal",
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 6.333333333333333,
+          "B_minus_A_hz": 3.333333333333333
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 1.0,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.6666666666666667
+        },
+        "final": {
+          "A_hz": 2.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -2.0
+        }
+      },
+      "final_gain_mean": 0.8783924232175145,
+      "changed_edges": 2287,
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 4.0,
+      "source_report_sha256": "5e450c4a7ab33d25de1aaa3704915a68311393a0602bd7eea47ae5cc22a4b6de",
+      "source_configuration_sha256": "a8d5e0f4559e066db3a707f026ded139366956cc702f5f9fc20458eda97d459f",
+      "reward_counts": {
+        "pre": {
+          "0": 0,
+          "1": 0
+        },
+        "acquisition": {
+          "0": 6,
+          "1": 0
+        },
+        "post": {
+          "0": 0,
+          "1": 0
+        },
+        "second": {
+          "0": 0,
+          "1": 6
+        },
+        "final": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "trial_counts_independently_reproduced": 36,
+      "test_learning_teaching_zero": true,
+      "test_gains_exact": true
+    }
+  ],
+  "common_noncontrol_input_sha256": {
+    "background_ids": "b4f726190ac3cb4485b560b7ee3e36fb125b4d68f2271c20b43b20631f99e23c",
+    "background_ticks": "d549454fba233133093f16468325b1646f3126091f07000de29d61a3908f9bb5",
+    "mapping": "00a78cd6b430003b69d9a8ef84cb91fc9bfe460862fe437bfaa5f23da5c43bf3",
+    "stimulus_ids": "f83122dfacae29a1a6ee1ce1900496ff4b8df613460c14e3ec4e36c354079271",
+    "stimulus_ticks": "183a89d13b5f10efc52b26f4d8e435bd2c14381c897861ae6a5a709d309a5269",
+    "stimulus_targets": "bd40a737a673ad01b4e7d0b9a73a0acd27b27a8f0ea696c2a9d84c02150dcfb9"
+  },
+  "reversal_paired_preswitch_native_results_sha256": {
+    "project": "9c49dd4ff06ba934e16829e3020b7eb255555a4914d9ce981280c668a9c7c108",
+    "project/run-0002": "b81c1e06091c73b6a6bb81e89721c00df3398187a113cf82e4daada99d185bb9",
+    "project/run-0003": "a1815d09e1d58bab8bbab847705034c0e4ea6157cfe3f403577c1502e5a97a95"
+  }
+}

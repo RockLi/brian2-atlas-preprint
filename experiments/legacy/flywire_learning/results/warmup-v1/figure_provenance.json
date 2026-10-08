@@ -1,0 +1,13 @@
+{
+  "results_sha256": "3b8e9d78bf57d554d4bf0796d7560fdb922dea2990e7f456a2ec5478b5a0c20a",
+  "plot_source_sha256": "18b8193a12bdcddeb78bd6e11ab1900bc8b82cd680d21b84e6588697ec73d7f1",
+  "seeds": [
+    11,
+    23,
+    47,
+    83,
+    131
+  ],
+  "matplotlib_version": "3.11.1",
+  "note": "All seeds shown. Connecting lines aid comparison; no confidence intervals or fitted trajectories."
+}

@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-09-11T14:35:10.222698+00:00",
+  "completed_cases": 10,
+  "recounted_trials": 360,
+  "five_short_references_exact": true,
+  "all_run_identities_still_match": true,
+  "all_gates_zero": true,
+  "all_gains_one": true,
+  "all_matched_inputs_exact": true,
+  "figure_sources_match": true,
+  "figure_visual_qa": "Both PNGs and Poppler-rendered PDFs inspected; no clipping or overlapping labels.",
+  "improved_seeds": [
+    11,
+    23,
+    83
+  ],
+  "worsened_seeds": [
+    47,
+    131
+  ]
+}

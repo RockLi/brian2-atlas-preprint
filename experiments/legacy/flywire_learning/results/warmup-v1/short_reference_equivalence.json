@@ -1,0 +1,14 @@
+{
+  "v": 0.0,
+  "ge": 0.0,
+  "gi": 0.0,
+  "gain": 0.0,
+  "eligibility": 0.0,
+  "spike_i": 0.0,
+  "spike_t": 0.0,
+  "counts": 0.0,
+  "neuron_trace": 0.0,
+  "trace_t": 0.0,
+  "lastspike": 0.0,
+  "not_refractory": 0.0
+}

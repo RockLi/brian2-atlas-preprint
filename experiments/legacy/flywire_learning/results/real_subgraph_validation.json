@@ -1,0 +1,36 @@
+{
+  "numpy": {
+    "exact": true,
+    "fields": [
+      "v",
+      "ge",
+      "gi",
+      "gain",
+      "eligibility",
+      "spike_i",
+      "spike_t",
+      "counts",
+      "neuron_trace",
+      "trace_t",
+      "lastspike",
+      "not_refractory"
+    ]
+  },
+  "cpp": {
+    "exact": true,
+    "fields": [
+      "v",
+      "ge",
+      "gi",
+      "gain",
+      "eligibility",
+      "spike_i",
+      "spike_t",
+      "counts",
+      "neuron_trace",
+      "trace_t",
+      "lastspike",
+      "not_refractory"
+    ]
+  }
+}

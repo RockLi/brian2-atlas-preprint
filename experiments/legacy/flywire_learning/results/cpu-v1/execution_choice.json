@@ -1,0 +1,8 @@
+{
+  "threads": 4,
+  "single_observation_native_seconds": {
+    "1": 6.204103083,
+    "4": 4.403132833
+  },
+  "scope": "execution choice only; not a statistically qualified performance benchmark"
+}

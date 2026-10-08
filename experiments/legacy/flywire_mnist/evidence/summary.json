@@ -1,0 +1,158 @@
+{
+  "date": "2026-09-09",
+  "kind": "first executable milestone, not a research result",
+  "official_test_evaluated": false,
+  "runs": {
+    "cpu-f64": {
+      "directory": "/private/tmp/flymnist-full-cpu-smoke",
+      "scope": "full FlyWire v783 EI",
+      "neurons": 139255,
+      "edges": 15091983,
+      "train_count": 10,
+      "validation_count": 10,
+      "feature_dimension": 2432,
+      "config": {
+        "seed": 783,
+        "warmup_ms": 100.0,
+        "stimulus_ms": 200.0,
+        "tail_ms": 50.0,
+        "dt_ms": 0.1,
+        "bins": 4,
+        "input_rate_hz": 60.0,
+        "input_weight_mv": 3.0,
+        "fanout": 4,
+        "kc_count": 512,
+        "background_channels": 512,
+        "background_rate_hz": 300.0,
+        "background_weight_mv": 3.5
+      },
+      "sample_seconds": {
+        "median": 5.861449020972941,
+        "total": 201.4420122501906
+      },
+      "zero_feature_fraction": 0.9324629934210527,
+      "validation_accuracy": {
+        "flywire": 0.1,
+        "pixels": 0.3,
+        "projected_input": 0.3,
+        "shuffled_fit_labels": 0.3
+      },
+      "fit_class_counts": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        3,
+        2,
+        0,
+        0
+      ],
+      "validation_class_counts": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        3
+      ],
+      "report_sha256": "7f043ad59aec128bf40e94db1bcdcec70730b2899e2e2612a82e52e33e79c06d",
+      "manifest_sha256": "1cbc28ebb7cbb3c5da7eda4c055376c6f0890d5514a8829b0f3170f6c24344ae"
+    },
+    "metal-f32": {
+      "directory": "/private/tmp/flymnist-full-metal-bitset",
+      "scope": "full FlyWire v783 EI",
+      "neurons": 139255,
+      "edges": 15091983,
+      "train_count": 10,
+      "validation_count": 10,
+      "feature_dimension": 2432,
+      "config": {
+        "seed": 783,
+        "warmup_ms": 100.0,
+        "stimulus_ms": 200.0,
+        "tail_ms": 50.0,
+        "dt_ms": 0.1,
+        "bins": 4,
+        "input_rate_hz": 60.0,
+        "input_weight_mv": 3.0,
+        "fanout": 4,
+        "kc_count": 512,
+        "background_channels": 512,
+        "background_rate_hz": 300.0,
+        "background_weight_mv": 3.5
+      },
+      "sample_seconds": {
+        "median": 16.493666416499764,
+        "total": 372.417046206072
+      },
+      "zero_feature_fraction": 0.9143297697368421,
+      "validation_accuracy": {
+        "flywire": 0.1,
+        "pixels": 0.3,
+        "projected_input": 0.3,
+        "shuffled_fit_labels": 0.1
+      },
+      "fit_class_counts": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        3,
+        2,
+        0,
+        0
+      ],
+      "validation_class_counts": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        3
+      ],
+      "report_sha256": "c49e4e01f67fc53e86fff585126c445955d47bf7f9e15e09f27cbe6d4406c2a5",
+      "manifest_sha256": "8e145edfc0fbc8b3e018b4bd45612ee2d6c9e85bb624bc935b6eb9b5fbb66653"
+    }
+  },
+  "full_cpu_f32_control": {
+    "sample_id": 35395,
+    "scope": "full FlyWire v783 EI",
+    "control": "compiled-cpu-f32",
+    "feature_dimension": 2432,
+    "readout_spikes": 392,
+    "gpu_features_exact": true,
+    "seconds": 61.81113083299715
+  },
+  "mpi_two_rank_smoke": {
+    "source": "/private/tmp/brian2-mpi-cpu",
+    "commit": "9f7d8bc0595c04d4b4c88bd1d7b97a463f624820",
+    "source_sha256": "33320f7bcedc4505e63cbca6e9b078b1f1b0f6d0ca41cd0d2c62e664c67db02d",
+    "ranks": 2,
+    "all_final_states_exact_cpu_f64": true
+  },
+  "regression": {
+    "passed": 32,
+    "subtests_passed": 21,
+    "log_sha256": "22c7de5b2a5dec8ad8742c740401610c67fa065b3e839b00c9aefad30ccff06d",
+    "suites": [
+      "test_flywire_mnist.py",
+      "test_artifact.py",
+      "test_native.py",
+      "test_binary_topology.py"
+    ],
+    "metal_enabled": true,
+    "mpi_enabled": true
+  }
+}

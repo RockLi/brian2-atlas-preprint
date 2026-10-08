@@ -1,0 +1,1158 @@
+{
+  "rows": [
+    {
+      "seed": 11,
+      "condition": "paired",
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 6.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 6.333333333333333,
+          "B_minus_A_hz": 3.333333333333333
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 2281,
+      "final_gain_mean": 0.9122712711793565,
+      "spikes": 5069793,
+      "native_seconds": 204.754058375,
+      "native_peak_rss_bytes": 364544000,
+      "frontend_peak_rss_bytes": 1062207488,
+      "end_to_end_seconds": 351.27860187506303
+    },
+    {
+      "seed": 11,
+      "condition": "frozen",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.666666666666667,
+          "B_hz": 8.333333333333334,
+          "B_minus_A_hz": 2.666666666666667
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 4.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 8.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -6.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5056654,
+      "native_seconds": 379.751744542,
+      "native_peak_rss_bytes": 363053056,
+      "frontend_peak_rss_bytes": 992411648,
+      "end_to_end_seconds": 492.829419375048
+    },
+    {
+      "seed": 11,
+      "condition": "teaching_off",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.666666666666667,
+          "B_hz": 8.333333333333334,
+          "B_minus_A_hz": 2.666666666666667
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 4.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 8.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -6.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5056654,
+      "native_seconds": 847.323013417,
+      "native_peak_rss_bytes": 327778304,
+      "frontend_peak_rss_bytes": 774291456,
+      "end_to_end_seconds": 986.8175129579613
+    },
+    {
+      "seed": 11,
+      "condition": "shuffled_reward",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 6.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 7.333333333333333,
+          "B_hz": 5.666666666666667,
+          "B_minus_A_hz": -1.666666666666666
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        },
+        "second": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.3333333333333333
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 2307,
+      "final_gain_mean": 0.8650695484227457,
+      "spikes": 5081872,
+      "native_seconds": 548.721627332,
+      "native_peak_rss_bytes": 339492864,
+      "frontend_peak_rss_bytes": 877297664,
+      "end_to_end_seconds": 672.6158524999628
+    },
+    {
+      "seed": 11,
+      "condition": "reversal",
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 4.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 6.333333333333333,
+          "B_minus_A_hz": 3.333333333333333
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 1.0,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.6666666666666667
+        },
+        "final": {
+          "A_hz": 2.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -2.0
+        }
+      },
+      "changed_edges": 2287,
+      "final_gain_mean": 0.8783924232175145,
+      "spikes": 5074701,
+      "native_seconds": 109.122873958,
+      "native_peak_rss_bytes": 362758144,
+      "frontend_peak_rss_bytes": 1163804672,
+      "end_to_end_seconds": 183.81958762498107
+    },
+    {
+      "seed": 23,
+      "condition": "paired",
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 5.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.333333333333333,
+          "B_hz": 1.3333333333333333,
+          "B_minus_A_hz": -4.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 2.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 1.0
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 2337,
+      "final_gain_mean": 0.8740302899662444,
+      "spikes": 5098619,
+      "native_seconds": 75.061891624,
+      "native_peak_rss_bytes": 359710720,
+      "frontend_peak_rss_bytes": 1204928512,
+      "end_to_end_seconds": 130.933379458962
+    },
+    {
+      "seed": 23,
+      "condition": "frozen",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 8.666666666666666,
+          "B_hz": 3.0,
+          "B_minus_A_hz": -5.666666666666666
+        },
+        "post": {
+          "A_hz": 2.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 5.333333333333333,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -3.333333333333333
+        },
+        "final": {
+          "A_hz": 6.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -5.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5083827,
+      "native_seconds": 72.651233541,
+      "native_peak_rss_bytes": 363544576,
+      "frontend_peak_rss_bytes": 1267941376,
+      "end_to_end_seconds": 119.78310566698201
+    },
+    {
+      "seed": 23,
+      "condition": "teaching_off",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 8.666666666666666,
+          "B_hz": 3.0,
+          "B_minus_A_hz": -5.666666666666666
+        },
+        "post": {
+          "A_hz": 2.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 5.333333333333333,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -3.333333333333333
+        },
+        "final": {
+          "A_hz": 6.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -5.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5083827,
+      "native_seconds": 134.529286959,
+      "native_peak_rss_bytes": 365805568,
+      "frontend_peak_rss_bytes": 1186496512,
+      "end_to_end_seconds": 214.8064367499901
+    },
+    {
+      "seed": 23,
+      "condition": "shuffled_reward",
+      "post_effect_hz": 1.0,
+      "final_effect_hz": 9.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.666666666666667,
+          "B_hz": 1.6666666666666667,
+          "B_minus_A_hz": -4.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.3333333333333333
+        },
+        "final": {
+          "A_hz": 6.0,
+          "B_hz": 10.0,
+          "B_minus_A_hz": 4.0
+        }
+      },
+      "changed_edges": 2338,
+      "final_gain_mean": 0.8828382157061607,
+      "spikes": 5093596,
+      "native_seconds": 123.577485501,
+      "native_peak_rss_bytes": 365936640,
+      "frontend_peak_rss_bytes": 1191395328,
+      "end_to_end_seconds": 203.44597437500488
+    },
+    {
+      "seed": 23,
+      "condition": "reversal",
+      "post_effect_hz": 2.0,
+      "final_effect_hz": 4.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 23.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 1.0
+        },
+        "acquisition": {
+          "A_hz": 5.333333333333333,
+          "B_hz": 1.3333333333333333,
+          "B_minus_A_hz": -4.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 2.0
+        },
+        "second": {
+          "A_hz": 0.3333333333333333,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": 0.0
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        }
+      },
+      "changed_edges": 2327,
+      "final_gain_mean": 0.886811115891905,
+      "spikes": 5081987,
+      "native_seconds": 121.869070874,
+      "native_peak_rss_bytes": 365707264,
+      "frontend_peak_rss_bytes": 1050329088,
+      "end_to_end_seconds": 199.64025437494274
+    },
+    {
+      "seed": 47,
+      "condition": "paired",
+      "post_effect_hz": -1.0,
+      "final_effect_hz": 4.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 6.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -4.0
+        },
+        "acquisition": {
+          "A_hz": 1.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 2.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 1769,
+      "final_gain_mean": 0.9184600185200477,
+      "spikes": 5035728,
+      "native_seconds": 103.665215042,
+      "native_peak_rss_bytes": 364232704,
+      "frontend_peak_rss_bytes": 1138442240,
+      "end_to_end_seconds": 180.45731333293952
+    },
+    {
+      "seed": 47,
+      "condition": "frozen",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 6.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -4.0
+        },
+        "acquisition": {
+          "A_hz": 2.3333333333333335,
+          "B_hz": 2.3333333333333335,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 2.0,
+          "B_hz": 5.0,
+          "B_minus_A_hz": 3.0
+        },
+        "second": {
+          "A_hz": 4.333333333333333,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -2.333333333333333
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5034990,
+      "native_seconds": 90.071491791,
+      "native_peak_rss_bytes": 363659264,
+      "frontend_peak_rss_bytes": 1088110592,
+      "end_to_end_seconds": 163.8977075420553
+    },
+    {
+      "seed": 47,
+      "condition": "teaching_off",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 6.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -4.0
+        },
+        "acquisition": {
+          "A_hz": 2.3333333333333335,
+          "B_hz": 2.3333333333333335,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 2.0,
+          "B_hz": 5.0,
+          "B_minus_A_hz": 3.0
+        },
+        "second": {
+          "A_hz": 4.333333333333333,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -2.333333333333333
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5034990,
+      "native_seconds": 93.144498167,
+      "native_peak_rss_bytes": 364494848,
+      "frontend_peak_rss_bytes": 1073692672,
+      "end_to_end_seconds": 162.65577974996995
+    },
+    {
+      "seed": 47,
+      "condition": "shuffled_reward",
+      "post_effect_hz": -2.0,
+      "final_effect_hz": 4.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 6.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -4.0
+        },
+        "acquisition": {
+          "A_hz": 1.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 1733,
+      "final_gain_mean": 0.905488527428379,
+      "spikes": 5038378,
+      "native_seconds": 95.799624709,
+      "native_peak_rss_bytes": 362004480,
+      "frontend_peak_rss_bytes": 1012908032,
+      "end_to_end_seconds": 166.2919364159461
+    },
+    {
+      "seed": 47,
+      "condition": "reversal",
+      "post_effect_hz": -1.0,
+      "final_effect_hz": 3.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 6.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -4.0
+        },
+        "acquisition": {
+          "A_hz": 1.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 2.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": 0.3333333333333333
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        }
+      },
+      "changed_edges": 1771,
+      "final_gain_mean": 0.8961724911280371,
+      "spikes": 5044016,
+      "native_seconds": 148.941176207,
+      "native_peak_rss_bytes": 361529344,
+      "frontend_peak_rss_bytes": 863830016,
+      "end_to_end_seconds": 226.94137008301914
+    },
+    {
+      "seed": 83,
+      "condition": "paired",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 3.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 24.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 0.0
+        },
+        "acquisition": {
+          "A_hz": 4.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -3.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        }
+      },
+      "changed_edges": 2299,
+      "final_gain_mean": 0.8923150227247225,
+      "spikes": 5056920,
+      "native_seconds": 214.848985416,
+      "native_peak_rss_bytes": 362414080,
+      "frontend_peak_rss_bytes": 965115904,
+      "end_to_end_seconds": 302.15627379191574
+    },
+    {
+      "seed": 83,
+      "condition": "frozen",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 24.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 0.0
+        },
+        "acquisition": {
+          "A_hz": 20.0,
+          "B_hz": 13.666666666666666,
+          "B_minus_A_hz": -6.333333333333334
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 2.6666666666666665,
+          "B_hz": 3.0,
+          "B_minus_A_hz": 0.3333333333333335
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5125055,
+      "native_seconds": 268.804953458,
+      "native_peak_rss_bytes": 345899008,
+      "frontend_peak_rss_bytes": 799768576,
+      "end_to_end_seconds": 360.6113708750345
+    },
+    {
+      "seed": 83,
+      "condition": "teaching_off",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 24.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 0.0
+        },
+        "acquisition": {
+          "A_hz": 20.0,
+          "B_hz": 13.666666666666666,
+          "B_minus_A_hz": -6.333333333333334
+        },
+        "post": {
+          "A_hz": 1.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 2.6666666666666665,
+          "B_hz": 3.0,
+          "B_minus_A_hz": 0.3333333333333335
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5125055,
+      "native_seconds": 95.161619793,
+      "native_peak_rss_bytes": 353681408,
+      "frontend_peak_rss_bytes": 1012137984,
+      "end_to_end_seconds": 164.7779775840463
+    },
+    {
+      "seed": 83,
+      "condition": "shuffled_reward",
+      "post_effect_hz": -1.0,
+      "final_effect_hz": 3.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 24.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 0.0
+        },
+        "acquisition": {
+          "A_hz": 5.0,
+          "B_hz": 0.6666666666666666,
+          "B_minus_A_hz": -4.333333333333333
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 1.6666666666666667,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -1.3333333333333335
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        }
+      },
+      "changed_edges": 2295,
+      "final_gain_mean": 0.8624681466640999,
+      "spikes": 5070121,
+      "native_seconds": 366.183634625,
+      "native_peak_rss_bytes": 360382464,
+      "frontend_peak_rss_bytes": 670072832,
+      "end_to_end_seconds": 476.5056050000712
+    },
+    {
+      "seed": 83,
+      "condition": "reversal",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 3.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 24.0,
+          "B_hz": 24.0,
+          "B_minus_A_hz": 0.0
+        },
+        "acquisition": {
+          "A_hz": 4.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -3.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": 1.0
+        },
+        "second": {
+          "A_hz": 1.0,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.6666666666666667
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -1.0
+        }
+      },
+      "changed_edges": 2294,
+      "final_gain_mean": 0.8763012961288702,
+      "spikes": 5066451,
+      "native_seconds": 237.374314708,
+      "native_peak_rss_bytes": 353468416,
+      "frontend_peak_rss_bytes": 825819136,
+      "end_to_end_seconds": 334.0558776250109
+    },
+    {
+      "seed": 131,
+      "condition": "paired",
+      "post_effect_hz": 4.0,
+      "final_effect_hz": 4.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 2.0,
+          "B_hz": 15.0,
+          "B_minus_A_hz": 13.0
+        },
+        "acquisition": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.6666666666666666,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 0.0,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": 0.3333333333333333
+        },
+        "final": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        }
+      },
+      "changed_edges": 2002,
+      "final_gain_mean": 0.9125799358400952,
+      "spikes": 5003370,
+      "native_seconds": 232.783463834,
+      "native_peak_rss_bytes": 347160576,
+      "frontend_peak_rss_bytes": 943734784,
+      "end_to_end_seconds": 325.1663662909996
+    },
+    {
+      "seed": 131,
+      "condition": "frozen",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 2.0,
+          "B_hz": 15.0,
+          "B_minus_A_hz": 13.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        },
+        "second": {
+          "A_hz": 3.3333333333333335,
+          "B_hz": 2.3333333333333335,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5028648,
+      "native_seconds": 112.34856995800001,
+      "native_peak_rss_bytes": 364003328,
+      "frontend_peak_rss_bytes": 1105051648,
+      "end_to_end_seconds": 199.00498841691297
+    },
+    {
+      "seed": 131,
+      "condition": "teaching_off",
+      "post_effect_hz": 0.0,
+      "final_effect_hz": 0.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 2.0,
+          "B_hz": 15.0,
+          "B_minus_A_hz": 13.0
+        },
+        "acquisition": {
+          "A_hz": 3.0,
+          "B_hz": 2.0,
+          "B_minus_A_hz": -1.0
+        },
+        "post": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        },
+        "second": {
+          "A_hz": 3.3333333333333335,
+          "B_hz": 2.3333333333333335,
+          "B_minus_A_hz": -1.0
+        },
+        "final": {
+          "A_hz": 5.0,
+          "B_hz": 1.0,
+          "B_minus_A_hz": -4.0
+        }
+      },
+      "changed_edges": 0,
+      "final_gain_mean": 1.0,
+      "spikes": 5028648,
+      "native_seconds": 102.785456583,
+      "native_peak_rss_bytes": 362971136,
+      "frontend_peak_rss_bytes": 1152253952,
+      "end_to_end_seconds": 186.54973545798566
+    },
+    {
+      "seed": 131,
+      "condition": "shuffled_reward",
+      "post_effect_hz": 4.0,
+      "final_effect_hz": 7.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 2.0,
+          "B_hz": 15.0,
+          "B_minus_A_hz": 13.0
+        },
+        "acquisition": {
+          "A_hz": 1.3333333333333333,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -1.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 8.666666666666666,
+          "B_hz": 7.333333333333333,
+          "B_minus_A_hz": -1.333333333333333
+        },
+        "final": {
+          "A_hz": 1.0,
+          "B_hz": 4.0,
+          "B_minus_A_hz": 3.0
+        }
+      },
+      "changed_edges": 2341,
+      "final_gain_mean": 0.8348612850474417,
+      "spikes": 5164337,
+      "native_seconds": 79.353712333,
+      "native_peak_rss_bytes": 367296512,
+      "frontend_peak_rss_bytes": 1239891968,
+      "end_to_end_seconds": 148.4732842919184
+    },
+    {
+      "seed": 131,
+      "condition": "reversal",
+      "post_effect_hz": 4.0,
+      "final_effect_hz": 1.0,
+      "contrasts": {
+        "pre": {
+          "A_hz": 2.0,
+          "B_hz": 15.0,
+          "B_minus_A_hz": 13.0
+        },
+        "acquisition": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.6666666666666666,
+          "B_minus_A_hz": 0.0
+        },
+        "post": {
+          "A_hz": 0.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": 0.0
+        },
+        "second": {
+          "A_hz": 0.6666666666666666,
+          "B_hz": 0.3333333333333333,
+          "B_minus_A_hz": -0.3333333333333333
+        },
+        "final": {
+          "A_hz": 3.0,
+          "B_hz": 0.0,
+          "B_minus_A_hz": -3.0
+        }
+      },
+      "changed_edges": 2001,
+      "final_gain_mean": 0.898829930686676,
+      "spikes": 5010851,
+      "native_seconds": 70.948071708,
+      "native_peak_rss_bytes": 364019712,
+      "frontend_peak_rss_bytes": 1366687744,
+      "end_to_end_seconds": 133.82865962502547
+    }
+  ],
+  "summary": {
+    "paired": {
+      "post_effect_hz": {
+        "mean": 1.4,
+        "min": -1.0,
+        "max": 4.0
+      },
+      "final_effect_hz": {
+        "mean": 4.4,
+        "min": 3.0,
+        "max": 6.0
+      },
+      "final_gain_mean": {
+        "mean": 0.9019313076460932,
+        "min": 0.8740302899662444,
+        "max": 0.9184600185200477
+      },
+      "native_seconds": {
+        "mean": 166.2227228582,
+        "min": 75.061891624,
+        "max": 232.783463834
+      },
+      "native_peak_rss_bytes": {
+        "mean": 359612416.0,
+        "min": 347160576.0,
+        "max": 364544000.0
+      }
+    },
+    "frozen": {
+      "post_effect_hz": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "final_effect_hz": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "final_gain_mean": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "native_seconds": {
+        "mean": 184.725598658,
+        "min": 72.651233541,
+        "max": 379.751744542
+      },
+      "native_peak_rss_bytes": {
+        "mean": 360031846.4,
+        "min": 345899008.0,
+        "max": 364003328.0
+      }
+    },
+    "teaching_off": {
+      "post_effect_hz": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "final_effect_hz": {
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "final_gain_mean": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "native_seconds": {
+        "mean": 254.58877498379996,
+        "min": 93.144498167,
+        "max": 847.323013417
+      },
+      "native_peak_rss_bytes": {
+        "mean": 354946252.8,
+        "min": 327778304.0,
+        "max": 365805568.0
+      }
+    },
+    "shuffled_reward": {
+      "post_effect_hz": {
+        "mean": 0.4,
+        "min": -2.0,
+        "max": 4.0
+      },
+      "final_effect_hz": {
+        "mean": 5.8,
+        "min": 3.0,
+        "max": 9.0
+      },
+      "final_gain_mean": {
+        "mean": 0.8701451446537654,
+        "min": 0.8348612850474417,
+        "max": 0.905488527428379
+      },
+      "native_seconds": {
+        "mean": 242.72721689999997,
+        "min": 79.353712333,
+        "max": 548.721627332
+      },
+      "native_peak_rss_bytes": {
+        "mean": 359022592.0,
+        "min": 339492864.0,
+        "max": 367296512.0
+      }
+    },
+    "reversal": {
+      "post_effect_hz": {
+        "mean": 1.4,
+        "min": -1.0,
+        "max": 4.0
+      },
+      "final_effect_hz": {
+        "mean": 3.0,
+        "min": 1.0,
+        "max": 4.0
+      },
+      "final_gain_mean": {
+        "mean": 0.8873014514106006,
+        "min": 0.8763012961288702,
+        "max": 0.898829930686676
+      },
+      "native_seconds": {
+        "mean": 137.65110149100002,
+        "min": 70.948071708,
+        "max": 237.374314708
+      },
+      "native_peak_rss_bytes": {
+        "mean": 361496576.0,
+        "min": 353468416.0,
+        "max": 365707264.0
+      }
+    }
+  },
+  "seeds": [
+    11,
+    23,
+    47,
+    83,
+    131
+  ],
+  "conditions": [
+    "paired",
+    "frozen",
+    "teaching_off",
+    "shuffled_reward",
+    "reversal"
+  ],
+  "completed_cases": 25,
+  "threads": 4,
+  "all_correctness_gates_passed": true
+}

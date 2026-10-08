@@ -33,6 +33,8 @@ Historical evidence collectors require explicit source locations; see [collectio
 
 The manuscript materials have been imported with file-level provenance. Experimental scripts, archive indexing, portable collection paths, and the pinned Atlas checkout are being integrated. A complete reproduction workflow will be documented after its end-to-end validation.
 
+[Research experiment collections](experiments/README.md) preserve the legacy FlyWire learning, MNIST and vision scripts and their recorded small results. Portable execution adaptation remains in progress.
+
 [Historical development records](history/README.md) preserve the original experiment reports, implementation notes and intermediate contracts with source hashes. Their version-specific claims remain historical.
 
 [Research archive catalog](archives/README.md) maps retained execution and evaluation files to checksummed local archives, including resolved external evidence links.

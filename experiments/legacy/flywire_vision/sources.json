@@ -1,0 +1,23 @@
+{
+  "retrieved": "2026-09-10",
+  "files": [
+    {
+      "path": "annotations-v2.1.0.tsv",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "bytes": 27015208,
+      "sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6"
+    },
+    {
+      "path": "visual-system-parts-list/data/neuron_table.csv",
+      "url": "https://raw.githubusercontent.com/murthylab/visual-system-parts-list/0d8574d46627ce7fadd968a3c5d602e837325373/data/neuron_table.csv",
+      "bytes": 8180741,
+      "sha256": "8d1de464db0ce17906d5c224d6c1c0db7d4d43259be58a82a8393842d10e4e28"
+    },
+    {
+      "path": "hexel-supplement.zip",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-024-07953-5/MediaObjects/41586_2024_7953_MOESM4_ESM.zip",
+      "bytes": 6350836,
+      "sha256": "9420b67b48423a067aa279161f38d20d3fd09e3ca464e00af90d09da93ccaa68"
+    }
+  ]
+}

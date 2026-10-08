@@ -1,0 +1,103 @@
+{
+  "scope": "seed 11 only; not completion of the full 25-case study",
+  "observed_at_utc": "2026-09-11T11:51:40.043268+00:00",
+  "left": "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact/seed-11-teaching_off",
+  "right": "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact/seed-11-frozen",
+  "snapshot_fields": {
+    "v": {
+      "shape": [
+        139255
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "ge": {
+      "shape": [
+        139255
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "gi": {
+      "shape": [
+        139255
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "gain": {
+      "shape": [
+        2560
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "eligibility": {
+      "shape": [
+        2560
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "spike_i": {
+      "shape": [
+        5056654
+      ],
+      "dtype": "int32",
+      "exact": true
+    },
+    "spike_t": {
+      "shape": [
+        5056654
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "counts": {
+      "shape": [
+        139255
+      ],
+      "dtype": "int32",
+      "exact": true
+    },
+    "neuron_trace": {
+      "shape": [
+        3,
+        6,
+        191000
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "trace_t": {
+      "shape": [
+        191000
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "lastspike": {
+      "shape": [
+        139255
+      ],
+      "dtype": "float64",
+      "exact": true
+    },
+    "not_refractory": {
+      "shape": [
+        139255
+      ],
+      "dtype": "bool",
+      "exact": true
+    }
+  },
+  "native_results_sha256": {
+    "project": "9c49dd4ff06ba934e16829e3020b7eb255555a4914d9ce981280c668a9c7c108",
+    "project/run-0002": "7d89ff3013fddff61287c8764e6296ecb751b36d3bb5bfef6250ce9b6cbe9079",
+    "project/run-0003": "d845c56fa339a1771a929a809492a6469b6e4679ddc1006886fd2dd8eb284843",
+    "project/run-0004": "27a5c9d6a70303e053216b118161eaa63abc227471d0db0564e094742c4a7fdc",
+    "project/run-0005": "3d6d0585d22a88198a31d35afdb7b82e763f95e8f5541314a9fd8d742153ee78"
+  },
+  "all_stage_gain_and_eligibility_exact": true,
+  "all_stage_gains_one": true
+}

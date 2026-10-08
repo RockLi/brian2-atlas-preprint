@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-09-11T13:38:30.344122+00:00",
+  "supervised_jobs_complete": 33,
+  "formal_cases_complete": 25,
+  "current_model_and_protocol_match_frozen_identity": true,
+  "archived_machine_results_match_raw": true,
+  "figure_sources_match": true,
+  "local_markdown_links_resolve": true,
+  "figure_visual_qa": "Both PNG figures and Poppler-rendered PDF figures inspected: labels legible, no overlap or clipping.",
+  "plotting_packages": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.2"
+  }
+}

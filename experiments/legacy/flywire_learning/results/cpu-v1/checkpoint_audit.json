@@ -1,0 +1,72 @@
+{
+  "verified_at_utc": "2026-09-11T13:27:35.443110+00:00",
+  "scope": "Full FlyWire graph, seed 11 paired; stored after acquisition at tick 81000, restored in a fresh process and compared through tick 191000.",
+  "checkpoint_bytes": 110164425,
+  "checkpoint_sha256": "3d1b1c742de9b9e8e09b3b83febab11d625155c7af97f9ea9eded96b41259313",
+  "payload_sha256": "90644e4476373c84150db43da5f26a603ad260952ee662e42489d061bcc18420",
+  "state_array_shapes": {
+    "flywire_neurons/v": [
+      139255
+    ],
+    "flywire_neurons/ge": [
+      139255
+    ],
+    "flywire_neurons/gi": [
+      139255
+    ],
+    "flywire_neurons/lastspike": [
+      139255
+    ],
+    "flywire_neurons/not_refractory": [
+      139255
+    ],
+    "local_plastic/gain": [
+      2560
+    ],
+    "local_plastic/eligibility": [
+      2560
+    ]
+  },
+  "random_state_fields": [
+    "numpy_state",
+    "counter_seed"
+  ],
+  "pending_source_events": {
+    "background_projection/background_projection_pre": {
+      "source_events": 0,
+      "minimum_delivery_tick": null,
+      "maximum_delivery_tick": null
+    },
+    "local_plastic/local_plastic_pre": {
+      "source_events": 308,
+      "minimum_delivery_tick": 81000,
+      "maximum_delivery_tick": 81017
+    },
+    "static_recurrent/static_recurrent_pre": {
+      "source_events": 308,
+      "minimum_delivery_tick": 81000,
+      "maximum_delivery_tick": 81017
+    },
+    "stimulus_projection/stimulus_projection_pre": {
+      "source_events": 0,
+      "minimum_delivery_tick": null,
+      "maximum_delivery_tick": null
+    }
+  },
+  "binary_contract_names": [
+    "static_recurrent"
+  ],
+  "presave_native_results_sha256": {
+    "project": "9c49dd4ff06ba934e16829e3020b7eb255555a4914d9ce981280c668a9c7c108",
+    "project/run-0002": "b81c1e06091c73b6a6bb81e89721c00df3398187a113cf82e4daada99d185bb9"
+  },
+  "replay_results_sha256": "cc0b749d1b3bbb480620ff33055c80a0e399e0a9f6553a222801bfa9e6f10cb2",
+  "replay_metrics": {
+    "native_wall_seconds": 9.499605834018439,
+    "native_peak_rss_bytes": 312459264,
+    "exit_code": 0,
+    "pid": 52096
+  },
+  "full_continuous_segmented_exact": true,
+  "full_fresh_process_restore_exact": true
+}

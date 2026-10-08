@@ -1,0 +1,222 @@
+{
+  "seed-11-warmup-100": {
+    "status": "complete",
+    "pid": 59021,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "11",
+      "--warmup-ms",
+      "100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-11-warmup-100"
+    ],
+    "started": 1789135793.896992,
+    "exit_code": 0,
+    "wall_seconds": 104.42829489707947
+  },
+  "seed-11-warmup-10100": {
+    "status": "complete",
+    "pid": 59147,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "11",
+      "--warmup-ms",
+      "10100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-11-warmup-10100"
+    ],
+    "started": 1789135898.754648,
+    "exit_code": 0,
+    "wall_seconds": 126.64868116378784
+  },
+  "seed-23-warmup-100": {
+    "status": "complete",
+    "pid": 59329,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "23",
+      "--warmup-ms",
+      "100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-23-warmup-100"
+    ],
+    "started": 1789136025.409363,
+    "exit_code": 0,
+    "wall_seconds": 134.82637310028076
+  },
+  "seed-23-warmup-10100": {
+    "status": "complete",
+    "pid": 59790,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "23",
+      "--warmup-ms",
+      "10100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-23-warmup-10100"
+    ],
+    "started": 1789136160.240578,
+    "exit_code": 0,
+    "wall_seconds": 168.57893991470337
+  },
+  "seed-47-warmup-100": {
+    "status": "complete",
+    "pid": 61747,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "47",
+      "--warmup-ms",
+      "100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-47-warmup-100"
+    ],
+    "started": 1789136328.82395,
+    "exit_code": 0,
+    "wall_seconds": 151.23846101760864
+  },
+  "seed-47-warmup-10100": {
+    "status": "complete",
+    "pid": 64790,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "47",
+      "--warmup-ms",
+      "10100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-47-warmup-10100"
+    ],
+    "started": 1789136480.068545,
+    "exit_code": 0,
+    "wall_seconds": 151.9438579082489
+  },
+  "seed-83-warmup-100": {
+    "status": "complete",
+    "pid": 66169,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "83",
+      "--warmup-ms",
+      "100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-83-warmup-100"
+    ],
+    "started": 1789136632.016292,
+    "exit_code": 0,
+    "wall_seconds": 91.82603883743286
+  },
+  "seed-83-warmup-10100": {
+    "status": "complete",
+    "pid": 66333,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "83",
+      "--warmup-ms",
+      "10100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-83-warmup-10100"
+    ],
+    "started": 1789136723.8459468,
+    "exit_code": 0,
+    "wall_seconds": 148.5512273311615
+  },
+  "seed-131-warmup-100": {
+    "status": "complete",
+    "pid": 66552,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "131",
+      "--warmup-ms",
+      "100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-131-warmup-100"
+    ],
+    "started": 1789136872.405401,
+    "exit_code": 0,
+    "wall_seconds": 61.735743045806885
+  },
+  "seed-131-warmup-10100": {
+    "status": "complete",
+    "pid": 66665,
+    "command": [
+      "/atlas-home/0004/workspace/bettiai/brian2/.venv/bin/python",
+      "/private/tmp/brian2-flywire-learning/brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "--case",
+      "--seed",
+      "131",
+      "--warmup-ms",
+      "10100",
+      "--prepared",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-prepared",
+      "--baseline",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-study-compact",
+      "--output",
+      "/atlas-storage/0002/codex-flywire-learning/output/learning-warmup-v1/seed-131-warmup-10100"
+    ],
+    "started": 1789136934.144711,
+    "exit_code": 0,
+    "wall_seconds": 122.2456259727478
+  }
+}

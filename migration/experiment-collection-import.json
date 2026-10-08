@@ -1,0 +1,1783 @@
+{
+  "schema": "atlas-preprint-experiments-v1",
+  "status": "Preserved with hashes and Python syntax checks; portable execution and dependency mapping pending.",
+  "scope": "Scripts, models, environment/identity records and small retained results from the three legacy FlyWire research collections. No experiments were rerun. Capture HEAD is not a replacement for a recorded experiment revision.",
+  "files": [
+    {
+      "source": "brian2-rust/experiments/flywire_learning/DIAGNOSTIC_PLAN.md",
+      "target": "experiments/legacy/flywire_learning/DIAGNOSTIC_PLAN.md",
+      "sha256": "a7dab43fa6beddfee858fdcccbb178bbd05368acd6e2e8efe4f88b37b4ec62f6",
+      "bytes": 1300,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/PROTOCOL.md",
+      "target": "experiments/legacy/flywire_learning/PROTOCOL.md",
+      "sha256": "433168ef1ba0a26f0f75afd616c1a26b9743a4d0f134a02bc3ea04def5478aa2",
+      "bytes": 5731,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/README.md",
+      "target": "experiments/legacy/flywire_learning/README.md",
+      "sha256": "0b345e132ff879e60d10cabb07e77c460811bb672ed9a17fdadeffa0aa8d5b88",
+      "bytes": 4933,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/RESEARCH.md",
+      "target": "experiments/legacy/flywire_learning/RESEARCH.md",
+      "sha256": "582ea9d7fde4fdfcdbca2f487c2b90647891495507ad269a190e40d8f617b87e",
+      "bytes": 18059,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/WARMUP_PROTOCOL.md",
+      "target": "experiments/legacy/flywire_learning/WARMUP_PROTOCOL.md",
+      "sha256": "f2eb52316bd21848e9ccc24cc604c162952dcc8f53ca6dae28e13fb9df8b4ede",
+      "bytes": 3631,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/audit_connectome.py",
+      "target": "experiments/legacy/flywire_learning/audit_connectome.py",
+      "sha256": "a57db178dcf2081b0d19566c0ce287944c0c0bdea7b82fc24dd0ef9256008eae",
+      "bytes": 6229,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/diagnose_calibration.py",
+      "target": "experiments/legacy/flywire_learning/diagnose_calibration.py",
+      "sha256": "a7e8734d97129c559307ec952c0c1292665b8b017f6b73578cb2a913ca91e13d",
+      "bytes": 1962,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/diagnose_readout.py",
+      "target": "experiments/legacy/flywire_learning/diagnose_readout.py",
+      "sha256": "25427cc14512842fddb593ed18c2a624b2c9ea25e7eb72791290cda3026c0f8d",
+      "bytes": 6722,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/experiment.py",
+      "target": "experiments/legacy/flywire_learning/experiment.py",
+      "sha256": "f3abc5e53f0a41fa0464786f0d1524b968b707e13dda5016ae1b9284e46161b8",
+      "bytes": 15558,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/mechanism.py",
+      "target": "experiments/legacy/flywire_learning/mechanism.py",
+      "sha256": "bbb9e5ec1806bbcfba3c4ac9b08279c9c05ecb900d6db959cb0722963dde81dc",
+      "bytes": 6498,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/native_measure.py",
+      "target": "experiments/legacy/flywire_learning/native_measure.py",
+      "sha256": "e5acd25f95343b0d6951ed3013b1694c0fc9857def5670c2f56428071cde4096",
+      "bytes": 1071,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/plot_results.py",
+      "target": "experiments/legacy/flywire_learning/plot_results.py",
+      "sha256": "cc918e17968c953ecff863b4eec48f18cbc8cd2b600e5e99e70dcd4d577148ad",
+      "bytes": 5376,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/plot_warmup.py",
+      "target": "experiments/legacy/flywire_learning/plot_warmup.py",
+      "sha256": "18b8193a12bdcddeb78bd6e11ab1900bc8b82cd680d21b84e6588697ec73d7f1",
+      "bytes": 3857,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/prepare.py",
+      "target": "experiments/legacy/flywire_learning/prepare.py",
+      "sha256": "28ab57871bce658ea63b4980fde7115db0db934464dfa685fef2bb27942c6c35",
+      "bytes": 5617,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/record_environment.py",
+      "target": "experiments/legacy/flywire_learning/record_environment.py",
+      "sha256": "dede570c62d30966159ddd54327dafe4c340b2de06aa34230f45710447ef6bd8",
+      "bytes": 2743,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/report.py",
+      "target": "experiments/legacy/flywire_learning/report.py",
+      "sha256": "dc2b189ed95ec9c03de8ea98bc1c2280aa6f0e099dd6b1abfbc5a1482486a3ca",
+      "bytes": 19023,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/calibration_voltage_diagnostics.json",
+      "target": "experiments/legacy/flywire_learning/results/calibration_voltage_diagnostics.json",
+      "sha256": "ada851557936025b88c15d7acc86b0ca30d48ddabfd55f07d9a70a2eb2ad02f0",
+      "bytes": 2189,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/clock_fix_prefix_equivalence.json",
+      "target": "experiments/legacy/flywire_learning/results/clock_fix_prefix_equivalence.json",
+      "sha256": "9fedf7e01e5349858e226d93657fc024dbcf61b00625a5aec4daddecab1ec1a9",
+      "bytes": 432,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/connectome_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/connectome_audit.json",
+      "sha256": "da0a5d86d90fae5c7bb9fd26f85dba889dcc681439d996e607883f0c297b5f71",
+      "bytes": 2596,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/continuation_validation.json",
+      "target": "experiments/legacy/flywire_learning/results/continuation_validation.json",
+      "sha256": "d7112dd0c051a20293c3ca3602fe6ebfab4d4ecd1561561041cbef51dcac13cc",
+      "bytes": 295,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/ARTIFACTS.md",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/ARTIFACTS.md",
+      "sha256": "ade5cd142f2808ffa105a2cc041cc82af69a42cc10be74b4fef7ec6ad4bf92ec",
+      "bytes": 8290,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/RESULTS.md",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/RESULTS.md",
+      "sha256": "d01f853eb61c3b0092126dd1d7d4b271428edf97145710f7a7695272b21cc3fe",
+      "bytes": 9601,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/artifact_manifest.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/artifact_manifest.json",
+      "sha256": "20f98865d874e763203856bb522c3e6f14b6e8de74f75a633e41fe31fde8470c",
+      "bytes": 7282,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/checkpoint_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/checkpoint_audit.json",
+      "sha256": "e05ee2f219b9b44ceb9dd44be3ebf5e08b5bb793b7bd265d259ba90a833a0227",
+      "bytes": 2149,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/completion_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/completion_audit.json",
+      "sha256": "39eac5a86fd42a78f16e06d546748b7dbe6f783fb23a643707c99120309537cb",
+      "bytes": 13967,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/correctness.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/correctness.json",
+      "sha256": "1234bd0ae6f1aeed8c3cfce36315a0f4e7d4dcfa5cb73d972971b2f8b81c753a",
+      "bytes": 1394,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/delivery_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/delivery_audit.json",
+      "sha256": "d89224b58da2b06f493238e38845ee2b61b4206c912be1f80cf5b9f392166acb",
+      "bytes": 507,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/execution_choice.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/execution_choice.json",
+      "sha256": "93563f84f2aa62a349606a36702ac62f8834d7525faed11a5ed7d769a48fb31a",
+      "bytes": 197,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/execution_registry.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/execution_registry.json",
+      "sha256": "5242bc5097ae8fa6fcd3b50d52be7065064676b101138fbfd3382e55ea9a1c9b",
+      "bytes": 24778,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/figure_provenance.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/figure_provenance.json",
+      "sha256": "bd7d508391167089ca428b4a49bd1474871fb84516d14f1198bd316a0686a89e",
+      "bytes": 439,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/final_report.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/final_report.json",
+      "sha256": "20c7a2f91c22c82ae1e27c21dbd3c4dc20f0fad056d422df8751107b45059b24",
+      "bytes": 28250,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/input_identity_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/input_identity_audit.json",
+      "sha256": "1a3ee5d2de8b819b6840df7977ee04c85f59bd59d9daaee40fcfca36340be76d",
+      "bytes": 2749,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/preset_effects.pdf",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/preset_effects.pdf",
+      "sha256": "2d4b981d1fb973226f293bbfeed6e5a34370bfe0d4152b2c296ba9fc1d247ca9",
+      "bytes": 22982,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/preset_effects.png",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/preset_effects.png",
+      "sha256": "be116fd262130c073b3fe0ff44a45e00b90f591b670cddb4119cdfc465c35719",
+      "bytes": 84494,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/raw_cue_responses.pdf",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/raw_cue_responses.pdf",
+      "sha256": "d9e74b9350774dbe23ea355cd9a709e692df7be01925fce6fa0d1f3bdb820537",
+      "bytes": 24660,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/raw_cue_responses.png",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/raw_cue_responses.png",
+      "sha256": "e04ad89824be004ad69a4f579bac6c1da2f807e5fb6a0f48abc55260af9d0a18",
+      "bytes": 329802,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu-v1/study_identity.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu-v1/study_identity.json",
+      "sha256": "ed13f350d032d5a992ffb6ec30311237e432f10be26f54ea0eb6c285771623e7",
+      "bytes": 370,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/cpu_environment.json",
+      "target": "experiments/legacy/flywire_learning/results/cpu_environment.json",
+      "sha256": "2344694ce2535d1497313cc98d42194721e4c427166edea44222431da5cfe58f",
+      "bytes": 3477,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/input_calibration.json",
+      "target": "experiments/legacy/flywire_learning/results/input_calibration.json",
+      "sha256": "184b8ff1089a0d71fc7d1366928ac19bdb4907b77ee5fba174a485616c852c12",
+      "bytes": 3984,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/prepared_manifest.json",
+      "target": "experiments/legacy/flywire_learning/results/prepared_manifest.json",
+      "sha256": "8adb84dfd2ba519d9467811d8cfd30fe9b2a726830e4a6788dbbdb7b5160f8ff",
+      "bytes": 4224,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/provenance.json",
+      "target": "experiments/legacy/flywire_learning/results/provenance.json",
+      "sha256": "e54d2ee57effda5a3a8694ff4bac32be8739d5a7dc00d58a21391dc0304a7ff1",
+      "bytes": 815,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/readout-diagnostics-v1/RESULTS.md",
+      "target": "experiments/legacy/flywire_learning/results/readout-diagnostics-v1/RESULTS.md",
+      "sha256": "4939a7c7fd63dc25b61b5e3a0ccf1e115f70d1ab8b9f6d75dde0b9c05be45143",
+      "bytes": 5291,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/readout-diagnostics-v1/diagnostics.json",
+      "target": "experiments/legacy/flywire_learning/results/readout-diagnostics-v1/diagnostics.json",
+      "sha256": "5e0799cc4113a591d860cfe05afabe28d2e0e44f0ad4b5c49824535bdca86096",
+      "bytes": 1059457,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/real_subgraph_validation.json",
+      "target": "experiments/legacy/flywire_learning/results/real_subgraph_validation.json",
+      "sha256": "e7fcb6dfc6a893cb464d84a8aa9577df9992b2e7ed8cfc88226820007f6667ed",
+      "bytes": 521,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/seed11_controls_validation.json",
+      "target": "experiments/legacy/flywire_learning/results/seed11_controls_validation.json",
+      "sha256": "6a98197ad2d4a81db710fc49b14bbe365579317ab37fbf4b267726cb2491d0f9",
+      "bytes": 2255,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/seed11_interim.json",
+      "target": "experiments/legacy/flywire_learning/results/seed11_interim.json",
+      "sha256": "6d25f014a7679618f7dca7e9e28a2f2f303b0d87040b93e6fd6fcc8fd1718c83",
+      "bytes": 8531,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/spiking_validation.json",
+      "target": "experiments/legacy/flywire_learning/results/spiking_validation.json",
+      "sha256": "04315d886b03aef3b0660743ac89dff26a0cf386ae8066c924f2a20fc8f16450",
+      "bytes": 1963,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/synthetic_mechanism.json",
+      "target": "experiments/legacy/flywire_learning/results/synthetic_mechanism.json",
+      "sha256": "444331b97d11e9169ec5ee03705c372b88ce5e2cd1875f67fc0d8725a5e10bf5",
+      "bytes": 57473,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/RESULTS.md",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/RESULTS.md",
+      "sha256": "602f778ba6f80f2e0bf8585248f786c44efab254396a2591921dee4cd2256dd0",
+      "bytes": 7443,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/artifact_manifest.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/artifact_manifest.json",
+      "sha256": "664caa753f44ddd6075080d61d244ae92663ab14962dc84e29452d6eba3138b9",
+      "bytes": 2517,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/delivery_audit.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/delivery_audit.json",
+      "sha256": "709be94646b32161766e3c7df6411727a40fbcb13c6036f60f21d4b3fe820a1f",
+      "bytes": 511,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/environment.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/environment.json",
+      "sha256": "dacfdcb973c16b0e219199ad526a0e72c03c7f0b509079f5100acf8fba765a69",
+      "bytes": 4006,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/figure_provenance.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/figure_provenance.json",
+      "sha256": "cf8cff7f4654dab95728300bfe83c63ad768f84abf1197828614d4cac48cf9a8",
+      "bytes": 386,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/progress.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/progress.json",
+      "sha256": "c22c8e84f35594a762700ac205923c1d4e78271977e02ad874595678ef8764ab",
+      "bytes": 7285,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/results.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/results.json",
+      "sha256": "3b8e9d78bf57d554d4bf0796d7560fdb922dea2990e7f456a2ec5478b5a0c20a",
+      "bytes": 278690,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/short_reference_equivalence.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/short_reference_equivalence.json",
+      "sha256": "2f80f76bad784f18f2eed784da06eea209ddd40491876fd4e4f1416f83ccd1b8",
+      "bytes": 217,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/study_identity.json",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/study_identity.json",
+      "sha256": "1c1854e5f5ebc821a20152908f720122c3a293669d9f77e22cc4c02945b9f59f",
+      "bytes": 1421,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_drift.pdf",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/warmup_drift.pdf",
+      "sha256": "0283c0abed7c936be8c6d9729153eba9df870ec4ca13313a258398f806ccc8f1",
+      "bytes": 20119,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_drift.png",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/warmup_drift.png",
+      "sha256": "4cc552b037d26b73cca870fbaad7aca8b1db39542f65065131938bf00ce0563e",
+      "bytes": 109674,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_responses.pdf",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/warmup_responses.pdf",
+      "sha256": "a221434fedbfdf96ef988380ed0948cc9ddcef624976aa54ff944de74085184d",
+      "bytes": 21520,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/results/warmup-v1/warmup_responses.png",
+      "target": "experiments/legacy/flywire_learning/results/warmup-v1/warmup_responses.png",
+      "sha256": "9e9c42fc1b2d3fd3c9e0892d4d2a9082cb65b975ab270bc99beea1619de65c4f",
+      "bytes": 221263,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/spiking.py",
+      "target": "experiments/legacy/flywire_learning/spiking.py",
+      "sha256": "c57e2d3121afe9f1efda31f772dcac972ce6f85461ebd35fb7cc509d17cbd08b",
+      "bytes": 2959,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/study.py",
+      "target": "experiments/legacy/flywire_learning/study.py",
+      "sha256": "62e3ab8f5b9d40ceea3eb83d45cee16b3adde58bee930198425df7adbef3aa15",
+      "bytes": 10656,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/test_mechanism.py",
+      "target": "experiments/legacy/flywire_learning/test_mechanism.py",
+      "sha256": "d15b3c5a654120bfd752ed56aa737142f93a268bc3556828e8accebc9b7f1923",
+      "bytes": 2415,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/validate_continuation.py",
+      "target": "experiments/legacy/flywire_learning/validate_continuation.py",
+      "sha256": "d1dff5bac869ea2ac2af19fbfe3050c51591c23783a3d0500c51eea437461301",
+      "bytes": 5096,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/validate_spiking.py",
+      "target": "experiments/legacy/flywire_learning/validate_spiking.py",
+      "sha256": "e7450b0533c610059936bd711d00f6cf2cb41da88afed30eb124679b98496fd4",
+      "bytes": 5913,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/warmup_report.py",
+      "target": "experiments/legacy/flywire_learning/warmup_report.py",
+      "sha256": "dbb72894c3d973b611c812995b9793aa042581bb1454b6ea0c4ba0dc9ca24ad4",
+      "bytes": 14167,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_learning/warmup_study.py",
+      "target": "experiments/legacy/flywire_learning/warmup_study.py",
+      "sha256": "78fa8621e19e9ffb80976e68c7b0f68ba1727dcb555fa7f685f30d0de9a36479",
+      "bytes": 8179,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/FULL_MNIST.md",
+      "target": "experiments/legacy/flywire_mnist/FULL_MNIST.md",
+      "sha256": "fdfdecc8a09845e867931c909e936246997e4c513feff49be1ab2627fe185389",
+      "bytes": 9269,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/README.md",
+      "target": "experiments/legacy/flywire_mnist/README.md",
+      "sha256": "cdb77968e2f9cda3b81af09a28ed05431ac4457ba40d21da09adab7444c4af88",
+      "bytes": 8274,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/__init__.py",
+      "target": "experiments/legacy/flywire_mnist/__init__.py",
+      "sha256": "ebc2c0ba1e6307891e384668d89a087bf54af4c2bcf94bb36678b728449f0546",
+      "bytes": 80,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/__main__.py",
+      "target": "experiments/legacy/flywire_mnist/__main__.py",
+      "sha256": "4227eea67c0b8915cb57ea8df314d43216f4cc0f77cab83882d2398a02d34082",
+      "bytes": 8994,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/backends/__init__.py",
+      "target": "experiments/legacy/flywire_mnist/backends/__init__.py",
+      "sha256": "527ac5eb5d4bcb4a81a604e1879738ce6222f74834d4c24dde4e9da4252c6960",
+      "bytes": 3599,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/backends/frozen_cpu.py",
+      "target": "experiments/legacy/flywire_mnist/backends/frozen_cpu.py",
+      "sha256": "236e2a734bc3f6ecf044fdaa3af65d28fa9c99a4e884d4e48a5bdf729bf2c679",
+      "bytes": 5664,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/backends/mpi.py",
+      "target": "experiments/legacy/flywire_mnist/backends/mpi.py",
+      "sha256": "6770202aa8b62c1c1238ea9c68717a2b7628fe94c5479ffc84ff900be56b515a",
+      "bytes": 3152,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/backends/mpi_worker.py",
+      "target": "experiments/legacy/flywire_mnist/backends/mpi_worker.py",
+      "sha256": "7e5670989060b778f9c7faa1d24c00622953cbb5335e6e2b5e013aa1be24a66c",
+      "bytes": 913,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/campaign.py",
+      "target": "experiments/legacy/flywire_mnist/campaign.py",
+      "sha256": "d032d2bcde560c3de3c08e834c0c8c89d3090556bcd697a5acaa18960ea0d624",
+      "bytes": 3176,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/cnn.py",
+      "target": "experiments/legacy/flywire_mnist/cnn.py",
+      "sha256": "a935100ed4013a16d4efd4479d3f4c984f4bfd1f2712e6ab12585c9aded9f39f",
+      "bytes": 6383,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/config.py",
+      "target": "experiments/legacy/flywire_mnist/config.py",
+      "sha256": "0e33517ecae745e2b3f0cef79f5b783ba2c34ce6035d9049f6b416b9fe99ebea",
+      "bytes": 2084,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/dataset.py",
+      "target": "experiments/legacy/flywire_mnist/dataset.py",
+      "sha256": "7a31459e0f89fd858a11788009c0ce7ccf2cfb58e88da1b408e84a86c8af183d",
+      "bytes": 3815,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/encoding.py",
+      "target": "experiments/legacy/flywire_mnist/encoding.py",
+      "sha256": "cb85025863cee09307a51cf05123ff483185c51efcdbe9bc9396aca5ab241030",
+      "bytes": 2099,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/model.pt",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/model.pt",
+      "sha256": "cf0b5ddf20a399082a0b9b48a6f41b7f1f44bd110800007cd455a2ffa71d2d88",
+      "bytes": 324081,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/protocol.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/protocol.json",
+      "sha256": "c35b189c6310995d465dd0a4ef577a22c09b51c2b3a5553069721d7f4aaab08f",
+      "bytes": 1717,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/report.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/report.json",
+      "sha256": "7ad3b90a80b161877d92bcfbc0d20a278c22a657dca15299cba9d6724920233f",
+      "bytes": 2414,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/selection-lock.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/selection-lock.json",
+      "sha256": "76ea91d666178e4198263663bfb354e4fffc2462eaa273c6b4d0aa93fc88d495",
+      "bytes": 180,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/test-lock.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/test-lock.json",
+      "sha256": "0289ddc8b8669742588f43be83f4d04dbe98e58bd8709cc73a077d79d36c7d6a",
+      "bytes": 266,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/test-predictions.npz",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/test-predictions.npz",
+      "sha256": "e7bcf4ac4a288d0b6fbac03e686b9e41d9e604405a04e379e183cf21d0e51543",
+      "bytes": 27281,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/training-curve.png",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/training-curve.png",
+      "sha256": "edba9b70e1aad1e0d539679b2a44b532f1c2af65358f9cb3d9a14da59a01467a",
+      "bytes": 81811,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cnn-full/training-history.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cnn-full/training-history.json",
+      "sha256": "87b680b6f09e6b9c87f44b3979293590cd8c61bce6d6dbbf24916f84a6751894",
+      "bytes": 927,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cpu-f64-features.npz",
+      "target": "experiments/legacy/flywire_mnist/evidence/cpu-f64-features.npz",
+      "sha256": "ee9e77ea30800b887b0f3114013ce039022951021249f1f1ae6ec3e7ef3ec405",
+      "bytes": 41031,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/cpu-f64-manifest.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/cpu-f64-manifest.json",
+      "sha256": "1cbc28ebb7cbb3c5da7eda4c055376c6f0890d5514a8829b0f3170f6c24344ae",
+      "bytes": 24112,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/full-run-validation.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/full-run-validation.json",
+      "sha256": "bd7198f4299cbfeacd1200f89d54ffe72d541c95c01c8e81e372e681ee75808e",
+      "bytes": 666,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/mac-studio-deployment.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/mac-studio-deployment.json",
+      "sha256": "4816535eb55b306e369a0ed5a1430a492cd03430d586461a7f423f35b33672af",
+      "bytes": 2972,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/metal-f32-features.npz",
+      "target": "experiments/legacy/flywire_mnist/evidence/metal-f32-features.npz",
+      "sha256": "26dc77645c973a894a2ca37676794b812445fd551bf16179484686fdd72ec256",
+      "bytes": 40832,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/metal-f32-manifest.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/metal-f32-manifest.json",
+      "sha256": "8e145edfc0fbc8b3e018b4bd45612ee2d6c9e85bb624bc935b6eb9b5fbb66653",
+      "bytes": 25358,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/evidence/summary.json",
+      "target": "experiments/legacy/flywire_mnist/evidence/summary.json",
+      "sha256": "d89e239cab95c823194ab2bee6d1c890b8d8eaae27236121f4e0ce0465192ba0",
+      "bytes": 3910,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/full.py",
+      "target": "experiments/legacy/flywire_mnist/full.py",
+      "sha256": "5ccda754e7f204a23d7538d9a8cbd1c8894a7dfdd05676ed02d96728df51f0b5",
+      "bytes": 15008,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/graph.py",
+      "target": "experiments/legacy/flywire_mnist/graph.py",
+      "sha256": "041a23d681f7adcab46105c50de4082081a07b800475b7deadcf20a1173855b8",
+      "bytes": 3949,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/model.py",
+      "target": "experiments/legacy/flywire_mnist/model.py",
+      "sha256": "0065541998c365a15a0ede348f0b92ab55ffa6d0e4e4b93f92ad072e9389c2d9",
+      "bytes": 4800,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/protocol.py",
+      "target": "experiments/legacy/flywire_mnist/protocol.py",
+      "sha256": "8d1fb99a81ab2ade1dcf8f2f367b9f156d2c9f191014440f51c4c4516f2ef2ba",
+      "bytes": 1979,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/readout.py",
+      "target": "experiments/legacy/flywire_mnist/readout.py",
+      "sha256": "32097265c225cfc6310853313022679e2227723ebf49aedc4d616596456698d1",
+      "bytes": 3406,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/README.md",
+      "target": "experiments/legacy/flywire_vision/README.md",
+      "sha256": "497138c01065ce71997ecb5c394cdc6296ed39114d4a5a6d014f47de9da6ce33",
+      "bytes": 51963,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/__init__.py",
+      "target": "experiments/legacy/flywire_vision/__init__.py",
+      "sha256": "f6965839a8214a888ac3568132f485bcef5fb45ce35a4608c4018cd35b133292",
+      "bytes": 72,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/__main__.py",
+      "target": "experiments/legacy/flywire_vision/__main__.py",
+      "sha256": "b1766d887239109ccae1f63b068db3858909320bcab52f06c83c2dfaf17fab54",
+      "bytes": 2742,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/archive_background_clamp.py",
+      "target": "experiments/legacy/flywire_vision/archive_background_clamp.py",
+      "sha256": "56f85b0327468453a656c3e7f47f2e9f244b48455a1607a3d3bb5e2db3b8700c",
+      "bytes": 2469,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/archive_minimal_response.py",
+      "target": "experiments/legacy/flywire_vision/archive_minimal_response.py",
+      "sha256": "26648a7fb9fa86837a730fe2bc2058b19906ac00897f0048591ce27efac14831",
+      "bytes": 1713,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/archive_onset_diagnostic.py",
+      "target": "experiments/legacy/flywire_vision/archive_onset_diagnostic.py",
+      "sha256": "e92131a0d67929c0eef339954516c959889bd7e6e7ca67bd0e72f56a76cfd107",
+      "bytes": 2004,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/archive_repeat.py",
+      "target": "experiments/legacy/flywire_vision/archive_repeat.py",
+      "sha256": "af77bdd8f26e8c52e7dab532d9595a6977efe7f5bbaed871c8a0dacd15a996d0",
+      "bytes": 2316,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/audit_generalization_input.py",
+      "target": "experiments/legacy/flywire_vision/audit_generalization_input.py",
+      "sha256": "fcc489a570553df126c61035966d1c80459a5fad89eabb285f7b465615d76448",
+      "bytes": 3326,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/audit_generalization_totals.py",
+      "target": "experiments/legacy/flywire_vision/audit_generalization_totals.py",
+      "sha256": "1f69411d25ebf4c56e93e9b0f05d295abc2c9f191766a936ccc7a1b1b1dd7f48",
+      "bytes": 3835,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/background_clamp.py",
+      "target": "experiments/legacy/flywire_vision/background_clamp.py",
+      "sha256": "b038749db11dc26778c2cc9be59bb5d81a57349f93117f6f838f387dc282cbe3",
+      "bytes": 17045,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/background_clamp_report.py",
+      "target": "experiments/legacy/flywire_vision/background_clamp_report.py",
+      "sha256": "f93d699e21434b46cac1d5f351be60ccd4022093bf637365591c77d2ed4395f6",
+      "bytes": 13099,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/causal_motion.py",
+      "target": "experiments/legacy/flywire_vision/causal_motion.py",
+      "sha256": "11ab000fc161e5b217492567fb1ff1d4dbfe0d0298ac5c673076a7b46adae293",
+      "bytes": 21036,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/causal_view.py",
+      "target": "experiments/legacy/flywire_vision/causal_view.py",
+      "sha256": "402fd3be31b0c142aca316421565c1e653ab10500a4552d4276686bf7a21b7fe",
+      "bytes": 4618,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/convergent_archive.py",
+      "target": "experiments/legacy/flywire_vision/convergent_archive.py",
+      "sha256": "efc866a283d280fd08c061b4be3b40143f171e656c8e1465cb54708b06f234d6",
+      "bytes": 3833,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/convergent_probe.py",
+      "target": "experiments/legacy/flywire_vision/convergent_probe.py",
+      "sha256": "4dbecb6e617079276acd26b62452d737c4858756e8674c0380782b8817d279b3",
+      "bytes": 11333,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/decoding.py",
+      "target": "experiments/legacy/flywire_vision/decoding.py",
+      "sha256": "401108b60ee1ddae770519b30985c7acddbced6d2b6b65a3772ba6d511ffad8f",
+      "bytes": 10383,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/diagnose_signal.py",
+      "target": "experiments/legacy/flywire_vision/diagnose_signal.py",
+      "sha256": "619cc9f520f13f383d00deaacfd6d55143d196ab6eac82f43c6ceee254df9104",
+      "bytes": 5364,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/direction_study.py",
+      "target": "experiments/legacy/flywire_vision/direction_study.py",
+      "sha256": "59bbba6add32f3d4491f252cd1598a36213a7006ea53dc281f69de511fa3d66c",
+      "bytes": 12327,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/event_clamp_data.py",
+      "target": "experiments/legacy/flywire_vision/event_clamp_data.py",
+      "sha256": "3fd716b67518d1f167c4a211d7b8de65c1cb45031590d2d0d832ecdc25258824",
+      "bytes": 4156,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/event_clamp_engine.py",
+      "target": "experiments/legacy/flywire_vision/event_clamp_engine.py",
+      "sha256": "eb2240f9c75ae9cc699ecd49acc83f34548fcf39950e1c98e30d99a739ac09ee",
+      "bytes": 11252,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/event_clamp_gates.py",
+      "target": "experiments/legacy/flywire_vision/event_clamp_gates.py",
+      "sha256": "202c84d93a6b0b44b8121ea6439207215051488965fdf6225281647c07c9df4a",
+      "bytes": 6281,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/event_clamp_report.py",
+      "target": "experiments/legacy/flywire_vision/event_clamp_report.py",
+      "sha256": "9069eeeb839232b995cb03884bdf4937d9f2e63bf24be7b71e37998306d4c53a",
+      "bytes": 12127,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/event_clamp_study.py",
+      "target": "experiments/legacy/flywire_vision/event_clamp_study.py",
+      "sha256": "b9bc7a33de841ec5b4b0a1ba8f699368211b78c56d2a974aae0ab80c46d93aa7",
+      "bytes": 11514,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/export_variant.py",
+      "target": "experiments/legacy/flywire_vision/export_variant.py",
+      "sha256": "25c283450fbf618c2a0f371b5ac0280ebf907580a568da4192c47ff1ba5e2ca7",
+      "bytes": 5912,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/fetch_sources.py",
+      "target": "experiments/legacy/flywire_vision/fetch_sources.py",
+      "sha256": "496c69ae0810650404d28641756656ed20e5c845f3e87c4565343ff886ee7e29",
+      "bytes": 1093,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/generalization_data.py",
+      "target": "experiments/legacy/flywire_vision/generalization_data.py",
+      "sha256": "d242d9e7fe7361993fb4ac243ddf921d7365e5927cdb29b05ebb4f3fa0ca4dac",
+      "bytes": 3907,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/generalization_readout.py",
+      "target": "experiments/legacy/flywire_vision/generalization_readout.py",
+      "sha256": "bc8ce843d321699eb6daa12e955e4c40c70aded6fed3db27b528392490df8234",
+      "bytes": 1558,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/generalization_replay.py",
+      "target": "experiments/legacy/flywire_vision/generalization_replay.py",
+      "sha256": "0c335f95a4e4c1da4d1d7bac4807f4e5fff46ca37c5bf5dcbe98a61fd8bfb1bc",
+      "bytes": 1678,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/generalization_study.py",
+      "target": "experiments/legacy/flywire_vision/generalization_study.py",
+      "sha256": "85a275436d94070188ca7a733f258b8ddfe2b7f9c5929c2675ab99a3bb267511",
+      "bytes": 15164,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/gpu_probe.py",
+      "target": "experiments/legacy/flywire_vision/gpu_probe.py",
+      "sha256": "66e68cfbddd98306d1d4cdb554c3e5f35278860408d69d29495163cc80f8ef97",
+      "bytes": 4109,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/improve_direction.py",
+      "target": "experiments/legacy/flywire_vision/improve_direction.py",
+      "sha256": "d7ca2c63107ec26867bc1ae443e9194fa57c417f053b8fa1075f874f0bd5bd0a",
+      "bytes": 16585,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/mapping.py",
+      "target": "experiments/legacy/flywire_vision/mapping.py",
+      "sha256": "753051e85249ce13296c970f0439b7eb1cc6090310a56afea6e8b57058c549da",
+      "bytes": 4672,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/minimal_response_models.py",
+      "target": "experiments/legacy/flywire_vision/minimal_response_models.py",
+      "sha256": "a0ad58f5ae5f0fd6f1c0a6ab4c89f6b9ccbef23d76e8945fd659bcea6f82367c",
+      "bytes": 1235,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/minimal_response_report.py",
+      "target": "experiments/legacy/flywire_vision/minimal_response_report.py",
+      "sha256": "b8f780c254b79459a8bfacb437ab35cadb9e8b056ff0015abcdfd44f9a62df89",
+      "bytes": 10092,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/minimal_response_study.py",
+      "target": "experiments/legacy/flywire_vision/minimal_response_study.py",
+      "sha256": "12fd4a42e9c090832fe8fd894168d643e50913cfc9ae621486f3082ed5103184",
+      "bytes": 7906,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_challenge.py",
+      "target": "experiments/legacy/flywire_vision/motion_challenge.py",
+      "sha256": "245f9ffa5eeb29d1f4ee1fbe732bcea54f2dfc64f8fd6605ca22b1d35e724c63",
+      "bytes": 9455,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_challenge_design.md",
+      "target": "experiments/legacy/flywire_vision/motion_challenge_design.md",
+      "sha256": "3d736c55010a1d73da4333bbbb845b26b40f87990a710615aac4eaccee33db10",
+      "bytes": 7269,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_frontend.py",
+      "target": "experiments/legacy/flywire_vision/motion_frontend.py",
+      "sha256": "fc085cdf99604149cfbe7ee22dc08c7d67ffa7a6ee55aa6e61bc6965451aee47",
+      "bytes": 4017,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_readout.py",
+      "target": "experiments/legacy/flywire_vision/motion_readout.py",
+      "sha256": "b7d0539f58317a0d0e36025a90e44c799a1415fa0deef24cbe9f0d42ccb946d1",
+      "bytes": 4762,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_refinement.py",
+      "target": "experiments/legacy/flywire_vision/motion_refinement.py",
+      "sha256": "89c897cf0a271e45959927c3101e586989eb9d73df6d00776c522424318eb09d",
+      "bytes": 18847,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_replay.py",
+      "target": "experiments/legacy/flywire_vision/motion_replay.py",
+      "sha256": "fe2866aa9fd060ca9ca2a6ea1e3ca387cfc1fc1a2b64b5b6660ea95b025c6c5b",
+      "bytes": 5104,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_resolution.py",
+      "target": "experiments/legacy/flywire_vision/motion_resolution.py",
+      "sha256": "62efcfc5fb1be7af35e1c6dc64035f551bedb2753bcfd5190f96cf82753d8e9a",
+      "bytes": 5046,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_search.py",
+      "target": "experiments/legacy/flywire_vision/motion_search.py",
+      "sha256": "21c06d32627188947afff5b654614facf2a2f3370c2bf8282a65001883b73aa5",
+      "bytes": 2201,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/motion_stress.py",
+      "target": "experiments/legacy/flywire_vision/motion_stress.py",
+      "sha256": "9a36317b78b0036c9ea8985f817325ffbff98507d309502c8fcfc151e7f497df",
+      "bytes": 8212,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/multispeed_data.py",
+      "target": "experiments/legacy/flywire_vision/multispeed_data.py",
+      "sha256": "5ec00d639741b8b0e0187001dd0257dba293b49313a715f7c281c581f05e221a",
+      "bytes": 5762,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/multispeed_readout.py",
+      "target": "experiments/legacy/flywire_vision/multispeed_readout.py",
+      "sha256": "bd9efcb46c1d2b1d4bfaedc3bce9fdb76f4bbde81d0171fcdcabbd8c3c0c7ac1",
+      "bytes": 2885,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/multispeed_study.py",
+      "target": "experiments/legacy/flywire_vision/multispeed_study.py",
+      "sha256": "a4f33d7a5657d6e8c1a0fed37f7250e6d42a3f6e27616713ec7c2278bac50d46",
+      "bytes": 15107,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/onset_diagnostic.py",
+      "target": "experiments/legacy/flywire_vision/onset_diagnostic.py",
+      "sha256": "b911b5daede172095ca630c11be1e79879f71708e6ba4ba0598fd163a0cc9330",
+      "bytes": 9572,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/onset_report.py",
+      "target": "experiments/legacy/flywire_vision/onset_report.py",
+      "sha256": "75062629e538a4b0ee449a2dd45b81a8c86413d254c9431bc93082c68a9c2760",
+      "bytes": 9101,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/pilot.py",
+      "target": "experiments/legacy/flywire_vision/pilot.py",
+      "sha256": "e9e6751de0034ce18f6a62f6b718408632e9458e6313d9fa298d3e87f9a9e1d3",
+      "bytes": 6170,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/refinement.py",
+      "target": "experiments/legacy/flywire_vision/refinement.py",
+      "sha256": "3281fca4678880f15cbede5146c383ffc4c880ece2a23a2b1f569f8208729703",
+      "bytes": 5659,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/repeat_design.py",
+      "target": "experiments/legacy/flywire_vision/repeat_design.py",
+      "sha256": "206fe35ad7b3e69f588a22a6d5e5d77d0993fb64815c068b90857e348cb28bc6",
+      "bytes": 4698,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/repeat_report.py",
+      "target": "experiments/legacy/flywire_vision/repeat_report.py",
+      "sha256": "e3e6db8474304b1ac536b9cd4cf10f2d7865bafbec977e73924bb998e31db8a3",
+      "bytes": 10831,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/repeat_study.py",
+      "target": "experiments/legacy/flywire_vision/repeat_study.py",
+      "sha256": "d6f4660769fdb3608d49951bd30b909cf47bbcf237125c7a619d1655438d1ebd",
+      "bytes": 16173,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/response_diagnostic.py",
+      "target": "experiments/legacy/flywire_vision/response_diagnostic.py",
+      "sha256": "aaa308e3abf42f8f6f7c03659def08e99e8e29fd0f0e500a257afbcfa2ce73b9",
+      "bytes": 6945,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/robustness_audit.py",
+      "target": "experiments/legacy/flywire_vision/robustness_audit.py",
+      "sha256": "dc274e4056d12b2edf57349725b7c56983ece99d288312d0dfe923e9c179f2b0",
+      "bytes": 11474,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/run_experiment.py",
+      "target": "experiments/legacy/flywire_vision/run_experiment.py",
+      "sha256": "c11feb97c6683d344dcc58cdfe01025ee3f8b2476060d8dde33ab9f1724062ff",
+      "bytes": 6683,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/serve.py",
+      "target": "experiments/legacy/flywire_vision/serve.py",
+      "sha256": "c179638ab322f699534283e2763f91934eb114ee75ce4da5e0147b8f7e5eb31a",
+      "bytes": 14960,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/simulation.py",
+      "target": "experiments/legacy/flywire_vision/simulation.py",
+      "sha256": "12283e52e25da1540f8cd7468d64dbd803710935f3a54825aec8b43310b91ac5",
+      "bytes": 10425,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/sources.json",
+      "target": "experiments/legacy/flywire_vision/sources.json",
+      "sha256": "b00ef73dec19dcc1fc73fca68d4a38c737fc422e20ee188302132b110ebea719",
+      "bytes": 1043,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/sparse_refinement.py",
+      "target": "experiments/legacy/flywire_vision/sparse_refinement.py",
+      "sha256": "77259d2ba6f4c0910aee0c0216bd1ad11b0c539ddff724e00470f813a804d8c3",
+      "bytes": 12431,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/speed_replay.py",
+      "target": "experiments/legacy/flywire_vision/speed_replay.py",
+      "sha256": "6a8db2bf8a1f3b93869b0ab5ecbe3f1c5554f6cf1b58445f745632a92583c6a1",
+      "bytes": 3618,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/stimuli.py",
+      "target": "experiments/legacy/flywire_vision/stimuli.py",
+      "sha256": "49b20037a1b385126c3261be1cccc7ffe978da3cad666f1b50861986bbc64ea3",
+      "bytes": 4663,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_artifact_integrity.py",
+      "target": "experiments/legacy/flywire_vision/test_artifact_integrity.py",
+      "sha256": "7c904520b8a78629a643a817da07989187e897b728b8acb5f24c8a4c0d03b7f6",
+      "bytes": 10330,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_background_clamp.py",
+      "target": "experiments/legacy/flywire_vision/test_background_clamp.py",
+      "sha256": "e65bc327187244d1dc45d296ea3dd1127a9b65dc35472322d604d132c0113d0d",
+      "bytes": 3295,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_background_clamp_verifier.py",
+      "target": "experiments/legacy/flywire_vision/test_background_clamp_verifier.py",
+      "sha256": "9ac60c115b60080913c553e228acd12b1a7b752d34d09c24ea16c5afd072fcf4",
+      "bytes": 6263,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_causal_motion.py",
+      "target": "experiments/legacy/flywire_vision/test_causal_motion.py",
+      "sha256": "0fd1be1cd451a984f7cf60da62cacf76867ecb583768f432ef466c5bda7a0e14",
+      "bytes": 1914,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_causal_view.py",
+      "target": "experiments/legacy/flywire_vision/test_causal_view.py",
+      "sha256": "65da01f4f1c15d4698c83675480024545e3016d621cd1d3d934df6ebf14f16ca",
+      "bytes": 3341,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_convergent_probe.py",
+      "target": "experiments/legacy/flywire_vision/test_convergent_probe.py",
+      "sha256": "8b6ceee4cb382ce91292e2eafc68d84b5893058bf56a97dbfcb3b48f88914a89",
+      "bytes": 1689,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_decoding.py",
+      "target": "experiments/legacy/flywire_vision/test_decoding.py",
+      "sha256": "42b2f3d5d6d95fd7b655050beb07d0320dfa6864b18b36d77bdb495c5762b3e0",
+      "bytes": 1516,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_direction_study.py",
+      "target": "experiments/legacy/flywire_vision/test_direction_study.py",
+      "sha256": "dc820ee580ec159984efbcc2a050d4cf0c4e5905d2d1d5a9f548bbad9618c02b",
+      "bytes": 1612,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_event_clamp.py",
+      "target": "experiments/legacy/flywire_vision/test_event_clamp.py",
+      "sha256": "88d49a73f3cfe4d6926b3738f4c57b662f3d37e496aeea337af8dd7c18e80024",
+      "bytes": 2321,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_generalization.py",
+      "target": "experiments/legacy/flywire_vision/test_generalization.py",
+      "sha256": "24661f60e626a523d285e8d963317090af43a11b73f32bfc9744c68b1a959d55",
+      "bytes": 1625,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_generalization_replay.py",
+      "target": "experiments/legacy/flywire_vision/test_generalization_replay.py",
+      "sha256": "e8e75d1ab6b9f2604a45bce81a2a638259a2baa5b821c38a0899e1def3021641",
+      "bytes": 5131,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_minimal_response_models.py",
+      "target": "experiments/legacy/flywire_vision/test_minimal_response_models.py",
+      "sha256": "0e761b43513ec3032f9517df5420621857bf73004d7630445f80ff101a5f5883",
+      "bytes": 1456,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_minimal_verifier.py",
+      "target": "experiments/legacy/flywire_vision/test_minimal_verifier.py",
+      "sha256": "014b22e2de4fbb0fc0f111201be91f9177fcba580c1b85f34e4a77678040b402",
+      "bytes": 2607,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_motion_challenge.py",
+      "target": "experiments/legacy/flywire_vision/test_motion_challenge.py",
+      "sha256": "5760c469d08e1ab564d718ce64f0237c67230109a5bc876f81c47372f847a34a",
+      "bytes": 4284,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_motion_readout.py",
+      "target": "experiments/legacy/flywire_vision/test_motion_readout.py",
+      "sha256": "9138068752029e43919ec06999b941968a6395fba31b740f22f93ae1f9769a06",
+      "bytes": 3475,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_motion_replay.py",
+      "target": "experiments/legacy/flywire_vision/test_motion_replay.py",
+      "sha256": "99d6840c8486a37f84e9238c55e98549dd3f2b0a5d284c8a6cafdca20ff1dc12",
+      "bytes": 4019,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_motion_stress.py",
+      "target": "experiments/legacy/flywire_vision/test_motion_stress.py",
+      "sha256": "e3ab338cb4d09dab05095ae6198ceacd0ee33583f26c57df38acf291fcd873a9",
+      "bytes": 1592,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_multispeed.py",
+      "target": "experiments/legacy/flywire_vision/test_multispeed.py",
+      "sha256": "a85779acf1f6afc3c49ecc2ceb4bef01195e8e156a34bc7baa81e2fad2b42c9a",
+      "bytes": 2437,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_onset_verifier.py",
+      "target": "experiments/legacy/flywire_vision/test_onset_verifier.py",
+      "sha256": "43f31dd36cd5d972c358d78ca4108fdfa6845961cbd89cdf2de4fd80cf3507e0",
+      "bytes": 2667,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_refinement.py",
+      "target": "experiments/legacy/flywire_vision/test_refinement.py",
+      "sha256": "9920cdb97781a2fbe6707dbe01e892878cc02c7908e28014de8c67aa8eae1c2b",
+      "bytes": 3152,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_repeat_study.py",
+      "target": "experiments/legacy/flywire_vision/test_repeat_study.py",
+      "sha256": "bb01fad1fdd7a78a584b6f2f564161f6f1dd708ce166b907123dc2aa0299eb35",
+      "bytes": 3138,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_repeat_verifier.py",
+      "target": "experiments/legacy/flywire_vision/test_repeat_verifier.py",
+      "sha256": "c7b8e74096aad2256f52d1c0d9f1ee307dd5f986ea2bc1f963bdba829ff981e3",
+      "bytes": 3989,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_research.py",
+      "target": "experiments/legacy/flywire_vision/test_research.py",
+      "sha256": "0df5c6a4d27d93f9ac030bc39353011f592d138f5d102c729c2a43957f41b0eb",
+      "bytes": 3987,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_response_diagnostic.py",
+      "target": "experiments/legacy/flywire_vision/test_response_diagnostic.py",
+      "sha256": "991bfdeb5caa5c4e869f74a4a068a629dc67a567ae607f387a953659fa3eaaea",
+      "bytes": 1690,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_robustness_audit.py",
+      "target": "experiments/legacy/flywire_vision/test_robustness_audit.py",
+      "sha256": "46fb38d45e090f0be94e7cf7f6bee66d678708c0abe7e984881f817d4bf013ce",
+      "bytes": 1848,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_simulation.py",
+      "target": "experiments/legacy/flywire_vision/test_simulation.py",
+      "sha256": "8e863140a546fce6916ffbd367d6bc1c0f87d474122f454abdb4629ae9768702",
+      "bytes": 5643,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_speed_replay.py",
+      "target": "experiments/legacy/flywire_vision/test_speed_replay.py",
+      "sha256": "77b34af541e59b8f734a6903ea7d44f8e8bbb58c48feeb16fbb342414d3b9edd",
+      "bytes": 3372,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/test_timing_probe.py",
+      "target": "experiments/legacy/flywire_vision/test_timing_probe.py",
+      "sha256": "c75f12ffc4610634290a14c5047dd1cf464c431c30a031ad2f4ea0a2d97a9bde",
+      "bytes": 2788,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/timing_probe.py",
+      "target": "experiments/legacy/flywire_vision/timing_probe.py",
+      "sha256": "8e7f16fce11d85a0a9b2b4cf51fbdefec187770e9d39b49bf3110e853617414d",
+      "bytes": 11795,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/timing_probe_overlap.py",
+      "target": "experiments/legacy/flywire_vision/timing_probe_overlap.py",
+      "sha256": "e323ea17fff1a3179ff6bd70d1cb72c1637a624d337a2cff61bf8c22e460b4c1",
+      "bytes": 2599,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/timing_probe_windows.py",
+      "target": "experiments/legacy/flywire_vision/timing_probe_windows.py",
+      "sha256": "64a137e6efb32d3f899bc56b7ec54a361bb39ea44d7fceca2785971face33bb0",
+      "bytes": 4336,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_background_clamp.py",
+      "target": "experiments/legacy/flywire_vision/verify_background_clamp.py",
+      "sha256": "95db9ddb2101bd6bb94fc21d57c6911c04a4379c59dd5f3a90e73de6aa8542b3",
+      "bytes": 17647,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_causal_motion.py",
+      "target": "experiments/legacy/flywire_vision/verify_causal_motion.py",
+      "sha256": "1f78572b2007c89c2cbc5aaa360947335ecbde85fc380d20df2b29ab525a9a3b",
+      "bytes": 8416,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_causal_paths.py",
+      "target": "experiments/legacy/flywire_vision/verify_causal_paths.py",
+      "sha256": "4d0081746abbf8e5e350d00b035fcacafd516a256d6f3c7874683d2b38847f8d",
+      "bytes": 3539,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_convergent_probe.py",
+      "target": "experiments/legacy/flywire_vision/verify_convergent_probe.py",
+      "sha256": "960832e8b539159a57008ee63ac5318c0fe1135c57ef724abb96636f1ea14453",
+      "bytes": 8465,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_event_clamp.py",
+      "target": "experiments/legacy/flywire_vision/verify_event_clamp.py",
+      "sha256": "deafde69a2a2146874eebf78153f86f658ecdc26cfaa1223ab5dd4c59fcf5dc4",
+      "bytes": 15371,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_generalization.py",
+      "target": "experiments/legacy/flywire_vision/verify_generalization.py",
+      "sha256": "be1ae42bd20ba15e712bf720c0884dc3353e8bae4f61b7d62b2302da3e38254e",
+      "bytes": 12685,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_improvement.py",
+      "target": "experiments/legacy/flywire_vision/verify_improvement.py",
+      "sha256": "4e3500094e7c113eae47751cc349bf2981543abda718ab9797974a17d2de04eb",
+      "bytes": 5244,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_minimal_response.py",
+      "target": "experiments/legacy/flywire_vision/verify_minimal_response.py",
+      "sha256": "3a0f90da94d8993658747ab382c4af4fbb672caa2521b77b544eabcff43a84a2",
+      "bytes": 9826,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_motion_refinement.py",
+      "target": "experiments/legacy/flywire_vision/verify_motion_refinement.py",
+      "sha256": "3a24f9bd700ebdc965a5ca418816ba4a753f49721094c1e345118486f9256494",
+      "bytes": 11561,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_motion_stress.py",
+      "target": "experiments/legacy/flywire_vision/verify_motion_stress.py",
+      "sha256": "f85ef0f881481683b4e6346683f3b2fa6364ba43cef61364f60659b78b414662",
+      "bytes": 4666,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_multispeed.py",
+      "target": "experiments/legacy/flywire_vision/verify_multispeed.py",
+      "sha256": "293e2e9e6019bbef95e0939c050b5dbd2908d506f429374a82d20ee59de2c2a6",
+      "bytes": 12126,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_onset_diagnostic.py",
+      "target": "experiments/legacy/flywire_vision/verify_onset_diagnostic.py",
+      "sha256": "de9bc45cc72a93681564d4cc57a905766a6f430b205a7a8ff068f4fb9a0aba41",
+      "bytes": 11616,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_repeat_study.py",
+      "target": "experiments/legacy/flywire_vision/verify_repeat_study.py",
+      "sha256": "c486978400fd6eaa6231bba47dec2545454abd469ae0b60eaad8975395e7a90b",
+      "bytes": 19837,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_robustness_audit.py",
+      "target": "experiments/legacy/flywire_vision/verify_robustness_audit.py",
+      "sha256": "2214d0ce306c9d4167ba5b0b26f75e234dad3d5911f340ee3917f7092ceac963",
+      "bytes": 5749,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_sparse_refinement.py",
+      "target": "experiments/legacy/flywire_vision/verify_sparse_refinement.py",
+      "sha256": "f76d97291e2775a6b4d46d7504cff94da3eb0dbab7f8708031e988f06c87f89a",
+      "bytes": 4948,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_study.py",
+      "target": "experiments/legacy/flywire_vision/verify_study.py",
+      "sha256": "3c44dce7a6147f93700a196c0195a1860223aefd531d56391871a06c2121ec3a",
+      "bytes": 4345,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/verify_timing_probe.py",
+      "target": "experiments/legacy/flywire_vision/verify_timing_probe.py",
+      "sha256": "3c70b6d4d53d5acab60d3e4ce4a5d631156d2e99d25a7f711cedecb81c2e481b",
+      "bytes": 8816,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/app.js",
+      "target": "experiments/legacy/flywire_vision/viewer/app.js",
+      "sha256": "15677e2d99804453d62ff1b884bd00809e788466d15e6476ef03a5e8464954dd",
+      "bytes": 21821,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/generalization.html",
+      "target": "experiments/legacy/flywire_vision/viewer/generalization.html",
+      "sha256": "f20d7f8ea2ff38b937dc5db67d89459dc74ff57533aa7a8f0fda47dd34c8de19",
+      "bytes": 5904,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/generalization.js",
+      "target": "experiments/legacy/flywire_vision/viewer/generalization.js",
+      "sha256": "f8d8d543b1d47cca0afc5f28cea8546266393d75a90b3c5912d8b43a46f690b6",
+      "bytes": 7670,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/index.html",
+      "target": "experiments/legacy/flywire_vision/viewer/index.html",
+      "sha256": "72cadcdf7898d92379d395e8577b18c292c915e2856b9e8dbd323ee633502846",
+      "bytes": 8726,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/motion.css",
+      "target": "experiments/legacy/flywire_vision/viewer/motion.css",
+      "sha256": "6864c93352bdd919bfbf142702ff32b11350ac5e148c3ed042fd80d411ec1918",
+      "bytes": 2250,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/motion.html",
+      "target": "experiments/legacy/flywire_vision/viewer/motion.html",
+      "sha256": "17b10a8d8647785f9b23410a23ea1fe257215f2828ef8137f05f079c9b3accf9",
+      "bytes": 5477,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/motion.js",
+      "target": "experiments/legacy/flywire_vision/viewer/motion.js",
+      "sha256": "c6435ff986e665d7c013fc1eb2afa1918e355b8c53daa13742f3e587623282b4",
+      "bytes": 9814,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/speed.html",
+      "target": "experiments/legacy/flywire_vision/viewer/speed.html",
+      "sha256": "ecd8c2ddeec369cdb0e3a80288aba3380b8f4547e53fadd69e6026e865a91adc",
+      "bytes": 4247,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/speed.js",
+      "target": "experiments/legacy/flywire_vision/viewer/speed.js",
+      "sha256": "dccf11101c660a042c05293509d46bbed68880cf912aff8bfc37720a5913e2a5",
+      "bytes": 6234,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_vision/viewer/style.css",
+      "target": "experiments/legacy/flywire_vision/viewer/style.css",
+      "sha256": "75097ca0eae823fc827bcc78942b0f860934a92733a5501d9e2a39dc7cf7444d",
+      "bytes": 11686,
+      "source_git_state": "tracked",
+      "capture_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pre": {
+    "all_native_result_bytes_exact": true,
+    "sha256": "9c49dd4ff06ba934e16829e3020b7eb255555a4914d9ce981280c668a9c7c108"
+  },
+  "acquisition": {
+    "all_native_result_bytes_exact": true,
+    "sha256": "b81c1e06091c73b6a6bb81e89721c00df3398187a113cf82e4daada99d185bb9"
+  },
+  "post": {
+    "all_native_result_bytes_exact": true,
+    "sha256": "a1815d09e1d58bab8bbab847705034c0e4ea6157cfe3f403577c1502e5a97a95"
+  }
+}

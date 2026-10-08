@@ -1,0 +1,61 @@
+{
+  "scope": "post-hoc description of the two calibration runs; no parameter selection",
+  "rows": [
+    {
+      "amplitude_mv": 40.0,
+      "cue": 0,
+      "ORN_hz": 44.470588235294116,
+      "KC_hz": 0.9974888931813792,
+      "MBON01_hz": 0.0,
+      "MBON01_mean_v_mv": -58.63058780051396,
+      "MBON01_max_v_mv": -47.945759725623276,
+      "mean_ge": 0.20638153327349318,
+      "mean_gi": 1.8369347556797988,
+      "threshold_mv": -45,
+      "source": "/atlas-storage/0002/codex-flywire-learning/output/learning-full-pilot40-v2",
+      "snapshot_sha256": "cc9a44fef9b796110301350b2e538d1d4ef3dcb94cea0cf1ba7c7a9d35f9a720"
+    },
+    {
+      "amplitude_mv": 40.0,
+      "cue": 1,
+      "ORN_hz": 53.55555555555556,
+      "KC_hz": 0.5872126714313309,
+      "MBON01_hz": 0.0,
+      "MBON01_mean_v_mv": -57.976189047378696,
+      "MBON01_max_v_mv": -47.351355025879,
+      "mean_ge": 0.16840379651358686,
+      "mean_gi": 1.3850251855722835,
+      "threshold_mv": -45,
+      "source": "/atlas-storage/0002/codex-flywire-learning/output/learning-full-pilot40-v2",
+      "snapshot_sha256": "cc9a44fef9b796110301350b2e538d1d4ef3dcb94cea0cf1ba7c7a9d35f9a720"
+    },
+    {
+      "amplitude_mv": 80.0,
+      "cue": 0,
+      "ORN_hz": 70.47058823529412,
+      "KC_hz": 1.2207842379756615,
+      "MBON01_hz": 0.0,
+      "MBON01_mean_v_mv": -59.404116967257416,
+      "MBON01_max_v_mv": -47.79503402920234,
+      "mean_ge": 0.2211454100553352,
+      "mean_gi": 2.2173659632412126,
+      "threshold_mv": -45,
+      "source": "/atlas-storage/0002/codex-flywire-learning/output/learning-full-pilot80",
+      "snapshot_sha256": "6e73e2910cb04ebe9fdea44dba961b7b1a7bcd658ea3b446fbb3107a9e50f084"
+    },
+    {
+      "amplitude_mv": 80.0,
+      "cue": 1,
+      "ORN_hz": 85.48148148148148,
+      "KC_hz": 0.6861116476723972,
+      "MBON01_hz": 0.0,
+      "MBON01_mean_v_mv": -58.72008932371529,
+      "MBON01_max_v_mv": -50.60133432643128,
+      "mean_ge": 0.16807908930214652,
+      "mean_gi": 1.5472626954786886,
+      "threshold_mv": -45,
+      "source": "/atlas-storage/0002/codex-flywire-learning/output/learning-full-pilot80",
+      "snapshot_sha256": "6e73e2910cb04ebe9fdea44dba961b7b1a7bcd658ea3b446fbb3107a9e50f084"
+    }
+  ]
+}

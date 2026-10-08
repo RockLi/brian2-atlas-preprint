@@ -1,0 +1,96 @@
+{
+  "captured_unix": 1788980371.648918,
+  "coordinator_alive_at_capture": true,
+  "host": "rock@100.90.28.27",
+  "source_commit": "f8d7b23a6",
+  "source_archive_sha256": "37de777c22a8a6f011d8468a78a29a4c18ce773c2edc3dc89747876a35359d65",
+  "cpu_count": 20,
+  "memory_gib": 128,
+  "files": {
+    "probe-4-summary.json": {
+      "phase": "extract-train",
+      "complete_images": 128,
+      "total_images": 60000,
+      "workers": 4,
+      "elapsed_seconds_this_launch": 84.87557850009762,
+      "images_per_second_this_launch": 1.5080898682752752,
+      "last_shard": {
+        "offset": 0,
+        "count": 32,
+        "wall_seconds": 77.75384775002021,
+        "mean_sample_seconds": 2.4261519870196935
+      }
+    },
+    "probe-8-summary.json": {
+      "phase": "extract-train",
+      "complete_images": 384,
+      "total_images": 60000,
+      "workers": 8,
+      "elapsed_seconds_this_launch": 75.8463045420358,
+      "images_per_second_this_launch": 3.3752468435442204,
+      "last_shard": {
+        "offset": 192,
+        "count": 32,
+        "wall_seconds": 69.70700991700869,
+        "mean_sample_seconds": 2.174764153711294
+      }
+    },
+    "probe-16-summary.json": {
+      "phase": "extract-train",
+      "complete_images": 896,
+      "total_images": 60000,
+      "workers": 16,
+      "elapsed_seconds_this_launch": 87.19775649998337,
+      "images_per_second_this_launch": 5.871710701640559,
+      "last_shard": {
+        "offset": 864,
+        "count": 32,
+        "wall_seconds": 79.37396183295641,
+        "mean_sample_seconds": 2.476017726723512
+      }
+    },
+    "cross-host-validation.json": {
+      "exact_original_cpu_samples": 10
+    },
+    "runs/full-cpu-campaign.json": {
+      "pid": 94240,
+      "hostname": "rock-mac-studio-1.local",
+      "platform": "macOS-14.5-arm64-arm-64bit",
+      "workers": 16,
+      "fit_threads": 8,
+      "started_unix": 1788980216.894499,
+      "output": "/atlas-home/0004/workspace/flywire-mnist-20260909/runs/full-cpu",
+      "log": "/atlas-home/0004/workspace/flywire-mnist-20260909/runs/full-cpu-campaign.log",
+      "status": "running",
+      "stage": "extract",
+      "command": [
+        "/atlas-home/0004/workspace/flywire-mnist-20260909/.venv/bin/python",
+        "-m",
+        "flywire_mnist.full",
+        "extract",
+        "--data",
+        "/atlas-home/0004/workspace/flywire-mnist-20260909/data/mnist",
+        "--output",
+        "/atlas-home/0004/workspace/flywire-mnist-20260909/runs/full-cpu",
+        "--phase",
+        "train",
+        "--workers",
+        "16"
+      ]
+    },
+    "runs/full-cpu/progress.json": {
+      "phase": "extract-train",
+      "complete_images": 1408,
+      "total_images": 60000,
+      "workers": 16,
+      "elapsed_seconds_this_launch": 86.79392129194457,
+      "images_per_second_this_launch": 5.899030627707326,
+      "last_shard": {
+        "offset": 1280,
+        "count": 32,
+        "wall_seconds": 79.93742708291393,
+        "mean_sample_seconds": 2.493019912762975
+      }
+    }
+  }
+}
