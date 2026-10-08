@@ -1,0 +1,141 @@
+[
+  {
+    "page": 1,
+    "title": "一、立项判断与课题摘要",
+    "body_font": 12.0,
+    "used_height": 641.7,
+    "available_height": 714.3
+  },
+  {
+    "page": 2,
+    "title": "二、已有研究已经做到哪里",
+    "body_font": 12.0,
+    "used_height": 571.0,
+    "available_height": 691.9
+  },
+  {
+    "page": 3,
+    "title": "三、把创新点收紧到一个可回答的问题",
+    "body_font": 12.0,
+    "used_height": 693.4,
+    "available_height": 725.5
+  },
+  {
+    "page": 4,
+    "title": "四、三个可证伪假设与竞争解释",
+    "body_font": 12.0,
+    "used_height": 575.9,
+    "available_height": 725.5
+  },
+  {
+    "page": 5,
+    "title": "五、系统架构与物种证据的使用",
+    "body_font": 12.0,
+    "used_height": 620.2,
+    "available_height": 691.9
+  },
+  {
+    "page": 6,
+    "title": "六、学习机制如何落实为可运行模型",
+    "body_font": 12.0,
+    "used_height": 569.6,
+    "available_height": 703.1
+  },
+  {
+    "page": 7,
+    "title": "七、大规模仿真应当回答什么",
+    "body_font": 12.0,
+    "used_height": 611.1,
+    "available_height": 725.5
+  },
+  {
+    "page": 8,
+    "title": "八、公开数据：可以开始，但证据并不齐全",
+    "body_font": 12.0,
+    "used_height": 545.6,
+    "available_height": 669.5
+  },
+  {
+    "page": 9,
+    "title": "九、从真实记录到模型检验的证据链",
+    "body_font": 12.0,
+    "used_height": 620.5,
+    "available_height": 725.5
+  },
+  {
+    "page": 10,
+    "title": "十、先建立 ANN 基准，再接入脑区模型",
+    "body_font": 12.0,
+    "used_height": 592.5,
+    "available_height": 725.5
+  },
+  {
+    "page": 11,
+    "title": "十一、基线、消融与统计设计",
+    "body_font": 12.0,
+    "used_height": 639.1,
+    "available_height": 703.1
+  },
+  {
+    "page": 12,
+    "title": "十二、现有能力、算力预算与工程缺口",
+    "body_font": 12.0,
+    "used_height": 639.1,
+    "available_height": 725.5
+  },
+  {
+    "page": 13,
+    "title": "十三、六个月工作包与停止条件",
+    "body_font": 12.0,
+    "used_height": 638.8,
+    "available_height": 764.9
+  },
+  {
+    "page": 14,
+    "title": "十四、论文证据、成果形态与现实意义",
+    "body_font": 12.0,
+    "used_height": 636.8,
+    "available_height": 764.9
+  },
+  {
+    "page": 15,
+    "title": "十五、合作决策清单与研究边界",
+    "body_font": 12.0,
+    "used_height": 713.7,
+    "available_height": 764.9
+  },
+  {
+    "page": 16,
+    "title": "附录一、ANN 首轮基准与实验协议",
+    "body_font": 12.0,
+    "used_height": 564.5,
+    "available_height": 725.5
+  },
+  {
+    "page": 17,
+    "title": "附录二、三个脑区如何复现与耦合",
+    "body_font": 12.0,
+    "used_height": 526.5,
+    "available_height": 647.1
+  },
+  {
+    "page": 18,
+    "title": "参考文献与证据来源（1/4）",
+    "bottom_y": 224.3
+  },
+  {
+    "page": 19,
+    "title": "参考文献与证据来源（2/4）",
+    "bottom_y": 257.4
+  },
+  {
+    "page": 20,
+    "title": "参考文献与证据来源（3/4）",
+    "bottom_y": 242.5
+  },
+  {
+    "page": 21,
+    "title": "参考文献与证据来源（4/4）",
+    "bottom_y": 303.2
+  }
+]

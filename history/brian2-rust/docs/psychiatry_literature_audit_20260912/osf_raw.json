@@ -1,0 +1,290 @@
+{
+  "data": [
+    {
+      "id": "66cffcaf7baacff01a89bfcd",
+      "type": "files",
+      "attributes": {
+        "guid": null,
+        "checkout": null,
+        "name": "Normal Control Group",
+        "kind": "folder",
+        "path": "/66cffcaf7baacff01a89bfcd/",
+        "size": null,
+        "provider": "osfstorage",
+        "materialized_path": "/Raw Data/Normal Control Group/",
+        "last_touched": null,
+        "date_modified": null,
+        "date_created": null,
+        "extra": {
+          "hashes": {
+            "md5": null,
+            "sha256": null
+          }
+        },
+        "tags": [],
+        "current_user_can_comment": false,
+        "current_version": 1,
+        "show_as_unviewed": false
+      },
+      "relationships": {
+        "parent_folder": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/65bdfda21a30ef06e3c342d5/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "65bdfda21a30ef06e3c342d5",
+            "type": "files"
+          }
+        },
+        "files": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/files/osfstorage/66cffcaf7baacff01a89bfcd/",
+              "meta": {}
+            }
+          }
+        },
+        "node": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "rsnu4",
+            "type": "nodes"
+          }
+        },
+        "target": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {
+                "type": "nodes"
+              }
+            }
+          },
+          "data": {
+            "type": "nodes",
+            "id": "rsnu4"
+          }
+        },
+        "cedar_metadata_records": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/66cffcaf7baacff01a89bfcd/cedar_metadata_records/",
+              "meta": {}
+            }
+          }
+        }
+      },
+      "links": {
+        "info": "https://api.osf.io/v2/files/66cffcaf7baacff01a89bfcd/",
+        "move": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/66cffcaf7baacff01a89bfcd/",
+        "upload": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/66cffcaf7baacff01a89bfcd/",
+        "delete": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/66cffcaf7baacff01a89bfcd/",
+        "new_folder": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/66cffcaf7baacff01a89bfcd/?kind=folder",
+        "self": "https://api.osf.io/v2/files/66cffcaf7baacff01a89bfcd/"
+      }
+    },
+    {
+      "id": "65bdfde635be2006c2a50a70",
+      "type": "files",
+      "attributes": {
+        "guid": null,
+        "checkout": null,
+        "name": "AVHs Group",
+        "kind": "folder",
+        "path": "/65bdfde635be2006c2a50a70/",
+        "size": null,
+        "provider": "osfstorage",
+        "materialized_path": "/Raw Data/AVHs Group/",
+        "last_touched": null,
+        "date_modified": null,
+        "date_created": null,
+        "extra": {
+          "hashes": {
+            "md5": null,
+            "sha256": null
+          }
+        },
+        "tags": [],
+        "current_user_can_comment": false,
+        "current_version": 1,
+        "show_as_unviewed": false
+      },
+      "relationships": {
+        "parent_folder": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/65bdfda21a30ef06e3c342d5/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "65bdfda21a30ef06e3c342d5",
+            "type": "files"
+          }
+        },
+        "files": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/files/osfstorage/65bdfde635be2006c2a50a70/",
+              "meta": {}
+            }
+          }
+        },
+        "node": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "rsnu4",
+            "type": "nodes"
+          }
+        },
+        "target": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {
+                "type": "nodes"
+              }
+            }
+          },
+          "data": {
+            "type": "nodes",
+            "id": "rsnu4"
+          }
+        },
+        "cedar_metadata_records": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/65bdfde635be2006c2a50a70/cedar_metadata_records/",
+              "meta": {}
+            }
+          }
+        }
+      },
+      "links": {
+        "info": "https://api.osf.io/v2/files/65bdfde635be2006c2a50a70/",
+        "move": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfde635be2006c2a50a70/",
+        "upload": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfde635be2006c2a50a70/",
+        "delete": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfde635be2006c2a50a70/",
+        "new_folder": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfde635be2006c2a50a70/?kind=folder",
+        "self": "https://api.osf.io/v2/files/65bdfde635be2006c2a50a70/"
+      }
+    },
+    {
+      "id": "65bdfdf51a30ef06eac34839",
+      "type": "files",
+      "attributes": {
+        "guid": null,
+        "checkout": null,
+        "name": "non-AVHs Group",
+        "kind": "folder",
+        "path": "/65bdfdf51a30ef06eac34839/",
+        "size": null,
+        "provider": "osfstorage",
+        "materialized_path": "/Raw Data/non-AVHs Group/",
+        "last_touched": null,
+        "date_modified": null,
+        "date_created": null,
+        "extra": {
+          "hashes": {
+            "md5": null,
+            "sha256": null
+          }
+        },
+        "tags": [],
+        "current_user_can_comment": false,
+        "current_version": 1,
+        "show_as_unviewed": false
+      },
+      "relationships": {
+        "parent_folder": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/65bdfda21a30ef06e3c342d5/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "65bdfda21a30ef06e3c342d5",
+            "type": "files"
+          }
+        },
+        "files": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/files/osfstorage/65bdfdf51a30ef06eac34839/",
+              "meta": {}
+            }
+          }
+        },
+        "node": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {}
+            }
+          },
+          "data": {
+            "id": "rsnu4",
+            "type": "nodes"
+          }
+        },
+        "target": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/nodes/rsnu4/",
+              "meta": {
+                "type": "nodes"
+              }
+            }
+          },
+          "data": {
+            "type": "nodes",
+            "id": "rsnu4"
+          }
+        },
+        "cedar_metadata_records": {
+          "links": {
+            "related": {
+              "href": "https://api.osf.io/v2/files/65bdfdf51a30ef06eac34839/cedar_metadata_records/",
+              "meta": {}
+            }
+          }
+        }
+      },
+      "links": {
+        "info": "https://api.osf.io/v2/files/65bdfdf51a30ef06eac34839/",
+        "move": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfdf51a30ef06eac34839/",
+        "upload": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfdf51a30ef06eac34839/",
+        "delete": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfdf51a30ef06eac34839/",
+        "new_folder": "https://files.osf.io/v1/resources/rsnu4/providers/osfstorage/65bdfdf51a30ef06eac34839/?kind=folder",
+        "self": "https://api.osf.io/v2/files/65bdfdf51a30ef06eac34839/"
+      }
+    }
+  ],
+  "links": {
+    "first": null,
+    "last": null,
+    "prev": null,
+    "next": null,
+    "meta": {
+      "total": 3,
+      "per_page": 10
+    }
+  },
+  "meta": {
+    "version": "2.0"
+  }
+}

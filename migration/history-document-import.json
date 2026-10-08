@@ -1,0 +1,1131 @@
+{
+  "schema": "atlas-history-docs-v1",
+  "capture": "20261008T063409Z",
+  "files": [
+    {
+      "source": "brian2-rust/B2IR.md",
+      "target": "history/brian2-rust/B2IR.md",
+      "sha256": "2d6fb681814b358ab02d8bf98a3e2b307223a2e30d9581cdc84ac88e81d2a6af",
+      "bytes": 13966,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/B2IR_FREEZE_REPORT.md",
+      "target": "history/brian2-rust/B2IR_FREEZE_REPORT.md",
+      "sha256": "2f72390542a8dd537c177d57b651ccdd52486f7173bf3284a93a439d7a492409",
+      "bytes": 7715,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/BRUNEL.md",
+      "target": "history/brian2-rust/BRUNEL.md",
+      "sha256": "d44a62f95d3a10e0ed69f38e335cfe7bd7b51b85da199df0fa826773dd2d0417",
+      "bytes": 3698,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/BRUNEL_RESULTS.md",
+      "target": "history/brian2-rust/BRUNEL_RESULTS.md",
+      "sha256": "0bab14ebad4644e9e6bceba6c16f2a6c2c8e956d909590a4ae242bd7fcf5b765",
+      "bytes": 4183,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/CAPACITY_CHALLENGE_ROADMAP.md",
+      "target": "history/brian2-rust/CAPACITY_CHALLENGE_ROADMAP.md",
+      "sha256": "6fcf467fbb98a06129ab1d29d0fcd151cd15b7a9b7581470a390d83707249533",
+      "bytes": 14331,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/COMPATIBILITY.md",
+      "target": "history/brian2-rust/COMPATIBILITY.md",
+      "sha256": "3fc46f141638a1f7bda068777fbf08bd6f39efc279a1cd95345691fe0a21089b",
+      "bytes": 28453,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/CONTEXTUAL_DENDRITIC.md",
+      "target": "history/brian2-rust/CONTEXTUAL_DENDRITIC.md",
+      "sha256": "2114880531d9f99512d1d616e36997e676c781e7f06143156a372af733d4ada8",
+      "bytes": 17130,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/CUDA_MODAL.md",
+      "target": "history/brian2-rust/CUDA_MODAL.md",
+      "sha256": "1ac653b2e07d581eea9e26fb459c8b4ca5abac4694b3ccf0471c3150d16dada4",
+      "bytes": 64548,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/EQUATION_LAB.md",
+      "target": "history/brian2-rust/EQUATION_LAB.md",
+      "sha256": "28998b0a0032640990a9005bc124caa17e4b2afd94d251fef28698a889da352b",
+      "bytes": 6343,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/EXECUTION_PLAN.md",
+      "target": "history/brian2-rust/EXECUTION_PLAN.md",
+      "sha256": "922a5bb73472678d71a1e55b8ae794f274794da699578d991fa6c12fc1c109fc",
+      "bytes": 26011,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/EXECUTION_PLAN_RESEARCH.md",
+      "target": "history/brian2-rust/EXECUTION_PLAN_RESEARCH.md",
+      "sha256": "a2b3288f0adf5ff5e79d5972596d66cf4abd35ca5f734c5fac6b3bfd3d0b53b7",
+      "bytes": 20853,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE.md",
+      "target": "history/brian2-rust/FLYWIRE.md",
+      "sha256": "3aec2f280ba505da33214717c80c4f53ebaf6943166cd73b352106f434f0b86b",
+      "bytes": 8638,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_BROWSER.md",
+      "target": "history/brian2-rust/FLYWIRE_BROWSER.md",
+      "sha256": "a0138201bb910eba0e141777d521dd956d3c20a4c3231e38dcac67f1e6997ab5",
+      "bytes": 7500,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_CROSS_HOST_RESULTS.md",
+      "target": "history/brian2-rust/FLYWIRE_CROSS_HOST_RESULTS.md",
+      "sha256": "5a0fe61a8fc410d28d8649f009bd472af377e9ff4472be9e09986db8aa47517e",
+      "bytes": 6282,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_EI.md",
+      "target": "history/brian2-rust/FLYWIRE_EI.md",
+      "sha256": "327c1bcaada128852e8fba88e183f882a8e675fa86dd221847687aa4c6e7297b",
+      "bytes": 10412,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_EI_RESULTS.md",
+      "target": "history/brian2-rust/FLYWIRE_EI_RESULTS.md",
+      "sha256": "d08f82f88ba507a732b969ae91c4d18cf9b76971ec1fb9e8c10686e3914bc0ff",
+      "bytes": 8185,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_MERGE_REVIEW.md",
+      "target": "history/brian2-rust/FLYWIRE_MERGE_REVIEW.md",
+      "sha256": "be9b9341ea32a36e97e37914be48ace54b9cfd01be78ba76deca3656448f59a5",
+      "bytes": 3062,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_MNIST_FINAL_REPORT.md",
+      "target": "history/brian2-rust/FLYWIRE_MNIST_FINAL_REPORT.md",
+      "sha256": "b816b9c9c4f54e6e5fe865936d2cc5acfc2b8249fd3fb4adb9e4fc17e01765cb",
+      "bytes": 14555,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_MNIST_GPU_PLAN.md",
+      "target": "history/brian2-rust/FLYWIRE_MNIST_GPU_PLAN.md",
+      "sha256": "1cc5017bc108bc608a99ca8705efee2e93848c63ffa2ace5f4b3af4dd0b924c4",
+      "bytes": 29761,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_RESULTS.md",
+      "target": "history/brian2-rust/FLYWIRE_RESULTS.md",
+      "sha256": "e0592daac3654aae51510f72edcaf5651fc55403f179d5dd5c2e72976643392f",
+      "bytes": 5018,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_VISION_NEXT_RESEARCH_PLAN.md",
+      "target": "history/brian2-rust/FLYWIRE_VISION_NEXT_RESEARCH_PLAN.md",
+      "sha256": "f28dc483fa8c90d0427872ceec54d121594496eb325eef9138a8958cc6bb8e8e",
+      "bytes": 22275,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FLYWIRE_VISION_RESEARCH.md",
+      "target": "history/brian2-rust/FLYWIRE_VISION_RESEARCH.md",
+      "sha256": "a2ec217ffab2904b72a8bfb9a458733fedb47c408f2519f90a15a3c00c768cf5",
+      "bytes": 39681,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/FULL_PAPER_REPRODUCTION.md",
+      "target": "history/brian2-rust/FULL_PAPER_REPRODUCTION.md",
+      "sha256": "bc1817fed7945d366b30c7f7d8e0660c33dfa7266b190d78b227f805e8325c31",
+      "bytes": 893824,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_AUTOTUNE.md",
+      "target": "history/brian2-rust/GPU_AUTOTUNE.md",
+      "sha256": "aa4b26e1df5fc2e5f5ee4a869b4d98aa7e2c38722482a50cb765f8731f04476c",
+      "bytes": 11550,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_BACKEND_OVERVIEW.md",
+      "target": "history/brian2-rust/GPU_BACKEND_OVERVIEW.md",
+      "sha256": "69b464f6ca95f5ff2f93709675a82b0719a2b2ae024fa47b85f49591bed16fc6",
+      "bytes": 21826,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_BUFFER_REUSE.md",
+      "target": "history/brian2-rust/GPU_BUFFER_REUSE.md",
+      "sha256": "ef6f395b035228b2dc83639476f9eb44ff0b21d8964574cff6a5c4a0089596ed",
+      "bytes": 3862,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_COMPILATION_REUSE.md",
+      "target": "history/brian2-rust/GPU_COMPILATION_REUSE.md",
+      "sha256": "c1da95cc8d8829bc29b3f8e8a3e5708ac6962177de508d42116536c8d3730a10",
+      "bytes": 2948,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_COOPERATIVE.md",
+      "target": "history/brian2-rust/GPU_COOPERATIVE.md",
+      "sha256": "3ab23c9fe73184caaea0211dd6e6a960391352479ef0596838f42f00a68457a3",
+      "bytes": 5489,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_DELIVERY.md",
+      "target": "history/brian2-rust/GPU_DELIVERY.md",
+      "sha256": "d9ba5bae0fcd296317a089414312666c4d98ea04818317178a1aaa2ccf007fd9",
+      "bytes": 7524,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_FUNCTIONS.md",
+      "target": "history/brian2-rust/GPU_FUNCTIONS.md",
+      "sha256": "27b89870897d983f83cfab62ae0c534c9315a242f5e8c567386a5352de7fcc19",
+      "bytes": 3909,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_HISTORY_FUSION.md",
+      "target": "history/brian2-rust/GPU_HISTORY_FUSION.md",
+      "sha256": "09d8e4035b44b49d30be5440ec2cc4598978d37dc7923674f4021ea9751db827",
+      "bytes": 2208,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_IMPLEMENTATION_STATUS.md",
+      "target": "history/brian2-rust/GPU_IMPLEMENTATION_STATUS.md",
+      "sha256": "eb899a764a973f5a27d1cf3142a98d5712101df1e0954d5130cde7df834dab85",
+      "bytes": 88746,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_NUMERICS.md",
+      "target": "history/brian2-rust/GPU_NUMERICS.md",
+      "sha256": "a09b2bedf02bd72bcd95f5e2cedf4c74270ea56737ffdeaca83622f71bf8c8ce",
+      "bytes": 5708,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/GPU_WORKGROUP.md",
+      "target": "history/brian2-rust/GPU_WORKGROUP.md",
+      "sha256": "d5a7edd2d4e86ef5b1c0a8dc1b91a32df49d5c14c99ba1cac491c00649612802",
+      "bytes": 3768,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/LITWIN_KUMAR.md",
+      "target": "history/brian2-rust/LITWIN_KUMAR.md",
+      "sha256": "82657466a1c473267f908f20a1c8e3634fc09de3cf95ef87ca35201e9d3384db",
+      "bytes": 38500,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/LITWIN_KUMAR_DEVELOPMENT_HISTORY.md",
+      "target": "history/brian2-rust/LITWIN_KUMAR_DEVELOPMENT_HISTORY.md",
+      "sha256": "1a3e3317ce792657f11606e32cb65fe4b18077c0616f7d91d3894448240d3957",
+      "bytes": 39603,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/LITWIN_KUMAR_RESULTS.md",
+      "target": "history/brian2-rust/LITWIN_KUMAR_RESULTS.md",
+      "sha256": "b75438e1b847613f6af44b490afe712f557fdef27f3d1decc6d5b738d8da5149",
+      "bytes": 5619,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MAM_REPRODUCTION_PLAN.md",
+      "target": "history/brian2-rust/MAM_REPRODUCTION_PLAN.md",
+      "sha256": "ed4895ce88a7a8ce5eedb505f11532a11d86108281d533f3ad080ac412e68e7e",
+      "bytes": 47274,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/METAL_RUNTIME.md",
+      "target": "history/brian2-rust/METAL_RUNTIME.md",
+      "sha256": "e4e66fd2e9b01a854fd093fefba0dcb0ae7ee35380d032946947ec217e4c9d39",
+      "bytes": 7626,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI.md",
+      "target": "history/brian2-rust/MPI.md",
+      "sha256": "c5fd27e42845622fea6fc418cde1a361080eff53caee2fbb28cdd78d0bdd7d49",
+      "bytes": 20173,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI_GPU.md",
+      "target": "history/brian2-rust/MPI_GPU.md",
+      "sha256": "c7aa0ee2d480de507356bfd611059530c2d3de802855a9e892750475f7116234",
+      "bytes": 5931,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI_MERGE_20260912.md",
+      "target": "history/brian2-rust/MPI_MERGE_20260912.md",
+      "sha256": "83b04ddd6df4d5ed830bfdf927d5f640604f6c556766b9e7fdaf3c4d0b9c3c74",
+      "bytes": 2568,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI_MULTI_AREA_ADAPTER.md",
+      "target": "history/brian2-rust/MPI_MULTI_AREA_ADAPTER.md",
+      "sha256": "f310a5670008f2dc47c4d61b64dc9cd0e58e0369e819de17e71317263202f0ba",
+      "bytes": 26755,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI_PROCEDURAL.md",
+      "target": "history/brian2-rust/MPI_PROCEDURAL.md",
+      "sha256": "293eb959f465a0df8315648b1e43515a677ed7a26eb1e954ed965741297cd0f6",
+      "bytes": 7155,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MPI_TRAINING.md",
+      "target": "history/brian2-rust/MPI_TRAINING.md",
+      "sha256": "561faa2c27d6603d7db80ba24c07957342e169ce5050e5b65bec80ddaf32d762",
+      "bytes": 9782,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/MULTI_AREA_MPI.md",
+      "target": "history/brian2-rust/MULTI_AREA_MPI.md",
+      "sha256": "8984eed8fc835dd6d5913040f84f605107c6cf4e174e96e5c311131e071073f2",
+      "bytes": 6975,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING.md",
+      "sha256": "f82ea8b5e89d14c596223fe61181120eb9c3a6a696c315a1c2b07f386b9f32e7",
+      "bytes": 12046,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_ASYNC_ACTIONS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_ASYNC_ACTIONS.md",
+      "sha256": "cc5f93a2884188ec116afca37db59dc21d5602e0bd6dfa423cc4db7643db7bc0",
+      "bytes": 4296,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_BRIAN.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_BRIAN.md",
+      "sha256": "1ef71fafb1e465810c5ffa1c3fa0b10b012df91cdb4d863c27b5f35f92ee7f69",
+      "bytes": 7391,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_CACHED_NOISE.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_CACHED_NOISE.md",
+      "sha256": "4a5f68516eabfe06eb86abd70dfcd2509f8742a18a9817170e0afcd2487de0d8",
+      "bytes": 5036,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_CALLBACK_EFFECTS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_CALLBACK_EFFECTS.md",
+      "sha256": "1e1e8339c02d7caf058e62d20f59dead844d1484c301cfa851f4ae308517a5a4",
+      "bytes": 40100,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_CLOCK_ITINERARY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_CLOCK_ITINERARY.md",
+      "sha256": "3ff2931afde156ebcad5cf1ac45aff1a9568da046b13c6c0ecb56e56cc52d682",
+      "bytes": 6376,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_CROSSHOST_GPU.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_CROSSHOST_GPU.md",
+      "sha256": "6a756dc0c1e0f692b36d7b0250492933521cd763672029b5a38ba9d27713448c",
+      "bytes": 6389,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_DYNAMIC.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_DYNAMIC.md",
+      "sha256": "19ed602354ec33e194313ab9d7d631669722ab4fc15e21f7b74ff5dcb9302021",
+      "bytes": 47114,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_DYNAMIC_GPU.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_DYNAMIC_GPU.md",
+      "sha256": "68e7c173a5c6b0fdd94c11787104827c0599f80261a547e856972a8377522a1b",
+      "bytes": 15570,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_EVENT_NOISE.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_EVENT_NOISE.md",
+      "sha256": "9ab3e5af81a0f489bc5ea255a37120c78de8ff627fbbc809c91e85b79988f65e",
+      "bytes": 5112,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_EXTERNAL_INPUTS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_EXTERNAL_INPUTS.md",
+      "sha256": "aeb2bb59916cf637278c8ca8b23fffebfea4d0e96c052488892cbf430f5b9da0",
+      "bytes": 8658,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_GRAPH.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_GRAPH.md",
+      "sha256": "66dc87fe05b3c4d3d9108d8f20aa0ae5757811aed3bf53965efc7be11bedf83d",
+      "bytes": 8841,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_HETEROGENEOUS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_HETEROGENEOUS.md",
+      "sha256": "8737fdd1e0a8bf9312391312c0a6d53b4c35075dde743e83f909d24d779b07aa",
+      "bytes": 5701,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_INTEGRATORS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_INTEGRATORS.md",
+      "sha256": "0c6bd19b3a4c44241992a1c8b1ce3420312b8da5fb08cc6734af93af9180f741",
+      "bytes": 3810,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_MULTICLOCK_NEURONS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_MULTICLOCK_NEURONS.md",
+      "sha256": "0f4bf6cb48b3418852e481fc2ebffdbf32641f5869d6e10f65c8590251d678d0",
+      "bytes": 2968,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_MULTICLOCK_TRANSITIONS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_MULTICLOCK_TRANSITIONS.md",
+      "sha256": "5a5833bcc88989e3f792403724443b92db3e73f1a14afd6cbf45be5e1387cddb",
+      "bytes": 2520,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_NESTED_SYNAPSE.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_NESTED_SYNAPSE.md",
+      "sha256": "481f483f522ba9a1991208ae6b52dddaaca4c0a9039961376ab1fa1f885b0988",
+      "bytes": 3451,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_NEURON_NOISE.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_NEURON_NOISE.md",
+      "sha256": "0ba21cebbbac5dea2b55a71fdc22dde8589c6bf40fba671ff3f2fff40099a016",
+      "bytes": 3696,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_PARAMETER_GATHER.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_PARAMETER_GATHER.md",
+      "sha256": "e2e4b99bb6a3758c00027ba13b01cf632a8d8deb66069ac435b55cc191d6767b",
+      "bytes": 7134,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_POISSON.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_POISSON.md",
+      "sha256": "d2aafcdb3e1a76e6bad2fd456dca9054efdc272e278573478b28785b4bbcf8d4",
+      "bytes": 28513,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_PURE_FUNCTIONS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_PURE_FUNCTIONS.md",
+      "sha256": "4c653c53776d14cbb8b51dbb8b73e55d718e2374cf2aa856c33c53f4c0c6b187",
+      "bytes": 13120,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_RANDOM_REFRACTORY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_RANDOM_REFRACTORY.md",
+      "sha256": "573a371a79eff760ce94864e8f8bb27ac54893b8c3b5cabe38bf80e0617c3fa7",
+      "bytes": 2935,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_REFRACTORY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_REFRACTORY.md",
+      "sha256": "9aeebaf7b05ca5f34b348f13333a07c14ddcad4fbe8f9143e459a809edc61cad",
+      "bytes": 5140,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_REGULAR.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_REGULAR.md",
+      "sha256": "1caa743dde3b2049bab28d3cf29c66f81dfe3ea62fdbffe269951bc5466b234b",
+      "bytes": 3649,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_RK_REFRACTORY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_RK_REFRACTORY.md",
+      "sha256": "73f91f9ac09684453a481f53e441cf61929280b0afb1193feea1639d73d3c111",
+      "bytes": 3416,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_RUNTIME_INDEX.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_RUNTIME_INDEX.md",
+      "sha256": "de74277ee88c16423b4e4ed2fc4a2c18f3e6dbd4b05daa0f2a1ee5538ab7b2d7",
+      "bytes": 13190,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_SPIKE_BUFFERS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_SPIKE_BUFFERS.md",
+      "sha256": "f09cdaae3202c79f49e0a2b8525d2cae09446fcaefaa23d9cd5f6faed3d349e8",
+      "bytes": 3463,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_STANDARD_MATH.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_STANDARD_MATH.md",
+      "sha256": "7cdc6556f96c4b7643efd45727640a0d4759231cd9381e32fdc3acf9eda16d6e",
+      "bytes": 3489,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_STATE_REFRACTORY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_STATE_REFRACTORY.md",
+      "sha256": "ec776ed8cc0dcef89a2b7d06e15b594850e23df9aae6d5f2caa4daf408aecdeb",
+      "bytes": 4071,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_STOCHASTIC.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_STOCHASTIC.md",
+      "sha256": "1f002f17b65714eab9995c94f4e7ba16ecbc5acd8530cb7c1d7b8b4fd065a789",
+      "bytes": 6022,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_STOCHASTIC_COMBINATIONS.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_STOCHASTIC_COMBINATIONS.md",
+      "sha256": "ad65dc2f9cdd9bed665b6bc987ba815d345b5efe02d5f2878c09b721b5320c6a",
+      "bytes": 3464,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_STOCHASTIC_SYNAPSE_GOAL.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_STOCHASTIC_SYNAPSE_GOAL.md",
+      "sha256": "f712e4531c19beadb5f82b7882ff84605274e27c3aee60638cca38cf62cad03f",
+      "bytes": 227624,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_SUBGROUP.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_SUBGROUP.md",
+      "sha256": "e2a20bb4759a21e81c5c8041cce178f395533dec2712168edbbe20fe255e536a",
+      "bytes": 3630,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_TIME.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_TIME.md",
+      "sha256": "9c19c39f9ad17b94f3f558012cb93b524fac0fba0d2fa992a04af6d6be03b9f0",
+      "bytes": 7055,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_UNIFORM.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_UNIFORM.md",
+      "sha256": "22ea380ea0cc60ac08f739e79b7b9c932394e3c29efef0bfae4c8868079743b3",
+      "bytes": 4210,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_V3.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_V3.md",
+      "sha256": "14fe8a75d72191e64dea44329af55e26aa6ea6f59902f22e302f1425e3b33b68",
+      "bytes": 11151,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_V4.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_V4.md",
+      "sha256": "6cb787d2750ee8ee8f46a3b68d5699218c6db5be44a3298132e771cb4cba06ad",
+      "bytes": 6096,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_V4_GPU.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_V4_GPU.md",
+      "sha256": "086043d29b9a0a513a42188b871651ec3ea35c9a859ab0e68aca72061d184bc3",
+      "bytes": 6193,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NATIVE_TRAINING_VJP_ACTIVITY.md",
+      "target": "history/brian2-rust/NATIVE_TRAINING_VJP_ACTIVITY.md",
+      "sha256": "06babbe151659cffa00d09777112f2d7efab7efc351fef07dec00a5a70f80ecd",
+      "bytes": 3367,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/NO_REGRESSION_20260907.md",
+      "target": "history/brian2-rust/NO_REGRESSION_20260907.md",
+      "sha256": "31ecc7e95c6945314fe5d2f4e1c8ee2309cc88d7c6efbe72827952af7c01c36f",
+      "bytes": 9309,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/OFFICIAL_EXAMPLE_SCAN.md",
+      "target": "history/brian2-rust/OFFICIAL_EXAMPLE_SCAN.md",
+      "sha256": "ef76820a66360ee8a7f52defbefb6c955c153851b2e2656dfdf64c9570e67f92",
+      "bytes": 8226,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PD14.md",
+      "target": "history/brian2-rust/PD14.md",
+      "sha256": "acef9200e0cbda1f9b9e5540980ee85152268fecd33db6e7d51e6ef105615611",
+      "bytes": 9875,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PD14_COMPARISON.md",
+      "target": "history/brian2-rust/PD14_COMPARISON.md",
+      "sha256": "4a44120b3d76ddc9d0e6af3ad2e7a95c3f742af9de0839ab4c4111b339eb8240",
+      "bytes": 7221,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PD14_LINUX_COMPARISON.md",
+      "target": "history/brian2-rust/PD14_LINUX_COMPARISON.md",
+      "sha256": "06735b8e70c183ce5b7c406b9288b74ce2e886c9f18b30119c28a9b9fb89e521",
+      "bytes": 7493,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PD14_LOCAL_16GB.md",
+      "target": "history/brian2-rust/PD14_LOCAL_16GB.md",
+      "sha256": "2c15142189849adfbc556a9758d717d24f7db6ec5eab8cd70f30ac80d8b5e17f",
+      "bytes": 6235,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PD14_NEST_COMPARISON.md",
+      "target": "history/brian2-rust/PD14_NEST_COMPARISON.md",
+      "sha256": "b10aee161f6d50c5b36a0b98deb7721e08e091d1d5ed07d8209de694a998607f",
+      "bytes": 16161,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/PROJECT_STAGE_REPORT_20260906.md",
+      "target": "history/brian2-rust/PROJECT_STAGE_REPORT_20260906.md",
+      "sha256": "408b2f86ee1af65fc3335f4a4b2232c7e26655790eb99713ae5d6b38ed463646",
+      "bytes": 21399,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/README.md",
+      "target": "history/brian2-rust/README.md",
+      "sha256": "0e0cc4ac891ac3779b29ec1bb08c7893ec2742f0568002897f613c8f98e9de49",
+      "bytes": 73046,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/REGRESSION_20260907.md",
+      "target": "history/brian2-rust/REGRESSION_20260907.md",
+      "sha256": "806ccd2bbd9c73de3a670a2776240d57a16e7672129f08b95ef9f6d30b81f6cb",
+      "bytes": 17597,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/REPOSITORY_SPLIT_PLAN.md",
+      "target": "history/brian2-rust/REPOSITORY_SPLIT_PLAN.md",
+      "sha256": "4d5199e223739d1912c4c053cf94f294cf643ad0a031d7e5f0cb0e7669256175",
+      "bytes": 13710,
+      "source_git_state": "untracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/WASM.md",
+      "target": "history/brian2-rust/WASM.md",
+      "sha256": "8c7c785be1b5cdcef7a6dc1c5a8657f49780f19c7c75dfdd4fe3f9a145587825",
+      "bytes": 15124,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/WASM_IMPORT.md",
+      "target": "history/brian2-rust/WASM_IMPORT.md",
+      "sha256": "69e86cd25bd0738881dd03aa8be7472eb6e805e8afc084b253a20ff869d1fb19",
+      "bytes": 6467,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/WEBGPU.md",
+      "target": "history/brian2-rust/WEBGPU.md",
+      "sha256": "9576409778170c661bd594446e72af807e3f481b0a1c9af4739b1f62167e7c56",
+      "bytes": 9315,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/AFFECTIVE_AI_RESEARCH_PROPOSAL_20260912.md",
+      "target": "history/brian2-rust/docs/AFFECTIVE_AI_RESEARCH_PROPOSAL_20260912.md",
+      "sha256": "17692ec3d706d33d8f5693466c0226d47982fe5b7228eb4bd1e9bfe567a67bc5",
+      "bytes": 50282,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/DEPRESSION_PLATFORM_RESEARCH_20260912.md",
+      "target": "history/brian2-rust/docs/DEPRESSION_PLATFORM_RESEARCH_20260912.md",
+      "sha256": "03cf6ee42c0716da8f5734eb4383cd6d06d8c24c6c36d3089d5297a40dc0758d",
+      "bytes": 14786,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/FLM_LANGUAGE_MODEL_RESEARCH_20260912.md",
+      "target": "history/brian2-rust/docs/FLM_LANGUAGE_MODEL_RESEARCH_20260912.md",
+      "sha256": "f6723eaa2e5914fe6ecbf7813eb2000f5092f7b5cf60bbbb8b17f86e5bec386d",
+      "bytes": 8776,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/FLYVIS_EON_RESEARCH_20260912.md",
+      "target": "history/brian2-rust/docs/FLYVIS_EON_RESEARCH_20260912.md",
+      "sha256": "cc4931932ca048c30577a8f610817e67b078752303a63bdb1d0bdd5b8a46b8ac",
+      "bytes": 15452,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/PSYCHIATRY_FIVE_YEAR_LITERATURE_REVIEW_20260912.md",
+      "target": "history/brian2-rust/docs/PSYCHIATRY_FIVE_YEAR_LITERATURE_REVIEW_20260912.md",
+      "sha256": "4f0427023afbcbbad24a33c3ea94b9bfa86fbf1b789d5a5bca83267b60e327d3",
+      "bytes": 40852,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/PSYCHIATRY_HIGH_IMPACT_RESEARCH_SELECTION_20260912.md",
+      "target": "history/brian2-rust/docs/PSYCHIATRY_HIGH_IMPACT_RESEARCH_SELECTION_20260912.md",
+      "sha256": "0cba39ccd1c963eccaf9e076566cf64d33837d65e2a95f727d6a9feaf36a80b7",
+      "bytes": 13106,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/PSYCHIATRY_TOPIC_SHORTLIST_20260912.md",
+      "target": "history/brian2-rust/docs/PSYCHIATRY_TOPIC_SHORTLIST_20260912.md",
+      "sha256": "91b82e918cc62c128dfd7d6832f47ba961040c621ded921029d2d00a495df29a",
+      "bytes": 20201,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/adr/0001-freeze-b2ir-v1.md",
+      "target": "history/brian2-rust/docs/adr/0001-freeze-b2ir-v1.md",
+      "sha256": "c043747c705d7ad4588f4148b8645869711c7b19ad5d7788dc5f312f1d12252a",
+      "bytes": 3704,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/adr/0002-explicit-execution-plan.md",
+      "target": "history/brian2-rust/docs/adr/0002-explicit-execution-plan.md",
+      "sha256": "bfc46d5d92664760eb8f6824605dc276d9696761039673353eb47e0be556c7f8",
+      "bytes": 4471,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/affective_ai_report_20260912/REVISION_NOTES.md",
+      "target": "history/brian2-rust/docs/affective_ai_report_20260912/REVISION_NOTES.md",
+      "sha256": "61ca2923fcf0bdfb9502512537289081b1b9188d09b72e3341b62a622cccf4db",
+      "bytes": 1359,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/affective_ai_report_20260912/build_report.py",
+      "target": "history/brian2-rust/docs/affective_ai_report_20260912/build_report.py",
+      "sha256": "8c224c4bceec3bcbe90077390b9e35c5372781bbc03415339b70a2ba81b36b14",
+      "bytes": 7365,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/affective_ai_report_20260912/layout_audit.json",
+      "target": "history/brian2-rust/docs/affective_ai_report_20260912/layout_audit.json",
+      "sha256": "dc32bb5e6f05b06b476b027e35bb893f77df3a0a6a608dc269509dd0257379be",
+      "bytes": 3209,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/affective_ai_report_20260912/report_content.py",
+      "target": "history/brian2-rust/docs/affective_ai_report_20260912/report_content.py",
+      "sha256": "b1c7d029869617fbbf5336b806599c9464b7331400bcf5026d4a7117db2ebeea",
+      "bytes": 51692,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/affective_ai_report_20260912/verification.json",
+      "target": "history/brian2-rust/docs/affective_ai_report_20260912/verification.json",
+      "sha256": "925ee5d76a1ec3431e712992f5354512e81870779e17e7faa1b90d40c2f1e084",
+      "bytes": 862,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/README.md",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/README.md",
+      "sha256": "daa11fcebc9fe05f9bee6daa4ffd13ffcb7bc720d9c06bef2265778721fd3b35",
+      "bytes": 1001,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/glun2d.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/glun2d.json",
+      "sha256": "fc064c77e26875164c4626db451bd226ac068dee4e40e1014a670ad716e0b22a",
+      "bytes": 17558,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfde635be2006c2a50a70.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfde635be2006c2a50a70.json",
+      "sha256": "69e73b182219625e22ebc9846f340cbdc45ac982c1db6ef3e78e18b6055dc71d",
+      "bytes": 11780,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfdf51a30ef06eac34839.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfdf51a30ef06eac34839.json",
+      "sha256": "7e335508dc6e117741e9ac3866e3b7e458e0ad67d3323e4819de82ca4be6c8de",
+      "bytes": 11802,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfe45435c450665da7c16.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfe45435c450665da7c16.json",
+      "sha256": "310e7490c2854ada64ab0051cd9d481e18e909279493ec720f1334ada1b63080",
+      "bytes": 31269,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfe519b32ca06f997f6ea.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65bdfe519b32ca06f997f6ea.json",
+      "sha256": "33fb54b8d529a7611d91661be808186b4ffef1d762d7473be555aab1ea7a3010",
+      "bytes": 31527,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65be019f1a30ef06e6c347c0.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65be019f1a30ef06e6c347c0.json",
+      "sha256": "e1b02f15c961a68ce63d4951f70405c2e405eec878561937a3987bf64a124aaf",
+      "bytes": 31590,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65be01b41a30ef06f1c340b8.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_65be01b41a30ef06f1c340b8.json",
+      "sha256": "aca0c3fb705f0447c98f1ef7c9dca96103e59480aba2bf9055d9e72a5508aa6f",
+      "bytes": 31379,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_66cffcaf7baacff01a89bfcd.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_66cffcaf7baacff01a89bfcd.json",
+      "sha256": "ea046e4c2a8588355168d269ef783f7e6da27fab5b258395768f23f6d2ae9b1d",
+      "bytes": 10223,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_epochs_65bdfe519b32ca06f997f6ea_complete.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_epochs_65bdfe519b32ca06f997f6ea_complete.json",
+      "sha256": "2e82642fef16b6c6b7d61c90e8f84bc884613da571f17aa7a184860057be42e6",
+      "bytes": 2039,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_epochs_65be01b41a30ef06f1c340b8_complete.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_epochs_65be01b41a30ef06f1c340b8_complete.json",
+      "sha256": "1e4da24ca956e6de5d77fd7b6f7b3f2e76829243a29a41676ab4afa951468fa1",
+      "bytes": 2082,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    },
+    {
+      "source": "brian2-rust/docs/psychiatry_literature_audit_20260912/osf_raw.json",
+      "target": "history/brian2-rust/docs/psychiatry_literature_audit_20260912/osf_raw.json",
+      "sha256": "a418326e241f5eb60afb53359c558bcdf9839114bfa5e50d46de36edf7ef8ce0",
+      "bytes": 8463,
+      "source_git_state": "tracked",
+      "source_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+      "disposition": "historical documentation; not a claim about migrated Atlas support"
+    }
+  ]
+}

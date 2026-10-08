@@ -31,6 +31,8 @@ The manuscript CI runs this same retained-evidence build and saves its generated
 
 The manuscript materials have been imported with file-level provenance. Experimental scripts, archive indexing, portable collection paths, and the pinned Atlas checkout are being integrated. A complete reproduction workflow will be documented after its end-to-end validation.
 
+[Historical development records](history/README.md) preserve the original experiment reports, implementation notes and intermediate contracts with source hashes. Their version-specific claims remain historical.
+
 [Research archive catalog](archives/README.md) maps retained execution and evaluation files to checksummed local archives, including resolved external evidence links.
 
 [Capture provenance](PROVENANCE.md) distinguishes the import snapshot from the individual experimental source versions. [The import manifest](migration/paper-import.json) records every captured manuscript file and its original hash.

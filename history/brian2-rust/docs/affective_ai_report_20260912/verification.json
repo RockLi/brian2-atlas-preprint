@@ -1,0 +1,9 @@
+{
+  "artifact": "output/pdf/affective-ai-research-proposal-20260912.pdf",
+  "pages": 21,
+  "sources": 31,
+  "page_rendering": "All 21 updated pages rendered with pdftoppm and visually reviewed in four contact sheets; the ANN protocol appendix on page 16 additionally inspected at full displayed resolution.",
+  "text_validation": "Passed: 21 non-empty pages, no replacement or null characters, verified MPI model counts, both new appendices present, fixed-weight and online-adaptation protocols present.",
+  "layout_validation": "All content fits the measured body area; references and footnotes do not overlap body text. Main body uses 12 pt embedded CJK font.",
+  "research_status": "Proposal only. No model experiments or data-file replication performed; availability audit and publication review are distinguished from completed validation in the report."
+}

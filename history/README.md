@@ -1,0 +1,7 @@
+# Historical development and experiment documentation
+
+These are byte-preserved documents from the legacy checkout captured on 2026-10-08. They include experimental results, development decisions, intermediate API contracts, validation notes and research plans. The source-to-destination map and content hashes are in `../migration/history-document-import.json`.
+
+Treat dates, performance results, test counts and support claims as statements about the original recorded revisions. They do not certify the migrated Atlas version. Links and commands inside these preserved documents retain their original repository layout and machine paths; they are historical references, not the current reproduction interface.
+
+Current product installation and support documentation belongs to [brian2-atlas](https://github.com/RockLi/brian2-atlas). The manuscript and its retained evidence live in `../paper/`; larger historical files are indexed in `../archives/`. This folder contains documentation only, not another editable copy of the execution engine.
