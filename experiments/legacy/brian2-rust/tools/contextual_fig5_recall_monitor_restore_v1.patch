@@ -1,0 +1,17 @@
+--- scripts/Fig_5.py
++++ scripts/Fig_5.py
+@@ -185,4 +185,14 @@
+                 file_name=filename_for_stored_network
+             )
+         )
++        # Network.restore rewinds the Brian2 monitor, but does not rewind
++        # the paper wrapper's save_dict. Refresh the paired spike arrays
++        # before assembly selection to avoid mixing a prior recall's times
++        # with the restored imprint's neuron indices.
++        restored_soma_times = np.array(net.spM_somas.t / ms, copy=True)
++        restored_soma_ids = np.array(net.spM_somas.i, copy=True)
++        if len(restored_soma_times) != len(restored_soma_ids):
++            raise RuntimeError("restored soma monitor arrays are unpaired")
++        net.save_dict["spikes_somas_t"] = restored_soma_times
++        net.save_dict["spikes_somas_i"] = restored_soma_ids
+         ids_of_the_assembly = net.get_assembly_neuron_ids(context_id, assembly_ids)

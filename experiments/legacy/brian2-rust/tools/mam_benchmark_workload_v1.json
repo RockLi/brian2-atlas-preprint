@@ -1,0 +1,36 @@
+{
+  "schema": "b2-mam-scientific-workload-v1",
+  "target": {
+    "neurons": 4129924,
+    "recurrent_edges": 24126516728,
+    "populations": 254,
+    "areas": 32,
+    "dt_ms": 0.1,
+    "duration_ms": 100500,
+    "transient_ms": 500,
+    "parameters_sha256": "ee1a642c94b9d6e808627c54f78162e7f5d87f4140ba56496c5dfee3ed900d3e"
+  },
+  "common_required_outputs": [
+    "All unthinned spike records over the complete target run, with original timestamps/IDs retained",
+    "Explicit physical-time and global-cell mappings; full population counts and area identities",
+    "Pinned model parameters, normalization/reference inputs and analysis source identities",
+    "Per-rank construction/event counts, source/runtime/layout identity, hashes and completion receipts",
+    "All-rank exit status, resource evidence and end-to-end timing"
+  ],
+  "scientific_metrics": [
+    "firing rate",
+    "LvR",
+    "spike-count correlation",
+    "rate PSD",
+    "functional connectivity",
+    "inter-area propagation"
+  ],
+  "analysis_conventions": "Unchanged frozen scientific protocol; no window/selection/precision/margin relaxation",
+  "auxiliary_output_policy": "Retain Rust voltage traces, final states/refractory/counters and event copies; charge all actual work and storage. Do not impose an identical restart representation on NEST.",
+  "common_durability": "Required event streams and metadata must be synchronized, independently verified and covered by successful all-rank termination; fadvise is advisory",
+  "time_policy": "Primary external job wall includes initialization, simulation and all actual auxiliary/common output, verification and terminal completion. Collection/archive/analysis reported separately with total task cost.",
+  "acceptance_scope": "A comparable scientific recording workload, not identical engine output bytes or proof of scientific/statistical/performance/cost acceptance",
+  "state_format_matching_required": false,
+  "delete_existing_rust_outputs": false,
+  "new_performance_run_admitted": false
+}

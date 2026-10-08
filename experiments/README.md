@@ -9,3 +9,5 @@ These are historical research entry points. Their original relative imports, dat
 - [FlyWire vision](legacy/flywire_vision/README.md)
 
 A new end-to-end reproduction entry point pinned to an Atlas commit will be added after the product backend port is validated. Large execution histories and historical engine snapshots remain in the checksummed archives indexed under `../archives/`.
+
+The [historical research programs](legacy/brian2-rust/README.md) also preserve contextual dendritic, multi-area model and Litwin-Kumar scripts, analysis tools, tests and adjacent small records. Their exact mapping is in `../migration/research-family-import.json`.

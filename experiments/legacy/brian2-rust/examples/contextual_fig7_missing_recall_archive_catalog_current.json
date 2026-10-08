@@ -1,0 +1,97 @@
+{
+  "schema": "contextual-fig7-missing-recall-archive-catalog-v1",
+  "frozen_manifest_sha256": "2a2247bc830caf64f89657c7fd4fb616a11b1233c561a38703d633fa12fc1d3c",
+  "entries": [
+    {
+      "kind": "pilot_retrospective",
+      "visit_indices": [1311],
+      "gate": "fig7-missing-recall-pilot-seed7433-delete10-v2/retrospective-independent-audit-v1.json",
+      "hdf": "fig7-missing-recall-pilot-seed7433-delete10-v2/candidate-data_Fig_7.h5",
+      "worker_report": "fig7-missing-recall-pilot-seed7433-delete10-v2/report.json"
+    },
+    {
+      "kind": "dense_trial",
+      "visit_indices": [593, 595],
+      "gate": "fig7-dense-seed843-acquisition-v1/batch-593-595-v1/batch-593-595-v1-independent-gate.json",
+      "hdf": "fig7-dense-seed843-acquisition-v1/batch-593-595-v1/data_Fig_7.h5",
+      "worker_report": "fig7-dense-seed843-acquisition-v1/batch-593-595-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1289],
+      "gate": "fig7-population-missing-v1/visit-1289-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1289-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1289-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1297],
+      "gate": "fig7-population-missing-v1/visit-1297-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1297-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1297-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1299],
+      "gate": "fig7-population-missing-v1/visit-1299-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1299-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1299-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1315],
+      "gate": "fig7-population-missing-v1/visit-1315-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1315-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1315-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1319],
+      "gate": "fig7-population-missing-v1/visit-1319-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1319-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1319-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1333],
+      "gate": "fig7-population-missing-v1/visit-1333-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1333-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1333-v1/report.json"
+    },
+    {
+      "kind": "population",
+      "visit_indices": [1335],
+      "gate": "fig7-population-missing-v1/visit-1335-v1/independent-gate.json",
+      "hdf": "fig7-population-missing-v1/visit-1335-v1/data_Fig_7.h5",
+      "worker_report": "fig7-population-missing-v1/visit-1335-v1/report.json"
+    },
+    {
+      "kind": "dense_chunk",
+      "visit_indices": [597, 599, 601, 603, 605, 607, 614, 616, 618, 620],
+      "gate": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-01/dense-01-closed-gate.json",
+      "hdf": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-01/data_Fig_7.h5",
+      "worker_report": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-01/report.json"
+    },
+    {
+      "kind": "dense_chunk",
+      "visit_indices": [622, 624, 626, 628, 1144, 1145, 1146, 1147, 1148, 1149],
+      "gate": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-02/dense-02-closed-gate.json",
+      "hdf": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-02/data_Fig_7.h5",
+      "worker_report": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-02/report.json"
+    },
+    {
+      "kind": "dense_chunk",
+      "visit_indices": [1150, 1151, 1152, 1153, 1154, 1165, 1166, 1167, 1168, 1169],
+      "gate": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-03/dense-03-closed-gate.json",
+      "hdf": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-03/data_Fig_7.h5",
+      "worker_report": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-03/report.json"
+    },
+    {
+      "kind": "dense_chunk",
+      "visit_indices": [1170, 1171, 1172, 1173, 1174, 1175, 1176, 1177, 1178, 1179],
+      "gate": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-04/dense-04-closed-gate.json",
+      "hdf": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-04/data_Fig_7.h5",
+      "worker_report": "fig7-dense-seed843-acquisition-v1/campaign-v1-closed/dense-04/report.json"
+    }
+  ]
+}
