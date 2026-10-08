@@ -23,9 +23,13 @@ python paper/scripts/build_manuscript.py
 
 The generator defaults to Matplotlib’s bundled fonts, avoiding host font-discovery differences. It writes the figures, `paper/MANUSCRIPT.html`, and `paper/validation/build_report.json`. Its checks cover retained-file hashes, figure/table structure, and consistency of the reported numbers. They do not constitute new simulations or hardware measurements.
 
+The manuscript CI runs this same retained-evidence build and saves its generated artifacts. It checks the reporting pipeline; simulation and hardware validation are separate.
+
 ## Migration and reproduction status
 
 The manuscript materials have been imported with file-level provenance. Experimental scripts, archive indexing, portable collection paths, and the pinned Atlas checkout are being integrated. A complete reproduction workflow will be documented after its end-to-end validation.
+
+[Research archive catalog](archives/README.md) maps retained execution and evaluation files to checksummed local archives, including resolved external evidence links.
 
 [Capture provenance](PROVENANCE.md) distinguishes the import snapshot from the individual experimental source versions. [The import manifest](migration/paper-import.json) records every captured manuscript file and its original hash.
 
