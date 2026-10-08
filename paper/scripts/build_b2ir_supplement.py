@@ -9,8 +9,8 @@ from reportlab.lib.units import mm
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
-ROOT=Path(__file__).resolve().parents[3]
-D=ROOT/'docs/preprint'
+ROOT=Path(__file__).resolve().parents[2]
+D=ROOT/'paper'
 record=json.loads((D/'data/b2ir_visualization/capture.json').read_text())
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,default=ROOT/'output/pdf/brian2-atlas-supplementary-figure-s1.pdf')

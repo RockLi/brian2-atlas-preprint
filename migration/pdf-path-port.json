@@ -1,0 +1,28 @@
+{
+  "schema": "atlas-preprint-pdf-path-port-v1",
+  "changes": [
+    {
+      "path": "paper/scripts/export_pdf.py",
+      "before_sha256": "873cdca7f93abb638511d67ce2d495805eef3654cf2279080feab89961ec9577",
+      "after_sha256": "8bb9d4759c34f684e7640fa95352ca0eeb8a94f16fec317a83284964de7c2ec1"
+    },
+    {
+      "path": "paper/scripts/build_b2ir_supplement.py",
+      "before_sha256": "8029456f139e1e61280a5deead43cd0e2907b269e83b5c30f19b6a7e7a4474c9",
+      "after_sha256": "5a71f6d2e8c681191748b6d3740fb862fbc2e8008db81401dc416cd80da140c0"
+    },
+    {
+      "path": "paper/scripts/pdf_supplements.py",
+      "before_sha256": "83bf4b8f49ea9d9d49289d5abdd8e08a8c43d13900bc4c15efac5a4c638d214e",
+      "after_sha256": "a44e39b685babf65615dd3c340e8f40ce1314df2d52273542ab01c6d4979b566"
+    },
+    {
+      "path": "paper/README.md",
+      "before_sha256": "5789a29fcb03fedc81f390d6c513a664d612e77b97dfee83d07687235ce2a11d",
+      "after_sha256": "361577646724da180cfed08b1d6e711cdda0f422201a847d3841768d2ea9fc18"
+    }
+  ],
+  "status": "Export, CLI checks, 44-page layout inspection and local evidence-link validation passed; see pdf-build.json.",
+  "preserved": "Manuscript print stylesheet, figure crops, captions, retained-data hash gates and scientific contents are unchanged.",
+  "link_fix": "Insert a base URI for paper/ after the existing charset meta tag so local evidence links resolve outside the print temporary directory."
+}

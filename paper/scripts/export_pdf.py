@@ -1,5 +1,8 @@
 """Print the portable manuscript to PDF with local Chromium and no network assets."""
 from pathlib import Path
+import argparse
+import os
+import shutil
 import hashlib
 import json
 import re
@@ -9,13 +12,34 @@ from pypdf import PdfReader, PdfWriter
 import pypdfium2 as pdfium
 from pdf_supplements import append_b2ir_figure
 
-ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / 'docs/preprint/MANUSCRIPT.html'
-OUTPUT = ROOT / 'output/pdf/brian2-atlas-preprint.pdf'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--chromium', type=Path, default=os.environ.get('CHROMIUM'),
+                    help='Chromium/Chrome executable; defaults to CHROMIUM or local discovery')
+parser.add_argument('--output', type=Path, help='Output PDF path')
+parser.add_argument('--timeout', type=float, default=300,
+                    help='Maximum Chromium export time in seconds (default: 300)')
+args = parser.parse_args()
+if args.timeout <= 0:
+    parser.error('--timeout must be positive')
+ROOT = Path(__file__).resolve().parents[2]
+SOURCE = ROOT / 'paper/MANUSCRIPT.html'
+OUTPUT = (args.output or ROOT / 'output/pdf/brian2-atlas-preprint.pdf').resolve()
 WORK = ROOT / 'tmp/pdfs'
+candidates = [args.chromium] if args.chromium else [
+    shutil.which('chromium'), shutil.which('chromium-browser'),
+    shutil.which('google-chrome'), shutil.which('google-chrome-stable'),
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+]
+chromium = next((Path(p).resolve() for p in candidates
+                 if p and Path(p).is_file() and os.access(p, os.X_OK)), None)
+if chromium is None:
+    parser.error('Chromium/Chrome is required; supply --chromium or CHROMIUM')
 WORK.mkdir(parents=True, exist_ok=True)
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 html = SOURCE.read_text()
+# Relative evidence links belong to paper/, even though the print HTML is temporary.
+assert '<meta charset="utf-8">' in html
+html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8"><base href="' + SOURCE.parent.as_uri() + '/">', 1)
 html = re.sub(r'<title>.*?</title>', '<title>A Unified Intermediate Representation and Execution Architecture for Heterogeneous and Distributed Neural Simulation</title>', html)
 html = html.replace('<h2>References</h2>', '<section class="references"><h2>References</h2>')
 html = html.replace('<h2>Appendix A.', '</section><h2 class="compatibility-appendix">Appendix A.', 1)
@@ -34,11 +58,11 @@ html, count = re.subn(
 assert count == 10, count
 html = html.replace('</p></figcaption>', '</figcaption>')
 html = re.sub(r'<figure>(<img[^>]+alt="Figure 7\.[^>]+>)', r'<figure class="browser-figure">\1', html)
-dendritic_section = ROOT / 'docs/preprint/data/common_source/section.html'
+dendritic_section = ROOT / 'paper/data/common_source/section.html'
 html = html.replace('</main>', dendritic_section.read_text().replace('<h2>S13.', '<h2 class="dendritic-supplement">S13.', 1) + '</main>', 1)
-resource_section = ROOT / 'docs/preprint/data/full_scale/section.html'
+resource_section = ROOT / 'paper/data/full_scale/section.html'
 if resource_section.exists():
-    resource_validation = json.loads((ROOT / 'docs/preprint/validation/full_scale_resource_analysis.json').read_text())
+    resource_validation = json.loads((ROOT / 'paper/validation/full_scale_resource_analysis.json').read_text())
     assert resource_validation['status'] == 'passed'
     assert hashlib.sha256(resource_section.read_bytes()).hexdigest() == resource_validation['section_sha256']
     html = html.replace('</main>', resource_section.read_text() + '</main>', 1)
@@ -93,12 +117,12 @@ css = '''
 html = html.replace('</style>', '</style><style>' + css + '</style>', 1)
 print_html = WORK / 'manuscript-print.html'
 print_html.write_text(html)
-with tempfile.TemporaryDirectory(prefix='brian2-pdf-chrome-') as profile:
+with tempfile.TemporaryDirectory(prefix='brian2-pdf-chrome-', dir=WORK) as profile:
     pending = Path(profile) / 'manuscript.pdf'
     log = Path(profile) / 'chrome.log'
     with log.open('wb') as handle:
         process = subprocess.Popen([
-        '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        str(chromium),
         '--headless', '--disable-gpu', '--no-first-run', '--no-default-browser-check',
         '--disable-background-networking', '--disable-extensions',
         '--no-pdf-header-footer', '--allow-file-access-from-files',
@@ -106,7 +130,7 @@ with tempfile.TemporaryDirectory(prefix='brian2-pdf-chrome-') as profile:
         print_html.as_uri(),
         ], stdout=subprocess.DEVNULL, stderr=handle)
         try:
-            process.wait(timeout=60)
+            process.wait(timeout=args.timeout)
         except subprocess.TimeoutExpired:
             process.terminate()
             try:

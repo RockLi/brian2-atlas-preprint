@@ -1,5 +1,7 @@
 # 新引擎 preprint 写作材料包
 
+> 双仓库迁移说明：下文保留写作阶段与历史版本记录；当前图表数量和检查范围以 [构建报告](validation/build_report.json) 为准。HTML 重建使用本仓库保留的数据，PDF 导出见 [PDF 构建说明](PDF.md)。历史结果继续对应各自的源码身份。
+
 更新日期：2026-10-07。阶段：默认阅读稿已采用正式稿件样式，九张图、六张表（含附录兼容矩阵）、15 项引用及 S1–S18 补充材料。本版基于本地 next-dev（含未提交开发）更新集成状态、MPI 可塑性与边界恢复、兼容范围、多 realization 分布式证据、原生训练和树突模型基准；保留执行计划研究与 Figure 7 的真实 Neural Lab 界面。尚未公开发布或投稿。
 
 **论文定位：保留 Brian2 建模与前端编译能力，围绕统一 IR、重写的异构执行后端和分布式实现三项贡献，呈现模型语义、平台覆盖、性能、内存效率与跨节点容量。**
@@ -17,7 +19,7 @@
 | 文件 | 用途 |
 |---|---|
 | [英文完整初稿 · 阅读版](MANUSCRIPT.html) | 内嵌九张图的 HTML，可离线阅读 |
-| [论文 PDF](../../output/pdf/brian2-atlas-preprint.pdf) | 正式稿件样式，含系统能力、实验结果与兼容附录 |
+| [论文 PDF 构建方法](PDF.md) | 正式稿件样式，含系统能力、实验结果与兼容附录 |
 | [英文完整初稿 · 编辑版](MANUSCRIPT.md) | 摘要、引言、方法、结果、讨论、结论及 15 项引用 |
 | [补充方法与证据](SUPPLEMENTARY.md) | 源码边界、实验配置、原始报告定位、证据层级及复现命令 |
 | [计划选择与调优数据](data/plan_selection.json) | 六份归档报告、十二个主机/案例摘要、来源哈希 |
@@ -65,7 +67,7 @@ v3 已包括 Fig. 1–9、Table 1–6 和测量方法。四节点 32-rank、24,1
 - [v3 证据索引](data/v3/evidence.json)：归档报告、验收终态、三个新增 CPU 工作负载与独立训练阶段的范围。
 - [本地源码检查快照](data/v3/review_snapshot.json)：next-dev 基础 commit、未提交状态及已读源码哈希；不是干净 release 或整树验收证明。
 - [历史v3证据收集脚本](scripts/collect_v3_evidence.py)：用于原始v3归档收集，不用于覆盖已加入统一源码复测的最终证据索引。当前稿件从保留的索引重建。
-- [保留的 v2 阅读版](MANUSCRIPT_V2.html)、[v2 编辑版](MANUSCRIPT_V2.md)、[v2 补充材料](SUPPLEMENTARY_V2.md)、[v2 PDF](../../output/pdf/brian2-unified-execution-preprint-v2.pdf)。
+- [保留的 v2 阅读版](MANUSCRIPT_V2.html)、[v2 编辑版](MANUSCRIPT_V2.md)、[v2 补充材料](SUPPLEMENTARY_V2.md)、[v2 PDF 归档索引](../archives/README.md)。
 
 v3 保留原 CPU/GPU/MPI 基准的冻结身份，增加三组树突模型 Cython 对照及较慢的网络案例。新增 MPI 恢复属于显式/binary 小模型验收；不将它等同于大型 procedural 网络恢复。三个 Rust realization 与 NEST reference 只支持描述性比较。原生训练按版本和硬件列出资格，不宣称全 Brian 可微、最新 CUDA 全部通过或跨主机多 GPU 扩展性。
 
@@ -78,7 +80,7 @@ v3 保留原 CPU/GPU/MPI 基准的冻结身份，增加三组树突模型 Cython
 - [已发表模型证据](data/published_models/evidence.json)保留 15 份小型来源记录；NMDA 计时与状态验收、Onasch 原模型扫描与 Atlas 配对执行分别表述。
 - Supplement S14 提供范围矩阵；S15 说明统一 Device/B2IR/计划/结果接口与独立浏览器交付，保留各目标限制。
 - 摘要、引言及讨论加入减少多项目协调与模型迁移负担的用户价值；不将这一设计目标写成已测量的易用性优势。
-- [初始 v3 PDF](../../output/pdf/brian2-atlas-preprint-v3-initial.pdf)、[初始 v3 源稿](MANUSCRIPT_V3_INITIAL.md)、[初始 v3 阅读版](MANUSCRIPT_V3_INITIAL.html)已保留；当前默认文件为补充后的 v3。
+- [初始 v3 PDF 归档索引](../archives/README.md)、[初始 v3 源稿](MANUSCRIPT_V3_INITIAL.md)、[初始 v3 阅读版](MANUSCRIPT_V3_INITIAL.html)已保留；当前默认文件为补充后的 v3。
 
 ## v3 兼容性附录
 
@@ -90,7 +92,7 @@ Appendix A / Table 6 按 CPU、CUDA/Metal、通用 WASM 和 MPI 列出功能边�
 
 ## 正式稿件样式
 
-默认源稿和阅读版移除封面版本/日期/内部状态、页脚工作稿标识、写作过程占位文字及补充材料发布清单。PDF 仅保留页码，默认输出为 [brian2-atlas-preprint.pdf](../../output/pdf/brian2-atlas-preprint.pdf)。科研验证边界与来源版本继续保留；本轮为稿件内容和版式整理，未公开发布。此前 v3 PDF 与 V3_PRE_FINAL 源稿保留用于内部对照。
+默认源稿和阅读版移除封面版本/日期/内部状态、页脚工作稿标识、写作过程占位文字及补充材料发布清单。PDF 仅保留页码，默认输出为 `output/pdf/brian2-atlas-preprint.pdf`（仓库根目录；见 [构建说明](PDF.md)）。科研验证边界与来源版本继续保留；本轮为稿件内容和版式整理，未公开发布。此前 v3 PDF 与 V3_PRE_FINAL 源稿保留用于内部对照。
 
 ## 异构 MPI 图与资格矩阵
 

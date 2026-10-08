@@ -7,8 +7,8 @@ from pypdf import PdfReader
 
 
 def append_b2ir_figure(writer):
-    root = Path(__file__).resolve().parents[3]
-    if not (root / 'docs/preprint/data/b2ir_visualization/capture.json').exists():
+    root = Path(__file__).resolve().parents[2]
+    if not (root / 'paper/data/b2ir_visualization/capture.json').exists():
         return
     offset = len(writer.pages)
     output = root / 'tmp/pdfs/b2ir-supplement-integrated.pdf'
@@ -17,7 +17,7 @@ def append_b2ir_figure(writer):
         '--output', str(output), '--page-offset', str(offset),
     ], check=True, capture_output=True)
     reader = PdfReader(output)
-    record = json.loads((root / 'docs/preprint/data/b2ir_visualization/capture.json').read_text())
+    record = json.loads((root / 'paper/data/b2ir_visualization/capture.json').read_text())
     assert len(reader.pages) == len(record['panels'])
     writer.append(reader, import_outline=False)
     writer.add_outline_item('Supplementary Figure S1 | Online B2IR inspection', offset)

@@ -1,0 +1,141 @@
+{
+  "schema": "atlas-preprint-pdf-build-v1",
+  "command": "python paper/scripts/export_pdf.py",
+  "pages": 44,
+  "bytes": 2474103,
+  "sha256": "3e79a8f7dca4c24d1b8739ab6ab770944edbff2bc2f7c575ab595f7b42e0a6e6",
+  "author": "Xinjun Li",
+  "chromium_version": "154.0.8037.99",
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "dependency_lock_sha256": "c18b1547e26031e02c1a293f3439ccdeef0322131256fe1f6acba998c81113a4",
+  "cli_checks": "--help succeeds; missing explicit Chromium and nonpositive timeout rejected",
+  "b2ir_supplement_pages": 3,
+  "inputs": {
+    "paper/MANUSCRIPT.html": "c28d0406f53aba90ee9c4b69e4b661fcbf9a1f6abf68afaa606ab30ce764ce5c",
+    "paper/data/common_source/section.html": "34fc28f94bff3f6e93d40c16aae9a337066245668429a4ed34662740b6c0fba2",
+    "paper/data/full_scale/section.html": "5e49679e0eecf7f50ffaf3e1424f55d975468b14984e994ac8e8e79e0b12489e",
+    "paper/data/b2ir_visualization/capture.json": "e8e2958314f7f119ee2a75d1759a37604e74dca799b2a74961baf0782c9001b6"
+  },
+  "visual_review": "All 44 original exported pages inspected through contact sheets, with full-size first and supplementary page checks. After correcting link bases, all 44 paint streams remained identical; rerendered pages 33 and 42 match the previously inspected pixels exactly.",
+  "scope": "PDF export from retained manuscript and source-checked supplements only; no experiments rerun.",
+  "local_evidence_links": [
+    {
+      "page": 33,
+      "target": "paper/SUPPLEMENTARY.md",
+      "fragment": ""
+    },
+    {
+      "page": 33,
+      "target": "paper/data/v3/review_snapshot.json",
+      "fragment": ""
+    },
+    {
+      "page": 33,
+      "target": "paper/data/v3/evidence.json",
+      "fragment": ""
+    },
+    {
+      "page": 33,
+      "target": "paper/data/capacity/evidence.json",
+      "fragment": ""
+    },
+    {
+      "page": 33,
+      "target": "paper/data/capacity/weak-evidence.json",
+      "fragment": ""
+    },
+    {
+      "page": 33,
+      "target": "paper/data/full_scale/analysis.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/v3/dendritic_review.md",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/v3/dendritic_nonlinear.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/v3/dendritic_linear.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/common_source/manifest.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/common_source/freeze.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/common_source/aggregate.json",
+      "fragment": ""
+    },
+    {
+      "page": 36,
+      "target": "paper/data/common_source/aggregate-uncached.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/active-regression.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/active-regression.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/regression-tests.log",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/evidence-audit.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/evidence-audit.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/migration.json",
+      "fragment": ""
+    },
+    {
+      "page": 37,
+      "target": "paper/data/common_source/migration.json",
+      "fragment": ""
+    },
+    {
+      "page": 38,
+      "target": "paper/data/full_scale/analysis.json",
+      "fragment": ""
+    },
+    {
+      "page": 38,
+      "target": "paper/data/full_scale/resource_scenarios.csv",
+      "fragment": ""
+    },
+    {
+      "page": 38,
+      "target": "paper/scripts/analyze_full_scale_resources.py",
+      "fragment": ""
+    }
+  ],
+  "unchanged_external_links": 17,
+  "validation_status": "passed",
+  "renderer_note": "Poppler emitted a Fontconfig configuration warning; rendering succeeded and inspected text is legible."
+}
