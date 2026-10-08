@@ -1,6 +1,6 @@
 # Pinned PD14 reproduction
 
-This is a new, bounded execution of the archived PD14 feasibility program with Atlas commit `6677a5bafd3b703ab56b6ed176e9aad70f4638cd`. The original research source stays byte-identical in `../../legacy/brian2-rust/src/bin/pd14.rs`; Cargo consumes the engine directly from the product repository. `Cargo.lock` fixes the complete Rust dependency resolution. No engine implementation is copied into this repository.
+This is a new, bounded execution of the archived PD14 feasibility program with Atlas commit `bf1cf30af55a4a14ae42d0d75534728385b62d06`. The original research source stays byte-identical in `../../legacy/brian2-rust/src/bin/pd14.rs`; Cargo consumes the engine directly from the product repository. `Cargo.lock` fixes the complete Rust dependency resolution. No engine implementation is copied into this repository.
 
 Use Python 3.11 or later, Rust/Cargo 1.98.1 and Git. The Git dependency uses SSH, so the running account needs GitHub read access to `RockLi/brian2-atlas`. With a clean, not-yet-created output directory:
 

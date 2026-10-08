@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess,tempfile,hashlib,json
 from pypdf import PdfReader,PdfWriter
 import pypdfium2 as pdfium
-D=Path(__file__).resolve().parent;ROOT=D.parents[2]
+D=Path(__file__).resolve().parent;ROOT=D.parents[1]
 OUTPUT=ROOT/'output/pdf/brian2-atlas-preprint-zh-CN.pdf'
 manifest=json.loads((D/'source_manifest.json').read_text())
 assert hashlib.sha256((ROOT/'output/pdf/brian2-atlas-preprint.pdf').read_bytes()).hexdigest()==manifest['english_pdf_sha256']

@@ -1,6 +1,7 @@
 {
-  "english_pdf_sha256": "6bcd7ce3f0620a29b28e18350322bfce549429552129c8fd8fa849f041d4c71c",
-  "english_manuscript_sha256": "2bbc68fbe11fbb9806e331b64396dd400a045d57e2090c677a0f09129372d6ab",
-  "english_supplement_sha256": "255e4a98549c14e9f8f9a3d77ec79ca43338e07f06f5ca6ca8fe9bf0836bd723",
-  "scope": "Translate all content in the delivered 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Main Table 5 reports default implementations; same-source cache ablation is in S13. Other archived cohorts retain their identities."
+  "english_pdf_sha256": "7b4a321895c863a3435da34206affed54268548d9922e1cc6cd9870609fc2660",
+  "english_manuscript_sha256": "579eaaeb48e16887ea16cd84465fba044a75161b92180bafc66052c1c0325426",
+  "english_supplement_sha256": "1bc425ff01e426c8ffd6e34f46a00d0e851347c8f3a3803c7dfb8b17d9cce11d",
+  "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Updated maintained-code citation and scoped CUDA qualification; historical cohort identities and values are retained.",
+  "atlas_commit": "bf1cf30af55a4a14ae42d0d75534728385b62d06"
 }

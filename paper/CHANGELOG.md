@@ -1,5 +1,11 @@
 # Manuscript revisions
 
+## 2026-10-09: committed Atlas source and CUDA qualification
+
+- Pin the maintained implementation and PD14 consumer to `bf1cf30af55a4a14ae42d0d75534728385b62d06` on `dev`.
+- Add the 709-pass Modal L4 training qualification to the English/Chinese main text and Supplement S12. Preserve historical cohort identities and measurements.
+- Rebuild and rerun the bounded PD14 workflow, then rebuild and check both reading versions.
+
 ## Heterogeneous MPI implementation and evidence — 7 October 2026
 
 - Expands explicit CPU/Metal/CUDA rank assignment in Section 3.5 and adds Section 5.9 / Figure 9 with host/GPU work boundaries.

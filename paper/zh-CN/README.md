@@ -7,8 +7,10 @@
 - `RESOURCE_ANALYSIS.md`：完整的S21中文译稿。
 - `b2ir_panels.json`：补充图S1中文标题与图注；原始截图来源、哈希与裁剪范围保留。
 - `MANUSCRIPT.html`：包含上述全部内容的自包含排版源文件。
-- `../../../output/pdf/brian2-atlas-preprint-zh-CN.pdf`：合并后的中文PDF。
+- `../../output/pdf/brian2-atlas-preprint-zh-CN.pdf`：合并后的中文PDF。
 
 正文图与补充图S2的说明文字已译为中文；数据、曲线与原始界面截图保留。参考文献作者、论文题目和DOI保留原文。中文译稿的制作没有修改英文原件，也没有新增仿真或资源测试。
 
 `translation_validation.json`保存源文件身份、章节和段落对应、表格数值、引用与原始截图核验结果；`pdf_validation.json`保存PDF内容与排版检查结果。
+
+2026-10-09同步更新：当前实现引用固定至`bf1cf30af55a4a14ae42d0d75534728385b62d06`，正文纳入709项Modal CUDA验收。PD14复测与历史来源保留说明见[当前版本验证记录](../data/release_validation/acceptance.json)。

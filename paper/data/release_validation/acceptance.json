@@ -1,0 +1,113 @@
+{
+  "schema": "atlas-paper-latest-commit-validation-v1",
+  "atlas_commit": "bf1cf30af55a4a14ae42d0d75534728385b62d06",
+  "atlas_branch": "dev",
+  "preprint_previous_commit": "69427e68a24d265f6b76f3dca344c43d6e45f78f",
+  "merge_method": "fast-forward preserving tested commits",
+  "changed_runtime_or_test_files": [
+    "brian2-rust/python/brian2_rust/training_cuda.cu",
+    "brian2-rust/tests/test_training_cuda_capabilities.py"
+  ],
+  "cuda": {
+    "passed": 709,
+    "failed": 0,
+    "skipped": 0,
+    "original_skips_covered": 708,
+    "new_regressions": 1,
+    "report_url": "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
+    "report_sha256": "954970521ec913398e3aae8d583e927816f5ba0716b1d7b3b271122d19c12a54",
+    "validated_code_commit": "de36f5d6d1f822707d5036e14decefc58667c99f",
+    "repeated": false,
+    "reason": "Merged commit has exactly the runtime/test source already accepted on Modal; only evidence documentation followed the validated code commit."
+  },
+  "pd14": {
+    "rerun": true,
+    "status": "passed",
+    "independent_processes": 2,
+    "repetitions_per_process": 2,
+    "model_tests_passed": 1,
+    "previous_deterministic_result_unchanged": true,
+    "result": {
+      "numeric_profile": "f64-state/f32-static-weight/u16-delay",
+      "population_names": [
+        "L23E",
+        "L23I",
+        "L4E",
+        "L4I",
+        "L5E",
+        "L5I",
+        "L6E",
+        "L6I"
+      ],
+      "population_neurons": [
+        207,
+        58,
+        219,
+        55,
+        49,
+        11,
+        144,
+        29
+      ],
+      "neuron_count": 772,
+      "projection_count": 55,
+      "synapse_count": 29885,
+      "estimated_topology_bytes": 322946,
+      "resident_topology_bytes": 322946,
+      "spike_counts": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "delivered_events": 91,
+      "population_rates_hz": [
+        0.048309178743961345,
+        0.0,
+        0.045662100456621,
+        0.0,
+        0.2040816326530612,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "evidence_archive": "pd14-bf1cf30a.tar.gz",
+    "evidence_sha256": "c68301061e2c1f1a1f4cfdd9164fae6e60e08c9da1268fd7606763d04af5ee46"
+  },
+  "historical_performance": {
+    "rerun": false,
+    "source_identities_preserved": true,
+    "reason": "The merged fix changes C linkage of four CUDA training capability exports. Simulation frontend, kernels and Rust execution sources are unchanged by this merge. Historical timings remain attributed to their actual cohorts; no historical measurement is relabeled as a measurement of the new commit."
+  },
+  "build_and_pdf_validation": {
+    "status": "passed",
+    "main_figures": 10,
+    "main_tables": 7,
+    "bibliography_entries": 16,
+    "figure_svg_hashes_unchanged": true,
+    "translation_validation": "../../zh-CN/translation_validation.json",
+    "pdf_qa": "../../validation/current_commit_pdf_qa.json",
+    "pdfs": {
+      "en": {
+        "pages": 44,
+        "sha256": "7b4a321895c863a3435da34206affed54268548d9922e1cc6cd9870609fc2660",
+        "outside_page_characters": 0
+      },
+      "zh": {
+        "pages": 38,
+        "sha256": "c8097d95046f7f2c2afcedac9da43cca7ed87cf919f19bc57740c134e6bac6b5",
+        "outside_page_characters": 0
+      }
+    },
+    "source_sha256": {
+      "MANUSCRIPT.md": "579eaaeb48e16887ea16cd84465fba044a75161b92180bafc66052c1c0325426",
+      "SUPPLEMENTARY.md": "1bc425ff01e426c8ffd6e34f46a00d0e851347c8f3a3803c7dfb8b17d9cce11d",
+      "zh-CN/MANUSCRIPT.md": "a216dc918eddad1be79a8c3fe414d27eaacf7c8e9f7d08eecbd7c74389ae7ea6"
+    }
+  }
+}

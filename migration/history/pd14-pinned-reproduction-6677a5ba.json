@@ -1,15 +1,15 @@
 {
   "schema": "atlas-preprint-pd14-reproduction-v1",
   "status": "passed",
-  "atlas_commit": "bf1cf30af55a4a14ae42d0d75534728385b62d06",
+  "atlas_commit": "6677a5bafd3b703ab56b6ed176e9aad70f4638cd",
   "atlas_git": "ssh://git@github.com/RockLi/brian2-atlas.git",
-  "engine_cargo_source": "git+ssh://git@github.com/RockLi/brian2-atlas.git?rev=bf1cf30af55a4a14ae42d0d75534728385b62d06#bf1cf30af55a4a14ae42d0d75534728385b62d06",
+  "engine_cargo_source": "git+ssh://git@github.com/RockLi/brian2-atlas.git?rev=6677a5bafd3b703ab56b6ed176e9aad70f4638cd#6677a5bafd3b703ab56b6ed176e9aad70f4638cd",
   "model_source_sha256": "530b2413b56790131d61a0b621c1c89eb2acb95ff054b56a84eb4d32ecf80c77",
-  "cargo_lock_sha256": "1c28358730925e0f8a0ad43db07f69a5e84e9607b98f2dfed102d387be4a649b",
-  "binary_sha256": "b4688e8d41ede4e766e4df8e82b54dcd27064fb8058c9523c3f00cf91fafccde",
+  "cargo_lock_sha256": "02786a78ac00dd18840f5cd7115d2927aa7a70dc2fe6730fcc1a710d1c0ec1cd",
+  "binary_sha256": "26c0638e2b729332d148165fa240824931473f7c22fb6c67b192accb0d0fc2a4",
   "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
-  "started_unix": 1791501475.596929,
-  "ended_unix": 1791501600.651526,
+  "started_unix": 1791472143.225207,
+  "ended_unix": 1791472155.180041,
   "commands": [
     [
       "cargo",
@@ -19,7 +19,7 @@
       "--manifest-path",
       "/atlas-storage/0001/repos/brian2-atlas-preprint/experiments/reproduction/pd14/Cargo.toml",
       "--target-dir",
-      "/atlas-storage/0001/build/preprint-pd14-bf1cf30a"
+      "/atlas-storage/0001/build/preprint-pd14"
     ],
     [
       "cargo",
@@ -29,10 +29,10 @@
       "--manifest-path",
       "/atlas-storage/0001/repos/brian2-atlas-preprint/experiments/reproduction/pd14/Cargo.toml",
       "--target-dir",
-      "/atlas-storage/0001/build/preprint-pd14-bf1cf30a"
+      "/atlas-storage/0001/build/preprint-pd14"
     ],
     [
-      "/atlas-storage/0001/build/preprint-pd14-bf1cf30a/release/atlas-preprint-pd14",
+      "/atlas-storage/0001/build/preprint-pd14/release/atlas-preprint-pd14",
       "--neuron-scale",
       "0.01",
       "--indegree-scale",
@@ -48,10 +48,10 @@
       "--maximum-gib",
       "0.25",
       "--output",
-      "/atlas-storage/0001/output/preprint-pd14-bf1cf30a/run-1.json"
+      "/atlas-storage/0001/output/preprint-pd14-reproduction/run-1.json"
     ],
     [
-      "/atlas-storage/0001/build/preprint-pd14-bf1cf30a/release/atlas-preprint-pd14",
+      "/atlas-storage/0001/build/preprint-pd14/release/atlas-preprint-pd14",
       "--neuron-scale",
       "0.01",
       "--indegree-scale",
@@ -67,12 +67,12 @@
       "--maximum-gib",
       "0.25",
       "--output",
-      "/atlas-storage/0001/output/preprint-pd14-bf1cf30a/run-2.json"
+      "/atlas-storage/0001/output/preprint-pd14-reproduction/run-2.json"
     ]
   ],
   "result_sha256": {
-    "run-1.json": "c10b052071efaf743ba1520ff87f117da2d2e12c2007839c71b155f07ddba87b",
-    "run-2.json": "70a6f54cd046f4a8210e75a9372a44be37cc3cc7402b0633d2afcc2a510c5716"
+    "run-1.json": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-2.json": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae"
   },
   "deterministic_fields": [
     "numeric_profile",
@@ -143,22 +143,20 @@
     "historical_model_unchanged": true
   },
   "reproduction_files_sha256": {
-    "experiments/reproduction/pd14/Cargo.lock": "1c28358730925e0f8a0ad43db07f69a5e84e9607b98f2dfed102d387be4a649b",
-    "experiments/reproduction/pd14/Cargo.toml": "e5053e21b288dba1d90fcaf3a4da5cf38a91b6c24ba3f623e35275b1ac9cb21d",
-    "experiments/reproduction/pd14/README.md": "1da77d13b82accaede0943da202064055088ae778ca4ea6287254f3b86439507",
+    "experiments/reproduction/pd14/Cargo.lock": "02786a78ac00dd18840f5cd7115d2927aa7a70dc2fe6730fcc1a710d1c0ec1cd",
+    "experiments/reproduction/pd14/Cargo.toml": "b28a9ea88ffcee9f21356e70553bbe7531f81eb348fc5680eaf7a21825642234",
+    "experiments/reproduction/pd14/README.md": "1cd8a91abbd53d07725be433a5fd8bfc5373563b3ddca1d450fb610ee5dee4fc",
     "experiments/reproduction/pd14/reproduce.py": "6983b179b6d7ce2627a27c0542fde30f4fcd16764d74ced2b173472c0cb189c9",
     "experiments/reproduction/pd14/rust-toolchain.toml": "72da9f9e503464ba7393560f6f51a69fb06be72633d52ae7725fa0ba59dfda22"
   },
   "validation_artifacts_sha256": {
-    "build.log": "3af38b2f487270aec1c7d08fbfc21630a3c8146f4a37002c6b9608d8e72a4fcd",
-    "model-tests.log": "822b150b9de9acdbc2ea733e91fcf6d32b37077b70d17b6e0056f379a7eac454",
-    "run-1.json": "c10b052071efaf743ba1520ff87f117da2d2e12c2007839c71b155f07ddba87b",
-    "run-1.log": "c10b052071efaf743ba1520ff87f117da2d2e12c2007839c71b155f07ddba87b",
-    "run-2.json": "70a6f54cd046f4a8210e75a9372a44be37cc3cc7402b0633d2afcc2a510c5716",
-    "run-2.log": "70a6f54cd046f4a8210e75a9372a44be37cc3cc7402b0633d2afcc2a510c5716",
-    "validation.json": "0d3d1c89c062769849db5d398fe4865a49598cd130dc2aefa277a866fbffea7f"
+    "build.log": "2327393b97fb7f58d519904a4bec7cc64f77cc39e6752f3569d8b13400223002",
+    "model-tests.log": "c89c69f7e691464a75aa8a3abb122d39e3b969653919569d8d3d807cf0981305",
+    "run-1.json": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-1.log": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-2.json": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae",
+    "run-2.log": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae",
+    "validation.json": "5e84e277e969af8b8f642b818409b3d280a62490e1cb0dd6597d85b64dd91123"
   },
-  "validation_report_sha256": "0d3d1c89c062769849db5d398fe4865a49598cd130dc2aefa277a866fbffea7f",
-  "previous_acceptance": "history/pd14-pinned-reproduction-6677a5ba.json",
-  "previous_deterministic_result_unchanged": true
+  "validation_report_sha256": "5e84e277e969af8b8f642b818409b3d280a62490e1cb0dd6597d85b64dd91123"
 }

@@ -1,7 +1,7 @@
 """Check source identity, manuscript structure, table values and captured pixels."""
 from pathlib import Path
 import re,json,hashlib,collections
-D=Path(__file__).resolve().parent;ROOT=D.parents[2]
+D=Path(__file__).resolve().parent;ROOT=D.parents[1]
 m=json.loads((D/'source_manifest.json').read_text());checks={}
 for key,path in [('english_pdf_sha256',ROOT/'output/pdf/brian2-atlas-preprint.pdf'),('english_manuscript_sha256',D.parent/'MANUSCRIPT.md'),('english_supplement_sha256',D.parent/'SUPPLEMENTARY.md')]:
     checks[key]=hashlib.sha256(path.read_bytes()).hexdigest()==m[key];assert checks[key]
