@@ -8,4 +8,4 @@ The capture HEAD is not the source identity of every experiment. The retained JS
 
 Regenerating figures may change SVG metadata or rendering hashes. The import manifest records the captured input state; regenerated output hashes and numerical consistency checks belong to `paper/validation/build_report.json` and the migration validation records.
 
-Large original execution archives remain separate from this manuscript import. Their locations and checksums will be indexed with the experimental-script migration; an archive's local availability must not be interpreted as public availability.
+Large original execution archives remain separate from this manuscript import. Their locations and checksums are recorded in [archives/index.json](archives/index.json). [Historical Git and source restoration](archives/HISTORICAL_SOURCES.md) documents the verified Git bundle, reviewed-source overlay, evidence restoration command, and remaining historical FlyWire limitations. These archives are locally retained on T7; public downloads have not been published.

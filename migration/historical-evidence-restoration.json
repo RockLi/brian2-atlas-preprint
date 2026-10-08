@@ -1,0 +1,173 @@
+{
+  "schema": "atlas-historical-evidence-restore-v1",
+  "status": "verified",
+  "prefix": "brian2-rust/mpi-evidence/training-20261002/",
+  "catalog_sha256": "b63741412ac5a8b2307cd4c089e8272e99d5e582df4153a13524df744f9f47e3",
+  "archives": {
+    "external-evidence-targets.tar": {
+      "sha256": "373d89e843bc2609c15e4c533a8bb9ebeac0ce34eada5ce793ae7ecafa5c82f2",
+      "bytes": 235653120
+    },
+    "source-snapshot.tar": {
+      "sha256": "34fd34184d713d1b1c7a7bb98c115164fa016a0a67f91ae3c8d861291c4ea38a",
+      "bytes": 5466009600
+    }
+  },
+  "files": [
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-device-compaction-initial.xml",
+      "sha256": "58c4e05a139e69b763b877b9a6c7b668fef37f622b1ee63cdf5d51180462948d",
+      "bytes": 52267,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-mpi-initial.xml",
+      "sha256": "86906370d547c956bc52efc2da2d6262b5cc1ccb97318f70d4531d2eb24a49d2",
+      "bytes": 154852,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-stdp-final.xml",
+      "sha256": "48799e4f12e5411a91511eb84a8cf286c78db14679f7c0732345b80ffbaa0026",
+      "bytes": 7756,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-stdp-initial.xml",
+      "sha256": "1d0f8c1300e3e053a1d3855d71af07e42d894591fd40fe4066a83d48dbff9885",
+      "bytes": 28368,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/mpi-examples.json",
+      "sha256": "3663eef4c7878ebd88cd1a2d8908e59dd85eab07b3ebb114101da49286cf33b2",
+      "bytes": 5978,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/mpi-final.log",
+      "sha256": "d3310143e01cfc8abda1c426343a3163ad775fdaef7fcb8886c9dbab07c20b91",
+      "bytes": 13456,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/mpi-final.xml",
+      "sha256": "963fd18b1be255fa9f7ab4426b455be8291a1fb2ebeb849fa7022c8c06786453",
+      "bytes": 4242,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/verification.json",
+      "sha256": "4d9da80b3f6ef34fa7cf5438a0a6af09ed9aa93cb1e378e482aa1df4ad5f8f94",
+      "bytes": 6439,
+      "original_kind": "symlink",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/README.md",
+      "sha256": "a462e95cb8381720f9abe02b53fccb6b798dbf56ea557e0923ed7c7e763b5046",
+      "bytes": 6708,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-compaction-retest.xml",
+      "sha256": "859f548b94e4e6d7bcdb74348732fea36f3a2a923b825a3b5f6c3cb08b2ae3f1",
+      "bytes": 1609,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/legacy-mpi-retest.xml",
+      "sha256": "2c70e0fa3f500e77357b63ccb1def75b11e2edea7d1a9658cce8081bac148c42",
+      "bytes": 2568,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/mpi-lifecycle-final.log",
+      "sha256": "317a1b84375a8df5bc541844c233a4067de2d41d261dd0cbc76cc29f12ea1825",
+      "bytes": 848,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/mpi-lifecycle-final.xml",
+      "sha256": "8d5fed9d73d310964b63f42d452b4d267b597e771a5716c7ff3323ceaa694ddf",
+      "bytes": 371,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/native-build.log",
+      "sha256": "60d0703459b539968f8879cf87a430b9be07f28754e99fc8663484ea31f9b609",
+      "bytes": 144,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/native-examples.json",
+      "sha256": "16f9f9e5733a90241b9e8feb3f4923e92a4bc1da052a98f9b77ad640f0c88a67",
+      "bytes": 3002,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/native-final.log",
+      "sha256": "49b22d44e26eff9ce9ba54a649c6e0d423cb69e78bcd799f32ac5b21bbb0cb26",
+      "bytes": 3921,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/native-final.xml",
+      "sha256": "2fe32415def8fc49a5d3f8fa90fe7f86668f6939589fb08fa40c25fcdde009ba",
+      "bytes": 2757,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/platform-adex-fixed.json",
+      "sha256": "fd0170113260feba2a8f31392bf611fac9c49563e32d99597d4df93ce406d19e",
+      "bytes": 486,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/platform-custom-weight.json",
+      "sha256": "34d8b939844b9ca834e3b2a0062812b067d5f17962b0a744f77394c0d59a1299",
+      "bytes": 567,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/platform-families.json",
+      "sha256": "910ead9cfe1f8812f7f3ff5fa95fb2a146df96cb912bcc12e1d00d6b0aec9d82",
+      "bytes": 3233,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/platform-families.log",
+      "sha256": "a4cba8a9967f19a0e3586a39b7bf9cb605998fcea24c5ce714f70fb79a2eb613",
+      "bytes": 2546,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    },
+    {
+      "source": "brian2-rust/mpi-evidence/training-20261002/platform-izhikevich-rewire.json",
+      "sha256": "f6bd825f3ce8c4581404d012e0906954378abbc4accdaeec69d5df0b14975760",
+      "bytes": 818,
+      "original_kind": "file",
+      "restored_kind": "regular-file"
+    }
+  ],
+  "scope": "Byte-verified restoration of the selected original evidence paths. Original symlink targets are restored as regular files. This does not execute an experiment or substitute an Atlas revision for its historical source identity."
+}

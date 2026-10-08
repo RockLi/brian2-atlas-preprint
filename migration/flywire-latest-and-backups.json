@@ -1,0 +1,264 @@
+{
+  "checked_utc": "2026-10-08T16:03:19.477487+00:00",
+  "scope": "Targeted FlyWire and Brian2 cleanup backups on T7; not an exhaustive disk search",
+  "roots": [
+    "/atlas-storage/0002/brian2-flywire-mnist",
+    "/atlas-storage/0002/codex-flywire-learning",
+    "/atlas-storage/0002/codex-flywire-vision",
+    "/atlas-storage/0002/brian2-storage-cleanup-20260912",
+    "/atlas-storage/0002/brian2-local-artifacts-20260917",
+    "/atlas-storage/0002/brian2-experiments-artifacts"
+  ],
+  "inventory_files": 104878,
+  "inventory_errors": "",
+  "searched": [
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/spatial_distributions/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/spatial/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/server/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/random/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/math/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/logic/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/lib/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-source/pynest/nest/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/utils/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/units/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/tests/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/tests/test_templates/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/tests/test_templates/fake_package_2/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/tests/test_templates/fake_package_1/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/tests/features/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/synapses/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/stateupdaters/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/sphinxext/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/spatialneuron/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/random/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/parsing/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/monitors/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/memory/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/input/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/importexport/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/groups/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/equations/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/devices/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/devices/cpp_standalone/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/core/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/runtime/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/runtime/numpy_rt/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/runtime/cython_rt/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/runtime/GSLcython_rt/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2/codegen/generators/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/python/brian2_rust/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/spatial_distributions/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/spatial/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/server/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/random/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/math/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/logic/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/lib/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/nest-simulator-v3.8-gcc15/lib/python3.13/site-packages/nest/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_vision/__main__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_vision/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_mnist/model.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_mnist/graph.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_mnist/__main__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_mnist/__init__.py"
+    },
+    {
+      "file": "/atlas-storage/0002/brian2-local-artifacts-20260917/b2-spike-generator-budget/brian2-rust/experiments/flywire_mnist/backends/__init__.py"
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-flywire-mnist/cleanup-20260910/flywire-artifacts.tar",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-flywire-mnist/cleanup-20260910/source-d8474dc01.tar.gz",
+      "candidates": 35
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-local-artifacts-20260917/nmda2025-decision-psychometric-400-20260921-source.tgz",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-all-continuation.tar",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-all-local-validation-20260911.tar",
+      "candidates": 8
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-all-merge-20260911.tar",
+      "candidates": 37
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-flywire-mnist.tar",
+      "candidates": 35
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-flywire-vision.tar",
+      "candidates": 37
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-pre-all-merge-20260911.tar",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/brian2-pre-gpu-20260911.tar",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/flywire-browser-source.tar",
+      "candidates": 0
+    },
+    {
+      "archive": "/atlas-storage/0002/brian2-storage-cleanup-20260912/archives/flywire-vision-sources.tar",
+      "candidates": 0
+    }
+  ],
+  "manifest_hits": [],
+  "matches": {},
+  "errors": [],
+  "missing_hashes": [
+    "09d4b12a0d407b55f7b60355785ca3d80774043be38aa4055e4e96fc0bbe790b",
+    "5635092dd6d18a1db6ea49006d22cecba41fbc38559509a933e7485c14945883",
+    "8086a8cd1f7c7ed0336b6e1516cdf454f221b54cf1409d52aab5aeb3764b580f",
+    "817e564f4bbcc19b56400765f6affaa91b6e8ba1c735bf024808c214513883d0",
+    "a05042d9924cf07822909905c413c1465c99c2da57ef5a1eb396de397b0f8907",
+    "d60e7eb23d2ad971a67d292fb12f3f5a9c72f81c310bcb36b5ada68d4be85d7b"
+  ],
+  "latest_sources": [
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/__main__.py",
+      "preprint": "experiments/legacy/flywire_mnist/__main__.py",
+      "source_sha256": "4227eea67c0b8915cb57ea8df314d43216f4cc0f77cab83882d2398a02d34082",
+      "committed_sha256": "4227eea67c0b8915cb57ea8df314d43216f4cc0f77cab83882d2398a02d34082",
+      "match": true
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/backends/__init__.py",
+      "preprint": "experiments/legacy/flywire_mnist/backends/__init__.py",
+      "source_sha256": "527ac5eb5d4bcb4a81a604e1879738ce6222f74834d4c24dde4e9da4252c6960",
+      "committed_sha256": "527ac5eb5d4bcb4a81a604e1879738ce6222f74834d4c24dde4e9da4252c6960",
+      "match": true
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/graph.py",
+      "preprint": "experiments/legacy/flywire_mnist/graph.py",
+      "source_sha256": "041a23d681f7adcab46105c50de4082081a07b800475b7deadcf20a1173855b8",
+      "committed_sha256": "041a23d681f7adcab46105c50de4082081a07b800475b7deadcf20a1173855b8",
+      "match": true
+    },
+    {
+      "source": "brian2-rust/experiments/flywire_mnist/model.py",
+      "preprint": "experiments/legacy/flywire_mnist/model.py",
+      "source_sha256": "0065541998c365a15a0ede348f0b92ab55ffa6d0e4e4b93f92ad072e9389c2d9",
+      "committed_sha256": "0065541998c365a15a0ede348f0b92ab55ffa6d0e4e4b93f92ad072e9389c2d9",
+      "match": true
+    }
+  ]
+}
