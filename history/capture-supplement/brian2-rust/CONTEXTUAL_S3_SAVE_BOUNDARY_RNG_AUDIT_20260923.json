@@ -1,0 +1,54 @@
+{
+  "schema": "contextual-s3-save-boundary-rng-audit-v1",
+  "purpose": "source_and_result_only_diagnostic_no_simulation_no_performance_measurement",
+  "paper_source_commit": "73feb595ede908a368947d932055dc0a4e1b3817",
+  "source_equivalence": "all_16_src_files_byte_identical_to_later_checkout_dbb77525f2662199544f5a0d3dcc9c18b0e1c853",
+  "model_family": "NetworkMultipleContextsMultipleAssemblies",
+  "cells": [
+    {"seed": 56, "condition": "recurrent_inhibition_on", "group": "cb7fd607"},
+    {"seed": 73, "condition": "recurrent_inhibition_on", "group": "fed06da1"}
+  ],
+  "observed_result_boundary": {
+    "imprint_end_ms": 33500.0,
+    "all_six_recorded_input_and_soma_event_streams_elementwise_exact_through_imprint": true,
+    "all_six_first_event_differences_after_imprint": true,
+    "first_recorded_weight_difference_gt_1e_minus_6_ms_both_cells": 33750.0,
+    "report": "full-paper-audit-v1/figs3-recurrent-temporal-divergence-v1/contextual-s3-recurrent-temporal-divergence-v1.json",
+    "report_sha256": "05a263b5374a71b8d926e28c74822127cdaba24f7ce32d0a3fa24135ae6198b2"
+  },
+  "paper_source_audit": {
+    "network_multiple_contexts_multiple_assemblies.py": {
+      "sha256": "b4922ff109eb9e098b1784eca43d49db94b8beaf2bcafc5a68ec44f4c00bf248",
+      "lines_419_435": "run() calls create_save_dict() and save_results() immediately after imprint, resets input rates to background, then runs final baseline",
+      "lines_323_343": "save_most_active_neuron_weights path invokes the rate/weight selector before HDF5 write"
+    },
+    "utils.py": {
+      "sha256": "f419c623154a14b94dba61339236701a7ba2b273fbab2700631a5ab1642dc699",
+      "lines_63_166": "the live-weight selector uses two KMeans calls with explicit random_state=1992; it has no unconditional np.random draw or seed call",
+      "lines_184_261": "old_way_to_sort contains np.random.seed(4), but this is reached only through the saved-weight fallback when live weights remain all at w0; it is not an unconditional normal-save action"
+    },
+    "handle_parameters_and_results.py": {
+      "sha256": "205599c9a10c9841fb6d52496e554fe7fb99eb0715b938fe3727bd67b4571425",
+      "lines_248_296": "save_results writes HDF5 normally without an explicit np.random call; caught save errors invoke np.random.rand() once per retry before sleeping",
+      "lines_298_325": "the group key is a deterministic SHA1 of JSON-serialized parameters and equations"
+    }
+  },
+  "brian2_paper_version": {
+    "version": "2.9.0",
+    "official_randomness_documentation": "https://brian2.readthedocs.io/en/2.9.0/advanced/random.html",
+    "official_cython_source": "https://brian2.readthedocs.io/en/2.9.0/_modules/brian2/codegen/generators/cython_generator.html",
+    "confirmed_behavior": "runtime Cython rand/randn refill internal buffers from NumPy's global random stream; a Python-side NumPy random draw can alter a later refill, but need not alter an already-filled buffer"
+  },
+  "inference": {
+    "normal_save_unconditionally_advances_global_numpy_rng": false,
+    "save_retry_could_advance_global_numpy_rng": true,
+    "save_retry_observed_in_original_writer": null,
+    "retry_logs_available_for_original_writer": false,
+    "exact_cause_of_post_imprint_divergence_identified": false,
+    "hypothesis_status": "mechanistically_possible_but_unverified",
+    "caveat": "event-stream equality and sampled-weight closeness through imprint do not prove byte-identical hidden state or RNG buffer state"
+  },
+  "next_remote_read_only_check_after_trusted_reauthentication": "inspect original and rerun writer logs for Result save retry after; check completed remote campaign status before any restart",
+  "final_ensemble_gate_changed": false,
+  "performance_measurement": false
+}

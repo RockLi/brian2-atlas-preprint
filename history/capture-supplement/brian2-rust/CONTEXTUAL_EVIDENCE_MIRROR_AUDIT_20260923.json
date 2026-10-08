@@ -1,0 +1,31 @@
+{
+  "schema": "contextual-dendritic-evidence-mirror-audit-v1",
+  "observed_at_utc": "2026-09-23 02:36:39 UTC",
+  "purpose": "artifact_integrity_audit_no_simulation_no_performance_measurement",
+  "reported_timings": false,
+  "artifact_root": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/contextual-dendritic-gating-20260921/full-paper-audit-v1",
+  "t7_root": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/full-paper-audit-v1",
+  "exclusions": ["AppleDouble files whose basename starts with ._", ".DS_Store"],
+  "counts_before_writing_this_audit": {
+    "artifact_regular_files": 605,
+    "t7_regular_files": 624,
+    "artifact_files_missing_same_relative_path_on_t7": 0,
+    "artifact_files_differing_from_same_relative_path_on_t7": 0,
+    "artifact_files_byte_identical_to_same_relative_path_on_t7": 605,
+    "t7_only_files": 19
+  },
+  "comparison": "Read-only cmp -s of every regular artifact file against its same-relative-path T7 copy, plus sorted relative-path inventory comparison. This does not certify source data outside the audited full-paper-audit-v1 roots.",
+  "one_missing_same_path_copy_filled_before_final_comparison": {
+    "relative_path": "figs3-recurrent-seed19-loader-v1/contextual-figs3-recurrent-sidecar-batch-preflight-v1.json",
+    "sha256": "c7b2a5b88da751da228f80ed8ea79d13d6c11a5106d17ed6bdb4d6585d8b8275",
+    "note": "The same bytes already existed at figs3-recurrent-sidecar-batch-v1/ on T7; the missing additional same-path copy was added."
+  },
+  "t7_only_content_classes": {
+    "raw_hdf5_files": 6,
+    "zstd_archives": 2,
+    "transfer_chunks": 11,
+    "note": "These 19 larger/raw transport artifacts are deliberately retained on T7; no small scientific report, source, or log was T7-only after excluding filesystem metadata."
+  },
+  "remote_campaign_status_checked": false,
+  "remote_authentication": "Teleport profile remained expired; this audit does not assert live remote job state."
+}

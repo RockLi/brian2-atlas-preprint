@@ -1,0 +1,44 @@
+{
+  "schema": "b2-gpu-baseline-environments-v0",
+  "resolved_on": "2026-09-06",
+  "status": "Installed and executed on L4 and A100. Rust, native CUDA, Brian2CUDA and direct GeNN pass exact IF checks. Brian2GeNN spikes match; its small final-state difference is reproduced by its generated mixed-precision unit conversion.",
+  "brian2cuda": {
+    "python": "3.12",
+    "requirements": [
+      "brian2cuda==1.0b1",
+      "brian2==2.10.1",
+      "numpy==2.2.6"
+    ],
+    "source": "https://pypi.org/pypi/brian2cuda/1.0b1/json",
+    "resolved_lock": "execution-plan-evidence/gpu-baselines/brian2cuda.txt"
+  },
+  "brian2genn": {
+    "python": "3.10.18",
+    "requirements": [
+      "brian2genn==1.7.0",
+      "brian2==2.5.4",
+      "numpy==1.26.4"
+    ],
+    "genn_tag": "4.9.0",
+    "source": "https://pypi.org/pypi/brian2genn/1.7.0/json",
+    "genn_commit": "a9155521a48c9a6c348308639703d7b5eae3508d",
+    "resolved_lock": "execution-plan-evidence/gpu-baselines/brian2genn.txt"
+  },
+  "genn": {
+    "python": "3.12",
+    "requirements": [
+      "numpy==2.2.6"
+    ],
+    "genn_tag": "5.4.0",
+    "source": "https://github.com/genn-team/genn/releases/tag/5.4.0",
+    "genn_commit": "dd258075263c4b2bcb6607d230add658bcc23127",
+    "resolved_lock": "execution-plan-evidence/gpu-baselines/genn5.txt"
+  },
+  "requirements_for_comparison": [
+    "Use separate Python environments on one allocated physical GPU and record its UUID.",
+    "Build GeNN 4.9.0 for Brian2GeNN and GeNN 5.4.0 for the direct GeNN adapter separately.",
+    "Resolve and archive transitive dependency locks, compiler flags and exact GeNN commit identities before performance claims.",
+    "Run common model correctness checks before collecting timed repetitions.",
+    "The initial independent IF case does not replace recurrent, delay and STDP model comparisons."
+  ]
+}

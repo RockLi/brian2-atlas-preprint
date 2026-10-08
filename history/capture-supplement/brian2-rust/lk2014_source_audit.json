@@ -1,0 +1,22 @@
+{
+  "retrieved_utc": "2026-09-06",
+  "author_page_archive": "https://web.archive.org/web/20191221173840id_/http://lk.zuckermaninstitute.columbia.edu/",
+  "source_archive": "https://web.archive.org/web/20191221173840id_/http://lk.zuckermaninstitute.columbia.edu/code/litwin-kumar_doiron_formation_2014.zip",
+  "archive_sha256": "c34dd4e697c2851232da83b97ff5d9435a98639b59aec06624e51ba6ed895fad",
+  "files_sha256": {
+    "litwin-kumar_doiron_formation_2014/COPYING": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "litwin-kumar_doiron_formation_2014/README": "1d19e9ae3392cec6fba21642cc7b5f49e90f8374291ed2ad72cb72668028a7b8",
+    "litwin-kumar_doiron_formation_2014/runsim.jl": "1e3468a41e4613fd58573c5fe0d4672b73a3aa56c6643cc10ef54fae98cee460",
+    "litwin-kumar_doiron_formation_2014/saveweights.jl": "4b9a8931b36ef374e09d6300dd46a0d32a2d784314ff079e518e6ee1e27800bc",
+    "litwin-kumar_doiron_formation_2014/sim.jl": "e6e3e45708e1fc7b73a977037f5a4b705f64c97163f2bed00bdf742e4008adfc",
+    "litwin-kumar_doiron_formation_2014/trained.h5": "a7ba2f02e26e7f5c13ceb3d42e0b53e71996436cd5a6c209abc02990b32a1299"
+  },
+  "checked_facts": {
+    "stimulus_membership": "simnew constructs every membership from rand(Ne); inhibitory neurons are not directly targeted",
+    "inhibitory_learning_amplitude": "sim sets eta = 1",
+    "normalization": "subtract incoming row error / number of incoming edges, then clip, every 20 ms",
+    "membrane": "adaptive exponential E, LIF I, threshold adaptation and adaptation current",
+    "author_example_scope": "download implements voltage-based STDP; Fig.5 triplet parameters come from paper Methods; example duration and STDP warmup are short demonstration settings",
+    "delays": "download forwards inputs through previous-step buffers; paper Methods describe 0 to 1.5 ms delays"
+  }
+}
