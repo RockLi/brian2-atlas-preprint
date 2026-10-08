@@ -1,5 +1,6 @@
 """Collect small existing v3 records; no simulations, remote jobs or archive writes."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -8,10 +9,10 @@ import subprocess
 import xml.etree.ElementTree as ET
 
 PAPER = Path(__file__).resolve().parents[1]
-REPO = PAPER.parents[1]
+REPO = legacy_repo()
 OUT = PAPER / 'data/v3'
 OUT.mkdir(parents=True, exist_ok=True)
-ARCHIVE = Path('/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating')
+ARCHIVE = external_directory('DENDRITIC_ARCHIVE')
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()

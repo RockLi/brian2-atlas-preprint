@@ -1,8 +1,9 @@
 """Retain only accepted capacity records; launch no simulation or remote work."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 import hashlib,json,shutil
 ROOT=Path(__file__).resolve().parents[1]
-REPO=ROOT.parents[1]
+REPO=legacy_repo()
 OUT=ROOT/'data/capacity'
 OUT.mkdir(parents=True,exist_ok=True)
 rows=[];sources=[];engines=[]

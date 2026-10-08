@@ -1,0 +1,103 @@
+{
+  "status": "Explicit-path and syntax checks passed; historical collection not rerun.",
+  "files": [
+    {
+      "path": "paper/scripts/collect_evidence.py",
+      "before_sha256": "f5021b69435a225fd04ce1ec26295a295e4a10250e37b1232ef28789c9dc747d",
+      "after_sha256": "c4f5f39939fd8c3c8c3655843f683a0bf106383c7e5252aa89a155377b3c169f",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_plan_evidence.py",
+      "before_sha256": "53482c9bac421dd755179327edaa37982cdb59d59be7d69c8137c57947f8f68b",
+      "after_sha256": "409ec2b72349facb21a2864fb7e4781bf9ed80d1086ae379344e457862e81d9a",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_published_models.py",
+      "before_sha256": "18f31300567c460025666956a73ab871a1318032952148a2c3819efffc32d4b8",
+      "after_sha256": "416bc9a34deefcfe68348d7bafd399542f693fcdbe8879e2f61db6c310be7958",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_v3_evidence.py",
+      "before_sha256": "f2e885828a40a73b26f3d3d730b35899374a7c7c258342c61cee4b193ae6704a",
+      "after_sha256": "52277d7d0a09113672b770be64a973aa2913fcc5143d05d79d7df86f368df673",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_capacity_evidence.py",
+      "before_sha256": "29c6089c4a13fe77b252d9c23dce9ba4ea0bcb730889757ab745d1ab091d389a",
+      "after_sha256": "2ccec643aecb50b9fee80782bf0f4283e1b149340cd607342ba7ee1bcc6d636f",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_scaling_evidence.py",
+      "before_sha256": "24215164c3a013d0453b55eedf74b50ddb420d126959097f0817d042d8ae58ce",
+      "after_sha256": "688b332f6851c2dd0d1f91b68bb5475d9cfc44eb79197b1e87e813f52040be71",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/collect_mpi_heterogeneous.py",
+      "before_sha256": "62fb33f359e84e7f84afb2c6514663b80a483eb901577b7cc43ee852d8108230",
+      "after_sha256": "3d9ae96fac030ea3cb44f5697781e6653b58e778134f23a523789a7157b13163",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    },
+    {
+      "path": "paper/scripts/analyze_full_scale_resources.py",
+      "before_sha256": "2c298c02ada453b0f11cae8ccbc7281db7c559846b53b2001af7ada4b4cebe00",
+      "after_sha256": "fb3dc338985c0e18338b11210160d6861b94df5d62e0942e983304737bd33551",
+      "change": "Require explicit historical input roots and keep outputs under this repository paper directory."
+    }
+  ],
+  "validation": {
+    "checked_utc": "2026-10-08T08:41:25.296532+00:00",
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "collectors": [
+      {
+        "script": "collect_evidence.py",
+        "missing_input_exit": 2,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_plan_evidence.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_published_models.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_v3_evidence.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_capacity_evidence.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_scaling_evidence.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "collect_mpi_heterogeneous.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      },
+      {
+        "script": "analyze_full_scale_resources.py",
+        "missing_input_exit": 1,
+        "explicit_input_diagnostic": true
+      }
+    ],
+    "configured_legacy_root_resolved": true,
+    "nonexistent_root_rejected": true,
+    "help_lists_required_roots": true,
+    "retained_manuscript_and_evidence_unchanged": true
+  }
+}

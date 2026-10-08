@@ -8,10 +8,11 @@ import statistics
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument('--gpu-root', type=Path, default=Path('/private/tmp/brian2-flywire-mnist/brian2-rust'))
-parser.add_argument('--mpi-root', type=Path, default=Path('/private/tmp/brian2-mpi-cpu/brian2-rust'))
+parser.add_argument('--gpu-root', type=Path, required=True)
+parser.add_argument('--mpi-root', type=Path, required=True)
+parser.add_argument('--cpu-root', type=Path, required=True)
 args = parser.parse_args()
-CPU = ROOT.parents[1] / 'brian2-rust'
+CPU = args.cpu_root
 provenance = []
 
 def read(path, kind='json'):

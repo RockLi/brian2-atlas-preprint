@@ -1,16 +1,17 @@
 """Retain existing small published-model records; never execute models or benchmarks."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 from datetime import datetime, timezone
 import hashlib
 import json
 import statistics
 
 PAPER = Path(__file__).resolve().parents[1]
-REPO = PAPER.parents[1]
+REPO = legacy_repo()
 OUT = PAPER / 'data/published_models'
 OUT.mkdir(parents=True, exist_ok=True)
-NMDA = Path('/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025')
-DENDRITIC = Path('/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating')
+NMDA = external_directory('NMDA_ROOT')
+DENDRITIC = external_directory('DENDRITIC_ARCHIVE')
 sources=[]
 def retain(path,name):
     raw=Path(path).read_bytes()

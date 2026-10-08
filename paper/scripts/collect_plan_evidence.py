@@ -1,5 +1,6 @@
 """Extract retained tuning reports, verifying their archive hashes; run no simulations."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 import gzip
 import hashlib
 import json
@@ -7,7 +8,9 @@ import math
 import statistics as stats
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = Path('/private/tmp/brian2-execution-plan-research/brian2-rust')
+SOURCE = external_directory('PLAN_SOURCE')
+ARCHIVE = external_directory('PLAN_ARCHIVE')
+LEGACY = legacy_repo()
 OUT = ROOT / 'data/plan-selection-reports'
 OUT.mkdir(parents=True, exist_ok=True)
 provenance = []
@@ -28,7 +31,7 @@ for cohort, folder in [('autotune', 'autotune-1e6954b2'), ('tuning-cache', 'tuni
     for host in ['m3', 'l4', 'a100']:
         key = manifest['benchmarks'][host] + '/report.json'
         entry = manifest['artifacts'][key]
-        archive = Path('/atlas-storage/0002/brian2-gpu-execution-plan') / folder / 'evidence/blobs' / entry['blob']
+        archive = ARCHIVE / folder / 'evidence/blobs' / entry['blob']
         raw = gzip.decompress(archive.read_bytes())
         assert len(raw) == entry['bytes'] and hashlib.sha256(raw).hexdigest() == entry['sha256']
         saved = OUT / f'{cohort}-{host}.json'
@@ -72,7 +75,7 @@ for cohort, folder in [('autotune', 'autotune-1e6954b2'), ('tuning-cache', 'tuni
                            f32_passed=True, f64_passed=all(a['gates']['f64']['passed'] for a in acts))
             data[cohort]['rows'].append(row)
 
-source_file(ROOT.parents[1]/'brian2-rust/python/brian2_rust/planner.py')
+source_file(LEGACY/'brian2-rust/python/brian2_rust/planner.py')
 for name in ['GPU_AUTOTUNE.md', 'EXECUTION_PLAN.md',
              'python/brian2_rust/plan.py', 'python/brian2_rust/gpu_autotune.py',
              'python/brian2_rust/gpu_tuning_cache.py']:

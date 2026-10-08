@@ -1,8 +1,9 @@
 """Retain a fully accepted five-point weak-scaling study; no remote work."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 import hashlib,json
 ROOT=Path(__file__).resolve().parents[1]
-REPO=ROOT.parents[1]
+REPO=legacy_repo()
 SOURCE=REPO/'brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007'
 OUT=ROOT/'data/capacity'
 

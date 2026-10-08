@@ -27,6 +27,8 @@ The generator defaults to Matplotlib’s bundled fonts, avoiding host font-disco
 
 The manuscript CI runs this same retained-evidence build and saves its generated artifacts. It checks the reporting pipeline; simulation and hardware validation are separate.
 
+Historical evidence collectors require explicit source locations; see [collection inputs and scope](paper/COLLECTION.md). Rebuilding the manuscript does not require running these collectors.
+
 ## Migration and reproduction status
 
 The manuscript materials have been imported with file-level provenance. Experimental scripts, archive indexing, portable collection paths, and the pinned Atlas checkout are being integrated. A complete reproduction workflow will be documented after its end-to-end validation.

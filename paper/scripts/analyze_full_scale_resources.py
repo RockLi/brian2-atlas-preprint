@@ -1,5 +1,6 @@
 """Source-bound conditional arithmetic; no simulation, regression or remote job."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 import base64
 import csv
 import hashlib
@@ -10,7 +11,7 @@ import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[1]
+REPO = legacy_repo()
 EXPERIMENT = REPO / 'brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007'
 OUT = ROOT / 'data/full_scale'
 OUT.mkdir(exist_ok=True)
@@ -167,7 +168,8 @@ with (OUT/'resource_scenarios.csv').open('w', newline='') as f:
     w=csv.DictWriter(f,fieldnames=list(full));w.writeheader()
     for n in [86_000_000,172_000_000,344_000_000,688_000_000,860_000_000,8_600_000_000,FULL]:w.writerow(quantities(n))
 
-os.environ.setdefault('MPLCONFIGDIR','/private/tmp/b2-preprint-matplotlib')
+os.environ.setdefault('MPLCONFIGDIR', str(ROOT.parent / 'tmp/matplotlib'))
+os.environ.setdefault('MPL_IGNORE_SYSTEM_FONTS', '1')
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt

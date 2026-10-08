@@ -1,8 +1,10 @@
 """Retain existing heterogeneous MPI contracts and qualification records; no execution."""
 from pathlib import Path
+from evidence_paths import legacy_repo, external_directory
 import json, hashlib, xml.etree.ElementTree as ET
-ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/'docs/preprint/data/mpi_heterogeneous';OUT.mkdir(parents=True,exist_ok=True)
+PAPER=Path(__file__).resolve().parents[1]
+ROOT=legacy_repo()
+OUT=PAPER/'data/mpi_heterogeneous';OUT.mkdir(parents=True,exist_ok=True)
 base=ROOT/'brian2-rust/mpi-evidence/heterogeneous-20260911'
 inputs=[(base/'verification.json','simulation_verification.json'),(base/'example-runtime.json','simulation_example_runtime.json')]
 inputs += [(base/n,n) for n in ['mixed-gpu.xml','gpu-inventory.xml','cpu-mpi-regression.xml','plan-device-regression.xml']]
