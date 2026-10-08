@@ -1,0 +1,162 @@
+{
+  "schema": "atlas-preprint-pd14-reproduction-v1",
+  "status": "passed",
+  "atlas_commit": "6677a5bafd3b703ab56b6ed176e9aad70f4638cd",
+  "atlas_git": "ssh://git@github.com/RockLi/brian2-atlas.git",
+  "engine_cargo_source": "git+ssh://git@github.com/RockLi/brian2-atlas.git?rev=6677a5bafd3b703ab56b6ed176e9aad70f4638cd#6677a5bafd3b703ab56b6ed176e9aad70f4638cd",
+  "model_source_sha256": "530b2413b56790131d61a0b621c1c89eb2acb95ff054b56a84eb4d32ecf80c77",
+  "cargo_lock_sha256": "02786a78ac00dd18840f5cd7115d2927aa7a70dc2fe6730fcc1a710d1c0ec1cd",
+  "binary_sha256": "26c0638e2b729332d148165fa240824931473f7c22fb6c67b192accb0d0fc2a4",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "started_unix": 1791472143.225207,
+  "ended_unix": 1791472155.180041,
+  "commands": [
+    [
+      "cargo",
+      "build",
+      "--release",
+      "--locked",
+      "--manifest-path",
+      "/atlas-storage/0001/repos/brian2-atlas-preprint/experiments/reproduction/pd14/Cargo.toml",
+      "--target-dir",
+      "/atlas-storage/0001/build/preprint-pd14"
+    ],
+    [
+      "cargo",
+      "test",
+      "--release",
+      "--locked",
+      "--manifest-path",
+      "/atlas-storage/0001/repos/brian2-atlas-preprint/experiments/reproduction/pd14/Cargo.toml",
+      "--target-dir",
+      "/atlas-storage/0001/build/preprint-pd14"
+    ],
+    [
+      "/atlas-storage/0001/build/preprint-pd14/release/atlas-preprint-pd14",
+      "--neuron-scale",
+      "0.01",
+      "--indegree-scale",
+      "0.01",
+      "--duration-ms",
+      "100",
+      "--repetitions",
+      "2",
+      "--warmups",
+      "0",
+      "--seed",
+      "55",
+      "--maximum-gib",
+      "0.25",
+      "--output",
+      "/atlas-storage/0001/output/preprint-pd14-reproduction/run-1.json"
+    ],
+    [
+      "/atlas-storage/0001/build/preprint-pd14/release/atlas-preprint-pd14",
+      "--neuron-scale",
+      "0.01",
+      "--indegree-scale",
+      "0.01",
+      "--duration-ms",
+      "100",
+      "--repetitions",
+      "2",
+      "--warmups",
+      "0",
+      "--seed",
+      "55",
+      "--maximum-gib",
+      "0.25",
+      "--output",
+      "/atlas-storage/0001/output/preprint-pd14-reproduction/run-2.json"
+    ]
+  ],
+  "result_sha256": {
+    "run-1.json": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-2.json": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae"
+  },
+  "deterministic_fields": [
+    "numeric_profile",
+    "population_names",
+    "population_neurons",
+    "neuron_count",
+    "projection_count",
+    "synapse_count",
+    "estimated_topology_bytes",
+    "resident_topology_bytes",
+    "spike_counts",
+    "delivered_events",
+    "population_rates_hz"
+  ],
+  "result": {
+    "numeric_profile": "f64-state/f32-static-weight/u16-delay",
+    "population_names": [
+      "L23E",
+      "L23I",
+      "L4E",
+      "L4I",
+      "L5E",
+      "L5I",
+      "L6E",
+      "L6I"
+    ],
+    "population_neurons": [
+      207,
+      58,
+      219,
+      55,
+      49,
+      11,
+      144,
+      29
+    ],
+    "neuron_count": 772,
+    "projection_count": 55,
+    "synapse_count": 29885,
+    "estimated_topology_bytes": 322946,
+    "resident_topology_bytes": 322946,
+    "spike_counts": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "delivered_events": 91,
+    "population_rates_hz": [
+      0.048309178743961345,
+      0.0,
+      0.045662100456621,
+      0.0,
+      0.2040816326530612,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "scope": "New bounded reproduction at the pinned Atlas commit: 1% neuron and indegree scales, 100 ms, two fresh processes with two identical repetitions each. This does not reproduce full-scale scientific rates or historical benchmark timings.",
+  "source_identity": {
+    "historical_import_head": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+    "model_path": "experiments/legacy/brian2-rust/src/bin/pd14.rs",
+    "historical_model_unchanged": true
+  },
+  "reproduction_files_sha256": {
+    "experiments/reproduction/pd14/Cargo.lock": "02786a78ac00dd18840f5cd7115d2927aa7a70dc2fe6730fcc1a710d1c0ec1cd",
+    "experiments/reproduction/pd14/Cargo.toml": "b28a9ea88ffcee9f21356e70553bbe7531f81eb348fc5680eaf7a21825642234",
+    "experiments/reproduction/pd14/README.md": "1cd8a91abbd53d07725be433a5fd8bfc5373563b3ddca1d450fb610ee5dee4fc",
+    "experiments/reproduction/pd14/reproduce.py": "6983b179b6d7ce2627a27c0542fde30f4fcd16764d74ced2b173472c0cb189c9",
+    "experiments/reproduction/pd14/rust-toolchain.toml": "72da9f9e503464ba7393560f6f51a69fb06be72633d52ae7725fa0ba59dfda22"
+  },
+  "validation_artifacts_sha256": {
+    "build.log": "2327393b97fb7f58d519904a4bec7cc64f77cc39e6752f3569d8b13400223002",
+    "model-tests.log": "c89c69f7e691464a75aa8a3abb122d39e3b969653919569d8d3d807cf0981305",
+    "run-1.json": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-1.log": "d888c5835c82f646a7972b813bd6a53a894723eb37f2101a5cfb7f90dd34f3d6",
+    "run-2.json": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae",
+    "run-2.log": "57bac4332a871cfdd718d241cc3bb7628f581d238a8894579d3ab1f1430132ae",
+    "validation.json": "5e84e277e969af8b8f642b818409b3d280a62490e1cb0dd6597d85b64dd91123"
+  },
+  "validation_report_sha256": "5e84e277e969af8b8f642b818409b3d280a62490e1cb0dd6597d85b64dd91123"
+}

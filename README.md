@@ -31,7 +31,7 @@ Historical evidence collectors require explicit source locations; see [collectio
 
 ## Migration and reproduction status
 
-The manuscript materials have been imported with file-level provenance. Experimental scripts, archive indexing, portable collection paths, and the pinned Atlas checkout are being integrated. A complete reproduction workflow will be documented after its end-to-end validation.
+The manuscript materials have been imported with file-level provenance. A [pinned PD14 build-to-simulation workflow](experiments/reproduction/pd14/README.md) has passed end-to-end validation against Atlas commit `6677a5bafd3b703ab56b6ed176e9aad70f4638cd`. Other legacy research entry points retain their historical execution assumptions; their portable path audit and final migration reconciliation remain in progress.
 
 [Research experiment collections](experiments/README.md) preserve the legacy FlyWire learning, MNIST and vision scripts and their recorded small results. Portable execution adaptation remains in progress.
 

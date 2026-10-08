@@ -8,6 +8,6 @@ These are historical research entry points. Their original relative imports, dat
 - [FlyWire MNIST](legacy/flywire_mnist/README.md)
 - [FlyWire vision](legacy/flywire_vision/README.md)
 
-A new end-to-end reproduction entry point pinned to an Atlas commit will be added after the product backend port is validated. Large execution histories and historical engine snapshots remain in the checksummed archives indexed under `../archives/`.
+The [PD14 reproduction entry point](reproduction/pd14/README.md) builds the unchanged research program against an exact Atlas Git dependency and executes a bounded deterministic simulation. It passed on macOS arm64. This new run is distinct from the historical full-scale experiments. Large execution histories and historical engine snapshots remain in the checksummed archives indexed under `../archives/`.
 
 The [historical research programs](legacy/brian2-rust/README.md) also preserve contextual dendritic, multi-area model and Litwin-Kumar scripts, analysis tools, tests and adjacent small records. Their exact mapping is in `../migration/research-family-import.json`.
