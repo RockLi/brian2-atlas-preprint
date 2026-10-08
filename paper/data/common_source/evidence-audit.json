@@ -1,0 +1,332 @@
+{
+  "schema": "atlas-common-source-dendritic-retest-v1",
+  "passed": true,
+  "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+  "source_file_count": 1695,
+  "source_archive_sha256": "3314e6606b3f5855eb14a2ea49cb90e7f320c5244905a413b96e527a25d4b1b7",
+  "regenerated_model_sha256": "52a5202630b2689abda2eabfa87fd43b32ca15041266af0f2613d4b302378490",
+  "topology_sha256": "7dfea13ea385205f535b1730e051329d484a01c917f8053c83982fafcfcaf940",
+  "compiler": "rustc 1.98.1; opt-level=3, codegen-units=1, panic=abort, default CPU target; existing Zig 0.16.0 C/C++ wrappers",
+  "scope": "Full Fig.3 topology, 100 ms only. No full 45 s scientific or performance qualification.",
+  "order": [
+    "a-cython",
+    "a-rust-uncached",
+    "a-rust",
+    "b-rust",
+    "b-rust-uncached",
+    "b-cython"
+  ],
+  "samples_per_backend_and_policy": 6,
+  "primary_metric": {
+    "cython": {
+      "count": 6,
+      "maximum_seconds": 9.805828247219324,
+      "mean_seconds": 9.795122558871904,
+      "median_seconds": 9.79682573536411,
+      "minimum_seconds": 9.781444446183741,
+      "population_std_seconds": 0.009114065014706437,
+      "samples_seconds": [
+        9.79727056529373,
+        9.79638090543449,
+        9.781444446183741,
+        9.805828247219324,
+        9.80466272123158,
+        9.785148467868567
+      ]
+    },
+    "definition": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups",
+    "interpretation": "rust_faster",
+    "rust_aot": {
+      "count": 6,
+      "maximum_seconds": 7.679932715,
+      "mean_seconds": 7.630419947166668,
+      "median_seconds": 7.631756929,
+      "minimum_seconds": 7.568275659,
+      "population_std_seconds": 0.034186289799289914,
+      "samples_seconds": [
+        7.568275659,
+        7.624900109,
+        7.652006017,
+        7.618791434,
+        7.638613749,
+        7.679932715
+      ]
+    },
+    "rust_relative_runtime": 0.7790030296702382,
+    "rust_speedup_over_cython": 1.2836920549889423
+  },
+  "ablation_metric": {
+    "cython": {
+      "count": 6,
+      "maximum_seconds": 9.805828247219324,
+      "mean_seconds": 9.795122558871904,
+      "median_seconds": 9.79682573536411,
+      "minimum_seconds": 9.781444446183741,
+      "population_std_seconds": 0.009114065014706437,
+      "samples_seconds": [
+        9.79727056529373,
+        9.79638090543449,
+        9.781444446183741,
+        9.805828247219324,
+        9.80466272123158,
+        9.785148467868567
+      ]
+    },
+    "definition": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups",
+    "interpretation": "rust_not_faster",
+    "rust_aot": {
+      "count": 6,
+      "maximum_seconds": 11.651595575,
+      "mean_seconds": 11.569408614833334,
+      "median_seconds": 11.564384068,
+      "minimum_seconds": 11.513564149,
+      "population_std_seconds": 0.046521576164096586,
+      "samples_seconds": [
+        11.532668506,
+        11.513564149,
+        11.589855323,
+        11.651595575,
+        11.589818748,
+        11.538949388
+      ]
+    },
+    "rust_relative_runtime": 1.1804215345237228,
+    "rust_speedup_over_cython": 0.8471549956969233
+  },
+  "cache_speedup": 1.5152977454059584,
+  "cache_runtime_reduction": 0.34006369175181916,
+  "all_current_model_exports_equal": true,
+  "all_native_final_state_and_event_dumps_bit_exact": true,
+  "cython_vs_rust_state_arrays": 21,
+  "active_regression": {
+    "passed": true,
+    "scope": "Remote correctness only; no performance claim. Offset target subgroup, both sum directions, mutable continued-run scalar and state, plastic event updates, multiple clocks.",
+    "cached_vs_uncached_bit_exact": true,
+    "nonzero_source_and_target_spikes": true,
+    "spike_counts": {
+      "source_ticks": 105,
+      "target_ticks": 42
+    },
+    "comparisons": {
+      "uncached": {
+        "source_v": {
+          "passed": true,
+          "shape": [
+            20,
+            32
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_g": {
+          "passed": true,
+          "shape": [
+            20,
+            32
+          ],
+          "exact": false,
+          "max_abs": 1.734723475976807e-18
+        },
+        "target_v": {
+          "passed": true,
+          "shape": [
+            8,
+            16
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_g": {
+          "passed": true,
+          "shape": [
+            8,
+            16
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "weights": {
+          "passed": true,
+          "shape": [
+            80
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "trace_s": {
+          "passed": true,
+          "shape": [
+            80
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_ticks": {
+          "passed": true,
+          "shape": [
+            105
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_indices": {
+          "passed": true,
+          "shape": [
+            105
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_ticks": {
+          "passed": true,
+          "shape": [
+            42
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_indices": {
+          "passed": true,
+          "shape": [
+            42
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        }
+      },
+      "cached": {
+        "source_v": {
+          "passed": true,
+          "shape": [
+            20,
+            32
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_g": {
+          "passed": true,
+          "shape": [
+            20,
+            32
+          ],
+          "exact": false,
+          "max_abs": 1.734723475976807e-18
+        },
+        "target_v": {
+          "passed": true,
+          "shape": [
+            8,
+            16
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_g": {
+          "passed": true,
+          "shape": [
+            8,
+            16
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "weights": {
+          "passed": true,
+          "shape": [
+            80
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "trace_s": {
+          "passed": true,
+          "shape": [
+            80
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_ticks": {
+          "passed": true,
+          "shape": [
+            105
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "source_indices": {
+          "passed": true,
+          "shape": [
+            105
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_ticks": {
+          "passed": true,
+          "shape": [
+            42
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        },
+        "target_indices": {
+          "passed": true,
+          "shape": [
+            42
+          ],
+          "exact": true,
+          "max_abs": 0.0
+        }
+      }
+    }
+  },
+  "host": "hk-prod-model-ae09-94",
+  "affinity": [
+    190
+  ],
+  "threads": 1,
+  "reports": {
+    "a-cython": {
+      "report_sha256": "e975cb3042245b92e9037cb648452abc854d031ad65daf4ec3e661bc117a6367",
+      "scientific_state_sha256": "00774a99ca5af2c357d02aacb5b7566af16ecf3ad1972187a6185da496c94609",
+      "generated_source_sha256": null,
+      "policy": "production_defaults"
+    },
+    "a-rust-uncached": {
+      "report_sha256": "b2e048add03e7e496e8ee1c4905c7ed308dad28088e3c65578cd61119ce248a4",
+      "scientific_state_sha256": "c2209c422bac780d38bb9bfc6e31971f1e464416a7c0287cbfc98d2ff7bdaf47",
+      "generated_source_sha256": "6f9590711cc16f22e551590e1dd7999dea4f7b8d040dcd8f03b871a083204e73",
+      "policy": "endpoint_exp_cache_disabled"
+    },
+    "a-rust": {
+      "report_sha256": "5f5d8b60dee48ab8089db0ae98fd34b3a25c41bbe9323edd4ab7912683b48184",
+      "scientific_state_sha256": "c2209c422bac780d38bb9bfc6e31971f1e464416a7c0287cbfc98d2ff7bdaf47",
+      "generated_source_sha256": "6f1d1283e5931a111f005cf5741159fa0d55b81d6f3cfe70c648c3b1bfde1070",
+      "policy": "production_defaults"
+    },
+    "b-rust": {
+      "report_sha256": "4704023bfd5b39c659617e596f6607422c30ea230eb5f81ca5e93a7af3b14b48",
+      "scientific_state_sha256": "c2209c422bac780d38bb9bfc6e31971f1e464416a7c0287cbfc98d2ff7bdaf47",
+      "generated_source_sha256": "6f1d1283e5931a111f005cf5741159fa0d55b81d6f3cfe70c648c3b1bfde1070",
+      "policy": "production_defaults"
+    },
+    "b-rust-uncached": {
+      "report_sha256": "0eb8e3aa278447bc5ef20531603f314be8937e588cabb8e29acd53ec472c1e2e",
+      "scientific_state_sha256": "c2209c422bac780d38bb9bfc6e31971f1e464416a7c0287cbfc98d2ff7bdaf47",
+      "generated_source_sha256": "6f9590711cc16f22e551590e1dd7999dea4f7b8d040dcd8f03b871a083204e73",
+      "policy": "endpoint_exp_cache_disabled"
+    },
+    "b-cython": {
+      "report_sha256": "404def22484be92d40833a85b58327c8836ae0919d97afb65dc299f4fa90d8c7",
+      "scientific_state_sha256": "00774a99ca5af2c357d02aacb5b7566af16ecf3ad1972187a6185da496c94609",
+      "generated_source_sha256": null,
+      "policy": "production_defaults"
+    }
+  },
+  "aggregates": {
+    "aggregate.json": "9ae5c78173803d0b3d39555ed21d4b043257d0858f106649f152898611dadee2",
+    "aggregate-uncached.json": "6f01bfe9aa4dbaacaedcd72ab08791b49372745144f4b637ed01779b1c5ec34c"
+  }
+}

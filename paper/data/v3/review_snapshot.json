@@ -1,0 +1,3360 @@
+{
+  "schema": "brian2-atlas-preprint-review-v3",
+  "generated_utc": "2026-10-06T16:20:31.267509+00:00",
+  "branch": "next-dev",
+  "base_commit": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+  "source_scope": [
+    "brian2/codegen",
+    "brian2/core/functions.py",
+    "brian2/equations/unitcheck.py",
+    "brian2-rust/src",
+    "brian2-rust/python",
+    "brian2-rust/tests",
+    "brian2-rust/Cargo.toml",
+    "brian2-rust/Cargo.lock",
+    "brian2-rust/build.rs"
+  ],
+  "status": [
+    " M brian2-rust/Cargo.toml",
+    " M brian2-rust/python/brian2_rust/__init__.py",
+    " M brian2-rust/python/brian2_rust/device.py",
+    " M brian2-rust/python/brian2_rust/distributed.py",
+    " M brian2-rust/python/brian2_rust/mpi_codegen.py",
+    " M brian2-rust/python/brian2_rust/mpi_partition.py",
+    " M brian2-rust/python/brian2_rust/mpi_queue_compact.py",
+    " M brian2-rust/python/brian2_rust/slot_codegen.py",
+    " M brian2-rust/src/lib.rs",
+    " M brian2-rust/src/model.rs",
+    " M brian2-rust/tests/test_execution_plan.py",
+    " M brian2-rust/tests/test_mpi.py",
+    " M brian2-rust/tests/test_mpi_queue_compact.py",
+    " M brian2-rust/tests/test_mpi_teleport_launch.py",
+    " M brian2/codegen/codeobject.py",
+    " M brian2/codegen/generators/base.py",
+    " M brian2/codegen/generators/cpp_generator.py",
+    " M brian2/codegen/generators/cython_generator.py",
+    " M brian2/codegen/generators/numpy_generator.py",
+    " M brian2/codegen/runtime/cython_rt/templates/synapses.pyx",
+    " M brian2/core/functions.py",
+    " M brian2/equations/unitcheck.py",
+    "?? brian2-rust/python/brian2_rust/mpi_checkpoint.py",
+    "?? brian2-rust/python/brian2_rust/training.py",
+    "?? brian2-rust/python/brian2_rust/training_brian.py",
+    "?? brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+    "?? brian2-rust/python/brian2_rust/training_brian_regular.py",
+    "?? brian2-rust/python/brian2_rust/training_clock.metal",
+    "?? brian2-rust/python/brian2_rust/training_cuda.cu",
+    "?? brian2-rust/python/brian2_rust/training_cuda.py",
+    "?? brian2-rust/python/brian2_rust/training_dynamic.metal",
+    "?? brian2-rust/python/brian2_rust/training_dynamic.py",
+    "?? brian2-rust/python/brian2_rust/training_dynamic_mpi.metal",
+    "?? brian2-rust/python/brian2_rust/training_effects.py",
+    "?? brian2-rust/python/brian2_rust/training_equations.py",
+    "?? brian2-rust/python/brian2_rust/training_functions.py",
+    "?? brian2-rust/python/brian2_rust/training_graph.py",
+    "?? brian2-rust/python/brian2_rust/training_inputs.py",
+    "?? brian2-rust/python/brian2_rust/training_metal.m",
+    "?? brian2-rust/python/brian2_rust/training_metal.metal",
+    "?? brian2-rust/python/brian2_rust/training_metal.py",
+    "?? brian2-rust/python/brian2_rust/training_metal_mpi.metal",
+    "?? brian2-rust/python/brian2_rust/training_mpi.c",
+    "?? brian2-rust/python/brian2_rust/training_mpi.py",
+    "?? brian2-rust/python/brian2_rust/training_poisson.metal",
+    "?? brian2-rust/python/brian2_rust/training_queue.py",
+    "?? brian2-rust/python/brian2_rust/training_state.metal",
+    "?? brian2-rust/src/recording.rs",
+    "?? brian2-rust/src/train_main.rs",
+    "?? brian2-rust/src/training.rs",
+    "?? brian2-rust/src/training/",
+    "?? brian2-rust/tests/clock_itinerary_probe.rs",
+    "?? brian2-rust/tests/contextual_dendritic_fig3_export_compare_selftest.py",
+    "?? brian2-rust/tests/poisson_core_probe.rs",
+    "?? brian2-rust/tests/poisson_metal_probe.m",
+    "?? brian2-rust/tests/precise_clock_arithmetic.cpp",
+    "?? brian2-rust/tests/test_contextual_dendritic_fig5_symmetric_deltas.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_fig6_recall_pairing.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_fig8_ensemble_recovery.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_fig8_ensemble_stage.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_frozen_rng.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_octave_transform.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s2_import_large_imprints.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s2_large_recall_gate.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s2_recall_gate.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s3_campaign_sidecars.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s3_order_capture.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s3_recovered_ensemble_compare.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s3_recovery_schedule.py",
+    "?? brian2-rust/tests/test_contextual_dendritic_s3_sidecar_compare.py",
+    "?? brian2-rust/tests/test_contextual_fig8_before_imprint_complete_ensemble_gate.py",
+    "?? brian2-rust/tests/test_contextual_fig8_combined_cue_complete_ensemble_gate.py",
+    "?? brian2-rust/tests/test_mam_native_v1_140_selector.py",
+    "?? brian2-rust/tests/test_mam_v1_140_identity_probe.py",
+    "?? brian2-rust/tests/test_mam_v1_140_launch.py",
+    "?? brian2-rust/tests/test_mam_v1_140_raw_extract.py",
+    "?? brian2-rust/tests/test_mam_v1_140_selector.py",
+    "?? brian2-rust/tests/test_mam_v1_140_spectrum.py",
+    "?? brian2-rust/tests/test_modal_training_run_control.py",
+    "?? brian2-rust/tests/test_mpi_training.py",
+    "?? brian2-rust/tests/test_native_training.py",
+    "?? brian2-rust/tests/test_native_training_cuda.py",
+    "?? brian2-rust/tests/test_native_training_equations.py",
+    "?? brian2-rust/tests/test_native_training_gpu_mpi.py",
+    "?? brian2-rust/tests/test_native_training_graph.py",
+    "?? brian2-rust/tests/test_native_training_mpi.py",
+    "?? brian2-rust/tests/test_native_training_multistate.py",
+    "?? brian2-rust/tests/test_native_training_multistate_gpu.py",
+    "?? brian2-rust/tests/test_training_async_actions.py",
+    "?? brian2-rust/tests/test_training_batch_external_inputs.py",
+    "?? brian2-rust/tests/test_training_boolean_thresholds.py",
+    "?? brian2-rust/tests/test_training_brian.py",
+    "?? brian2-rust/tests/test_training_brian_dynamic.py",
+    "?? brian2-rust/tests/test_training_brian_integrators.py",
+    "?? brian2-rust/tests/test_training_brian_multistate.py",
+    "?? brian2-rust/tests/test_training_cached_noise.py",
+    "?? brian2-rust/tests/test_training_cached_noise_edges.py",
+    "?? brian2-rust/tests/test_training_cached_weak_sde.py",
+    "?? brian2-rust/tests/test_training_callback_effect_bounds.py",
+    "?? brian2-rust/tests/test_training_callback_effect_vjps.py",
+    "?? brian2-rust/tests/test_training_callback_effects.py",
+    "?? brian2-rust/tests/test_training_clock_checkpoint.py",
+    "?? brian2-rust/tests/test_training_clock_itinerary.py",
+    "?? brian2-rust/tests/test_training_constant_links.py",
+    "?? brian2-rust/tests/test_training_cross_linked.py",
+    "?? brian2-rust/tests/test_training_crosshost_evidence.py",
+    "?? brian2-rust/tests/test_training_delay_batch.py",
+    "?? brian2-rust/tests/test_training_delay_update.py",
+    "?? brian2-rust/tests/test_training_delays.py",
+    "?? brian2-rust/tests/test_training_discrete_external_inputs.py",
+    "?? brian2-rust/tests/test_training_discrete_frontend.py",
+    "?? brian2-rust/tests/test_training_division.py",
+    "?? brian2-rust/tests/test_training_dynamic.py",
+    "?? brian2-rust/tests/test_training_dynamic_clocks.py",
+    "?? brian2-rust/tests/test_training_dynamic_gpu.py",
+    "?? brian2-rust/tests/test_training_dynamic_gpu_mpi.py",
+    "?? brian2-rust/tests/test_training_dynamic_refractory.py",
+    "?? brian2-rust/tests/test_training_dynamic_static_sde.py",
+    "?? brian2-rust/tests/test_training_dynamic_thresholds.py",
+    "?? brian2-rust/tests/test_training_error_reports.py",
+    "?? brian2-rust/tests/test_training_event_delay.py",
+    "?? brian2-rust/tests/test_training_event_delay_gradients.py",
+    "?? brian2-rust/tests/test_training_event_delay_integrations.py",
+    "?? brian2-rust/tests/test_training_event_noise.py",
+    "?? brian2-rust/tests/test_training_external_neuron_links.py",
+    "?? brian2-rust/tests/test_training_external_selector_roots.py",
+    "?? brian2-rust/tests/test_training_external_state_inputs.py",
+    "?? brian2-rust/tests/test_training_heterogeneous.py",
+    "?? brian2-rust/tests/test_training_implicit_refractory.py",
+    "?? brian2-rust/tests/test_training_indexed_external_inputs.py",
+    "?? brian2-rust/tests/test_training_indirect.py",
+    "?? brian2-rust/tests/test_training_indirect_frontend.py",
+    "?? brian2-rust/tests/test_training_indirect_gpu.py",
+    "?? brian2-rust/tests/test_training_indirect_migration.py",
+    "?? brian2-rust/tests/test_training_integer_bitwise.py",
+    "?? brian2-rust/tests/test_training_integer_ir.py",
+    "?? brian2-rust/tests/test_training_integrator_callback_effects.py",
+    "?? brian2-rust/tests/test_training_keyword_defaults.py",
+    "?? brian2-rust/tests/test_training_linked.py",
+    "?? brian2-rust/tests/test_training_math_sde.py",
+    "?? brian2-rust/tests/test_training_migration.py",
+    "?? brian2-rust/tests/test_training_multiclock_frontend.py",
+    "?? brian2-rust/tests/test_training_multiclock_synapses.py",
+    "?? brian2-rust/tests/test_training_multiclock_transitions.py",
+    "?? brian2-rust/tests/test_training_nested_index_codegen.py",
+    "?? brian2-rust/tests/test_training_nested_parameter_frontend.py",
+    "?? brian2-rust/tests/test_training_nested_synapse.py",
+    "?? brian2-rust/tests/test_training_nested_synapse_vjp.py",
+    "?? brian2-rust/tests/test_training_neuron_noise.py",
+    "?? brian2-rust/tests/test_training_parameter_gather.py",
+    "?? brian2-rust/tests/test_training_parameter_gather_frontend.py",
+    "?? brian2-rust/tests/test_training_pathway_storage.py",
+    "?? brian2-rust/tests/test_training_poisson_brian.py",
+    "?? brian2-rust/tests/test_training_poisson_checkpoint_gpu.py",
+    "?? brian2-rust/tests/test_training_poisson_core.py",
+    "?? brian2-rust/tests/test_training_poisson_event_replay.py",
+    "?? brian2-rust/tests/test_training_poisson_gpu.py",
+    "?? brian2-rust/tests/test_training_poisson_gpu_boundary.py",
+    "?? brian2-rust/tests/test_training_poisson_gpu_vjp.py",
+    "?? brian2-rust/tests/test_training_poisson_retirement.py",
+    "?? brian2-rust/tests/test_training_poisson_shared.py",
+    "?? brian2-rust/tests/test_training_poisson_shared_gpu.py",
+    "?? brian2-rust/tests/test_training_poisson_ssa.py",
+    "?? brian2-rust/tests/test_training_poisson_static.py",
+    "?? brian2-rust/tests/test_training_poisson_static_gpu.py",
+    "?? brian2-rust/tests/test_training_poisson_zero.py",
+    "?? brian2-rust/tests/test_training_poisson_zero_vjp.py",
+    "?? brian2-rust/tests/test_training_positional_only_callbacks.py",
+    "?? brian2-rust/tests/test_training_precise_clock.py",
+    "?? brian2-rust/tests/test_training_private_arrays.py",
+    "?? brian2-rust/tests/test_training_pure_branches.py",
+    "?? brian2-rust/tests/test_training_pure_functions.py",
+    "?? brian2-rust/tests/test_training_pure_loops.py",
+    "?? brian2-rust/tests/test_training_pure_real_control.py",
+    "?? brian2-rust/tests/test_training_pure_returns.py",
+    "?? brian2-rust/tests/test_training_pure_statements.py",
+    "?? brian2-rust/tests/test_training_random_refractory.py",
+    "?? brian2-rust/tests/test_training_refractory.py",
+    "?? brian2-rust/tests/test_training_regular.py",
+    "?? brian2-rust/tests/test_training_regular_edges.py",
+    "?? brian2-rust/tests/test_training_rk_refractory.py",
+    "?? brian2-rust/tests/test_training_runtime_refractory.py",
+    "?? brian2-rust/tests/test_training_scalar_stochastic.py",
+    "?? brian2-rust/tests/test_training_spike_buffers.py",
+    "?? brian2-rust/tests/test_training_standard_math.py",
+    "?? brian2-rust/tests/test_training_state_refractory.py",
+    "?? brian2-rust/tests/test_training_static_control_sde.py",
+    "?? brian2-rust/tests/test_training_static_timed_inputs.py",
+    "?? brian2-rust/tests/test_training_static_vjp_activity.py",
+    "?? brian2-rust/tests/test_training_stochastic.py",
+    "?? brian2-rust/tests/test_training_stochastic_refractory_combined.py",
+    "?? brian2-rust/tests/test_training_stochastic_refractory_vjp.py",
+    "?? brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py",
+    "?? brian2-rust/tests/test_training_subgroup.py",
+    "?? brian2-rust/tests/test_training_subgroup_edges.py",
+    "?? brian2-rust/tests/test_training_subgroup_vjp.py",
+    "?? brian2-rust/tests/test_training_summed.py",
+    "?? brian2-rust/tests/test_training_synaptic_callback_effects.py",
+    "?? brian2-rust/tests/test_training_synaptic_draws.py",
+    "?? brian2-rust/tests/test_training_synaptic_endpoints.py",
+    "?? brian2-rust/tests/test_training_time.py",
+    "?? brian2-rust/tests/test_training_timed_inputs.py",
+    "?? brian2-rust/tests/test_training_uniform.py",
+    "?? brian2-rust/tests/test_training_vjp_activity.py",
+    "?? brian2-rust/tests/test_training_warm_functions.py",
+    "?? brian2-rust/tests/test_training_wrapper_bodies.py",
+    "?? brian2/codegen/indices.py"
+  ],
+  "tracked_diff_sha256": "937ac602c0b1ff9473ab23cb14191a0789b931bcbcf195feaeb8bb3d11447ff2",
+  "source_files": [
+    {
+      "path": "brian2-rust/Cargo.lock",
+      "bytes": 7351,
+      "sha256": "50bafe0491cc0cd280d527eb116e1c112d433ed419b555f66378c76836827507"
+    },
+    {
+      "path": "brian2-rust/Cargo.toml",
+      "bytes": 514,
+      "sha256": "bf39a76675acfa7289347da85707dc5aec93a556d0f36db8ec047178b70df2de"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/__init__.py",
+      "bytes": 4145,
+      "sha256": "fb55e8473a0b0f70d9bccee8d621680d4d6b896e411c24a864db5f5ea5e91a59"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/artifact.py",
+      "bytes": 5692,
+      "sha256": "3211de97540b0e38a65ba750a7f4e70c98231f9e8bc397db68af202a862421bc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/binary_topology.py",
+      "bytes": 3305,
+      "sha256": "fabf37122bccc4fd3044177385b8ebfa9cec30183ea264591c6728cf0d0390be"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/browser_host.rs",
+      "bytes": 3139,
+      "sha256": "78044e2604adeb8f688ab103d29a270bd60368ea2e13eb8b77c207bf8d7d3849"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/capabilities.py",
+      "bytes": 30995,
+      "sha256": "640fcbc473ed6e6ad30882741fba819f2d55a8d9c8625cd1b1daeeb1a4ecd256"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/codegen_sums.py",
+      "bytes": 584,
+      "sha256": "bb49ffcb6f608935a9104f346f2b2222151c572dc8f14d8ad29f2c1216614433"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda.py",
+      "bytes": 23871,
+      "sha256": "7e128bb08b531cc019d12999c3c7b25276dac27ff6168eac105ab04f6b5c4521"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda_chunks.py",
+      "bytes": 4174,
+      "sha256": "69a1c600435737496ac67dd3a988cc95fcf6bd2d7add8b561c8d94a10db39d6f"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda_codegen.py",
+      "bytes": 4814,
+      "sha256": "e9d85cb9bb0b31e8802615d0bc829002590946fefe766a331aa57e01bc5c926e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda_compiler.py",
+      "bytes": 1298,
+      "sha256": "364392beba3b41b27153179e6797b440033660059d18cea84470a9f4c5be88ce"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda_cooperative.py",
+      "bytes": 10922,
+      "sha256": "e88e8876cd24b63b15e6fdfe3efecb7da4c6cd462f2055796456c0708def85c2"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/cuda_graphs.py",
+      "bytes": 6535,
+      "sha256": "b2526c7c8847e5abd73ef691d872ab7c1827a6495b4bb520f8499b1f268757c9"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/device.py",
+      "bytes": 138555,
+      "sha256": "232ee6ca4679193389afd7c0d8e17a6f5be6d8ccda34ddca7b247f19c0db4382"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/distributed.py",
+      "bytes": 33633,
+      "sha256": "cc91931b1c86017d226a9a46b7cec84aeb8a51804730bae2a318509298dee289"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/encoded_array.py",
+      "bytes": 9991,
+      "sha256": "fe4f2affe471b58bfbf0259f1635f8d7a2a442133cd4c9dae01913c594bf0391"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/export.py",
+      "bytes": 136800,
+      "sha256": "5670b39a3372f2a056bf95972e646007bbb2462e40e54fbd145859d5202b77fc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_autotune.py",
+      "bytes": 7995,
+      "sha256": "7d95a8b50af922a131d816fdda07954380f7893b35278d998f1287fed8d84f77"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_buffer_transfer.py",
+      "bytes": 10778,
+      "sha256": "a85ca2afa9b492da6473ab92d0f4708e70f8a9d88d27cb784c89545ed0f7b6c5"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_compilation.py",
+      "bytes": 3623,
+      "sha256": "a673657385623b22e96d0f9e7d2de966e74f0050b3f792a2ca678318ad5a53a7"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_dispatch_fusion.py",
+      "bytes": 6185,
+      "sha256": "f5e4ae3885e3b3ce9a25647e1c4853897b7e6af29a8ba23d4f2f951c0199b7c6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_functions.py",
+      "bytes": 3609,
+      "sha256": "84094c005cc981b5da04b26dd0048bce084fc99c2b4afe1e4ce053ef4dbf38dd"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_initialization.py",
+      "bytes": 4433,
+      "sha256": "db8615685488a3bd8dda05faf8a39cb8d5442713d96497140527cafc89e5d2ef"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_links.py",
+      "bytes": 7176,
+      "sha256": "dea5a933604478d4137ca1ce06f90e57264fcc020e14a4f6cebfe949cbb62cbe"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_prefix_pending.py",
+      "bytes": 2501,
+      "sha256": "316864ff163e8e2c6bfe3459e3e3534c45f400a781d2c2d43ab12490713f7370"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_readback.py",
+      "bytes": 7136,
+      "sha256": "f0c8af691f1c639bc732b218b96c4f8d6185a5b3b7310f4b6f87bce91a5b72c3"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_schedule.py",
+      "bytes": 4144,
+      "sha256": "ed0c35f046c7a50fe48d321e15762759925d096a11becc73960a3cd4213b81f3"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_synapse_fusion.py",
+      "bytes": 4015,
+      "sha256": "6b0de237d76ed8f7528d2e24f3f9f411c57dc3e4d6f7187bd3f88e1143524287"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_synapse_prefix.py",
+      "bytes": 2498,
+      "sha256": "0330e5eccaef491f2972560c8927e6432f0b44f28d13d3cbf784e09ff11d1434"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_target_sparse.py",
+      "bytes": 1851,
+      "sha256": "e32de8abddecfc16ea7e673010603932038fb162af79f4795251e4dd0b8c4636"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_tuning_cache.py",
+      "bytes": 7650,
+      "sha256": "63e88132646f0437d9fea715be8865164fc9d79f6fd54cfb9dda40802fdaf874"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_types.py",
+      "bytes": 6730,
+      "sha256": "690962b1448218519405e75bc932f0bd3c6e4fe742e896203e0e1d9e53742227"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_validation.py",
+      "bytes": 3820,
+      "sha256": "0784c1d67b91dd94300f91ac026118c1ad839406cb777a374658efad91bc224c"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/gpu_workgroup.py",
+      "bytes": 12293,
+      "sha256": "4a5ce12201689de5609f263da090ce0e5ca828bcf47f029118f5485278b50a98"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal.py",
+      "bytes": 58049,
+      "sha256": "a2d300b326b8d6703fed09d3dd8eacefeb6c5db8f06f473401209babc50a9b83"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_binomial.py",
+      "bytes": 3352,
+      "sha256": "2103ca7a17c29f2e8cd8c1edd813f4e025b4f5e4b48c1800f9bdde1b8b582e80"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_buffers.py",
+      "bytes": 6337,
+      "sha256": "d711027a81b954a16245f15cc645a8f861492bd3dd64069e34d9a9779121a194"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_dag.py",
+      "bytes": 41266,
+      "sha256": "5c46a8d3ec058c4d38f89e03317e2b87b3a102e32db7857924d3a5efbd3e6127"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_delays.py",
+      "bytes": 11477,
+      "sha256": "3bfbcb078254e7a3091f064532d87fd935e25cd3469a84ae5c3b778f3519361e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_event_layout.py",
+      "bytes": 2856,
+      "sha256": "24439569b5c18db36f03db548c4e2802a63848258c29902e933d4c334a9f190b"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_events.py",
+      "bytes": 3349,
+      "sha256": "8c764fb0e63456fe01d36fbe0fe41b69a76e2619d6f524d4b6fcddeb5a41b9fc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_monitors.py",
+      "bytes": 4590,
+      "sha256": "9055ddfb624b394472222fa1a054899b101260fc84fc90215db5ee40f7208bcf"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_poisson.py",
+      "bytes": 3191,
+      "sha256": "be5d6bb9a8f98884ec48ea788f9eaf0000f410287838d77f7951b2c9ae31b9f9"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_random.py",
+      "bytes": 3296,
+      "sha256": "a7b0c05bf67037b1ee6f7ef565db9e702e6b681e43e80727d9f4df6bc6bd6e08"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_runtime/bridge.m",
+      "bytes": 24310,
+      "sha256": "2a4ce162618c9f17816e7f2d118d4ff05f43dac85974ef32e53391580b850953"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_runtime/clocks.h",
+      "bytes": 755,
+      "sha256": "d785d1a8b868fbf4ab5de1ff89826b1d07bde4f4d5b2253fe02cf4d5242d2028"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_synapses.py",
+      "bytes": 24234,
+      "sha256": "2c9251c5fecea71fb6eea4f31ea6d51e28bcb48d17b31ab3bc0b17bdb5dc2ea6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/metal_timed_array.py",
+      "bytes": 2624,
+      "sha256": "65fc8a03bbed14d71728efd41b705f0a5de8743330a8639e12e1a039c34b7a84"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/monitor_observables.py",
+      "bytes": 8312,
+      "sha256": "d9ac2cb66aefe23d3d7fb6fbad0e7876239923c581ecfa34f2a1995ef94de005"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_additive.py",
+      "bytes": 2225,
+      "sha256": "a7e675349de16ab3d5e40b095e9d88c081f8108c1ee498fd5eb0c735794bb17e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_checkpoint.py",
+      "bytes": 2830,
+      "sha256": "d4d1ba39e05585b23bf7af7f07ca09633f07a2d1cdaf725076cbcf849f4c5a3a"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_codegen.py",
+      "bytes": 26440,
+      "sha256": "dbcaeeb9e0c8f1bfda6f18de46be1616671374d65e997187ce52d8411aa1c343"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_compact.py",
+      "bytes": 25366,
+      "sha256": "eb5610f29ac5eacad32f68158fd8fd2b47d1f016efb7cbc03ad7c72341ebdae6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_gpu.py",
+      "bytes": 9581,
+      "sha256": "f37d6d4895919d6f0c73dc59148e5cd73ae4d3f4243628b7781d372313f1b08a"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_partition.py",
+      "bytes": 16237,
+      "sha256": "dc9040c897a59469a16d130ab622f26cbf6a4db04665cbbf611e2eae1fc82ab5"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_population_compact.py",
+      "bytes": 3976,
+      "sha256": "23efbd83019b352f1edb824b1db86a48a5669a4c73786f3cd93228f7e49441ff"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_prebuild.py",
+      "bytes": 3946,
+      "sha256": "fec79408a3786f9a0e5f2788caee201fa0cb35d6e7fcc1edad4132b7a2e4e6c6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_procedural.py",
+      "bytes": 2631,
+      "sha256": "69e58a1c77e94aa21a7cd76d8f3834ba7babb2c9eb6bb6b2ce12317f3763b2b2"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_queue_compact.py",
+      "bytes": 3982,
+      "sha256": "98b49d30611d4d9a50a6e55b045595d7bbb20f8fe0796cf453de0beeed5b81a6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_report_compact.py",
+      "bytes": 2986,
+      "sha256": "2d3ae246d4bac31f5f0c95e479adbbff8ec2457799a000b60494489da95e0da9"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/additive.rs",
+      "bytes": 3517,
+      "sha256": "04dcba3f1f9c90cb13a59e8a61e8b5e509b9aa636521f1d24ea236767b076c54"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/bridge.c",
+      "bytes": 12069,
+      "sha256": "c987199534c1fd60fe6f36a89c540a46492e12faa7fb174728cbc203b0c6b569"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/gpu.rs",
+      "bytes": 4892,
+      "sha256": "045461eb7e958414450029f5561e8fc8778df80d301e2d05f46e240621020383"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/gpu_cuda.cpp",
+      "bytes": 2688,
+      "sha256": "675fccde5b69e9043f98b7c751db3d9dbd85130e4a94d0f626c81c77eb07e8ba"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/prebuild.rs",
+      "bytes": 7133,
+      "sha256": "9fdabcb086c3d83e2291be724a8ea45d971d15e158e83e3133b4b6b94eebcd0a"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/sha256.rs",
+      "bytes": 3179,
+      "sha256": "44e4595b52d158a0b238c72a8f5fec1375b7509967b70b534fe607b3d83403ae"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/spike_spool.rs",
+      "bytes": 8528,
+      "sha256": "19d62ae06bd55d5255ac04eb5fa8ab3b6a40b314062617b4eca75fe3b4ff6dcc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_runtime/topology.rs",
+      "bytes": 8432,
+      "sha256": "63680e579e97e296f5763933a86d2c47a6e7203c807f55c7acf479ab457a3849"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_spike_history.py",
+      "bytes": 5590,
+      "sha256": "5c67dd3e3fdef67425e4f56b7a2b4de982e814648e257f91cd728464b6d09796"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_spike_output.py",
+      "bytes": 2736,
+      "sha256": "9480c1688c6bd2111c47a7d9c79ad2d7df3f1599a29bde46d9933a13712a3dcf"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/mpi_spike_spool.py",
+      "bytes": 5425,
+      "sha256": "251c2a2530c10111b7b71d12f0dd9d085accdd6568d5d3287ea21c8acd6eb351"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/multi_area_analysis.py",
+      "bytes": 5772,
+      "sha256": "32d372a7a44f92da9cd4b262245e0d5f95df133733ef72c4508dbc312ad57e25"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/multi_area_semantics.py",
+      "bytes": 1918,
+      "sha256": "8cf87408e686474bf151f31ebadb4cf24dea03ecf15173d9638dc62bec6a9757"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/native.py",
+      "bytes": 296406,
+      "sha256": "7a36c2695aacf132d76649af973df2999c6c29c484b160140ccf677b12180fbc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/plan.py",
+      "bytes": 20893,
+      "sha256": "21dd41e218fdc5abe5d39959e369fe75bb99586071d1b367a3420a3ef0dfaefc"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/planner.py",
+      "bytes": 38314,
+      "sha256": "04a5c08583d45993d82a31cdd5ea0f99943d955bd2b9ccb0c51f6de8c06fd869"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/protocol.py",
+      "bytes": 4866,
+      "sha256": "2a19d29f874407c7b243db60fa2aa66eceada64b6d5f41d780a878a38a2cb8f4"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/resource_limits.py",
+      "bytes": 1363,
+      "sha256": "c50ddacd9c8ea2ca228127f3ae83e5ff1acf9aa52073c579de1fff657058652e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/results.py",
+      "bytes": 27039,
+      "sha256": "b72ba88dd0c9fb0897b1f27b99ecdaba4ca4841fde05ac999700daf880277587"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/schedule.py",
+      "bytes": 16283,
+      "sha256": "5108a706ee8aff740b025b10039d9bcf35c7a4340125ce6b14c0048eb1084c13"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/slot_codegen.py",
+      "bytes": 43387,
+      "sha256": "0ccaeed4e7420f38d9034afb03594686696da36ca55365242f8c53a111983e8a"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/spec.py",
+      "bytes": 48453,
+      "sha256": "f8dbea22a30852a1f646735e5528fccf70f0c9e61226a9192e21746c3d921d4f"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/streaming.py",
+      "bytes": 3551,
+      "sha256": "09edfe76a364e2df0b3cec12b90625d3c452b96a1a8697fc0416ff437bf6259d"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/topology.py",
+      "bytes": 661,
+      "sha256": "29d1c01bb58bb7fe6d8af2eaccab20a350d0c64e1d32f9383a9975986ed413cd"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training.py",
+      "bytes": 33931,
+      "sha256": "c15fb841883757eb103e46418932e0336b8f5113a10c9ca99915f334aad1dbfd"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_brian.py",
+      "bytes": 64535,
+      "sha256": "cfa77239adb3a7f075b41c7537ff5bf56adccd1c355ca375ca9dcc421936e790"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+      "bytes": 121185,
+      "sha256": "75ec3578d0b66b98594841ba36a4fafcc8524809af41447aa342d609a22cd267"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_brian_regular.py",
+      "bytes": 5365,
+      "sha256": "783ededfe93279225631b16a3af921b5d085d5fd5e734ed25b26787a41bce3d6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_clock.metal",
+      "bytes": 2080,
+      "sha256": "131c9c805dcd825f15f8f59b3deae78e027fcb0ec5f0c039ce85f647ed258eb7"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_cuda.cu",
+      "bytes": 16655,
+      "sha256": "033f4078ef8a84cee355fc4606881be1db5e08f6bf4913b1046bfc92483e9260"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_cuda.py",
+      "bytes": 3129,
+      "sha256": "4f3ae0cb92f32d35d157ab7b5469d3e8ffb42cd3304e44241f39fcb8b5305d75"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_dynamic.metal",
+      "bytes": 28866,
+      "sha256": "bc03d0eff09ab8a4dee8171327ab07d2ee9ea8022e3cb6a79eebdb7a3ef32237"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_dynamic.py",
+      "bytes": 6187,
+      "sha256": "523fadbaa760b4d2d2d46bea24e7e353ca17e4ad76a06b5ac14d854055474791"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_dynamic_mpi.metal",
+      "bytes": 6417,
+      "sha256": "521e8b0d59108b96a86a8196b6d8568bda149b10b0081809d2a49b28204d7f14"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_effects.py",
+      "bytes": 21000,
+      "sha256": "824500237b5f0a754b21de53b2df932df7188bfb7f18ad37ac526c49b29084f1"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_equations.py",
+      "bytes": 34015,
+      "sha256": "cfdb5d5e61ec5562744d3ef1a92c1a8b8e00fa6379fc90149b5bb782d879b79e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_functions.py",
+      "bytes": 37665,
+      "sha256": "aaecb027751d50f1f942a853e35f6bdabfbda59d940d093ce727292ef8fb3088"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_graph.py",
+      "bytes": 4532,
+      "sha256": "6dbc4548ae4b9f6fd9120c385b7ec291e60c105737b079c8f4f9531a8b3f04fa"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_inputs.py",
+      "bytes": 5723,
+      "sha256": "9e78b4950231ea0637e83aa773dc1078226b971851b4c1a5dc4d244a41d86d75"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_metal.m",
+      "bytes": 18578,
+      "sha256": "d429f0ffa1d696c0bf32eb9eb009920c25687683c9b5e7b73f91001fef87ef8a"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_metal.metal",
+      "bytes": 13260,
+      "sha256": "dcefab5dbee0486766136e801e11b9094f7c1194c8e8c08d16a43135663747b6"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_metal.py",
+      "bytes": 1118,
+      "sha256": "c44724a9bea3359823474843596437f0d71b08b866669860ab31ffe90a517d16"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_metal_mpi.metal",
+      "bytes": 5257,
+      "sha256": "893d50856a331ae5a53f06ce297fee6183df060913c8a622e17437eee876204e"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_mpi.c",
+      "bytes": 1733,
+      "sha256": "41071a545b8ee52be5160634fb7934f0adc4f9648421dd948bae559e9c1f7372"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_mpi.py",
+      "bytes": 720,
+      "sha256": "a0cab46a5bc13b261346c5bc75a239b34716c40a310e9101533eed4624c1e2c7"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_poisson.metal",
+      "bytes": 4376,
+      "sha256": "4fd6e3b0d5824085e23958d1abc18ce26c74b5442f3228f8be593538a0a867b8"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_queue.py",
+      "bytes": 3513,
+      "sha256": "e1ad1060d997e4218a2611fc834c7341890ce22ca5a043aa7515927cf4c17ad0"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/training_state.metal",
+      "bytes": 13477,
+      "sha256": "6ceda45b2df977e218c0ef400d83171627705745c927d9da4ff67e0f866c2c66"
+    },
+    {
+      "path": "brian2-rust/python/brian2_rust/wasm.py",
+      "bytes": 2708,
+      "sha256": "2a62c6e2d78733e084be79fc0483841778f71651ec14d7566aa2ed52881a04a9"
+    },
+    {
+      "path": "brian2-rust/src/bin/pd14.rs",
+      "bytes": 18209,
+      "sha256": "530b2413b56790131d61a0b621c1c89eb2acb95ff054b56a84eb4d32ecf80c77"
+    },
+    {
+      "path": "brian2-rust/src/binary_topology.rs",
+      "bytes": 4021,
+      "sha256": "0ec5b8c87ba9a1a28242788aa17f418b8173fbf97f95ec4442dec33d4efe64f8"
+    },
+    {
+      "path": "brian2-rust/src/canonical.rs",
+      "bytes": 3625,
+      "sha256": "e8b0507b8cabcb5cebacfac5ee223d728a0ad1686f5562f7bdc1fd0297ca7826"
+    },
+    {
+      "path": "brian2-rust/src/compact_input.rs",
+      "bytes": 15552,
+      "sha256": "c677ebffca901123f59768b999e4345de74f54823ff1431d6db010511920bce8"
+    },
+    {
+      "path": "brian2-rust/src/executor.rs",
+      "bytes": 237617,
+      "sha256": "cfd8cea9ff923466cddaaaa57860a1ac15582b13d8126f5ac134ba16c03380de"
+    },
+    {
+      "path": "brian2-rust/src/gpu_initialization.rs",
+      "bytes": 4071,
+      "sha256": "b8c30034db5c1cdc2850b821a6bdf723d870b7d033f1c4514a8a4347a45072aa"
+    },
+    {
+      "path": "brian2-rust/src/large_topology.rs",
+      "bytes": 14481,
+      "sha256": "9c2af538e3915f6cd8cf6a3d2371e77a046aa5c047acb761b562b95cd0f12ce3"
+    },
+    {
+      "path": "brian2-rust/src/lib.rs",
+      "bytes": 362,
+      "sha256": "61abbe11ef9262298568298847c29e06fa6d3bd4c9c4760817af9b96a589a787"
+    },
+    {
+      "path": "brian2-rust/src/main.rs",
+      "bytes": 204,
+      "sha256": "1bf371044927117e12e7e3a5dd7b594e6f71104332fe9d4aaa0a3ba854674c4e"
+    },
+    {
+      "path": "brian2-rust/src/model.rs",
+      "bytes": 192090,
+      "sha256": "314c996a36a04784fb470f0e7b9a7add80092efd8245480c4e479cdb1371c28c"
+    },
+    {
+      "path": "brian2-rust/src/recording.rs",
+      "bytes": 3475,
+      "sha256": "06682aa9c3fa299d304bc2f4bb8e289d8cf311e73b930a8a1709cb0e49ce6f22"
+    },
+    {
+      "path": "brian2-rust/src/resource_limits.rs",
+      "bytes": 2065,
+      "sha256": "ab8dc5024bb66e43518804a9d17dcefab66109b4bd06f2b624bca3985fc78210"
+    },
+    {
+      "path": "brian2-rust/src/train_main.rs",
+      "bytes": 3554,
+      "sha256": "1ffb74f146d4bf8070a9f1cc8a513212deb026d41c876b19818f4b6d08b47bac"
+    },
+    {
+      "path": "brian2-rust/src/training.rs",
+      "bytes": 46094,
+      "sha256": "937d3ea10eb67b0811af82ca0f09c51f8258358188cd90c0ce761104a35ba5d0"
+    },
+    {
+      "path": "brian2-rust/src/training/clock.rs",
+      "bytes": 11803,
+      "sha256": "315da3c0414337b805710d37ddbbec2b370707638b3830b0e8f0eb4332971d55"
+    },
+    {
+      "path": "brian2-rust/src/training/clock_state.rs",
+      "bytes": 6214,
+      "sha256": "2c40f7a9f69b0a9fae5c3258d4c56dd22ae7fe6a1b00d61e109a80ceb063876c"
+    },
+    {
+      "path": "brian2-rust/src/training/delay.rs",
+      "bytes": 5209,
+      "sha256": "cbbed7e5d8f47caee4a07b282310a9e11ce5e93ec14b126206e757543af29434"
+    },
+    {
+      "path": "brian2-rust/src/training/delay/layout.rs",
+      "bytes": 16858,
+      "sha256": "3d493dcefed67170b535e62956d9a6d9cc78801092284eb1846b2fd49ef8653b"
+    },
+    {
+      "path": "brian2-rust/src/training/delay/rebuild.rs",
+      "bytes": 20570,
+      "sha256": "d52402647126bfbb11f236fff445a99a3e0e6db924d51f453694d057a46626b3"
+    },
+    {
+      "path": "brian2-rust/src/training/dynamic.rs",
+      "bytes": 42230,
+      "sha256": "68d9469864afcbf99b7d70971ad36211a6b3985b814bec5e3e87c325bb67c6e6"
+    },
+    {
+      "path": "brian2-rust/src/training/dynamic_gpu.rs",
+      "bytes": 28875,
+      "sha256": "893fc79d55a58fb8317975fdc0275f3d683e6ce780e810afaccf2a52e22ecb84"
+    },
+    {
+      "path": "brian2-rust/src/training/equation.rs",
+      "bytes": 50318,
+      "sha256": "eb1e10baa795106c2460b819074a11f1d288d3339cd63753084b5afcc1575326"
+    },
+    {
+      "path": "brian2-rust/src/training/gpu.rs",
+      "bytes": 30098,
+      "sha256": "eee68e57c29017b2a907159224aa21f30a6a21837696b3af18bbd0c670955639"
+    },
+    {
+      "path": "brian2-rust/src/training/indirect.rs",
+      "bytes": 13483,
+      "sha256": "ebd9680972dd6107cfc7ed4fa988fff3beaaf8113cc03f8078627ff3b0693804"
+    },
+    {
+      "path": "brian2-rust/src/training/itinerary.rs",
+      "bytes": 8001,
+      "sha256": "4705fe68907f171e7d75921327b9b642e60fd11717368df527126d7824f1bce1"
+    },
+    {
+      "path": "brian2-rust/src/training/math.rs",
+      "bytes": 2932,
+      "sha256": "247eaf17be6b6393f2a39a4d8f93b0b8e88471e66f55cced5abf48fd0ef0cfe5"
+    },
+    {
+      "path": "brian2-rust/src/training/migration.rs",
+      "bytes": 8290,
+      "sha256": "ab93e6f6aac8d4460a77f62a8d4f1cfe9c8fc42afa695d9eb2620a622c83ef48"
+    },
+    {
+      "path": "brian2-rust/src/training/mpi.rs",
+      "bytes": 3905,
+      "sha256": "8cb7ff9811bd9969e37abfa62c26a416faf1e450a11ec1a6c3149fa47cce08b6"
+    },
+    {
+      "path": "brian2-rust/src/training/mpi_unavailable.rs",
+      "bytes": 866,
+      "sha256": "37ff2a9e59c701339a8754c7ddc559cacd4c972a6b2f7c0a216e32bf1015259b"
+    },
+    {
+      "path": "brian2-rust/src/training/multistate.rs",
+      "bytes": 21785,
+      "sha256": "802cf488d9615a1d83a01712eb41ae12e88ccae0e9171cfb48a443235e78ee9f"
+    },
+    {
+      "path": "brian2-rust/src/training/noise.rs",
+      "bytes": 5948,
+      "sha256": "69609e250f5b96cbd7c967c411a49dbd261551742ba11b1097fe3a0de5bb3f69"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson.rs",
+      "bytes": 6842,
+      "sha256": "32bccc30a22ed718f62fd528e86a26c435463fc6b8ed1e89cc9229e47972f023"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson_cache.rs",
+      "bytes": 12856,
+      "sha256": "cbee1aab08de5115a78032f41c1e196b3de5a38d1df9a61138fe19d6cdec561e"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson_gpu_cache.rs",
+      "bytes": 6377,
+      "sha256": "0b59a9a1341b2ab0df94f1204806f81359a77bd9459f4a1ac3f3df23cfc437bb"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson_gpu_validate.rs",
+      "bytes": 3642,
+      "sha256": "6b12487271cc5bfd66a92c979720ff680bdc52e7581fbe4f8a8ef62ca804e03e"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson_ir.rs",
+      "bytes": 9832,
+      "sha256": "cc159a2771ba9dc6f2c650dfc1a905835914a40d6bd4dc6b5bfbf3f75e09e58b"
+    },
+    {
+      "path": "brian2-rust/src/training/poisson_retirement.rs",
+      "bytes": 7882,
+      "sha256": "401ebfcd659c28551a54b2e51d6d0c9daf66aa7a6c8256c49ac9cc177507c20b"
+    },
+    {
+      "path": "brian2-rust/src/training/scalar.rs",
+      "bytes": 21250,
+      "sha256": "2b15986f69e34462d6ea8f9b8cc7c9c2a2abb1dd6d5bac8229b7a12c66bfa691"
+    },
+    {
+      "path": "brian2-rust/src/training/static_poisson.rs",
+      "bytes": 4879,
+      "sha256": "1d14aac8e1e086649364d7db370b834fa03069c0b4bb91a2b0f87574595fa24f"
+    },
+    {
+      "path": "brian2-rust/src/training/static_poisson_gpu.rs",
+      "bytes": 8790,
+      "sha256": "4cb551af897f9eddea9ef735841e334007e840c4b3374a7ecb29bf428890ae88"
+    },
+    {
+      "path": "brian2-rust/src/training/timed_input.rs",
+      "bytes": 4233,
+      "sha256": "2998a4fbcbeb563f690e4e9c893b538e99aec8f8e0d66c4e123dcf92a6e448ef"
+    },
+    {
+      "path": "brian2-rust/src/wasm.rs",
+      "bytes": 2242,
+      "sha256": "759d08b1236b67ac36a7931d73b6d03ec592265084ada6817d227f1de60b2c4d"
+    },
+    {
+      "path": "brian2-rust/src/wasm_plan.rs",
+      "bytes": 5721,
+      "sha256": "3e421e2c4f542368103bd05bc98acd8a55412f1b7ad5937af3dce81903171da0"
+    },
+    {
+      "path": "brian2-rust/tests/clock_itinerary_probe.rs",
+      "bytes": 2073,
+      "sha256": "4584cf827726d4c1823fcb77569d307535760e0554bbbf5aa768c64f5021b774"
+    },
+    {
+      "path": "brian2-rust/tests/conftest.py",
+      "bytes": 701,
+      "sha256": "ba4b37a6e9e3c7485b99ade07322ea19fdb6cb9dd2c1813dae9617d1a6db4e71"
+    },
+    {
+      "path": "brian2-rust/tests/contextual_dendritic_fig3_export_compare_selftest.py",
+      "bytes": 4869,
+      "sha256": "f4a59018117939f2c48a18ad8a8db44bf8f88496c489db0e6cdb12ba74a7baaa"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/generate.py",
+      "bytes": 2825,
+      "sha256": "4ceb4e1c220fbef3548c0b7f61be1c87b348863b7285ac86663e78e6be0c9341"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/hashes.json",
+      "bytes": 392,
+      "sha256": "8bf13fc97b0d643c4d19d79e0162729c572d0b75e1b447afcd3099643ca61ded"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/minimal-v1.json",
+      "bytes": 12644,
+      "sha256": "1a2fe882237e477ddf942f3ade576096d13736a01ebef78aa7a18c3e0bc84b44"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/minimal-v34.json",
+      "bytes": 12165,
+      "sha256": "a9419f4bf4b45a6354622f59a811407adf21e71caf6595f5fd2cec532d56be62"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/minimal-v35.json",
+      "bytes": 12625,
+      "sha256": "c915a4ebb831ef473fb056a5a6dfe24f8270cf30aa0eb3daf76a9aa9d75b5d8d"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/minimal-v36.json",
+      "bytes": 12657,
+      "sha256": "6c536e86c0e46db4b704d48a0253d6a9a4f9905ab39d1bb169b6a6f3842d12f3"
+    },
+    {
+      "path": "brian2-rust/tests/golden/b2ir-v1/minimal-v37.json",
+      "bytes": 12657,
+      "sha256": "56cd246bc475aa2a7b91302afd945dafde10769b0d3978e6a13f8290c93cc198"
+    },
+    {
+      "path": "brian2-rust/tests/plan_source_audit.py",
+      "bytes": 1247,
+      "sha256": "f5288acd4ffd4b91556cb7e43ca414cc64bab20cf8ef42fd9a717189daa785e4"
+    },
+    {
+      "path": "brian2-rust/tests/poisson_core_probe.rs",
+      "bytes": 1189,
+      "sha256": "205c6aad2304fc018fb74fff911f8c190218bac9924bf07be96c78bc6ba7dd02"
+    },
+    {
+      "path": "brian2-rust/tests/poisson_metal_probe.m",
+      "bytes": 2518,
+      "sha256": "60b61c58efb5ae7eeb0d344459b9213d204ca3afe2925f4f8d175a9556a4b36d"
+    },
+    {
+      "path": "brian2-rust/tests/precise_clock_arithmetic.cpp",
+      "bytes": 1409,
+      "sha256": "897857af8945badf7c416a19d1f1a333ed35d0432be0f2ab8dbc81f3248f7586"
+    },
+    {
+      "path": "brian2-rust/tests/test_artifact.py",
+      "bytes": 4538,
+      "sha256": "45b6f149ca11d6bd8df52e83156d0bd2d9f5d4a40e30cf66a7102ddf7135e6e0"
+    },
+    {
+      "path": "brian2-rust/tests/test_b2ir_v1.py",
+      "bytes": 8569,
+      "sha256": "c001877e36fb2e0eb51bb0d6358c03f12a9415918006f44d1b59461a8a800827"
+    },
+    {
+      "path": "brian2-rust/tests/test_binary_topology.py",
+      "bytes": 7307,
+      "sha256": "9a3b3e2aeffbcb53100b1b54f756dea39aaa49bd042fcc7daa2d2500114d9d27"
+    },
+    {
+      "path": "brian2-rust/tests/test_brian2genn_factor_comparison.py",
+      "bytes": 3285,
+      "sha256": "f54f03552e042180979928d72b768f8f7edf3f4df01b0bfa6e81af033545f1f0"
+    },
+    {
+      "path": "brian2-rust/tests/test_brian2genn_precision.py",
+      "bytes": 2549,
+      "sha256": "dc44cbe38d7b21933866274cd64e30df1ac2a4ca1edb8779efcc07ff09f2d4b5"
+    },
+    {
+      "path": "brian2-rust/tests/test_browser_equations.py",
+      "bytes": 1989,
+      "sha256": "10c53a502a2d968cbcc351553c7422a438ef49873477ff21034dca75fcdb8775"
+    },
+    {
+      "path": "brian2-rust/tests/test_browser_import.py",
+      "bytes": 3348,
+      "sha256": "2024df1a05681a7f05c6752ef59850ae782470a8cc842e4aced426f69672094d"
+    },
+    {
+      "path": "brian2-rust/tests/test_browser_scales.py",
+      "bytes": 2987,
+      "sha256": "bb79f9a2c28e80347ad7973742c1cc0b29b2dad148f1f4ef8fd047c49de5c476"
+    },
+    {
+      "path": "brian2-rust/tests/test_brunel.py",
+      "bytes": 4492,
+      "sha256": "e770037706fe5be4a9cbbdc24386b17fb9cdfc2286f4d430dc6648de96ca2b20"
+    },
+    {
+      "path": "brian2-rust/tests/test_clock_tick_continuation.py",
+      "bytes": 2902,
+      "sha256": "fc817bd6fa3c885e1b80177f064060b892d703e6d8cd4b38ad2197f6de0d31d8"
+    },
+    {
+      "path": "brian2-rust/tests/test_coba_hh.py",
+      "bytes": 13187,
+      "sha256": "c6172a42d85d5df3ac7694213d32984131a989eaaed9da7b641746f69edb1984"
+    },
+    {
+      "path": "brian2-rust/tests/test_codegen_sums.py",
+      "bytes": 919,
+      "sha256": "c593b42cca8853ceb90385198ae78c10e470818cfa5c78efb70509359b887d16"
+    },
+    {
+      "path": "brian2-rust/tests/test_compact_validation.py",
+      "bytes": 1717,
+      "sha256": "32ea2791587ca2dd2a14bd45f03593a3afa92f5786c7bdb9acc67264784e1e52"
+    },
+    {
+      "path": "brian2-rust/tests/test_compare_mam_confirmation_lags.py",
+      "bytes": 5425,
+      "sha256": "2e990e27c5433031c5ad8dc5b4a120ae160c03958cc6375c072da142ca317de2"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_fig5_symmetric_deltas.py",
+      "bytes": 1873,
+      "sha256": "58bcfac857d170675bcf3dc13edf0bca52e0b2974c0e80c1f6511b61b5426245"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_fig6_recall_pairing.py",
+      "bytes": 5521,
+      "sha256": "2addb7a6f479ea07f0e7523dbe81b78fa4ba73a039ec28610a24b9dff656fa52"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_fig8_ensemble_recovery.py",
+      "bytes": 3926,
+      "sha256": "96a04b74b7a9a3b2a2588ebcc12ae4e11345eb663e639804831faded5b11d023"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_fig8_ensemble_stage.py",
+      "bytes": 4535,
+      "sha256": "e1a421c4b53e41e037b0bd6527b6e5bec96fd43ae4565c19a1a4ca8bc6c991a5"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_frozen_rng.py",
+      "bytes": 5439,
+      "sha256": "23fa1ea1f91164416a7e621442bafb6a196bf1acca8bf07f1f1661c55a6e880b"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_octave_transform.py",
+      "bytes": 1154,
+      "sha256": "e9a737e67be788a0a470fba8136b4732af7fdcb246b99b23aa01d2fd1668584d"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s2_import_large_imprints.py",
+      "bytes": 5717,
+      "sha256": "209c5beeafd89d6c788bae9b5e3899d2854b5e9f65444524a68126a28f2f67a2"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s2_large_recall_gate.py",
+      "bytes": 2712,
+      "sha256": "342a7149193323ec79a1a2932bc8b1e7c0490a2ea7d4407ad819df74d2791f5a"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s2_recall_gate.py",
+      "bytes": 2024,
+      "sha256": "dd39a98eabdf321bd66adf382b92402ccb54a8db1c1be910fcb5c86b35630850"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s3_campaign_sidecars.py",
+      "bytes": 2628,
+      "sha256": "6f90040323034c799f9bb8076dc49e5e2b7c7c49f90e2d63655864ce9b3293e7"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s3_order_capture.py",
+      "bytes": 2259,
+      "sha256": "5c7514ac66cbe962b4790f885ac024deb7fa1cbf3afd334a5f7fc4deb45387b5"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s3_recovered_ensemble_compare.py",
+      "bytes": 5353,
+      "sha256": "b755ca951b5fa9b823181703323ea0c78e05504aca171c2e4c4beb0aef32ea66"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s3_recovery_schedule.py",
+      "bytes": 2234,
+      "sha256": "adc70eb90dac06a4849446c6c8001f77ef8337338fca0648ef6dbd395a63c21f"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_dendritic_s3_sidecar_compare.py",
+      "bytes": 1630,
+      "sha256": "b42fed3b5c45c388a7f26100ecee15f6e7bb8abd9154918839ac859f97d2c577"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_fig8_before_imprint_complete_ensemble_gate.py",
+      "bytes": 8141,
+      "sha256": "7c8ef4b379f39bf522d217bb65d9a5abb291d2b5da5a91a04c943c88cf52bde2"
+    },
+    {
+      "path": "brian2-rust/tests/test_contextual_fig8_combined_cue_complete_ensemble_gate.py",
+      "bytes": 7353,
+      "sha256": "4397edce4600f17310b3781b0dc1b5a58d51e17beaf4050c6334cb1ad5820a4b"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda.py",
+      "bytes": 4470,
+      "sha256": "8440e79663929fdfdf00ee8ad32a826b2773e087cac29e954b913a9438e6c0c4"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_atomic_load.py",
+      "bytes": 4925,
+      "sha256": "9caeff9efa384bfb3ccb9d4e63060aa8fa782c13ac6edace0fdadfd4b8451ab5"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_chunks.py",
+      "bytes": 9070,
+      "sha256": "642ecfbcaa3bc97e25bdc4b7730474d0326e86197ef248bb402e07ffd8650509"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_compiler.py",
+      "bytes": 5624,
+      "sha256": "e1cf33db361d2f43b7ced942896af68602489aa2f5cc713dfb2ba47621b68c9c"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_cooperative.py",
+      "bytes": 7447,
+      "sha256": "8fbf510a0d95b536ffd23b9ec4e16b8e24926b61624af3459a70abdc4672e06b"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_geometry.py",
+      "bytes": 3107,
+      "sha256": "6269063bb03ecd3a2ba46a320588ab3688a5e6154095889cbc3c29e9c76fee4a"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_graphs.py",
+      "bytes": 8349,
+      "sha256": "5ded5605ef20bcb7372f6276bca4f7e33654ccd6cd7af7670ca26ba3e9e4db18"
+    },
+    {
+      "path": "brian2-rust/tests/test_cuda_probe.py",
+      "bytes": 2563,
+      "sha256": "03f024458c67d1d67e728a995034d7d298e697f824f22b5882bc7274ad747c9f"
+    },
+    {
+      "path": "brian2-rust/tests/test_device.py",
+      "bytes": 68809,
+      "sha256": "c9f6338e11b8df7a4f15cfdb46a38a16af76278e7137d74ca5f15c727a41f0dd"
+    },
+    {
+      "path": "brian2-rust/tests/test_diehl_cook_example.py",
+      "bytes": 3694,
+      "sha256": "da2eb896cfab00e5fb663345f9c373859c322d8656d387bbbd1cd47561bab80a"
+    },
+    {
+      "path": "brian2-rust/tests/test_encoded_array.py",
+      "bytes": 6506,
+      "sha256": "c22f9a00d4ecb1fbd316516b720a19f52d44df73940cef8247acfdb30c01d4da"
+    },
+    {
+      "path": "brian2-rust/tests/test_execution_plan.py",
+      "bytes": 5576,
+      "sha256": "8c58a4173948aeff69becd5e4001a8edb7923ac39f00944532a6c3671348a8a1"
+    },
+    {
+      "path": "brian2-rust/tests/test_f32_stdp_contract.py",
+      "bytes": 6385,
+      "sha256": "8c18185d3f36dca1eca3cd33e7384d7a0a824bfc6d77adad7fb7242c3219928f"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_browser.py",
+      "bytes": 3987,
+      "sha256": "e772b4439646da8b4b2332efae8801a8598c3dfe87a3adf1113d941fe2f7a17c"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_ei.py",
+      "bytes": 4348,
+      "sha256": "ff43e335221da0855c4359cb995fe8c092558bca6cd2b0b41f070de414de21ec"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_game_motion.mjs",
+      "bytes": 1586,
+      "sha256": "9d156a7abf9ab45fef04e5db1a5c71341bab8167ad20d0ac90da210a82d351d3"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist.py",
+      "bytes": 7266,
+      "sha256": "7f8eab86cb7d4b59c64d9d816509f73263c0071173e3bfbf88b89994658c26dc"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_demo.py",
+      "bytes": 2442,
+      "sha256": "acfcfaa8118bb9933166c6cd4158c6969d3a41f9f76a3464157df5422fe38093"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_full.py",
+      "bytes": 4815,
+      "sha256": "ee0f1c9618c05fb36f72423a1eec5311e1a04d0762ecd15b8409df696e3426cf"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_full_audit.py",
+      "bytes": 5188,
+      "sha256": "1db2c03f298272a1b909b46267fa8307cf99d39d87eb9ade7dd4aff50e2a39c3"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_game.py",
+      "bytes": 4580,
+      "sha256": "fbfece9e793f6a5b927bc12ebbf3712afc64956b8e87b6112a5a775196fa4a67"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_kernel_readout.py",
+      "bytes": 3290,
+      "sha256": "485cf067277425c1c37a0c3c942c3367b06ae2f6f71d6f59ef07fe62fed96c1f"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_nystrom.py",
+      "bytes": 2954,
+      "sha256": "fd7c3de245e7ac8724b02186b8402ace79607ac5cfc4f6ad629721416e60315a"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_optimized_full.py",
+      "bytes": 3377,
+      "sha256": "83a235f64762757d24572e3c2a8869ebd3825be427898f8945c316bbb34e36a5"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_predict.py",
+      "bytes": 2830,
+      "sha256": "fbac325cc797cddcb3db03cb98ba54431129b74be53b244df496bbd859f37b29"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_regular_cut.py",
+      "bytes": 1579,
+      "sha256": "665fe8a89208a863044f7b406cfed2b014e70eada6a906709f00ababfee65e08"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_round2.py",
+      "bytes": 2834,
+      "sha256": "a24897e4cebb9c18f5867313c2f3e92c8bfaf3645c5c31ef9f8ed86d44ce8a66"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_round3.py",
+      "bytes": 2637,
+      "sha256": "4272a19458fcbd051d08d847a9eb13e9ab352df7448c00593981d05b30f6958a"
+    },
+    {
+      "path": "brian2-rust/tests/test_flywire_mnist_state_probe.py",
+      "bytes": 2065,
+      "sha256": "8f55b7293faccca02fe9e50d8c0b763f9028e936ed95c8cdf1a790883f995960"
+    },
+    {
+      "path": "brian2-rust/tests/test_genn_barrier_comparison.py",
+      "bytes": 3667,
+      "sha256": "aa6394d48d09679ba112bcc71d9c71f67b026169a44ecdb3746d92f3137d7ca5"
+    },
+    {
+      "path": "brian2-rust/tests/test_genn_delay_diagnostic.py",
+      "bytes": 4625,
+      "sha256": "e31e6f5c995688c5cd2a8948288060da96396d0d1201e39a430d5effd373b827"
+    },
+    {
+      "path": "brian2-rust/tests/test_genn_readback.py",
+      "bytes": 3848,
+      "sha256": "ff911fa93bf331349cd3d606084a0a24b2e4aba105d151dbaddeaa1698109c37"
+    },
+    {
+      "path": "brian2-rust/tests/test_genn_same_model.py",
+      "bytes": 2580,
+      "sha256": "717ca6f94fff7452695762aa0fabec6fb0bd57231eb508e72802105645557319"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_autotune.py",
+      "bytes": 16454,
+      "sha256": "bf655de51df804d9cdd1a49644a0d795d5d58a44dab79b982b9682d58b374a87"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_binomial.py",
+      "bytes": 7528,
+      "sha256": "5fdf4bef634668d9f79f6e9c688436738153d9c46d1290ca8f3c33052303d02a"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_bitset_api.py",
+      "bytes": 7235,
+      "sha256": "30e18ea71e20e52949d95b4582313d5115b5eb8492c87d0952c19c0a25e338c8"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_buffer_transfer.py",
+      "bytes": 10740,
+      "sha256": "b863161c22a2be10e04574cc4024b8a17001a733c331032bba3c00678f41720c"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_compact_bitset.py",
+      "bytes": 5946,
+      "sha256": "9083a585a53f698eb49d1c000a1519abd325c10378d54bc63f665c7307e61a7b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_comparison.py",
+      "bytes": 6955,
+      "sha256": "f15d86de399df80f00726ed0fd014dd870ce56f335ff4fdcb32e02b5ed7a2b21"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_compilation_reuse.py",
+      "bytes": 6745,
+      "sha256": "ed662d867f4c11f2c38a352e4e4515029ca0162b01cc46b60899a45930ac6a04"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_composed_models.py",
+      "bytes": 6234,
+      "sha256": "b458b898ab6c8d875e3b44e5e5806f723665281f1bb8090ad0711a41c50c766f"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_composed_policies.py",
+      "bytes": 9432,
+      "sha256": "b9279829c4bfd9a302bd1522cf844fa4ad9d4e20a3ee902bc002f4433202521b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_custom_events.py",
+      "bytes": 6759,
+      "sha256": "a86868639932f1b66b1bd8766261991e3b000f59ff18ad17ce037b3cdbd8bd82"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_dispatch_fusion.py",
+      "bytes": 7949,
+      "sha256": "a22e25b664372aa1f61d881d21450d120975b8d4beda589c2469daa34bac9cbc"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_edge_pathway.py",
+      "bytes": 10664,
+      "sha256": "3f51068814367fdd5ed04e7ea9aa287434dc5ada1e4c586a693a6470ba94fff8"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_empty_pending.py",
+      "bytes": 5471,
+      "sha256": "1fb03c1f43873de6cdab38f41c053adae5e52e2538e8fd60fafe720c89da0d3b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_event_decode.py",
+      "bytes": 1507,
+      "sha256": "9bd3baa29377679bef575e6175bbaf1a0d1f69d778162db075e122288a2db16f"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_exprel_range.py",
+      "bytes": 6055,
+      "sha256": "afa0269f361be1345962b39d3676c81ce857c7fa5945d05934d61e8ab57ac4f5"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_expression_contract.py",
+      "bytes": 9718,
+      "sha256": "8589a97d8274abf168194dd7e9cda2db1e129cf64f16c5542c197643c1c21fa7"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_history_fusion.py",
+      "bytes": 6058,
+      "sha256": "2d23a8429f4bcff35819f84fd93ac3be91e684d7b83ead5b8f7160d855615cdf"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_host_reuse.py",
+      "bytes": 7069,
+      "sha256": "344e956038dd9375bdaee9fa2e962a81e13c8cb2c694ab597ab5df4040c07f42"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_host_storage.py",
+      "bytes": 4680,
+      "sha256": "c13c736ac60393f335f87645c2f47446216ba5d8274174629b72203678ad110a"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_initialization.py",
+      "bytes": 10085,
+      "sha256": "ee99a120e4352d8c77800122185d33322992d9bddcb092e6a60e952e90b69962"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_links.py",
+      "bytes": 13577,
+      "sha256": "3e43876c7cef7cc422055aec6a09131e74ad0a18a643381d468ab0d22719ae47"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_merge_regression.py",
+      "bytes": 4861,
+      "sha256": "c0427fbf459698e525102d299a965ee187ba73985783f29b8ca34b2a193ac444"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_monitors.py",
+      "bytes": 8713,
+      "sha256": "94545f8e997f239b264d6f894ff84c22a44437eddbd7fadaa29756f62219aa50"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_multiclock.py",
+      "bytes": 7112,
+      "sha256": "34a1af991b0fd025c0371996884be2c5010e757ab4668d88935341344659d728"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_native_functions.py",
+      "bytes": 11582,
+      "sha256": "80221c6a81e4a5b1b5d4bb27e0f638c218a73bf446968aea69b41aca31f3a41a"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_native_workgroup.py",
+      "bytes": 6008,
+      "sha256": "2731183ef95ba5b012d24fd91ac3eed45ae561af7fa922441a5f66610bc8e101"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_packing.py",
+      "bytes": 4116,
+      "sha256": "fe3666650d10f9f43def183c53956e92050c8ad6c9d5e92a6b09f6a5ba5970a8"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_pathway_order.py",
+      "bytes": 6257,
+      "sha256": "4b27ffdf1f106db82a191cd077259ca6e41bacd8a5ead23b0980429795f092e3"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_poisson.py",
+      "bytes": 10424,
+      "sha256": "c11258b409f71ee3d23bb31099f0be3a9dc9e3b18ab6540595cb2aafd71291bb"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_population_scale.py",
+      "bytes": 2775,
+      "sha256": "5c0f9d0e7dd47f672cf4aa5ed8a8a897c213e07c714ed07883c9d04c362d3369"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_power_casts.py",
+      "bytes": 5884,
+      "sha256": "b1b9e71698051281a71bed69963040c184edec8a2ec1f4e31e406fd2a939fcc8"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_power_domain.py",
+      "bytes": 5369,
+      "sha256": "045e17b87bf7684bffa65dbb99e7e877e2d7220be8808db54f32bf2b89dee1b2"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_prefix_locals.py",
+      "bytes": 5768,
+      "sha256": "7787103529a0246e7734e96a39bcd1d303d4880b377765863f780454fddc4c7d"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_prefix_pending.py",
+      "bytes": 6980,
+      "sha256": "e0b5f6f5edf196af8654aa909b4245253bed40e0083e0d7476151aa18208284c"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_projection_storage.py",
+      "bytes": 6935,
+      "sha256": "a2dc4b2b61b2f12d023a18620b1eff0a3ba46277e379fbf012d35d0c56454572"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_random.py",
+      "bytes": 9928,
+      "sha256": "7ed2e5ce6473126d00a7adc2fc4db3733e227c544bd83117e229aff905887fa9"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_readback.py",
+      "bytes": 3484,
+      "sha256": "9d0e41221ae525f6f567cb7b05093ddcb266b609036e59b0b30f8aa63fd9db8d"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_refractory.py",
+      "bytes": 9001,
+      "sha256": "9550ec047f9f43f2764fe9afc060961d7ce818b942378ebab1254c08120abfd5"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_regular_clock.py",
+      "bytes": 5399,
+      "sha256": "fe5d75f2d137dae883405b7d93079aef566c92ea3f26a6509063d27540f17197"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_sparse_saturation.py",
+      "bytes": 6057,
+      "sha256": "d5f7b99502960690a3837c27cb7764b3f6b523ec76557b75eabd18ce1f783c5a"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_spike_ablation.py",
+      "bytes": 3723,
+      "sha256": "4dccad59991d1c8e782b37c78614c605302cc47bcb66c15cc24d27c72ff2be8b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_spike_decode.py",
+      "bytes": 4058,
+      "sha256": "23503790ea7da1d1cea7b4b78dca5d91006da60ce0ce5e37fa9c20d03a80296e"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_spike_generator.py",
+      "bytes": 7370,
+      "sha256": "f07ab88d84e37f476f205237537d683dae6a99c318c3f64d3c39fc1262f11fe8"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_spike_readback.py",
+      "bytes": 4242,
+      "sha256": "6f5204073549cf3d775e69a1dcb366cfd644a45f064a127d8b3d8a44b23f173b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_spike_upload.py",
+      "bytes": 2998,
+      "sha256": "740d21f635d68d528cab139522f36d2510f49fcaed32832e0c95ab1841bfca4b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_stdp_comparison.py",
+      "bytes": 2699,
+      "sha256": "33d0685d1b82eff76b0f2351253fc8ab97c36efffcb02715a99025acfc36075e"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_stdp_parameters.py",
+      "bytes": 3046,
+      "sha256": "7cc1a13dbd844b1cb9af20c0235b9fbdbbcccfdde71b0d612693f1c07e1d294f"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_stdp_replay.py",
+      "bytes": 1857,
+      "sha256": "ff3ab3dde6412e94d1832604d41d69030079ae3fa51338a345136d47ecc1e5e1"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_stdp_topology.py",
+      "bytes": 3188,
+      "sha256": "f985de388cc84feb6faf0bfae856b22261f24801fd569b292a1d62826a27f82d"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_subnormal.py",
+      "bytes": 4620,
+      "sha256": "0d4a799ac4a3e6f11dd705bc7d536bc9e72d7b43a1f4e7b73ba077792d71f347"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_summed_parallel.py",
+      "bytes": 8419,
+      "sha256": "35609d28c76d82b47e89171a45261a6af08b1581c67c98d14a9b6dc72423bd36"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_synapse_fusion.py",
+      "bytes": 9787,
+      "sha256": "6badc4bfe40fc6376fa00fa3909316e13e5f0746fd76c901b06c6145137a50b6"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_synapse_parallel.py",
+      "bytes": 6605,
+      "sha256": "a10c39896649b63db069310f033456172bf744761d9841b98e939a7668f75b64"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_synapse_prefix.py",
+      "bytes": 6928,
+      "sha256": "75660c5aa055eae1f9cac7165b7e95de5050fecf4e92f4e553eb1307afcbf40b"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_target_bitset.py",
+      "bytes": 4682,
+      "sha256": "74d455c7ca01903ab4ebef2f7ec2e08e3a994c6e61f077efc35e6c601ea8b077"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_target_pathway.py",
+      "bytes": 9021,
+      "sha256": "37049664af4f62be4f32d99ec1dfa2bbdb1ab6bf5646cd7a5f672398738ebc7e"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_target_sparse.py",
+      "bytes": 9957,
+      "sha256": "67b012229685a3c3316ddee4d7f1594e542126950240c07d8e5aaa5478394e1f"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_ticks.py",
+      "bytes": 11441,
+      "sha256": "4e7040f626e8798decb1ff6d393247b49ad27dfda56ab203052c7243fd5f7b3d"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_timed_array.py",
+      "bytes": 10213,
+      "sha256": "9c1bc1a14de3dc5045c5e4bfa26a70a9c2d459ded5c4a20a6000721ff82ca49c"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_tuning_cache.py",
+      "bytes": 11868,
+      "sha256": "ac5cf5af245258c744bfdc69eb06445ef00d769a6ac42a9ca18dbdbb28a3b008"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_typed_storage.py",
+      "bytes": 10683,
+      "sha256": "120efe52b2f48611be7961f45c80c7350f83cbf82c08889846c6c0aa1aab0ec6"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_validation.py",
+      "bytes": 9605,
+      "sha256": "ae3000b1b9a24bfe42b57f037d713aa9a76ee4890a762c97a13257f8bfc2af07"
+    },
+    {
+      "path": "brian2-rust/tests/test_gpu_workgroup.py",
+      "bytes": 7182,
+      "sha256": "39bbaa65310cd5a8c09470ab5bbc7186d4fae1cab75b7ce9f60e1fab495e3e73"
+    },
+    {
+      "path": "brian2-rust/tests/test_instance_encoding.py",
+      "bytes": 2520,
+      "sha256": "71214e8a943d7a83abaa089cb73e57ace1abfa40ffef1d2406c0cd7bfabc6c03"
+    },
+    {
+      "path": "brian2-rust/tests/test_litwin_kumar.py",
+      "bytes": 45281,
+      "sha256": "b7cb4ade7ba8042fe1ca95323c5af3194af06623e1edcfd84b27776462e8bc65"
+    },
+    {
+      "path": "brian2-rust/tests/test_long_stdp.py",
+      "bytes": 3440,
+      "sha256": "a8897bc34f927dbbf26c77b261290764d81d89824042700d85e344564b06d496"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_affinity.py",
+      "bytes": 2057,
+      "sha256": "71003bbcb35edd4edf3048a9b86fe1355ebf6d6a612064c91c2e31e887041c10"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_event_io.py",
+      "bytes": 3736,
+      "sha256": "801c79093419b33e6fbe7f1d5bab4904771cf71eeba01ba825b0622a725207df"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_raw_audit.py",
+      "bytes": 2426,
+      "sha256": "edecbd50aeb6232358194f34ac08ee8b0690b4e95e378811203bc9446ead7c34"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_state_records.py",
+      "bytes": 3230,
+      "sha256": "d6592300590bc46fdc4acc382a70581cce70c794441a57dfa6df0724f4d5e2de"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_target_raw.py",
+      "bytes": 3419,
+      "sha256": "40a4ffbfe75f8cfe37e12d680a653c7cf8b56b0633e2c884bdeffe5b64621a87"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_benchmark_terminal.py",
+      "bytes": 15328,
+      "sha256": "09ed4bdbbb2e437fadfb5bc83a1ae87dc40247b8912a73e367ab691fd6eaa677"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_bounded_correlation.py",
+      "bytes": 3789,
+      "sha256": "830443acdc0bb333ddf69e479ccb9d1f31ee81d434a0b35b1b576e25d82bb382"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_collection_transfer.py",
+      "bytes": 7194,
+      "sha256": "2dd35f3b8781b90aa184c31452666bffb8e4f93094cdbce5802501fb0fe6186f"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_comparison_windows.py",
+      "bytes": 7104,
+      "sha256": "bf864acecbab51c93b752a8cb3e2848508cc95c3430a0f36fcf42adae0c15b53"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_complete_native_reference.py",
+      "bytes": 5902,
+      "sha256": "eb4eff7c7ddf829a6eb5307dde9aa0456c8d1e4bf8e7234c1f01740f0bd94c97"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_analysis.py",
+      "bytes": 5050,
+      "sha256": "9360b9a52998d8ade0bf992bac6067af65caa8d9f9396c3aeefcb23ae80d382f"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_backup.py",
+      "bytes": 4720,
+      "sha256": "263987256f54c385d0d9bcfeede0640d3db9db51f62da6a2ec0a1ae8373d9098"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_ensemble.py",
+      "bytes": 5420,
+      "sha256": "ec822df4362daca807efe54f906c2322e29225eb571be61777daaa958a95c429"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_raw.py",
+      "bytes": 4796,
+      "sha256": "4d66e96ba9172a32ef197194546637aa564e1409de2f8d22011f571cc3712ae6"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_remote_terminal.py",
+      "bytes": 4567,
+      "sha256": "e01c1aa2cd4bfaf23f5c4842ff8758aa7a39f8ca8e3f8a6b6d92c7e1daf71137"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_selected_profile.py",
+      "bytes": 3062,
+      "sha256": "fda8b7a9e3ea2ea7da98fb72076235c7c86f9896a14ab26ede52a9580be3df54"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_terminal.py",
+      "bytes": 4637,
+      "sha256": "4dc0d8c50f05cc647e6ba27968b934f5a3ed122d64aa3969c1450312884cf0e0"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_confirmation_terminal_sync.py",
+      "bytes": 4578,
+      "sha256": "93ad6cfa661f665012f7d3641306d49ec13870951db3195efffab79b30981b44"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_correlation_stream.py",
+      "bytes": 9058,
+      "sha256": "eb83bc252bda225a6b7527a03d07ffc409d028607c46ddd6337503e407889d1b"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_direct_transfer_v3.py",
+      "bytes": 5112,
+      "sha256": "65963c0c9523f2185419ae202c00394c97142a7d5fef25a6d3a48d203c19d437"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_duration_delta.py",
+      "bytes": 3703,
+      "sha256": "78bee5a95f306ea9a506289162dbffe56f9b20ed7a9a3b61caf744695ea0f3a8"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_full_reference_ensemble.py",
+      "bytes": 8500,
+      "sha256": "fe8678eab064382499321d1fbda1ec96a1d51b5aecb891057fd7c51b0b78a4a2"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_ground_model_delta.py",
+      "bytes": 1996,
+      "sha256": "1d99b4a01d56254a5da19ff5dcbdb3b9b8893051acce0659d52191399260f5a0"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_ground_parameters.py",
+      "bytes": 3552,
+      "sha256": "ef8af15debd569ad0456975455b8a5372ef0dbf1eac6c160d1d149afdb16858d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_confirmation_analysis.py",
+      "bytes": 5550,
+      "sha256": "33b879804cad3d29870222db3f8000651513dbb310498ff306e599e6a0fb25ad"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_confirmation_raw.py",
+      "bytes": 5940,
+      "sha256": "18d0d0cf45dd7dca615f842670ab411a0f9ba07c47729d5740308eec421c26e7"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_native_full_reference.py",
+      "bytes": 4175,
+      "sha256": "3809afa65206a200558f45b66ed22b12150f1b98669417ba336cf14e71b6d359"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_native_primary.py",
+      "bytes": 7634,
+      "sha256": "069bc04ec6d7d49d280cd0f1497092cabd5c123f079ec848ba752b76018cdcfb"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_performance_target.py",
+      "bytes": 2112,
+      "sha256": "9ad911cab2b5ce8345824dba453c95165985ead3d10cddfed643adbc0faf2a24"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_performance_tuning.py",
+      "bytes": 2274,
+      "sha256": "d7d8d65e654b38e3f305187c9388c35ba56008a13d9397ab979147a00e013db4"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_reference_analysis.py",
+      "bytes": 6418,
+      "sha256": "b4f8f748b68db4a84c3e64bd20cf55c6d62de0d5e74d01d4bd23d58aa484f56b"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_rust_benchmark_raw.py",
+      "bytes": 5645,
+      "sha256": "fcd6fbb998a18fc906a22862863261ebcd52de7f9affe32fcb7136a7b941bc5c"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_rust_performance.py",
+      "bytes": 10405,
+      "sha256": "d84adbb07b554c3e84c5612d67f9652a982ab55b9329436ea1fd9139da552cb3"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_launch_rust_recovery.py",
+      "bytes": 5209,
+      "sha256": "8be2c14d2df16cbec1824c7ff7f16d1e9260af3592186916a2217fd94e8e933a"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_analysis_pipeline.py",
+      "bytes": 9228,
+      "sha256": "a37459ca9fc650cf7ac6123ec87635c94456b95652b1dcf108a3950746e63adc"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_primary_collection.py",
+      "bytes": 12418,
+      "sha256": "151dd9ec375eed0360268563fd3a27d846d3e4bd956d8fec9128c79e662bd02a"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_primary_output_audit.py",
+      "bytes": 13255,
+      "sha256": "9a9513a069825d53eb5bc626e1ddd0108bb0b4216b4610ee20f1664a3f6ab2a7"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_primary_resources.py",
+      "bytes": 12876,
+      "sha256": "9d401619b7faa8b83fca9e960d83b4f4e59f13586de80f14cea39dfabc92c130"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_rank_audit.py",
+      "bytes": 6718,
+      "sha256": "3b0b4c65a2060d04f8dcc1bf159dc0fe343f0efb6222bf9a35270162931285d6"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_reference_controls.py",
+      "bytes": 4273,
+      "sha256": "9e9800356cef83be6e1bd0324e1e9a5e8b38dac629350822783cd4ee226569ee"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_native_v1_140_selector.py",
+      "bytes": 3463,
+      "sha256": "0dade89973468f8d3c60916e42805406ef20276fde3861157740f13d4209a8ef"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_nest_benchmark.py",
+      "bytes": 12547,
+      "sha256": "f78b8aa60305c03e16579ff78f0a7e2ea666fc00a9c2fe24e91ddd98299cc75c"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_nest_rank_affinity.py",
+      "bytes": 1944,
+      "sha256": "e51f3e041f91ce8f004050297de691e530cb1f572c3c9358ea2905e20ee8aabf"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_nest_reference_capacity.py",
+      "bytes": 5007,
+      "sha256": "c3d269964a7e6bce76c8fcdbf67dc438402f12e352db10eacc7f333180719973"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_nest_science_reuse.py",
+      "bytes": 2271,
+      "sha256": "d77b953651b670be65fb721e19d18da76a4f5558bb098cdd16d0b614b9c313b4"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_original_series.py",
+      "bytes": 1367,
+      "sha256": "2da6c759bc8e6ddf34bc321b5269dfae69cf0b15eceaa6573c26b2828966f3db"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_original_statistics.py",
+      "bytes": 2960,
+      "sha256": "63094be00771128e9480f2e2a9b09f71f60222750ab57ad817ca769bb6709948"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_output_work_audit.py",
+      "bytes": 7380,
+      "sha256": "d548e26c5654f51bcf217646a2215f91107daa64aa830713bf10e02915ee33ee"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_cell_metrics.py",
+      "bytes": 2691,
+      "sha256": "6243ddc857923b51198030255fab54f5ac4ebf2360acaf08cbdfd911d6d363a6"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_conditions.py",
+      "bytes": 1310,
+      "sha256": "fc4948b278d5d81c0ae2be839d6d77a9c5466142f7a3480160e36730285e9fd1"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_correlation.py",
+      "bytes": 1287,
+      "sha256": "4d601853bdaf3233055ffb17c7bb9562938a85e455a38a68f24563e7cf6bcd8e"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_interarea.py",
+      "bytes": 3144,
+      "sha256": "d2e7c32a5de6cc3db7feccf6b265a51c5ba4ee1d2a5f74173957bf40d8f2aaa1"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_propagation.py",
+      "bytes": 3794,
+      "sha256": "5e3afb9f8d28fe2ea8cf828b0192159cec4e16cac9e428ab981310a85520bed5"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_rate_bins.py",
+      "bytes": 1038,
+      "sha256": "debad9a6dd57de454eacb2e61536721e69b501534dc96bc2ec15fc87466cd846"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_paper_time_series.py",
+      "bytes": 3549,
+      "sha256": "a42af4bcb4c9891c6eab77014e732f3298fd5545250a537bb58f134fb40f27de"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_analysis_pipeline.py",
+      "bytes": 6671,
+      "sha256": "f14dd389e1fae249dc36194ada81bea4ee7c57784a1aeb470f36b3e124fb1bac"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_archive.py",
+      "bytes": 12035,
+      "sha256": "f897359e41982632bef3666466c90c1da68dbb74c9653e0cd36923b53b4f6263"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_lag_comparison.py",
+      "bytes": 5577,
+      "sha256": "9762c9a618973a4844e592bcbabcf771106c5e4b9ee71deee43009bb708748ba"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_output_gate.py",
+      "bytes": 1136,
+      "sha256": "dcea0809918b60d17bc1241aad3d67974cd46b83fab78002e0d8cdfc9cda2fed"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_paper_cli.py",
+      "bytes": 11316,
+      "sha256": "6cc089cf04fa5f1b91590f2ed4ef75e718c6a43c3d2c4cab8adb3446fe7e0cef"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_primary_resources.py",
+      "bytes": 7388,
+      "sha256": "bb16e12f2116a1247ab3631e93c02fcc9d2342ff072c96c1827fb0560ced497c"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_raster_budget.py",
+      "bytes": 2000,
+      "sha256": "fd1182b9188025ad74a230a0c4df838c6a0772674e1792f0232ed746d257a336"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_reference_analysis.py",
+      "bytes": 8429,
+      "sha256": "6b76aa0f3796a4a92d188fed7e8ca326ed02df60b3c2c4b9713938de399eae8b"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_reference_ensemble.py",
+      "bytes": 2690,
+      "sha256": "b35fd077cd888f5e4ff6765f47edb96a9a39e0f83089c86fd4fca6518591666d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_remote_provenance_pipeline.py",
+      "bytes": 7225,
+      "sha256": "4420b74cca35ee952d92c6c6599887286fb838f6d2564dd5f6b84b4cb037608b"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_result_prefix.py",
+      "bytes": 5812,
+      "sha256": "4cc775dfaf66b8fc5e765614d507dfe913264afea8ce839153000baef9da6363"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_benchmark_raw.py",
+      "bytes": 4780,
+      "sha256": "996f97ceac968c2b4eb27c174c12ec91fbee132b570e58461bf2b8f784dd7877"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_benchmark_terminal.py",
+      "bytes": 12547,
+      "sha256": "2c119335f55bf70eb876a5f745f4e95e177974ba45640baa73fd6d0300378f0d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_cpu_placement.py",
+      "bytes": 4695,
+      "sha256": "c227d5a44cfa63837c6519f914965f5627d9eb0e2e39626c0c0c00e9f915de99"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_recovery_audits.py",
+      "bytes": 4910,
+      "sha256": "1d6f70f08915b3e3d8b60d5525807771c8aa4f0b9e1350a4736215b6a6a88e4d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_science_reuse.py",
+      "bytes": 4637,
+      "sha256": "8441d47fe5ee04b62dd35a507c574673be348484b3640c46427a364c6c136a1d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_rust_terminal_sync.py",
+      "bytes": 5138,
+      "sha256": "54e4263927e856662eda2ad6788308f591baed476eefbc3c83bae4ac0beb465f"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_streamed_activity.py",
+      "bytes": 4641,
+      "sha256": "419452e2dcba55655c49a783cb3c423752147bab7af3844d01ebf1fa9401a28e"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_streamed_activity_cli.py",
+      "bytes": 10533,
+      "sha256": "feb50fc6a03e2c45a41213c847c41b1a1ee2252123de8112e3cf8dc0318efd82"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_streamed_cell_cli.py",
+      "bytes": 4951,
+      "sha256": "4d8181916fcfc0d711711223c290191374925dcf03cf83022ef17674101100e9"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_streamed_cell_metrics.py",
+      "bytes": 3773,
+      "sha256": "a289bda53a7c0d2c5f7d8ec1937b76d2374cf920473c09a5579454d98101193f"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_synaptic_reconstruction.py",
+      "bytes": 1621,
+      "sha256": "d33aac5c58093b7554634bab8a098fb4f1e75e057338793d03efe6e08372e443"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_t7_raw_backup.py",
+      "bytes": 3719,
+      "sha256": "daf77609120eda0cd7fb0ca5898915650d08a9eb0894dc0f543999649fbf769e"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_140_identity_probe.py",
+      "bytes": 979,
+      "sha256": "7ea2db2a69bf57b9d88de580ca8a5ea981349c11f86a7ec63e37c267ab93e1a5"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_140_launch.py",
+      "bytes": 1885,
+      "sha256": "66743bd22edd40633cf46db46550e9eee5e3a584ee0309e12ae2f0945a4e198d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_140_raw_extract.py",
+      "bytes": 1594,
+      "sha256": "e439fc49dd62552c9e982c64d6610a3f7198003cfd7d59a8920e6e35390dd78d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_140_selector.py",
+      "bytes": 2371,
+      "sha256": "7b2d11f022357e34e13b5bae604ec2ad51bb5bcd4a1353339fc8ed3db1b37434"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_140_spectrum.py",
+      "bytes": 3388,
+      "sha256": "24ee6744dad33ac00e144f4b70182b6ce1af49378456555aaa490ffb80154199"
+    },
+    {
+      "path": "brian2-rust/tests/test_mam_v1_subsample.py",
+      "bytes": 2625,
+      "sha256": "f20a1f1ce42922256501eeedc132c0e580206222c0bc379270e9a1f009d647f3"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal.py",
+      "bytes": 7195,
+      "sha256": "5957ae863d4f609e0535973abd1f7ce2d21a7a1313498af67f211fe143a93e0e"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_buffers.py",
+      "bytes": 5744,
+      "sha256": "f35d99296ffaecc0cacd5dc9ff286b2d164d428b1f05a20d36a73ce4e9542e41"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_dag.py",
+      "bytes": 13542,
+      "sha256": "2af6dfca8108242a2cb2c0b61c76a2155c641f469df0f51a4dead25b86c29dc2"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_delays.py",
+      "bytes": 10849,
+      "sha256": "bd193842a00b49badb7facd31c9625eba3f543b2324d088d2b3f6de38d95ed42"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_indirect.py",
+      "bytes": 5648,
+      "sha256": "2a1cc940f4b9f9f90be436cb9daacf0c395c174d9903ab2a27d2e62460f8a18c"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_plasticity.py",
+      "bytes": 4724,
+      "sha256": "097a5a487f56dcc1bbbb663ecc8200980949131a11cfff45d5d778bd47863e64"
+    },
+    {
+      "path": "brian2-rust/tests/test_metal_synchronization.py",
+      "bytes": 4329,
+      "sha256": "ce998ad051e714776972b1efef59a69751a296a453326028e94fc3a502575047"
+    },
+    {
+      "path": "brian2-rust/tests/test_modal_result_recovery.py",
+      "bytes": 3190,
+      "sha256": "d25fe528067b09447f2a22884521cbad7ce4609cb73d5f29fd454d598eeb059a"
+    },
+    {
+      "path": "brian2-rust/tests/test_modal_training_run_control.py",
+      "bytes": 1919,
+      "sha256": "8f12f31b5c01b48b437e7d6229f0978947ce4983f1fbce4c1f203341ee91fe2e"
+    },
+    {
+      "path": "brian2-rust/tests/test_monitor_observables.py",
+      "bytes": 2740,
+      "sha256": "401e898a0fdb41d3a1b729105ba63321ae057bd97ad028a82685a43ed202e785"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi.py",
+      "bytes": 43019,
+      "sha256": "06a69ea236e27ab9766ad4bc9dcf204505826b38d9248fd2ac60ec7b3b88a848"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_additive_ring.py",
+      "bytes": 4023,
+      "sha256": "c82486a62be182b0539c8aa601f122fc24b0da8108b989ed07d9c9b8ccdf0638"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_compact.py",
+      "bytes": 5676,
+      "sha256": "5a754ec24e53aca393fd35fa25c7a1aa58343e5acb4dca4b4c7992410424d525"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_gpu.py",
+      "bytes": 9911,
+      "sha256": "bcae75e041e15031c711ef1611aa6a5efad2a6b3285868778873231fff394af4"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_multi_area_budget.py",
+      "bytes": 3685,
+      "sha256": "f409ea4c8b56a9b4ad9cc13fef3f7b8995c5f9719336f35fd31ce8d7799b4f2e"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_prebuild.py",
+      "bytes": 6970,
+      "sha256": "91fcbedcfc71bdca392f27a969023bbfe2a6ffddb29525d716d144458f87d53f"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_queue_compact.py",
+      "bytes": 7678,
+      "sha256": "9881644307d82c5262803b05ed803d77807b33ae6d9572b5b87d41aa94ee2c31"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_report_batches.py",
+      "bytes": 3264,
+      "sha256": "8be24e9213370dad53c45475c15b9c08fcfdf4528c13533428e272efb858c423"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_resource_guard.py",
+      "bytes": 1584,
+      "sha256": "9adc839e3ce623904b3a0b03757ea95f967a5957480678ff8f1d40138ef96a4d"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_spike_history.py",
+      "bytes": 6045,
+      "sha256": "8ae9734b7b84b5c5dd53c3c655774ba345086593e9effd966d4e727326432e71"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_spike_output.py",
+      "bytes": 8563,
+      "sha256": "d3af4df185305af53dda519c994a97220e9b07dc2a05cda5db33e5b47773e0c3"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_spike_spool.py",
+      "bytes": 10334,
+      "sha256": "9981182d93a6df4d4139a67aa4348062581d3bfc5c15003075f908a41edc7e44"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_teleport_launch.py",
+      "bytes": 14673,
+      "sha256": "68ada991154c70fbde954e74d8732e7ba21a1068ea2298d728906b94a87f6e93"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_timing.py",
+      "bytes": 3414,
+      "sha256": "92dd86953e7266916dd4c592b6dd789eeda1ccb59ea6f9114c2f5b648066de38"
+    },
+    {
+      "path": "brian2-rust/tests/test_mpi_training.py",
+      "bytes": 11964,
+      "sha256": "df42c16a6ce2f3286854be042588302db497acee85eda367768431e3e88646ed"
+    },
+    {
+      "path": "brian2-rust/tests/test_multi_area_activity_ticks.py",
+      "bytes": 2745,
+      "sha256": "81b46f672f896cc424ea276a252e2144cb500f9ebb972758068c449e26ad56aa"
+    },
+    {
+      "path": "brian2-rust/tests/test_multi_area_analysis.py",
+      "bytes": 2462,
+      "sha256": "93ea5ce66dde6bb7f427ebc8ae0ff8466dabf1ae613821592d0d81d5842f42b7"
+    },
+    {
+      "path": "brian2-rust/tests/test_multiprocessing_examples.py",
+      "bytes": 1838,
+      "sha256": "6e28a0f63944088de10d106be0ba0efb63c24b0f931e0ddd242f2353a3f8c831"
+    },
+    {
+      "path": "brian2-rust/tests/test_native.py",
+      "bytes": 24016,
+      "sha256": "7fa4ade3cf4d8c8563e7c2869fc85ad83718d884e4b57094f6ec489693a8d67d"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_mam_activity.py",
+      "bytes": 5679,
+      "sha256": "4b423712ff7e6ffaccb3fbf9bba879def84661363356096ed7bdba80050dfb1a"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_measurement.py",
+      "bytes": 1117,
+      "sha256": "aacb2e8e6d7b0e07fc92a31949072d56aa07efa25fcbfbc406fe10298d94a5ee"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training.py",
+      "bytes": 13307,
+      "sha256": "c0ce01ae9879d00acbb3eb415d7e4e25d31d1d725cb8944935efb72752903a5a"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_cuda.py",
+      "bytes": 3749,
+      "sha256": "655f38b7e6cf178aca733fd08bf7c470c47a53f8508d7691206ade9588ea5fee"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_equations.py",
+      "bytes": 6892,
+      "sha256": "f6800ef460c74d5cade3da12588f49cc531f52af4528f0c1c6c1116f70575a08"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_gpu_mpi.py",
+      "bytes": 4474,
+      "sha256": "8167c35aeea800150b00088330e0a139ea1e720790100cff5e8d701c01827ac8"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_graph.py",
+      "bytes": 14777,
+      "sha256": "78b33ff8cf5448026697ca344fb619afc224232da1a431586ad202c4b68ec851"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_mpi.py",
+      "bytes": 5802,
+      "sha256": "d06d2ad22a4d0a91dc0a2c8a9ec2361306333c579bac262dfd2ae99961553fe5"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_multistate.py",
+      "bytes": 9066,
+      "sha256": "109c8fa0c4c0c0b715669d156c4f39096e66bc1def93f914855e4e293c2908c9"
+    },
+    {
+      "path": "brian2-rust/tests/test_native_training_multistate_gpu.py",
+      "bytes": 6328,
+      "sha256": "6968a509e1d9554a07446b0383ed75a09d5938fd0bdd73e608babf686ab3c0b6"
+    },
+    {
+      "path": "brian2-rust/tests/test_nmda_deterministic_core.py",
+      "bytes": 2672,
+      "sha256": "dca37f8fdc914618003bb552884b9c332cca7739c32cc65e8099277baf0e2bc8"
+    },
+    {
+      "path": "brian2-rust/tests/test_official_example_full_runs.py",
+      "bytes": 7118,
+      "sha256": "0712ae0f9bea5b10de35e84adcb62a37cee846ee0ddb12b8187f8459b625a1d0"
+    },
+    {
+      "path": "brian2-rust/tests/test_optional_examples.py",
+      "bytes": 5934,
+      "sha256": "7e4ed1c1c106dfaf1577747eb725b34fe9bd5fdb7abda5e537d20cdf247f0d6e"
+    },
+    {
+      "path": "brian2-rust/tests/test_performance_suite.py",
+      "bytes": 2783,
+      "sha256": "9478b30f1658ecb1e7801328672e56437c4cbf11fb30d17fc6f560432183cc54"
+    },
+    {
+      "path": "brian2-rust/tests/test_population.py",
+      "bytes": 78120,
+      "sha256": "689b0fa8458e14afb019d30e6bd12713e9a4c9db788f4c6496b5405ab3c5d5a8"
+    },
+    {
+      "path": "brian2-rust/tests/test_precompiled_comparison.py",
+      "bytes": 1152,
+      "sha256": "6db9e81ddaa1f09b68d347bd37be1b7441eb19b92e40d5312f9ba98179533e82"
+    },
+    {
+      "path": "brian2-rust/tests/test_presynaptic_write_summed_only.py",
+      "bytes": 2724,
+      "sha256": "dccda5be696a591223bb02da32ba56a37068ca7896fb3fbd7f76aef9ee0ee4bf"
+    },
+    {
+      "path": "brian2-rust/tests/test_probe.py",
+      "bytes": 35898,
+      "sha256": "e8287b5448ff44efcfc842de074a0b4eddb81216fc4a5ba28d2a7ab879d423a0"
+    },
+    {
+      "path": "brian2-rust/tests/test_rate_monitor.py",
+      "bytes": 3264,
+      "sha256": "e2bc9eee00168f4ff7123c341059cea90fd80e9c4854b1f66181bfcdde5f4887"
+    },
+    {
+      "path": "brian2-rust/tests/test_refractory.py",
+      "bytes": 19361,
+      "sha256": "0a3e3eeca1453f0fc2e44696545df5eb001fcd4b6dabf8025713daf2eb153f77"
+    },
+    {
+      "path": "brian2-rust/tests/test_resource_limits.py",
+      "bytes": 11336,
+      "sha256": "a315ce7a2373dce36ea650f437699807116333dfaa5ccf401efe7e7417f754ff"
+    },
+    {
+      "path": "brian2-rust/tests/test_results_bounded.py",
+      "bytes": 6668,
+      "sha256": "ab5d56ddfd053a02e4466be731a3e055f0873f04d9d4ef49704c45528aa7d738"
+    },
+    {
+      "path": "brian2-rust/tests/test_results_times.py",
+      "bytes": 3903,
+      "sha256": "f82ce11042fd11a04a2d5a1d3952db0858bbadd7204a3b6a66090255d478fa84"
+    },
+    {
+      "path": "brian2-rust/tests/test_rng_poisson.py",
+      "bytes": 26216,
+      "sha256": "7184c27e2db3432b979a0389afe2e8884785e4a11a6249eff34643885d77cfc7"
+    },
+    {
+      "path": "brian2-rust/tests/test_stdp_bitset_comparison.py",
+      "bytes": 3789,
+      "sha256": "c2db3c07c914bb3bcdd8c16f28614873df25802b2ea4d960f8dae3d85951a1b0"
+    },
+    {
+      "path": "brian2-rust/tests/test_stdp_matrix.py",
+      "bytes": 4291,
+      "sha256": "8e1d7aac81c990d221a5902f054658d3d4986f59cbc93762a41aa746c0ad341f"
+    },
+    {
+      "path": "brian2-rust/tests/test_stdp_prefix_comparison.py",
+      "bytes": 1529,
+      "sha256": "407f00d10a0c5bfbd9d209ff48359f4e751f2ce97a97e85590a86dcdbd19e7cd"
+    },
+    {
+      "path": "brian2-rust/tests/test_stdp_prefix_sweep.py",
+      "bytes": 2131,
+      "sha256": "a7c392a80282dd5d5590f9b5a9645e7bbd0df817ff222f1dcd361ef8b30714c9"
+    },
+    {
+      "path": "brian2-rust/tests/test_string_connection.py",
+      "bytes": 2326,
+      "sha256": "6fb59eeaae71b3ac83597aa1acbaad3f4438ab684733a91935b9a2604afd6047"
+    },
+    {
+      "path": "brian2-rust/tests/test_synapses.py",
+      "bytes": 123302,
+      "sha256": "e86acc666c9c1f017c97243751cce0e4585b26b433d1a0947552864599eaa40e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_async_actions.py",
+      "bytes": 13935,
+      "sha256": "358b089c668be85f4b1dd9292a448bb87c53515ccad82b3ea04dba4506bb5278"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_batch_external_inputs.py",
+      "bytes": 16156,
+      "sha256": "1d92575c90f3b339050f4136ff2ba1c8915af8c734866413a60af6d7326b319a"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_boolean_thresholds.py",
+      "bytes": 17732,
+      "sha256": "bd8e42d826bd2b229f83535858cc02360fd921c0ee25ec6f0b13d6b14396d337"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_brian.py",
+      "bytes": 6157,
+      "sha256": "ffcbfc9d5390a375c0456c4f1dbafc17c31b067264ce2d34550cd046ea151f90"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_brian_dynamic.py",
+      "bytes": 11562,
+      "sha256": "209ec67aa19fd1b5a2ec89bc5fcb8bf8eb00a947b65fee19ed15f9d1f5139be6"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_brian_integrators.py",
+      "bytes": 9041,
+      "sha256": "7defffc61a91df461a448fe6e073b67d0bffe289528b7a93a5694386fb6db1fb"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_brian_multistate.py",
+      "bytes": 4506,
+      "sha256": "f3b41becf8982ac6f2fffc52dbae96d5e46bf6213cdfb19103b158bd4f32c927"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_cached_noise.py",
+      "bytes": 12377,
+      "sha256": "5b7def76929d9475cf5fa3a3f696413de2cf0a27223edfe28c504669429fba03"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_cached_noise_edges.py",
+      "bytes": 11366,
+      "sha256": "9ce7f8f05042e532d62f7499b04526a57db1769c86662225fe5daf5747703b42"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_cached_weak_sde.py",
+      "bytes": 16811,
+      "sha256": "c6c1b6fdd6e2a47be5c378db4eff829dbb554a2a61da42e1ac0478f258c19b62"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_callback_effect_bounds.py",
+      "bytes": 1950,
+      "sha256": "1b18f46d6d49da3666c73f8729e5ca2dee6f2e2f4f65703780e4924718ad9bf7"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_callback_effect_vjps.py",
+      "bytes": 6144,
+      "sha256": "acd09e2d5822779fe5c0f3699e2776a175bfcb417724fbf1cb469febd353ca83"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_callback_effects.py",
+      "bytes": 8341,
+      "sha256": "b0e83c7d387d5e4aa57f55cd5e907fc270992d8e4239278417a287c15e7d8f82"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_clock_checkpoint.py",
+      "bytes": 9195,
+      "sha256": "17b16285fb871abd0638289f7ca78c13f27b17f8b31366cda964a899c0192b25"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_clock_itinerary.py",
+      "bytes": 8910,
+      "sha256": "f911cf747ffd52701b3166fe595dcb65833ac79ae06c8c444e2aaf345dab8199"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_constant_links.py",
+      "bytes": 12107,
+      "sha256": "4ac99bc01604fe2b680eba8205bf99eee3cf0efc87b024bd2e6db63822327d3d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_cross_linked.py",
+      "bytes": 9105,
+      "sha256": "590e4505b84b3ad8bd8dcd1324e7eff3e43979110dea762e0bfffc1ff49a771e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_crosshost_evidence.py",
+      "bytes": 4196,
+      "sha256": "edf9575d6378668d079da8ff69ac8e97d40b6faf2a1874e1bdc4515a5f9e559f"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_delay_batch.py",
+      "bytes": 3200,
+      "sha256": "9a606ec6dad7644dc8c66019adc7e73339bd797913f1a56790968b1f46b2048d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_delay_update.py",
+      "bytes": 14314,
+      "sha256": "9c8316f85a22915afc7141eeb969a352f6992e3a977aa2223abcf1bea7b770ab"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_delays.py",
+      "bytes": 17854,
+      "sha256": "43cfbf68f1ce6753cc58d4d3ac0ee5ad8678edd9e05d6b47eda61feca1fce52b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_discrete_external_inputs.py",
+      "bytes": 13019,
+      "sha256": "62c50763031a2be5bb02d9b96f22f9551910d021bcd9e4bc1cb41c6eec1b71a6"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_discrete_frontend.py",
+      "bytes": 9248,
+      "sha256": "5d39e60164659df78f885f7af4e1808e3aec4a543542d848764d2d4c02e7f4e2"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_division.py",
+      "bytes": 9067,
+      "sha256": "528288e6170b9a5a91a4ffa2e6b970789bbdddd1942b27024d5b7be79d1690e3"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic.py",
+      "bytes": 19082,
+      "sha256": "ad66317c0417aa529d1809607712cdb796bdb71eb69f9642cb80e8077d98d037"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_clocks.py",
+      "bytes": 10681,
+      "sha256": "5a824d0fa2e52094e89ada066136359de12fb2bb33fd0539735b213a939df739"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_gpu.py",
+      "bytes": 10671,
+      "sha256": "2a52a3e0a45e4b162c4a1f5181113b9943c6f540ee28764d43f23d512257e6b7"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py",
+      "bytes": 7527,
+      "sha256": "c8ec1493627fc76e85ca13aae4d91e3e83a7c59448e2b264d45a785a99fe3a6b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_refractory.py",
+      "bytes": 20485,
+      "sha256": "73f55d42c2f0869171ae76335aa9a0b442d0ae03c73e0e324870cdf505f8fd35"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_static_sde.py",
+      "bytes": 3713,
+      "sha256": "9421126d52506835c5c4ce2d8fabaf8149e7080ace66ab61e18c960d825a48dd"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_dynamic_thresholds.py",
+      "bytes": 16736,
+      "sha256": "699a3744ef42e1c91b78e0a6dc0f47b34f8dd678583e90a4188c980a5d3d51b8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_error_reports.py",
+      "bytes": 10652,
+      "sha256": "aa67f37af8ff50ec05d38eb1bfeabc00c5dc2c8cc85098d4180cbdbd0a8f63ee"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_event_delay.py",
+      "bytes": 13912,
+      "sha256": "f688ee40a9b829657bc1d3eed30146ab78dfab9e9903b3a4cb6ad513d421dd95"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_event_delay_gradients.py",
+      "bytes": 8975,
+      "sha256": "02a00d32f056c8163f0916ba10a4952268899f63d0b834ec955a413be53c1198"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_event_delay_integrations.py",
+      "bytes": 5316,
+      "sha256": "41e0703713f36a97cb28b7a50f7cf6d10e9a59f2e40d8e3976bceb4d6846a307"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_event_noise.py",
+      "bytes": 18319,
+      "sha256": "2c6c11c3420ae21ae23daae4ec643344b4b809fa3b00306b64fee624fc865780"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_external_neuron_links.py",
+      "bytes": 11166,
+      "sha256": "d7a3ba099d1fe35fa1ecb9a34641f8951ac3792bcf21633e135509f0a01bcd4a"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_external_selector_roots.py",
+      "bytes": 20345,
+      "sha256": "589876a0e55523492bb0b1be800eecb193f9c6a12f1d7b60737dd9ac48af067e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_external_state_inputs.py",
+      "bytes": 14270,
+      "sha256": "2740510c2e3b85ce203cb17bc67fe8df7701ad43e7362ebc11882b1342c3a40e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_heterogeneous.py",
+      "bytes": 13126,
+      "sha256": "38c056b705eae04fd60be1d80c1734bf17e34baf8ddf2b0c9f9aa07d60b25ef8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_implicit_refractory.py",
+      "bytes": 10076,
+      "sha256": "05b143b8cd2f3c70fbad281ac0f7361784a188d2a81889325cfde931bb7b8814"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_indexed_external_inputs.py",
+      "bytes": 13659,
+      "sha256": "cfe75a3d98ad9e5ba545cd6d4a6a9c479bb1a601933e8f4af3ad90d3b10272a3"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_indirect.py",
+      "bytes": 15473,
+      "sha256": "fbb157b63f93b001ff0f573bbfc503edc0ab13b44d61f0fa5562a6bda428d0c4"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_indirect_frontend.py",
+      "bytes": 12984,
+      "sha256": "1abb1e7b1efee629b7d2e3e8428d26a2f187518ed91e05fabff3deb9f17372fb"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_indirect_gpu.py",
+      "bytes": 13122,
+      "sha256": "734518eb21014a88b305616edaeb618fddfc2b48fdf62a60114f61b50e858781"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_indirect_migration.py",
+      "bytes": 2487,
+      "sha256": "d0fc1c23d18d6072a829e5c7c1173c2fb258b0162b12f1d340ee5c66c3ab9235"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_integer_bitwise.py",
+      "bytes": 8856,
+      "sha256": "35b2c61ae53b3eddae41e092922af9e53dca9819c6da4863475d99cb8046f8a2"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_integer_ir.py",
+      "bytes": 10039,
+      "sha256": "dd26b726090327f1e054a4a6532429678ecf55fc797252d81367ba81493aea8c"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_integrator_callback_effects.py",
+      "bytes": 12251,
+      "sha256": "41bd09698aeafdc2b8bd5a7f0845a2ea42b661c1e8613b805fcab5629915e820"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_keyword_defaults.py",
+      "bytes": 7669,
+      "sha256": "adecb6b6111fa0319147b44511e4957fa6cdc2f1afe42684fec442d01133b7a3"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_linked.py",
+      "bytes": 10613,
+      "sha256": "2a18159a35580308c766d1d1a8c39feaedc312ddd15a24bdb0b112f897531c8d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_math_sde.py",
+      "bytes": 10815,
+      "sha256": "4eae327d58e3e933ec999780fa5de3933fae5ac52a5eb292f7267c8b4d9e948c"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_migration.py",
+      "bytes": 17001,
+      "sha256": "86a2d87fb3586480ac9f5d31ccd02a49cbb3243eeb445c51e88520a3b0412156"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_multiclock_frontend.py",
+      "bytes": 17562,
+      "sha256": "7165cf82da6b072fbe25fca0bb4db3a5dabffda79611ce8796cab1dcd980c18a"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_multiclock_synapses.py",
+      "bytes": 13875,
+      "sha256": "9945a9768cd8f33098c2eabf9119f645f7895cac6c0cfbc76bd0b27228d293d5"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_multiclock_transitions.py",
+      "bytes": 6842,
+      "sha256": "21b19616755d07d4c7e873511b2d882dbcaf16e18e62599d4bd118c532dc5dd3"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_nested_index_codegen.py",
+      "bytes": 7167,
+      "sha256": "1c41e53190a7fd065eea9246d2ad1c3a22048787a65d4c727378ed36146dcfd3"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_nested_parameter_frontend.py",
+      "bytes": 7035,
+      "sha256": "aee1b2243468edd22b1bbf61735e0ead083821f75ad30d7dab3578dc9aa62f22"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_nested_synapse.py",
+      "bytes": 7105,
+      "sha256": "3d9be1ad7431ff2085b7aef23c2656f0122328bb881ca3108901f826dfc94daf"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_nested_synapse_vjp.py",
+      "bytes": 9789,
+      "sha256": "9640f5ded2a2233fa0c67825bd671cc3a5309cda291f65c115206a1e1275dd81"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_neuron_noise.py",
+      "bytes": 15883,
+      "sha256": "68256a95ede8931419c745205b8c5564aeecdf41ab1a2cded021cf8a22a177c8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_parameter_gather.py",
+      "bytes": 11029,
+      "sha256": "1cf1e69fa270f6927dc8e9d0a55b15a9628841257087a73b9fc8514973cfdcb8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_parameter_gather_frontend.py",
+      "bytes": 10709,
+      "sha256": "d313c9b7205789abbdcd967d06fb3550337304d35e9ac5edfd6d08b3732c96ba"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pathway_storage.py",
+      "bytes": 2943,
+      "sha256": "8926b7ba6a4ff1f04fa15ce558fb2bdaad56d48481b17bd702bfdb9579b7e345"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_brian.py",
+      "bytes": 6286,
+      "sha256": "3110a31405e8d28559b555c8bcda37cee900dc15fb29987864de93e232709a12"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_checkpoint_gpu.py",
+      "bytes": 15501,
+      "sha256": "567b3626115708123865018f5c6aaba6abe745ba621f229f0163f65e4aa460da"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_core.py",
+      "bytes": 9826,
+      "sha256": "7a5cbc4d984b0dc1cacabdaf8951fda3590b281473cba4d92d765020c51cea7f"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_event_replay.py",
+      "bytes": 19240,
+      "sha256": "41cb049d075513424e7c7d7d46527cfe3a93c8bb53addf7408ce3113e25c135b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_gpu.py",
+      "bytes": 10354,
+      "sha256": "0fd3738e2eceb54e4cb2f53176b2e844f8fe59256380a3e687f71e8c74a49f59"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_gpu_boundary.py",
+      "bytes": 13121,
+      "sha256": "62f80a31f45c550c4f33a8013b6d0b62c750aee41c2a3f9e28356fa7765add32"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_gpu_vjp.py",
+      "bytes": 6289,
+      "sha256": "aabdc20496d6712e75d8c7b1f1c5954e5ee012330ba313a5d01444168d6591da"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_retirement.py",
+      "bytes": 18005,
+      "sha256": "6fd56035159723c593df4620b3c82dbd08fb22adc75c6a912ccea1fb88d1778d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_shared.py",
+      "bytes": 17298,
+      "sha256": "56ea92c160e49673b1dd7a6d2f585e3a349c2b03bb724c85cc2a9a281615f5fe"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_shared_gpu.py",
+      "bytes": 11711,
+      "sha256": "1a9925a5978d6a15e0767732205d8b92348788bfd44480da8c101002a1f3e9ea"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_ssa.py",
+      "bytes": 13308,
+      "sha256": "5a723b5dea97db93083d13e3b117ca46f5f1226ff3735d98ec75e8548f51557b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_static.py",
+      "bytes": 24573,
+      "sha256": "14e94ff514adb90e85f2d23f2c769f4dc0e1daadde9807b63fb82a34b45d0136"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_static_gpu.py",
+      "bytes": 23204,
+      "sha256": "6b01061b36b536af7097fb9e408ad6928f15e35c0460f77ad293959c05caf0ef"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_zero.py",
+      "bytes": 11526,
+      "sha256": "52fb7bab91cf56bafb700447e121059f2cf30021952880a8167fd5b0d1bdb02e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_poisson_zero_vjp.py",
+      "bytes": 6781,
+      "sha256": "96c58ff69bfd868cdd4b03f7067e863897e8d79ef0e97b8f7e59a78a0c12153f"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_positional_only_callbacks.py",
+      "bytes": 2952,
+      "sha256": "614b86ba377b351b20aa25ae718a86b3f539584a4ac445a7528236b14109d383"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_precise_clock.py",
+      "bytes": 7107,
+      "sha256": "f5f90df98134b121c61f34477ff7f16652001036096dd59f1f17f12f01a9af00"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_private_arrays.py",
+      "bytes": 5258,
+      "sha256": "182c219d19d5e02a4f3c2078ae8ef8d8b547becd220212114a884c7f9924cdbe"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_branches.py",
+      "bytes": 14087,
+      "sha256": "0e7ab4f55c9a46a8e11a511b1e4405e2b93e2fb41af104f609e0e8d38380614b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_functions.py",
+      "bytes": 15087,
+      "sha256": "6d3525ba59d9b5a322ea627c46d0037e16ed2687d087075c6e1bd9ea12426814"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_loops.py",
+      "bytes": 10860,
+      "sha256": "9c60dbe614764317811c803bd39f5003894a18a4bed9543330c03597de7827b0"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_real_control.py",
+      "bytes": 3654,
+      "sha256": "5b7c512a4e04b5340acf89400a091f64ac625dbe3dfbde51e17481e4f427639e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_returns.py",
+      "bytes": 3893,
+      "sha256": "77ee6913ab0c188e8e0217ddf512fc1d8127992027fdceef58bdfbb28cae39b1"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_pure_statements.py",
+      "bytes": 13317,
+      "sha256": "f43d3a6d95a3cac0b52296cb5bf0b4c99a0205b2bb0a12f9fdc2f96189284be8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_random_refractory.py",
+      "bytes": 10526,
+      "sha256": "2a1d2be71d2f25920a1e74a8beea090f09ab618ffa01fe1ddc7f30719b9edb39"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_refractory.py",
+      "bytes": 11139,
+      "sha256": "4b4a8a45790ffd3b3fdf4f8552b5e7f065feeb1057496ca1b22b2d11871dfd6d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_regular.py",
+      "bytes": 12807,
+      "sha256": "e71f7ce4fe776dae40013f7ad3d2f8ab04762e758d5eb0abcb55c0b97a8fe23e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_regular_edges.py",
+      "bytes": 6061,
+      "sha256": "fba77c2d9fd85185ddd1ef7e62361efbc9ddb90b8a452f74d1093895f15f8348"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_rk_refractory.py",
+      "bytes": 3829,
+      "sha256": "f0d5bc8a1ba4ff9d56eb1e57991951f8c2208d35ca7ab78d1b0b55b1223f69e8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_runtime_refractory.py",
+      "bytes": 22252,
+      "sha256": "8554c08348cfb38fb9bdede2cb66cc25c512ba01c6889f79c428a6f5f658be60"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_scalar_stochastic.py",
+      "bytes": 17711,
+      "sha256": "022a4f8c37649b6008ec3225f99ba4f57d3ddcd432b7cd515d9ba1dcfcf31b8b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_spike_buffers.py",
+      "bytes": 11480,
+      "sha256": "e0af4c0c9135665280d29b2c73806d25a2dff95845ecb256d7d42fd4b0006788"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_standard_math.py",
+      "bytes": 7908,
+      "sha256": "5f5f9910455bf8f06c8a4ddc52238675f920ba0b3b2cbcb0efe10a1723c6bf44"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_state_refractory.py",
+      "bytes": 13864,
+      "sha256": "fb823e005f95931c6aa2f1d00069df3682b3de14d4aea1f3f0dc06950a8743aa"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_static_control_sde.py",
+      "bytes": 7795,
+      "sha256": "33bfdb4fc530bf4e2bf3d27afd328456b50f637dec983c321466b9f77f35875c"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_static_timed_inputs.py",
+      "bytes": 28936,
+      "sha256": "93b1fc1a469dd6f390390ecdef3411ecebd29fc6131f02695e0355ff69b409cb"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_static_vjp_activity.py",
+      "bytes": 9637,
+      "sha256": "02efc6deb8f5fbf7d64c885f082d6d27919f3fdc8a62241d7c2ad951911a4612"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_stochastic.py",
+      "bytes": 18523,
+      "sha256": "ef69ddbfbb820795c7ee1f17a34c299810ad8a684ab4fb945972443a4a23daa1"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_stochastic_refractory_combined.py",
+      "bytes": 7168,
+      "sha256": "64314fef526f2002abf93d49496ff437f5e0c2b2b1e3730aa5ef3fc18195951d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_stochastic_refractory_vjp.py",
+      "bytes": 11807,
+      "sha256": "b591b5807fcaee66da554eb625f9950507b98eb9230632a6e8053fa4d51ea0df"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py",
+      "bytes": 17809,
+      "sha256": "c745250f6f4935f28a13b2c4157fe2cbfb8953d90f80bb21a9b7d5c8d6498d0e"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_subgroup.py",
+      "bytes": 7469,
+      "sha256": "6943f9b3d75cfe112ad00d5fd772f2d2fa665045a46715feed7eb5eef77ceded"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_subgroup_edges.py",
+      "bytes": 6795,
+      "sha256": "5a87b4bbd8d52e0b092718b6a0494accd2e8337560f8e2acc0039af17fcb027b"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_subgroup_vjp.py",
+      "bytes": 9860,
+      "sha256": "b6be569331b049ca6348fb6c912b50a37888de7842db4c7fdf30c9df821c6862"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_summed.py",
+      "bytes": 20496,
+      "sha256": "5bf9dc9183f05ab0330f96f69444a29d71db6afb409a76f0bb596ac1387f6b85"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_synaptic_callback_effects.py",
+      "bytes": 9084,
+      "sha256": "b8046995bbe77f42ef986c69bec03dc532a54d43586b8224a76ec9b19264df2d"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_synaptic_draws.py",
+      "bytes": 6385,
+      "sha256": "dc0659ffd1efc79dc86da3b095a3e6407b3d8392e710b93e1fe5b25d97f11bd8"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_synaptic_endpoints.py",
+      "bytes": 18568,
+      "sha256": "15b699a87f1427df4df7a3006c8f17e9c223b4d4654576c191964affea14b2cb"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_time.py",
+      "bytes": 16746,
+      "sha256": "b996680ad7eaeb2cd45019993aff0dc5d2183c1eea0251e59bbeb98545d19834"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_timed_inputs.py",
+      "bytes": 16121,
+      "sha256": "7a4245d6c2e2b3e998058cc7fcf8abd9b2936bbdcbb7331b029cafbf758e5d43"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_uniform.py",
+      "bytes": 13558,
+      "sha256": "e210d2466a0231caad3b9858ea30fc14523134306837d6cfdc5ce74698f601aa"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_vjp_activity.py",
+      "bytes": 9554,
+      "sha256": "86b14a730473d6bb23d0f8fad3b24a6e3a217e99b0a093af4fff00bc4044cf86"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_warm_functions.py",
+      "bytes": 4118,
+      "sha256": "25751b451a19a92ea5a423e2dbe9d5f77b001b8b35dd06d6cab724b74f0a239a"
+    },
+    {
+      "path": "brian2-rust/tests/test_training_wrapper_bodies.py",
+      "bytes": 3472,
+      "sha256": "483c1cbbf8564f516922559484c1748eda9aafdaa698f5a5d26ba5260982e219"
+    },
+    {
+      "path": "brian2-rust/tests/test_wasm.py",
+      "bytes": 11985,
+      "sha256": "9fad47b154035ac931e749c483d65e9bcdb2072e8c29048df49f60428190de45"
+    },
+    {
+      "path": "brian2-rust/tests/test_weighted_binomial.py",
+      "bytes": 8451,
+      "sha256": "5dcc007c3b62abccdbf9b7da8036abe08cbc6f46b30db9c2ae16df55276ce1d6"
+    },
+    {
+      "path": "brian2/codegen/__init__.py",
+      "bytes": 285,
+      "sha256": "fb3ca7b5081232f81093c517b4ef0da38b4aadab788fe1fcc091d54baa872453"
+    },
+    {
+      "path": "brian2/codegen/_prefs.py",
+      "bytes": 2899,
+      "sha256": "cbf860836c50895ae2d93eee77a9cdb1e37fbfab7e6ad9691d5566e48f2fc3c1"
+    },
+    {
+      "path": "brian2/codegen/codeobject.py",
+      "bytes": 17842,
+      "sha256": "d09c5628babfad107843cc00a6291ceae2402c08d88f1de000fe471de4ddc17c"
+    },
+    {
+      "path": "brian2/codegen/cpp_prefs.py",
+      "bytes": 14343,
+      "sha256": "71fcf43511829b1b45722b347cd6b9cc6261a4782f543b541056534f537ec66a"
+    },
+    {
+      "path": "brian2/codegen/generators/GSL_generator.py",
+      "bytes": 45222,
+      "sha256": "58d20f0025b0d2b26dba1e5385a25291926fb15e29b32fffbdad9424956454d4"
+    },
+    {
+      "path": "brian2/codegen/generators/__init__.py",
+      "bytes": 524,
+      "sha256": "e31896a300378c3251de816da5cce86c4e13b0dd0e32aa1aea1b1c58ebf75d10"
+    },
+    {
+      "path": "brian2/codegen/generators/base.py",
+      "bytes": 12253,
+      "sha256": "92f9ab329bff3c174bd751aeb3eab784d81a9e435b0e68ea979ac215ea4ac8b2"
+    },
+    {
+      "path": "brian2/codegen/generators/cpp_generator.py",
+      "bytes": 25184,
+      "sha256": "a5b559f0a01a5eef551122568c0edf28de02aff895844edfc40adf2d7c367f0d"
+    },
+    {
+      "path": "brian2/codegen/generators/cython_generator.py",
+      "bytes": 27160,
+      "sha256": "36f65ae19c4de4324363a4b1c802bfa74c5ab36f2db011bf96687f9d09c49751"
+    },
+    {
+      "path": "brian2/codegen/generators/numpy_generator.py",
+      "bytes": 15671,
+      "sha256": "3809a7c716603cd5e8a1ab8058ee11c3fe796ec1e7a5edb7738823806a490018"
+    },
+    {
+      "path": "brian2/codegen/get_cpu_flags.py",
+      "bytes": 505,
+      "sha256": "8604ef7dbe6f331cb1a60d625e13d0bd4dec4a7cf285d4995fd099f66f3657e9"
+    },
+    {
+      "path": "brian2/codegen/indices.py",
+      "bytes": 1236,
+      "sha256": "a224cf806e7d0d40f6a0e6ae16fb60221aa8242f38b6f70878df31bfd534be5f"
+    },
+    {
+      "path": "brian2/codegen/optimisation.py",
+      "bytes": 26575,
+      "sha256": "46def6b638b3d1c714d817db7b62ea9c28f95d6dee0af8a764b7de729cd3f76a"
+    },
+    {
+      "path": "brian2/codegen/permutation_analysis.py",
+      "bytes": 5019,
+      "sha256": "33db2d520f27565c74808ecd7567f9923909491ea8a800f7ddc082d9af6a31e6"
+    },
+    {
+      "path": "brian2/codegen/runtime/GSLcython_rt/GSLcython_rt.py",
+      "bytes": 2356,
+      "sha256": "3c5e9e8eee12f339bc91cf02d1c7211dee70ff65d8ac29f770d08053a2437b10"
+    },
+    {
+      "path": "brian2/codegen/runtime/GSLcython_rt/__init__.py",
+      "bytes": 28,
+      "sha256": "2a26de0f5a4f6b5ac774826e45ec2db2cc9950d1de94f11b0a011b13d4e24957"
+    },
+    {
+      "path": "brian2/codegen/runtime/GSLcython_rt/templates/stateupdate.pyx",
+      "bytes": 4932,
+      "sha256": "877084380b9b7b2c3a5336c94154dcf01998d1d49e48aaf05c39cab97ba495f3"
+    },
+    {
+      "path": "brian2/codegen/runtime/__init__.py",
+      "bytes": 578,
+      "sha256": "8a00fde1f1ab2f2438e520925038a5cf178c7e1222f94e25303ff0a58bde8f2f"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/__init__.py",
+      "bytes": 25,
+      "sha256": "863b3aebbf1b740750a65fd9e2a0856a78b4b782150d93db7e34392c10bec65d"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/cython_rt.py",
+      "bytes": 10871,
+      "sha256": "e9c43f5beb3d7c232d04cb00939c104e4935ac601bf638ab9bde7f4a9c48dcaf"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/extension_manager.py",
+      "bytes": 12738,
+      "sha256": "d654179db9c46f395635e1fcc076a3709188733e56eaf8d3f2d5b2d2e973f1c9"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/common_group.pyx",
+      "bytes": 3437,
+      "sha256": "aa4eded0f5bd2663ed8eb3ce5628c04c6003361ecebc87a2fe5cee67aeb30789"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/group_get_indices.pyx",
+      "bytes": 575,
+      "sha256": "f3567bf5cdf566c0e8b14f7083311f55ceb0087c9902cbd6d65fb5328320d7cc"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/group_variable_get.pyx",
+      "bytes": 959,
+      "sha256": "91672280ac7d5dde94ea968a56a25e3548a7795b830a6fe6d1909d77ff24d950"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/group_variable_get_conditional.pyx",
+      "bytes": 786,
+      "sha256": "d4cf1166eb22f482498ef4b3f7d72e8dc863954add45e88559897ab0984ca6e1"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/group_variable_set.pyx",
+      "bytes": 419,
+      "sha256": "762fd9933b4b02d38c364aed6bf6379463e031dfdbb1d37c86742e415b0a1ff7"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/group_variable_set_conditional.pyx",
+      "bytes": 638,
+      "sha256": "2c38e1de4fbff7dbb41f382bef054ecf40f869b6eb25ef969100e7a0e0c8b63c"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/ratemonitor.pyx",
+      "bytes": 1732,
+      "sha256": "8e96f8d5b406d40227193030cf029cd2ddccfb69a12a9dcbd8bb29aa1ddd48fb"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/reset.pyx",
+      "bytes": 556,
+      "sha256": "d652d796c29aa6131e8df69ed0ba6c585de428c5d835d32ad76b482133658e3b"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/spatialstateupdate.pyx",
+      "bytes": 8565,
+      "sha256": "f35b9e2e5dd4244f63e61c546d058d72f17f1c85a79995613741e8593204866e"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/spikegenerator.pyx",
+      "bytes": 915,
+      "sha256": "da5718306283679d4d96f9cf2a3ea42df60217496421744b2538e8cdf944a674"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/spikemonitor.pyx",
+      "bytes": 2476,
+      "sha256": "6ddc6944a7e4c4bf7ba6d0c501d57040d136060b227a741b1b60f8d2d57d3876"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/statemonitor.pyx",
+      "bytes": 1310,
+      "sha256": "32e968cf5b319703671cc02e4db8a3e810bf975b6c7931d52f77bf9f97071c95"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/stateupdate.pyx",
+      "bytes": 341,
+      "sha256": "c9a8d47591a54c1b3238f7646be99dd20080edfc7d276615163086044048bcd4"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/summed_variable.pyx",
+      "bytes": 684,
+      "sha256": "4d2e985d8c15b4f227f5c693e7ddc767f33aca42b7559305872b5d69f88b0873"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/synapses.pyx",
+      "bytes": 1849,
+      "sha256": "29b93b1992c0c8b874c6606aa7570b95bf5871146dc9940069e73f2d66987750"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/synapses_create_array.pyx",
+      "bytes": 3235,
+      "sha256": "97735a7d6bd50a5c297d574e432ac5079944dce3155473accc8cc6583114fdd9"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/synapses_create_generator.pyx",
+      "bytes": 10999,
+      "sha256": "5f28f98fc672ad86beb5db32bc33abbb31c9a66cb954ecd7b85856bc98f5b6fb"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/synapses_push_spikes.pyx",
+      "bytes": 1085,
+      "sha256": "8d990bb58e019a28fa7a97b004ff3317ba94a7b87d51fb4ffd04304aeb92373b"
+    },
+    {
+      "path": "brian2/codegen/runtime/cython_rt/templates/threshold.pyx",
+      "bytes": 1152,
+      "sha256": "ce3cd2a4757c06509e2b953468317ef16b43caca0b6a467322af239fb4f1af0e"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/__init__.py",
+      "bytes": 145,
+      "sha256": "a53a6a8b560f3575db3f48bb301a6e67861c8b55639b6ddeb33cea94a99ee2ad"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/numpy_rt.py",
+      "bytes": 10111,
+      "sha256": "7b6df1929fca6bf95cae6cc5c5a9abf6ec6c78238c2dd6b170a5daba80775e65"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/common_group.py_",
+      "bytes": 590,
+      "sha256": "6390fe491e52c6a050fe2f2b76ea72891fe7d3d26c7994b1f4698d149e210190"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/group_get_indices.py_",
+      "bytes": 372,
+      "sha256": "278a70ad517b8f24507f9b7100fa13768a40ea3304285d852a45071f35d4701a"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/group_variable_get.py_",
+      "bytes": 567,
+      "sha256": "0dfed39478ce235df1b5605e2c2709c7245fdddecea4198e2f8291f7351cdbac"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/group_variable_get_conditional.py_",
+      "bytes": 485,
+      "sha256": "af6d372c8cf8d6e49a21ffeeab7d880405dfaf05d8ff405b080a437ef7757dc9"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/group_variable_set.py_",
+      "bytes": 323,
+      "sha256": "18e2acefa2743764690913bef2772903ea040169dcc7a9c34136e5bc0d5ddab1"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/group_variable_set_conditional.py_",
+      "bytes": 1525,
+      "sha256": "ac5056325e10fa856a9a902dce904020399057c6d422d66ae9320f9ee72b9eec"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/ratemonitor.py_",
+      "bytes": 538,
+      "sha256": "d222afcd83877d08adc803b84feb1daeeadc3e410eb3de0f8f5a1f382f2c9b8d"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/reset.py_",
+      "bytes": 603,
+      "sha256": "4a6e3a80eaab9d5e3ca944aff811744b2011d8693ffac08e92c9db083bad3e23"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/spatialstateupdate.py_",
+      "bytes": 6582,
+      "sha256": "f200666f675a7f6165d34e51fd77df0a2ef4125630853eb2ec60b5e89ad6ab40"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/spikegenerator.py_",
+      "bytes": 900,
+      "sha256": "cce660c23d38710194ffb5ae16ecf054e4e9fc45d9a3814d896f8101d5b96b59"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/spikemonitor.py_",
+      "bytes": 1170,
+      "sha256": "c369cd0e1ecd9970667531a276b905da0061c8324852261dd6e8b70536974d8c"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/statemonitor.py_",
+      "bytes": 555,
+      "sha256": "25fea757980673cdcec23b4d0d32df1c71a5c82466f81dd67dc1c1122a89b872"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/stateupdate.py_",
+      "bytes": 291,
+      "sha256": "efcbc0a57b994fb2837d70223a3af10258f19f8acb66576d8a7d755e480b53b2"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/summed_variable.py_",
+      "bytes": 1183,
+      "sha256": "218a8dbb9c6f44e66a7570975874189fbfb8f488c527bdea62250768c3f5451d"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/synapses.py_",
+      "bytes": 587,
+      "sha256": "ced2341da92bcba7e46fe27abc36733d75729cf73af356ac57d2a1e6e3a0a1ca"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/synapses_create_array.py_",
+      "bytes": 1165,
+      "sha256": "9aad502ac1833e9244fc76eb06d96b68909bb3a9e730eed7f55b5ee71e030e3f"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/synapses_create_generator.py_",
+      "bytes": 9781,
+      "sha256": "9542d52b91af4e36069abb3092baa9698ec89a495d6540d28edcb8ecfcc3ad4c"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/synapses_push_spikes.py_",
+      "bytes": 157,
+      "sha256": "2fe1a7e88663f30da97413fcc9d9579bc16d05154e2c509253ffef32f80e84be"
+    },
+    {
+      "path": "brian2/codegen/runtime/numpy_rt/templates/threshold.py_",
+      "bytes": 1275,
+      "sha256": "aae25970e894509823de0c364dfb8d06380a67ed567234cb082655eaa16e7921"
+    },
+    {
+      "path": "brian2/codegen/statements.py",
+      "bytes": 3870,
+      "sha256": "f4c11bd2a5e8e689fba08f042dda253bb88579d1d413608e47d23a9d72999005"
+    },
+    {
+      "path": "brian2/codegen/targets.py",
+      "bytes": 181,
+      "sha256": "636df816c9052a0a6093d8cef53cebf734d474c86c8dad5d82746393c81c7c11"
+    },
+    {
+      "path": "brian2/codegen/templates.py",
+      "bytes": 9926,
+      "sha256": "667df252488a8100e9c497d70f1c341a2f360ea19e7f29ed5ec784ce8a2f660a"
+    },
+    {
+      "path": "brian2/codegen/translation.py",
+      "bytes": 16878,
+      "sha256": "c85f5cfe1786d4a51974ff44c4cad15637e0a3cb59ac52de669158e4bcbb308c"
+    },
+    {
+      "path": "brian2/core/functions.py",
+      "bytes": 35952,
+      "sha256": "71dbe5b154fea7cc072b5f39fd926544f1c55b0012d1eedbbaf14c129b1dd06d"
+    },
+    {
+      "path": "brian2/equations/unitcheck.py",
+      "bytes": 3877,
+      "sha256": "24eaf3d7cc2495d0e7c93b26254104a00452ffeeb3d86ce13e359ce680ea4ab5"
+    }
+  ],
+  "scope_limit": "Inspected local inputs, including uncommitted and untracked sources; not a qualified release or an executable source archive. Historical experiments retain their own source manifests."
+}

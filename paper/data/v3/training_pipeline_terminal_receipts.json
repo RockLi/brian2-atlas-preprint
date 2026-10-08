@@ -1,0 +1,46 @@
+[
+  {
+    "name": "pre-ready-collection",
+    "session_id": 12302,
+    "exit_code": 0,
+    "chunk_id": "4d82c9",
+    "identities": 4375
+  },
+  {
+    "name": "final-freeze",
+    "session_id": 45868,
+    "exit_code": 0,
+    "chunk_id": "36adfe",
+    "source_inputs": 744,
+    "copied_assets": 1654
+  },
+  {
+    "name": "ready-timeout-pilot",
+    "session_id": 79040,
+    "exit_code": 0,
+    "chunk_id": "0e1f8c",
+    "passed": 1
+  },
+  {
+    "name": "final-module-launched",
+    "session_id": 59851,
+    "initial_chunk": "45d1c8",
+    "exit_code": null
+  },
+  {
+    "name": "failed-original172",
+    "session_id": 59851,
+    "exit_code": 1,
+    "chunk_id": "2a20da",
+    "passed": 129,
+    "skipped": 42,
+    "failed": 1
+  },
+  {
+    "name": "restore-timeout-single",
+    "session_id": 99649,
+    "exit_code": 0,
+    "chunk_id": "8c79cc",
+    "passed": 1
+  }
+]

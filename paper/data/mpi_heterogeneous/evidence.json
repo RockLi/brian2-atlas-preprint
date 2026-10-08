@@ -1,0 +1,93 @@
+{
+  "sources": [
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/verification.json",
+      "retained": "simulation_verification.json",
+      "bytes": 2354,
+      "sha256": "bb8cec8d58cb0a9bb495527f694328766c6dc1bd0ae899063b7c06306d457fc5"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/example-runtime.json",
+      "retained": "simulation_example_runtime.json",
+      "bytes": 1670,
+      "sha256": "53d12f0c3c2591795941587514370e8006b542e2d5a2247408900554790f00c5"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/mixed-gpu.xml",
+      "retained": "mixed-gpu.xml",
+      "bytes": 3217,
+      "sha256": "843e2e3e88c8684e0e4688501ff6534526b9bc34f29e2bf6f8f4659ae17b08c3"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/gpu-inventory.xml",
+      "retained": "gpu-inventory.xml",
+      "bytes": 382,
+      "sha256": "fa4aec115f44330209443a3564c270a02a751363aa14f210da7599af825ab1cf"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/cpu-mpi-regression.xml",
+      "retained": "cpu-mpi-regression.xml",
+      "bytes": 9145,
+      "sha256": "753386e7d26a011bf077d5a3ef8b38e2c80664e03f455c1bab40276834219d11"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/heterogeneous-20260911/plan-device-regression.xml",
+      "retained": "plan-device-regression.xml",
+      "bytes": 8115,
+      "sha256": "53bf8659943cce4a6e2d8b793c62877dfd924aeb6ec2c7a5160c2af90c8d54ad"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/MPI_GPU.md",
+      "retained": "simulation_contract.md",
+      "bytes": 5931,
+      "sha256": "c7aa0ee2d480de507356bfd611059530c2d3de802855a9e892750475f7116234"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/python/brian2_rust/mpi_gpu.py",
+      "retained": "inspected_mpi_gpu.py",
+      "bytes": 9581,
+      "sha256": "f37d6d4895919d6f0c73dc59148e5cd73ae4d3f4243628b7781d372313f1b08a"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-v4-gpu-20261002/cuda-l4-mpich5/verification.json",
+      "retained": "training_cuda_l4_verification.json",
+      "bytes": 1973,
+      "sha256": "62234b3055d63bbcd2d0422ac3bf4599b0ee69a8c9206d34c44a84df825c647c"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-v4-gpu-20261002/README.md",
+      "retained": "training_cuda_scope.md",
+      "bytes": 5339,
+      "sha256": "48615bdacd60a5dc481fdaa1f4eb71cd8a6b58af82c0d89c3df67086139a79ac"
+    }
+  ],
+  "inspection_date": "2026-10-07",
+  "simulation_delivery": {
+    "passed": 118,
+    "skipped": 12,
+    "mixed_and_inventory_passed": 25,
+    "hardware": "Local Apple Silicon Metal GPU with actual MPI processes",
+    "rank_backends": [
+      "cpu",
+      "metal"
+    ],
+    "rank_gpu_dispatches": [
+      0,
+      32
+    ],
+    "example_spikes": 82,
+    "simulation_nvidia_hardware_qualified": false,
+    "cross_host_qualified": false,
+    "simultaneous_metal_cuda_qualified": false
+  },
+  "training_cuda": {
+    "accepted": true,
+    "cuda_mpi_passed": 31,
+    "passed": 100,
+    "skipped": 64,
+    "scope": "one L4; multiple MPI ranks share logical CUDA device 0; no cross-host or multi-physical-GPU claim",
+    "gpu": "L4",
+    "physical_gpus": 1
+  },
+  "scope": "Retained contract documents, XML count consistency and recorded runtime/qualification fields; no new hardware or scientific validation."
+}

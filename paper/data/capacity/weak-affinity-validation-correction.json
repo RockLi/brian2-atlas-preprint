@@ -1,0 +1,18 @@
+{
+  "reason": "Topology-aware runtime CPU ordering differs from numeric CPU-ID sorting. Validate per-host distinct allowed physical-core coverage and host rank grouping. Numerical source and previous outputs unchanged.",
+  "actual_first_host_rank_cpu_ids": [
+    1,
+    37,
+    13,
+    25,
+    49,
+    85,
+    61,
+    73
+  ],
+  "scripts": {
+    "control.py": "70d7c7e2be6983315220c5c401de34112823b1d00aee31448fa95a57b3aa64b5",
+    "audit.py": "1a2209557fea69f097a0d36b8d83d725e1cf7a7b075cb4456b370e2936c4342a",
+    "resume_sweep.py": "e92d584344f40780df2ab07b4d96074d148c252dcdbfb5a1dbe79f84d3dd126b"
+  }
+}

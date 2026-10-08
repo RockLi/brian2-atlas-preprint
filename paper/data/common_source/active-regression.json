@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "scope": "Remote correctness only; no performance claim. Offset target subgroup, both sum directions, mutable continued-run scalar and state, plastic event updates, multiple clocks.",
+  "cached_vs_uncached_bit_exact": true,
+  "nonzero_source_and_target_spikes": true,
+  "spike_counts": {
+    "source_ticks": 105,
+    "target_ticks": 42
+  },
+  "comparisons": {
+    "uncached": {
+      "source_v": {
+        "passed": true,
+        "shape": [
+          20,
+          32
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_g": {
+        "passed": true,
+        "shape": [
+          20,
+          32
+        ],
+        "exact": false,
+        "max_abs": 1.734723475976807e-18
+      },
+      "target_v": {
+        "passed": true,
+        "shape": [
+          8,
+          16
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_g": {
+        "passed": true,
+        "shape": [
+          8,
+          16
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "weights": {
+        "passed": true,
+        "shape": [
+          80
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "trace_s": {
+        "passed": true,
+        "shape": [
+          80
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_ticks": {
+        "passed": true,
+        "shape": [
+          105
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_indices": {
+        "passed": true,
+        "shape": [
+          105
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_ticks": {
+        "passed": true,
+        "shape": [
+          42
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_indices": {
+        "passed": true,
+        "shape": [
+          42
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      }
+    },
+    "cached": {
+      "source_v": {
+        "passed": true,
+        "shape": [
+          20,
+          32
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_g": {
+        "passed": true,
+        "shape": [
+          20,
+          32
+        ],
+        "exact": false,
+        "max_abs": 1.734723475976807e-18
+      },
+      "target_v": {
+        "passed": true,
+        "shape": [
+          8,
+          16
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_g": {
+        "passed": true,
+        "shape": [
+          8,
+          16
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "weights": {
+        "passed": true,
+        "shape": [
+          80
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "trace_s": {
+        "passed": true,
+        "shape": [
+          80
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_ticks": {
+        "passed": true,
+        "shape": [
+          105
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "source_indices": {
+        "passed": true,
+        "shape": [
+          105
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_ticks": {
+        "passed": true,
+        "shape": [
+          42
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      },
+      "target_indices": {
+        "passed": true,
+        "shape": [
+          42
+        ],
+        "exact": true,
+        "max_abs": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "text-and-layout-checks-passed",
+  "pdf_sha256": "e7b0399c3b136378c3c4964026a6e7dc24f7e5da5029d9e1e2d88be60af259f9",
+  "page_count": 38,
+  "outside_page_characters": 0,
+  "portrait_pages": 35,
+  "original_screenshot_landscape_pages": 3,
+  "key_pages": {
+    "table5": 22,
+    "s13": 30,
+    "s5": 30
+  },
+  "checks": {
+    "main_default_results_only": true,
+    "superseded_dendritic_result_absent": true,
+    "same_source_ablation_in_s13": true,
+    "all_main_tables_present": true
+  },
+  "visual_review": {
+    "status": "passed",
+    "scope": "All 38 pages reviewed via contact sheets; changed tables and S13 at detail resolution. No clipping, overlap or missing content observed.",
+    "detail_pages": [
+      22,
+      30,
+      31
+    ],
+    "pagination_note": "S13 final provenance paragraph continues onto page 31; optional compaction export was not used."
+  }
+}

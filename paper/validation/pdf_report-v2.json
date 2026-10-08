@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "manuscript_version": "v2",
+  "pages": 22,
+  "figures": 7,
+  "tables": 3,
+  "bibliography_entries": 13,
+  "pdf_sha256": "8914d68b39e122a8c3be7c6a105b9b4c0e1fe0a807b5deb492f7d62d7ea6cfc5",
+  "pdf_bytes": 1031055,
+  "figure7_page": 18,
+  "table3_page": 19,
+  "archived_reports_hash_verified": 6,
+  "plan_selection_cases": 6,
+  "decision_cache_cases": 6,
+  "scope": "Document completeness, archived-report identity and reported-number/selection consistency; no new hardware benchmark or full raw-array audit.",
+  "author": "Xinjun Li",
+  "affiliation": "Independent researcher",
+  "author_information_finalized": "2026-10-06",
+  "visual_review": "All 22 updated pages rendered and reviewed; finalized author block and declaration verified."
+}

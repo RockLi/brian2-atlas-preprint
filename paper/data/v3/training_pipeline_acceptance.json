@@ -1,0 +1,224 @@
+{
+  "scope": "current full53",
+  "original_goal": "active",
+  "counts": {
+    "passed": 3194,
+    "skipped": 1181
+  },
+  "modules": {
+    "brian2-rust/tests/test_training_poisson_shared.py": {
+      "passed": 68
+    },
+    "brian2-rust/tests/test_training_poisson_shared_gpu.py": {
+      "passed": 136,
+      "skipped": 66
+    },
+    "brian2-rust/tests/test_training_poisson_checkpoint_gpu.py": {
+      "passed": 134,
+      "skipped": 54
+    },
+    "brian2-rust/tests/test_training_poisson_core.py": {
+      "passed": 37
+    },
+    "brian2-rust/tests/test_training_poisson_ssa.py": {
+      "passed": 23,
+      "skipped": 1
+    },
+    "brian2-rust/tests/test_training_poisson_brian.py": {
+      "passed": 18,
+      "skipped": 9
+    },
+    "brian2-rust/tests/test_training_poisson_zero.py": {
+      "passed": 33
+    },
+    "brian2-rust/tests/test_training_poisson_zero_vjp.py": {
+      "passed": 57
+    },
+    "brian2-rust/tests/test_training_poisson_gpu.py": {
+      "passed": 65,
+      "skipped": 31
+    },
+    "brian2-rust/tests/test_training_poisson_gpu_boundary.py": {
+      "passed": 129,
+      "skipped": 62
+    },
+    "brian2-rust/tests/test_training_poisson_gpu_vjp.py": {
+      "passed": 102,
+      "skipped": 48
+    },
+    "brian2-rust/tests/test_training_vjp_activity.py": {
+      "passed": 176,
+      "skipped": 84
+    },
+    "brian2-rust/tests/test_training_static_vjp_activity.py": {
+      "passed": 106,
+      "skipped": 44
+    },
+    "brian2-rust/tests/test_native_training.py": {
+      "passed": 20
+    },
+    "brian2-rust/tests/test_native_training_equations.py": {
+      "passed": 17,
+      "skipped": 4
+    },
+    "brian2-rust/tests/test_native_training_graph.py": {
+      "passed": 29
+    },
+    "brian2-rust/tests/test_native_training_multistate.py": {
+      "passed": 16
+    },
+    "brian2-rust/tests/test_native_training_multistate_gpu.py": {
+      "passed": 23,
+      "skipped": 23
+    },
+    "brian2-rust/tests/test_native_training_gpu_mpi.py": {
+      "passed": 19,
+      "skipped": 19
+    },
+    "brian2-rust/tests/test_training_dynamic_gpu.py": {
+      "passed": 45,
+      "skipped": 45
+    },
+    "brian2-rust/tests/test_training_dynamic_gpu_mpi.py": {
+      "passed": 29,
+      "skipped": 29
+    },
+    "brian2-rust/tests/test_training_clock_checkpoint.py": {
+      "passed": 39,
+      "skipped": 12
+    },
+    "brian2-rust/tests/test_training_delay_update.py": {
+      "passed": 57,
+      "skipped": 17
+    },
+    "brian2-rust/tests/test_training_migration.py": {
+      "passed": 50
+    },
+    "brian2-rust/tests/test_training_indirect_migration.py": {
+      "passed": 6
+    },
+    "brian2-rust/tests/test_training_timed_inputs.py": {
+      "passed": 60,
+      "skipped": 13
+    },
+    "brian2-rust/tests/test_training_standard_math.py": {
+      "passed": 112,
+      "skipped": 53
+    },
+    "brian2-rust/tests/test_training_integer_ir.py": {
+      "passed": 45,
+      "skipped": 18
+    },
+    "brian2-rust/tests/test_training_uniform.py": {
+      "passed": 36,
+      "skipped": 17
+    },
+    "brian2-rust/tests/test_training_stochastic.py": {
+      "passed": 69,
+      "skipped": 9
+    },
+    "brian2-rust/tests/test_training_poisson_static.py": {
+      "passed": 102
+    },
+    "brian2-rust/tests/test_training_brian_multistate.py": {
+      "passed": 7
+    },
+    "brian2-rust/tests/test_training_refractory.py": {
+      "passed": 63,
+      "skipped": 6
+    },
+    "brian2-rust/tests/test_training_state_refractory.py": {
+      "passed": 66,
+      "skipped": 31
+    },
+    "brian2-rust/tests/test_training_time.py": {
+      "passed": 72,
+      "skipped": 10
+    },
+    "brian2-rust/tests/test_training_static_timed_inputs.py": {
+      "passed": 198,
+      "skipped": 80
+    },
+    "brian2-rust/tests/test_training_poisson_static_gpu.py": {
+      "passed": 153,
+      "skipped": 147
+    },
+    "brian2-rust/tests/test_training_error_reports.py": {
+      "passed": 39
+    },
+    "brian2-rust/tests/test_training_scalar_stochastic.py": {
+      "passed": 85,
+      "skipped": 38
+    },
+    "brian2-rust/tests/test_training_integer_bitwise.py": {
+      "passed": 77,
+      "skipped": 33
+    },
+    "brian2-rust/tests/test_training_pure_functions.py": {
+      "passed": 55,
+      "skipped": 13
+    },
+    "brian2-rust/tests/test_training_brian.py": {
+      "passed": 23
+    },
+    "brian2-rust/tests/test_training_brian_dynamic.py": {
+      "passed": 28
+    },
+    "brian2-rust/tests/test_training_regular.py": {
+      "passed": 38,
+      "skipped": 16
+    },
+    "brian2-rust/tests/test_training_regular_edges.py": {
+      "passed": 18,
+      "skipped": 8
+    },
+    "brian2-rust/tests/test_training_brian_integrators.py": {
+      "passed": 27,
+      "skipped": 4
+    },
+    "brian2-rust/tests/test_training_cached_noise.py": {
+      "passed": 24,
+      "skipped": 12
+    },
+    "brian2-rust/tests/test_training_cached_noise_edges.py": {
+      "passed": 25,
+      "skipped": 10
+    },
+    "brian2-rust/tests/test_training_pure_statements.py": {
+      "passed": 82,
+      "skipped": 31
+    },
+    "brian2-rust/tests/test_training_pure_branches.py": {
+      "passed": 105,
+      "skipped": 44
+    },
+    "brian2-rust/tests/test_training_boolean_thresholds.py": {
+      "passed": 56,
+      "skipped": 11
+    },
+    "brian2-rust/tests/test_training_dynamic_thresholds.py": {
+      "passed": 53,
+      "skipped": 9
+    },
+    "brian2-rust/tests/test_training_cached_weak_sde.py": {
+      "passed": 42,
+      "skipped": 20
+    }
+  },
+  "identities": 4375,
+  "source_inputs": 744,
+  "copied_assets": 1654,
+  "terminal": {
+    "session_id": 68504,
+    "chunk_id": "487309",
+    "exit_code": 0
+  },
+  "duration_seconds": 12075.922758340836,
+  "hardware": {
+    "cpu": true,
+    "metal": true,
+    "local_mpi_2_8": true,
+    "nvidia": false,
+    "cloud": false
+  }
+}

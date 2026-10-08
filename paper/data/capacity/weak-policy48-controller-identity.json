@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "original_controller_sha256": "288d512ccf9076e5c330bd35dd21c415041264dd89b8f21345bc732043196ee0",
+  "policy48_controller_sha256": "1032a92d7a16f25f2bc273bddc6afebec6e136602086742e34d40cb2b501e5cb",
+  "scope": "Final 30-host case identities, separately staged admission guard, and 48 GiB fresh inventory threshold; frozen numerical engine and execution parameters unchanged."
+}

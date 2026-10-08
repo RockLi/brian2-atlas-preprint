@@ -1,0 +1,335 @@
+{
+  "criteria": {
+    "all_scientific_states_passed": true,
+    "remote_warmup_and_unprofiled_measurements": true,
+    "same_host": true,
+    "same_process_cpu_affinity": true,
+    "same_protocol": true,
+    "same_topology": true
+  },
+  "order": "cython-rust-rust-cython",
+  "per_run": {
+    "cython": [
+      {
+        "construction_seconds": 32.43924078345299,
+        "discarded_warmup": [
+          {
+            "host_loadavg_after": [
+              0.9580078125,
+              0.50048828125,
+              0.39013671875
+            ],
+            "host_loadavg_before": [
+              0.42431640625,
+              0.20068359375,
+              0.28662109375
+            ],
+            "simulation_and_recording_wall_seconds": 130.0978692593053
+          }
+        ],
+        "measurement_median_seconds": 10.288492465391755,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-a-cython-v1"
+      },
+      {
+        "construction_seconds": 5.304475438781083,
+        "discarded_warmup": [
+          {
+            "host_loadavg_after": [
+              0.60791015625,
+              0.5048828125,
+              0.4306640625
+            ],
+            "host_loadavg_before": [
+              0.49609375,
+              0.478515625,
+              0.42041015625
+            ],
+            "simulation_and_recording_wall_seconds": 10.050804456695914
+          }
+        ],
+        "measurement_median_seconds": 9.744760934263468,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-b-cython-v1"
+      }
+    ],
+    "rust": [
+      {
+        "construction_seconds": 4.910778170451522,
+        "discarded_warmup": [
+          {
+            "dump_write_seconds": 0.022684267,
+            "host_loadavg_after": [
+              0.73193359375,
+              0.5439453125,
+              0.41650390625
+            ],
+            "host_loadavg_before": [
+              0.6826171875,
+              0.52783203125,
+              0.40966796875
+            ],
+            "simulation_and_recording_seconds": 11.528189471,
+            "wall_seconds": 11.627866524271667
+          }
+        ],
+        "measurement_median_seconds": 11.546243553,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-a-rust-v1"
+      },
+      {
+        "construction_seconds": 4.653925571590662,
+        "discarded_warmup": [
+          {
+            "dump_write_seconds": 0.0232197,
+            "host_loadavg_after": [
+              0.43798828125,
+              0.44921875,
+              0.4052734375
+            ],
+            "host_loadavg_before": [
+              0.27685546875,
+              0.419921875,
+              0.39501953125
+            ],
+            "simulation_and_recording_seconds": 11.643121215,
+            "wall_seconds": 11.743988583795726
+          }
+        ],
+        "measurement_median_seconds": 11.584256813,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-b-rust-v1"
+      }
+    ]
+  },
+  "primary_metric": {
+    "cython": {
+      "count": 6,
+      "maximum_seconds": 11.117264641448855,
+      "mean_seconds": 10.133387211865434,
+      "median_seconds": 9.959238682407886,
+      "minimum_seconds": 9.73132786527276,
+      "population_std_seconds": 0.4927259867229655,
+      "samples_seconds": [
+        11.117264641448855,
+        10.172854493372142,
+        10.288492465391755,
+        9.744760934263468,
+        9.74562287144363,
+        9.73132786527276
+      ]
+    },
+    "definition": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups",
+    "interpretation": "rust_not_faster",
+    "rust_aot": {
+      "count": 6,
+      "maximum_seconds": 11.624924604,
+      "mean_seconds": 11.569658067166666,
+      "median_seconds": 11.565250183,
+      "minimum_seconds": 11.524182583,
+      "population_std_seconds": 0.03419849799207485,
+      "samples_seconds": [
+        11.524182583,
+        11.592971427,
+        11.546243553,
+        11.584256813,
+        11.624924604,
+        11.545369423
+      ]
+    },
+    "rust_relative_runtime": 1.16125846079269,
+    "rust_speedup_over_cython": 0.8611347376684663
+  },
+  "schema": "contextual-dendritic-steady-state-benchmark-aggregate-v1",
+  "scientific_state_comparisons": [
+    {
+      "arrays": {
+        "feedforward_1_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            77537
+          ]
+        },
+        "feedforward_2_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            77459
+          ]
+        },
+        "recurrent_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            957600
+          ]
+        },
+        "soma_spike_indices": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        },
+        "soma_spike_ticks": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        }
+      },
+      "backend": "cython",
+      "keys_equal": true,
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-a-cython-v1"
+    },
+    {
+      "arrays": {
+        "feedforward_1_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            77537
+          ]
+        },
+        "feedforward_2_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            77459
+          ]
+        },
+        "recurrent_weights": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            957600
+          ]
+        },
+        "soma_spike_indices": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        },
+        "soma_spike_ticks": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        }
+      },
+      "backend": "cython",
+      "keys_equal": true,
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-b-cython-v1"
+    },
+    {
+      "arrays": {
+        "feedforward_1_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 3.552713678800501e-15,
+          "shape": [
+            77537
+          ]
+        },
+        "feedforward_2_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 1.7763568394002505e-15,
+          "shape": [
+            77459
+          ]
+        },
+        "recurrent_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 2.636779683484747e-16,
+          "shape": [
+            957600
+          ]
+        },
+        "soma_spike_indices": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        },
+        "soma_spike_ticks": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        }
+      },
+      "backend": "rust",
+      "keys_equal": true,
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-a-rust-v1"
+    },
+    {
+      "arrays": {
+        "feedforward_1_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 3.552713678800501e-15,
+          "shape": [
+            77537
+          ]
+        },
+        "feedforward_2_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 1.7763568394002505e-15,
+          "shape": [
+            77459
+          ]
+        },
+        "recurrent_weights": {
+          "allclose": true,
+          "exact": false,
+          "max_abs": 2.636779683484747e-16,
+          "shape": [
+            957600
+          ]
+        },
+        "soma_spike_indices": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        },
+        "soma_spike_ticks": {
+          "allclose": true,
+          "exact": true,
+          "max_abs": null,
+          "shape": [
+            0
+          ]
+        }
+      },
+      "backend": "rust",
+      "keys_equal": true,
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/results/paper-scale-100ms-benchmark-b-rust-v1"
+    }
+  ],
+  "valid": true
+}

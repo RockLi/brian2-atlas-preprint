@@ -1,0 +1,21 @@
+{
+  "stage": "manuscript-import-and-build",
+  "status": "passed",
+  "generated_at_utc": "2026-10-08T07:49:00.587073+00:00",
+  "build_command": "python paper/scripts/build_manuscript.py",
+  "figures": 10,
+  "tables": 7,
+  "bibliography_entries": 16,
+  "scope": "Artifact structure, retained-source hashes and reported-number consistency; no new simulation, hardware benchmark or full scientific raw-array audit.",
+  "environment": {
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "packages": {
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "pillow": "12.3.0",
+      "markdown-it-py": "4.2.0"
+    }
+  },
+  "initial_environment_failure": "macOS system_profiler font query returned a plist without _items; no figure build completed in that attempt.",
+  "port_adjustment": "Default MPL_IGNORE_SYSTEM_FONTS=1 uses Matplotlib bundled fonts; no experimental values changed."
+}

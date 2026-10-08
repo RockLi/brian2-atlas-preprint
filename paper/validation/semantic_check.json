@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "source_test": "/private/tmp/brian2-flywire-mnist/brian2-rust/tests/test_synapses.py",
+  "test": "test_summed_linked_reader_observes_every_tick",
+  "result": "1 passed, 49 deselected, 11 warnings in 1.70s",
+  "scope": "Reference, AOT and Brian NumPy comparison; no new hardware benchmark",
+  "test_source_sha256": "e55d4c4189be614d82abfa686e53f31c4c6591799a37ca03af4d60bba0f46cc7"
+}

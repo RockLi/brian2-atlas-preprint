@@ -1,0 +1,69 @@
+{
+  "schema": "b2-cuda-mpi-multistate-verification-v1",
+  "accepted": true,
+  "passed": 100,
+  "failed": 0,
+  "skipped": 64,
+  "cuda_passed": 64,
+  "cuda_single_process_passed": 33,
+  "cuda_mpi_passed": 31,
+  "cpu_passed": 36,
+  "by_suite": {
+    "brian2-rust.tests.test_native_training_cuda": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 18
+    },
+    "brian2-rust.tests.test_native_training_equations": {
+      "passed": 17,
+      "failed": 0,
+      "skipped": 4
+    },
+    "brian2-rust.tests.test_native_training_gpu_mpi": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 19
+    },
+    "brian2-rust.tests.test_native_training_multistate": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    },
+    "brian2-rust.tests.test_training_brian_multistate": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    },
+    "brian2-rust.tests.test_native_training_multistate_gpu": {
+      "passed": 23,
+      "failed": 0,
+      "skipped": 23
+    }
+  },
+  "skipped_reason": "Metal tests on NVIDIA/Linux host",
+  "elapsed_seconds": 682.7815615000436,
+  "test_seconds": 622.719677778,
+  "source_match_at_completion": true,
+  "native_binary_sha256": "4f48f72fa9d15917f37442f5504bc31cfb9ac68d8ef292a062ad9b8080f31150",
+  "source_manifest_sha256": "8f5568c463283919214c8783bd851fdd6b3a2fe2a71727bd0a3ffc2bb33fe552",
+  "mpi_preflight_passed": true,
+  "app_completed": true,
+  "retries": 0,
+  "app_url": "https://modal.com/apps/insfocus/main/ap-tmicGNrxRJi97ejQe2LE1T",
+  "container_id": "ta-01M3YMBYBYZY4EZXRGAHVYDM1R",
+  "limits": {
+    "gpu": "L4",
+    "gpu_count": 1,
+    "max_containers": 1,
+    "function_timeout_seconds": 900,
+    "pytest_timeout_seconds": 720,
+    "retries": 0
+  },
+  "scope": "one L4; multiple MPI ranks share logical CUDA device 0; no cross-host or multi-physical-GPU claim",
+  "remaining": [
+    "cross-host GPU",
+    "multiple physical GPUs",
+    "arbitrary Brian semantics",
+    "performance and memory scaling"
+  ]
+}

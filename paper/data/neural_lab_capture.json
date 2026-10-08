@@ -1,0 +1,92 @@
+{
+  "captured_date": "2026-09-11",
+  "source_build": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm",
+  "asset_version": "50d818ceef70c8ec",
+  "url": "http://127.0.0.1:18781/",
+  "browser": "HeadlessChrome/152.0.0.0 on macOS",
+  "viewport_css_pixels": [
+    1560,
+    1500
+  ],
+  "capture": "Unmodified screenshot of the workspace element after the automatic default run; browser chrome and site navigation outside this element are omitted. No plots or metrics were redrawn.",
+  "backend": "WASM / reference-f64",
+  "config": {
+    "neurons": 160,
+    "duration_ms": 600,
+    "dt_ms": 0.1,
+    "seed": 42,
+    "synchronize": false,
+    "model": "adaptive_lif",
+    "drive": 1.65,
+    "spread": 0.55,
+    "tau_ms": 20,
+    "refractory_ms": 2,
+    "adaptation": 0.06,
+    "tau_adapt_ms": 120
+  },
+  "observed": {
+    "spikes": 3706,
+    "mean_rate_hz_per_neuron": 38.60416666666667,
+    "active_neurons_percent": 100,
+    "displayed_execution_ms": 403,
+    "plan_sha256": "3ea73cfa0d5f7c573cb750030c8303af30092e896eddd8991b0bb889357f4b01"
+  },
+  "scope": "Interface illustration from one default independent-cell simulation; not a new performance or scientific validation cohort. Separate from the retained 13-input model-specific AOT study.",
+  "sources": [
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/asset-version.json",
+      "bytes": 32,
+      "sha256": "35e07c430800ed3fe3b92bab306af4effc354a49450c7fa5937f88abd4d817f9"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/index.html",
+      "bytes": 12998,
+      "sha256": "73e218382fac337e07a62016cddc440ee775ff145d7eda98cbea9e7d3e13272f"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/lab.js",
+      "bytes": 22955,
+      "sha256": "156071707f6166fa7c6e7a7c4b41f9f5d4415094fe2274101c9641d461dfeaf3"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/lab.css",
+      "bytes": 17510,
+      "sha256": "72880f812beac7787000628525733ba8e29ac9f74a54faab489e7ba079b68f9f"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/models.js",
+      "bytes": 12190,
+      "sha256": "2118f528035b4a6f676bfe0f717df7ecc915b9a476311036f58e4dcf38bca1c1"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/worker.js",
+      "bytes": 2947,
+      "sha256": "b4ddd9496f85932e4e3ef87a215ddf7b30dd404078a28019a54b4ad6501d3dc7"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/runtime.js",
+      "bytes": 1481,
+      "sha256": "223a990a925fc04c0190d335f4282a5701102240fd8c0b3849a79e474ef11d73"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/pkg/b2_runner.js",
+      "bytes": 10733,
+      "sha256": "d6914da9a18a0eacf0d8a86289b530e312a639d5534ea392d4c468a51ba87a37"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/pkg/b2_runner_bg.wasm",
+      "bytes": 1994144,
+      "sha256": "cc60440c58bd80f32ebcdeb0fd013e52389f76d7a17c8d8b3ef258edf1a98123"
+    },
+    {
+      "path": "docs/preprint/figures/source/neural-lab-workspace.png",
+      "bytes": 271154,
+      "sha256": "be2c5d6c323b9aa22a736f38e8776717236bd361e886486a5e49ed8c6feaf3f5"
+    },
+    {
+      "path": "docs/preprint/data/neural-lab.browser.json",
+      "bytes": 24598,
+      "sha256": "b905242a8a58739cfa29ea1c065927330dff355a6675990e45f3094ed4b3f270"
+    }
+  ]
+}

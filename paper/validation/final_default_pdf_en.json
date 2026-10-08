@@ -1,0 +1,27 @@
+{
+  "status": "text-and-layout-checks-passed",
+  "pdf_sha256": "6bcd7ce3f0620a29b28e18350322bfce549429552129c8fd8fa849f041d4c71c",
+  "page_count": 44,
+  "outside_page_characters": 0,
+  "portrait_pages": 41,
+  "original_screenshot_landscape_pages": 3,
+  "key_pages": {
+    "table5": 27,
+    "s13": 36,
+    "s5": 36
+  },
+  "checks": {
+    "main_default_results_only": true,
+    "superseded_dendritic_result_absent": true,
+    "same_source_ablation_in_s13": true,
+    "all_main_tables_present": true
+  },
+  "visual_review": {
+    "status": "passed",
+    "scope": "All 44 pages reviewed via contact sheets; changed tables and S13 at detail resolution. No clipping, overlap or missing content observed.",
+    "detail_pages": [
+      27,
+      36
+    ]
+  }
+}

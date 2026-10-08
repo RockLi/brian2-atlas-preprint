@@ -1,0 +1,3310 @@
+{
+  "schema": "b2-gpu-tuning-cache-benchmark-v1",
+  "backend": "cuda",
+  "passed": true,
+  "cases": [
+    {
+      "name": "quiet",
+      "configuration": {
+        "case": "recurrent-delayed-stdp-v2",
+        "neurons": 4096,
+        "degree": 8,
+        "steps": 1024,
+        "dt_seconds": 0.0009765625,
+        "initial_v": "(i%16)/16",
+        "initial_w": 0.25,
+        "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+        "taupre_ticks": 16,
+        "taupost_ticks": 32,
+        "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+        "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+        "pre_delay": "edge_index%16 ticks",
+        "post_delay_ticks": 16,
+        "pre_before_post": true,
+        "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+        "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+        "acceptance": {
+          "float_rtol": 2e-05,
+          "float_atol": 2e-06,
+          "spikes": "exact ticks and neuron indices",
+          "lastupdate": "exact"
+        },
+        "workload": {
+          "drive": 0.015625,
+          "delay_span": 16,
+          "post_delay": 16,
+          "topology_kind": "random-fixed-outdegree",
+          "topology_seed": 42
+        },
+        "topology": {
+          "kind": "random-fixed-outdegree",
+          "seed": 42,
+          "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+          "self_edges": false,
+          "duplicate_edges": false,
+          "creation_order": "source, then sorted target",
+          "indegree_min": 0,
+          "indegree_max": 19,
+          "indegree_mean": 8.0,
+          "indegree_std": 2.7295045910384546
+        }
+      },
+      "expected_events": 0,
+      "activations": [
+        {
+          "index": 0,
+          "wall_seconds": 13.759304025000006,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "miss",
+              "input_sha256": "fbdb75b52ae803896386fd21e94082231816f780aff9d3009136858b8621dfd2",
+              "reason": "input not cached"
+            },
+            "replay": null,
+            "selected": "bitset",
+            "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02272835799999484,
+                    0.022382873000026393,
+                    0.02245737300000883
+                  ],
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02543926199996349,
+                    0.024557151000010435,
+                    0.024447101999953702
+                  ],
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.015445758999987902,
+                    0.015180942000029063,
+                    0.015150461000018822
+                  ],
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.017780931999993754,
+                    0.017998787000010452,
+                    0.017539983999995457
+                  ],
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.1542994980000003,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13785775100001274,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12987074400001575,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.14135028100002955,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.017780931999993754,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.015445758999987902,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.02543926199996349,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.02272835799999484,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.017998787000010452,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.022382873000026393,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.015180942000029063,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.024557151000010435,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.02245737300000883,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.015150461000018822,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.017539983999995457,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.024447101999953702,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.015092125999956352,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "total_seconds": 13.682055843,
+              "selected": "bitset",
+              "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "selected_run_seconds": 0.015092125999956352,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 13.751515926000025
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 2,
+            "kernels_compiled": 2,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": false
+          },
+          "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8"
+        },
+        {
+          "index": 1,
+          "wall_seconds": 1.726687405000007,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "fbdb75b52ae803896386fd21e94082231816f780aff9d3009136858b8621dfd2",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.021876999000028263,
+              "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02272835799999484,
+                    0.022382873000026393,
+                    0.02245737300000883
+                  ],
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02543926199996349,
+                    0.024557151000010435,
+                    0.024447101999953702
+                  ],
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.015445758999987902,
+                    0.015180942000029063,
+                    0.015150461000018822
+                  ],
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.017780931999993754,
+                    0.017998787000010452,
+                    0.017539983999995457
+                  ],
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.1542994980000003,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13785775100001274,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12987074400001575,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.14135028100002955,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.017780931999993754,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.015445758999987902,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.02543926199996349,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.02272835799999484,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.017998787000010452,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.022382873000026393,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.015180942000029063,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.024557151000010435,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.02245737300000883,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.015150461000018822,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.017539983999995457,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.024447101999953702,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.015092125999956352,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "total_seconds": 13.682055843,
+              "selected": "bitset",
+              "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "selected_run_seconds": 0.015092125999956352,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.721060427999987
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8"
+        },
+        {
+          "index": 2,
+          "wall_seconds": 1.7299192730000073,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "fbdb75b52ae803896386fd21e94082231816f780aff9d3009136858b8621dfd2",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.021844350000037593,
+              "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02272835799999484,
+                    0.022382873000026393,
+                    0.02245737300000883
+                  ],
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02543926199996349,
+                    0.024557151000010435,
+                    0.024447101999953702
+                  ],
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.015445758999987902,
+                    0.015180942000029063,
+                    0.015150461000018822
+                  ],
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.017780931999993754,
+                    0.017998787000010452,
+                    0.017539983999995457
+                  ],
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.1542994980000003,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13785775100001274,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12987074400001575,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.14135028100002955,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.017780931999993754,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.015445758999987902,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.02543926199996349,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.02272835799999484,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.017998787000010452,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.022382873000026393,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.015180942000029063,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.024557151000010435,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.02245737300000883,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.015150461000018822,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.017539983999995457,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.024447101999953702,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.015092125999956352,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "total_seconds": 13.682055843,
+              "selected": "bitset",
+              "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "selected_run_seconds": 0.015092125999956352,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.724330932999976
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8"
+        },
+        {
+          "index": 3,
+          "wall_seconds": 1.7223566789999722,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "fbdb75b52ae803896386fd21e94082231816f780aff9d3009136858b8621dfd2",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.021927782000034313,
+              "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02272835799999484,
+                    0.022382873000026393,
+                    0.02245737300000883
+                  ],
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.02543926199996349,
+                    0.024557151000010435,
+                    0.024447101999953702
+                  ],
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.015445758999987902,
+                    0.015180942000029063,
+                    0.015150461000018822
+                  ],
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.017780931999993754,
+                    0.017998787000010452,
+                    0.017539983999995457
+                  ],
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.1542994980000003,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13785775100001274,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12987074400001575,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.14135028100002955,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.017780931999993754,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.015445758999987902,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.02543926199996349,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.02272835799999484,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.017998787000010452,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.022382873000026393,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.015180942000029063,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.024557151000010435,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.02245737300000883,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.015150461000018822,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.017539983999995457,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.024447101999953702,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.015092125999956352,
+                  "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+                  "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+              "total_seconds": 13.682055843,
+              "selected": "bitset",
+              "selected_plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+              "selected_run_seconds": 0.015092125999956352,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.716776350000032
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "wide",
+      "configuration": {
+        "case": "recurrent-delayed-stdp-v2",
+        "neurons": 4096,
+        "degree": 32,
+        "steps": 1024,
+        "dt_seconds": 0.0009765625,
+        "initial_v": "(i%16)/16",
+        "initial_w": 0.25,
+        "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+        "taupre_ticks": 16,
+        "taupost_ticks": 32,
+        "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+        "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+        "pre_delay": "edge_index%8 ticks",
+        "post_delay_ticks": 3,
+        "pre_before_post": true,
+        "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+        "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+        "acceptance": {
+          "float_rtol": 2e-05,
+          "float_atol": 2e-06,
+          "spikes": "exact ticks and neuron indices",
+          "lastupdate": "exact"
+        },
+        "workload": {
+          "drive": 0.0625,
+          "delay_span": 8,
+          "post_delay": 3,
+          "topology_kind": "random-fixed-outdegree",
+          "topology_seed": 42
+        },
+        "topology": {
+          "kind": "random-fixed-outdegree",
+          "seed": 42,
+          "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+          "self_edges": false,
+          "duplicate_edges": false,
+          "creation_order": "source, then sorted target",
+          "indegree_min": 14,
+          "indegree_max": 53,
+          "indegree_mean": 32.0,
+          "indegree_std": 5.550768879736392
+        }
+      },
+      "expected_events": 22795895,
+      "activations": [
+        {
+          "index": 0,
+          "wall_seconds": 23.238736741000025,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "miss",
+              "input_sha256": "6b8de4d2c5c12ae3322bcb8ff6876085b3c8ab2f845c193e68005383a0ba3385",
+              "reason": "input not cached"
+            },
+            "replay": null,
+            "selected": "prefix-bitset",
+            "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.11822301399996604,
+                    0.1175245210000071,
+                    0.1169190460000209
+                  ],
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.10610525100003088,
+                    0.10424715499999593,
+                    0.10333660100002362
+                  ],
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.0824706180000021,
+                    0.07784911200002398,
+                    0.07939967300001172
+                  ],
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.08286632699997654,
+                    0.07644504000001007,
+                    0.07705038500000683
+                  ],
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.5423054089999937,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.5182640200000037,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.5189445170000226,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.5205746720000093,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.08286632699997654,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.0824706180000021,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.10610525100003088,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.11822301399996604,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.07644504000001007,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.1175245210000071,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.07784911200002398,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.10424715499999593,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.1169190460000209,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.07939967300001172,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.07705038500000683,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.10333660100002362,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 3,
+                  "seconds": 0.07802158900000222,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "total_seconds": 23.049542317000032,
+              "selected": "prefix-bitset",
+              "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "selected_run_seconds": 0.07802158900000222,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 23.204539871999998
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711087
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 2,
+            "kernels_compiled": 3,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": false
+          },
+          "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5"
+        },
+        {
+          "index": 1,
+          "wall_seconds": 3.9429237080000235,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6b8de4d2c5c12ae3322bcb8ff6876085b3c8ab2f845c193e68005383a0ba3385",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.09719927499997993,
+              "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 5,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "prefix-bitset",
+            "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.11822301399996604,
+                    0.1175245210000071,
+                    0.1169190460000209
+                  ],
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.10610525100003088,
+                    0.10424715499999593,
+                    0.10333660100002362
+                  ],
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.0824706180000021,
+                    0.07784911200002398,
+                    0.07939967300001172
+                  ],
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.08286632699997654,
+                    0.07644504000001007,
+                    0.07705038500000683
+                  ],
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.5423054089999937,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.5182640200000037,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.5189445170000226,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.5205746720000093,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.08286632699997654,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.0824706180000021,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.10610525100003088,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.11822301399996604,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.07644504000001007,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.1175245210000071,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.07784911200002398,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.10424715499999593,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.1169190460000209,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.07939967300001172,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.07705038500000683,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.10333660100002362,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 3,
+                  "seconds": 0.07802158900000222,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "total_seconds": 23.049542317000032,
+              "selected": "prefix-bitset",
+              "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "selected_run_seconds": 0.07802158900000222,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 3.915459271999964
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711087
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 5,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5"
+        },
+        {
+          "index": 2,
+          "wall_seconds": 3.8343290230000093,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6b8de4d2c5c12ae3322bcb8ff6876085b3c8ab2f845c193e68005383a0ba3385",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.09839430199997423,
+              "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 5,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "prefix-bitset",
+            "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.11822301399996604,
+                    0.1175245210000071,
+                    0.1169190460000209
+                  ],
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.10610525100003088,
+                    0.10424715499999593,
+                    0.10333660100002362
+                  ],
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.0824706180000021,
+                    0.07784911200002398,
+                    0.07939967300001172
+                  ],
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.08286632699997654,
+                    0.07644504000001007,
+                    0.07705038500000683
+                  ],
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.5423054089999937,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.5182640200000037,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.5189445170000226,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.5205746720000093,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.08286632699997654,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.0824706180000021,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.10610525100003088,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.11822301399996604,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.07644504000001007,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.1175245210000071,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.07784911200002398,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.10424715499999593,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.1169190460000209,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.07939967300001172,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.07705038500000683,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.10333660100002362,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 3,
+                  "seconds": 0.07802158900000222,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "total_seconds": 23.049542317000032,
+              "selected": "prefix-bitset",
+              "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "selected_run_seconds": 0.07802158900000222,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 3.800463178999962
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711087
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 5,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5"
+        },
+        {
+          "index": 3,
+          "wall_seconds": 3.8320178019999958,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6b8de4d2c5c12ae3322bcb8ff6876085b3c8ab2f845c193e68005383a0ba3385",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.09762942700001531,
+              "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "kernels_reused": 5,
+                "kernels_compiled": 0,
+                "dependency_files": 186,
+                "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+              }
+            },
+            "selected": "prefix-bitset",
+            "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.11822301399996604,
+                    0.1175245210000071,
+                    0.1169190460000209
+                  ],
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.10610525100003088,
+                    0.10424715499999593,
+                    0.10333660100002362
+                  ],
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.0824706180000021,
+                    0.07784911200002398,
+                    0.07939967300001172
+                  ],
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.08286632699997654,
+                    0.07644504000001007,
+                    0.07705038500000683
+                  ],
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+                  "device": "NVIDIA L4",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3,
+                    "dependency_files": 186,
+                    "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.5423054089999937,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.5182640200000037,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.5189445170000226,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.5205746720000093,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.08286632699997654,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.0824706180000021,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.10610525100003088,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.11822301399996604,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.07644504000001007,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.1175245210000071,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.07784911200002398,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.10424715499999593,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.1169190460000209,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.07939967300001172,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.07705038500000683,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.10333660100002362,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 3,
+                  "seconds": 0.07802158900000222,
+                  "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+                  "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+              "total_seconds": 23.049542317000032,
+              "selected": "prefix-bitset",
+              "selected_plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+              "selected_run_seconds": 0.07802158900000222,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 3.797162420999996
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711087
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "kernels_reused": 5,
+            "kernels_compiled": 0,
+            "dependency_files": 186,
+            "context_sha256": "1495768861ca92db36865523d8583b476cfe8291bc9b74ca63436e378e103e3b"
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "scope": "identical complete model; fresh executor, input hashing, plan validation, compiler-context checks, execution, full-result hashing, result write/read and cache publication; Brian lowering and model export excluded"
+}

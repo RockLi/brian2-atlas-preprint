@@ -1,0 +1,220 @@
+{
+  "boundary_by_active_input_count": {
+    "0": {
+      "generated_last_nonnegative_rate_hz": 398.0,
+      "published_last_nonnegative_rate_hz": 398.0
+    },
+    "1": {
+      "generated_last_nonnegative_rate_hz": 398.0,
+      "published_last_nonnegative_rate_hz": 398.0
+    },
+    "10": {
+      "generated_last_nonnegative_rate_hz": 116.0,
+      "published_last_nonnegative_rate_hz": 112.0
+    },
+    "11": {
+      "generated_last_nonnegative_rate_hz": 136.0,
+      "published_last_nonnegative_rate_hz": 130.0
+    },
+    "12": {
+      "generated_last_nonnegative_rate_hz": 156.0,
+      "published_last_nonnegative_rate_hz": 148.0
+    },
+    "13": {
+      "generated_last_nonnegative_rate_hz": 172.0,
+      "published_last_nonnegative_rate_hz": 164.0
+    },
+    "14": {
+      "generated_last_nonnegative_rate_hz": 188.0,
+      "published_last_nonnegative_rate_hz": 180.0
+    },
+    "15": {
+      "generated_last_nonnegative_rate_hz": 204.0,
+      "published_last_nonnegative_rate_hz": 198.0
+    },
+    "2": {
+      "generated_last_nonnegative_rate_hz": 398.0,
+      "published_last_nonnegative_rate_hz": 398.0
+    },
+    "3": {
+      "generated_last_nonnegative_rate_hz": 398.0,
+      "published_last_nonnegative_rate_hz": 398.0
+    },
+    "4": {
+      "generated_last_nonnegative_rate_hz": 12.0,
+      "published_last_nonnegative_rate_hz": 12.0
+    },
+    "5": {
+      "generated_last_nonnegative_rate_hz": 32.0,
+      "published_last_nonnegative_rate_hz": 30.0
+    },
+    "6": {
+      "generated_last_nonnegative_rate_hz": 48.0,
+      "published_last_nonnegative_rate_hz": 46.0
+    },
+    "7": {
+      "generated_last_nonnegative_rate_hz": 64.0,
+      "published_last_nonnegative_rate_hz": 64.0
+    },
+    "8": {
+      "generated_last_nonnegative_rate_hz": 80.0,
+      "published_last_nonnegative_rate_hz": 82.0
+    },
+    "9": {
+      "generated_last_nonnegative_rate_hz": 100.0,
+      "published_last_nonnegative_rate_hz": 96.0
+    }
+  },
+  "complete_published_seed_ensemble": true,
+  "ensemble_arrays": "/private/tmp/contextual-fig2-paper-env-ensemble-seeds0-9-v1/ensemble-v1.npz",
+  "ensemble_arrays_sha256": "67be923feca0e082375237a97a1ea29be62e59c75706d86a255a2e08778771c2",
+  "figure": "2",
+  "grid_shape_per_seed": [
+    16,
+    200
+  ],
+  "input_comparisons": [
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed0-full-v1/fig2-paper-env-seed0-comparison-v1.npz",
+      "arrays_sha256": "352c9373183975a9892e0cb987a85b067d30d0a47981ed8b1dd937657760242c",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed0-full-v1/fig2-paper-env-seed0-comparison-v1.json",
+      "comparison_sha256": "25569ac526a7394e7f255cf484bc363dd7f95c509660a6575cc2472f3a001f49",
+      "seed": 0
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed1-full-v1/fig2-paper-env-seed1-comparison-v1.npz",
+      "arrays_sha256": "2ec9f51825e16559f2c7c4dab3d3760b0b26c7e7431ca8df42de803e7c9e6a8f",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed1-full-v1/fig2-paper-env-seed1-comparison-v1.json",
+      "comparison_sha256": "16ce57a9d00263cb334a6421f018ea18721b60a6829765d8276a9891b53cb767",
+      "seed": 1
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed2-full-v1/fig2-paper-env-seed2-comparison-v1.npz",
+      "arrays_sha256": "93894beaf6e9a611d75eb1e2e2f148879151c866523db52471e9a1a3a475d8fb",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed2-full-v1/fig2-paper-env-seed2-comparison-v1.json",
+      "comparison_sha256": "7cd277b798002138edc63c0de89d355e3622f51f015b240c4f3c273c028417e8",
+      "seed": 2
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed3-full-v1/fig2-paper-env-seed3-comparison-v1.npz",
+      "arrays_sha256": "ef4b7625cf04d6ed11c0e44bef92b2764b24113143c83dd1120d502d57806dea",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed3-full-v1/fig2-paper-env-seed3-comparison-v1.json",
+      "comparison_sha256": "7bdc8d0f0fab68f5549325d7fe001f27b1e10d40ede8cbdfc134d77dce03c72f",
+      "seed": 3
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed4-full-v1/fig2-paper-env-seed4-comparison-v1.npz",
+      "arrays_sha256": "e48f50d8fe03aa84db88b6e7e0aac4c172aad717d8281d6fd296848ea179f48a",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed4-full-v1/fig2-paper-env-seed4-comparison-v1.json",
+      "comparison_sha256": "7700c2edd15f6bddd2c27d746c1c11778d0fa550d3ff2bb9bc607438468002e5",
+      "seed": 4
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed5-full-v1/fig2-paper-env-seed5-comparison-v1.npz",
+      "arrays_sha256": "bd5a87c1507976158a763544d69ff7a4f3f7f3fe8fbeabf28ec4d2fdfad68f70",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed5-full-v1/fig2-paper-env-seed5-comparison-v1.json",
+      "comparison_sha256": "9fae1d5095541634723ee3a896d9e68d1b0b5226b426069d0890fbc88c9d62cb",
+      "seed": 5
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed6-full-v1/fig2-paper-env-seed6-comparison-v1.npz",
+      "arrays_sha256": "47116ddd1421a256443c91ae73ce4995f89aa7f89505bb786d100e1f6c7f80e0",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed6-full-v1/fig2-paper-env-seed6-comparison-v1.json",
+      "comparison_sha256": "23059950160648f209ba4970ba8122e75218e738303c142b26160640c03a6130",
+      "seed": 6
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed7-full-v1/fig2-paper-env-seed7-comparison-v1.npz",
+      "arrays_sha256": "336940efb47802d484236e2a922d7c2c344758ce879d256c9b6c229f2c02b81b",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed7-full-v1/fig2-paper-env-seed7-comparison-v1.json",
+      "comparison_sha256": "177eccac9f454e28351c5251e7fa988f9e5b9da8c22b19a879fd079be5bd3fe3",
+      "seed": 7
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed8-full-v1/fig2-paper-env-seed8-comparison-v1.npz",
+      "arrays_sha256": "36a48bd5a52c2b93c38f933cef6fb12c7af8303f6058d3c66f77b80a3a6e4f9b",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed8-full-v1/fig2-paper-env-seed8-comparison-v1.json",
+      "comparison_sha256": "887e2ca617ed4ed1228e508c403df3a838b2546fe7181b8d16f994bb32cd198e",
+      "seed": 8
+    },
+    {
+      "arrays": "/private/tmp/contextual-fig2-paper-env-seed9-full-v1/fig2-paper-env-seed9-comparison-v1.npz",
+      "arrays_sha256": "1552e33c1f1a434e5784e33563954371c708e0c0fe14caa6270ce2bb43b195f9",
+      "comparison": "/private/tmp/contextual-fig2-paper-env-seed9-full-v1/fig2-paper-env-seed9-comparison-v1.json",
+      "comparison_sha256": "02454b3af85e3cb5f413cfb3be1530c8f43d8fa8e29ba3e1144b76988a5cbfe9",
+      "seed": 9
+    }
+  ],
+  "max_abs_ensemble_mean": 0.8670466387523884,
+  "pearson_ensemble_mean": 0.999603840046829,
+  "purpose": "scientific_reproduction_no_timings",
+  "rmse_ensemble_mean": 0.16053722144926783,
+  "schema": "contextual-dendritic-single-neuron-scan-ensemble-v1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "seedwise": {
+    "0": {
+      "pearson": 0.9993046793462245,
+      "rmse": 0.21091325042943565,
+      "sign_mismatches": 128
+    },
+    "1": {
+      "pearson": 0.9978496427213555,
+      "rmse": 0.38547960071278276,
+      "sign_mismatches": 57
+    },
+    "2": {
+      "pearson": 0.9978483559684932,
+      "rmse": 0.3905280500697147,
+      "sign_mismatches": 189
+    },
+    "3": {
+      "pearson": 0.9983669417858166,
+      "rmse": 0.3312078500655071,
+      "sign_mismatches": 90
+    },
+    "4": {
+      "pearson": 0.9993480398588538,
+      "rmse": 0.21394070225829834,
+      "sign_mismatches": 59
+    },
+    "5": {
+      "pearson": 0.9981047877440723,
+      "rmse": 0.3544197846149392,
+      "sign_mismatches": 62
+    },
+    "6": {
+      "pearson": 0.9974402743010776,
+      "rmse": 0.41703649694158174,
+      "sign_mismatches": 149
+    },
+    "7": {
+      "pearson": 0.9982079421013722,
+      "rmse": 0.3217305257120172,
+      "sign_mismatches": 66
+    },
+    "8": {
+      "pearson": 0.9954727516879884,
+      "rmse": 0.5503666411323566,
+      "sign_mismatches": 133
+    },
+    "9": {
+      "pearson": 0.9984989044691183,
+      "rmse": 0.30485120598361104,
+      "sign_mismatches": 118
+    }
+  },
+  "sign_mismatch_fraction_ensemble_mean": 0.02375,
+  "sign_mismatches_ensemble_mean": 76,
+  "timings_reported": false
+}

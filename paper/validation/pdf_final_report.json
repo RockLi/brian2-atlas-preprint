@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "presentation": "formal manuscript",
+  "pdf_path": "output/pdf/brian2-atlas-preprint.pdf",
+  "pdf_sha256": "6c1b088104e91d081309bb92d166d8a9b19f75939a621daedb1bf8a4f72369dc",
+  "pages": 35,
+  "figures": 9,
+  "tables": 6,
+  "references": 15,
+  "author": "Xinjun Li",
+  "title": "A Unified Intermediate Representation and Execution Architecture for Heterogeneous and Distributed Neural Simulation",
+  "subject": "brian2-atlas; heterogeneous and distributed neural simulation",
+  "section_pages": {
+    "5.8 Validation": [
+      24
+    ],
+    "5.8.1 Explicit NMDA": [
+      24
+    ],
+    "5.8.2 Contextual dendritic gating": [
+      25
+    ],
+    "Table 4 |": [
+      25
+    ],
+    "Table 5 |": [
+      26
+    ],
+    "Figure 8 |": [
+      25
+    ],
+    "6.3 A common workflow": [
+      28
+    ],
+    "References": [
+      31
+    ],
+    "Appendix A. Feature compatibility": [
+      32
+    ],
+    "Table 6 |": [
+      32
+    ],
+    "Author contributions, acknowledgements": [
+      30
+    ],
+    "5.9 Heterogeneous CPU/GPU MPI": [
+      26
+    ],
+    "Figure 9 |": [
+      27
+    ],
+    "Supplementary Figure S1": [
+      6
+    ]
+  },
+  "presentation_checks": {
+    "cover_status_line_removed": true,
+    "working_draft_footer_removed": true,
+    "page_numbers_retained": true,
+    "html_title_clean": true,
+    "pdf_subject_clean": true,
+    "editorial_publication_checklists_removed": true
+  },
+  "visual_review": {
+    "current_rendered_pages": [
+      6,
+      33,
+      34,
+      35
+    ],
+    "main_other_31_page_text_unchanged": true,
+    "render_directory": "tmp/pdfs/flywire-main-review",
+    "result": "All three integrated panels and modified prose reviewed; readable captions and continuous pagination; no PDF clipping or overlap. The operation strip shows its normal horizontal continuation."
+  },
+  "preserved_v3_pdf_sha256": "2fc47493a857e1b282ae4c81e8d420c5f5dd3a925d7539c1f28f9e0d728f5f07",
+  "scope": "Manuscript presentation, metadata, existing content and rendered layout; no new hardware or scientific validation.",
+  "heterogeneous_mpi_evidence_sha256": "b4ddc81ffe693c6824d1b77f6449b138eae7b843078e26fad212cb3a3c7e6f5a",
+  "b2ir_visualization_validation": "b2ir_visualization_report.json",
+  "main_pages": 32,
+  "integrated_supplementary_figure_pages": [
+    33,
+    34,
+    35
+  ],
+  "combined_pdf_checks": {
+    "main_other_31_page_text_unchanged": true,
+    "continuous_page_numbers": true,
+    "supplementary_figure_bookmark": true
+  },
+  "combined_visual_review": {
+    "current_rendered_pages": [
+      6,
+      33,
+      34,
+      35
+    ],
+    "main_other_31_page_text_unchanged": true,
+    "render_directory": "tmp/pdfs/flywire-main-review",
+    "result": "All three integrated panels and modified prose reviewed; readable captions and continuous pagination; no PDF clipping or overlap. The operation strip shows its normal horizontal continuation."
+  },
+  "b2ir_capture_scope": "Direct online saved activity replay plus separately identified default-parameter B2IR draft; no new simulation or benchmark; no claim of shared artifact identity."
+}

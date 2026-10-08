@@ -1,0 +1,6 @@
+{
+  "created_epoch": 1791382484.74245,
+  "reason": "Remove duplicate procedural topology from metadata.mpi and summary.mpi in locally transferred summaries. Full remote runtime and audit files retained and hash-bound. No numerical simulation/audit rerun or engine change.",
+  "control_sha256": "288d512ccf9076e5c330bd35dd21c415041264dd89b8f21345bc732043196ee0",
+  "resume_sha256": "bd8a6cbb884c291c02269de5ff56a16502d4900ba552b3ee46d7edbda252b96b"
+}

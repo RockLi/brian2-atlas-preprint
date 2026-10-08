@@ -1,0 +1,53 @@
+{
+  "schema": "atlas-owner60-256m-prospective-v1",
+  "neurons": 256000000,
+  "connections": 256000000000,
+  "reference_neuron_count": 86000000000,
+  "neuron_count_percent": 0.29767441860465116,
+  "hosts": 30,
+  "ranks": 60,
+  "ranks_per_node": 2,
+  "populations": 60,
+  "projections": 3600,
+  "excitatory_populations": 48,
+  "inhibitory_populations": 12,
+  "duration_ms": 100,
+  "dt_ms": 0.1,
+  "precision": "reference-f64",
+  "cpu_ids": [
+    1,
+    49
+  ],
+  "worker_memory_gib": 256,
+  "preparation_memory_gib": 96,
+  "output_audit_memory_gib": 128,
+  "initial_value_budget": 1200000000,
+  "ir_byte_budget_gib": 16,
+  "file_cap_gib": 16,
+  "local_edge_guard": 4290000000,
+  "local_edges_minmax": [
+    4266666012,
+    4266666994
+  ],
+  "largest_projection_edges": 71111122,
+  "core_array_per_host_gib_max": 162.76042975485325,
+  "minimum_free_gib": 128,
+  "timeout_seconds": 1800,
+  "maximum_runs_per_configuration": 1,
+  "automatic_timeout_extension": false,
+  "pilot": {
+    "neurons": 24000,
+    "connections": 24000000,
+    "ranks": 60,
+    "hosts": 30,
+    "memory_gib_per_host": 8,
+    "timeout_seconds": 300,
+    "required": "Independent new Rust reference exact spikes/events and state/trace<=1e-12, complete host/rank/owner/affinity and resource gates."
+  },
+  "source_archive_sha256": "dbcfb35dd8a25ca29359b7be3e299b0b447885b8a307ced79c7608bdbe974c76",
+  "script_sha256": "951bf3f5be66b1c6ad3ded363dda93eafca23836c269cc880f07b4461a27ffb0",
+  "construction": "existing target-owner-local; batch loop unused",
+  "seed": 20261007,
+  "projection_seed": "2026100700+source*60+target",
+  "scientific_scope": "Synthetic connected capacity; count normalization only, not anatomical brain, maximum capacity, matched speed/strong-or-weak scaling or full-scale feasibility."
+}

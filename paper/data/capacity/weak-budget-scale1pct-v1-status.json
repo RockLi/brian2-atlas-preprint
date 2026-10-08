@@ -1,0 +1,60 @@
+{
+  "guard": {
+    "schema": "b2-mpi-resource-guard-v1",
+    "command": [
+      "env",
+      "B2_RUNNER=/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/target/release/b2-runner",
+      "/atlas-home/0003/workspace/brian2-lk-20260906/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/tests/test_resource_limits_corrected_n860.py",
+      "--junitxml=/atlas-home/0003/atlas-capacity-86m-20261007/budget-scale1pct-v1.xml",
+      "--basetemp=/atlas-home/0003/atlas-capacity-86m-20261007/tmp/budget-scale1pct-v1"
+    ],
+    "host": "hk-prod-model-ae02-23",
+    "uid": 1000,
+    "cgroup": "/system.slice/b2mpi-budget-scale1pct-v1.service",
+    "before": {
+      "memory.max": "4294967296",
+      "memory.swap.max": "0",
+      "memory.current": "7245824",
+      "memory.peak": "7245824",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "200000 100000",
+      "cpu.stat": "usage_usec 29866\nuser_usec 21902\nsystem_usec 7964\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "admitted": true,
+    "host_memory_bytes": {
+      "MemTotal": 1217122504704,
+      "MemAvailable": 917523750912
+    },
+    "reserved_host_memory_bytes": 68719476736,
+    "data_free_bytes": 1498747662336,
+    "file_limit_bytes": 68719476736,
+    "root_volume_allowed": false,
+    "data_volume": "/data/brick2",
+    "minimum_free_bytes": 137438953472,
+    "disk_check_interval_seconds": 5,
+    "data_device": 64515,
+    "root_device": 64513,
+    "minimum_observed_free_bytes": 1498747637760,
+    "returncode": 0,
+    "after": {
+      "memory.max": "4294967296",
+      "memory.swap.max": "0",
+      "memory.current": "11423744",
+      "memory.peak": "151429120",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "200000 100000",
+      "cpu.stat": "usage_usec 1571953\nuser_usec 1205827\nsystem_usec 366125\ncore_sched.force_idle_usec 0\nnr_periods 17\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "wall_seconds": 1.571626890450716
+  },
+  "live": {},
+  "log": "onstruct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/tests/test_resource_limits_corrected_n860.py', line 76, in test_synaptic_arrays_count_toward_the_shared_budget\n    syn=b.Synapses(a,c,'w:1 (constant)',on_pre='v_post+=w',name='budget_syn') [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_a' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/tests/test_resource_limits_corrected_n860.py', line 98, in test_all_to_all_explicit_capacity_matches_independent_validator\n    a=b.NeuronGroup(4,'v:1',threshold='v>1',reset='v=0',name='capacity_a') [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_c' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/tests/test_resource_limits_corrected_n860.py', line 99, in test_all_to_all_explicit_capacity_matches_independent_validator\n    c=b.NeuronGroup(4,'v:1',name='capacity_c') [brian2.core.base.unused_brian_object]\nWARNING    The object 'fast_population' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/tests/test_resource_limits_corrected_n860.py', line 194, in test_independent_monitor_clock_uses_its_sample_count_for_budget\n    group=b.NeuronGroup(100,'v : 1\\ntau : 1',dt=1*b.us,name='fast_population') [brian2.core.base.unused_brian_object]\n\n=============================== warnings summary ===============================\ntest_resource_limits_corrected_n860.py::test_synaptic_arrays_count_toward_the_shared_budget\ntest_resource_limits_corrected_n860.py::test_synaptic_arrays_count_toward_the_shared_budget\ntest_resource_limits_corrected_n860.py::test_synaptic_arrays_count_toward_the_shared_budget\ntest_resource_limits_corrected_n860.py::test_timed_array_capacity_matches_independent_validator\ntest_resource_limits_corrected_n860.py::test_mainline_steps_and_explicit_lower_budget_in_both_validators[poisson]\n  /atlas-home/0003/workspace/brian2-lk-20260906/brian2/parsing/statements.py:51: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'\n    parsed = STATEMENT.parse_string(code, parseAll=True)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n16 passed, 5 warnings in 1.16s\n"
+}

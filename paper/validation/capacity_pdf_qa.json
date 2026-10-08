@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "pages": 36,
+  "main_figures": 10,
+  "references": 16,
+  "capacity_rows": 2,
+  "retained_capacity_records": 22,
+  "new_results_pages": [
+    27,
+    28
+  ],
+  "capacity_figure_page": 28,
+  "supplementary_screenshot_pages": [
+    34,
+    35,
+    36
+  ],
+  "visual_review": "All 36 pages reviewed in new rendered contact sheets; detailed inspection of modified methods (page 16) and capacity results (page 27). No clipping or overlap; all figures, compatibility table and integrated screenshot pages retained.",
+  "pdf_sha256": "29a19c0bdf471a2cfc0fffbb8eafb5da09cb1526465c6c832da29c61e4b8da87",
+  "source_sha256": "ba63bde8527b3e216f9742f6ab746aa8cbedadc3ae45d8767128615e4ba8fd98",
+  "html_sha256": "f052f30023edb90e70dc59da7e8f0caffc4c634cc4be32455902cc3e823efe34",
+  "capacity_evidence_sha256": "983079962ebeaad4f2d2952316355a82956b309c950d7f594adee69d4049a286",
+  "scope": "Document structure/retained-source integrity/numerical consistency and rendered layout; accepted simulation audits remain the source evidence.",
+  "editorial_cleanup": "Removed routine budget-rejection, timeout and cancellation chronology from capacity methods/results and Supplement S19. Final experimental limits and validation scope retained."
+}

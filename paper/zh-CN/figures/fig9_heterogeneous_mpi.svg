@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="802.368pt" height="436.032pt" viewBox="0 0 802.368 436.032" version="1.1">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 436.032  L 802.368 436.032  L 802.368 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 159.277824 69.179904  L 643.090176 69.179904  Q 654.909696 69.179904 654.909696 62.855424  L 654.909696 37.979136  Q 654.909696 31.654656 643.090176 31.654656  L 159.277824 31.654656  Q 147.458304 31.654656 147.458304 37.979136  L 147.458304 62.855424  Q 147.458304 69.179904 159.277824 69.179904  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 41.082624 128.208384  L 359.421696 128.208384  Q 371.241216 128.208384 371.241216 121.883904  L 371.241216 88.574976  Q 371.241216 82.250496 359.421696 82.250496  L 41.082624 82.250496  Q 29.263104 82.250496 29.263104 88.574976  L 29.263104 121.883904  Q 29.263104 128.208384 41.082624 128.208384  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_4">
+    <path d="M 442.946304 128.208384  L 761.285376 128.208384  Q 773.104896 128.208384 773.104896 121.883904  L 773.104896 88.574976  Q 773.104896 82.250496 761.285376 82.250496  L 442.946304 82.250496  Q 431.126784 82.250496 431.126784 88.574976  L 431.126784 121.883904  Q 431.126784 128.208384 442.946304 128.208384  z " clip-path="url(#p9edde6fd56)" style="fill: #327b64; fill-opacity: 0.05098; stroke: #327b64; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_5">
+    <path d="M 41.082624 189.345024  L 359.421696 189.345024  Q 371.241216 189.345024 371.241216 183.020544  L 371.241216 145.495296  Q 371.241216 139.170816 359.421696 139.170816  L 41.082624 139.170816  Q 29.263104 139.170816 29.263104 145.495296  L 29.263104 183.020544  Q 29.263104 189.345024 41.082624 189.345024  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_6">
+    <path d="M 442.946304 189.345024  L 761.285376 189.345024  Q 773.104896 189.345024 773.104896 183.020544  L 773.104896 145.495296  Q 773.104896 139.170816 761.285376 139.170816  L 442.946304 139.170816  Q 431.126784 139.170816 431.126784 145.495296  L 431.126784 183.020544  Q 431.126784 189.345024 442.946304 189.345024  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_7">
+    <path d="M 167.157504 246.265344  L 635.210496 246.265344  Q 647.030016 246.265344 647.030016 239.940864  L 647.030016 219.280896  Q 647.030016 212.956416 635.210496 212.956416  L 167.157504 212.956416  Q 155.337984 212.956416 155.337984 219.280896  L 155.337984 239.940864  Q 155.337984 246.265344 167.157504 246.265344  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_8">
+    <path d="M 21.383424 395.944704  L 253.046016 395.944704  Q 264.865536 395.944704 264.865536 389.620224  L 264.865536 284.633856  Q 264.865536 278.309376 253.046016 278.309376  L 21.383424 278.309376  Q 9.563904 278.309376 9.563904 284.633856  L 9.563904 389.620224  Q 9.563904 395.944704 21.383424 395.944704  z " clip-path="url(#p9edde6fd56)" style="fill: #327b64; fill-opacity: 0.05098; stroke: #327b64; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_9">
+    <path d="M 285.352704 395.944704  L 517.015296 395.944704  Q 528.834816 395.944704 528.834816 389.620224  L 528.834816 284.633856  Q 528.834816 278.309376 517.015296 278.309376  L 285.352704 278.309376  Q 273.533184 278.309376 273.533184 284.633856  L 273.533184 389.620224  Q 273.533184 395.944704 285.352704 395.944704  z " clip-path="url(#p9edde6fd56)" style="fill: #bc6731; fill-opacity: 0.05098; stroke: #bc6731; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_10">
+    <path d="M 549.321984 395.944704  L 780.984576 395.944704  Q 792.804096 395.944704 792.804096 389.620224  L 792.804096 284.633856  Q 792.804096 278.309376 780.984576 278.309376  L 549.321984 278.309376  Q 537.502464 278.309376 537.502464 284.633856  L 537.502464 389.620224  Q 537.502464 395.944704 549.321984 395.944704  z " clip-path="url(#p9edde6fd56)" style="fill: #245c85; fill-opacity: 0.05098; stroke: #245c85; stroke-width: 1.1; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Hiragino Sans GB', 'Arial'; text-anchor: start" x="15.07968" y="27.79014" transform="rotate(-0 15.07968 27.79014)">a  显式仿真进程分配</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(320.868844 45.136655)">B2IR → DistributedPlan</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 64.780405)">归属与有序进程后端、数值配置</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(200.252160 99.948815)">CPU进程</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(200.252160 119.592565)">f64神经元状态更新</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(602.115840 98.592565)">GPU进程 · 可选适配器</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(602.115841 119.592565)">Metal或CUDA · f32神经元状态更新</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(200.252160 158.977295)">进程本地CPU主机工作</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(200.252160 178.621045)">阈值／重置 • 突触 • 队列 • 记录</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(602.115840 158.977295)">GPU状态写回 → 进程本地CPU</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(602.115840 178.621045)">阈值／重置 • 突触 • 队列 • 记录</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 399.188049 68.504171  Q 300.717273 76.769348 203.360613 84.941011  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 207.51388 86.599438  L 203.360613 84.941011  L 207.179315 82.613454  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="patch_12">
+    <path d="M 200.25216 129.363137  Q 200.25216 133.688782 200.25216 136.896394  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 202.25216 132.896394  L 200.25216 136.896394  L 198.25216 132.896394  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="patch_13">
+    <path d="M 403.179951 68.504171  Q 501.650727 76.769348 599.007387 84.941011  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 595.188685 82.613454  L 599.007387 84.941011  L 594.85412 86.599438  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="patch_14">
+    <path d="M 602.11584 129.363137  Q 602.11584 133.688782 602.11584 136.896394  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 604.11584 132.896394  L 602.11584 136.896394  L 600.11584 132.896394  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; text-anchor: middle; fill: #172a39" x="401.184" y="233.474005" transform="rotate(-0 401.184 233.474005)">MPI通信器内的规范脉冲交换</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 200.25216 195.832587  Q 200.25216 202.202075 200.25216 208.571563  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 198.25216 199.832587  L 200.25216 195.832587  L 202.25216 199.832587  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 202.25216 204.571563  L 200.25216 208.571563  L 198.25216 204.571563  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="patch_16">
+    <path d="M 602.11584 195.832587  Q 602.11584 202.202075 602.11584 208.571563  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 600.11584 199.832587  L 602.11584 195.832587  L 604.11584 199.832587  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+    <path d="M 604.11584 204.571563  L 602.11584 208.571563  L 600.11584 204.571563  " style="fill: none; stroke: #70777e; stroke-linecap: round" />
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Hiragino Sans GB', 'Arial'; text-anchor: start" x="15.07968" y="263.90406" transform="rotate(-0 15.07968 263.90406)">b  保留的验证 · 独立路径与快照</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(137.214720 300.346415)">CPU与Metal仿真</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(137.214720 319.990165)">真实的本地MPI进程</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(137.214720 340.990165)">25项混合／设备清单检查</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(137.214720 361.990165)">示例：82个脉冲</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(137.214720 382.990165)">GPU分派数[0, 32]</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 300.346415)">CUDA仿真卸载</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 319.990165)">源码与运行时适配器</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 340.990165)">NVIDIA硬件验证</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 363.346415)">尚未确立</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(401.184000 384.346415)">无跨主机结果</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(665.153280 298.990165)">CUDA MPI原生训练</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(665.153280 319.990165)">独立的训练计划家族</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(665.153281 340.990165)">31项CUDA MPI测试通过</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(665.153280 363.346415)">单张L4 · 共享设备0</text>
+    <text style="font-size: 14px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(665.153280 384.346415)">不是多GPU验证</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 12px; font-family: 'Hiragino Sans GB', 'Arial'; text-anchor: middle; fill: #70777e" x="401.184" y="418.2912" transform="rotate(-0 401.184 418.2912)">显式分配；不声称自动放置、混合厂商集群验证或加速</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9edde6fd56">
+   <rect x="7.2" y="7.2" width="787.968" height="421.632" />
+  </clipPath>
+ </defs>
+</svg>

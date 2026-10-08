@@ -1,0 +1,102 @@
+EXECUTION IR · B2IR V1
+
+Inside the model
+Download template JSON
+
+This is the B2IR draft for Real subgraph · 240 neurons with the model’s default parameters. It shows the execution structure, not the simplified View IR network diagram. The runtime validates the final bundle when you run it.
+
+Neurons
+240
+Populations
+1
+Synapses
+6,660
+Scheduled steps
+7
+cortex
+240 neurons
+
+State ge, gi, transmission, v
+
+Parameters background_gain, background_rate, is_sensory, ms, sensory_gain, sensory_rate, stim_end, stim_start
+
+Events spike
+
+ONE SIMULATION TIMESTEP
+
+Execution cycle
+Select a stage, then inspect its concrete scheduled operations.
+01
+Start & drive
+Start-slot input and pre-state sampling
+2 scheduled operations
+02
+Update state
+Integrate membrane and model variables
+1 scheduled operation
+03
+Detect events
+Evaluate and record spike conditions
+2 scheduled operations
+04
+Deliver synapses
+Route events through connections
+1 scheduled operation
+05
+Apply resets
+Update cells that emitted events
+1 scheduled operation
+06
+Finish timestep
+Run end-slot work and advance time
+No operation in this model
+Advance the clock, then repeat for the next timestep
+Scheduled operations
+Exact order from the compiled B2IR artifact
+Previous
+6 / 7
+Next
+01
+external input
+Start & drive · cortex
+02
+state trace
+Start & drive · cortex
+03
+cortex stateupdater
+Update state · cortex
+04
+cortex spike thresholder
+Detect events · cortex
+05
+spike trace
+Detect events · cortex
+06
+flywire recurrent pre
+Deliver synapses · flywire_recurrent
+07
+cortex spike resetter
+Apply resets · cortex
+
+SELECTED OPERATION · SYNAPSES
+
+flywire_recurrent_pre
+code object
+Depends on
+
+cortex_stateupdater, cortex_spike_thresholder
+
+Reads
+
+ge_post, gi_post, inhibitory_gain, recurrent_weight, signed_contacts, transmission_pre
+
+Writes
+
+ge_post, gi_post
+
+Operations
+_lio_1 ← (recurrent_weight × inhibitory_gain)
+ge_post ← (ge_post + (recurrent_weight × ((signed_contacts × (signed_contacts > 0)) × transmission_pre)))
+gi_post ← (gi_post − (_lio_1 × ((signed_contacts × (signed_contacts < 0)) × transmission_pre)))
+
+B2IR includes executable expressions and scheduling; View IR only describes the network layout. Protocol hashes and raw instance arrays are omitted from this view.

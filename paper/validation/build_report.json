@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "manuscript_version": "final-layout",
+  "figures": 10,
+  "tables": 7,
+  "bibliography_entries": 16,
+  "manuscript_words_whitespace": 15640,
+  "capacity_evidence_sha256": "983079962ebeaad4f2d2952316355a82956b309c950d7f594adee69d4049a286",
+  "linux_cpu_best_measured_ratio": 5.4290822407628125,
+  "mpi_raw_audit_verified_from_later_report": true,
+  "heterogeneous_mpi_evidence_sha256": "b4ddc81ffe693c6824d1b77f6449b138eae7b843078e26fad212cb3a3c7e6f5a",
+  "browser_fixed_inputs": 13,
+  "svg_sha256": {
+    "figures/fig10_connected_capacity.svg": "fb8c01466bf26006fd82d3bac64eb15ecc2e7763facf6cde5c6a7d91279ee419",
+    "figures/fig1_architecture.svg": "bf7899a2ba970760ebd67001f7fd2dc1d941c81e195695e5dc88dadfff0a29b3",
+    "figures/fig2_semantics.svg": "c331b30ed42eabb80d4dd3bd1fe2f5cef41f28ddff50518135f130bbf7315bf3",
+    "figures/fig3_distributed.svg": "0c6012a5bd15fd16807b9d5eab7584d8973b336c449481c4e3df9b460b1dc7ec",
+    "figures/fig4_cpu.svg": "55ec676ff4b0155467b246c1e5a4cb11f544326d9cf78c101c126e1374e1fb00",
+    "figures/fig5_gpu.svg": "25aacc7f60b52192b0bafa6dc3692e2b4b8e51e354ecca2759676d01e14fed42",
+    "figures/fig6_lifecycle.svg": "0aa0b59ceab10dd361657f803e131b0e8c1056d2947f8585c559a464b8790582",
+    "figures/fig7_browser.svg": "9f2c907ee241b178d0a700df230b473b8dbd4a81a36be7f2f37309844f23c356",
+    "figures/fig8_nmda.svg": "0db2582e64dc61f8912c94ef5b29c3b4de68c7a98047fa2b2d4d67f6d5e1cabf",
+    "figures/fig9_heterogeneous_mpi.svg": "ac5d2b4043645a5d8a4b0317c2e0e0170b6c90f572a9a69cec8f25a1419642de",
+    "figures/figS2_full_scale_resources.svg": "5b17c897438e67d8bfb069d78b57bedd7befe88ecabf0c7ffaa0ef48bc795622"
+  },
+  "figure_data_sha256": "1274a0b5d82a7f9fa95eeb0f77f127d2af8dfd575ad54fc5f9b9ad04400ac4b6",
+  "plan_selection_sha256": "f4cd33ab998a6cd94b03a3e6f3117518dcc16bef43f1f8ff481c8313cdba9c9d",
+  "plan_selection_cases": 6,
+  "decision_cache_cases": 6,
+  "v3_evidence_sha256": "7f4e36684a5e570c7b213a84b17b27ee4774044ae92114a71e4894ff6793df18",
+  "v3_retained_sources": 34,
+  "v3_training_cohorts": 6,
+  "v3_dendritic_ratios": [
+    12.491379440383696,
+    14.752074507741593,
+    1.2836920549889423
+  ],
+  "review_snapshot_sha256": "ebb0a98e19e6b58523292fbe1611c5ddab48fbd5e1a24b90aec8e4bbaaeb3d28",
+  "published_models_sha256": "708dabbabce0622bb6d94649d45b446749b3100ba27f5b5425d89ffccb607f90",
+  "nmda_cpu_ratios": [
+    1.128147373079257,
+    1.4851572869018612,
+    2.097594798587454,
+    1.9559396159819011
+  ],
+  "nmda_same40_ratio": 1.6773997072714204,
+  "scope": "Artifact structure, retained-source hashes and reported-number consistency; no new simulation, hardware benchmark or full scientific raw-array audit.",
+  "weak_scaling_evidence_sha256": "f68db174ac7c5003af21da0dff240dc67a2ebb2669039160a9d4082906c72376",
+  "weak_scaling_hosts": [
+    3,
+    6,
+    12,
+    24,
+    30
+  ],
+  "weak_scaling_endpoint_neurons": 860000000,
+  "conditional_resource_analysis_sha256": "2e09e918f902cca276706af3a42f66262457360bbdaf162f1419a41885be25a5",
+  "conditional_resource_scope": "Conditional synthetic-workload arithmetic bound to frozen source. Not a peak-memory fit, current-version host requirement, execution feasibility, wall-time prediction or new experiment."
+}

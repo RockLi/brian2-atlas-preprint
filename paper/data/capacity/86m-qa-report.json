@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "complete_output_audit": true,
+    "exact_counts": true,
+    "neuron_count_normalization": true,
+    "independent_reference_pilot": true,
+    "all_deployed_shards_verified": true,
+    "source_archive_identity": true,
+    "experiment_script_identity": true,
+    "resource_records": true,
+    "cleanup": true,
+    "output_counts_match": true,
+    "figure_formats_present": true,
+    "figure_png_visually_reviewed": true,
+    "scope_claims_bounded": true
+  },
+  "visual_review": "Readable axes, labels, units, both overlapping E/I curves distinguished by line style, no clipping; PNG inspected after final figure edit."
+}

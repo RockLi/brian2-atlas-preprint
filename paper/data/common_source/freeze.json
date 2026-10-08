@@ -1,0 +1,20 @@
+{
+  "schema": "atlas-source-freeze-v1",
+  "source_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+  "branch": "next-dev",
+  "base_commit": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+  "captured_utc": "2026-10-08T05:10:14.901118+00:00",
+  "includes_uncommitted": true,
+  "file_count": 1695,
+  "scope": [
+    "brian2",
+    "brian2-rust/python",
+    "brian2-rust/src",
+    "brian2-rust/examples",
+    "brian2-rust/tools",
+    "brian2-rust/tests",
+    "brian2-rust/wasm"
+  ],
+  "excludes": "Build products, binary modules, caches, historical evidence and results; inputs and measurements have separate hashes.",
+  "archive_sha256": "3314e6606b3f5855eb14a2ea49cb90e7f320c5244905a413b96e527a25d4b1b7"
+}

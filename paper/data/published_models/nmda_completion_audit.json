@@ -1,0 +1,12 @@
+{
+  "schema": "nmda-skaar-2025-completion-audit-v1",
+  "package": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/benchmarks/published/nmda_skaar_2025",
+  "t7_archive": "/atlas-storage/0002/brian2-local-artifacts-20260917/nmda2025-decision-psychometric-400-20260921",
+  "required_files": 24,
+  "markdown_local_links_checked": 356,
+  "t7_checksum_entries_verified": 39177,
+  "t7_archived_pair_count": 2000,
+  "t7_archived_scientific_file_count": 8000,
+  "complete": true,
+  "errors": []
+}

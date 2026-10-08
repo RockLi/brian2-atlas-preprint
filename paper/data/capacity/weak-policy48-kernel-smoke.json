@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "host": "hk-prod-model-ae09-92",
+  "guard": {
+    "schema": "b2-mpi-resource-guard-v1",
+    "command": [
+      "python3",
+      "-c",
+      "from pathlib import Path\nimport json,os,resource\nassert os.getuid()==1000 and sorted(os.sched_getaffinity(0))==[1]\nassert resource.getrlimit(resource.RLIMIT_FSIZE)==(64*2**30,64*2**30)\np=Path('/atlas-home/0003/atlas-capacity-86m-20261007')/'policy48-smoke-child.json';assert not p.exists()\np.write_text(json.dumps({'uid':os.getuid(),'cpu_ids':sorted(os.sched_getaffinity(0)),'file_limits':resource.getrlimit(resource.RLIMIT_FSIZE)})+'\\n')"
+    ],
+    "host": "hk-prod-model-ae09-92",
+    "uid": 1000,
+    "cgroup": "/system.slice/b2mpi-policy48-smoke-20261008-v1.service",
+    "before": {
+      "memory.max": "536870912",
+      "memory.swap.max": "0",
+      "memory.current": "7426048",
+      "memory.peak": "7426048",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "100000 100000",
+      "cpu.stat": "usage_usec 28064\nuser_usec 22050\nsystem_usec 6013\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "16",
+      "cpuset.cpus.effective": "1"
+    },
+    "admitted": true,
+    "host_memory_bytes": {
+      "MemTotal": 1081838231552,
+      "MemAvailable": 982945476608
+    },
+    "reserved_host_memory_bytes": 51539607552,
+    "data_free_bytes": 430444302336,
+    "file_limit_bytes": 68719476736,
+    "root_volume_allowed": true,
+    "data_volume": "/",
+    "minimum_free_bytes": 137438953472,
+    "disk_check_interval_seconds": 5,
+    "data_device": 64513,
+    "root_device": 64513,
+    "minimum_observed_free_bytes": 430444298240,
+    "returncode": 0,
+    "after": {
+      "memory.max": "536870912",
+      "memory.swap.max": "0",
+      "memory.current": "7380992",
+      "memory.peak": "12918784",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "100000 100000",
+      "cpu.stat": "usage_usec 52515\nuser_usec 39386\nsystem_usec 13128\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "16",
+      "cpuset.cpus.effective": "1"
+    },
+    "wall_seconds": 0.03732957225292921
+  },
+  "child": {
+    "uid": 1000,
+    "cpu_ids": [
+      1
+    ],
+    "file_limits": [
+      68719476736,
+      68719476736
+    ]
+  },
+  "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+}

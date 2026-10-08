@@ -1,0 +1,60 @@
+{
+  "guard": {
+    "schema": "b2-mpi-resource-guard-v1",
+    "command": [
+      "/atlas-home/0003/workspace/brian2-lk-20260906/.venv/bin/python",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py",
+      "--source",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1",
+      "--output",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h03-v1",
+      "--hosts",
+      "3",
+      "--compile"
+    ],
+    "host": "hk-prod-model-ae02-23",
+    "uid": 1000,
+    "cgroup": "/system.slice/b2mpi-prepare-weak1pct-h03-v1.service",
+    "before": {
+      "memory.max": "343597383680",
+      "memory.swap.max": "0",
+      "memory.current": "7421952",
+      "memory.peak": "7421952",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 28919\nuser_usec 16952\nsystem_usec 11966\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "admitted": true,
+    "host_memory_bytes": {
+      "MemTotal": 1217122504704,
+      "MemAvailable": 917623459840
+    },
+    "reserved_host_memory_bytes": 68719476736,
+    "data_free_bytes": 1498729390080,
+    "file_limit_bytes": 68719476736,
+    "root_volume_allowed": false,
+    "data_volume": "/data/brick2",
+    "minimum_free_bytes": 137438953472,
+    "disk_check_interval_seconds": 5,
+    "data_device": 64515,
+    "root_device": 64513,
+    "minimum_observed_free_bytes": 1488041455616,
+    "returncode": 0,
+    "after": {
+      "memory.max": "343597383680",
+      "memory.swap.max": "0",
+      "memory.current": "7504105472",
+      "memory.peak": "21930074112",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 244004847\nuser_usec 229968546\nsystem_usec 14036300\ncore_sched.force_idle_usec 0\nnr_periods 2421\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "wall_seconds": 242.08336969837546
+  },
+  "live": {},
+  "log": "erence in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_projection_0_4' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_projection_0_3' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_projection_0_2' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_projection_0_1' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\nWARNING    The object 'capacity_projection_0_0' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/atlas-home/0003/atlas-capacity-86m-20261007/source-scale1pct-v1/experiment/prepare-scaling.py', line 86, in main\n    syn = b.Synapses(sg, tg, 'w:1 (constant)', on_pre='current_post += w', [brian2.core.base.unused_brian_object]\n"
+}

@@ -1,0 +1,78 @@
+{
+  "scope": "cpu complete affected14 modules",
+  "original_goal": "active",
+  "terminal": {
+    "session_id": 82989,
+    "chunk_id": "72b427",
+    "exit_code": 0
+  },
+  "sources": 745,
+  "assets": 800,
+  "counts": {
+    "passed": 441,
+    "skipped": 288
+  },
+  "modules": {
+    "brian2-rust/tests/test_training_synaptic_endpoints.py": {
+      "passed": 23,
+      "skipped": 46
+    },
+    "brian2-rust/tests/test_training_brian_dynamic.py": {
+      "passed": 28
+    },
+    "brian2-rust/tests/test_training_brian_integrators.py": {
+      "passed": 23,
+      "skipped": 8
+    },
+    "brian2-rust/tests/test_training_regular.py": {
+      "passed": 22,
+      "skipped": 32
+    },
+    "brian2-rust/tests/test_training_regular_edges.py": {
+      "passed": 10,
+      "skipped": 16
+    },
+    "brian2-rust/tests/test_training_linked.py": {
+      "passed": 48,
+      "skipped": 30
+    },
+    "brian2-rust/tests/test_training_cross_linked.py": {
+      "passed": 14,
+      "skipped": 22
+    },
+    "brian2-rust/tests/test_training_indirect_frontend.py": {
+      "passed": 39,
+      "skipped": 50
+    },
+    "brian2-rust/tests/test_training_indirect_migration.py": {
+      "passed": 6
+    },
+    "brian2-rust/tests/test_training_dynamic_clocks.py": {
+      "passed": 68
+    },
+    "brian2-rust/tests/test_training_dynamic_refractory.py": {
+      "passed": 111
+    },
+    "brian2-rust/tests/test_training_cached_noise.py": {
+      "passed": 12,
+      "skipped": 24
+    },
+    "brian2-rust/tests/test_training_cached_noise_edges.py": {
+      "passed": 15,
+      "skipped": 20
+    },
+    "brian2-rust/tests/test_training_cached_weak_sde.py": {
+      "passed": 22,
+      "skipped": 40
+    }
+  },
+  "identities": 729,
+  "duration_seconds": 2618.511162996292,
+  "hardware": {
+    "cpu": true,
+    "local_mpi_2_8": true,
+    "metal": false,
+    "nvidia": false,
+    "cloud": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "guard": {
+    "schema": "b2-mpi-resource-guard-v1",
+    "command": [
+      "/atlas-home/0003/workspace/brian2-lk-20260906/.venv/bin/python",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/audit-scale1pct-v2.py",
+      "--base",
+      "/atlas-home/0003/atlas-capacity-86m-20261007",
+      "--case",
+      "weak1pct-h03-v1"
+    ],
+    "host": "hk-prod-model-ae02-23",
+    "uid": 1000,
+    "cgroup": "/system.slice/b2mpi-audit-weak1pct-h03-v1.service",
+    "before": {
+      "memory.max": "343597383680",
+      "memory.swap.max": "0",
+      "memory.current": "7241728",
+      "memory.peak": "7241728",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 28838\nuser_usec 22872\nsystem_usec 5966\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "admitted": true,
+    "host_memory_bytes": {
+      "MemTotal": 1217122504704,
+      "MemAvailable": 917132673024
+    },
+    "reserved_host_memory_bytes": 68719476736,
+    "data_free_bytes": 1486657630208,
+    "file_limit_bytes": 68719476736,
+    "root_volume_allowed": false,
+    "data_volume": "/data/brick2",
+    "minimum_free_bytes": 137438953472,
+    "disk_check_interval_seconds": 5,
+    "data_device": 64515,
+    "root_device": 64513,
+    "minimum_observed_free_bytes": 1486657548288,
+    "returncode": 0,
+    "after": {
+      "memory.max": "343597383680",
+      "memory.swap.max": "0",
+      "memory.current": "4600770560",
+      "memory.peak": "24848764928",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 50569260\nuser_usec 31609548\nsystem_usec 18959712\ncore_sched.force_idle_usec 0\nnr_periods 541\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "wall_seconds": 54.03103997558355
+  },
+  "live": {},
+  "log": "{\"passed\": true, \"neurons\": 86000000, \"connections\": 86000000000, \"spikes\": 108769645, \"delivered_synaptic_events\": 106262508754, \"stage_max_seconds\": [350.51175872, 61.443181153, 236.930516177, 0.148282288, 3.209448826], \"audit_seconds\": 50.11866619065404}\n"
+}

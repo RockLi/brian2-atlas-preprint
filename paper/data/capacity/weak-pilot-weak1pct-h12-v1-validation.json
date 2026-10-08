@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 963,
+  "max_state_absolute_difference": 0,
+  "spikes": 129102,
+  "synaptic_events": 126665133,
+  "hosts": 12,
+  "ranks": 96,
+  "plan_sha256": "5a2c526b97d6aa1ac47ca049e8196a885816206aa4e6bba2012650b5f94233e2",
+  "runtime_sha256": "59ef1f11228681941c7a996725c412e5e3cfd9931631251e09c2d7eafba21667"
+}

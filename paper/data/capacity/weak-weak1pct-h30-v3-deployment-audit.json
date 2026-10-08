@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "hosts": 30,
+  "ranks": 240,
+  "input_catalog_sha256": "2c6ab3f341e9a8a827566f6be804a33617976c6750874baa26cf7c2341de92c6",
+  "transport": "Read-only per-node input symlinks; every shared and owned-rank file rehashed against the original prepared catalog.",
+  "reused_from": "weak1pct-h30-v2"
+}

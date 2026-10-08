@@ -1,0 +1,38 @@
+{
+  "schema": "atlas-1pct-terminal-qa-v1",
+  "passed": true,
+  "endpoint_complete": true,
+  "cases": [
+    {
+      "case": "weak1pct-h03-v1",
+      "hosts": 3,
+      "neurons": 86000000,
+      "passed": true
+    },
+    {
+      "case": "weak1pct-h06-v1",
+      "hosts": 6,
+      "neurons": 172000000,
+      "passed": true
+    },
+    {
+      "case": "weak1pct-h12-v1",
+      "hosts": 12,
+      "neurons": 344000000,
+      "passed": true
+    },
+    {
+      "case": "weak1pct-h24-v2",
+      "hosts": 24,
+      "neurons": 688000000,
+      "passed": true
+    },
+    {
+      "case": "weak1pct-h30-v3",
+      "hosts": 30,
+      "neurons": 860000000,
+      "passed": true
+    }
+  ],
+  "evidence_scope": "Five single-observation CPU weak-scaling layouts; all per-layout numerical pilots and complete-output audits accepted; no anatomical/full-86B feasibility claim."
+}

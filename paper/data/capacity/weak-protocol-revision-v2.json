@@ -1,0 +1,27 @@
+{
+  "schema": "atlas-weak-scaling-resource-revision-v2",
+  "created_epoch": 1791380105.2639391,
+  "applies_to_hosts": [
+    24,
+    30
+  ],
+  "case_map": {
+    "3": "weak1pct-h03-v1",
+    "6": "weak1pct-h06-v1",
+    "12": "weak1pct-h12-v1",
+    "24": "weak1pct-h24-v2",
+    "30": "weak1pct-h30-v2"
+  },
+  "coordinator_memory_gib": 768,
+  "six_e_two_i_worker_memory_gib": 655,
+  "seven_e_one_i_worker_memory_gib": 660,
+  "reserve_gib": 64,
+  "source_archive_unchanged": true,
+  "numerical_model_unchanged": true,
+  "precision_duration_indegree_unchanged": true,
+  "reason": "Fresh available memory decreased on two six-E/two-I hosts. Tighten finite worker caps according to local useful work; preserve 64 GiB reserve, zero swap, all numerical/output gates and timeouts. No formal 0.8% simulation was launched under the original admission policy.",
+  "input_reuse": {
+    "weak1pct-h24-v2": "weak1pct-h24-v1"
+  },
+  "estimation_basis": "Maximum noncoordinator 0.4% peak 591.567 GiB versus 577.214 GiB known arrays. Endpoint seven-E/one-I known arrays 638.726 GiB imply ~653.08 GiB; six-E/two-I has ~3.37 GiB less edge storage. Caps retain ~5-7 GiB above these illustrative estimates. They are not guarantees; OOM or any failed audit stops growth."
+}

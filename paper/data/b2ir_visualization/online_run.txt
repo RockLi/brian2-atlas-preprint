@@ -1,0 +1,197 @@
+User center
+/
+My Runs
+Account
+My Runs
+My Trainings
+My Experiments
+My Workspace ↗
+My Runs
+/
+Saved result
+
+SAVED BROWSER RUN
+
+FlyWire · DM1 Circuit
+
+30/09/2026, 23:49:32 · dm1-240 · reference-f64
+
+Open model ↗
+Backend
+Browser WASM
+Model scale
+dm1-240
+Biological time
+300 ms
+Wall time
+821 ms
+Spikes
+2,796
+Mean rate
+38.8 Hz
+Active neurons
+95%
+228 of 240
+Peak population rate
+81.7 Hz
+20 ms bins · per neuron
+Spikes / active neuron
+12.3
+Across the full run
+Rate variability
+0.90
+CV across 20 ms bins
+Silent neurons
+12
+No spikes in the full run
+Mean ISI CV
+0.579
+216 eligible neurons · within-neuron intervals
+Mean temporal Fano
+1.03
+228 eligible neurons · 20 ms bins
+Diagnostic coverage
+Complete
+2,796 events · all 240 neurons
+Spike raster
+2,796 spikes · full run
+0
+75
+150
+225
+300
+Time (ms)
+239
+120
+0
+Neuron ID
+Replay
+Time
+300 / 300 ms
+Show all
+
+Replays recorded spikes; it does not rerun the simulation. Metrics above describe the full run.
+
+Population activity
+20 ms bins
+Complete spike diagnostics
+
+Spike analysis window:
+0–300 ms
+· 2,796 spikes
+
+Computed from complete spikes in the saved analysis window.
+Measurement	Value	Interpretation
+Mean firing rate	38.8 Hz/neuron	Spike count divided by all recorded neurons and window duration.
+Active / silent neurons	228 / 12	At least one spike / no spikes in this window.
+Mean ISI coefficient of variation	0.579	216 eligible neurons. Mean of within-neuron interspike-interval CVs; undefined values are excluded.
+Mean temporal spike-count Fano factor	1.03	228 eligible neurons. Variance / mean of each neuron's counts across equal time bins; this is not trial-to-trial variability.
+0
+0
+22.1
+75
+44.1
+150
+66.2
+225
+88.2
+300
+Population rate · Hz/neuron
+Simulation time · ms
+Neuron count
+0
+33
+66
+0
+65
+130
+Per-neuron firing rate · Hz
+All 240 recorded neurons, including zero rates; the distribution uses the displayed analysis window.
+
+20 ms bins · 15 full bins. No partial bin is discarded.
+
+Per-neuron measurements
+Statistical definitions and limitations
+
+SAVED POPULATION ACTIVITY
+
+Network replay
+Model diagram from the current catalogue · measurements from this saved run
+
+CONCEPTUAL SIGNAL FLOW
+
+From model drive to measured activity
+Feedback arrows are part of the model. Node color shows recorded firing; lines show structural connections.
+INPUTS
+Synthetic DM1 odor stimulus
+Timed Poisson input stimulates annotated DM1 olfactory receptor neurons.
+Targets DM1 ORN
+Background input
+Independent background events enter every simulated cell.
+Targets 6 populations
+Population circuit
+DM1 ORN
+68
+0.7 Hz
+Local neurons
+32
+0.0 Hz
+DM1 PN
+2
+25.0 Hz
+Kenyon cells
+96
+1.6 Hz
+Lateral horn
+32
+3.1 Hz
+MBON
+10
+0.0 Hz
+Replay
+270 / 300 ms
+Excitatory
+Inhibitory
+Mixed / unknown
+Node number = neurons
+Node color = measured rate · lines = structure
+OBSERVATIONS
+MBON response
+Mushroom-body output activity is the terminal circuit readout.
+0.0 Hz at 270 ms
+Circuit-wide activity
+spikes
+≈2,761 spikes in completed bins through 260 ms
+RECORDED VIEWS
+Population firing rates
+Circuit spike raster
+Recorded membrane voltage
+
+RECORDED MEASUREMENT
+
+Population firing rates
+250
+0
+DM1 ORN: 0.7 Hz
+Local neurons: 0.0 Hz
+DM1 PN: 25.0 Hz
+Kenyon cells: 1.6 Hz
+Lateral horn: 3.1 Hz
+MBON: 0.0 Hz
+
+INSPECT THE CIRCUIT
+
+Select a population or connection
+The center shows structural recurrence; the side rails explain where signals enter and what the experiment observes.
+Populations
+6
+Projections
+5
+Run configuration
+{
+  "duration_ms": 300,
+  "sensory_rate_hz": 80,
+  "sensory_weight_mv": 40,
+  "recurrent_weight_mv": 0.275,
+  "inhibitory_gain": 4
+}

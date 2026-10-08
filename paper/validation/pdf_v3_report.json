@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "pages": 31,
+  "figures": 8,
+  "tables": 6,
+  "references": 15,
+  "author": "Xinjun Li",
+  "title": "A Unified Intermediate Representation and Execution Architecture for Heterogeneous and Distributed Neural Simulation",
+  "subject": "brian2-atlas; Independent researcher; working preprint v3",
+  "pdf_sha256": "2fc47493a857e1b282ae4c81e8d420c5f5dd3a925d7539c1f28f9e0d728f5f07",
+  "section_pages": {
+    "5.8 Validation": [
+      24
+    ],
+    "5.8.1 Explicit NMDA": [
+      24
+    ],
+    "5.8.2 Contextual dendritic gating": [
+      25
+    ],
+    "Table 4 |": [
+      25
+    ],
+    "Table 5 |": [
+      26
+    ],
+    "Figure 8 |": [
+      25
+    ],
+    "6.3 A common workflow": [
+      27
+    ],
+    "References": [
+      30
+    ],
+    "15. Skaar": [
+      30
+    ],
+    "Appendix A. Feature compatibility": [
+      31
+    ],
+    "Table 6 |": [
+      31
+    ],
+    "Author contributions, acknowledgements": [
+      29
+    ],
+    "Funding": [
+      29
+    ]
+  },
+  "pdf_path": "output/pdf/brian2-atlas-preprint-v3.pdf",
+  "historical_initial_v3_pdf_sha256": "00138a1fa089e6e79239595922fbea3d1fdb0555e312539383dec7cb23a6351f",
+  "historical_v2_pdf_sha256": "68cbb17ee98faea1bed85f269f8c6b687a610d564aaefaac7cff7385c8130d0d",
+  "visual_review": {
+    "rendered_pages": 31,
+    "all_page_contact_review": true,
+    "detailed_compatibility_appendix_page": 31,
+    "references_page": 30,
+    "render_directory": "tmp/pdfs/v3-compatibility-final",
+    "result": "No clipped tables, overlapping content, missing figures or reference alignment defects observed. Compatibility matrix and explanatory notes fit together on one appendix page.",
+    "latest_revision_review": {
+      "rendered_and_reviewed_pages": [
+        29,
+        30,
+        31
+      ],
+      "render_directory": "tmp/pdfs/v3-author-review",
+      "scope": "Declaration-page revision and unchanged adjacent references/appendix; earlier full-page review retained for preceding pages.",
+      "result": "No clipped or overlapping text; declaration subsections, references and compatibility appendix are legible."
+    }
+  },
+  "scope": "Document content, metadata, rendered layout and retained evidence consistency; no new hardware or scientific validation.",
+  "compatibility_contract_sources_verified": 4,
+  "compatibility_evidence_sha256": "7d9b63635f35ee4781400dad154493d3ae600380e9d805e5b7d9d0a669cf9dd3",
+  "declarations": {
+    "author_confirmed_no_external_funding": true,
+    "author_confirmed_no_competing_interests": true,
+    "ai_paragraph_removed_from_working_draft_at_author_request": true,
+    "previous_combined_placeholder_removed": true
+  }
+}

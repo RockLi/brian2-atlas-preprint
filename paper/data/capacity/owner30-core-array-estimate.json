@@ -1,0 +1,19 @@
+{
+  "schema": "atlas-owner30-core-array-estimate-v1",
+  "neurons": 86000000,
+  "connections": 86000000000,
+  "local_edges_minmax": [
+    2866666000,
+    2866667000
+  ],
+  "maximum_projection_edges": 95555578,
+  "retained_edge_bytes": 20,
+  "retained_fields": "u32 target index, f64 weight, usize delay (64-bit)",
+  "source_csr_bytes_per_rank": 688000240,
+  "core_arrays_per_rank_gib_minmax": [
+    54.036565348505974,
+    54.036583974957466
+  ],
+  "memory_cap_per_host_gib": 256,
+  "scope": "Static necessary arrays only; excludes neuron states, replicas, queues, spike history, build scratch, result buffers, MPI, allocator and charged cache. Not a measured peak or capacity certificate."
+}

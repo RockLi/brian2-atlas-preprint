@@ -1,0 +1,45 @@
+{
+  "scope": "cpu external-state owned-source complete affected5 modules",
+  "original_goal": "active",
+  "terminal": {
+    "session_id": 95379,
+    "chunk_id": "ec54e4",
+    "exit_code": 0
+  },
+  "sources": 747,
+  "assets": 802,
+  "counts": {
+    "passed": 148,
+    "skipped": 101
+  },
+  "modules": {
+    "brian2-rust/tests/test_training_external_state_inputs.py": {
+      "passed": 24,
+      "skipped": 20
+    },
+    "brian2-rust/tests/test_training_brian.py": {
+      "passed": 22,
+      "skipped": 1
+    },
+    "brian2-rust/tests/test_training_brian_dynamic.py": {
+      "passed": 28
+    },
+    "brian2-rust/tests/test_training_timed_inputs.py": {
+      "passed": 43,
+      "skipped": 30
+    },
+    "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py": {
+      "passed": 31,
+      "skipped": 50
+    }
+  },
+  "identities": 249,
+  "duration_seconds": 326.5883011817932,
+  "hardware": {
+    "cpu": true,
+    "local_mpi_2_8": true,
+    "metal": false,
+    "nvidia": false,
+    "cloud": false
+  }
+}

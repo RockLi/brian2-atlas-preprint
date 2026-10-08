@@ -1,0 +1,871 @@
+{
+  "schema": "nmda2025-scale10240-cpu-validation-v1",
+  "network_size": 10240,
+  "neuron_count": 10240,
+  "synapse_count": 188743680,
+  "nmda_synapse_count": 83886080,
+  "thread_budget": 8,
+  "biological_duration_s": 1.0,
+  "dt_s": 0.0001,
+  "precision": "float64",
+  "scientific_gate_kind": "deterministic identical external events on Linux 23; diagnostic timing excluded",
+  "scientific_gate": {
+    "protocol": "author recurrent equations/topology/delay/RK4/f64/1s, diagnostic PoissonInput replacement by identical externally generated Bernoulli events at the same synapses schedule; this scientific input protocol differs from unchanged publication and is never used as a performance denominator",
+    "network_size": 10240,
+    "shared_input_sha256": "fbb75826b721eaedd8284ac27cf9e617fab060196dd07debe5c77a7e2e4e6a91",
+    "original_source_sha256": "49f7126e0a7eda87f22ea3d9f911c3a9d4dfa571acba1ef7b5cd46537e807079",
+    "deterministic_bounds": {
+      "voltage_absolute_V": 2e-13,
+      "nmda_x_and_gate_absolute": 2e-12,
+      "summed_total_unit_roundoff": 1.1102230246251565e-16,
+      "summed_total_gamma_ne_minus_one": 9.093836794712927e-13,
+      "justification": "Reuse the documented float64 RK4 deterministic NMDA-core bounds (2e-13 V voltage and 2e-12 dimensionless x/gate) as a strict screen for the longer recurrent diagnostic. Exact event/rate/connectivity equality is required. The summed-total bound follows from at most NE edge-state deviations of that fixed gate bound plus the standard IEEE sequential-sum gamma_(NE-1) rounding envelope times the reference maximum. Individual raw errors are retained; no threshold is fitted to this run."
+    },
+    "exact_field_requirements": [
+      "rate_E_Hz",
+      "rate_I_Hz",
+      "rate_E_t_s",
+      "rate_I_t_s",
+      "NMDA_EE_i",
+      "NMDA_EE_j",
+      "NMDA_EI_i",
+      "NMDA_EI_j"
+    ],
+    "bounded_field_requirements": {
+      "V_E": 2e-13,
+      "V_I": 2e-13,
+      "NMDA_EE_x": 2e-12,
+      "NMDA_EE_s_NMDA": 2e-12,
+      "NMDA_EI_x": 2e-12,
+      "NMDA_EI_s_NMDA": 2e-12,
+      "s_NMDA_tot_E": 1.741016863531291e-08,
+      "s_NMDA_tot_I": 1.741016863531291e-08
+    },
+    "fields": {
+      "I_AMPA_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 4.52364397489937e-26,
+        "different_elements": 8712
+      },
+      "I_AMPA_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.908056841006738e-26,
+        "different_elements": 8289
+      },
+      "I_AMPA_ext_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 1.6543612251060553e-24,
+        "different_elements": 9014
+      },
+      "I_AMPA_ext_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 9.305781891221561e-25,
+        "different_elements": 8627
+      },
+      "I_GABA_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 1.7060600133906196e-24,
+        "different_elements": 9534
+      },
+      "I_GABA_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 1.0339757656912846e-24,
+        "different_elements": 9282
+      },
+      "I_NMDA_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 8.530300066953098e-25,
+        "different_elements": 9379
+      },
+      "I_NMDA_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 5.945360652724886e-25,
+        "different_elements": 9270
+      },
+      "I_input_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "NMDA_EE_i": {
+        "shape": [
+          67108864
+        ],
+        "dtype": "int32",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "NMDA_EE_j": {
+        "shape": [
+          67108864
+        ],
+        "dtype": "int32",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "NMDA_EE_s_NMDA": {
+        "shape": [
+          67108864
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 3.7192471324942744e-15,
+        "different_elements": 56229888
+      },
+      "NMDA_EE_x": {
+        "shape": [
+          67108864
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.7755575615628914e-16,
+        "different_elements": 56352768
+      },
+      "NMDA_EI_i": {
+        "shape": [
+          16777216
+        ],
+        "dtype": "int32",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "NMDA_EI_j": {
+        "shape": [
+          16777216
+        ],
+        "dtype": "int32",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "NMDA_EI_s_NMDA": {
+        "shape": [
+          16777216
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 3.7192471324942744e-15,
+        "different_elements": 14057472
+      },
+      "NMDA_EI_x": {
+        "shape": [
+          16777216
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.7755575615628914e-16,
+        "different_elements": 14088192
+      },
+      "V_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 8.326672684688674e-17,
+        "different_elements": 8901
+      },
+      "V_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 8.326672684688674e-17,
+        "different_elements": 8486
+      },
+      "label_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "int32",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "lastspike_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "lastspike_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "not_refractory_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "bool",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "not_refractory_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "bool",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "rate_E_Hz": {
+        "shape": [
+          10000
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "rate_E_t_s": {
+        "shape": [
+          10000
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "rate_I_Hz": {
+        "shape": [
+          10000
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "rate_I_t_s": {
+        "shape": [
+          10000
+        ],
+        "dtype": "float64",
+        "byte_equal": true,
+        "max_absolute_difference": 0.0,
+        "different_elements": 0
+      },
+      "s_AMPA_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 4.1359030627651384e-25,
+        "different_elements": 7621
+      },
+      "s_AMPA_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 3.618915179919496e-25,
+        "different_elements": 7609
+      },
+      "s_AMPA_ext_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 1.1580528575742387e-23,
+        "different_elements": 7929
+      },
+      "s_AMPA_ext_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 1.1580528575742387e-23,
+        "different_elements": 8095
+      },
+      "s_GABA_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 3.3087224502121107e-23,
+        "different_elements": 8609
+      },
+      "s_GABA_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.3161057151484775e-23,
+        "different_elements": 8463
+      },
+      "s_NMDA_tot_E": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.1600499167107046e-12,
+        "different_elements": 9072
+      },
+      "s_NMDA_tot_I": {
+        "shape": [
+          10000,
+          1
+        ],
+        "dtype": "float64",
+        "byte_equal": false,
+        "max_absolute_difference": 2.1600499167107046e-12,
+        "different_elements": 9072
+      }
+    },
+    "failed_requirements": [],
+    "deterministic_core_screen_pass": true,
+    "limitations": "diagnostic changes external-input generator and may use a smaller network size; it does not erase any failed original seeded statistical gate"
+  },
+  "paper_timing_denominator_used": false,
+  "timing_scope": "compiled native setup, simulation/recording and result dump after one excluded warmup; Python construction, IR generation, compilation and backfill remain separate",
+  "host27_native_arm64": {
+    "compiler": {
+      "command": [
+        "/atlas-home/0004/.rustup/toolchains/1.98.1-aarch64-apple-darwin/bin/rustc",
+        "--edition=2021",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "codegen-units=1",
+        "-C",
+        "panic=abort",
+        "-C",
+        "target-cpu=native",
+        "rust_explicit_10240_aot_1024028/native/main.rs",
+        "-o",
+        "rust_explicit_10240_aot_1024028/native/b2-native-rust198-target-native-v1"
+      ],
+      "rustc_release": "1.98.1",
+      "rustc_host": "aarch64-apple-darwin",
+      "llvm_version": "22.1.8",
+      "rustc_verbose_version": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: aarch64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "scope": "Rust source compilation only; excludes B2IR frontend, code generation, instance serialization, simulation and result collection",
+      "wall_seconds": 1.3838947077747434,
+      "exit_code": 0,
+      "source_sha256": "d663316121118969ebbdcd7cc204c220c24d26ee2eb8546253f57f8c9dfe42d1",
+      "binary_sha256": "fcaf1af2567456aada7ef67116cce4733593da821f00636bd1e613dc6ecd5175",
+      "stderr_tail": "ze,invoke::<F> as *const () as usize,self.threads,self.threads);function(0);self.finish(epoch,self.threads);}\n   |                                                                                                                                                                                                                                                                                                                 ++++++++++++\n\nwarning: comparison is useless due to type limits\n   --> rust_explicit_10240_aot_1024028/native/main.rs:229:16\n    |\n229 |             if endpoint_state < 0 || endpoint_state >= 8192 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(unused_comparisons)]` on by default\n\nwarning: comparison is useless due to type limits\n   --> rust_explicit_10240_aot_1024028/native/main.rs:251:16\n    |\n251 |             if endpoint_state < 0 || endpoint_state >= 8192 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n\nwarning: 8 warnings emitted\n\n"
+    },
+    "compiled_region": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 756.4581007079687,
+        "min_seconds": 754.7420147501398,
+        "max_seconds": 828.3581032089423,
+        "q1_seconds": 756.278588415822,
+        "q3_seconds": 827.685830750037,
+        "raw_seconds": [
+          756.278588415822,
+          828.3581032089423,
+          756.4581007079687,
+          827.685830750037,
+          754.7420147501398
+        ],
+        "peak_sampled_rss_bytes": 5020467200,
+        "peak_sampled_virtual_bytes": 427603361792
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 552.946714833146,
+        "min_seconds": 552.3958199580666,
+        "max_seconds": 553.3423475420568,
+        "q1_seconds": 552.5852095421869,
+        "q3_seconds": 553.2907050000504,
+        "raw_seconds": [
+          553.2907050000504,
+          552.3958199580666,
+          552.946714833146,
+          552.5852095421869,
+          553.3423475420568
+        ],
+        "peak_sampled_rss_bytes": 5446844416,
+        "peak_sampled_virtual_bytes": 426828890112
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.7309680659320634
+    },
+    "schedule_details": {
+      "execution_order_by_repeat": [
+        [
+          "cpp",
+          "rust"
+        ],
+        [
+          "rust",
+          "cpp"
+        ],
+        [
+          "cpp",
+          "rust"
+        ],
+        [
+          "rust",
+          "cpp"
+        ],
+        [
+          "rust",
+          "cpp"
+        ]
+      ],
+      "paired_brian_over_rust_ratios": [
+        1.3668738360890287,
+        1.4995734458523322,
+        1.3680488199233323,
+        1.497842896366642,
+        1.3639693728533502
+      ],
+      "paired_brian_over_rust_ratio_distribution": {
+        "n": 5,
+        "median": 1.3680488199233323,
+        "min": 1.3639693728533502,
+        "max": 1.4995734458523322,
+        "q1": 1.3668738360890287,
+        "q3": 1.497842896366642,
+        "raw": [
+          1.3668738360890287,
+          1.4995734458523322,
+          1.3680488199233323,
+          1.497842896366642,
+          1.3639693728533502
+        ]
+      },
+      "peak_rss_bytes": {
+        "cpp": {
+          "n": 5,
+          "median": 4959436800.0,
+          "min": 4958109696.0,
+          "max": 5020467200.0,
+          "q1": 4958699520.0,
+          "q3": 4981014528.0,
+          "raw": [
+            4981014528,
+            4958109696,
+            5020467200,
+            4958699520,
+            4959436800
+          ]
+        },
+        "rust": {
+          "n": 5,
+          "median": 5338120192.0,
+          "min": 5278597120.0,
+          "max": 5446844416.0,
+          "q1": 5328568320.0,
+          "q3": 5338398720.0,
+          "raw": [
+            5338398720,
+            5278597120,
+            5446844416,
+            5328568320,
+            5338120192
+          ]
+        }
+      },
+      "peak_virtual_bytes": {
+        "cpp": {
+          "n": 5,
+          "median": 427334926336.0,
+          "min": 427193368576.0,
+          "max": 427603361792.0,
+          "q1": 427327586304.0,
+          "q3": 427345412096.0,
+          "raw": [
+            427603361792,
+            427334926336,
+            427327586304,
+            427193368576,
+            427345412096
+          ]
+        },
+        "rust": {
+          "n": 5,
+          "median": 426784522240.0,
+          "min": 426400022528.0,
+          "max": 426828890112.0,
+          "q1": 426672324608.0,
+          "q3": 426801627136.0,
+          "raw": [
+            426828890112,
+            426672324608,
+            426784522240,
+            426400022528,
+            426801627136
+          ]
+        }
+      },
+      "rust_dump_bytes": [
+        2552164536
+      ],
+      "rust_spike_counts": [
+        28631,
+        28631,
+        28631,
+        28631,
+        28631
+      ],
+      "rust_synaptic_events": [
+        451942400,
+        451942400,
+        451942400,
+        451942400,
+        451942400
+      ],
+      "rust_simulation_seconds": {
+        "n": 5,
+        "median_seconds": 545.569087833,
+        "min_seconds": 545.046187291,
+        "max_seconds": 545.945484666,
+        "q1_seconds": 545.141923583,
+        "q3_seconds": 545.832776708,
+        "raw_seconds": [
+          545.832776708,
+          545.046187291,
+          545.569087833,
+          545.141923583,
+          545.945484666
+        ]
+      }
+    },
+    "rust_result_dump_audit": {
+      "count": 5,
+      "all_identical": true,
+      "sha256": [
+        "08cca47842ccc5d533b9e1d8958d314ea0c012a9c116e043d7d81e57336090a6"
+      ],
+      "size_bytes": [
+        2552164536
+      ],
+      "paths": [
+        "/atlas-home/0004/workspace/nmda-skaar-2025-20260915/rust_explicit_10240_aot_1024028/rust_replays_formal_cpu8_r198_native_10240_v1_measured_0_rust/results.bin",
+        "/atlas-home/0004/workspace/nmda-skaar-2025-20260915/rust_explicit_10240_aot_1024028/rust_replays_formal_cpu8_r198_native_10240_v1_measured_1_rust/results.bin",
+        "/atlas-home/0004/workspace/nmda-skaar-2025-20260915/rust_explicit_10240_aot_1024028/rust_replays_formal_cpu8_r198_native_10240_v1_measured_2_rust/results.bin",
+        "/atlas-home/0004/workspace/nmda-skaar-2025-20260915/rust_explicit_10240_aot_1024028/rust_replays_formal_cpu8_r198_native_10240_v1_measured_3_rust/results.bin",
+        "/atlas-home/0004/workspace/nmda-skaar-2025-20260915/rust_explicit_10240_aot_1024028/rust_replays_formal_cpu8_r198_native_10240_v1_measured_4_rust/results.bin"
+      ],
+      "same_as_prior_default_and_native_replays": true,
+      "scope": "remote SHA-256 and byte-size audit; large result dumps remain on Mac 27"
+    },
+    "brian_over_rust_ratio_of_medians": 1.3680488199233323,
+    "rust_peak_rss_over_brian_ratio_of_medians": 1.0763561281797158,
+    "limitation": "macOS has no explicit CPU pinning; background VM/Docker services were not stopped"
+  },
+  "host23_native_x86_64_pinned_cpus_0_7": {
+    "compiler": {
+      "command": [
+        "/data/brick2/brian2-mpi-region-20260907/rustup-1.98.1/toolchains/1.98.1-x86_64-unknown-linux-gnu/bin/rustc",
+        "--edition=2021",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "codegen-units=1",
+        "-C",
+        "panic=abort",
+        "-C",
+        "target-cpu=native",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/native/main.rs",
+        "-o",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/native/b2-native-rust198-target-native-v1"
+      ],
+      "rustc_release": "1.98.1",
+      "rustc_host": "x86_64-unknown-linux-gnu",
+      "llvm_version": "22.1.8",
+      "rustc_verbose_version": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "scope": "Rust source compilation only; excludes B2IR frontend, code generation, instance serialization, simulation and result collection",
+      "wall_seconds": 2.134533854201436,
+      "exit_code": 0,
+      "source_sha256": "1fffe5d2d8ae551229127798f3a4b09227bf2d193de991db7258aa2264d2f914",
+      "binary_sha256": "7e20528ec9d38289ff928105baca31bd319c294c55ab8770252fb0c4c3ed7c5a",
+      "stderr_tail": "                                                                                                                                                                                                                                                                                   ++++++++++++\n\nwarning: comparison is useless due to type limits\n   --> /data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/native/main.rs:229:16\n    |\n229 |             if endpoint_state < 0 || endpoint_state >= 8192 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(unused_comparisons)]` on by default\n\nwarning: comparison is useless due to type limits\n   --> /data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/native/main.rs:251:16\n    |\n251 |             if endpoint_state < 0 || endpoint_state >= 8192 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n\nwarning: 8 warnings emitted\n\n"
+    },
+    "compiled_region": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 1256.383538832888,
+        "min_seconds": 1196.2308943402022,
+        "max_seconds": 1312.6572179235518,
+        "q1_seconds": 1254.2286303658038,
+        "q3_seconds": 1274.2904887273908,
+        "raw_seconds": [
+          1254.2286303658038,
+          1274.2904887273908,
+          1256.383538832888,
+          1312.6572179235518,
+          1196.2308943402022
+        ],
+        "peak_sampled_rss_bytes": 4857511936,
+        "peak_sampled_virtual_bytes": 5169102848
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 598.9638893455267,
+        "min_seconds": 572.781164387241,
+        "max_seconds": 603.0571932960302,
+        "q1_seconds": 587.9467937964946,
+        "q3_seconds": 602.991238836199,
+        "raw_seconds": [
+          598.9638893455267,
+          572.781164387241,
+          603.0571932960302,
+          602.991238836199,
+          587.9467937964946
+        ],
+        "peak_sampled_rss_bytes": 5242580992,
+        "peak_sampled_virtual_bytes": 5728538624
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.4767364987143429
+    },
+    "schedule_details": {
+      "execution_order_by_repeat": [
+        [
+          "cpp",
+          "rust"
+        ],
+        [
+          "rust",
+          "cpp"
+        ],
+        [
+          "cpp",
+          "rust"
+        ],
+        [
+          "rust",
+          "cpp"
+        ],
+        [
+          "rust",
+          "cpp"
+        ]
+      ],
+      "paired_brian_over_rust_ratios": [
+        2.093997071737111,
+        2.22474230641055,
+        2.083357188670746,
+        2.1769092706173323,
+        2.0345903863441297
+      ],
+      "paired_brian_over_rust_ratio_distribution": {
+        "n": 5,
+        "median": 2.093997071737111,
+        "min": 2.0345903863441297,
+        "max": 2.22474230641055,
+        "q1": 2.083357188670746,
+        "q3": 2.1769092706173323,
+        "raw": [
+          2.093997071737111,
+          2.22474230641055,
+          2.083357188670746,
+          2.1769092706173323,
+          2.0345903863441297
+        ]
+      },
+      "peak_rss_bytes": {
+        "cpp": {
+          "n": 5,
+          "median": 4856795136.0,
+          "min": 4855635968.0,
+          "max": 4857511936.0,
+          "q1": 4856446976.0,
+          "q3": 4856860672.0,
+          "raw": [
+            4856446976,
+            4857511936,
+            4855635968,
+            4856795136,
+            4856860672
+          ]
+        },
+        "rust": {
+          "n": 5,
+          "median": 5242548224.0,
+          "min": 5242503168.0,
+          "max": 5242580992.0,
+          "q1": 5242519552.0,
+          "q3": 5242564608.0,
+          "raw": [
+            5242548224,
+            5242519552,
+            5242564608,
+            5242580992,
+            5242503168
+          ]
+        }
+      },
+      "peak_virtual_bytes": {
+        "cpp": {
+          "n": 5,
+          "median": 5168885760.0,
+          "min": 5168566272.0,
+          "max": 5169102848.0,
+          "q1": 5168783360.0,
+          "q3": 5168934912.0,
+          "raw": [
+            5168934912,
+            5168783360,
+            5169102848,
+            5168566272,
+            5168885760
+          ]
+        },
+        "rust": {
+          "n": 5,
+          "median": 5728538624.0,
+          "min": 5728538624.0,
+          "max": 5728538624.0,
+          "q1": 5728538624.0,
+          "q3": 5728538624.0,
+          "raw": [
+            5728538624,
+            5728538624,
+            5728538624,
+            5728538624,
+            5728538624
+          ]
+        }
+      },
+      "rust_dump_bytes": [
+        2552171744
+      ],
+      "rust_spike_counts": [
+        29084,
+        29084,
+        29084,
+        29084,
+        29084
+      ],
+      "rust_synaptic_events": [
+        460072960,
+        460072960,
+        460072960,
+        460072960,
+        460072960
+      ],
+      "rust_simulation_seconds": {
+        "n": 5,
+        "median_seconds": 589.648412904,
+        "min_seconds": 563.605674915,
+        "max_seconds": 593.79805708,
+        "q1_seconds": 578.732335671,
+        "q3_seconds": 593.758375061,
+        "raw_seconds": [
+          589.648412904,
+          563.605674915,
+          593.79805708,
+          593.758375061,
+          578.732335671
+        ]
+      }
+    },
+    "rust_result_dump_audit": {
+      "count": 5,
+      "all_identical": true,
+      "sha256": [
+        "0c703f92cecc20621f9bba0c1f249b43b3cd21d8a3741603809bef437630a10f"
+      ],
+      "size_bytes": [
+        2552171744
+      ],
+      "paths": [
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/rust_replays_formal_cpu8_r198_native_10240_v1_measured_0_rust/results.bin",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/rust_replays_formal_cpu8_r198_native_10240_v1_measured_1_rust/results.bin",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/rust_replays_formal_cpu8_r198_native_10240_v1_measured_2_rust/results.bin",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/rust_replays_formal_cpu8_r198_native_10240_v1_measured_3_rust/results.bin",
+        "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale10240/rust/rust_explicit_10240_aot_1024017/rust_replays_formal_cpu8_r198_native_10240_v1_measured_4_rust/results.bin"
+      ],
+      "scope": "remote SHA-256 and byte-size audit; large result dumps remain on Linux 23"
+    },
+    "brian_over_rust_ratio_of_medians": 2.097594798587454,
+    "rust_peak_rss_over_brian_ratio_of_medians": 1.0794254394509424,
+    "limitation": null
+  }
+}

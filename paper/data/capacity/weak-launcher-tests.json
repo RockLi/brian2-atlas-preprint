@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "tests": 20,
+  "scope": "New finite memory caps, per-node overrides and repeated workload/index domains; no SSH in these local tests."
+}

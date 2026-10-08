@@ -1,0 +1,142 @@
+{
+  "schema": "atlas-training-evidence-v1",
+  "generated_utc": "2026-10-02T12:25:59.021766+00:00",
+  "environment": {
+    "os": "Darwin",
+    "arch": "arm64",
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "brian2": "2.10.1.post729",
+    "numpy": "2.5.2",
+    "rustc": "rustc 1.86.0 (05f9846f8 2025-03-31)",
+    "cargo": "cargo 1.86.0 (adf9b6ad1 2025-02-28)",
+    "mpi_compiler": "clang -g -I/opt/homebrew/Cellar/mpich/5.0.1/include -L/opt/homebrew/Cellar/mpich/5.0.1/lib -lmpi -lpmpi"
+  },
+  "runners": {
+    "mpi": {
+      "path": "brian2-rust/target-mpi-training/release/b2-runner",
+      "sha256": "20d5d3069be1ffeafab61a2ef45549de9a2fc27fbf73e0cc80d46fec92f4c821"
+    },
+    "native": {
+      "path": "brian2-rust/target-native-training/release/b2-train",
+      "sha256": "43d1ad02730c30d9b8fbe70ced5b3a30b8c2d3697609ffd6b40fd34c5c5c56ae"
+    }
+  },
+  "mpi_runtime_source_sha256": "96350c12234aa277e34880f886fde0ccaf3f4cb3455b5cbd1bfe3ced97950aa3",
+  "tests": {
+    "mpi-final.xml": {
+      "testcases": 30,
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0
+    },
+    "native-final.xml": {
+      "testcases": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0
+    },
+    "mpi-lifecycle-final.xml": {
+      "testcases": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "legacy-mpi-initial.xml": {
+      "testcases": 122,
+      "passed": 105,
+      "failed": 17,
+      "skipped": 0
+    },
+    "legacy-mpi-retest.xml": {
+      "testcases": 17,
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0
+    },
+    "legacy-device-compaction-initial.xml": {
+      "testcases": 101,
+      "passed": 92,
+      "failed": 9,
+      "skipped": 0
+    },
+    "legacy-compaction-retest.xml": {
+      "testcases": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "legacy-stdp-initial.xml": {
+      "testcases": 50,
+      "passed": 38,
+      "failed": 12,
+      "skipped": 0
+    },
+    "legacy-stdp-final.xml": {
+      "testcases": 50,
+      "passed": 50,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "source_sha256": {
+    ".gitignore": "5c0c67e82028283e3a6ec78b21d4c6e3329f0d4cdec99f8e39c3f9aec1abefc5",
+    "Cargo.toml": "bf39a76675acfa7289347da85707dc5aec93a556d0f36db8ec047178b70df2de",
+    "MPI.md": "c5fd27e42845622fea6fc418cde1a361080eff53caee2fbb28cdd78d0bdd7d49",
+    "MPI_GPU.md": "c7aa0ee2d480de507356bfd611059530c2d3de802855a9e892750475f7116234",
+    "MPI_TRAINING.md": "0990495b5215dcb317fa6dd56bd7589a9837c5eb15f20408160c47f07b848893",
+    "NATIVE_TRAINING.md": "29a92c84c1139cb016fc88493bdad1426ea8e757347ebbcc590cf99ea476df3d",
+    "examples/gpu_baseline.py": "c9c9488d63bc5bd56180f09e23ac68aef778340bbde21a540816eb87952f9308",
+    "examples/gpu_stdp_compare.py": "fc56e7118e2bb2b810882af1f19e5f2a5a1ca4e5b7da9f342b1ea12b405c8fef",
+    "examples/mpi_training.py": "8f53b37a1d099019b93810b2593ee281b3f1caf3a1c8c8a14d52a842e51ac912",
+    "examples/native_supervised_training.py": "16c9ae2914532c506a238ab861cdb36a4e1b29b43a21aec17d78a893a4c3f494",
+    "python/brian2_rust/__init__.py": "20406123c4b433f767f1a80214882b2bcecacd513c5a86696f9c570fd7987580",
+    "python/brian2_rust/device.py": "232ee6ca4679193389afd7c0d8e17a6f5be6d8ccda34ddca7b247f19c0db4382",
+    "python/brian2_rust/distributed.py": "cc91931b1c86017d226a9a46b7cec84aeb8a51804730bae2a318509298dee289",
+    "python/brian2_rust/mpi_checkpoint.py": "d4d1ba39e05585b23bf7af7f07ca09633f07a2d1cdaf725076cbcf849f4c5a3a",
+    "python/brian2_rust/mpi_codegen.py": "dbcaeeb9e0c8f1bfda6f18de46be1616671374d65e997187ce52d8411aa1c343",
+    "python/brian2_rust/mpi_partition.py": "dc9040c897a59469a16d130ab622f26cbf6a4db04665cbbf611e2eae1fc82ab5",
+    "python/brian2_rust/mpi_queue_compact.py": "98b49d30611d4d9a50a6e55b045595d7bbb20f8fe0796cf453de0beeed5b81a6",
+    "python/brian2_rust/slot_codegen.py": "0ccaeed4e7420f38d9034afb03594686696da36ca55365242f8c53a111983e8a",
+    "python/brian2_rust/training.py": "6d0f566c02e97cbb49b81eb0035d1a47514e514ccc0a23c3ff4af41a8b98d73b",
+    "python/brian2_rust/training_metal.py": "02b9ecfcd74e54ade5a49235b2f919550dd09b38a51b08c153b83d8037ca5639",
+    "python/brian2_rust/training_metal.m": "f2051fe783524d7b2fd6d4e7e7fa1c52689e762252fccaf2d1e119832502e46b",
+    "python/brian2_rust/training_metal.metal": "264491bcac66694010a6b16d7ee7ed234328886b5a241f6b7c844ce9514fdce7",
+    "src/lib.rs": "61abbe11ef9262298568298847c29e06fa6d3bd4c9c4760817af9b96a589a787",
+    "src/train_main.rs": "4a17c62c6955780bec0403e62f1593e903e2f407080f93f64a565a62dd95c42c",
+    "src/training.rs": "6447a505480158f5a889b0a98d27253da67cbb50d871106f49f0fb5455c6686d",
+    "src/training/metal.rs": "17c906bd3fe8f06e41b014ff636786df976099d4c3d4af87aeaeacaf3ab7ffc7",
+    "tests/test_mpi.py": "06a69ea236e27ab9766ad4bc9dcf204505826b38d9248fd2ac60ec7b3b88a848",
+    "tests/test_mpi_training.py": "df42c16a6ce2f3286854be042588302db497acee85eda367768431e3e88646ed",
+    "tests/test_mpi_queue_compact.py": "9881644307d82c5262803b05ed803d77807b33ae6d9572b5b87d41aa94ee2c31",
+    "tests/test_native_training.py": "c0ce01ae9879d00acbb3eb415d7e4e25d31d1d725cb8944935efb72752903a5a",
+    "tools/verify_next_brain_mpi_training.py": "65a69b3a37c89d977402cefc6f09ff4d9f7b3b203cb57ed66e4180f7e5acb5e5"
+  },
+  "platform_reference": {
+    "path": "/atlas-home/0004/workspace/next-brain.ai/next-brain.ai",
+    "head": "61331266b29267f14a9b20dfeb7db887635e82ae",
+    "writes": "No platform source, installed runtime or service changes"
+  },
+  "actual_hardware": [
+    "local Apple Silicon CPU",
+    "local Metal GPU",
+    "local MPICH communicator"
+  ],
+  "unverified": [
+    "CUDA training hardware",
+    "cross-host training",
+    "training scaling or speedup"
+  ],
+  "retained_preexisting_changes": [
+    "src/model.rs",
+    "tests/test_execution_plan.py",
+    "tests/test_mpi_teleport_launch.py",
+    "tools/mpi_teleport_launch.py",
+    "other existing untracked contextual work"
+  ],
+  "notes": [
+    "Source hashes identify delivered files, not a clean Git commit. Existing dirty work is preserved.",
+    "Historical initial failures and targeted retests are retained. Do not add overlapping runs into an aggregate test count.",
+    "Platform extra dynamics probes preceded the final save/engine guard; the six-family matrix was rerun after that guard.",
+    "Regression XML with subtests may contain more testcase elements than pytest top-level test counts."
+  ]
+}

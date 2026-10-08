@@ -1,0 +1,65 @@
+{
+  "ab_ba_order_verified_from_four_report_directories": true,
+  "approved_cpu_affinity": [
+    190
+  ],
+  "approved_remote_host": "hk-prod-model-ae09-94",
+  "archived_aggregate_sha256": "9e2b21a61b56d0cd4012a92393dbd5ee342ccb3524fb5111c0c73d9cfe13d2d8",
+  "auditor_sha256": "7acc2a121e5fe947eb679c7ad6b1b987e2749d8db056114ee82e9f967b4d95e4",
+  "construction_reported_separately": true,
+  "cython_codegen_or_compile_seconds_explicitly_reported_in_four_reports": false,
+  "cython_core_simulation_and_required_recording_median_seconds": 9.959238682407886,
+  "discarded_warmup_count": 4,
+  "full_end_to_end_seconds_explicitly_reported_in_four_reports": false,
+  "full_fig3_paper_duration_science_gate_passed": false,
+  "maximum_scientific_state_absolute_difference": 3.552713678800501e-15,
+  "mode": "mac_small_archived_json_npz_correctness_only_no_timing_no_simulation",
+  "new_performance_measurement_executed_locally": false,
+  "runs": [
+    {
+      "backend": "cython",
+      "directory": "paper-scale-100ms-benchmark-a-cython-v1",
+      "discarded_warmup_count": 1,
+      "report_sha256": "3c7b97e81099b9954f5afe0b98dd5be84c978bd7508bbe46e3eb072c6adb50f8",
+      "state_sha256": "54c5a24bd93699a3728d31b1bb46721788f206f89e576bf6b982308b6e80f158",
+      "unprofiled_measurement_count": 3
+    },
+    {
+      "backend": "rust_aot",
+      "directory": "paper-scale-100ms-benchmark-a-rust-v1",
+      "discarded_warmup_count": 1,
+      "report_sha256": "7947019fe9bcb257e0c7b4a0dd51392454fd628965b612d02607bb7727dfa17f",
+      "state_sha256": "acca43198e6d61d83f1a8da4ab99a4a1feb5e33496578836381f790f37638a0b",
+      "unprofiled_measurement_count": 3
+    },
+    {
+      "backend": "rust_aot",
+      "directory": "paper-scale-100ms-benchmark-b-rust-v1",
+      "discarded_warmup_count": 1,
+      "report_sha256": "c46846a0d0eec9c9f8f9989905bd40d8ff0f707c483317cc390b35303f26aa5c",
+      "state_sha256": "acca43198e6d61d83f1a8da4ab99a4a1feb5e33496578836381f790f37638a0b",
+      "unprofiled_measurement_count": 3
+    },
+    {
+      "backend": "cython",
+      "directory": "paper-scale-100ms-benchmark-b-cython-v1",
+      "discarded_warmup_count": 1,
+      "report_sha256": "73d970cc894714fe825588f9c6dd5c973ee97c0d5b30cae1de8e909483eb20f1",
+      "state_sha256": "54c5a24bd93699a3728d31b1bb46721788f206f89e576bf6b982308b6e80f158",
+      "unprofiled_measurement_count": 3
+    }
+  ],
+  "rust_aot_core_simulation_and_required_recording_median_seconds": 11.565250183,
+  "rust_export_native_build_and_dump_reported_separately": true,
+  "rust_faster": false,
+  "rust_speedup_over_cython": 0.8611347376684663,
+  "schema": "contextual-fig3-100ms-remote-benchmark-evidence-audit-v1",
+  "scope": "accepted_100ms_paper_scale_topology_only_not_full_figure3_speed_claim",
+  "strict_equal_shape_and_type_state_arrays_per_comparison": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "unprofiled_measurement_count_per_backend": 6
+}

@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "source_pdf_sha256": "6bcd7ce3f0620a29b28e18350322bfce549429552129c8fd8fa849f041d4c71c",
+  "checks": {
+    "english_pdf_sha256": true,
+    "english_manuscript_sha256": true,
+    "english_supplement_sha256": true,
+    "numbered_section_sequence": true,
+    "heading_level_counts": true,
+    "per_section_prose_paragraph_counts": true,
+    "main_figures": true,
+    "citation_anchors": true,
+    "references_verbatim": true,
+    "source_hashes_preserved": true,
+    "table_row_counts": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "table_numerical_values": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "compatibility_codes": true,
+    "s4_numerical_values": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "resource_subsections": true,
+    "s13_source_hashes": true,
+    "s5_numerical_values": [
+      true,
+      true
+    ],
+    "superseded_dendritic_result_absent": true,
+    "main_default_dendritic_rows": true,
+    "figure_data_geometry": true,
+    "s1_original_pixels_and_crops": true
+  },
+  "scope": "Translate all content in the delivered 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Main Table 5 reports default implementations; same-source cache ablation is in S13. Other archived cohorts retain their identities.",
+  "chinese_sources": {
+    "MANUSCRIPT.md": "407b30f983636936d9f45d01bded31e67e1c5b8d30eaef8781407ac1ebb0f2e3",
+    "DENDRITIC_SUPPLEMENT.md": "abc73b0f7631fcc4a621558b990547c337196f8b536bcd373174ec4ea76db4dc",
+    "RESOURCE_ANALYSIS.md": "26ba01b54f1e9ac26e3b8dcff5d876b6f50b5dfc0b951dccab167ba8fb9af481",
+    "b2ir_panels.json": "0203b5be6642e85614734e87837eb6bcb9606638bbb203935b0f0478eaaf4508"
+  }
+}

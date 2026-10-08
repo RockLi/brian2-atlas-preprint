@@ -1,0 +1,88 @@
+SOURCE 8F448F01448B
+
+Compiled B2IR
+Neurons
+160
+Populations
+1
+Synapses
+0
+Scheduled steps
+4
+neurongroup
+160 neurons
+
+State drive, v, w
+
+Parameters jump, tau, tau_w
+
+Events spike
+
+ONE SIMULATION TIMESTEP
+
+Execution cycle
+Select a stage, then inspect its concrete scheduled operations.
+01
+Start & drive
+Start-slot input and pre-state sampling
+No operation in this model
+02
+Update state
+Integrate membrane and model variables
+1 scheduled operation
+03
+Detect events
+Evaluate and record spike conditions
+2 scheduled operations
+04
+Deliver synapses
+Route events through connections
+No operation in this model
+05
+Apply resets
+Update cells that emitted events
+1 scheduled operation
+06
+Finish timestep
+Run end-slot work and advance time
+No operation in this model
+Advance the clock, then repeat for the next timestep
+Scheduled operations
+Exact order from the compiled B2IR artifact
+Previous
+4 / 4
+Next
+01
+neurongroup stateupdater
+Update state · neurongroup
+02
+neurongroup spike thresholder
+Detect events · neurongroup
+03
+spikemonitor
+Detect events · neurongroup
+04
+neurongroup spike resetter
+Apply resets · neurongroup
+
+SELECTED OPERATION · RESETS
+
+neurongroup_spike_resetter
+code object
+Depends on
+
+neurongroup_stateupdater, neurongroup_spike_thresholder
+
+Reads
+
+jump, w
+
+Writes
+
+v, w
+
+Operations
+v ← 0
+w ← (w + jump)
+
+B2IR includes executable expressions and scheduling; View IR only describes the network layout. Protocol hashes and raw instance arrays are omitted from this view.

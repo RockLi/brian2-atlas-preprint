@@ -1,0 +1,28 @@
+{
+  "schema": "atlas-online-b2ir-capture-v1",
+  "captured_on": "2026-10-07",
+  "site": "https://next-brain.ai",
+  "page": "https://next-brain.ai/account/runs/?id=bc510ae3-beb0-465c-a972-f2e168a6315d",
+  "model": "Adaptive LIF Population",
+  "run_displayed_time": "06/10/2026, 12:24:59",
+  "backend_displayed": "CPU \u00b7 8 cores",
+  "status": "completed",
+  "neurons": 160,
+  "synapses": 0,
+  "scheduled_steps": 4,
+  "duration_ms": 600,
+  "spikes": 3706,
+  "source_sha256_prefix": "8f448f01448b",
+  "full_source_hash_available_in_capture": false,
+  "selected_node": "neurongroup_spike_resetter",
+  "capture_mode": "direct screenshot of online saved actual-run B2IR; no local replay; no new simulation",
+  "crop": {
+    "x": 125,
+    "y": 2592.953125,
+    "width": 1220,
+    "height": 1151.953125
+  },
+  "screenshot_sha256": "24cbf95939512857f3f7dca0175997a8f644ce9cd2d034c2e9f0252a40dad1f8",
+  "visible_text_sha256": "8800bf2953d564b79abcdca8a249813e10ee8c2b3e276d8a6431fca1769b1547",
+  "scope": "Logical schedule and declared code-object effects; no complete physical-plan or optimization-path visualization; raw B2IR and full run outputs not downloaded."
+}

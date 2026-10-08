@@ -1,0 +1,62 @@
+[
+  {
+    "file": "fig10_connected_capacity.svg",
+    "source_sha256": "fb8c01466bf26006fd82d3bac64eb15ecc2e7763facf6cde5c6a7d91279ee419",
+    "translated_text_nodes": 24,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig1_architecture.svg",
+    "source_sha256": "bf7899a2ba970760ebd67001f7fd2dc1d941c81e195695e5dc88dadfff0a29b3",
+    "translated_text_nodes": 14,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig2_semantics.svg",
+    "source_sha256": "c331b30ed42eabb80d4dd3bd1fe2f5cef41f28ddff50518135f130bbf7315bf3",
+    "translated_text_nodes": 9,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig3_distributed.svg",
+    "source_sha256": "0c6012a5bd15fd16807b9d5eab7584d8973b336c449481c4e3df9b460b1dc7ec",
+    "translated_text_nodes": 12,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig4_cpu.svg",
+    "source_sha256": "55ec676ff4b0155467b246c1e5a4cb11f544326d9cf78c101c126e1374e1fb00",
+    "translated_text_nodes": 11,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig5_gpu.svg",
+    "source_sha256": "25aacc7f60b52192b0bafa6dc3692e2b4b8e51e354ecca2759676d01e14fed42",
+    "translated_text_nodes": 15,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig6_lifecycle.svg",
+    "source_sha256": "0aa0b59ceab10dd361657f803e131b0e8c1056d2947f8585c559a464b8790582",
+    "translated_text_nodes": 13,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig7_browser.svg",
+    "source_sha256": "9f2c907ee241b178d0a700df230b473b8dbd4a81a36be7f2f37309844f23c356",
+    "translated_text_nodes": 16,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig8_nmda.svg",
+    "source_sha256": "0db2582e64dc61f8912c94ef5b29c3b4de68c7a98047fa2b2d4d67f6d5e1cabf",
+    "translated_text_nodes": 11,
+    "geometry_and_embedded_images_unchanged": true
+  },
+  {
+    "file": "fig9_heterogeneous_mpi.svg",
+    "source_sha256": "ac5d2b4043645a5d8a4b0317c2e0e0170b6c90f572a9a69cec8f25a1419642de",
+    "translated_text_nodes": 28,
+    "geometry_and_embedded_images_unchanged": true
+  }
+]

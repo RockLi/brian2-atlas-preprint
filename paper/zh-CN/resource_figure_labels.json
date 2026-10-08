@@ -1,0 +1,22 @@
+{
+  "Tested layouts": "已测试布局",
+  "Conditional local-work mapping": "条件本地工作量映射",
+  "3,000 hosts / 24,000 cores": "3,000台主机／24,000个核",
+  "a  Fixed local-work host allocation": "a  固定本地工作量的主机分配",
+  "Hosts (8 worker cores per host)": "主机数（每台8个工作核）",
+  "Measured other-host peak": "其他主机实测峰值",
+  "Selected arrays (dense CSR)": "选定数组（稠密CSR）",
+  "Tested coordinator cap (768 GiB)": "已测协调主机限额（768 GiB）",
+  "b  Selected worker arrays": "b  选定工作进程数组",
+  "Per-host GiB (not a peak forecast)": "每主机GiB（非峰值预测）",
+  "Observed scientific binary files": "实测科学二进制文件",
+  "Conditional binary payload": "条件二进制载荷",
+  "Root logical record arrays": "根进程逻辑记录数组",
+  "c  Scientific recording (100 ms)": "c  科学记录（100 ms）",
+  "GiB (excludes provenance reports)": "GiB（不含溯源报告）",
+  "Derived at tested sizes": "在实测规模下推导",
+  "Conditional dense reporting": "条件稠密报告",
+  "d  Dense report growth": "d  稠密报告增长",
+  "Scalar entries per report copy": "每份报告的标量条目",
+  "Reference neuron count (%)": "参考神经元数量（%）"
+}

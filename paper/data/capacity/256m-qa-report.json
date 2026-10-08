@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": {
+    "complete_output_audit": true,
+    "resource_records": true,
+    "audit_exit_zero": true,
+    "independent_pilot_603_exact": true,
+    "counts_exact": true,
+    "cleanup": true,
+    "source_identity": true,
+    "figure_visual_review": true
+  },
+  "figure_visual_review": "PNG inspected: readable axes/units/legends; overlapping E/I traces distinguishable by dashed line; no clipping or overlap.",
+  "audit_peak_gib": 68.6734390258789,
+  "audit_wall_seconds": 171.62967424094677
+}

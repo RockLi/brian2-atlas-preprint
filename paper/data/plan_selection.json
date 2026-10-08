@@ -1,0 +1,2288 @@
+{
+  "schema": "b2-preprint-plan-selection-v2",
+  "provenance": [
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/autotune/manifest.json",
+      "sha256": "b499f0725ef4e54b6b716071fda61398e6193d529ada401939ac4cd68fc13a6d",
+      "bytes": 5697360
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/autotune/audit-result.json",
+      "sha256": "3e49aea21beb4f9656a844fd104340e4d24f225e45ab565f0ca43c69b2f1b2c5",
+      "bytes": 1708
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/autotune/README.md",
+      "sha256": "0275f1559681bc703fb2690b4c8c4370b4b4e7fe82d34962198766f233e82ef3",
+      "bytes": 9542
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/autotune-1e6954b2/evidence/blobs/98a1d92e59f6ce8e774bc4d25875c617128933d60a283adbf0dbf0de37d8c938.gz",
+      "artifact_key": "local-final-benchmark/report.json",
+      "sha256": "98a1d92e59f6ce8e774bc4d25875c617128933d60a283adbf0dbf0de37d8c938",
+      "bytes": 853705,
+      "saved": "data/plan-selection-reports/autotune-m3.json"
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/autotune-1e6954b2/evidence/blobs/a1256023dc635471dd49d26bd269d778da25a5473e6149655e6d269e93a42a08.gz",
+      "artifact_key": "l4-final/benchmark/report.json",
+      "sha256": "a1256023dc635471dd49d26bd269d778da25a5473e6149655e6d269e93a42a08",
+      "bytes": 981501,
+      "saved": "data/plan-selection-reports/autotune-l4.json"
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/autotune-1e6954b2/evidence/blobs/560ebb9cb6261b4327b0b2e943f5bdfbaa96e43a4655f931a97153a49b95b7e1.gz",
+      "artifact_key": "a100-final/benchmark/report.json",
+      "sha256": "560ebb9cb6261b4327b0b2e943f5bdfbaa96e43a4655f931a97153a49b95b7e1",
+      "bytes": 981589,
+      "saved": "data/plan-selection-reports/autotune-a100.json"
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/tuning-cache/manifest.json",
+      "sha256": "6537fafd25353fde7f354002d4baa93822f47f7117f1e5dc96636176acd1fd4b",
+      "bytes": 5207332
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/tuning-cache/audit-result.json",
+      "sha256": "de6c5550e949b854ddd9c1ca8c0c8a87a76fa84c5cf5b40ddbe36a4856400c2c",
+      "bytes": 3247
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/execution-plan-evidence/tuning-cache/README.md",
+      "sha256": "3731232b708c03965536be9f5b8d6f15c42090a6e6a47cff1435e15962d6422a",
+      "bytes": 9668
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/tuning-cache-ef88d574/evidence/blobs/3690159bd308b7c70642f9b46a464fdaafa50b355325bdd1db034d36725eac88.gz",
+      "artifact_key": "local-corrected-benchmark/report.json",
+      "sha256": "3690159bd308b7c70642f9b46a464fdaafa50b355325bdd1db034d36725eac88",
+      "bytes": 129651,
+      "saved": "data/plan-selection-reports/tuning-cache-m3.json"
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/tuning-cache-ef88d574/evidence/blobs/6f76ba04157c7bcbf69f371fb7a1d7214fc86a3e974beac8d3b26c2a2d0d49d8.gz",
+      "artifact_key": "l4-final/benchmark/report.json",
+      "sha256": "6f76ba04157c7bcbf69f371fb7a1d7214fc86a3e974beac8d3b26c2a2d0d49d8",
+      "bytes": 134564,
+      "saved": "data/plan-selection-reports/tuning-cache-l4.json"
+    },
+    {
+      "archive_path": "/atlas-storage/0002/brian2-gpu-execution-plan/tuning-cache-ef88d574/evidence/blobs/982e0eabc75fcb1ab89fa9e2c9912eedcdefe29874be0a700186b5e00057678b.gz",
+      "artifact_key": "a100-final/benchmark/report.json",
+      "sha256": "982e0eabc75fcb1ab89fa9e2c9912eedcdefe29874be0a700186b5e00057678b",
+      "bytes": 135046,
+      "saved": "data/plan-selection-reports/tuning-cache-a100.json"
+    },
+    {
+      "path": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/python/brian2_rust/planner.py",
+      "sha256": "277a605ac708a60cbddaee10a1da71fd43eefcdee222e9751096b74d747d4196",
+      "bytes": 36893
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/GPU_AUTOTUNE.md",
+      "sha256": "aa4b26e1df5fc2e5f5ee4a869b4d98aa7e2c38722482a50cb765f8731f04476c",
+      "bytes": 11550
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/EXECUTION_PLAN.md",
+      "sha256": "922a5bb73472678d71a1e55b8ae794f274794da699578d991fa6c12fc1c109fc",
+      "bytes": 26011
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/plan.py",
+      "sha256": "a4465b399d451e4ef3d9784fc415085ab2b9e5d50695f8f426b0eb2945cf0ceb",
+      "bytes": 19158
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/gpu_autotune.py",
+      "sha256": "a5af32b86fbcae611d399e0157d579fa4d89d474ef577808a99a38326f8796d5",
+      "bytes": 7601
+    },
+    {
+      "path": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/gpu_tuning_cache.py",
+      "sha256": "524187b28cec2119cee0d88733f3eed1ff9540028451481b3a3bd3bae7c2f3a1",
+      "bytes": 7413
+    }
+  ],
+  "autotune": {
+    "base_revision": "1e6954b25",
+    "retained_audit": {
+      "passed": true,
+      "references": 16909,
+      "blobs": 2875,
+      "tests": {
+        "a100": {
+          "passed": 54,
+          "skipped": 19
+        },
+        "l4": {
+          "passed": 54,
+          "skipped": 19
+        },
+        "m3": {
+          "passed": 54,
+          "skipped": 19
+        }
+      },
+      "tuning_reports": 92,
+      "preserved_incomplete_reports": 1,
+      "benchmark_snapshots": 36,
+      "benchmark_fields": 288,
+      "paired_native_fields": 4830,
+      "benchmarks": {
+        "a100": [
+          {
+            "case": "quiet",
+            "selected": "bitset",
+            "tuning_seconds": 14.911790234000023,
+            "baseline_ms": 30.895733999955155,
+            "selected_ms": 19.856899000046724
+          },
+          {
+            "case": "wide",
+            "selected": "prefix-bitset",
+            "tuning_seconds": 23.98620328200002,
+            "baseline_ms": 154.3348689999675,
+            "selected_ms": 100.19106300001113
+          }
+        ],
+        "l4": [
+          {
+            "case": "quiet",
+            "selected": "bitset",
+            "tuning_seconds": 15.98889507900003,
+            "baseline_ms": 24.077097999906982,
+            "selected_ms": 17.397388000063074
+          },
+          {
+            "case": "wide",
+            "selected": "prefix-bitset",
+            "tuning_seconds": 24.362051555999983,
+            "baseline_ms": 122.25817800003824,
+            "selected_ms": 80.99798500006727
+          }
+        ],
+        "m3": [
+          {
+            "case": "quiet",
+            "selected": "baseline",
+            "tuning_seconds": 4.312252042000182,
+            "baseline_ms": 79.63399996515363,
+            "selected_ms": 63.5974999750033
+          },
+          {
+            "case": "wide",
+            "selected": "baseline",
+            "tuning_seconds": 16.87261225003749,
+            "baseline_ms": 1313.6746670352295,
+            "selected_ms": 323.75041698105633
+          }
+        ]
+      }
+    },
+    "rows": [
+      {
+        "host": "M3",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/autotune-m3.json",
+        "selected": "baseline",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.0733373750699684,
+              0.07963399996515363,
+              0.09111779206432402
+            ],
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": false,
+              "kernels_reused": 0,
+              "kernels_compiled": 4
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.09841233305633068,
+              0.09672987496014684,
+              0.10834479099139571
+            ],
+            "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.06824175000656396,
+              0.06845641694962978,
+              0.0814321250654757
+            ],
+            "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.0710777910426259,
+              0.06412879098206758,
+              0.09736974991392344
+            ],
+            "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.14857033302541822,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.12534787505865097,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.17193845799192786,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.12317699997220188,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.0710777910426259,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.06824175000656396,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.09841233305633068,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 0.0733373750699684,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.06412879098206758,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.07963399996515363,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.06845641694962978,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.09672987496014684,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 0.09111779206432402,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.0814321250654757,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.09736974991392344,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.10834479099139571,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 3,
+            "seconds": 0.0801885420223698,
+            "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+          }
+        ],
+        "calibration_seconds": 4.312252042000182,
+        "baseline_profiling_ms": 79.63399996515363,
+        "selected_profiling_ms": 79.63399996515363,
+        "later_replay_seconds": [
+          0.07320866698864847,
+          0.0635974999750033,
+          0.06616766704246402,
+          0.0568850829731673,
+          0.05538929195608944
+        ],
+        "later_replay_median_ms": 63.5974999750033,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "M3",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/autotune-m3.json",
+        "selected": "baseline",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              1.3136746670352295,
+              0.358886249945499,
+              1.845093582989648
+            ],
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": false,
+              "kernels_reused": 0,
+              "kernels_compiled": 4
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.9125832499703392,
+              0.5198003749828786,
+              0.44005512504372746
+            ],
+            "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.29362129094079137,
+              0.2929427089402452,
+              0.5427928330609575
+            ],
+            "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.3616708329645917,
+              0.3814990830142051,
+              0.5195009169401601
+            ],
+            "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a",
+            "device": "Apple M3",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "bridge_reused": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.6155976250302047,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.7556878749746829,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.6726812500273809,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.6603369580116123,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.3616708329645917,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.29362129094079137,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.9125832499703392,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 1.3136746670352295,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.3814990830142051,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.358886249945499,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.2929427089402452,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.5198003749828786,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 1.845093582989648,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.5427928330609575,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.5195009169401601,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.44005512504372746,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+          },
+          {
+            "candidate": "baseline",
+            "round": 3,
+            "seconds": 0.3988898750394583,
+            "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+          }
+        ],
+        "calibration_seconds": 16.87261225003749,
+        "baseline_profiling_ms": 1313.6746670352295,
+        "selected_profiling_ms": 1313.6746670352295,
+        "later_replay_seconds": [
+          0.32375041698105633,
+          0.29290191596373916,
+          0.2948586660204455,
+          0.3485092499759048,
+          1.751867667073384
+        ],
+        "later_replay_median_ms": 323.75041698105633,
+        "f32_passed": true,
+        "f64_passed": false
+      },
+      {
+        "host": "L4",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/autotune-l4.json",
+        "selected": "bitset",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.024723945999994612,
+              0.024077097999906982,
+              0.023926994000021296
+            ],
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 0,
+              "kernels_compiled": 4,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.02677296300009857,
+              0.02638228299997536,
+              0.027016532999937226
+            ],
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.017267181999955028,
+              0.01729120300001341,
+              0.01756910600010997
+            ],
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.019591363000017736,
+              0.019730563999928563,
+              0.019782415999998193
+            ],
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.16674892100002126,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.14041699000006247,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.17447976500000095,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.14903416599997854,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.019591363000017736,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.017267181999955028,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.02677296300009857,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 0.024723945999994612,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.019730563999928563,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.024077097999906982,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.01729120300001341,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.02638228299997536,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 0.023926994000021296,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.01756910600010997,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.019782415999998193,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.027016532999937226,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "bitset",
+            "round": 3,
+            "seconds": 0.01727643899994291,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          }
+        ],
+        "calibration_seconds": 15.98889507900003,
+        "baseline_profiling_ms": 24.077097999906982,
+        "selected_profiling_ms": 17.29120300001341,
+        "later_replay_seconds": [
+          0.017564074999995682,
+          0.01776407299996663,
+          0.01730748699992546,
+          0.017106562999970265,
+          0.017397388000063074
+        ],
+        "later_replay_median_ms": 17.397388000063074,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "L4",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/autotune-l4.json",
+        "selected": "prefix-bitset",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.12205188100006126,
+              0.12292639699990104,
+              0.12225817800003824
+            ],
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 0,
+              "kernels_compiled": 4,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.10808139799996752,
+              0.10856059699995058,
+              0.10637642799997593
+            ],
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.08295526699998845,
+              0.08219590099997731,
+              0.08418079499995201
+            ],
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.07981957000004059,
+              0.07985901199992895,
+              0.08418425799993656
+            ],
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "device": "NVIDIA L4",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3,
+              "dependency_files": 186,
+              "context_sha256": "988f2fa70afa4e82eacf779cc04f46709c27b7514727b024085f4de460c81c81"
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.5499429789999795,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.5504801600000064,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.5515425370000457,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.5230024769999773,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.07981957000004059,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.08295526699998845,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.10808139799996752,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 0.12205188100006126,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.07985901199992895,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.12292639699990104,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.08219590099997731,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.10856059699995058,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 0.12225817800003824,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.08418079499995201,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.08418425799993656,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.10637642799997593,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 3,
+            "seconds": 0.07929086100000404,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          }
+        ],
+        "calibration_seconds": 24.362051555999983,
+        "baseline_profiling_ms": 122.25817800003824,
+        "selected_profiling_ms": 79.85901199992895,
+        "later_replay_seconds": [
+          0.08302431100003105,
+          0.08099798500006727,
+          0.07882962500002577,
+          0.07947841999998673,
+          0.08268649100000403
+        ],
+        "later_replay_median_ms": 80.99798500006727,
+        "f32_passed": true,
+        "f64_passed": false
+      },
+      {
+        "host": "A100",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/autotune-a100.json",
+        "selected": "bitset",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.03341984099995443,
+              0.030895733999955155,
+              0.029337494999936098
+            ],
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 0,
+              "kernels_compiled": 4,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.03966477500000565,
+              0.032346244999985174,
+              0.03286325599992779
+            ],
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.025266948999956185,
+              0.020838584999978593,
+              0.020555351999973936
+            ],
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.028826664999996865,
+              0.024827952000009645,
+              0.02349280999999337
+            ],
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.17741130000001704,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.15645251700004792,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.1438178449999441,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.15914136100002452,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.028826664999996865,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.025266948999956185,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.03966477500000565,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 0.03341984099995443,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.024827952000009645,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.030895733999955155,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.020838584999978593,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.032346244999985174,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 0.029337494999936098,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "d1e5e51f453646ec3c6bfd59dc39bcaa17f4012d3e0aaa117362fc864c39020d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.020555351999973936,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.02349280999999337,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "0cb36eb973b7e7537a43d3abe5090a851069828a5c9933c9d6367d7bd6db8cc6"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.03286325599992779,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "bc8b930396d4e9baed84d61c363ca221252d4ec025c2626d35cc562f5be3a45a"
+          },
+          {
+            "candidate": "bitset",
+            "round": 3,
+            "seconds": 0.0204455110000481,
+            "observable_sha256": "090f4c315c23c97b9a9957edccfabbcdc33e0c74ea7ca2848a1422128c52a5e8",
+            "plan_sha256": "b14b2b66b230d34b7a01ee29fef8b956ea8ee08e40bdaa7649907db3eb5ebf75"
+          }
+        ],
+        "calibration_seconds": 14.911790234000023,
+        "baseline_profiling_ms": 30.895733999955155,
+        "selected_profiling_ms": 20.838584999978593,
+        "later_replay_seconds": [
+          0.019856899000046724,
+          0.021103593000020737,
+          0.019857167999930425,
+          0.01976242099999581,
+          0.019482805000052394
+        ],
+        "later_replay_median_ms": 19.856899000046724,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "A100",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/autotune-a100.json",
+        "selected": "prefix-bitset",
+        "candidates": {
+          "baseline": {
+            "synapse_prefix": false,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.1543348689999675,
+              0.1536414600000171,
+              0.15500957100005053
+            ],
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 0,
+              "kernels_compiled": 4,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "prefix": {
+            "synapse_prefix": true,
+            "synapse_sparse": false,
+            "status": "eligible",
+            "seconds": [
+              0.12431809599991084,
+              0.12520581299997957,
+              0.12445768099996712
+            ],
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 3,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "bitset": {
+            "synapse_prefix": false,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.11039760599999227,
+              0.0972075050000285,
+              0.09787276999998085
+            ],
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 2,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          },
+          "prefix-bitset": {
+            "synapse_prefix": true,
+            "synapse_sparse": "bitset",
+            "status": "eligible",
+            "seconds": [
+              0.10129605300005551,
+              0.09175048999998126,
+              0.09159274600006029
+            ],
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4",
+            "device": "NVIDIA A100-SXM4-40GB",
+            "compilation": {
+              "requested": true,
+              "portable": true,
+              "kernels_reused": 2,
+              "kernels_compiled": 3,
+              "dependency_files": 186,
+              "context_sha256": "e77395d0f0234d3ea6cd492ed5b68c3b808c002a7b30880532baa2d30ba1d09c"
+            }
+          }
+        },
+        "samples": [
+          {
+            "candidate": "baseline",
+            "round": -1,
+            "seconds": 0.6222832800000333,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "prefix",
+            "round": -1,
+            "seconds": 0.5756386009999233,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "bitset",
+            "round": -1,
+            "seconds": 0.5662160099999483,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": -1,
+            "seconds": 0.5502583219999906,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 0,
+            "seconds": 0.10129605300005551,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "bitset",
+            "round": 0,
+            "seconds": 0.11039760599999227,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix",
+            "round": 0,
+            "seconds": 0.12431809599991084,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "baseline",
+            "round": 0,
+            "seconds": 0.1543348689999675,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 1,
+            "seconds": 0.09175048999998126,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "baseline",
+            "round": 1,
+            "seconds": 0.1536414600000171,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 1,
+            "seconds": 0.0972075050000285,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix",
+            "round": 1,
+            "seconds": 0.12520581299997957,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "baseline",
+            "round": 2,
+            "seconds": 0.15500957100005053,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "0b1e5349c1310a87ddd5b88ccac89abc9196656b4908cd9f9f09c7457479662d"
+          },
+          {
+            "candidate": "bitset",
+            "round": 2,
+            "seconds": 0.09787276999998085,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "45e08e77e55ed14501226bf91404f3f26f8c3ab7d6a936438e299a27d3d92845"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 2,
+            "seconds": 0.09159274600006029,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          },
+          {
+            "candidate": "prefix",
+            "round": 2,
+            "seconds": 0.12445768099996712,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "fbdb1404a8ed387cd806e41aa5f5c81afdf6350242b66ab46b2c4bced3a4e31f"
+          },
+          {
+            "candidate": "prefix-bitset",
+            "round": 3,
+            "seconds": 0.09598407600003611,
+            "observable_sha256": "bb03724fa7c8087226a97cdf12089f26736667141c59cde952e76d33dabefcf5",
+            "plan_sha256": "c8e977e30422839b4edf9b73d9f6cce48a5b7356b9425c2ca8b60b7a58154bd4"
+          }
+        ],
+        "calibration_seconds": 23.98620328200002,
+        "baseline_profiling_ms": 154.3348689999675,
+        "selected_profiling_ms": 91.75048999998126,
+        "later_replay_seconds": [
+          0.10385413500000595,
+          0.10208717099999376,
+          0.09973075999994307,
+          0.10019106300001113,
+          0.09946947500009173
+        ],
+        "later_replay_median_ms": 100.19106300001113,
+        "f32_passed": true,
+        "f64_passed": false
+      }
+    ]
+  },
+  "tuning-cache": {
+    "base_revision": "ef88d5742",
+    "retained_audit": {
+      "passed": true,
+      "references": 16378,
+      "blobs": 2741,
+      "tests": {
+        "a100": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "a100-initial": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "l4": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "l4-initial": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "m3": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "m3-default-regression": {
+          "passed": 54,
+          "skipped": 19
+        },
+        "m3-initial": {
+          "passed": 42,
+          "skipped": 4
+        },
+        "m3-initial-default-regression": {
+          "passed": 54,
+          "skipped": 19
+        }
+      },
+      "benchmarks": {
+        "a100": [
+          {
+            "case": "quiet",
+            "selected": "baseline",
+            "miss_seconds": 19.589406914999984,
+            "hit_median_seconds": 1.9667652780000253,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "prefix-bitset",
+            "miss_seconds": 26.254633197000032,
+            "hit_median_seconds": 4.203309784999988,
+            "f64_passed": false
+          }
+        ],
+        "a100-initial": [
+          {
+            "case": "quiet",
+            "selected": "bitset",
+            "miss_seconds": 11.525292589000003,
+            "hit_median_seconds": 1.223029136000008,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "prefix-bitset",
+            "miss_seconds": 19.189642295999988,
+            "hit_median_seconds": 2.9451913540000305,
+            "f64_passed": false
+          }
+        ],
+        "l4": [
+          {
+            "case": "quiet",
+            "selected": "bitset",
+            "miss_seconds": 13.759304025000006,
+            "hit_median_seconds": 1.726687405000007,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "prefix-bitset",
+            "miss_seconds": 23.238736741000025,
+            "hit_median_seconds": 3.8343290230000093,
+            "f64_passed": false
+          }
+        ],
+        "l4-initial": [
+          {
+            "case": "quiet",
+            "selected": "bitset",
+            "miss_seconds": 14.885459760999993,
+            "hit_median_seconds": 1.825221847000023,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "bitset",
+            "miss_seconds": 23.394711885999982,
+            "hit_median_seconds": 3.889539649000028,
+            "f64_passed": false
+          }
+        ],
+        "m3": [
+          {
+            "case": "quiet",
+            "selected": "baseline",
+            "miss_seconds": 3.7068766250740737,
+            "hit_median_seconds": 0.560162957990542,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "bitset",
+            "miss_seconds": 8.767914499971084,
+            "hit_median_seconds": 1.2127059999620542,
+            "f64_passed": false
+          }
+        ],
+        "m3-initial": [
+          {
+            "case": "quiet",
+            "selected": "baseline",
+            "miss_seconds": 3.6554254159564152,
+            "hit_median_seconds": 0.5211924579925835,
+            "f64_passed": true
+          },
+          {
+            "case": "wide",
+            "selected": "bitset",
+            "miss_seconds": 8.970706457970664,
+            "hit_median_seconds": 1.2729427920421585,
+            "f64_passed": false
+          }
+        ]
+      },
+      "benchmark_snapshots": 48,
+      "benchmark_fields": 384,
+      "paired_native_fields": 3024,
+      "verified_hits": 60,
+      "verified_misses": 60
+    },
+    "rows": [
+      {
+        "host": "M3",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/tuning-cache-m3.json",
+        "selected": "baseline",
+        "calibration_transport_seconds": 3.7068766250740737,
+        "hit_seconds": [
+          0.5707030420890078,
+          0.5331851250957698,
+          0.560162957990542
+        ],
+        "hit_median_seconds": 0.560162957990542,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "M3",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/tuning-cache-m3.json",
+        "selected": "bitset",
+        "calibration_transport_seconds": 8.767914499971084,
+        "hit_seconds": [
+          1.2489600830012932,
+          1.2127059999620542,
+          1.2117670410079882
+        ],
+        "hit_median_seconds": 1.2127059999620542,
+        "f32_passed": true,
+        "f64_passed": false
+      },
+      {
+        "host": "L4",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/tuning-cache-l4.json",
+        "selected": "bitset",
+        "calibration_transport_seconds": 13.759304025000006,
+        "hit_seconds": [
+          1.726687405000007,
+          1.7299192730000073,
+          1.7223566789999722
+        ],
+        "hit_median_seconds": 1.726687405000007,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "L4",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/tuning-cache-l4.json",
+        "selected": "prefix-bitset",
+        "calibration_transport_seconds": 23.238736741000025,
+        "hit_seconds": [
+          3.9429237080000235,
+          3.8343290230000093,
+          3.8320178019999958
+        ],
+        "hit_median_seconds": 3.8343290230000093,
+        "f32_passed": true,
+        "f64_passed": false
+      },
+      {
+        "host": "A100",
+        "case": "quiet",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 8,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%16 ticks",
+          "post_delay_ticks": 16,
+          "pre_before_post": true,
+          "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.015625,
+            "delay_span": 16,
+            "post_delay": 16,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 0,
+            "indegree_max": 19,
+            "indegree_mean": 8.0,
+            "indegree_std": 2.7295045910384546
+          }
+        },
+        "expected_events": 0,
+        "source": "data/plan-selection-reports/tuning-cache-a100.json",
+        "selected": "baseline",
+        "calibration_transport_seconds": 19.589406914999984,
+        "hit_seconds": [
+          1.9836956830000076,
+          1.9667652780000253,
+          1.9622811950000028
+        ],
+        "hit_median_seconds": 1.9667652780000253,
+        "f32_passed": true,
+        "f64_passed": true
+      },
+      {
+        "host": "A100",
+        "case": "wide",
+        "configuration": {
+          "case": "recurrent-delayed-stdp-v2",
+          "neurons": 4096,
+          "degree": 32,
+          "steps": 1024,
+          "dt_seconds": 0.0009765625,
+          "initial_v": "(i%16)/16",
+          "initial_w": 0.25,
+          "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+          "taupre_ticks": 16,
+          "taupost_ticks": 32,
+          "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+          "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+          "pre_delay": "edge_index%8 ticks",
+          "post_delay_ticks": 3,
+          "pre_before_post": true,
+          "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+          "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+          "acceptance": {
+            "float_rtol": 2e-05,
+            "float_atol": 2e-06,
+            "spikes": "exact ticks and neuron indices",
+            "lastupdate": "exact"
+          },
+          "workload": {
+            "drive": 0.0625,
+            "delay_span": 8,
+            "post_delay": 3,
+            "topology_kind": "random-fixed-outdegree",
+            "topology_seed": 42
+          },
+          "topology": {
+            "kind": "random-fixed-outdegree",
+            "seed": 42,
+            "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+            "self_edges": false,
+            "duplicate_edges": false,
+            "creation_order": "source, then sorted target",
+            "indegree_min": 14,
+            "indegree_max": 53,
+            "indegree_mean": 32.0,
+            "indegree_std": 5.550768879736392
+          }
+        },
+        "expected_events": 22795895,
+        "source": "data/plan-selection-reports/tuning-cache-a100.json",
+        "selected": "prefix-bitset",
+        "calibration_transport_seconds": 26.254633197000032,
+        "hit_seconds": [
+          4.203309784999988,
+          4.156439803000012,
+          4.246557165000013
+        ],
+        "hit_median_seconds": 4.203309784999988,
+        "f32_passed": true,
+        "f64_passed": false
+      }
+    ]
+  },
+  "verification_scope": "Six archived benchmark-report hashes, twelve final host/case summaries, selection rules, sample fingerprints and report-level numerical gates rechecked. Full raw arrays and historical regression suites were not rerun."
+}

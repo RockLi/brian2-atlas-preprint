@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": {
+    "full_output_audit": true,
+    "resources": true,
+    "audit_exit_zero": true,
+    "launch_exits_zero": true,
+    "counts_exact": true,
+    "spikes_events_match": true,
+    "source_readback": true,
+    "script_identity": true,
+    "cleanup": true,
+    "figure_visual_review": true,
+    "prior_failure_retained": true
+  },
+  "figure_visual_review": "PNG inspected: readable axes, units, legends and title; both nearly overlapping activity traces distinguishable; no clipping."
+}

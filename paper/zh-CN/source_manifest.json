@@ -1,0 +1,6 @@
+{
+  "english_pdf_sha256": "6bcd7ce3f0620a29b28e18350322bfce549429552129c8fd8fa849f041d4c71c",
+  "english_manuscript_sha256": "2bbc68fbe11fbb9806e331b64396dd400a045d57e2090c677a0f09129372d6ab",
+  "english_supplement_sha256": "255e4a98549c14e9f8f9a3d77ec79ca43338e07f06f5ca6ca8fe9bf0836bd723",
+  "scope": "Translate all content in the delivered 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Main Table 5 reports default implementations; same-source cache ablation is in S13. Other archived cohorts retain their identities."
+}

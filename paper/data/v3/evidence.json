@@ -1,0 +1,433 @@
+{
+  "schema": "brian2-atlas-preprint-evidence-v3",
+  "generated_utc": "2026-10-06T16:20:31.267509+00:00",
+  "sources": [
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/single-neuron-10s-benchmark-abba-v1/aggregate-v1.json",
+      "retained": "dendritic_nonlinear.json",
+      "bytes": 6008,
+      "sha256": "20e26eb9cb27e30d0f0ec2ec443bdf8e703fde3aaa31dc383945fb2fbd7822ed"
+    },
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/single-neuron-linear-10s-benchmark-abba-v1/aggregate-v1.json",
+      "retained": "dendritic_linear.json",
+      "bytes": 6058,
+      "sha256": "7a30fb0ef640be17ecc627fd2b880c668f1dd933235fadf28e6f6f311882efef"
+    },
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/paper-scale-100ms-remote-benchmark-v1/paper-scale-100ms-benchmark-abba-aggregate-v1.json",
+      "retained": "dendritic_network.json",
+      "bytes": 8995,
+      "sha256": "9e2b21a61b56d0cd4012a92393dbd5ee342ccb3524fb5111c0c73d9cfe13d2d8"
+    },
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/paper-scale-100ms-remote-benchmark-v1/evidence-audit-v1/contextual-fig3-100ms-benchmark-evidence-audit-v1.json",
+      "retained": "dendritic_network_prior_audit.json",
+      "bytes": 2896,
+      "sha256": "44557ed30476ddb5f70cb4f7faffedead409bd7116c4098cf021b4f3b54abef1"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-20261002/verification.json",
+      "retained": "training_delivery_verification.json",
+      "bytes": 6439,
+      "sha256": "4d9da80b3f6ef34fa7cf5438a0a6af09ed9aa93cb1e378e482aa1df4ad5f8f94"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-20261002/mpi-final.xml",
+      "retained": "mpi-final.xml",
+      "bytes": 4242,
+      "sha256": "963fd18b1be255fa9f7ab4426b455be8291a1fb2ebeb849fa7022c8c06786453"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-20261002/native-final.xml",
+      "retained": "native-final.xml",
+      "bytes": 2757,
+      "sha256": "2fe32415def8fc49a5d3f8fa90fe7f86668f6939589fb08fa40c25fcdde009ba"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-20261002/README.md",
+      "retained": "training_delivery_notes.md",
+      "bytes": 6708,
+      "sha256": "a462e95cb8381720f9abe02b53fccb6b798dbf56ea557e0923ed7c7e763b5046"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-metal-pipeline-full-20261006/acceptance.json",
+      "retained": "training_pipeline_acceptance.json",
+      "bytes": 5785,
+      "sha256": "d60de7d2f321d716aa4064af3d2dd7a09b4e4f7cbb4337f6ff5f24c24ffb1ee3"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-indexed-synaptic-endpoints-20261006/cpu-acceptance.json",
+      "retained": "indexed_endpoints_cpu_acceptance.json",
+      "bytes": 1868,
+      "sha256": "866e701c2e878714f563a145cd53a436260befe36944aa668f4aaad97aec18f5"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-indexed-synaptic-endpoints-20261006/metal-acceptance.json",
+      "retained": "indexed_endpoints_metal_acceptance.json",
+      "bytes": 1890,
+      "sha256": "f9629c6b0d18d8c7646f9421c7d4dfe6ed1dd81430080e4f633cd626b754f539"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-external-state-inputs-owner-20261006/cpu-acceptance.json",
+      "retained": "external_inputs_cpu_acceptance.json",
+      "bytes": 1012,
+      "sha256": "d4e6807707b0aea2c275ae1bdffc4d4fa91eef15d1a5414f1fdc0201285c1cdf"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-metal-pipeline-full-20261006/README.md",
+      "retained": "training_pipeline_notes.md",
+      "bytes": 2010,
+      "sha256": "ef01b1676a2226f62d4a0e70baa9242da02f478e09a4a9d0e0f1bf819f98e484"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-indexed-synaptic-endpoints-20261006/README.md",
+      "retained": "indexed_endpoints_notes.md",
+      "bytes": 1471,
+      "sha256": "ec1b5e99b938ceb4da39f8611abd7ac3a75bbd8cd29a86a1261ee3b0d2998f9f"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-external-state-inputs-owner-20261006/README.md",
+      "retained": "external_inputs_notes.md",
+      "bytes": 1306,
+      "sha256": "2bcf354ae601e716b06b6daf9014d7c0639174dba73ac39a60bfc8b10edcb385"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-indexed-synaptic-endpoints-20261006/metal-audit-terminal.json",
+      "retained": "indexed_endpoints_metal_audit_terminal.json",
+      "bytes": 45,
+      "sha256": "263e8bd550424cbd9467f88be2e93409dcca5b4c2ac7649ff11e8cd5116db4ec"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-metal-pipeline-full-20261006/terminal-receipts.json",
+      "retained": "training_pipeline_terminal_receipts.json",
+      "bytes": 859,
+      "sha256": "7d19fccb28d0fc51ac1b49aee7c5fca59affa1318d5657fa5b782e78557c8ba1"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/confirmation-seed1751-v8-science-identity-preparation/acceptance-ledger.md",
+      "retained": "mam_acceptance_ledger.md",
+      "bytes": 5787,
+      "sha256": "f821fbb1daa944dbcc6c17eed5e665f5619651b19a6254975ba088ac04e8c055"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/COMPATIBILITY.md",
+      "retained": "compatibility_review.md",
+      "bytes": 28453,
+      "sha256": "3fc46f141638a1f7bda068777fbf08bd6f39efc279a1cd95345691fe0a21089b"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/MPI_TRAINING.md",
+      "retained": "mpi_training_review.md",
+      "bytes": 9782,
+      "sha256": "561faa2c27d6603d7db80ba24c07957342e169ce5050e5b65bec80ddaf32d762"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/NATIVE_TRAINING.md",
+      "retained": "native_training_review.md",
+      "bytes": 12046,
+      "sha256": "f82ea8b5e89d14c596223fe61181120eb9c3a6a696c315a1c2b07f386b9f32e7"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/NATIVE_TRAINING_DYNAMIC.md",
+      "retained": "dynamic_training_review.md",
+      "bytes": 47114,
+      "sha256": "19ed602354ec33e194313ab9d7d631669722ab4fc15e21f7b74ff5dcb9302021"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/NATIVE_TRAINING_V4_GPU.md",
+      "retained": "static_training_gpu_review.md",
+      "bytes": 6193,
+      "sha256": "086043d29b9a0a513a42188b871651ec3ea35c9a859ab0e68aca72061d184bc3"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/NATIVE_TRAINING_CROSSHOST_GPU.md",
+      "retained": "crosshost_training_scope.md",
+      "bytes": 6389,
+      "sha256": "6a756dc0c1e0f692b36d7b0250492933521cd763672029b5a38ba9d27713448c"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/CONTEXTUAL_DENDRITIC.md",
+      "retained": "dendritic_review.md",
+      "bytes": 17130,
+      "sha256": "2114880531d9f99512d1d616e36997e676c781e7f06143156a372af733d4ada8"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/evaluations/atlas-training-v1-20261004/reports/qualification-followup-r1/summary.zh.md",
+      "retained": "external_training_qualification.md",
+      "bytes": 7475,
+      "sha256": "68f118c1cf5cef90d65fdb3c8b1226f4d414232d81d5fdfd206c0a8d189ada56"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/evaluations/atlas-training-v1-20261004/reports/runtime-architecture-r1/impact.zh.md",
+      "retained": "external_training_architecture.md",
+      "bytes": 6266,
+      "sha256": "d85869529a5055c50f7aa5c0168014002edb7e571c6b750c64245fccc1fae06a"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/evidence-audit.json",
+      "retained": "../common_source/evidence-audit.json",
+      "bytes": 9775,
+      "sha256": "5aa3382b9329a4cdc92ea2d22d49816bba2e3af4498862b0d9ee379d54177ab9"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/aggregate.json",
+      "retained": "../common_source/aggregate.json",
+      "bytes": 20250,
+      "sha256": "9ae5c78173803d0b3d39555ed21d4b043257d0858f106649f152898611dadee2"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/aggregate-uncached.json",
+      "retained": "../common_source/aggregate-uncached.json",
+      "bytes": 20304,
+      "sha256": "6f01bfe9aa4dbaacaedcd72ab08791b49372745144f4b637ed01779b1c5ec34c"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/active-regression.json",
+      "retained": "../common_source/active-regression.json",
+      "bytes": 3459,
+      "sha256": "a97523532419c9906e51f362d92e3d3307703dcce8305bbb75b4594cff6b24ec"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/freeze.json",
+      "retained": "../common_source/freeze.json",
+      "bytes": 723,
+      "sha256": "b1589a947ac8460a5a428857a22532e4a51d0985638b84bfbb4ad99898a03dc9"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/stage.json",
+      "retained": "../common_source/stage.json",
+      "bytes": 2176,
+      "sha256": "4e0da7bb6911f4cf0521207ce049d7a774f96af8b0b06438333b781db7087685"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/common_source/regression-tests.log",
+      "retained": "../common_source/regression-tests.log",
+      "bytes": 609,
+      "sha256": "a03509351708562dfad6f8b9f2dc34db5935541ca932abc0929b739cd0824498"
+    }
+  ],
+  "dendritic_rows": [
+    {
+      "workload": "Single neuron, nonlinear NMDA",
+      "model_time": "10 s",
+      "samples_per_backend": 10,
+      "cython_seconds": 10.346926165744662,
+      "rust_seconds": 0.8283253435,
+      "ratio": 12.491379440383696,
+      "numerical_gate_from_archive": true,
+      "raw_arrays_reaudited_this_revision": false,
+      "aggregate": "dendritic_nonlinear.json",
+      "timing_scope": "steady-state simulation plus required final-state recording; excludes construction, export, source generation, native compilation, result dump, and discarded warmups"
+    },
+    {
+      "workload": "Single neuron, linear NMDA",
+      "model_time": "10 s",
+      "samples_per_backend": 10,
+      "cython_seconds": 10.27351770689711,
+      "rust_seconds": 0.6964117285,
+      "ratio": 14.752074507741593,
+      "numerical_gate_from_archive": true,
+      "raw_arrays_reaudited_this_revision": false,
+      "aggregate": "dendritic_linear.json",
+      "timing_scope": "steady-state simulation plus required final-state recording; excludes construction, export, source generation, native compilation, result dump, and discarded warmups"
+    },
+    {
+      "workload": "Figure-3 complete topology, common source, default",
+      "model_time": "100 ms",
+      "samples_per_backend": 6,
+      "cython_seconds": 9.79682573536411,
+      "rust_seconds": 7.631756929,
+      "ratio": 1.2836920549889423,
+      "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+      "optimization_policy": "production defaults",
+      "numerical_gate_from_archive": false,
+      "numerical_gate_from_current_rerun": true,
+      "raw_arrays_reaudited_this_revision": true,
+      "aggregate": "../common_source/aggregate.json",
+      "timing_scope": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups"
+    }
+  ],
+  "training_cohorts": [
+    {
+      "scope": "MPI STDP and queues",
+      "identities": 30,
+      "counts": {
+        "passed": 30,
+        "skipped": 0,
+        "failed": 0
+      },
+      "record": "mpi-final.xml",
+      "scope_limit": "Historical delivery snapshot; no throughput, public-dataset accuracy or cross-host claim."
+    },
+    {
+      "scope": "Initial native CPU/Metal training",
+      "identities": 20,
+      "counts": {
+        "passed": 20,
+        "skipped": 0,
+        "failed": 0
+      },
+      "record": "native-final.xml",
+      "scope_limit": "Historical delivery snapshot; no throughput, public-dataset accuracy or cross-host claim."
+    },
+    {
+      "scope": "CPU/Metal and local MPI; original cache/weak/SDE snapshot",
+      "identities": 4375,
+      "counts": {
+        "passed": 3194,
+        "skipped": 1181
+      },
+      "hardware": {
+        "cpu": true,
+        "metal": true,
+        "local_mpi_2_8": true,
+        "nvidia": false,
+        "cloud": false
+      },
+      "record": "training_pipeline_acceptance.json",
+      "terminal": {
+        "session_id": 68504,
+        "chunk_id": "487309",
+        "exit_code": 0
+      },
+      "scope_limit": "Counts describe this frozen cohort only; overlapping suites are not added or inherited."
+    },
+    {
+      "scope": "CPU and local MPI; indexed endpoint snapshot",
+      "identities": 729,
+      "counts": {
+        "passed": 441,
+        "skipped": 288
+      },
+      "hardware": {
+        "cpu": true,
+        "local_mpi_2_8": true,
+        "metal": false,
+        "nvidia": false,
+        "cloud": false
+      },
+      "record": "indexed_endpoints_cpu_acceptance.json",
+      "terminal": {
+        "session_id": 82989,
+        "chunk_id": "72b427",
+        "exit_code": 0
+      },
+      "scope_limit": "Counts describe this frozen cohort only; overlapping suites are not added or inherited."
+    },
+    {
+      "scope": "CPU/Metal and local MPI; same indexed endpoint snapshot",
+      "identities": 729,
+      "counts": {
+        "passed": 585,
+        "skipped": 144
+      },
+      "hardware": {
+        "cpu": true,
+        "local_mpi_2_8": true,
+        "metal": true,
+        "nvidia": false,
+        "cloud": false
+      },
+      "record": "indexed_endpoints_metal_acceptance.json",
+      "terminal": {
+        "session_id": 62563,
+        "exit_code": 0,
+        "chunk_id": "4d6773",
+        "mode": "metal"
+      },
+      "scope_limit": "Counts describe this frozen cohort only; overlapping suites are not added or inherited."
+    },
+    {
+      "scope": "CPU and local MPI; later external-input ownership snapshot",
+      "identities": 249,
+      "counts": {
+        "passed": 148,
+        "skipped": 101
+      },
+      "hardware": {
+        "cpu": true,
+        "local_mpi_2_8": true,
+        "metal": false,
+        "nvidia": false,
+        "cloud": false
+      },
+      "record": "external_inputs_cpu_acceptance.json",
+      "terminal": {
+        "session_id": 95379,
+        "chunk_id": "ec54e4",
+        "exit_code": 0
+      },
+      "scope_limit": "Counts describe this frozen cohort only; overlapping suites are not added or inherited."
+    }
+  ],
+  "mam": {
+    "rust_seeds": [
+      1729,
+      1750,
+      1751
+    ],
+    "nest_reference_seeds": [
+      1729,
+      1730,
+      1731
+    ],
+    "descriptive_cohort_complete_from_ledger": true,
+    "scientific_equivalence_accepted": false,
+    "matched_performance_accepted": false,
+    "ledger": "mam_acceptance_ledger.md"
+  },
+  "scope": "Small retained source/report/acceptance records and arithmetic checks. No new simulation, hardware benchmark, scientific raw-array recomputation or remote job.",
+  "common_source_retest": {
+    "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+    "all_historical_experiments_migrated": false,
+    "evidence": "../common_source/evidence-audit.json"
+  },
+  "dendritic_development_history_rows": [
+    {
+      "workload": "Figure-3 complete topology, historical short protocol",
+      "model_time": "100 ms",
+      "samples_per_backend": 6,
+      "cython_seconds": 9.959238682407886,
+      "rust_seconds": 11.565250183,
+      "ratio": 0.8611347376684663,
+      "numerical_gate_from_archive": true,
+      "raw_arrays_reaudited_this_revision": false,
+      "aggregate": "dendritic_network.json",
+      "timing_scope": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups"
+    }
+  ],
+  "dendritic_ablation_rows": [
+    {
+      "workload": "Figure-3 complete topology, common source, cache disabled",
+      "model_time": "100 ms",
+      "samples_per_backend": 6,
+      "cython_seconds": 9.79682573536411,
+      "rust_seconds": 11.564384068,
+      "ratio": 0.8471549956969233,
+      "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+      "optimization_policy": "cache disabled",
+      "numerical_gate_from_archive": false,
+      "numerical_gate_from_current_rerun": true,
+      "raw_arrays_reaudited_this_revision": true,
+      "aggregate": "../common_source/aggregate-uncached.json",
+      "timing_scope": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups"
+    },
+    {
+      "workload": "Figure-3 complete topology, common source, default",
+      "model_time": "100 ms",
+      "samples_per_backend": 6,
+      "cython_seconds": 9.79682573536411,
+      "rust_seconds": 7.631756929,
+      "ratio": 1.2836920549889423,
+      "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+      "optimization_policy": "production defaults",
+      "numerical_gate_from_archive": false,
+      "numerical_gate_from_current_rerun": true,
+      "raw_arrays_reaudited_this_revision": true,
+      "aggregate": "../common_source/aggregate.json",
+      "timing_scope": "steady-state simulation plus required recording; excludes construction, export, source generation, compilation, checkpoint I/O, result dump, plotting, and the discarded warmups"
+    }
+  ],
+  "dendritic_reporting_scope": "Main Table 5 reports default implementations; the same-source cache-policy ablation is reported in S13. Superseded implementation results are retained only as development-history archive records."
+}

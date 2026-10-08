@@ -1,0 +1,253 @@
+{
+  "schema": "brian2-atlas-published-model-evidence-v1",
+  "generated_utc": "2026-10-06T16:42:59.615920+00:00",
+  "nmda_source_commit": "68e6dd970cfc6bab26459fcb8c34ee0f16560d9e",
+  "sources": [
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/cross_host_20260915.json",
+      "retained": "nmda_cpu2560.json",
+      "bytes": 21524,
+      "sha256": "17606602bf7bc8e64634d52dd81de4b377438cb70193b39bea9a8f1e2015fd1f"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/scale5120_host23_performance.json",
+      "retained": "nmda_cpu5120.json",
+      "bytes": 6230,
+      "sha256": "157fbfc1937d1778779118cc71faab51370862894575d08ad518fc08a7faa9d0"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/scale10240_cpu8_five_pair_validation.json",
+      "retained": "nmda_cpu10240.json",
+      "bytes": 27795,
+      "sha256": "4bbf56fe0e09a3a8c1edd3b8f241bd070f8ff993c9e08fb6e2dca35294916c37"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/scale20480_host23_cpu8_native_five_pairs.json",
+      "retained": "nmda_cpu20480.json",
+      "bytes": 9030,
+      "sha256": "1679e88e0cf913762f6593fc1705dbce97197daad02ec35a561f98d83b4012ae"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/shared_input_5120_seed971_numerical_audit.json",
+      "retained": "nmda_gate5120.json",
+      "bytes": 9443,
+      "sha256": "898baa3562c7972022667ab3dff4a0592862f89688b50b19e4d0324fcea2da1b"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/cpu_threads_vs_mpi_10240_20260919.json",
+      "retained": "nmda_cpu_vs_mpi.json",
+      "bytes": 13244,
+      "sha256": "191292249bc0881044d986cf4924a07814fd67771c3e0352ed48718be4d2e59d"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/results/processed/completion_audit_20260921.json",
+      "retained": "nmda_completion_audit.json",
+      "bytes": 492,
+      "sha256": "cc087e9740a9409e7a5eb46d7ab946e8311e46c041bb921441c69cf24994a6cc"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/reports/nmda2025_external_validation_note.md",
+      "retained": "nmda_nmda2025_external_validation_note.md",
+      "bytes": 19691,
+      "sha256": "b9a654a9ef01cfd698c2c6d5d4dcb93a3f1f42caf0e596f8f78fd6e2429a3baa"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/reports/completion_audit.md",
+      "retained": "nmda_completion_audit.md",
+      "bytes": 7334,
+      "sha256": "2a80116a1a5ce8434ba7120b17ad0985db1cddfd30987c79387d2cb755fcc96c"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/reports/cpu_threads_vs_mpi_10240.md",
+      "retained": "nmda_cpu_threads_vs_mpi_10240.md",
+      "bytes": 5766,
+      "sha256": "7483007bfc18fca3ea7138226c8577da31c663fcb5f4ac95f2f43e91f3f470f3"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/reports/mpi_multinode_20480.md",
+      "retained": "nmda_mpi_multinode_20480.md",
+      "bytes": 5527,
+      "sha256": "b2c5847f6abad488ab1fd34dbc754b4722a08194db329eec94146d92726d1658"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2-experiments-artifacts/brian2-atlas-nmda2025-validation/benchmarks/published/nmda_skaar_2025/SOURCE.md",
+      "retained": "nmda_source_identity.md",
+      "bytes": 1332,
+      "sha256": "3938afc985c1d3e7521d477657433473755805eb88028daac84e8d1c42b0e00e"
+    },
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/contextual-fig2-paper-env-ensemble-seeds0-9-v1/ensemble-v1.json",
+      "retained": "onasch_fig2_ensemble.json",
+      "bytes": 8360,
+      "sha256": "e2e2ce122beb75d7f0af17dc8b587228468ddfd0f7d511e83e79595a46beb2c0"
+    },
+    {
+      "source": "/atlas-storage/0002/brian2-paper-reproduction/contextual-dendritic-gating/contextual-s1-paper-env-ensemble-seeds0-9-v1/ensemble-v1.json",
+      "retained": "onasch_s1_ensemble.json",
+      "bytes": 8245,
+      "sha256": "6beaec1ef0f72b8794f883ef53d167daf587c7bf415a3628e3c34f531f24cdd4"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/FULL_PAPER_REPRODUCTION.md",
+      "retained": "onasch_full_reproduction_inventory.md",
+      "bytes": 846339,
+      "sha256": "6a00c90ea3db6e72e54bd936119c3f95957ea69bf96234bb05883428df7f635d"
+    }
+  ],
+  "nmda_cpu_rows": [
+    {
+      "neurons": 2560,
+      "synapses": 11796480,
+      "nmda_synapses": 5242880,
+      "model_time_seconds": 1,
+      "dt_seconds": 0.0001,
+      "threads_per_backend": 8,
+      "samples_per_backend": 5,
+      "cpp_seconds": 69.94237861596048,
+      "rust_seconds": 61.99755482748151,
+      "ratio": 1.128147373079257,
+      "cpp_samples": [
+        69.94237861596048,
+        68.9740037843585,
+        71.11493496410549,
+        71.289975322783,
+        66.51830744743347
+      ],
+      "rust_samples": [
+        59.53063520602882,
+        61.99755482748151,
+        62.28953324444592,
+        62.29257730022073,
+        60.01782051846385
+      ],
+      "rss_increase_percent": 5.532544762844571,
+      "record": "nmda_cpu2560.json",
+      "timing_scope": "Compiled native initialization, simulation, original monitoring and result dump; excludes Python preparation, IR/code generation, compilation and public-array backfill.",
+      "memory_scope": "Reported sampled native RSS; small-cohort peak summaries, large-cohort median peaks; not frontend-inclusive memory."
+    },
+    {
+      "neurons": 5120,
+      "synapses": 47185920,
+      "nmda_synapses": 20971520,
+      "model_time_seconds": 1,
+      "dt_seconds": 0.0001,
+      "threads_per_backend": 8,
+      "samples_per_backend": 6,
+      "cpp_seconds": 289.10037089139223,
+      "rust_seconds": 194.6597666395828,
+      "ratio": 1.4851572869018612,
+      "cpp_samples": [
+        287.76864163018763,
+        289.5637387819588,
+        288.63700300082564,
+        296.00354222767055,
+        291.44013818353415,
+        286.10558644495904
+      ],
+      "rust_samples": [
+        194.69404022023082,
+        194.6254930589348,
+        192.25866404548287,
+        194.86174443922937,
+        192.61721437238157,
+        197.83531523495913
+      ],
+      "rss_increase_percent": 7.254451982723209,
+      "record": "nmda_cpu5120.json",
+      "timing_scope": "Compiled native initialization, simulation, original monitoring and result dump; excludes Python preparation, IR/code generation, compilation and public-array backfill.",
+      "memory_scope": "Reported sampled native RSS; small-cohort peak summaries, large-cohort median peaks; not frontend-inclusive memory."
+    },
+    {
+      "neurons": 10240,
+      "synapses": 188743680,
+      "nmda_synapses": 83886080,
+      "model_time_seconds": 1,
+      "dt_seconds": 0.0001,
+      "threads_per_backend": 8,
+      "samples_per_backend": 5,
+      "cpp_seconds": 1256.383538832888,
+      "rust_seconds": 598.9638893455267,
+      "ratio": 2.097594798587454,
+      "cpp_samples": [
+        1254.2286303658038,
+        1274.2904887273908,
+        1256.383538832888,
+        1312.6572179235518,
+        1196.2308943402022
+      ],
+      "rust_samples": [
+        598.9638893455267,
+        572.781164387241,
+        603.0571932960302,
+        602.991238836199,
+        587.9467937964946
+      ],
+      "rss_increase_percent": 7.927289959828521,
+      "record": "nmda_cpu10240.json",
+      "timing_scope": "Compiled native initialization, simulation, original monitoring and result dump; excludes Python preparation, IR/code generation, compilation and public-array backfill.",
+      "memory_scope": "Reported sampled native RSS; small-cohort peak summaries, large-cohort median peaks; not frontend-inclusive memory."
+    },
+    {
+      "neurons": 20480,
+      "synapses": 754974720,
+      "nmda_synapses": 335544320,
+      "model_time_seconds": 1,
+      "dt_seconds": 0.0001,
+      "threads_per_backend": 8,
+      "samples_per_backend": 5,
+      "cpp_seconds": 4443.327680410817,
+      "rust_seconds": 2271.7100487686694,
+      "ratio": 1.9559396159819011,
+      "cpp_samples": [
+        4427.4236456640065,
+        4368.082462878898,
+        4761.770311648026,
+        4443.327680410817,
+        4454.370952673256
+      ],
+      "rust_samples": [
+        2234.528189878911,
+        2459.2350723240525,
+        2271.7100487686694,
+        2271.875127958134,
+        2264.8550470359623
+      ],
+      "rss_increase_percent": 8.266296075986613,
+      "record": "nmda_cpu20480.json",
+      "timing_scope": "Compiled native initialization, simulation, original monitoring and result dump; excludes Python preparation, IR/code generation, compilation and public-array backfill.",
+      "memory_scope": "Reported sampled native RSS; small-cohort peak summaries, large-cohort median peaks; not frontend-inclusive memory."
+    }
+  ],
+  "nmda_mpi_same40": {
+    "cpu_seconds": 257.773659188,
+    "mpi_seconds": 153.674558348,
+    "ratio": 1.6773997072714204,
+    "samples_per_configuration": 5,
+    "scope": "Same 40 physical CPUs on one dual-socket host; simulation/recording interval, not the CPU8 compiled-region interval."
+  },
+  "onasch_ensembles": [
+    {
+      "figure": "2",
+      "seeds": 10,
+      "grid_cells_per_seed": 3200,
+      "total_cells": 32000,
+      "pearson_ensemble_mean": 0.999603840046829,
+      "sign_mismatch_fraction": 0.02375,
+      "record": "onasch_fig2_ensemble.json",
+      "scope": "Scientific source-model rerun in the locked Brian paper environment; not 32,000 Atlas paired executions."
+    },
+    {
+      "figure": "S1",
+      "seeds": 10,
+      "grid_cells_per_seed": 3200,
+      "total_cells": 32000,
+      "pearson_ensemble_mean": 0.9995134296279679,
+      "sign_mismatch_fraction": 0.0009375,
+      "record": "onasch_s1_ensemble.json",
+      "scope": "Scientific source-model rerun in the locked Brian paper environment; not 32,000 Atlas paired executions."
+    }
+  ],
+  "source_environment_reproduction_is_atlas_execution": false,
+  "complete_onasch_paper_reproduction_accepted": false,
+  "scope": "Copied existing small records and checked reported medians, identities and acceptance fields. No models, raw scientific arrays, remote jobs or hardware benchmarks executed."
+}

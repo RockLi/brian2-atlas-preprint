@@ -1,0 +1,70 @@
+{
+  "schema": "b2-mpi-runtime-v0",
+  "plan_sha256": "765d20e5f7aacc3c0a440ebb748ab3888237d24503409fcded38ab6798b2ef6c",
+  "ranks": 2,
+  "transport": "mpi-allgatherv-spikes",
+  "storage": "rank-local-state-and-incoming-csr-readonly-pre-replicas",
+  "numeric_profile": "b2-mpi-cpu-f64-gpu-update-f32-v0",
+  "stage_timing_schema": "b2-mpi-stage-timing-v1",
+  "stage_timing_scope": "Local elapsed clocks with barriers after initialization and simulation; collection includes result gathering and topology reporting, excludes final timing gather, JSON serialization and disk output",
+  "rank_stage_columns": [
+    "initialization_local",
+    "initialization_wait",
+    "simulation_local",
+    "simulation_wait",
+    "result_collection_and_reporting"
+  ],
+  "spike_exchange_strategy": "consecutive-producers-same-clock",
+  "rank_work_columns": [
+    "owned_neurons",
+    "emitted_spikes",
+    "delivered_edges"
+  ],
+  "rank_backends": [
+    "cpu",
+    "metal"
+  ],
+  "gpu_scope": "population-state-update; host threshold/reset/synapses/MPI",
+  "rank_work": [
+    8,
+    41,
+    39,
+    8,
+    41,
+    38
+  ],
+  "processor_names": [
+    "Rocks-MacBook-Air.local",
+    "Rocks-MacBook-Air.local"
+  ],
+  "spike_exchange_seconds": [
+    0.3929796239999999,
+    0.005660083
+  ],
+  "exchange_calls_per_rank": 32,
+  "rank_cpu_ids": [
+    -1,
+    -1
+  ],
+  "procedural_topology": [],
+  "rank_queue_capacity_bytes": [
+    128,
+    128
+  ],
+  "rank_stage_seconds": [
+    0.000741833,
+    0.507624917,
+    0.393103042,
+    0.002775459,
+    0.002537875,
+    0.508500167,
+    8.0708e-05,
+    0.393001625,
+    0.002848833,
+    0.002595291
+  ],
+  "rank_gpu_dispatches": [
+    0,
+    32
+  ]
+}

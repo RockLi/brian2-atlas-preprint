@@ -1,0 +1,238 @@
+{
+  "schema": "nmda-skaar-2025-scale20480-host23-cpu8-native-v1",
+  "status": "complete_native_target_formal_comparison",
+  "host": "hk-prod-model-ae02-23",
+  "cpu_list": "0-7",
+  "threads_per_engine": 8,
+  "upstream_commit": "68e6dd970cfc6bab26459fcb8c34ee0f16560d9e",
+  "scientific_workload": {
+    "neurons": 20480,
+    "synapses": 754974720,
+    "nmda_edges": 335544320,
+    "dt_seconds": 0.0001,
+    "duration_seconds": 1.0,
+    "dtype": "float64"
+  },
+  "protocol": {
+    "warmup_pairs_excluded": 1,
+    "measured_pairs": 5,
+    "ordering": "deterministically shuffled within each pair",
+    "timing_scope": "compiled initialization/setup, complete simulation and recording, and result dump"
+  },
+  "original_brian2": {
+    "wall_seconds": {
+      "n": 5,
+      "raw": [
+        4427.4236456640065,
+        4368.082462878898,
+        4761.770311648026,
+        4443.327680410817,
+        4454.370952673256
+      ],
+      "median": 4443.327680410817,
+      "q1": 4427.4236456640065,
+      "q3": 4454.370952673256,
+      "min": 4368.082462878898,
+      "max": 4761.770311648026
+    },
+    "peak_sampled_rss_bytes": {
+      "n": 5,
+      "raw": [
+        19351113728,
+        19350597632,
+        19345477632,
+        19349463040,
+        19349323776
+      ],
+      "median": 19349463040,
+      "q1": 19349323776.0,
+      "q3": 19350597632.0,
+      "min": 19345477632,
+      "max": 19351113728
+    },
+    "peak_sampled_virtual_bytes": {
+      "n": 5,
+      "raw": [
+        19518013440,
+        19518603264,
+        19517849600,
+        19518611456,
+        19518705664
+      ],
+      "median": 19518603264,
+      "q1": 19518013440.0,
+      "q3": 19518611456.0,
+      "min": 19517849600,
+      "max": 19518705664
+    }
+  },
+  "rust_cpu": {
+    "wall_seconds": {
+      "n": 5,
+      "raw": [
+        2234.528189878911,
+        2459.2350723240525,
+        2271.7100487686694,
+        2271.875127958134,
+        2264.8550470359623
+      ],
+      "median": 2271.7100487686694,
+      "q1": 2264.8550470359623,
+      "q3": 2271.875127958134,
+      "min": 2234.528189878911,
+      "max": 2459.2350723240525
+    },
+    "peak_sampled_rss_bytes": {
+      "n": 5,
+      "raw": [
+        20948967424,
+        20948955136,
+        20948938752,
+        20948946944,
+        20948942848
+      ],
+      "median": 20948946944,
+      "q1": 20948942848.0,
+      "q3": 20948955136.0,
+      "min": 20948938752,
+      "max": 20948967424
+    },
+    "peak_sampled_virtual_bytes": {
+      "n": 5,
+      "raw": [
+        21434892288,
+        21434892288,
+        21434892288,
+        21434892288,
+        21434892288
+      ],
+      "median": 21434892288,
+      "q1": 21434892288.0,
+      "q3": 21434892288.0,
+      "min": 21434892288,
+      "max": 21434892288
+    },
+    "phase_seconds": {
+      "initialization": {
+        "n": 5,
+        "raw": [
+          30.834366848,
+          31.210308986,
+          38.916811186,
+          31.206266083,
+          31.442164409
+        ],
+        "median": 31.210308986,
+        "q1": 31.206266083,
+        "q3": 31.442164409,
+        "min": 30.834366848,
+        "max": 38.916811186
+      },
+      "simulation_and_recording": {
+        "n": 5,
+        "raw": [
+          2198.245906904,
+          2422.865619732,
+          2227.017338626,
+          2235.548056417,
+          2228.44510026
+        ],
+        "median": 2228.44510026,
+        "q1": 2227.017338626,
+        "q3": 2235.548056417,
+        "min": 2198.245906904,
+        "max": 2422.865619732
+      },
+      "dump": {
+        "n": 5,
+        "raw": [
+          3.765839373,
+          3.546369113,
+          3.685601505,
+          3.503943431,
+          3.51834918
+        ],
+        "median": 3.546369113,
+        "q1": 3.51834918,
+        "q3": 3.685601505,
+        "min": 3.503943431,
+        "max": 3.765839373
+      }
+    }
+  },
+  "comparison": {
+    "brian2_over_rust_ratio_of_medians": 1.9559396159819011,
+    "rust_wall_reduction_percent": 48.87367729407178,
+    "rust_over_brian2_rss_ratio_of_medians": 1.0826629607598661,
+    "paired_brian2_over_rust_ratios": [
+      1.9813684453468134,
+      1.776195578876047,
+      2.0961171141665016,
+      1.95579749332627,
+      1.966735557095689
+    ]
+  },
+  "compiler": {
+    "command": [
+      "/data/brick2/brian2-mpi-region-20260907/rustup-1.98.1/toolchains/1.98.1-x86_64-unknown-linux-gnu/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "codegen-units=1",
+      "-C",
+      "panic=abort",
+      "-C",
+      "target-cpu=native",
+      "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/native/main.rs",
+      "-o",
+      "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/native/b2-native-targetcpu-native"
+    ],
+    "rustc_release": "1.98.1",
+    "rustc_host": "x86_64-unknown-linux-gnu",
+    "llvm_version": "22.1.8",
+    "rustc_verbose_version": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "scope": "Rust source compilation only; excludes B2IR frontend, code generation, instance serialization, simulation and result collection",
+    "wall_seconds": 2.1824666187167168,
+    "exit_code": 0,
+    "source_sha256": "2f8c4ad6d2ad1a12393dc1734662c11fb0896a2fe7299ce56b5dcc86c50e6cb8",
+    "binary_sha256": "47869ca77f28c51bd3be438b61b578b92f7172db6a33885a8c248fca7b7d0a41",
+    "stderr_tail": "                                                                                                                                                                                                                                                                     ++++++++++++\n\nwarning: comparison is useless due to type limits\n   --> /data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/native/main.rs:229:16\n    |\n229 |             if endpoint_state < 0 || endpoint_state >= 16384 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(unused_comparisons)]` on by default\n\nwarning: comparison is useless due to type limits\n   --> /data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/native/main.rs:251:16\n    |\n251 |             if endpoint_state < 0 || endpoint_state >= 16384 { continue; }\n    |                ^^^^^^^^^^^^^^^^^^\n\nwarning: 8 warnings emitted\n\n"
+  },
+  "rust_result_dump_audit": {
+    "count": 7,
+    "all_identical": true,
+    "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+    "rows": [
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_measured_0_rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_measured_1_rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_measured_2_rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_measured_3_rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_measured_4_rust/results.bin"
+      },
+      {
+        "sha256": "492577d26519c93e828be15eee002e031bf74d907cd440d1fc0562d8528bee38",
+        "path": "/data/brick2/brian2-mpi-region-20260907/nmda-skaar-2025-scale20480-stage/rust/rust_explicit_20480_aot_2048018/rust_balanced_replay_targetcpu_native_cpu8_20260918_warmup_0_rust/results.bin"
+      }
+    ]
+  },
+  "scientific_gate": "deterministic same-event Gate 3 passed through 10,240; unchanged 20,480 workload remains unseeded and is structurally/statistically audited"
+}

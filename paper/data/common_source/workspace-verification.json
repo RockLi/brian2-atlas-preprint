@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "Immutable source archive verified; live-checkout changes after freezing are preserved and separately recorded, not retroactively qualified.",
+  "source_freeze_id": "cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112",
+  "verified_archive_files": 1695,
+  "live_checkout_matches_freeze": false,
+  "changes_after_freeze": [
+    {
+      "path": "brian2-rust/python/brian2_rust/training_effects.py",
+      "frozen_sha256": "c266b4895e72ab61f719c21247fc5dec59679c435d8871505f3a9c97236dc792",
+      "current_sha256": "31b649266b12f8c1b85974dd6881cc93245e7ab97e7e1fc8fbe0ea1bef0baff2"
+    }
+  ]
+}

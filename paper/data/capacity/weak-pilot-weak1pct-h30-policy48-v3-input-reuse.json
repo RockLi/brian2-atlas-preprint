@@ -1,0 +1,975 @@
+{
+  "passed": true,
+  "old_case": "pilot-weak1pct-h30-v1",
+  "new_case": "pilot-weak1pct-h30-policy48-v3",
+  "model_sha256": "7fae5a1b57ef317fd0c1979ce75d735e7e7b5044caf615a82b2a43c485dca754",
+  "plan_sha256": "2b811e13fbf2168bf445c4330b1bf03cc90b03dba80c127cd68417a7da698415",
+  "preparation_status_source": "prepare-pilot-weak1pct-h30-v1-status.json",
+  "numerical_input_changes": false,
+  "numerical_engine_changes": false,
+  "rows": [
+    {
+      "host": "hk-prod-model-ae02-23",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-0.bin": "4a77fe0df08a93b8d9d5005be59623dc374bfd251a7d8a9cdcd43e6d42493587",
+        "instance.rank-1.bin": "6a6277f02a0ab8e51bdbd790e88ecd20916c545cb7351b6a0f3cdf2d3fdb3987",
+        "instance.rank-2.bin": "1bcad405d96bba346019ec882ece7cca73f7caf4f5398b9c811f255110360d01",
+        "instance.rank-3.bin": "fdd3a55ec0e8f51db733b389348e23ec81eb2c6aca7ad0e9e08c510598636ed3",
+        "instance.rank-4.bin": "152c1f77ea8f6e96e28fe2bfa7a4540a12f9c58b8fff4ca477d9119eba4e4298",
+        "instance.rank-5.bin": "67f8b4102ed1ff60314d128b30f69d3af02c1c953c45ab947bf8d1b17e75196f",
+        "instance.rank-6.bin": "992fa332c19f8f54a6257fb3da4fe307078dda467040e743537bf61d5b7cd5a0",
+        "instance.rank-7.bin": "6a3371f04fa503616ed8416f3ee17e58b926fc509230d8461b29fdee0ddb7930"
+      },
+      "owned_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "links": [
+        "mpi",
+        "model.json",
+        "prepared.json",
+        "reference"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae02-24",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-8.bin": "1ff0063a7223eea6d70081a98e61ee5e2ad718272f8d7be396b5f9e6f051f21c",
+        "instance.rank-9.bin": "55aa948ea159e86e54f008f2e09af571a94a32cfb54bc0b050dec7c00151f763",
+        "instance.rank-10.bin": "7d0423f6b026d6e77486fb7b78ed956c8b542e12d7716cb07afdc1fea59942b5",
+        "instance.rank-11.bin": "7c809d6e11ae75813ba6e12b436e659e3842a5c0e0c0a2fb30ba52a75b431bbf",
+        "instance.rank-12.bin": "f25ee221688f2cc6d1645477fbd1d39067f0802c4d09124e8052d3c8e03b91a0",
+        "instance.rank-13.bin": "744e0e5ca75292ac68fe5ed01f10b929c363065020dc52acc3fc8296c862214f",
+        "instance.rank-14.bin": "79c00cc42f219afd36f1ffbc4c2073845202f692584d34afe9355239bf533a07",
+        "instance.rank-15.bin": "c26ba077aa1ccd9d513ca8d2b9a0b3d694e2aaf68ed9134e1f7a0b3e8f916b01"
+      },
+      "owned_ranks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae02-25",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-16.bin": "58b09748a5f877a800f759d0548bfd32bffd763ecd989fb71620695b402ee2dc",
+        "instance.rank-17.bin": "20033a22465c1ed7127a4af4d1c7092a97b9c3161caf8f00d2c2b0dbcb02ef90",
+        "instance.rank-18.bin": "5d18daaa7910ee2710c73a835628ad79fe4cd125e7a0e12fd737ae7a073ddcfe",
+        "instance.rank-19.bin": "3ca8953a7dce2da5b306b987922ce73d899b80763b02ccd3fd5e7ea72544b049",
+        "instance.rank-20.bin": "2659e526d4ceb5befe7b2feae475a61516cc113c8c6c2297e4216821ee0e108b",
+        "instance.rank-21.bin": "60070b5a9591203648a3fc889da1538db348b0204ce16732da5dffafa7f806b0",
+        "instance.rank-22.bin": "77bf3eabd2576ad6ca6de48c7fc9256a3202b07fc014e3408fad860899386fda",
+        "instance.rank-23.bin": "9b49f5c2d3c296bc1deffbdda667435ba58b6ce4ba7ebef4c666344496c984d5"
+      },
+      "owned_ranks": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae03-33",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-24.bin": "feab3c224bc5a5a92e09f9a96d8a0322eec0952271f6727811cc27b2d66dd91b",
+        "instance.rank-25.bin": "b99830e43de1b2180c1bbb2452d4b1e014760aa0d88340af0e45691cb143608f",
+        "instance.rank-26.bin": "55b34ed3949150a129a440ad17b154c4df5e61f85db8661e50f71d737b0780f8",
+        "instance.rank-27.bin": "a0ee06c3bbcf447f0ee3faac154acc522951a10d320bce5e6a1a4e2532273da9",
+        "instance.rank-28.bin": "96467fd4c44acf07bf49f874e371c46265e4fae69142bd5528c7e3febba6bcd4",
+        "instance.rank-29.bin": "94824fa112bbdff239e763faf59365a8960955222a7875918af53fd37c045617",
+        "instance.rank-30.bin": "a4a803baae65ead234b3328483b9187b9339a5bf3806f1e645f154b002c36aa9",
+        "instance.rank-31.bin": "14a79b6181b599c8567a64fb689b4e84847b27d6aa8001ab7da49aa44e5f5a1e"
+      },
+      "owned_ranks": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae03-35",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-32.bin": "2e74423eed0666bd4bbaf5074eb35301b233e3ae4f6f58c741b71e3fd3d13557",
+        "instance.rank-33.bin": "b96fb8ddd3413e67b3a6750365151a2fac0027e3b096e20605927dc3e4aed754",
+        "instance.rank-34.bin": "a191da698bf790b5df5e6a1fc491c2b06fc281cac8fd1c62a05d2c339cf84e38",
+        "instance.rank-35.bin": "1e83b710f63457c36dd5a19cbe3f0e3f762d21675e962f34770350b3cc2c9f00",
+        "instance.rank-36.bin": "6071b9a0cb2a6bf5eaf95b170d13bd58f85d8bb0d9a9cc04315bbbaa58c5449f",
+        "instance.rank-37.bin": "41f5b4460a590ed0b3f7eebdaecaa27ba2939bb85bf6ca62e8a72bc0731d5e5d",
+        "instance.rank-38.bin": "5416c24681af7449d9c83d62a903af986f49b5ac8dae4f613e2ad0c2335d3afa",
+        "instance.rank-39.bin": "8835fffb18052253322a683f4ba714da57bfcb38321163c6ad163a979e617166"
+      },
+      "owned_ranks": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae05-53",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-40.bin": "2abc3185959fe8c72f63a2d880ec42f6bf44d57fa86d9f87b3d9b4aab8aaaa25",
+        "instance.rank-41.bin": "187f3543dcab671e6dc9cbb4453aeec6828e5dcdf03baad5ade03c046e09f215",
+        "instance.rank-42.bin": "150b29747c4bfac8d0e0d56ee002e31b6d85f34f1a4a24f61cdd43ecebc93caa",
+        "instance.rank-43.bin": "67b57b59a10496f4282e1d2ae748ee35a37942e36210c1cc1485e02b7ec44f51",
+        "instance.rank-44.bin": "4315dfb9a7889d2b3907d943c402dc2e8729479f1c7abda5d14f97b3381ca4bb",
+        "instance.rank-45.bin": "f75243a596755f567615cd9c325fa547c492e1ffdcf4c5b216600da605569d39",
+        "instance.rank-46.bin": "ed772e07c05038b89630ec9dbafded1b82296146a37e5c432efa5044edf3bbf3",
+        "instance.rank-47.bin": "b3b10aa597a913cb6d66012be1979094beba3b765059090a45399c7e3951e2d2"
+      },
+      "owned_ranks": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae05-54",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-48.bin": "ccf379378100dbc3f72e4c7eaf58d86c6528445af97f58c896ee7cbe2574cdb0",
+        "instance.rank-49.bin": "09f96c580d7cde5635f35ab929f4e09649a01873959c0aec6b7e1200a7f630df",
+        "instance.rank-50.bin": "85060121698a502db0f93247b9b269fc55d2f1d8ac2511a771ee31b6ed7f819e",
+        "instance.rank-51.bin": "2f20b678e4564a8d695b0c9473e5cdb887fa49d9733d86620413c04a3493eb71",
+        "instance.rank-52.bin": "6861dcf4804b6dd6ac56ccdf85410facacafbcb98b88f46fcf56e62c7f7f7b15",
+        "instance.rank-53.bin": "5c119a71755599c82dea1751797e7f213b1300c8f3ee07bacab0ead449c6fae8",
+        "instance.rank-54.bin": "05545611f7e489f5dd4016356b057bf2a9ff9e7b5b323e12a908de68cba46c75",
+        "instance.rank-55.bin": "a9730bfd39d9743472ab00d15b654f0439c2c6a18cee205b4c12395da5fbaf58"
+      },
+      "owned_ranks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae06-63",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-56.bin": "feed762a7e0871a1b15192fdade3a5c233ce0a85874413f02393473b7658c5e6",
+        "instance.rank-57.bin": "56fd4ae6733cd998f278e13f97ed74f1310d2613097613b19a312c9355fe75d1",
+        "instance.rank-58.bin": "eca94fc672c42e861acc2b6b603af4237b3eefdd0d26d42194c1922d32740cbc",
+        "instance.rank-59.bin": "e898e8a3442f02563cc3973bdd1ded7a8693bc793efc862ddba46d7cf39c7473",
+        "instance.rank-60.bin": "a77315d3a5df6ffad132b277875ee155058b6599d32a5952fd24fae6c3fe7990",
+        "instance.rank-61.bin": "86a79393c126050eeca03019d1eaf7753205fbcded656bfde5fd0241103f69ff",
+        "instance.rank-62.bin": "96b0748d728801e2b62b05fba662fa98228604f8cdae746a56819413ff9db44b",
+        "instance.rank-63.bin": "138209ed680617ec2da180864cf27d576b848038a89ab70a3113bf4e227d8400"
+      },
+      "owned_ranks": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae06-64",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-64.bin": "a9030f4e9f01d693d48318a6e494a2d5beb39ab6daf6850cbb8cc1dbe8eb5f7e",
+        "instance.rank-65.bin": "2a5af361e0335ef92f21865e7176033ff7f3e36193e565b850adee4e8b77627d",
+        "instance.rank-66.bin": "c1ac5b1eeb7b3c365524b5a0287471a32261ae0b1075e751932fcca3bf655c3d",
+        "instance.rank-67.bin": "ad55cdfed80713ec042363d28950c89ea791263b848be04bb8f45ae949f7994d",
+        "instance.rank-68.bin": "c02a7d46d68c5872eefa2ba6f12474fd5d1d8b5a1a74e24a387e65e9e12859bf",
+        "instance.rank-69.bin": "d57c25158847249b83fe41dbce6e2d195ed5e22bc806ab07b8404add04aec7d1",
+        "instance.rank-70.bin": "7fda1c68a9a962903c7eee058ea2f8f3e380a0341c55988853aab3a4365aecf6",
+        "instance.rank-71.bin": "0330f00add998d87df4241d57f6b7eb8f812704da1d5c3b5a5b53189edbc610e"
+      },
+      "owned_ranks": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae06-65",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-72.bin": "1e8250fe3698e59dc84c9823adb81bfc951a4343e3c09af67853684ca9693785",
+        "instance.rank-73.bin": "02691acecb717d22f708a03faebb66e4f58d85c0cebdd65a4ba2c9a9553227ca",
+        "instance.rank-74.bin": "b685b614f76a5ea4920ca64946d09839d8e1d85f7e3fe8dfcac96caaea7d3b3d",
+        "instance.rank-75.bin": "6351a2bd4b9307e7af6fd3baacf82d6c4d9338298f39fdd6ea1999e4d5148c65",
+        "instance.rank-76.bin": "b468f52ea256fc1f766d37ca7626a9f74641d2da338c322848fd5b649a8c5827",
+        "instance.rank-77.bin": "5d82fa8ffdde5494b87b9319c66c9384d43ac481b1159c58e606da0fea7bf94c",
+        "instance.rank-78.bin": "0ca4d2fb125e57334f07ba9a6e725b37c05b10cc32809cebe922af0c06683525",
+        "instance.rank-79.bin": "f8ea0c37a577564abdf68c9d2978abfd02740d33f3b9b7792b453ef77ef6a428"
+      },
+      "owned_ranks": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae07-71",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-80.bin": "89954271c1e22b15f394277c73fd319f462cba351a0c73b641954ee9f8d0d628",
+        "instance.rank-81.bin": "147ce0ee8733a6a29a7344c20140615b59721bb60a758980295a3f33c8a26654",
+        "instance.rank-82.bin": "6c581552bce943d6dab4896776bd7a38b90a1364cfcecdde4d18a4e1154599ca",
+        "instance.rank-83.bin": "854aee87d679ca200f07f0c03ef5cf968386a31c70e80aea006a6d93084907d0",
+        "instance.rank-84.bin": "b6aa4cf81e15343cfc0d7a8ea02c6b5174ffa2bfadf617e542b5e62b515baca0",
+        "instance.rank-85.bin": "2d713e3e281fb88ad6ea7d449262330099bf1e517ca73b3ecec7efff45f14921",
+        "instance.rank-86.bin": "6d2c5f65921a1343386fa3bd48fd9372e5e2506236af17d7141a1683c75fac0f",
+        "instance.rank-87.bin": "91e3349d8e28988ce95359271524cdebd1b24112b4469fda1c3dd3bf2549483c"
+      },
+      "owned_ranks": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae07-72",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-88.bin": "637737455bdc21ebbf814428a01c5040fc68367ec5213be3707c362194b37729",
+        "instance.rank-89.bin": "bebc4869dacb045ac8812ad427ae20830386fdbc1f3e2b000e33b747d111e2da",
+        "instance.rank-90.bin": "a0d7df23fd4e03c30aaa93e6bd8d789dfc09ae7ed94b6fd4d3cd8ebfffd2b761",
+        "instance.rank-91.bin": "4479f2b7651c4f78fe876dbb18a756de15f678b0d417f0d4a8a9cfbfdb8aaab2",
+        "instance.rank-92.bin": "6cde3ed1f278acf73f8952e7180468e8c3838efcda57abf0dc59ce30857a8612",
+        "instance.rank-93.bin": "544b24e8e7be26726894d8b927fe245ebe3fa45c9b0efb5481bc23826bb7b2a4",
+        "instance.rank-94.bin": "5aca10413d39bce24d786d3afcb24a462ea0cf917803fdd64c1f77cd6c33be05",
+        "instance.rank-95.bin": "6445dd2f89ea46c23cb1e75c34803b3e24ef5643e43a25aff7788367420d849c"
+      },
+      "owned_ranks": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae07-73",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-96.bin": "61cb593ebadc1ee2c3b953d56ee5b10d26ff92d2e62fa7c85dae6949505d42e7",
+        "instance.rank-97.bin": "7b078ffe7f9dab5b6d0e076adea680569969c67b7febb393a25077a69a5bef13",
+        "instance.rank-98.bin": "91ac2d9d0b1122cc34cc2969ee01a792448713eb1941cf23a290f2229d96eacd",
+        "instance.rank-99.bin": "620bf04b86820e6b02f56937a991621ba0b7f40f56f37097a78b492a69db59ce",
+        "instance.rank-100.bin": "eb5fc9696f4e1716442e5bc92fbe2fc3ae4d8dfe4689c2520bf0e479cd25f74c",
+        "instance.rank-101.bin": "62265b3056acd375f1ac5149e6e925dd9562ac94d898c233afd2387b91671c9a",
+        "instance.rank-102.bin": "cf4c0e086939c45e2d79eeaa6867011626506423be26f4b5c2afb98c67b79260",
+        "instance.rank-103.bin": "64ebfc7b482ae3bd6abb4a5f205ac860fa1c429dadb91d73e0963386d56101fc"
+      },
+      "owned_ranks": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae07-74",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-104.bin": "e97b0c6f5f80a8a73ac930462d9ebe1b0b87dd0baa23a958224e111067ffbfc0",
+        "instance.rank-105.bin": "993ff762bcd51caae7be8bb2820767c781582e038591138646d770ff69f7c414",
+        "instance.rank-106.bin": "c4cf4001cff17333df8808f8bfc888eadae5fa0f55fa4dbe952d95ccb9d4c5af",
+        "instance.rank-107.bin": "3ee4d0f3f5df9eead3bf6a3e549f86532dc815dfa6832f2aad06a7c5339b6bd0",
+        "instance.rank-108.bin": "0d53c842f2e5df36916b02eceb588d0db6cedf28901651fffae6b12731321484",
+        "instance.rank-109.bin": "9c77865b5f82f3bc1309861736c8e48524b34b31960cd6ce65deae3bc4fd9ba6",
+        "instance.rank-110.bin": "c585da7774ada13e60cb36875c4fe91b790f2af0cbd2992d415cc5392c7bc355",
+        "instance.rank-111.bin": "2fa586453a92794dd871d796aae00539fe2372d34d60b9853f6c2087ce176e57"
+      },
+      "owned_ranks": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae08-81",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-112.bin": "8cd7540f9503207888acd123ba22088d09f65695abf076cf3b5b6d2d68e052cf",
+        "instance.rank-113.bin": "37e39d4faa4079c308634d50afcf6dc6b50f66477620699b37e8f08b5a3002f3",
+        "instance.rank-114.bin": "ccdb3336ff7908a2f1f01f03a7c1ed7e5f13bf6dff6aa1f4d7ddfd67adc903de",
+        "instance.rank-115.bin": "01ee0d4634c025f9e5baec45cb0ad60361df630f39059acc3682910a0567d660",
+        "instance.rank-116.bin": "b0cf3d5389db523f28a7b518572649357516ca4d7004d05fe6ed0fb874865332",
+        "instance.rank-117.bin": "13f19e79c25bb51bc3c7bde864ffc416b9fa0f2b5b705d188f2c39395bafcb47",
+        "instance.rank-118.bin": "d115e4fd4153921b5f0cf75ee5fbc2392cfc06ce9174e769748ad64897e6f382",
+        "instance.rank-119.bin": "a561f1b39f4dec0cd9d7a88c9f67da35a2caabb24c4f1cd181221c57d085d42c"
+      },
+      "owned_ranks": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae08-82",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-120.bin": "fad9f6dce4a7ea39ef630cecc47f1768dca49f8653ecbd6d5f61789032e10f1b",
+        "instance.rank-121.bin": "6a535aa374e73ed64de7b82f73db9312b260136fcc48958a5df42de9c5eb9dc4",
+        "instance.rank-122.bin": "d6eef6d5e72fec3e3072bd55c1f1b85fa24a169fed038343ae52520fce7b111d",
+        "instance.rank-123.bin": "9a69561e979f591c609c87c3305a55eaa358f543f632e52860ee535b1782192d",
+        "instance.rank-124.bin": "ce090e2dd063c65951dc22541ca55b9fea49c577eed7899a076b0ad9a8ee5111",
+        "instance.rank-125.bin": "2d9356ade49eb7ed93c55a827c90ee1d9a79337b964e4f0e629b243e4f6f797a",
+        "instance.rank-126.bin": "cd650f1e7654f9681fc32580eb15d70f2cf2607d2f8834a30070e527bf47fc62",
+        "instance.rank-127.bin": "bc8747b24555b8e39fdc13fc4d74984ca829cdfbe34f8012c9b9f22d946d2254"
+      },
+      "owned_ranks": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae08-83",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-128.bin": "8c5a9c5b69d9425ddeb234ef34d749bea859aa3b3d29dd990aaf8582e2177b5e",
+        "instance.rank-129.bin": "b8842ab6b1600d945ac47dae8cc0f7555e434686f48e128bfbda7cc93b6c6f6b",
+        "instance.rank-130.bin": "5ae31f82d37421870da20d482346bea8c1dbf6112fdfe1efa68b48817eca4a67",
+        "instance.rank-131.bin": "e551cb6b5ad5c46999228bcc576799e6c9dda5ad60586b779d4bd28de7f0fe01",
+        "instance.rank-132.bin": "294f457a117f084b60a82216961a37bfd92a35aeb1f3e4dd5d40f62a8f8562bc",
+        "instance.rank-133.bin": "a37561c093fe2f6e4cd1ed91b9fd24774680abd59cdf1b9606a2600e9e1f6874",
+        "instance.rank-134.bin": "3f7ca72d789586a145e2cf199aaf72124514e99bf29643dd829f159a70ec7acd",
+        "instance.rank-135.bin": "4d4978e388f252246bfbacee6bbe23c29ae5d76e0cff0438fa8a95c96a4db8fd"
+      },
+      "owned_ranks": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae08-84",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-136.bin": "d23340fb47c7bb3f11e9e567b5b5378d51dd30722c295d1d002344a091109ebd",
+        "instance.rank-137.bin": "ea5597c31d34b8e9ff48fdf2585d8f42c8b00c43e28a40acb3373f00950c374c",
+        "instance.rank-138.bin": "f77a9cf05788eefc5f82e7744822d98ab37eaccd00d04e7749ed510bfd936855",
+        "instance.rank-139.bin": "b795b49638dd4bf6cea5d41c2e70023f0455e2fbef5764e7e02037f1fea6849b",
+        "instance.rank-140.bin": "c2cdb8d2e6f9db74084689a0c0b1c1dd4e87b26a56b0fe456373b9fa5ea13567",
+        "instance.rank-141.bin": "20fbf62d599dd71174f118dbf21aa73a792ecdf5869b81a954552b556f9a9de2",
+        "instance.rank-142.bin": "2f1eeacd78453a8221a8f7ec82d527ae8f6ebe1a644832d7b8e90367392769b8",
+        "instance.rank-143.bin": "4c764a6a96e9ac1bbd520bd5725c902099fd2b2150c18219b29d7c1072219c73"
+      },
+      "owned_ranks": [
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae09-92",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-144.bin": "64ff3e88a4498c65d07caedb296e2e32a8eb80e7f2a368d0df7c63eb8f632034",
+        "instance.rank-145.bin": "e935a6d66cf8c80917cf792258181b6ab3a0dc0383827080a8587b988d0390fb",
+        "instance.rank-146.bin": "0a2f0d4ac97b334ce30dac36b3f9a20ac74b1b07f789abe31ab2abf5188dcad6",
+        "instance.rank-147.bin": "737c12d87d44307665d23d2625d2f6491c6ce42ba7055f4ebe0b8cd429c77346",
+        "instance.rank-148.bin": "e16536aa5ad151701e3225e6f657fe3571b99951b3dd4881a92800eee18df958",
+        "instance.rank-149.bin": "579ae5413f5d1d9c6177d2b011422fb06e1c844d397e6a6784afef1fa7185635",
+        "instance.rank-150.bin": "5dc1bb839d3257817d6a39e327bba5e200266ba4fa148334d46db9a0d79bebfd",
+        "instance.rank-151.bin": "bea4fafbcc4e7bc7e76bbee9f6447555883e9c16798fb192971efb8195e55302"
+      },
+      "owned_ranks": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae09-93",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-152.bin": "194e65a9d7d208149a120528a94a43fae3f52238001682b395a77a2f0b65d955",
+        "instance.rank-153.bin": "7da677f59c497968ad4bb5dff970ec558c72b7bf706e82ea1b112415e0fde2e3",
+        "instance.rank-154.bin": "ecaba2d2ec3db89cbc71665f6f040984b51a2fd4778d8999680b3844fc54b138",
+        "instance.rank-155.bin": "041bf6b9eee7604cfb3f467ed46618cb0ca8e64c62644febe28ecb4a9cf89d59",
+        "instance.rank-156.bin": "9b8755e4ac9597638751249b402ada094726b4620125e874d15eed1938274417",
+        "instance.rank-157.bin": "7311b51c34adcdd936f2e47b618cebe8e9e300b8a55a06c17347965a9857c1dc",
+        "instance.rank-158.bin": "5d708c18c9549243faeb752ee3b647d8fa6c441b2796447089948c2e41f4ccd1",
+        "instance.rank-159.bin": "5465570e3e0741fa1826cb8e39ae3a48bfe1506160ef92343f633ad4bc0a4c3a"
+      },
+      "owned_ranks": [
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae10-101",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-160.bin": "969555f713ea9e0a444eb90d431282fb5814d1ffce21b0dd68d00673e0893755",
+        "instance.rank-161.bin": "7a1d0760d74f641a19fb4c1a58dd98326f89515cde66fc0b5af450c610393f4e",
+        "instance.rank-162.bin": "032f092d83af6925eec3286b293a0c4e82590f13f53a50e5a276dfa0f87eb3c0",
+        "instance.rank-163.bin": "787b680a30e11d7b65373760f0adf7036590ca37cad34bcba0aa0b32774c138f",
+        "instance.rank-164.bin": "3c09f7bcdd4ff798d791b233b9397316ae9c04140ce7af46f20c9bad96773fe3",
+        "instance.rank-165.bin": "063e95146897c9274b369d7e54d63ed0c813275521a839334cab73ac33005c6c",
+        "instance.rank-166.bin": "259ad68c621a66e80ae350855295f43e99b1bdae399c27835702573c7a1758d3",
+        "instance.rank-167.bin": "26eb8ef66cbff734fe2065319d323703387e288d2e7702c2adc1917ee691a308"
+      },
+      "owned_ranks": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae10-102",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-168.bin": "d23a66462880eb7f8691ee3d76bcf58d680c2df1c078699f03efa9b906422ecf",
+        "instance.rank-169.bin": "085f726ae42654726f72b684932293ae95339b5c429d1d632ecb2658e25c775e",
+        "instance.rank-170.bin": "23afeee55c15b77a0226715f60aff49ef67cb9fa9797da0a3ec59f05ec324f7f",
+        "instance.rank-171.bin": "f06a3de69350368c419c6df925e4b40ec380dc595e29d68977ec938d2aac2a79",
+        "instance.rank-172.bin": "37d18751596acd3b8e86fb7e8060aed5db6815e7eeba6195a51f581346b4679e",
+        "instance.rank-173.bin": "51fbeabeb65d36f22498ee83b7785ab7bd17bd9e3beef623df95cf12342bbd39",
+        "instance.rank-174.bin": "72d1ed53025af41ef76284307887b3285acd147dc02ebbf2bab66c8203737625",
+        "instance.rank-175.bin": "71fd3140710d419f8bdba5f39348ed772a5a753e6d8c31ee0eb9d6ae53249165"
+      },
+      "owned_ranks": [
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae10-103",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-176.bin": "bce82d05e16de8ff70cb758cb89d294365873c16e01f062553efea015567388f",
+        "instance.rank-177.bin": "5321f01ddef26aa1ff424848798c8db3c230a2c48df6df1a1e0db595e0769bb8",
+        "instance.rank-178.bin": "a4f5a8aefdd3f6ff7f53c16b2a5abf981b9883b094c28b8a0643ebb59e8b1747",
+        "instance.rank-179.bin": "f3965830303417da93ae330e1f0da847b88c815fd409556da0a380d866b9771a",
+        "instance.rank-180.bin": "a1de8dddc29cfc8282f5b917da3a278cc78347d058450af53703d9f6321df88b",
+        "instance.rank-181.bin": "d2ad977884ecf4c2fe2e5435a51f5248fbe0d30d0cfdd2b54167210fa32a2c1b",
+        "instance.rank-182.bin": "baa5ac93dbd7ef657736c0fbb16cb35a5cf0264ab8d7c6e2aad3dd26aabf00e8",
+        "instance.rank-183.bin": "5abc98e0eea61f909b39858b490c5b4d0cf512867963246a455ada2b8317c046"
+      },
+      "owned_ranks": [
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae10-104",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-184.bin": "436025438225cd7dd52e2fa0173652eba2b18509a6a3917e2b71e49b76cc348b",
+        "instance.rank-185.bin": "c92e40c2312813a2daa6d30ed23c4b4ca059408b0dec45c4e2952ecc5a78eedf",
+        "instance.rank-186.bin": "b23f5cc2dda3b67ce224e29b2b5fa56b384422948eba4992fcec6ea35be62ec2",
+        "instance.rank-187.bin": "ba31618cb96daa7affb1f7b27d76df30327158cde7aba044a4b2cf50498ad521",
+        "instance.rank-188.bin": "675c891e36bd2f786884fa26fa8798bf166c305adeb3238441476cf585e0b414",
+        "instance.rank-189.bin": "8fc6e8879365e2884f5806a4097843c8b4b798f427bb41952b819e876b1c8de5",
+        "instance.rank-190.bin": "04eb37ff4a73db2089c5c977fb3f3b0a2b364b711dba66d2a38e5335366af91d",
+        "instance.rank-191.bin": "6ce2f6ced448c5bf1ff2940b193cb0af948f3a0dd56f9d8c2a258fcb5867f2fa"
+      },
+      "owned_ranks": [
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae10-105",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-192.bin": "acf42cab44378b4a7f087ca1829dfff04fdaf849081746f61670f5904551c6e7",
+        "instance.rank-193.bin": "2d4f9fb51704ba8df62f52714b29be8b679487e4acb445494345710933b98f54",
+        "instance.rank-194.bin": "34aba71f4f986910eb8ad7d64c61c52883e272f62af36f3960d8cad4683ac34e",
+        "instance.rank-195.bin": "ee577d26a7d9d1d8e5dd2ab2ed791a4bfd7334c4ed6af9c4fb1cf5ee46149245",
+        "instance.rank-196.bin": "39002ccb02ea4299438456b461e7fb3ade4d0b9aa28fadb011f6ac4b41259346",
+        "instance.rank-197.bin": "feea2e9943c9f1eb098a10a923387c0e9c787fbbe4212aea5ca72ccec391e196",
+        "instance.rank-198.bin": "c6153ded3fae0c9856998402e8cbfa71ddff0fb9a11734d2072edb09a27a7b77",
+        "instance.rank-199.bin": "bd5846a76da4b7c6e715c6b4c38338def8d0988b2bbda4850f51e535fb3ef7e0"
+      },
+      "owned_ranks": [
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae11-111",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-200.bin": "157e4e11b5ec6070da10cca3a05c6d15f460cced86dcf4ba3de8b65bd2d37a26",
+        "instance.rank-201.bin": "d135e0534334344c858165721313d2051e769e7b58e975026076207154845b3e",
+        "instance.rank-202.bin": "29b4b7e2713ea4ca7b094f35bad77f04efe5e004c640682725ef05b241fbb23c",
+        "instance.rank-203.bin": "e32c7e8466cb9a8bead62e6281f1d34d27638c090a24f286cf33b97035559274",
+        "instance.rank-204.bin": "f502e481144d64b119e8d6fc872f27aa718709f4b4bc7d09c0c627b13a9cdaaa",
+        "instance.rank-205.bin": "6de8f3dc1ca1338ad9d096b04a80e63533a065ea9b561b9a34ba5667ced13b65",
+        "instance.rank-206.bin": "545f51d54db67cb18d48c0772dc3e28e708634f229ef071b21de1e1e701e5083",
+        "instance.rank-207.bin": "cf729e864575f3de55bc4ed8a00669da7d24723608b92eca55eec524c4b1da61"
+      },
+      "owned_ranks": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae11-112",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-208.bin": "bc1aaf8ff991819c5a4aa18bdedbecedae88a42dfa6ee7e499c61ab7c19d3b73",
+        "instance.rank-209.bin": "0534c8eab025419ca042f78f2cee4b4a975566734c4ead7fa56f927d9dae7c0b",
+        "instance.rank-210.bin": "27498176b0f0c9b76bdb0cf1a038d3c52b3ffca2f67e5434ab47bb4612c78186",
+        "instance.rank-211.bin": "398b261d9880bd6733b602ea965417cb3b3e081e2f02ba28f697bbdbaad45b4b",
+        "instance.rank-212.bin": "4f64d924a38d854e7246c3d20ac4c3e612b277286da7e3ba42a9fc867e13ac32",
+        "instance.rank-213.bin": "c39515bf32f2816d96a1624579dcf296c63a040b4a9919d1133c5843153b5a5c",
+        "instance.rank-214.bin": "b600b2553443b873e76df59f90133d3b8e1fd86d2544eb099076c15d2ba3c75c",
+        "instance.rank-215.bin": "715e75caa1a4e2508c6b9f8429fa3235a995ce7c418ed190f8a98c24d20c800f"
+      },
+      "owned_ranks": [
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae11-113",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-216.bin": "c3a8447ef66188fc1594259feab7ac9d8de782cdfcb6b8ad6f383493aeb832cd",
+        "instance.rank-217.bin": "02e98c0f6a86a194e3c4a1e39a62d455d0782e95798046bf7d81a5ca434f7ac7",
+        "instance.rank-218.bin": "a36eee56f7e0a9e822f65cb151c67cdf5e781b950eb6b7feba256d06eb8d3f90",
+        "instance.rank-219.bin": "17c7515c01604f23ed99a768746b419124cd7c7e6fb295e2b26acbae19403a58",
+        "instance.rank-220.bin": "7c71e7dc635ef24b034f5c0e483f5779c5782ad048fc6e1d696a68976c36b497",
+        "instance.rank-221.bin": "f8e38bb2c8d2b7049702b1ff9db45b2469fc727423b3a2cb12e55fda41b9917a",
+        "instance.rank-222.bin": "bd1b52180b1332ddeb0a03c30ebc3d01498d40673f45196fac299943aef9de6e",
+        "instance.rank-223.bin": "adecb3caf50f455fac0d52f64291d9c04fd215fcda7f4b5ecdc691a8c937dd2d"
+      },
+      "owned_ranks": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae11-114",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-224.bin": "d7dca421612b08f625f9d70006e01fbd1a951e4a1eb3eef58f997fa3fa0dc32a",
+        "instance.rank-225.bin": "a0be5f8726577379731dc12f384e2e0b56059f81c0a46cd0ddbd3f0f9023882d",
+        "instance.rank-226.bin": "29ed5445faaf18e9acaac4237ea2a3e5429cceb558c189f52cdf66456a6181fa",
+        "instance.rank-227.bin": "3e94cf4ae1fb7c231422ac402e1fa0bf5625dcba98e6e190bcf6c37e0b9ac83f",
+        "instance.rank-228.bin": "11b56aec03374dacd2f9c543a3bc3233e4df544422ca0f32f5f4d2f5d7ea637c",
+        "instance.rank-229.bin": "28b343b5c68bc048149977ed3e28159040cf89fdbd8ae423d13704f3ab7c5424",
+        "instance.rank-230.bin": "82f07baf63bbd30ba4f8a6f736a30d7af3070f8a5af72b89797117a85c34cf4b",
+        "instance.rank-231.bin": "59adf1ed45edc95517b1bd52a0a9f264de89b1761ec17a75056b645d914385dc"
+      },
+      "owned_ranks": [
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    },
+    {
+      "host": "hk-prod-model-ae11-115",
+      "files": {
+        "b2-mpi": "e74acd667dc95f4c4737a521cc6ae746d023e376b47f68f7a5c9fac9167caed1",
+        "manifest.json": "87db5df867cabca799f076ecce98e31214a03a80c720e969af60782fcf3fcccd",
+        "build.json": "4e5ae72a98010a47c26e78d1b3e20dba18fb2bf0f8eca2d9fed77825540cfbba",
+        "instance.bin": "2ca54a38e123dc2ab22080289e0cd6007c97514bd58fe20a12cbef444f8fe9c1",
+        "execution-plan.json": "bf9bdac46c9421d269327f82af3023ea1396e9b35e5fe1b53de021f1e215f649",
+        "instance.rank-232.bin": "681738f166ac59501c7e0733aced9c60251dfb986749d6ff8baeb6f9a0169c53",
+        "instance.rank-233.bin": "10548dcdd25bf8d5a10542a86d276aeffe81b6b86f09eda31d9e85d2c6251ddf",
+        "instance.rank-234.bin": "f0016b6f1c21d2a3fc78209f0502651d37ffc08be44c2798eaf9c4a31d61392a",
+        "instance.rank-235.bin": "94e442b226c37bebafb7d3e5746a9ef9ad86ad05cf043426cf1096ac4cd9405b",
+        "instance.rank-236.bin": "a5cfb6da420796ee1e484cf34840a3830c87fce3a1a165e1f96c1e3ace292a67",
+        "instance.rank-237.bin": "550c47b43c952939b4ff28e4788c3e943215703b701ce322a8cd1a0b09e8f498",
+        "instance.rank-238.bin": "1f5907c086d450e0ebfde8d8a362feedd83898a7ed6b339bd4b89bcd6ca7418d",
+        "instance.rank-239.bin": "faa14012f6fb4f55f98fd224cc8354a18b3832bd6484e32acc357843d2fec968"
+      },
+      "owned_ranks": [
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "links": [
+        "mpi"
+      ],
+      "guard_sha256": "cff75b3a91196096eb188da36a2e422ce9c91ff5b20d3dfd6dc9b9aacf81d1de"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+"""Translate editable figure text while retaining plotted geometry and source pixels."""
+from pathlib import Path
+import json,re,os,hashlib,xml.etree.ElementTree as ET
+os.environ.setdefault('MPLCONFIGDIR','/private/tmp/b2-preprint-matplotlib')
+from matplotlib.textpath import TextToPath
+from matplotlib.font_manager import FontProperties
+D=Path(__file__).resolve().parent
+ORIG=D.parent
+mapping={
+'Biological time (ms)':'生物时间（ms）',
+'Population firing rate (Hz)':'神经元群发放率（Hz）',
+'a  860M-neuron activity':'a  8.6亿神经元的活动',
+'Excitatory (80%)':'兴奋性（80%）','Inhibitory (20%)':'抑制性（20%）',
+'Hosts (8 worker cores per host)':'主机数（每台8个工作核）','Wall time (s)':'墙钟时间（s）',
+'b  Execution intervals':'b  执行阶段耗时','Launch to exit':'启动至退出','Initialization max':'初始化最大值','Simulation max':'仿真最大值',
+'Worker cgroup peak (GiB)':'工作进程cgroup峰值（GiB）','c  Per-host memory peaks':'c  各主机内存峰值','Other hosts max':'其他主机最大值',
+'Coordinator host':'协调主机','Worker cap range':'工作主机限额范围','Coordinator cap':'协调主机限额',
+'Baseline time /':'基准耗时／','measured time':'实测耗时','d  Descriptive weak efficiency':'d  描述性弱扩展效率','Simulation':'仿真','Launch':'启动',
+'Retained Brian2 frontend':'保留的Brian2前端','Objects • equations • units • abstract update statements':'对象 • 方程 • 单位 • 抽象更新语句',
+'B2IR: Definition / Instance / Run':'B2IR：定义／实例／运行','Types • clocks • events • effects • identities':'类型 • 时钟 • 事件 • 效应 • 标识',
+'Independent validation → LogicalPlan':'独立验证 → LogicalPlan','Completed dependencies • clocks • transformation eligibility':'补全的依赖 • 时钟 • 变换适用性',
+'Physical planning within the selected backend':'已选后端内的物理规划','Rules + work estimates • optional verified GPU calibration':'规则与工作量估算 • 可选的已验证GPU校准',
+'CPU plan':'CPU计划','GPU plans':'GPU计划','MPI ranks':'MPI进程','Shared reference':'共享参考运行时',
+'Validated execution → results + observed runtime binding':'已验证执行 → 结果与实测运行时绑定',
+'Explain: selected paths, reasons and available execution context':'解释：所选路径、原因与可用执行环境',
+'Clock-driven synaptic weight w':'时钟驱动的突触权重w','Summed write: target.total ← w':'求和写入：target.total ← w',
+'Linked reader: x ← x + target.total':'链接读取：x ← x + target.total','a  A consumer makes intermediate state observable':'a  消费者使中间状态可观察',
+'Start-of-tick observation':'时间步开始时的观测','Reader state x':'读取者状态x','b  Four-step illustrative trace':'b  四步示例轨迹',
+'Canonical schedule':'规范调度','Invalid final-only evaluation':'无效的仅终态求值','Maximum rank RSS (MiB)':'最大进程RSS（MiB）',
+'a  Rank-local storage':'a  进程本地存储','Before':'改动前','After':'改动后','Seconds':'秒',
+'b  Time incl. recording and gather':'b  耗时（含记录与收集）','Node / 8 ranks per node':'节点（每节点8个进程）',
+'Independent proxy peak (GiB)':'独立代理测得峰值（GiB）','256 GiB ceiling':'256 GiB上限','c  Separate 24.1B-synapse run':'c  独立的241亿突触运行',
+'Threads':'线程数','Simulation + recording (s)':'仿真与记录（s）','×  Variability threshold exceeded':'×  超过变异性阈值',
+'Peak RSS (MiB)':'RSS峰值（MiB）','c  Native process memory':'c  原生进程内存','d  Native process memory':'d  原生进程内存',
+'f32 control':'f32对照','Replay (ms)':'重放（ms）','a  Ring STDP · M3':'a  环形STDP · M3','b  Ring STDP · L4':'b  环形STDP · L4',
+'c  Ring STDP · A100':'c  环形STDP · A100','GeNN variant f32':'GeNN变体f32','d  Recurrent CUBA · L4':'d  循环CUBA · L4',
+'e  Recurrent CUBA · A100':'e  循环CUBA · A100','full':'完整','rolling':'滚动',
+'Memory (decimal GB)':'内存（十进制GB）','a  Native-child RSS':'a  原生子进程RSS','b  Summed process-tree peaks':'b  进程树峰值之和',
+'3 fresh processes':'3个新进程','1,000 s replay each':'每次重放1,000 s','41 final fields exact':'41个最终字段完全一致','11 trajectory segments exact':'11段轨迹完全一致',
+'c  Process-restart conformance':'c  进程重启一致性','a  Browser execution profiles':'a  浏览器执行配置','Generic WASM':'通用WASM',
+'B2IR + WasmPlan validation':'B2IR与WasmPlan验证','Shared f64 reference / Worker':'共享f64参考运行时／Worker',
+'Neural Lab interface below':'下方为Neural Lab界面','Experimental WebGPU':'实验性WebGPU','WASM validation → WGSL':'WASM验证 → WGSL',
+'Restricted independent-cell f32':'受限的独立细胞f32','Not used in the screenshot':'截图未使用此路径','Model-specific WASM AOT':'模型专用WASM AOT',
+'Separate frozen generated model':'独立冻结的生成模型','139,255 neurons / 15.1M edges':'139,255个神经元／1,510万条边',
+'13 fixed-input CPU/WASM checks':'13项固定输入CPU／WASM检查','Separate AOT study: matching activity hashes and predictions':'独立AOT研究：活动哈希与预测匹配',
+'Maximum score difference 7.42 × 10⁻¹⁴ • 533.8 MiB WASM linear memory':'最大分数差7.42 × 10⁻¹⁴ • WASM线性内存533.8 MiB',
+'b  Neural Lab: a completed WASM/f64 experiment':'b  Neural Lab：已完成的WASM／f64实验',
+'Neurons':'神经元数','Compiled-region median (s)':'编译区间耗时中位数（s）','a  Explicit NMDA · matched 8 cores':'a  显式NMDA · 匹配8核',
+'b  Within-cohort time ratios':'b  测量组内耗时比','40 threads':'40线程','40 MPI ranks':'40个MPI进程','10,240 neurons · one host':'10,240个神经元 · 单主机',
+'Simulation/recording median (s)':'仿真／记录耗时中位数（s）','MPI ratio: 1.68×':'MPI耗时比：1.68×','c  Separate same-40-core control':'c  独立的相同40核对照',
+'a  Explicit simulation rank assignment':'a  显式仿真进程分配','Ownership + ordered rank backends + numerical profile':'归属与有序进程后端、数值配置',
+'CPU rank':'CPU进程','f64 neuron-state update':'f64神经元状态更新','GPU rank · alternative adapter':'GPU进程 · 可选适配器',
+'Metal or CUDA · f32 neuron-state update':'Metal或CUDA · f32神经元状态更新','Rank-local CPU host work':'进程本地CPU主机工作',
+'Threshold/reset · synapses · queues · recording':'阈值／重置 • 突触 • 队列 • 记录','GPU state writeback → rank-local CPU':'GPU状态写回 → 进程本地CPU',
+'Canonical spike exchange within the MPI communicator':'MPI通信器内的规范脉冲交换','b  Retained qualification · separate paths and snapshots':'b  保留的验证 · 独立路径与快照',
+'CPU + Metal simulation':'CPU与Metal仿真','Actual local MPI processes':'真实的本地MPI进程','25 mixed/inventory checks':'25项混合／设备清单检查',
+'Example: 82 spikes':'示例：82个脉冲','GPU dispatches [0, 32]':'GPU分派数[0, 32]',
+'CUDA simulation offload':'CUDA仿真卸载','Source + runtime adapter':'源码与运行时适配器','NVIDIA hardware qualification':'NVIDIA硬件验证',
+'not established':'尚未确立','No cross-host result':'无跨主机结果','CUDA MPI native training':'CUDA MPI原生训练','Separate training-plan family':'独立的训练计划家族',
+'31 CUDA MPI tests passed':'31项CUDA MPI测试通过','One L4 · shared device 0':'单张L4 · 共享设备0','Not multi-GPU validation':'不是多GPU验证',
+'Explicit assignment; no automatic placement, mixed-vendor cluster proof or speedup claim':'显式分配；不声称自动放置、混合厂商集群验证或加速',
+}
+keep={'A','B','C','D','Rust','Brian C++','Rust AOT','Metal / CUDA','DistributedPlan','WasmPlan','a  M1 Ultra','b  EPYC 9454 × 2','CPU f64','CPU','Metal','f32','CUDA','Rust CPU f64','CUDA f32','Brian','C++','Brian2 C++','Atlas CPU','Brian2 / Atlas','B2IR → DistributedPlan'}
+inventory=json.loads((D/'figure_text_inventory.json').read_text())
+assert set(inventory)==set(mapping)|keep,(set(inventory)-set(mapping)-keep)
+(D/'figure_labels.json').write_text(json.dumps({'translations':mapping,'retained_names':sorted(keep)},ensure_ascii=False,indent=2)+'\n')
+ET.register_namespace('','http://www.w3.org/2000/svg');ET.register_namespace('xlink','http://www.w3.org/1999/xlink')
+textpath=TextToPath(); evidence=[]
+for source in sorted((ORIG/'figures').glob('fig[0-9]*.svg')):
+    tree=ET.parse(source);changed=0
+    for node in tree.iter('{http://www.w3.org/2000/svg}text'):
+        if node.text not in mapping: continue
+        old=node.text;style=node.get('style','');size=float(re.search(r'font-size: ([\d.]+)px',style)[1])
+        transform=node.get('transform','')
+        # Matplotlib multiline labels bake center alignment into the x origin.
+        # Restore the same original center before changing the text width.
+        match=re.fullmatch(r'translate\(([-\d.]+) ([-\d.]+)\)',transform)
+        if match and 'text-anchor:' not in style:
+            weight='bold' if 'font-weight: 700' in style else 'normal'
+            width,_,_=textpath.get_text_width_height_descent(old,FontProperties(family='DejaVu Sans',size=size,weight=weight),False)
+            node.set('transform',f'translate({float(match[1])+width/2:.6f} {match[2]})')
+            style+='; text-anchor: middle'
+        style=re.sub(r"font-family: [^;]+", "font-family: 'Hiragino Sans GB', 'Arial'",style)
+        node.set('style',style);node.text=mapping[old];changed+=1
+    target=D/'figures'/source.name;tree.write(target,encoding='utf-8',xml_declaration=True)
+    before=ET.parse(source).getroot();after=tree.getroot()
+    def data_geometry(root):
+        return [ET.tostring(e) for e in root.iter() if e.tag.rsplit('}',1)[-1] in {'path','image','polygon','polyline','circle','ellipse','rect','line'}]
+    assert data_geometry(before)==data_geometry(after),source.name
+    evidence.append({'file':source.name,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'translated_text_nodes':changed,'geometry_and_embedded_images_unchanged':True})
+(D/'figure_translation_validation.json').write_text(json.dumps(evidence,indent=2)+'\n')
+print('Translated 10 vector figures; geometry and embedded images unchanged.')

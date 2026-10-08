@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-11",
+  "branch": "codex/mpi-cpu",
+  "suites": [
+    {
+      "name": "mixed-gpu",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "gpu-inventory",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "cpu-mpi-regression",
+      "tests": 70,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "plan-device-regression",
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 12
+    }
+  ],
+  "passed": 118,
+  "skipped": 12,
+  "hardware_verified": "Local Apple Silicon Metal GPU with actual MPI processes",
+  "cuda_status": "Source emission tested; nvcc compilation and NVIDIA hardware execution not available on this host",
+  "cross_host_status": "Not tested",
+  "gpu_scope": "Population state update only; host f64 threshold/reset/synapses and MPI",
+  "example_spikes": 82,
+  "example_rank_gpu_dispatches": [
+    0,
+    32
+  ],
+  "delivery_source_sha256": {
+    "brian2-rust/python/brian2_rust/distributed.py": "6775c3ccfbc30985c3910113a074e91838e50fb539e031f931a8fec8685fa1d2",
+    "brian2-rust/python/brian2_rust/device.py": "70dc21a8d41977f5cf55f6075cdb877602170d5c3346f4843f19f76025183575",
+    "brian2-rust/python/brian2_rust/native.py": "d4226f9886ecfcc3ba447fab00a2e1bfae07afb83387511e81aced7cc52fce05",
+    "brian2-rust/python/brian2_rust/plan.py": "bd195c41317c1ed7d851a1998a3de4eddd747f78ad399c13c3aa52dcaf1a8d13",
+    "brian2-rust/python/brian2_rust/slot_codegen.py": "1606530103e2bbf6a27e939b6e96187927afa4c6cde6baf86450844e9cd57477",
+    "brian2-rust/python/brian2_rust/mpi_codegen.py": "b80cbf0f5cadf6cb5ebf1d88c851896f511672c0ca41daa1da5181023f688d1e",
+    "brian2-rust/python/brian2_rust/mpi_gpu.py": "f37d6d4895919d6f0c73dc59148e5cd73ae4d3f4243628b7781d372313f1b08a",
+    "brian2-rust/python/brian2_rust/mpi_runtime/gpu.rs": "045461eb7e958414450029f5561e8fc8778df80d301e2d05f46e240621020383",
+    "brian2-rust/python/brian2_rust/mpi_runtime/gpu_cuda.cpp": "675fccde5b69e9043f98b7c751db3d9dbd85130e4a94d0f626c81c77eb07e8ba",
+    "brian2-rust/tests/test_mpi_gpu.py": "bcae75e041e15031c711ef1611aa6a5efad2a6b3285868778873231fff394af4",
+    "brian2-rust/examples/mpi_heterogeneous.py": "bc9ed636f94c72bce0d3c0f3826e51ac434c8570ab4af914fceb52b7fbab4137"
+  }
+}

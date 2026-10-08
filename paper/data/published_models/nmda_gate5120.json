@@ -1,0 +1,386 @@
+{
+  "protocol": "author recurrent equations/topology/delay/RK4/f64/1s, diagnostic PoissonInput replacement by identical externally generated Bernoulli events at the same synapses schedule; this scientific input protocol differs from unchanged publication and is never used as a performance denominator",
+  "network_size": 5120,
+  "shared_input_sha256": "03c5f0cf04b7b9bb788b34c2e63ac3ca3b7c44bffafe1a9bb97699d1b2b77fee",
+  "original_source_sha256": "49f7126e0a7eda87f22ea3d9f911c3a9d4dfa571acba1ef7b5cd46537e807079",
+  "deterministic_bounds": {
+    "voltage_absolute_V": 2e-13,
+    "nmda_x_and_gate_absolute": 2e-12,
+    "summed_total_unit_roundoff": 1.1102230246251565e-16,
+    "summed_total_gamma_ne_minus_one": 4.546363285842083e-13,
+    "justification": "Reuse the documented float64 RK4 deterministic NMDA-core bounds (2e-13 V voltage and 2e-12 dimensionless x/gate) as a strict screen for the longer recurrent diagnostic. Exact event/rate/connectivity equality is required. The summed-total bound follows from at most NE edge-state deviations of that fixed gate bound plus the standard IEEE sequential-sum gamma_(NE-1) rounding envelope times the reference maximum. Individual raw errors are retained; no threshold is fitted to this run."
+  },
+  "exact_field_requirements": [
+    "rate_E_Hz",
+    "rate_I_Hz",
+    "rate_E_t_s",
+    "rate_I_t_s",
+    "NMDA_EE_i",
+    "NMDA_EE_j",
+    "NMDA_EI_i",
+    "NMDA_EI_j"
+  ],
+  "bounded_field_requirements": {
+    "V_E": 2e-13,
+    "V_I": 2e-13,
+    "NMDA_EE_x": 2e-12,
+    "NMDA_EE_s_NMDA": 2e-12,
+    "NMDA_EI_x": 2e-12,
+    "NMDA_EI_s_NMDA": 2e-12,
+    "s_NMDA_tot_E": 8.425164977556516e-09,
+    "s_NMDA_tot_I": 8.425164977556516e-09
+  },
+  "fields": {
+    "I_AMPA_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 4.2005265481208437e-26,
+      "different_elements": 8715
+    },
+    "I_AMPA_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 4.2005265481208437e-26,
+      "different_elements": 8427
+    },
+    "I_AMPA_ext_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 2.0679515313825692e-24,
+      "different_elements": 8984
+    },
+    "I_AMPA_ext_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 9.305781891221561e-25,
+      "different_elements": 8562
+    },
+    "I_GABA_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.9645539548134407e-24,
+      "different_elements": 9484
+    },
+    "I_GABA_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.0856745539758488e-24,
+      "different_elements": 9335
+    },
+    "I_NMDA_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 9.564275832644382e-25,
+      "different_elements": 9451
+    },
+    "I_NMDA_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 5.686866711302065e-25,
+      "different_elements": 9297
+    },
+    "I_input_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "NMDA_EE_i": {
+      "shape": [
+        16777216
+      ],
+      "dtype": "int32",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "NMDA_EE_j": {
+      "shape": [
+        16777216
+      ],
+      "dtype": "int32",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "NMDA_EE_s_NMDA": {
+      "shape": [
+        16777216
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 2.9976021664879227e-15,
+      "different_elements": 13832192
+    },
+    "NMDA_EE_x": {
+      "shape": [
+        16777216
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 2.7755575615628914e-16,
+      "different_elements": 13844480
+    },
+    "NMDA_EI_i": {
+      "shape": [
+        4194304
+      ],
+      "dtype": "int32",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "NMDA_EI_j": {
+      "shape": [
+        4194304
+      ],
+      "dtype": "int32",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "NMDA_EI_s_NMDA": {
+      "shape": [
+        4194304
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 2.9976021664879227e-15,
+      "different_elements": 3458048
+    },
+    "NMDA_EI_x": {
+      "shape": [
+        4194304
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 2.7755575615628914e-16,
+      "different_elements": 3461120
+    },
+    "V_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "different_elements": 9052
+    },
+    "V_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 6.938893903907228e-17,
+      "different_elements": 8516
+    },
+    "label_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "int32",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "lastspike_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "lastspike_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "not_refractory_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "bool",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "not_refractory_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "bool",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "rate_E_Hz": {
+      "shape": [
+        10000
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "rate_E_t_s": {
+      "shape": [
+        10000
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "rate_I_Hz": {
+      "shape": [
+        10000
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "rate_I_t_s": {
+      "shape": [
+        10000
+      ],
+      "dtype": "float64",
+      "byte_equal": true,
+      "max_absolute_difference": 0.0,
+      "different_elements": 0
+    },
+    "s_AMPA_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 5.169878828456423e-25,
+      "different_elements": 7804
+    },
+    "s_AMPA_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 4.1359030627651384e-25,
+      "different_elements": 7841
+    },
+    "s_AMPA_ext_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.3234889800848443e-23,
+      "different_elements": 7915
+    },
+    "s_AMPA_ext_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 9.926167350636332e-24,
+      "different_elements": 7708
+    },
+    "s_GABA_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 3.3087224502121107e-23,
+      "different_elements": 8449
+    },
+    "s_GABA_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.819797347616661e-23,
+      "different_elements": 8444
+    },
+    "s_NMDA_tot_E": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.1937117960769683e-12,
+      "different_elements": 9253
+    },
+    "s_NMDA_tot_I": {
+      "shape": [
+        10000,
+        1
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "max_absolute_difference": 1.1937117960769683e-12,
+      "different_elements": 9253
+    }
+  },
+  "failed_requirements": [],
+  "deterministic_core_screen_pass": true,
+  "limitations": "diagnostic changes external-input generator and may use a smaller network size; it does not erase any failed original seeded statistical gate"
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "atlas-online-workflow-capture-v2",
+  "captured_on": "2026-10-07",
+  "site": "https://next-brain.ai",
+  "model": "FlyWire · DM1 Circuit",
+  "saved_run": {
+    "page": "https://next-brain.ai/account/runs/?id=335cec77-5dd6-40c6-b57d-7b3e0f8109ad",
+    "displayed_time": "30/09/2026, 23:49:32",
+    "backend": "Browser WASM",
+    "numeric_profile": "reference-f64",
+    "scale": "dm1-240",
+    "neurons": 240,
+    "duration_ms": 300,
+    "full_run_spikes": 2796,
+    "replay_time_ms": 270,
+    "parameters": {
+      "duration_ms": 300,
+      "sensory_rate_hz": 80,
+      "sensory_weight_mv": 40,
+      "recurrent_weight_mv": 0.275,
+      "inhibitory_gain": 4
+    },
+    "layout_origin": "current catalogue; activity from saved measurements; conceptual six-group diagram"
+  },
+  "b2ir_view": {
+    "page": "https://next-brain.ai/models/flywire-dm1/",
+    "origin": "model-page draft with default parameters, not a saved run artifact",
+    "neurons": 240,
+    "execution_populations": 1,
+    "synapses": 6660,
+    "scheduled_steps": 7,
+    "selected_node": "flywire_recurrent_pre",
+    "template_url": "https://next-brain.ai/runtime/flywire-template.json",
+    "template_sha256": "3c0ea2187965dfc55fc07b5ef00597632d34bb1342485a7eb1e110e759af438c",
+    "template_hash_scope": "Downloaded input template, not a Python source hash or proof of identity to the saved run bundle",
+    "full_run_artifact_hash_available": false
+  },
+  "capture_mode": "direct screenshots of online saved results and model inspector; no local replay; no new simulation",
+  "screenshot_sha256": "945a323c5efd2df4dc250c25d8b4ffacbf141500c6c240fcaebc6cabcdda73b1",
+  "run_screenshot_sha256": "1e180e33bf179976688bd4268ef1fb0bff9846f289a2d2c77faeace2128de29a",
+  "visible_inspector_text_sha256": "2fe69ab4301771042124d422b2e3eedae8a20cd53491bd82539d6b10635782eb",
+  "visible_run_text_sha256": "3370c279f7eab19c9decb4aaf5a2dfc5a00835eece88f990b14131caf3c70e3a",
+  "scope": "Interface illustration only; paired views are not hash-matched artifacts and do not establish scientific validation, performance, full physical-plan inspection or usability benefits.",
+  "panels": [
+    {
+      "image": "figures/figS1_flywire_run.jpg",
+      "crop": [
+        0,
+        0,
+        1220,
+        693
+      ],
+      "title": "a | Recorded FlyWire circuit activity",
+      "caption": "Saved Browser WASM run of FlyWire DM1 (dm1-240, reference-f64): 240 neurons, 300 ms of biological time and 2,796 recorded spikes in the full run. Replay is positioned at 270 ms. The current catalogue supplies the six-group network layout; colors and displayed rates come from saved measurements. This is recorded activity replay, not a new simulation or the B2IR schedule.",
+      "image_sha256": "1e180e33bf179976688bd4268ef1fb0bff9846f289a2d2c77faeace2128de29a"
+    },
+    {
+      "image": "figures/figS1_b2ir_inspector.jpg",
+      "crop": [
+        0,
+        0,
+        1220,
+        728
+      ],
+      "title": "b | B2IR model draft and logical execution cycle",
+      "caption": "Corresponding online FlyWire DM1 model-page B2IR draft, at the 240-neuron scale with default parameters: one execution population, 6,660 synapses and seven scheduled operations. This draft is not the archived execution artifact of panel a. Biological groups in the network diagram and execution populations in B2IR serve different purposes. The runtime validates the final bundle on execution.",
+      "image_sha256": "945a323c5efd2df4dc250c25d8b4ffacbf141500c6c240fcaebc6cabcdda73b1"
+    },
+    {
+      "image": "figures/figS1_b2ir_inspector.jpg",
+      "crop": [
+        0,
+        728,
+        1220,
+        1258
+      ],
+      "title": "c | Synaptic delivery, dependencies and operations",
+      "caption": "The selected <b>flywire_recurrent_pre</b> node depends on the state updater and spike thresholder. It reads postsynaptic conductances, inhibitory gain, recurrent weight, signed contacts and presynaptic transmission, and writes <b>ge_post, gi_post</b>. The displayed operations separate excitatory and inhibitory conductance updates. This is logical schedule inspection; the complete target-specific physical plan is not shown.",
+      "image_sha256": "945a323c5efd2df4dc250c25d8b4ffacbf141500c6c240fcaebc6cabcdda73b1"
+    }
+  ]
+}

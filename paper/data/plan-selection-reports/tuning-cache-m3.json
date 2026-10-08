@@ -1,0 +1,3264 @@
+{
+  "schema": "b2-gpu-tuning-cache-benchmark-v1",
+  "backend": "metal",
+  "passed": true,
+  "cases": [
+    {
+      "name": "quiet",
+      "configuration": {
+        "case": "recurrent-delayed-stdp-v2",
+        "neurons": 4096,
+        "degree": 8,
+        "steps": 1024,
+        "dt_seconds": 0.0009765625,
+        "initial_v": "(i%16)/16",
+        "initial_w": 0.25,
+        "neuron": "start: v+=0.015625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+        "taupre_ticks": 16,
+        "taupost_ticks": 32,
+        "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+        "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+        "pre_delay": "edge_index%16 ticks",
+        "post_delay_ticks": 16,
+        "pre_before_post": true,
+        "topology_sha256": "1dba5631ee32b7d0e1fe024dc91c7e3f7feb36a839c922ab2e250ad0b1381085",
+        "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+        "acceptance": {
+          "float_rtol": 2e-05,
+          "float_atol": 2e-06,
+          "spikes": "exact ticks and neuron indices",
+          "lastupdate": "exact"
+        },
+        "workload": {
+          "drive": 0.015625,
+          "delay_span": 16,
+          "post_delay": 16,
+          "topology_kind": "random-fixed-outdegree",
+          "topology_seed": 42
+        },
+        "topology": {
+          "kind": "random-fixed-outdegree",
+          "seed": 42,
+          "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+          "self_edges": false,
+          "duplicate_edges": false,
+          "creation_order": "source, then sorted target",
+          "indegree_min": 0,
+          "indegree_max": 19,
+          "indegree_mean": 8.0,
+          "indegree_std": 2.7295045910384546
+        }
+      },
+      "expected_events": 0,
+      "activations": [
+        {
+          "index": 0,
+          "wall_seconds": 3.7068766250740737,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "miss",
+              "input_sha256": "6660cea9163ac53d53ae3f8d182304d3f2715d40ddddd97e99fa64eb951ec824",
+              "reason": "input not cached"
+            },
+            "replay": null,
+            "selected": "baseline",
+            "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+            "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.06263925007078797,
+                    0.04393095802515745,
+                    0.0669715830590576
+                  ],
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.09614675003103912,
+                    0.048523457953706384,
+                    0.08384062489494681
+                  ],
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.058309415937401354,
+                    0.03242845903150737,
+                    0.04955137497745454
+                  ],
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.06766525004059076,
+                    0.0357114999787882,
+                    0.06013329199049622
+                  ],
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.13115079107228667,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13184699998237193,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12122370896395296,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.11566574999596924,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.06766525004059076,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.058309415937401354,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.09614675003103912,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.06263925007078797,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.0357114999787882,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.04393095802515745,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.03242845903150737,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.048523457953706384,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.0669715830590576,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.04955137497745454,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.06013329199049622,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.08384062489494681,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 3,
+                  "seconds": 0.07637033297214657,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "total_seconds": 3.6386322079924867,
+              "selected": "baseline",
+              "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "selected_run_seconds": 0.07637033297214657,
+              "selection_reason": "no verified candidate clears the conservative improvement gate"
+            },
+            "total_seconds": 3.6764512080699205
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": false,
+            "kernels_reused": 0,
+            "kernels_compiled": 4
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": false
+          },
+          "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741"
+        },
+        {
+          "index": 1,
+          "wall_seconds": 0.5707030420890078,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6660cea9163ac53d53ae3f8d182304d3f2715d40ddddd97e99fa64eb951ec824",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.10274408396799117,
+              "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "baseline",
+            "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+            "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.06263925007078797,
+                    0.04393095802515745,
+                    0.0669715830590576
+                  ],
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.09614675003103912,
+                    0.048523457953706384,
+                    0.08384062489494681
+                  ],
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.058309415937401354,
+                    0.03242845903150737,
+                    0.04955137497745454
+                  ],
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.06766525004059076,
+                    0.0357114999787882,
+                    0.06013329199049622
+                  ],
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.13115079107228667,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13184699998237193,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12122370896395296,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.11566574999596924,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.06766525004059076,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.058309415937401354,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.09614675003103912,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.06263925007078797,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.0357114999787882,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.04393095802515745,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.03242845903150737,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.048523457953706384,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.0669715830590576,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.04955137497745454,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.06013329199049622,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.08384062489494681,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 3,
+                  "seconds": 0.07637033297214657,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "total_seconds": 3.6386322079924867,
+              "selected": "baseline",
+              "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "selected_run_seconds": 0.07637033297214657,
+              "selection_reason": "no verified candidate clears the conservative improvement gate"
+            },
+            "total_seconds": 0.5519582080887631
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741"
+        },
+        {
+          "index": 2,
+          "wall_seconds": 0.5331851250957698,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6660cea9163ac53d53ae3f8d182304d3f2715d40ddddd97e99fa64eb951ec824",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.07637612498365343,
+              "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "baseline",
+            "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+            "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.06263925007078797,
+                    0.04393095802515745,
+                    0.0669715830590576
+                  ],
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.09614675003103912,
+                    0.048523457953706384,
+                    0.08384062489494681
+                  ],
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.058309415937401354,
+                    0.03242845903150737,
+                    0.04955137497745454
+                  ],
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.06766525004059076,
+                    0.0357114999787882,
+                    0.06013329199049622
+                  ],
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.13115079107228667,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13184699998237193,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12122370896395296,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.11566574999596924,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.06766525004059076,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.058309415937401354,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.09614675003103912,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.06263925007078797,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.0357114999787882,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.04393095802515745,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.03242845903150737,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.048523457953706384,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.0669715830590576,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.04955137497745454,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.06013329199049622,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.08384062489494681,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 3,
+                  "seconds": 0.07637033297214657,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "total_seconds": 3.6386322079924867,
+              "selected": "baseline",
+              "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "selected_run_seconds": 0.07637033297214657,
+              "selection_reason": "no verified candidate clears the conservative improvement gate"
+            },
+            "total_seconds": 0.5148505419492722
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741"
+        },
+        {
+          "index": 3,
+          "wall_seconds": 0.560162957990542,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "6660cea9163ac53d53ae3f8d182304d3f2715d40ddddd97e99fa64eb951ec824",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.08486008294858038,
+              "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "baseline",
+            "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+            "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.06263925007078797,
+                    0.04393095802515745,
+                    0.0669715830590576
+                  ],
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.09614675003103912,
+                    0.048523457953706384,
+                    0.08384062489494681
+                  ],
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.058309415937401354,
+                    0.03242845903150737,
+                    0.04955137497745454
+                  ],
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.06766525004059076,
+                    0.0357114999787882,
+                    0.06013329199049622
+                  ],
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.13115079107228667,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.13184699998237193,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.12122370896395296,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.11566574999596924,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.06766525004059076,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.058309415937401354,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.09614675003103912,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.06263925007078797,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.0357114999787882,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.04393095802515745,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.03242845903150737,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.048523457953706384,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.0669715830590576,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.04955137497745454,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "e0d4f44b49983800a09fd17addb2c6ce97620a8abe342bab69ac94d06b4dc021"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.06013329199049622,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "8e3dc75a9d626c794051e96518401ae6e6dd26733f1eec6f59223001f5c0ab1e"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.08384062489494681,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "2499c527922040d18d35945d67ccb99c23771e2f2827ebfd5003c4f0c53c728a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 3,
+                  "seconds": 0.07637033297214657,
+                  "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+                  "plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741",
+              "total_seconds": 3.6386322079924867,
+              "selected": "baseline",
+              "selected_plan_sha256": "17641295bbcb6f56364b31baf7bd79619a562d83f3d569a529c73bf847f61608",
+              "selected_run_seconds": 0.07637033297214657,
+              "selection_reason": "no verified candidate clears the conservative improvement gate"
+            },
+            "total_seconds": 0.5423273750348017
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 0.0
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 0.0
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.281499860283919e-06
+                },
+                "w": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    32768
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.3113021816169024e-06
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    0
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "4be51227ceb62df36464e9f94da1c2e6d61f413b0171adc2ff13923dcefcd741"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "wide",
+      "configuration": {
+        "case": "recurrent-delayed-stdp-v2",
+        "neurons": 4096,
+        "degree": 32,
+        "steps": 1024,
+        "dt_seconds": 0.0009765625,
+        "initial_v": "(i%16)/16",
+        "initial_w": 0.25,
+        "neuron": "start: v+=0.0625; groups: v+=(-v/32); threshold: v>1; reset: v=0",
+        "taupre_ticks": 16,
+        "taupost_ticks": 32,
+        "pre": "decay both traces; v_post+=w/16; Apre+=.0078125; w=clip(w+Apost,0,.5); lastupdate=t",
+        "post": "decay both traces; Apost-=.00390625; w=clip(w+Apre,0,.5); lastupdate=t",
+        "pre_delay": "edge_index%8 ticks",
+        "post_delay_ticks": 3,
+        "pre_before_post": true,
+        "topology_sha256": "fb14364456e1b1102022baac1cf0199ac8d1a4b6c93b9ff7e87830e658e6cf99",
+        "recording": "all spikes; final v,w,Apre,Apost,lastupdate; start v after drive of neurons 0,N-1 every tick",
+        "acceptance": {
+          "float_rtol": 2e-05,
+          "float_atol": 2e-06,
+          "spikes": "exact ticks and neuron indices",
+          "lastupdate": "exact"
+        },
+        "workload": {
+          "drive": 0.0625,
+          "delay_span": 8,
+          "post_delay": 3,
+          "topology_kind": "random-fixed-outdegree",
+          "topology_seed": 42
+        },
+        "topology": {
+          "kind": "random-fixed-outdegree",
+          "seed": 42,
+          "algorithm": "splitmix64-key-source-times-N-plus-target-plus-seed-v1",
+          "self_edges": false,
+          "duplicate_edges": false,
+          "creation_order": "source, then sorted target",
+          "indegree_min": 14,
+          "indegree_max": 53,
+          "indegree_mean": 32.0,
+          "indegree_std": 5.550768879736392
+        }
+      },
+      "expected_events": 22795895,
+      "activations": [
+        {
+          "index": 0,
+          "wall_seconds": 8.767914499971084,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "miss",
+              "input_sha256": "e3c905931c240f861879af437548b627c4f4858d00c2531bbffea1614ea405a6",
+              "reason": "input not cached"
+            },
+            "replay": null,
+            "selected": "bitset",
+            "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+            "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24451887502800673,
+                    0.24019683292135596,
+                    0.23417879198677838
+                  ],
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24293045897502452,
+                    0.25295054097659886,
+                    0.23539858299773186
+                  ],
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.18932487501297146,
+                    0.2033070829929784,
+                    0.18300449999514967
+                  ],
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.22871516703162342,
+                    0.2228113339515403,
+                    0.21662375004962087
+                  ],
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.4883184999926016,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.4918455419829115,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.4296622920082882,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.4971843750681728,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.22871516703162342,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.18932487501297146,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.24293045897502452,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.24451887502800673,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.2228113339515403,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.24019683292135596,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.2033070829929784,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.25295054097659886,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.23417879198677838,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.18300449999514967,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.21662375004962087,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.23539858299773186,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.1909846659982577,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "total_seconds": 8.655664375051856,
+              "selected": "bitset",
+              "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "selected_run_seconds": 0.1909846659982577,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 8.716752290958539
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711089
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 2,
+            "kernels_compiled": 2
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": false
+          },
+          "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981"
+        },
+        {
+          "index": 1,
+          "wall_seconds": 1.2489600830012932,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "e3c905931c240f861879af437548b627c4f4858d00c2531bbffea1614ea405a6",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.22283958306070417,
+              "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+            "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24451887502800673,
+                    0.24019683292135596,
+                    0.23417879198677838
+                  ],
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24293045897502452,
+                    0.25295054097659886,
+                    0.23539858299773186
+                  ],
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.18932487501297146,
+                    0.2033070829929784,
+                    0.18300449999514967
+                  ],
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.22871516703162342,
+                    0.2228113339515403,
+                    0.21662375004962087
+                  ],
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.4883184999926016,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.4918455419829115,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.4296622920082882,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.4971843750681728,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.22871516703162342,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.18932487501297146,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.24293045897502452,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.24451887502800673,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.2228113339515403,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.24019683292135596,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.2033070829929784,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.25295054097659886,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.23417879198677838,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.18300449999514967,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.21662375004962087,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.23539858299773186,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.1909846659982577,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "total_seconds": 8.655664375051856,
+              "selected": "bitset",
+              "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "selected_run_seconds": 0.1909846659982577,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.1995190830202773
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711089
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981"
+        },
+        {
+          "index": 2,
+          "wall_seconds": 1.2127059999620542,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "e3c905931c240f861879af437548b627c4f4858d00c2531bbffea1614ea405a6",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.21786841691937298,
+              "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+            "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24451887502800673,
+                    0.24019683292135596,
+                    0.23417879198677838
+                  ],
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24293045897502452,
+                    0.25295054097659886,
+                    0.23539858299773186
+                  ],
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.18932487501297146,
+                    0.2033070829929784,
+                    0.18300449999514967
+                  ],
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.22871516703162342,
+                    0.2228113339515403,
+                    0.21662375004962087
+                  ],
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.4883184999926016,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.4918455419829115,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.4296622920082882,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.4971843750681728,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.22871516703162342,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.18932487501297146,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.24293045897502452,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.24451887502800673,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.2228113339515403,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.24019683292135596,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.2033070829929784,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.25295054097659886,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.23417879198677838,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.18300449999514967,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.21662375004962087,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.23539858299773186,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.1909846659982577,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "total_seconds": 8.655664375051856,
+              "selected": "bitset",
+              "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "selected_run_seconds": 0.1909846659982577,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.1672108330531046
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711089
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981"
+        },
+        {
+          "index": 3,
+          "wall_seconds": 1.2117670410079882,
+          "tuning": {
+            "schema": "b2-gpu-tuning-cache-v1",
+            "status": "passed",
+            "cache": {
+              "status": "hit",
+              "input_sha256": "e3c905931c240f861879af437548b627c4f4858d00c2531bbffea1614ea405a6",
+              "reason": "exact input, plan, context and complete result verified"
+            },
+            "replay": {
+              "seconds": 0.22566741693299264,
+              "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "compilation": {
+                "requested": true,
+                "portable": true,
+                "bridge_reused": true,
+                "kernels_reused": 4,
+                "kernels_compiled": 0
+              }
+            },
+            "selected": "bitset",
+            "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+            "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+            "calibration": {
+              "schema": "b2-gpu-autotune-v1",
+              "rounds": 3,
+              "order_seed": 1729,
+              "min_median_gain": 0.05,
+              "scope": "complete reset-to-result replays after full warmup; compilation and fingerprinting excluded from samples",
+              "cache": "none; current full activation is profiled each time",
+              "candidates": {
+                "baseline": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24451887502800673,
+                    0.24019683292135596,
+                    0.23417879198677838
+                  ],
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": false,
+                    "kernels_reused": 0,
+                    "kernels_compiled": 4
+                  }
+                },
+                "prefix": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": false,
+                  "status": "eligible",
+                  "seconds": [
+                    0.24293045897502452,
+                    0.25295054097659886,
+                    0.23539858299773186
+                  ],
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 3,
+                    "kernels_compiled": 2
+                  }
+                },
+                "bitset": {
+                  "synapse_prefix": false,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.18932487501297146,
+                    0.2033070829929784,
+                    0.18300449999514967
+                  ],
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 2
+                  }
+                },
+                "prefix-bitset": {
+                  "synapse_prefix": true,
+                  "synapse_sparse": "bitset",
+                  "status": "eligible",
+                  "seconds": [
+                    0.22871516703162342,
+                    0.2228113339515403,
+                    0.21662375004962087
+                  ],
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a",
+                  "device": "Apple M3",
+                  "compilation": {
+                    "requested": true,
+                    "portable": true,
+                    "bridge_reused": true,
+                    "kernels_reused": 2,
+                    "kernels_compiled": 3
+                  }
+                }
+              },
+              "samples": [
+                {
+                  "candidate": "baseline",
+                  "round": -1,
+                  "seconds": 0.4883184999926016,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": -1,
+                  "seconds": 0.4918455419829115,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": -1,
+                  "seconds": 0.4296622920082882,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": -1,
+                  "seconds": 0.4971843750681728,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 0,
+                  "seconds": 0.22871516703162342,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 0,
+                  "seconds": 0.18932487501297146,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 0,
+                  "seconds": 0.24293045897502452,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 0,
+                  "seconds": 0.24451887502800673,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 1,
+                  "seconds": 0.2228113339515403,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 1,
+                  "seconds": 0.24019683292135596,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 1,
+                  "seconds": 0.2033070829929784,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 1,
+                  "seconds": 0.25295054097659886,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "baseline",
+                  "round": 2,
+                  "seconds": 0.23417879198677838,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "1eff60d8b6d40cc07f7eec70ce1a7cde70e23f59f7087484b2b8bfb9cea3aaad"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 2,
+                  "seconds": 0.18300449999514967,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                },
+                {
+                  "candidate": "prefix-bitset",
+                  "round": 2,
+                  "seconds": 0.21662375004962087,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "f4ff9e71021a737564c966c2fad013f75e0198131a7c7b9ca0ad3b931d21c18a"
+                },
+                {
+                  "candidate": "prefix",
+                  "round": 2,
+                  "seconds": 0.23539858299773186,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "09c4a7ea38a2e5e902b79dd5e990839ede9b9bd8ac2b993dd23fe83b071818b4"
+                },
+                {
+                  "candidate": "bitset",
+                  "round": 3,
+                  "seconds": 0.1909846659982577,
+                  "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+                  "plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946"
+                }
+              ],
+              "status": "passed",
+              "reference_observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981",
+              "total_seconds": 8.655664375051856,
+              "selected": "bitset",
+              "selected_plan_sha256": "8a49df26bb7a9edb6b59eb7ce215ff5f7a61fd713c3581ce0a695016faf80946",
+              "selected_run_seconds": 0.1909846659982577,
+              "selection_reason": "measured separated-range improvement"
+            },
+            "total_seconds": 1.1662718750303611
+          },
+          "gates": {
+            "f32": {
+              "passed": true,
+              "fields": {
+                "v": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "w": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.172325134277344e-07
+                },
+                "Apre": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 4.6566128730773926e-09
+                },
+                "Apost": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 5.587935447692871e-09
+                },
+                "lastupdate": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.0
+                },
+                "trace": {
+                  "passed": true,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 2.384185791015625e-07
+                },
+                "ticks": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                },
+                "indices": {
+                  "passed": true,
+                  "exact": true,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": 0.0
+                }
+              }
+            },
+            "f64": {
+              "passed": false,
+              "fields": {
+                "v": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    4096
+                  ],
+                  "max_abs": 1.1181296393535178
+                },
+                "w": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.26242248041640026
+                },
+                "Apre": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.009186320114629502
+                },
+                "Apost": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.004704209248711089
+                },
+                "lastupdate": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    131072
+                  ],
+                  "max_abs": 0.01171875
+                },
+                "trace": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    1024,
+                    2
+                  ],
+                  "max_abs": 1.0866378545761108
+                },
+                "ticks": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                },
+                "indices": {
+                  "passed": false,
+                  "exact": false,
+                  "shape": [
+                    354861
+                  ],
+                  "max_abs": null
+                }
+              }
+            }
+          },
+          "compilation": {
+            "requested": true,
+            "portable": true,
+            "bridge_reused": true,
+            "kernels_reused": 4,
+            "kernels_compiled": 0
+          },
+          "buffer_reuse": {
+            "requested": true,
+            "adopted": true
+          },
+          "observable_sha256": "5375c34f3b24857c750444d2bb5175ffbad8d5fd69935b47a85f9326c3f47981"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "scope": "identical complete model; fresh executor, input hashing, plan validation, compiler-context checks, execution, full-result hashing, result write/read and cache publication; Brian lowering and model export excluded"
+}

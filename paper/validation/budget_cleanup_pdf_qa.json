@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "pages": 36,
+  "pdf_sha256": "29a19c0bdf471a2cfc0fffbb8eafb5da09cb1526465c6c832da29c61e4b8da87",
+  "removed_process_history_terms_absent": true,
+  "final_initial_value_budget_retained": 600000000,
+  "supplementary_sha256": "a442af36899214ae3091f447b8985353169b1966cc101ef78f4dc6e42eee525e",
+  "visual_review": "All 36 pages reviewed in new rendered contact sheets; detailed inspection of modified methods (page 16) and capacity results (page 27). No clipping or overlap; all figures, compatibility table and integrated screenshot pages retained.",
+  "scope": "Editorial revision only; no new simulations or changed numerical results."
+}

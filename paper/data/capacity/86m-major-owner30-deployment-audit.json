@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "case": "major-owner30",
+  "workers": 29,
+  "rank_shards": 30,
+  "worker_rank_shards": 29,
+  "files_checked": 174,
+  "leader_archive_sha256": "ab8fd0f8a7f03a626706dc7fa64f16772393637512520443098c375566aab88e"
+}

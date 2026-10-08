@@ -1,0 +1,8 @@
+.............................                                            [100%]
+=============================== warnings summary ===============================
+brian2-rust/tests/test_presynaptic_write_summed_only.py: 24 warnings
+  /atlas-home/0003/workspace/contextual-dendritic-gating-20260921/atlas-performance-20261008/latest2/snapshot/brian2/parsing/statements.py:51: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'
+    parsed = STATEMENT.parse_string(code, parseAll=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+29 passed, 24 warnings in 2.25s

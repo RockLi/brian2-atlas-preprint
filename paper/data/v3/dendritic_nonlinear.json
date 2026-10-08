@@ -1,0 +1,201 @@
+{
+  "criteria": {
+    "all_scientific_states_passed": true,
+    "remote_warmup_and_unprofiled_measurements": true,
+    "same_host": true,
+    "same_process_cpu_affinity": true,
+    "same_protocol": true,
+    "same_topology": true
+  },
+  "order": "cython-rust-rust-cython",
+  "per_run": {
+    "cython": [
+      {
+        "discarded_warmup": [
+          {
+            "host_loadavg_after": [
+              0.15478515625,
+              0.08740234375,
+              0.03564453125
+            ],
+            "host_loadavg_before": [
+              0.0009765625,
+              0.0556640625,
+              0.02490234375
+            ],
+            "label": "warmup-001",
+            "simulation_and_recording_seconds": 10.645514970645308
+          }
+        ],
+        "measurement_median_seconds": 10.354449749924242,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/01-cython"
+      },
+      {
+        "discarded_warmup": [
+          {
+            "host_loadavg_after": [
+              0.52685546875,
+              0.28662109375,
+              0.119140625
+            ],
+            "host_loadavg_before": [
+              0.4404296875,
+              0.26171875,
+              0.109375
+            ],
+            "label": "warmup-001",
+            "simulation_and_recording_seconds": 10.567007126286626
+          }
+        ],
+        "measurement_median_seconds": 10.270459306426346,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/04-cython"
+      }
+    ],
+    "rust-aot": [
+      {
+        "discarded_warmup": [
+          {
+            "dump_write_seconds": 0.000344169,
+            "host_loadavg_after": [
+              0.4892578125,
+              0.2373046875,
+              0.095703125
+            ],
+            "host_loadavg_before": [
+              0.4443359375,
+              0.22412109375,
+              0.09033203125
+            ],
+            "label": "warmup-001",
+            "runner_wall_seconds": 0.822698138654232,
+            "simulation_and_recording_seconds": 0.820651661
+          }
+        ],
+        "measurement_median_seconds": 0.831422303,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/02-rust"
+      },
+      {
+        "discarded_warmup": [
+          {
+            "dump_write_seconds": 0.000341164,
+            "host_loadavg_after": [
+              0.4599609375,
+              0.24951171875,
+              0.1025390625
+            ],
+            "host_loadavg_before": [
+              0.4599609375,
+              0.24951171875,
+              0.1025390625
+            ],
+            "label": "warmup-001",
+            "runner_wall_seconds": 0.8272200953215361,
+            "simulation_and_recording_seconds": 0.825238495
+          }
+        ],
+        "measurement_median_seconds": 0.823301384,
+        "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/03-rust"
+      }
+    ]
+  },
+  "primary_metric": {
+    "cython": {
+      "count": 10,
+      "maximum_seconds": 10.459879797883332,
+      "mean_seconds": 10.329886696860195,
+      "median_seconds": 10.346926165744662,
+      "minimum_seconds": 10.183610305190086
+    },
+    "definition": "steady-state simulation plus required final-state recording; excludes construction, export, source generation, native compilation, result dump, and discarded warmups",
+    "interpretation": "rust_faster",
+    "rust_aot": {
+      "count": 10,
+      "maximum_seconds": 0.848694195,
+      "mean_seconds": 0.8288885434,
+      "median_seconds": 0.8283253435,
+      "minimum_seconds": 0.820238312
+    },
+    "rust_relative_runtime": 0.08005520965659524,
+    "rust_speedup_over_cython": 12.491379440383696
+  },
+  "schema": "contextual-dendritic-single-neuron-benchmark-aggregate-v1",
+  "scientific_state_comparisons": [
+    {
+      "arrays": {
+        "feedforward_weights": {
+          "allclose": true,
+          "max_abs": 0.0,
+          "same_shape": true
+        },
+        "silent_weights": {
+          "allclose": true,
+          "max_abs": 0.0,
+          "same_shape": true
+        }
+      },
+      "atol": 1e-14,
+      "backend": "cython",
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/01-cython",
+      "rtol": 1e-12
+    },
+    {
+      "arrays": {
+        "feedforward_weights": {
+          "allclose": true,
+          "max_abs": 0.0,
+          "same_shape": true
+        },
+        "silent_weights": {
+          "allclose": true,
+          "max_abs": 0.0,
+          "same_shape": true
+        }
+      },
+      "atol": 1e-14,
+      "backend": "cython",
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/04-cython",
+      "rtol": 1e-12
+    },
+    {
+      "arrays": {
+        "feedforward_weights": {
+          "allclose": true,
+          "max_abs": 1.4210854715202004e-14,
+          "same_shape": true
+        },
+        "silent_weights": {
+          "allclose": true,
+          "max_abs": 1.7763568394002505e-14,
+          "same_shape": true
+        }
+      },
+      "atol": 1e-14,
+      "backend": "rust-aot",
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/02-rust",
+      "rtol": 1e-12
+    },
+    {
+      "arrays": {
+        "feedforward_weights": {
+          "allclose": true,
+          "max_abs": 1.4210854715202004e-14,
+          "same_shape": true
+        },
+        "silent_weights": {
+          "allclose": true,
+          "max_abs": 1.7763568394002505e-14,
+          "same_shape": true
+        }
+      },
+      "atol": 1e-14,
+      "backend": "rust-aot",
+      "passed": true,
+      "path": "/atlas-home/0003/workspace/contextual-dendritic-gating-20260921/single-neuron-10s-benchmark-abba-v1/03-rust",
+      "rtol": 1e-12
+    }
+  ],
+  "valid": true
+}

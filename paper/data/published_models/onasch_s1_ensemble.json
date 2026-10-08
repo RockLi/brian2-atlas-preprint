@@ -1,0 +1,220 @@
+{
+  "boundary_by_active_input_count": {
+    "0": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "1": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "10": {
+      "generated_last_nonnegative_rate_hz": 0.0,
+      "published_last_nonnegative_rate_hz": 0.0
+    },
+    "11": {
+      "generated_last_nonnegative_rate_hz": 8.0,
+      "published_last_nonnegative_rate_hz": 8.0
+    },
+    "12": {
+      "generated_last_nonnegative_rate_hz": 16.0,
+      "published_last_nonnegative_rate_hz": 16.0
+    },
+    "13": {
+      "generated_last_nonnegative_rate_hz": 24.0,
+      "published_last_nonnegative_rate_hz": 22.0
+    },
+    "14": {
+      "generated_last_nonnegative_rate_hz": 32.0,
+      "published_last_nonnegative_rate_hz": 30.0
+    },
+    "15": {
+      "generated_last_nonnegative_rate_hz": 40.0,
+      "published_last_nonnegative_rate_hz": 38.0
+    },
+    "2": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "3": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "4": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "5": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "6": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "7": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "8": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    },
+    "9": {
+      "generated_last_nonnegative_rate_hz": null,
+      "published_last_nonnegative_rate_hz": null
+    }
+  },
+  "complete_published_seed_ensemble": true,
+  "ensemble_arrays": "/private/tmp/contextual-s1-paper-env-ensemble-seeds0-9-v1/ensemble-v1.npz",
+  "ensemble_arrays_sha256": "5cf63953dd0ac6254a30d075f548c558e0b58a03ca15774f4a3d646486201505",
+  "figure": "S1",
+  "grid_shape_per_seed": [
+    16,
+    200
+  ],
+  "input_comparisons": [
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed0-full-v1/s1-paper-env-seed0-comparison-v1.npz",
+      "arrays_sha256": "f2a1e2579623f026617921135bae41ff2d56a6c284b42f35dde2c3eee8653c84",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed0-full-v1/s1-paper-env-seed0-comparison-v1.json",
+      "comparison_sha256": "ef8270c5f4dcb36485d1adbd6466e65af3334e8eb9e71eea8dda827503f4eb7e",
+      "seed": 0
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed1-full-v1/s1-paper-env-seed1-comparison-v1.npz",
+      "arrays_sha256": "2ceba156b0ca47b67212fa0d9ed557f9d001c8d5907fe70639947bee31c8160d",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed1-full-v1/s1-paper-env-seed1-comparison-v1.json",
+      "comparison_sha256": "92bb2b45abb43b5ed70959feb1a4b49600a15d9b2641f9e8837850cb3b9e9032",
+      "seed": 1
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed2-full-v1/s1-paper-env-seed2-comparison-v1.npz",
+      "arrays_sha256": "5416bc061d09d141459e0fa9c0e3cc8154b7934deeaab9a4b931aaafc70e26f4",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed2-full-v1/s1-paper-env-seed2-comparison-v1.json",
+      "comparison_sha256": "550a0bbb73ea3a975ee6ef146b7086365930600468dfef5a45b6492b938af493",
+      "seed": 2
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed3-full-v1/s1-paper-env-seed3-comparison-v1.npz",
+      "arrays_sha256": "c76e22017ee40bddcabccd5b89158f0c4e64a4f589c6a33f4e6f373bfed0fdd9",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed3-full-v1/s1-paper-env-seed3-comparison-v1.json",
+      "comparison_sha256": "e305ed0fba0e6d4badf90bf93aa6137fec4db582c40e436a51d2a46cae2d9a0e",
+      "seed": 3
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed4-full-v1/s1-paper-env-seed4-comparison-v1.npz",
+      "arrays_sha256": "51b554b682e7b6a5e8c53aa28ec57d51f5804727d3e588488a1f16e875a0adb0",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed4-full-v1/s1-paper-env-seed4-comparison-v1.json",
+      "comparison_sha256": "0a904f1901ab6df55ee0444e5ebdb025ef5adff1d21aec97dca42824264c15db",
+      "seed": 4
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed5-full-v1/s1-paper-env-seed5-comparison-v1.npz",
+      "arrays_sha256": "04c7ead36a4356adc18227f7c562c194f7aefff9a53d73b4c6c4ecdabea998db",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed5-full-v1/s1-paper-env-seed5-comparison-v1.json",
+      "comparison_sha256": "e99db88128fcb36b9b3f639749a4b1bfc3144e5b89f8188fcdbcb67503df7aea",
+      "seed": 5
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed6-full-v1/s1-paper-env-seed6-comparison-v1.npz",
+      "arrays_sha256": "9f971f192c060665c08cafeada70988c2abf5c74f7d5ed97521a15d34cb3533f",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed6-full-v1/s1-paper-env-seed6-comparison-v1.json",
+      "comparison_sha256": "c62ea10746f5322ef9da8496c70105598237b3684df06a5f64fd4da65f859f5e",
+      "seed": 6
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed7-full-v1/s1-paper-env-seed7-comparison-v1.npz",
+      "arrays_sha256": "9022b066bd60df9249d1e106ee1ea16e597c137f66add7751ee7e679f7dbf5a0",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed7-full-v1/s1-paper-env-seed7-comparison-v1.json",
+      "comparison_sha256": "b70e390b7cd7a85223e3468b6be39e4385d60dab27f8452162fe93f274077152",
+      "seed": 7
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed8-full-v1/s1-paper-env-seed8-comparison-v1.npz",
+      "arrays_sha256": "e3dadb3d57bd15a69514f113694317cf0baebe68bda2bcf6aa869bf1c945e962",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed8-full-v1/s1-paper-env-seed8-comparison-v1.json",
+      "comparison_sha256": "c7cca77d22d6d1b8739f1b94b8376c53fadc3cfe250e662faa0ae51bfe275ec1",
+      "seed": 8
+    },
+    {
+      "arrays": "/private/tmp/contextual-s1-paper-env-seed9-full-v1/s1-paper-env-seed9-comparison-v1.npz",
+      "arrays_sha256": "50e2c2617acd914b585d81bb94edef258251a27761589819edfa4675cc39a432",
+      "comparison": "/private/tmp/contextual-s1-paper-env-seed9-full-v1/s1-paper-env-seed9-comparison-v1.json",
+      "comparison_sha256": "ec3267dab4b60d22d1eaaea5e5dcd23f404854ecbb6bbe71bab054bd4ff9da48",
+      "seed": 9
+    }
+  ],
+  "max_abs_ensemble_mean": 0.5735475700946684,
+  "pearson_ensemble_mean": 0.9995134296279679,
+  "purpose": "scientific_reproduction_no_timings",
+  "rmse_ensemble_mean": 0.06001698774311836,
+  "schema": "contextual-dendritic-single-neuron-scan-ensemble-v1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "seedwise": {
+    "0": {
+      "pearson": 0.9978164590375073,
+      "rmse": 0.13549828497527194,
+      "sign_mismatches": 3
+    },
+    "1": {
+      "pearson": 0.9958732793263301,
+      "rmse": 0.1764005778603717,
+      "sign_mismatches": 7
+    },
+    "2": {
+      "pearson": 0.9969913122877787,
+      "rmse": 0.15143364949404506,
+      "sign_mismatches": 6
+    },
+    "3": {
+      "pearson": 0.9990955387765691,
+      "rmse": 0.08201148886087664,
+      "sign_mismatches": 3
+    },
+    "4": {
+      "pearson": 0.9993776914681716,
+      "rmse": 0.06466879684789749,
+      "sign_mismatches": 0
+    },
+    "5": {
+      "pearson": 0.9974424304438662,
+      "rmse": 0.13335401935630234,
+      "sign_mismatches": 6
+    },
+    "6": {
+      "pearson": 0.9950848143119625,
+      "rmse": 0.19251983741157827,
+      "sign_mismatches": 2
+    },
+    "7": {
+      "pearson": 0.9975828589072122,
+      "rmse": 0.13511245928380766,
+      "sign_mismatches": 7
+    },
+    "8": {
+      "pearson": 0.9945632117245168,
+      "rmse": 0.2029351427756008,
+      "sign_mismatches": 11
+    },
+    "9": {
+      "pearson": 0.9989556180512982,
+      "rmse": 0.08746485925838791,
+      "sign_mismatches": 1
+    }
+  },
+  "sign_mismatch_fraction_ensemble_mean": 0.0009375,
+  "sign_mismatches_ensemble_mean": 3,
+  "timings_reported": false
+}

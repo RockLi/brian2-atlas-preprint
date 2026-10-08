@@ -1,0 +1,611 @@
+{
+  "schema": "nmda2025-crosshost-diagnostic-v2",
+  "network_size": 2560,
+  "cpu_precision": "float64",
+  "gpu_precision": "float32 (scientific precision change)",
+  "primary_rustc_release": "1.98.1",
+  "paper_timing_denominator_used": false,
+  "cpu_replays": {
+    "host27_x86_rosetta": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 1,
+      "rust_execution_workers": 1,
+      "matched_architecture": false,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 144.50375083298422,
+        "min_seconds": 125.70317633310333,
+        "max_seconds": 144.92209379095584,
+        "q1_seconds": 125.77887141681276,
+        "q3_seconds": 144.6098854590673,
+        "raw_seconds": [
+          144.6098854590673,
+          144.50375083298422,
+          125.70317633310333,
+          144.92209379095584,
+          125.77887141681276
+        ],
+        "peak_sampled_rss_bytes": 353288192,
+        "peak_sampled_virtual_bytes": 421777440768
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 236.1948396670632,
+        "min_seconds": 236.06691558286548,
+        "max_seconds": 236.26430029096082,
+        "q1_seconds": 236.1866765001323,
+        "q3_seconds": 236.2144295410253,
+        "raw_seconds": [
+          236.2144295410253,
+          236.26430029096082,
+          236.1866765001323,
+          236.06691558286548,
+          236.1948396670632
+        ],
+        "peak_sampled_rss_bytes": 357556224,
+        "peak_sampled_virtual_bytes": 36034936832
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": null
+    },
+    "host27_arm64": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 1,
+      "rust_execution_workers": 1,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 126.06979070813395,
+        "min_seconds": 125.70171545888297,
+        "max_seconds": 145.17347154207528,
+        "q1_seconds": 125.81775166583247,
+        "q3_seconds": 144.66276737488806,
+        "raw_seconds": [
+          126.06979070813395,
+          144.66276737488806,
+          125.70171545888297,
+          145.17347154207528,
+          125.81775166583247
+        ],
+        "peak_sampled_rss_bytes": 360939520,
+        "peak_sampled_virtual_bytes": 421491179520
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 232.93817645893432,
+        "min_seconds": 232.89452783297747,
+        "max_seconds": 232.97495270799845,
+        "q1_seconds": 232.9176985840313,
+        "q3_seconds": 232.94678529188968,
+        "raw_seconds": [
+          232.89452783297747,
+          232.94678529188968,
+          232.97495270799845,
+          232.9176985840313,
+          232.93817645893432
+        ],
+        "peak_sampled_rss_bytes": 356483072,
+        "peak_sampled_virtual_bytes": 421271109632
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 1.847692259585113
+    },
+    "host23_x86_native": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 1,
+      "rust_execution_workers": 1,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 116.52514163404703,
+        "min_seconds": 110.06687977164984,
+        "max_seconds": 135.54781375452876,
+        "q1_seconds": 112.64833909086883,
+        "q3_seconds": 124.94161708466709,
+        "raw_seconds": [
+          112.64833909086883,
+          124.94161708466709,
+          116.52514163404703,
+          135.54781375452876,
+          110.06687977164984
+        ],
+        "peak_sampled_rss_bytes": 311566336,
+        "peak_sampled_virtual_bytes": 314220544
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 366.0796354766935,
+        "min_seconds": 338.42801472358406,
+        "max_seconds": 375.07824654877186,
+        "q1_seconds": 341.9915400315076,
+        "q3_seconds": 367.32902300171554,
+        "raw_seconds": [
+          375.07824654877186,
+          338.42801472358406,
+          341.9915400315076,
+          366.0796354766935,
+          367.32902300171554
+        ],
+        "peak_sampled_rss_bytes": 332279808,
+        "peak_sampled_virtual_bytes": 333922304
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 3.1416364772710144
+    },
+    "host23_x86_targetcpu_native": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 1,
+      "rust_execution_workers": 1,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 116.15644111298025,
+        "min_seconds": 108.38037965074182,
+        "max_seconds": 134.06267545185983,
+        "q1_seconds": 110.9558314755559,
+        "q3_seconds": 131.60539728216827,
+        "raw_seconds": [
+          108.38037965074182,
+          134.06267545185983,
+          116.15644111298025,
+          131.60539728216827,
+          110.9558314755559
+        ],
+        "peak_sampled_rss_bytes": 311586816,
+        "peak_sampled_virtual_bytes": 314195968
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 187.49911432527006,
+        "min_seconds": 177.85876968689263,
+        "max_seconds": 188.9557617586106,
+        "q1_seconds": 180.06325628235936,
+        "q3_seconds": 188.00320320762694,
+        "raw_seconds": [
+          177.85876968689263,
+          188.9557617586106,
+          187.49911432527006,
+          188.00320320762694,
+          180.06325628235936
+        ],
+        "peak_sampled_rss_bytes": 332345344,
+        "peak_sampled_virtual_bytes": 333934592
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 1.6141947233291862
+    },
+    "host27_arm64_parallel_nmda_8thread": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 72.8225674170535,
+        "min_seconds": 59.50746399979107,
+        "max_seconds": 76.25331837497652,
+        "q1_seconds": 62.22544037504122,
+        "q3_seconds": 76.18643512483686,
+        "raw_seconds": [
+          72.8225674170535,
+          76.25331837497652,
+          59.50746399979107,
+          62.22544037504122,
+          76.18643512483686
+        ],
+        "peak_sampled_rss_bytes": 353714176,
+        "peak_sampled_virtual_bytes": 422125568000
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 42.909468500176445,
+        "min_seconds": 42.79159441590309,
+        "max_seconds": 43.01465979102068,
+        "q1_seconds": 42.858166249934584,
+        "q3_seconds": 42.97374525014311,
+        "raw_seconds": [
+          42.858166249934584,
+          43.01465979102068,
+          42.909468500176445,
+          42.79159441590309,
+          42.97374525014311
+        ],
+        "peak_sampled_rss_bytes": 375504896,
+        "peak_sampled_virtual_bytes": 422146998272
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.5892331185528616,
+      "rustc_identity": {
+        "capture_date": "2026-09-15",
+        "capture_method": "live SSH rustc --version --verbose on Mac Studio 27",
+        "rustc_path": "/atlas-home/0004/.rustup/toolchains/1.98.1-aarch64-apple-darwin/bin/rustc",
+        "rustc_version_line": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "rustc_release": "1.98.1",
+        "rustc_host": "aarch64-apple-darwin",
+        "llvm_version": "22.1.8"
+      }
+    },
+    "host23_targetcpu_parallel_nmda_8thread": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 68.12497432343662,
+        "min_seconds": 64.3489728141576,
+        "max_seconds": 71.08736163936555,
+        "q1_seconds": 67.16694299131632,
+        "q3_seconds": 68.32739711739123,
+        "raw_seconds": [
+          68.12497432343662,
+          64.3489728141576,
+          67.16694299131632,
+          71.08736163936555,
+          68.32739711739123
+        ],
+        "peak_sampled_rss_bytes": 315621376,
+        "peak_sampled_virtual_bytes": 800227328
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 59.51384004764259,
+        "min_seconds": 59.20252658613026,
+        "max_seconds": 61.67937399074435,
+        "q1_seconds": 59.42427667416632,
+        "q3_seconds": 59.57523828186095,
+        "raw_seconds": [
+          61.67937399074435,
+          59.57523828186095,
+          59.42427667416632,
+          59.20252658613026,
+          59.51384004764259
+        ],
+        "peak_sampled_rss_bytes": 332984320,
+        "peak_sampled_virtual_bytes": 818933760
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.8735979813377839
+    },
+    "host23_r198_targetcpu_parallel_nmda_8thread": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 69.94237861596048,
+        "min_seconds": 66.51830744743347,
+        "max_seconds": 71.289975322783,
+        "q1_seconds": 68.9740037843585,
+        "q3_seconds": 71.11493496410549,
+        "raw_seconds": [
+          69.94237861596048,
+          68.9740037843585,
+          71.11493496410549,
+          71.289975322783,
+          66.51830744743347
+        ],
+        "peak_sampled_rss_bytes": 315461632,
+        "peak_sampled_virtual_bytes": 800387072
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 61.99755482748151,
+        "min_seconds": 59.53063520602882,
+        "max_seconds": 62.29257730022073,
+        "q1_seconds": 60.01782051846385,
+        "q3_seconds": 62.28953324444592,
+        "raw_seconds": [
+          59.53063520602882,
+          61.99755482748151,
+          62.28953324444592,
+          62.29257730022073,
+          60.01782051846385
+        ],
+        "peak_sampled_rss_bytes": 332914688,
+        "peak_sampled_virtual_bytes": 818827264
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.8864090134523105,
+      "rustc_identity": {
+        "capture_date": "2026-09-15",
+        "capture_method": "live Teleport SSH rustc --version --verbose on Linux 23",
+        "rustc_path": "/data/brick2/brian2-mpi-region-20260907/rustup-1.98.1/toolchains/1.98.1-x86_64-unknown-linux-gnu/bin/rustc",
+        "rustc_version_line": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "rustc_release": "1.98.1",
+        "rustc_host": "x86_64-unknown-linux-gnu",
+        "llvm_version": "22.1.8"
+      }
+    }
+  },
+  "primary_cpu_replays": {
+    "host27_arm64_parallel_nmda_8thread": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 72.8225674170535,
+        "min_seconds": 59.50746399979107,
+        "max_seconds": 76.25331837497652,
+        "q1_seconds": 62.22544037504122,
+        "q3_seconds": 76.18643512483686,
+        "raw_seconds": [
+          72.8225674170535,
+          76.25331837497652,
+          59.50746399979107,
+          62.22544037504122,
+          76.18643512483686
+        ],
+        "peak_sampled_rss_bytes": 353714176,
+        "peak_sampled_virtual_bytes": 422125568000
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 42.909468500176445,
+        "min_seconds": 42.79159441590309,
+        "max_seconds": 43.01465979102068,
+        "q1_seconds": 42.858166249934584,
+        "q3_seconds": 42.97374525014311,
+        "raw_seconds": [
+          42.858166249934584,
+          43.01465979102068,
+          42.909468500176445,
+          42.79159441590309,
+          42.97374525014311
+        ],
+        "peak_sampled_rss_bytes": 375504896,
+        "peak_sampled_virtual_bytes": 422146998272
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.5892331185528616,
+      "rustc_identity": {
+        "capture_date": "2026-09-15",
+        "capture_method": "live SSH rustc --version --verbose on Mac Studio 27",
+        "rustc_path": "/atlas-home/0004/.rustup/toolchains/1.98.1-aarch64-apple-darwin/bin/rustc",
+        "rustc_version_line": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "rustc_release": "1.98.1",
+        "rustc_host": "aarch64-apple-darwin",
+        "llvm_version": "22.1.8"
+      }
+    },
+    "host23_r198_targetcpu_parallel_nmda_8thread": {
+      "scope": "compiled native setup, simulation and dump; no Python model construction, frontend, IR generation, compile or monitor backfill",
+      "brian_openmp_threads": 8,
+      "rust_execution_workers": 8,
+      "matched_architecture": true,
+      "all_schedule_rows": 12,
+      "failures": [],
+      "cpp": {
+        "n": 5,
+        "median_seconds": 69.94237861596048,
+        "min_seconds": 66.51830744743347,
+        "max_seconds": 71.289975322783,
+        "q1_seconds": 68.9740037843585,
+        "q3_seconds": 71.11493496410549,
+        "raw_seconds": [
+          69.94237861596048,
+          68.9740037843585,
+          71.11493496410549,
+          71.289975322783,
+          66.51830744743347
+        ],
+        "peak_sampled_rss_bytes": 315461632,
+        "peak_sampled_virtual_bytes": 800387072
+      },
+      "rust": {
+        "n": 5,
+        "median_seconds": 61.99755482748151,
+        "min_seconds": 59.53063520602882,
+        "max_seconds": 62.29257730022073,
+        "q1_seconds": 60.01782051846385,
+        "q3_seconds": 62.28953324444592,
+        "raw_seconds": [
+          59.53063520602882,
+          61.99755482748151,
+          62.28953324444592,
+          62.29257730022073,
+          60.01782051846385
+        ],
+        "peak_sampled_rss_bytes": 332914688,
+        "peak_sampled_virtual_bytes": 818827264
+      },
+      "rust_over_cpp_same_host_median_runtime_ratio": 0.8864090134523105,
+      "rustc_identity": {
+        "capture_date": "2026-09-15",
+        "capture_method": "live Teleport SSH rustc --version --verbose on Linux 23",
+        "rustc_path": "/data/brick2/brian2-mpi-region-20260907/rustup-1.98.1/toolchains/1.98.1-x86_64-unknown-linux-gnu/bin/rustc",
+        "rustc_version_line": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "rustc_release": "1.98.1",
+        "rustc_host": "x86_64-unknown-linux-gnu",
+        "llvm_version": "22.1.8"
+      }
+    }
+  },
+  "gpu_replays": {
+    "l4_640": {
+      "scope": "retained compiled CUDA executor; same IR plan and model state reset each run; excludes nvcc compile and Python frontend",
+      "cold_process_wall_seconds": 341.614073312,
+      "cold_compile_seconds": 258.517873131,
+      "cold_simulation_recording_seconds": 10.823382092000031,
+      "peak_process_tree_rss_bytes": 1843671040,
+      "peak_gpu_memory_used_mib": 244,
+      "warm_simulation_recording": {
+        "n": 5,
+        "median_seconds": 10.824004064000007,
+        "min_seconds": 10.823849101000008,
+        "max_seconds": 10.824238004999984,
+        "q1_seconds": 10.823853110000016,
+        "q3_seconds": 10.824028980000037,
+        "raw_seconds": [
+          10.824238004999984,
+          10.824028980000037,
+          10.823849101000008,
+          10.824004064000007,
+          10.823853110000016
+        ]
+      },
+      "warm_run": {
+        "n": 5,
+        "median_seconds": 10.846610384999963,
+        "min_seconds": 10.844230709999977,
+        "max_seconds": 10.872043829000006,
+        "q1_seconds": 10.846372112999973,
+        "q3_seconds": 10.847994811000035,
+        "raw_seconds": [
+          10.872043829000006,
+          10.847994811000035,
+          10.846610384999963,
+          10.844230709999977,
+          10.846372112999973
+        ]
+      },
+      "warm_spike_counts": [
+        1455,
+        1455,
+        1455,
+        1455,
+        1455
+      ],
+      "warm_synaptic_events": [
+        1388160,
+        1388160,
+        1388160,
+        1388160,
+        1388160
+      ],
+      "first_spike_count": 1455,
+      "legacy_result_collection_includes_warm_replays": true,
+      "warm_run_seconds_sum": 54.25725184799995,
+      "cold_first_run_end_to_end_approx_seconds": 284.53652501900007,
+      "cold_time_estimate_limit": "Legacy fixture labeled warm replay loop as NPZ collection; subtracting the sum of measured executor.run durations estimates cold end-to-end, with small Python loop overhead left in that estimate.",
+      "deterministic_warm_spike_replay": true
+    },
+    "l4_2560": {
+      "scope": "retained compiled CUDA executor; same IR plan and model state reset each run; excludes nvcc compile and Python frontend",
+      "cold_process_wall_seconds": 661.4517747819999,
+      "cold_compile_seconds": 160.12165293400005,
+      "cold_simulation_recording_seconds": 76.07936244500002,
+      "peak_process_tree_rss_bytes": 2212470784,
+      "peak_gpu_memory_used_mib": 680,
+      "warm_simulation_recording": {
+        "n": 5,
+        "median_seconds": 76.0170056689999,
+        "min_seconds": 76.01628341000003,
+        "max_seconds": 76.01829973600002,
+        "q1_seconds": 76.01695782099989,
+        "q3_seconds": 76.01814221900008,
+        "raw_seconds": [
+          76.01628341000003,
+          76.01695782099989,
+          76.0170056689999,
+          76.01814221900008,
+          76.01829973600002
+        ]
+      },
+      "warm_run": {
+        "n": 5,
+        "median_seconds": 76.12580704300012,
+        "min_seconds": 76.09004479800001,
+        "max_seconds": 76.26778277999995,
+        "q1_seconds": 76.0926731049999,
+        "q3_seconds": 76.14582581399986,
+        "raw_seconds": [
+          76.26778277999995,
+          76.14582581399986,
+          76.0926731049999,
+          76.12580704300012,
+          76.09004479800001
+        ]
+      },
+      "warm_spike_counts": [
+        7109,
+        7109,
+        7109,
+        7109,
+        7109
+      ],
+      "warm_synaptic_events": [
+        28039680,
+        28039680,
+        28039680,
+        28039680,
+        28039680
+      ],
+      "first_spike_count": 7109,
+      "legacy_result_collection_includes_warm_replays": true,
+      "warm_run_seconds_sum": 380.72213353999985,
+      "cold_first_run_end_to_end_approx_seconds": 278.73060983400023,
+      "cold_time_estimate_limit": "Legacy fixture labeled warm replay loop as NPZ collection; subtracting the sum of measured executor.run durations estimates cold end-to-end, with small Python loop overhead left in that estimate.",
+      "deterministic_warm_spike_replay": true
+    },
+    "a100_2560": {
+      "scope": "retained compiled CUDA executor; same IR plan and model state reset each run; excludes nvcc compile and Python frontend",
+      "cold_process_wall_seconds": 841.0198248679999,
+      "cold_compile_seconds": 215.40639533700005,
+      "cold_simulation_recording_seconds": 95.09738380699991,
+      "peak_process_tree_rss_bytes": 2185695232,
+      "peak_gpu_memory_used_mib": 911,
+      "warm_simulation_recording": {
+        "n": 5,
+        "median_seconds": 94.868072042,
+        "min_seconds": 94.8673157950002,
+        "max_seconds": 94.86858769900005,
+        "q1_seconds": 94.86761622200015,
+        "q3_seconds": 94.86819643499985,
+        "raw_seconds": [
+          94.86761622200015,
+          94.868072042,
+          94.86858769900005,
+          94.86819643499985,
+          94.8673157950002
+        ]
+      },
+      "warm_run": {
+        "n": 5,
+        "median_seconds": 95.06042976100002,
+        "min_seconds": 95.03210808400013,
+        "max_seconds": 95.21528057600017,
+        "q1_seconds": 95.03567871199994,
+        "q3_seconds": 95.07733816099994,
+        "raw_seconds": [
+          95.21528057600017,
+          95.07733816099994,
+          95.03210808400013,
+          95.06042976100002,
+          95.03567871199994
+        ]
+      },
+      "warm_spike_counts": [
+        6539,
+        6539,
+        6539,
+        6539,
+        6539
+      ],
+      "warm_synaptic_events": [
+        25559040,
+        25559040,
+        25559040,
+        25559040,
+        25559040
+      ],
+      "first_spike_count": 6539,
+      "legacy_result_collection_includes_warm_replays": true,
+      "warm_run_seconds_sum": 475.4208352940002,
+      "cold_first_run_end_to_end_approx_seconds": 363.6338184609998,
+      "cold_time_estimate_limit": "Legacy fixture labeled warm replay loop as NPZ collection; subtracting the sum of measured executor.run durations estimates cold end-to-end, with small Python loop overhead left in that estimate.",
+      "deterministic_warm_spike_replay": true
+    }
+  }
+}

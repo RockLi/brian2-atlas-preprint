@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "hosts": 3,
+  "ranks": 24,
+  "input_catalog_sha256": "5ba2342754e92cadd71b8ea9742943a476ca65afdefde68544526e8e24263a35",
+  "transport": "Per-host bounded gzip bundles; every worker file hash checked against the prepared leader catalog."
+}

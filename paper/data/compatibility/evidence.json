@@ -1,0 +1,30 @@
+{
+  "inspection_date": "2026-10-07",
+  "scope": "Implementation-contract interpretation and retained paper evidence; no new simulation, hardware test or joint release qualification.",
+  "sources": [
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/docs/preprint/data/v3/compatibility_review.md",
+      "retained": "cpu_retained_review.md",
+      "bytes": 28453,
+      "sha256": "3fc46f141638a1f7bda068777fbf08bd6f39efc279a1cd95345691fe0a21089b"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/MPI.md",
+      "retained": "mpi_contract.md",
+      "bytes": 20173,
+      "sha256": "c5fd27e42845622fea6fc418cde1a361080eff53caee2fbb28cdd78d0bdd7d49"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/WASM.md",
+      "retained": "wasm_contract.md",
+      "bytes": 15124,
+      "sha256": "8c7c785be1b5cdcef7a6dc1c5a8657f49780f19c7c75dfdd4fe3f9a145587825"
+    },
+    {
+      "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/GPU_FUNCTIONS.md",
+      "retained": "gpu_functions_contract.md",
+      "bytes": 3909,
+      "sha256": "27b89870897d983f83cfab62ae0c534c9315a242f5e8c567386a5352de7fcc19"
+    }
+  ]
+}

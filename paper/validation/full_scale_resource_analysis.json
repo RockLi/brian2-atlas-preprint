@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "analysis_sha256": "2e09e918f902cca276706af3a42f66262457360bbdaf162f1419a41885be25a5",
+  "source_files": 12,
+  "conditional_hosts": 3000,
+  "conditional_cores": 24000,
+  "corrected_receive_policy": "Generator pre-splits signed-i32 batches; 641 GiB is dense CSR per rank, not a full-scale receive buffer.",
+  "section_sha256": "5e49679e0eecf7f50ffaf3e1424f55d975468b14984e994ac8e8e79e0b12489e",
+  "figure_sha256": "5b17c897438e67d8bfb069d78b57bedd7befe88ecabf0c7ffaa0ef48bc795622",
+  "script_sha256": "2c298c02ada453b0f11cae8ccbc7281db7c559846b53b2001af7ada4b4cebe00",
+  "simulations_started": 0,
+  "remote_jobs_started": 0,
+  "scope": "Conditional synthetic-workload arithmetic bound to frozen source. Not a peak-memory fit, current-version host requirement, execution feasibility, wall-time prediction or new experiment."
+}

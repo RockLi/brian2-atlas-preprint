@@ -1,0 +1,62 @@
+{
+  "guard": {
+    "schema": "b2-mpi-resource-guard-v1",
+    "command": [
+      "/atlas-home/0003/workspace/brian2-lk-20260906/.venv/bin/python",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/experiment/prepare-owner30-128m.py",
+      "--source",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/source-b128",
+      "--output",
+      "/atlas-home/0003/atlas-capacity-86m-20261007/owner30-128m",
+      "--neurons",
+      "128000000",
+      "--ranks",
+      "30",
+      "--compile"
+    ],
+    "host": "hk-prod-model-ae02-23",
+    "uid": 1000,
+    "cgroup": "/system.slice/b2mpi-86m-prepare-owner30-128m.service",
+    "before": {
+      "memory.max": "68719476736",
+      "memory.swap.max": "0",
+      "memory.current": "7241728",
+      "memory.peak": "7241728",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 28450\nuser_usec 19620\nsystem_usec 8829\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "admitted": true,
+    "host_memory_bytes": {
+      "MemTotal": 1217122504704,
+      "MemAvailable": 585999597568
+    },
+    "reserved_host_memory_bytes": 68719476736,
+    "data_free_bytes": 1554435063808,
+    "file_limit_bytes": 8589934592,
+    "root_volume_allowed": false,
+    "data_volume": "/data/brick2",
+    "minimum_free_bytes": 137438953472,
+    "disk_check_interval_seconds": 5,
+    "data_device": 64515,
+    "root_device": 64513,
+    "minimum_observed_free_bytes": 1554434985984,
+    "returncode": 1,
+    "after": {
+      "memory.max": "68719476736",
+      "memory.swap.max": "0",
+      "memory.current": "8912896",
+      "memory.peak": "7534489600",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.max": "400000 100000",
+      "cpu.stat": "usage_usec 10171942\nuser_usec 7813491\nsystem_usec 2358450\ncore_sched.force_idle_usec 0\nnr_periods 102\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+      "pids.max": "64",
+      "cpuset.cpus.effective": "8-11"
+    },
+    "wall_seconds": 10.168672431260347
+  },
+  "live": {},
+  "log": "ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /atlas-home/0003/atlas-capacity-86m-20261007/tmp/brian_debug_dmsjaf7a.log  Additionally, you can also include a copy of the script that was run, available at: /atlas-home/0003/atlas-capacity-86m-20261007/tmp/brian_script_s9y9h_pq.py Thanks! [brian2]\nTraceback (most recent call last):\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/python/brian2_rust/export.py\", line 2548, in lower_network\n    return _lower_network(network, duration, namespace, rng_seed,\n                          recording_window_steps)\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/python/brian2_rust/export.py\", line 2501, in _lower_network\n    require(total_values <= initial_value_budget(),\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            f\"probe array budget: <={initial_value_budget():,} values including topology\")\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/python/brian2_rust/spec.py\", line 237, in require\n    raise NotImplementedError(f\"Gate 0 capability: {message}\")\nNotImplementedError: Gate 0 capability: probe array budget: <=400,000,000 values including topology\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/experiment/prepare-owner30-128m.py\", line 79, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/experiment/prepare-owner30-128m.py\", line 54, in main\n    with packed_export():model=lower_network(b.Network(*objects),a.steps*clock.dt,rng_seed=20261007)\n                               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/atlas-home/0003/atlas-capacity-86m-20261007/source-b128/python/brian2_rust/export.py\", line 2554, in lower_network\n    raise CapabilityError(CapabilityReport(\n        False, (issue,), report.summary)) from error\nbrian2_rust.capabilities.CapabilityError: Rust standalone capability report: 1 issue(s)\n- lowering.unsupported: Gate 0 capability: probe array budget: <=400,000,000 values including topology\n"
+}
