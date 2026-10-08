@@ -17,9 +17,11 @@ The captured figure-building environment uses Python 3.14.4. Install the plottin
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install -r paper/requirements.txt
+python -m pip install -r paper/requirements-lock.txt
 python paper/scripts/build_manuscript.py
 ```
+
+The complete dependency versions are pinned in `paper/requirements-lock.txt`; `paper/requirements.txt` lists the direct dependencies. A clean local rebuild reproduced all tracked manuscript outputs byte-for-byte ([validation record](migration/clean-manuscript-build.json)).
 
 The generator defaults to Matplotlib’s bundled fonts, avoiding host font-discovery differences. It writes the figures, `paper/MANUSCRIPT.html`, and `paper/validation/build_report.json`. Its checks cover retained-file hashes, figure/table structure, and consistency of the reported numbers. They do not constitute new simulations or hardware measurements.
 

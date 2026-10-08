@@ -1,0 +1,36 @@
+{
+  "stage": "clean-manuscript-rebuild",
+  "status": "passed",
+  "checked_commit": "a9606d8fdaac44c604dea3f6ea8041628ef00fe5",
+  "generated_at_utc": "2026-10-08T08:19:05.864835+00:00",
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "packages": {
+    "kiwisolver": "1.5.1",
+    "fonttools": "4.66.1",
+    "packaging": "26.3",
+    "numpy": "2.5.2",
+    "contourpy": "1.4.0",
+    "mdurl": "0.1.2",
+    "python-dateutil": "2.9.0.post0",
+    "matplotlib": "3.11.2",
+    "cycler": "0.12.1",
+    "markdown-it-py": "4.2.0",
+    "pillow": "12.3.0",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0"
+  },
+  "commands": [
+    "uv venv --python python3 <new-paper-environment>",
+    "uv pip install --python <new-paper-environment>/bin/python --link-mode copy -r paper/requirements.txt",
+    "<new-paper-environment>/bin/python paper/scripts/build_manuscript.py"
+  ],
+  "tracked_paper_diff_after_build": [],
+  "build_report_sha256": "fabb7f0a642af779319ccea26a4c35d255ef674a19a73eb7b1f538298ac568f3",
+  "lockfile_sha256": "5b4a2435da00add0d400d889acc8bc80fa8222cfbe750c29d9fbad9a55051ac4",
+  "scope": "Clean plotting installation and deterministic regeneration of retained manuscript outputs; no new simulations or hardware measurements.",
+  "checks": {
+    "figures": 10,
+    "tables": 7,
+    "bibliography_entries": 16
+  }
+}

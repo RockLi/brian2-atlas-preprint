@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: '3.14'
       - name: Install plotting environment
-        run: python -m pip install -r paper/requirements.txt
+        run: python -m pip install -r paper/requirements-lock.txt
       - name: Rebuild and check retained-file hashes and reported numbers
         run: python paper/scripts/build_manuscript.py
       - name: Save manuscript and validation artifacts
