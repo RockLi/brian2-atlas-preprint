@@ -1,0 +1,17 @@
+{
+  "schema": "atlas-final-paper-reproduction-integrity-v1",
+  "status": "passed",
+  "verified_utc": "2026-10-08T16:48:37.272983+00:00",
+  "scope": "Current manuscript build report, locked environments,11generatedSVGs including supplement,PDFinputs/44pageartifact/23local links,exactPD14source/lock/binaryandactualvalidationartifacts match their previously executed acceptance records. No new simulations were needed.",
+  "figures": 10,
+  "supplementary_svg_files": 1,
+  "tables": 7,
+  "references": 16,
+  "pdf_pages": 44,
+  "pd14_commit": "6677a5bafd3b703ab56b6ed176e9aad70f4638cd",
+  "receipt_hashes": {
+    "clean-manuscript-build.json": "343202dbaa427668e958b2e9f223d375298ebe5315ec7eaf550dc087bcbaa773",
+    "pdf-build.json": "9755fc66683070a712bc136c31830c240764b4fb3da161e9ddbe85110c22150a",
+    "pd14-pinned-reproduction.json": "f13374cbc27a67df77e273df05c866b517b6d8847d38819709112fe5517a2aca"
+  }
+}

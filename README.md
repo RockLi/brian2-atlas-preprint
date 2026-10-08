@@ -29,9 +29,9 @@ The manuscript CI runs this same retained-evidence build and saves its generated
 
 Historical evidence collectors require explicit source locations; see [collection inputs and scope](paper/COLLECTION.md). Rebuilding the manuscript does not require running these collectors.
 
-## Migration and reproduction status
+## Migration and reproduction
 
-The manuscript materials have been imported with file-level provenance. A [pinned PD14 build-to-simulation workflow](experiments/reproduction/pd14/README.md) has passed end-to-end validation against Atlas commit `6677a5bafd3b703ab56b6ed176e9aad70f4638cd`. Other legacy research entry points retain their historical execution assumptions. The [historical source guide](archives/HISTORICAL_SOURCES.md) records verified source restoration and exact limitations; final product-increment and distribution reconciliation remain in progress.
+The manuscript materials have been imported with file-level provenance. A [pinned PD14 build-to-simulation workflow](experiments/reproduction/pd14/README.md) has passed end-to-end validation against Atlas commit `6677a5bafd3b703ab56b6ed176e9aad70f4638cd`. Other legacy research entry points retain their historical execution assumptions. The [historical source guide](archives/HISTORICAL_SOURCES.md) records verified source restoration and exact limitations; the [final cutoff map](migration/migration-cutoff-disposition.json) accounts for the user-approved migration scope.
 
 [Research experiment collections](experiments/README.md) preserve the legacy FlyWire learning, MNIST and vision scripts and their recorded small results. Use the recorded historical sources and environments for those collections; the pinned PD14 command is the separately validated portable reproduction workflow.
 
@@ -42,3 +42,7 @@ The manuscript materials have been imported with file-level provenance. A [pinne
 [Capture provenance](PROVENANCE.md) distinguishes the import snapshot from the individual experimental source versions. [The import manifest](migration/paper-import.json) records every captured manuscript file and its original hash.
 
 The upstream Brian2 author and license files are retained with the imported material. Manuscript authorship is stated in the manuscript itself.
+
+The product migration cutoff is the third frozen increment (`20261008T161008Z`), explicitly selected by the user. Later development is recorded as a separate future port. The [migration report](https://github.com/RockLi/brian2-atlas/blob/dev/migration/FINAL_REPORT.md) summarizes the accepted product, distribution checks, historical limits and remaining publication tasks.
+
+[Final paper and reproduction integrity](migration/final-paper-reproduction-integrity.json) confirms that the current generated figures, PDF, pinned model, binary and actual run artifacts still match their accepted checksums.

@@ -1,0 +1,58 @@
+{
+  "schema": "atlas-final-archive-integrity-v1",
+  "verified_utc": "2026-10-08T16:39:35.662831+00:00",
+  "status": "passed",
+  "duration_seconds": 19.961841106414795,
+  "archives": [
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/20261008T063409Z/source-snapshot.tar",
+      "sha256": "34fd34184d713d1b1c7a7bb98c115164fa016a0a67f91ae3c8d861291c4ea38a",
+      "bytes": 5466009600,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/20261008T063409Z/external-evidence-targets.tar",
+      "sha256": "373d89e843bc2609c15e4c533a8bb9ebeac0ce34eada5ce793ae7ecafa5c82f2",
+      "bytes": 235653120,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/history-20261008T153913Z/legacy-history.bundle",
+      "sha256": "2ccaa1af9c06aff186360096e13b9b9aa4dd6770f8c3bf4cc28157d72820ce52",
+      "bytes": 2356102319,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+      "sha256": "980e5494d2a72360334cd96a9e35b172fa8bab7b5ef8cae895e0664212619a5c",
+      "bytes": 1459877,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/supplements/20261008T091247Z/product-supplement.tar",
+      "sha256": "7103cdc880fb34909c578a24c149f29d218728b03e52e0cc040ccaea6cee9d47",
+      "bytes": 358400,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/supplements/20261008T145057Z/training-increment.tar",
+      "sha256": "abe39a9a1cccdda17ea81532719020f3cfaf12a1458ac0052996deca69227064",
+      "bytes": 460800,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/supplements/20261008T161008Z/training-increment.tar",
+      "sha256": "303ad3be28c92fefe9acc2ea20de91abc778ecd955de20e5630ea6e074a30763",
+      "bytes": 399360,
+      "verified": true
+    },
+    {
+      "path": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/supplements/20261008T161402Z/concurrent-evidence.tar",
+      "sha256": "1a79b19de27b4651a307e190597e400d1fb22695b9a0bf9b0661eb7dabb467de",
+      "bytes": 7895040,
+      "verified": true
+    }
+  ],
+  "total_bytes": 8068338516,
+  "scope": "Full byte hashes of all preserved baseline/history/overlay/product-increment/research-supplement archives at final acceptance; no public availability claim."
+}
