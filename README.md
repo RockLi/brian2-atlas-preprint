@@ -6,6 +6,13 @@ The product implementation is maintained in [RockLi/brian2-atlas](https://github
 
 The [experiment-code coverage audit](experiments/COVERAGE.md) maps every final-paper study to its drivers and identifies historical build/input limitations.
 
+## Frozen release pair
+
+The `biorxiv-v1` annotated tag identifies this evidence archive and pairs with
+[Brian2 Atlas `v0.1.0`](https://github.com/RockLi/brian2-atlas/tree/v0.1.0).
+`main` holds the frozen archive; ongoing work belongs on `dev`.
+The paper-version label does not assert that a bioRxiv submission or DOI exists.
+
 ## Manuscript and figures
 
 - [Manuscript source](paper/MANUSCRIPT.md)
@@ -59,7 +66,7 @@ figures and research data by Xinjun Li are licensed under
 datasets, model sources and images retain their own terms. See
 [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the boundaries and
 [CITATION.cff](CITATION.cff) for citation metadata. Record the exact commit used;
-no paper DOI or formal release is asserted by these metadata.
+no paper DOI is asserted by these metadata.
 
 ## Public evidence exports
 

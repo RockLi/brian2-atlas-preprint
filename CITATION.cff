@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "Cite this research compendium and the exact commit used. License applicability differs by material; see LICENSE_SCOPE.md."
 type: dataset
+version: biorxiv-v1
 title: "Brian2 Atlas research compendium: A Unified Intermediate Representation and Execution Architecture for Heterogeneous and Distributed Neural Simulation"
 authors:
   - family-names: Li

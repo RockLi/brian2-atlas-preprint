@@ -114,12 +114,13 @@
     "figure_change_scope": "No SVG changes in this editorial/license update; compared with preprint commit 78cfce5bf0967ce1a4800d99159e3428d8ca6f27."
   },
   "editorial_update": {
-    "scope": "Requested caption/cgroup edits, mapped public-history citations and path-safe reading PDFs. Scientific values and all 22 English/Chinese SVGs unchanged.",
+    "scope": "Release citation update only; scientific values and figures unchanged.",
     "evidence_repository_commit": "7f83c69f9958cc515c472bb57ea018c77c18ff94",
     "experiments_repeated": false,
-    "reason": "Editorial changes only; no implementation, model, input or measurement changes."
+    "reason": "Editorial changes only; no implementation, model, input or measurement changes.",
+    "evidence_repository_tag": "biorxiv-v1"
   },
-  "maintained_implementation_commit": "e609068369a7ec370968cd885ef562c83e4daa03",
+  "maintained_implementation_commit": "ae649a244e28d7d4b3eb5df4e35215e14c1378c7",
   "public_api": {
     "commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
     "report_url": "https://github.com/RockLi/brian2-atlas/blob/3a46296a897a03ea6126f42ef26f0b8c35072e5e/migration/atlas-public-api.json",
@@ -180,5 +181,6 @@
       "matches_previous_deterministic_result": true,
       "report": "../../../migration/pd14-public-history-validation.json"
     }
-  }
+  },
+  "release_pair": "../../../release-pair.json"
 }

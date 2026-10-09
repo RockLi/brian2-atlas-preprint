@@ -1,0 +1,18 @@
+{
+  "schema": "atlas-release-pair-v1",
+  "software": {
+    "repository": "https://github.com/RockLi/brian2-atlas",
+    "tag": "v0.1.0",
+    "commit": "ae649a244e28d7d4b3eb5df4e35215e14c1378c7"
+  },
+  "evidence": {
+    "repository": "https://github.com/RockLi/brian2-atlas-preprint",
+    "tag": "biorxiv-v1"
+  },
+  "branches": {
+    "main": "Frozen release snapshot",
+    "dev": "Ongoing development"
+  },
+  "source_identity_policy": "Experiment reports retain their exact measured revisions; release pairing is not a claim of new measurements.",
+  "submission_status": "The release label does not assert a bioRxiv submission or assigned DOI."
+}
