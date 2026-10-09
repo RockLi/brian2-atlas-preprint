@@ -95,19 +95,19 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
+        "sha256": "23a35167df7600aa6a7383f2d21b274e18306dbe5188fb9f2da904c19e92f9d6",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "66025f42ae84457d9d09bcb3453a57d08480d1f03914aa92af09c1917ebf009f",
+        "sha256": "f3ba74c2383c78dcd03069f2a3e6edb9b19063247c75710ea3d7a48b25472138",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "d397df86b5ffff44d792ea9c805c2da43d50f8bc313d8c90f2db545edceeffc3",
-      "SUPPLEMENTARY.md": "3878eef5bc1f0a312d4debd3d627d4fa174b6923f3847b4ed983cc4655df28b2",
-      "zh-CN/MANUSCRIPT.md": "7997c6b7b4717473026eccc6446f3e0ce0d69aa3c97141fa46c9bbe449781ac9"
+      "MANUSCRIPT.md": "38db8104133e88e5b436d381729943040b600a29ceaba92985a75d9c1ea60072",
+      "SUPPLEMENTARY.md": "f383b7123e9892e9e9824ad8e0df101848eff814a1f7b98633dd1ba7b79e8949",
+      "zh-CN/MANUSCRIPT.md": "c5147a35f61942f9e91febe83ae2a3ca5039f7b1e2c208cf8de277e15e5409e1"
     }
   },
   "editorial_update": {
@@ -115,5 +115,14 @@
     "evidence_repository_commit": "d66c3e160e634d0e87575084c335cd2761ab52b5",
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes."
+  },
+  "maintained_implementation_commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
+  "public_api": {
+    "commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
+    "report_url": "https://github.com/RockLi/brian2-atlas/blob/3db257b072fc142b2b268d872c4d7a8129daa248/migration/atlas-public-api.json",
+    "tests_passed": 64,
+    "subtests_passed": 17,
+    "installed_flow": "CPU/reference, AOT, training, fresh-process checkpoint and Metal training passed",
+    "prior_experiment_sources_retained": true
   }
 }

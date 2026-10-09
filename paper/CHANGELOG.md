@@ -1,5 +1,10 @@
 # Manuscript revisions
 
+## 2026-10-09: Atlas public backend API
+
+- Describe AtlasDevice and the brian2_atlas / atlas public entry points; cite implementation commit `3db257b072fc142b2b268d872c4d7a8129daa248`.
+- Link the public API and installed-wheel qualification while retaining exact source revisions of existing CUDA and PD14 measurements. No performance values change.
+
 ## 2026-10-09: final repository citations
 
 - Cite fixed commits in brian2-atlas and brian2-atlas-preprint in Sections 4.1 and Code and data availability.

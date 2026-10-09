@@ -1,6 +1,8 @@
 # 新引擎 preprint 写作材料包
 
-> 2026-10-09 更新：当前实现固定到 Atlas [`bf1cf30af55a4a14ae42d0d75534728385b62d06`](https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06)。中英文正文同步更新源码引用及709项Modal CUDA验收；PD14在该提交上重新构建和运行。历史性能测量保留实际来源版本。
+> 2026-10-09 Atlas API 更新：公开入口为 `brian2_atlas` / `AtlasDevice` / `set_device("atlas", ...)`，实现引用为 [`3db257b072fc142b2b268d872c4d7a8129daa248`](https://github.com/RockLi/brian2-atlas/tree/3db257b072fc142b2b268d872c4d7a8129daa248)，旧入口兼容。
+
+> 2026-10-09 CUDA/PD14 验收：验收实现固定到 Atlas [`bf1cf30af55a4a14ae42d0d75534728385b62d06`](https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06)。中英文正文同步更新源码引用及709项Modal CUDA验收；PD14在该提交上重新构建和运行。历史性能测量保留实际来源版本。
 
 > 双仓库迁移说明：下文保留写作阶段与历史版本记录；当前图表数量和检查范围以 [构建报告](validation/build_report.json) 为准。HTML 重建使用本仓库保留的数据，PDF 导出见 [PDF 构建说明](PDF.md)。历史结果继续对应各自的源码身份。
 

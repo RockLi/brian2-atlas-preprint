@@ -3,29 +3,30 @@
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint.pdf",
     "pages": 44,
-    "sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
+    "sha256": "23a35167df7600aa6a7383f2d21b274e18306dbe5188fb9f2da904c19e92f9d6",
     "new_commit_links": [
       "https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06"
+      "https://github.com/RockLi/brian2-atlas/tree/3db257b072fc142b2b268d872c4d7a8129daa248"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
       3,
-      12,
+      13,
       25,
       33
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/en-contact-1.png",
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/en-contact-2.png",
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/en-contact-3.png"
+      "/atlas-storage/0001/output/paper-atlas-api-review/en-contact-1.png",
+      "/atlas-storage/0001/output/paper-atlas-api-review/en-contact-2.png",
+      "/atlas-storage/0001/output/paper-atlas-api-review/en-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; workload and code-availability pages reviewed at full size. No clipping or overlap found.",
+      "scope": "All pages reviewed in contact sheets; public API and repository citation pages reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
-        12,
+        3,
+        13,
         33
       ]
     }
@@ -34,28 +35,29 @@
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint-zh-CN.pdf",
     "pages": 38,
-    "sha256": "66025f42ae84457d9d09bcb3453a57d08480d1f03914aa92af09c1917ebf009f",
+    "sha256": "f3ba74c2383c78dcd03069f2a3e6edb9b19063247c75710ea3d7a48b25472138",
     "new_commit_links": [
       "https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06"
+      "https://github.com/RockLi/brian2-atlas/tree/3db257b072fc142b2b268d872c4d7a8129daa248"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
-      2,
+      3,
       10,
       20,
       27
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/zh-contact-1.png",
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/zh-contact-2.png",
-      "/atlas-storage/0001/output/paper-final-repo-citations-review/zh-contact-3.png"
+      "/atlas-storage/0001/output/paper-atlas-api-review/zh-contact-1.png",
+      "/atlas-storage/0001/output/paper-atlas-api-review/zh-contact-2.png",
+      "/atlas-storage/0001/output/paper-atlas-api-review/zh-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; workload and code-availability pages reviewed at full size. No clipping or overlap found.",
+      "scope": "All pages reviewed in contact sheets; public API and repository citation pages reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
+        2,
         10,
         27
       ]

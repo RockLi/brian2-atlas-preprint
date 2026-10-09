@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
-  "english_manuscript_sha256": "d397df86b5ffff44d792ea9c805c2da43d50f8bc313d8c90f2db545edceeffc3",
-  "english_supplement_sha256": "3878eef5bc1f0a312d4debd3d627d4fa174b6923f3847b4ed983cc4655df28b2",
+  "english_pdf_sha256": "23a35167df7600aa6a7383f2d21b274e18306dbe5188fb9f2da904c19e92f9d6",
+  "english_manuscript_sha256": "38db8104133e88e5b436d381729943040b600a29ceaba92985a75d9c1ea60072",
+  "english_supplement_sha256": "f383b7123e9892e9e9824ad8e0df101848eff814a1f7b98633dd1ba7b79e8949",
   "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Fixed repository citations; experimental identities and values unchanged.",
-  "atlas_commit": "bf1cf30af55a4a14ae42d0d75534728385b62d06"
+  "atlas_commit": "3db257b072fc142b2b268d872c4d7a8129daa248"
 }

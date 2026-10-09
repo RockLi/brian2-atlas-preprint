@@ -1,8 +1,8 @@
 {
   "status": "text-and-layout-checks-passed",
-  "pdf_sha256": "66025f42ae84457d9d09bcb3453a57d08480d1f03914aa92af09c1917ebf009f",
+  "pdf_sha256": "f3ba74c2383c78dcd03069f2a3e6edb9b19063247c75710ea3d7a48b25472138",
   "page_count": 38,
-  "chinese_character_count": 28417,
+  "chinese_character_count": 28422,
   "outside_page_characters": 0,
   "portrait_pages": 35,
   "original_screenshot_landscape_pages": 3,
@@ -10,8 +10,9 @@
   "content_checks": "All 10 main figures, 7 main tables, S21.1–S21.6, S13/Table S5, Table S4, Figure S2 and three S1 panels; major exact event counts and resource quantities present.",
   "visual_review": {
     "status": "passed",
-    "scope": "All pages reviewed in contact sheets; workload and code-availability pages reviewed at full size. No clipping or overlap found.",
+    "scope": "All pages reviewed in contact sheets; public API and repository citation pages reviewed at full size. No clipping or overlap.",
     "full_size_pages": [
+      2,
       10,
       27
     ]

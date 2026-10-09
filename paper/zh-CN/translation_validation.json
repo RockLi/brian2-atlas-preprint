@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_pdf_sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
+  "source_pdf_sha256": "23a35167df7600aa6a7383f2d21b274e18306dbe5188fb9f2da904c19e92f9d6",
   "checks": {
     "english_pdf_sha256": true,
     "english_manuscript_sha256": true,
@@ -59,7 +59,7 @@
   },
   "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Fixed repository citations; experimental identities and values unchanged.",
   "chinese_sources": {
-    "MANUSCRIPT.md": "7997c6b7b4717473026eccc6446f3e0ce0d69aa3c97141fa46c9bbe449781ac9",
+    "MANUSCRIPT.md": "c5147a35f61942f9e91febe83ae2a3ca5039f7b1e2c208cf8de277e15e5409e1",
     "DENDRITIC_SUPPLEMENT.md": "706afbe209bf23992e56d9f5aa391eba090dd7a63089390837a094c8f39a608a",
     "RESOURCE_ANALYSIS.md": "26ba01b54f1e9ac26e3b8dcff5d876b6f50b5dfc0b951dccab167ba8fb9af481",
     "b2ir_panels.json": "0203b5be6642e85614734e87837eb6bcb9606638bbb203935b0f0478eaaf4508"
