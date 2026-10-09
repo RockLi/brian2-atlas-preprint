@@ -1,5 +1,11 @@
 # Historical sources and restoration
 
+Public copies are path-redacted exports. Original hashes in historical records
+identify the privately preserved originals; use the root
+`migration/public-path-redaction.json` and `migration/public-commit-map.json`
+to verify public copies and resolve source revisions.
+
+
 The maintained implementations are the latest migrated versions. Historical results keep their actual commit and content identities. A newer source file must not be used to claim exact reproduction of an older result.
 
 ## Committed engine history

@@ -13,6 +13,6 @@
 
 `translation_validation.json`保存源文件身份、章节和段落对应、表格数值、引用与原始截图核验结果；`pdf_validation.json`保存PDF内容与排版检查结果。
 
-2026-10-09同步更新：CUDA/PD14验收实现固定至`bf1cf30af55a4a14ae42d0d75534728385b62d06`，正文纳入709项Modal CUDA验收。PD14复测与历史来源保留说明见[当前版本验证记录](../data/release_validation/acceptance.json)。
+2026-10-09同步更新：CUDA/PD14验收实现固定至`b769c21004a89e2a6f3a14521f23012db654aadd`，正文纳入709项Modal CUDA验收。PD14复测与历史来源保留说明见[当前版本验证记录](../data/release_validation/acceptance.json)。
 
-Atlas公开入口同步为 `brian2_atlas`、`AtlasDevice` 和 `set_device("atlas", ...)`，当前实现引用为 `f90d2b63952092a6c5531f5989ba58b240922b6e`。
+Atlas公开入口同步为 `brian2_atlas`、`AtlasDevice` 和 `set_device("atlas", ...)`，当前实现引用为 `562ae5cd143ca8fd0bcc070cbef04cad00010246`。

@@ -5,10 +5,10 @@
   "tables": 7,
   "bibliography_entries": 16,
   "manuscript_words_whitespace": 15739,
-  "capacity_evidence_sha256": "983079962ebeaad4f2d2952316355a82956b309c950d7f594adee69d4049a286",
+  "capacity_evidence_sha256": "12850a196d8520d40106806657a37aff2ec3efa085792496c48fa3af629105f8",
   "linux_cpu_best_measured_ratio": 5.4290822407628125,
   "mpi_raw_audit_verified_from_later_report": true,
-  "heterogeneous_mpi_evidence_sha256": "b4ddc81ffe693c6824d1b77f6449b138eae7b843078e26fad212cb3a3c7e6f5a",
+  "heterogeneous_mpi_evidence_sha256": "bf185e7354e71c8607576c578e207dd1fbe8d869af38c5fc168b1ea86db43f63",
   "browser_fixed_inputs": 13,
   "svg_sha256": {
     "figures/fig10_connected_capacity.svg": "fb8c01466bf26006fd82d3bac64eb15ecc2e7763facf6cde5c6a7d91279ee419",
@@ -23,11 +23,11 @@
     "figures/fig9_heterogeneous_mpi.svg": "66320fe72e3a454d6dafee420589f6ef29ffe88e5029f0ada542afb95331e9f5",
     "figures/figS2_full_scale_resources.svg": "5b17c897438e67d8bfb069d78b57bedd7befe88ecabf0c7ffaa0ef48bc795622"
   },
-  "figure_data_sha256": "1274a0b5d82a7f9fa95eeb0f77f127d2af8dfd575ad54fc5f9b9ad04400ac4b6",
-  "plan_selection_sha256": "f4cd33ab998a6cd94b03a3e6f3117518dcc16bef43f1f8ff481c8313cdba9c9d",
+  "figure_data_sha256": "191e7689a9f0b734beb491d00a0067f75d9ec1a10ed9ddeb1db82017e409c3d2",
+  "plan_selection_sha256": "2132253ecb9ab560122d1cccc2b4ebe95a9c19282199ab1cf658f8485dd7b900",
   "plan_selection_cases": 6,
   "decision_cache_cases": 6,
-  "v3_evidence_sha256": "7f4e36684a5e570c7b213a84b17b27ee4774044ae92114a71e4894ff6793df18",
+  "v3_evidence_sha256": "413814538a7fda345447b416c70eef1384bc8e8259f36f003b00cd8dc8e53079",
   "v3_retained_sources": 34,
   "v3_training_cohorts": 6,
   "v3_dendritic_ratios": [
@@ -36,7 +36,7 @@
     1.2836920549889423
   ],
   "review_snapshot_sha256": "ebb0a98e19e6b58523292fbe1611c5ddab48fbd5e1a24b90aec8e4bbaaeb3d28",
-  "published_models_sha256": "708dabbabce0622bb6d94649d45b446749b3100ba27f5b5425d89ffccb607f90",
+  "published_models_sha256": "f0fd90f7595863024ccea5708ac30728b138347f38b38097ba220a6b78239e85",
   "nmda_cpu_ratios": [
     1.128147373079257,
     1.4851572869018612,
@@ -45,7 +45,7 @@
   ],
   "nmda_same40_ratio": 1.6773997072714204,
   "scope": "Artifact structure, retained-source hashes and reported-number consistency; no new simulation, hardware benchmark or full scientific raw-array audit.",
-  "weak_scaling_evidence_sha256": "f68db174ac7c5003af21da0dff240dc67a2ebb2669039160a9d4082906c72376",
+  "weak_scaling_evidence_sha256": "105db37833a9bb908041eaabc78054a49d5f5908385464eed922ed0cf6fe020c",
   "weak_scaling_hosts": [
     3,
     6,

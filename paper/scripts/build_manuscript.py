@@ -2,6 +2,7 @@
 from pathlib import Path
 import base64
 import hashlib
+from public_integrity import verify_retained
 import html
 import json
 import os
@@ -417,7 +418,7 @@ for r in P['tuning-cache']['rows']:
 for r in V3['sources']:
     retained = ROOT/'data/v3'/r['retained']
     raw = retained.read_bytes()
-    assert len(raw) == r['bytes'] and hashlib.sha256(raw).hexdigest() == r['sha256']
+    verify_retained(raw, r['sha256'], r['bytes'])
 for r in V3['dendritic_rows']:
     assert np.isclose(r['cython_seconds']/r['rust_seconds'], r['ratio'], rtol=1e-12, atol=0)
 for r in V3['training_cohorts']:
@@ -426,7 +427,7 @@ assert V3['mam']['scientific_equivalence_accepted'] is False
 assert V3['mam']['matched_performance_accepted'] is False
 for r in MODELS['sources']:
     raw = (ROOT/'data/published_models'/r['retained']).read_bytes()
-    assert len(raw) == r['bytes'] and hashlib.sha256(raw).hexdigest() == r['sha256']
+    verify_retained(raw, r['sha256'], r['bytes'])
 for r in MODELS['nmda_cpu_rows']:
     assert np.isclose(np.median(r['cpp_samples']), r['cpp_seconds'])
     assert np.isclose(np.median(r['rust_samples']), r['rust_seconds'])
@@ -439,19 +440,19 @@ assert 'We present brian2-atlas,' in source
 assert 'Full working draft' not in source and 'Not yet submitted or posted' not in source
 for item in HET['sources']:
     raw=(ROOT/'data/mpi_heterogeneous'/item['retained']).read_bytes()
-    assert len(raw)==item['bytes'] and hashlib.sha256(raw).hexdigest()==item['sha256']
+    verify_retained(raw, item['sha256'], item['bytes'])
 assert HET['simulation_delivery']['rank_gpu_dispatches']==[0,32]
 assert HET['simulation_delivery']['simulation_nvidia_hardware_qualified'] is False
 assert HET['training_cuda']['cuda_mpi_passed']==31 and HET['training_cuda']['physical_gpus']==1
 for item in CAP['sources']:
     raw=(ROOT/'data/capacity'/item['retained']).read_bytes()
-    assert len(raw)==item['bytes'] and hashlib.sha256(raw).hexdigest()==item['sha256']
+    verify_retained(raw, item['sha256'], item['bytes'])
 assert CAP['pilot']['passed'] and CAP['pilot']['max_state_absolute_difference']==0
 assert all(r['duration_ms']==100 and r['ranks']==30 and r['hosts']==30 for r in CAP['rows'])
 if WEAK is not None:
     for item in WEAK['sources']:
         raw=(ROOT/'data/capacity'/item['retained']).read_bytes()
-        assert len(raw)==item['bytes'] and hashlib.sha256(raw).hexdigest()==item['sha256']
+        verify_retained(raw, item['sha256'], item['bytes'])
     assert all(r['duration_ms']==100 and r['ranks']==r['hosts']*8 and r['precision']=='reference-f64' for r in WEAK['rows'])
     assert all(p['passed'] and p['max_state_absolute_difference']==0 for p in WEAK['pilots'])
 report={'status':'passed','manuscript_version':'final-layout','figures':10,'tables':main_table_count,'bibliography_entries':16,'manuscript_words_whitespace':len(source.split()),
@@ -477,9 +478,9 @@ resource_analysis=ROOT/'data/full_scale/analysis.json'
 if resource_analysis.exists():
     conditional=json.loads(resource_analysis.read_text())
     assert conditional['status']=='passed'
-    assert conditional['evidence_sha256']==report['weak_scaling_evidence_sha256']
+    verify_retained((ROOT/'data/capacity/weak-evidence.json').read_bytes(), conditional['evidence_sha256'])
     for item in conditional['sources']:
-        assert hashlib.sha256((ROOT/'data/full_scale'/item['retained']).read_bytes()).hexdigest()==item['sha256']
+        verify_retained((ROOT/'data/full_scale'/item['retained']).read_bytes(), item['sha256'])
     report['conditional_resource_analysis_sha256']=hashlib.sha256(resource_analysis.read_bytes()).hexdigest()
     report['conditional_resource_scope']=conditional['scope']
 (ROOT/'validation/build_report.json').write_text(json.dumps(report,indent=2)+'\n')

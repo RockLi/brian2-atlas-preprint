@@ -11,6 +11,7 @@ import tempfile
 from pypdf import PdfReader, PdfWriter
 import pypdfium2 as pdfium
 from pdf_supplements import append_atlasir_figure
+from pdf_public_links import pin_public_links
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--chromium', type=Path, default=os.environ.get('CHROMIUM'),
@@ -159,6 +160,7 @@ if resource_section.exists():
     writer.add_outline_item('Supplement S21 | Conditional full-reference resources', resource_pages[0])
 append_atlasir_figure(writer)
 writer.add_metadata({'/Author': 'Xinjun Li', '/Subject': 'brian2-atlas; heterogeneous and distributed neural simulation'})
+pin_public_links(writer, ROOT)
 with OUTPUT.open('wb') as handle:
     writer.write(handle)
 print(OUTPUT)

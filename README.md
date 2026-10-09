@@ -33,7 +33,7 @@ Historical evidence collectors require explicit source locations; see [collectio
 
 ## Migration and reproduction
 
-The manuscript materials have been imported with file-level provenance. A [pinned PD14 build-to-simulation workflow](experiments/reproduction/pd14/README.md) has passed end-to-end validation against Atlas commit `bf1cf30af55a4a14ae42d0d75534728385b62d06`. Other legacy research entry points retain their historical execution assumptions. The [historical source guide](archives/HISTORICAL_SOURCES.md) records verified source restoration and exact limitations; the [final cutoff map](migration/migration-cutoff-disposition.json) accounts for the user-approved migration scope.
+The manuscript materials have been imported with file-level provenance. A [pinned PD14 build-to-simulation workflow](experiments/reproduction/pd14/README.md) has passed end-to-end validation against Atlas commit `b769c21004a89e2a6f3a14521f23012db654aadd`. Other legacy research entry points retain their historical execution assumptions. The [historical source guide](archives/HISTORICAL_SOURCES.md) records verified source restoration and exact limitations; the [final cutoff map](migration/migration-cutoff-disposition.json) accounts for the user-approved migration scope.
 
 [Research experiment collections](experiments/README.md) preserve the legacy FlyWire learning, MNIST and vision scripts and their recorded small results. Use the recorded historical sources and environments for those collections; the pinned PD14 command is the separately validated portable reproduction workflow.
 
@@ -49,7 +49,7 @@ The product migration cutoff is the third frozen increment (`20261008T161008Z`),
 
 [Cutoff paper and reproduction integrity](migration/final-paper-reproduction-integrity.json) preserves checksums at the migration cutoff. Subsequent manuscript edits are checked in the [current PDF validation](paper/validation/current_commit_pdf_qa.json).
 
-The [current paper validation](paper/data/release_validation/acceptance.json) distinguishes the maintained implementation and public API revision from the CUDA and PD14 qualification revisions. The 709-case CUDA follow-up and repeated PD14 workflow are retained at `bf1cf30af55a4a14ae42d0d75534728385b62d06`; changing the manuscript implementation citation does not relabel those measurements. English and Chinese reading versions are checked together.
+The [current paper validation](paper/data/release_validation/acceptance.json) distinguishes the maintained implementation and public API revision from the CUDA and PD14 qualification revisions. The 709-case CUDA follow-up and repeated PD14 workflow are retained at `b769c21004a89e2a6f3a14521f23012db654aadd`; changing the manuscript implementation citation does not relabel those measurements. English and Chinese reading versions are checked together.
 
 ## License, citation and scope
 
@@ -60,3 +60,13 @@ datasets, model sources and images retain their own terms. See
 [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the boundaries and
 [CITATION.cff](CITATION.cff) for citation metadata. Record the exact commit used;
 no paper DOI or formal release is asserted by these metadata.
+
+## Public evidence exports
+
+Host-specific paths have been replaced with synthetic locations in the published
+history. Original evidence is privately preserved with its original checksums.
+The [redaction map](migration/public-path-redaction.json) binds original content
+hashes to the public export hashes; a redacted export is not byte-identical to
+the original measurement artifact. Configure actual input/output locations when
+running historical scripts. The [commit map](migration/public-commit-map.json)
+resolves original commit identities to the public history.

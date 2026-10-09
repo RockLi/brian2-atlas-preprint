@@ -25,7 +25,7 @@
 
 Atlas 保留 Brian2 建模前端，独立实现其执行路径。Brian2CUDA、Brian2GeNN 和 GeNN 是部分实验的外部比较对象，不是 Atlas 运行时依赖；CUDA 执行仍需要 NVIDIA 工具链与驱动。
 
-Modal L4 后续验收覆盖先前跳过的 708 项及 1 项 ABI 回归，共 709 项通过，零失败、零跳过；包含两个 MPI rank 共用一张 GPU。此结果不证明跨主机或多 GPU 训练。PD14 固定版本入口已在 `bf1cf30af55a4a14ae42d0d75534728385b62d06` 上重新构建和运行，见[复现指南](../experiments/reproduction/pd14/README.md)。各性能测量保留实际源码、输入、工具链和硬件身份。
+Modal L4 后续验收覆盖先前跳过的 708 项及 1 项 ABI 回归，共 709 项通过，零失败、零跳过；包含两个 MPI rank 共用一张 GPU。此结果不证明跨主机或多 GPU 训练。PD14 固定版本入口已在 `b769c21004a89e2a6f3a14521f23012db654aadd` 上重新构建和运行，见[复现指南](../experiments/reproduction/pd14/README.md)。各性能测量保留实际源码、输入、工具链和硬件身份。
 
 ## 数据与重建
 

@@ -1,9 +1,11 @@
 """Print the Chinese paper offline, leaving English artifacts unchanged."""
 from pathlib import Path
-import subprocess,tempfile,hashlib,json
+import subprocess,tempfile,hashlib,json,sys
 from pypdf import PdfReader,PdfWriter
 import pypdfium2 as pdfium
 D=Path(__file__).resolve().parent;ROOT=D.parents[1]
+sys.path.insert(0, str(ROOT/'paper/scripts'))
+from pdf_public_links import pin_public_links
 OUTPUT=ROOT/'output/pdf/brian2-atlas-preprint-zh-CN.pdf'
 manifest=json.loads((D/'source_manifest.json').read_text())
 assert hashlib.sha256((ROOT/'output/pdf/brian2-atlas-preprint.pdf').read_bytes()).hexdigest()==manifest['english_pdf_sha256']
@@ -28,5 +30,6 @@ with tempfile.TemporaryDirectory(prefix='atlas-zh-pdf-') as profile:
         if '补充图S1' in t and 'a |' in t:w.add_outline_item('补充图S1：活动回放与AtlasIR检查',i)
     document.close()
     w.add_metadata({'/Title':'面向异构与分布式神经仿真的统一中间表示与执行架构','/Author':'Xinjun Li','/Subject':'brian2-atlas；中文译稿；异构与分布式神经仿真'})
+    pin_public_links(w, ROOT)
     with OUTPUT.open('wb') as f:w.write(f)
     print(json.dumps({'pdf':str(OUTPUT),'pages':len(r.pages),'sha256':hashlib.sha256(OUTPUT.read_bytes()).hexdigest()},ensure_ascii=False))

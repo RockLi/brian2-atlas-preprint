@@ -1,0 +1,86 @@
+{
+  "schema": "atlas-pd14-public-history-validation-v1",
+  "status": "passed",
+  "atlas_commit": "b769c21004a89e2a6f3a14521f23012db654aadd",
+  "atlas_git": "ssh://git@github.com/RockLi/brian2-atlas.git",
+  "engine_cargo_source": "git+ssh://git@github.com/RockLi/brian2-atlas.git?rev=b769c21004a89e2a6f3a14521f23012db654aadd#b769c21004a89e2a6f3a14521f23012db654aadd",
+  "model_source_sha256": "530b2413b56790131d61a0b621c1c89eb2acb95ff054b56a84eb4d32ecf80c77",
+  "cargo_lock_sha256": "989441f614a44e7ecca31f06b6387d4db04b6561220cee843599ddcc51b1cdbe",
+  "binary_sha256": "73cd5177ddf6d67dee64aae2eaa9e57e69bc7cf2d1818a8acf7a0d00926c4c9d",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "started_unix": 1791541008.1881511,
+  "ended_unix": 1791541323.183729,
+  "result_sha256": {
+    "run-1.json": "5ddf338f3482b15d8769f666110eb23687614c803d514e38755ded590cf834c9",
+    "run-2.json": "a47241dc9f3db20b40876ec707b03540788de39a56a2c767e1ec25ce672301e2"
+  },
+  "deterministic_fields": [
+    "numeric_profile",
+    "population_names",
+    "population_neurons",
+    "neuron_count",
+    "projection_count",
+    "synapse_count",
+    "estimated_topology_bytes",
+    "resident_topology_bytes",
+    "spike_counts",
+    "delivered_events",
+    "population_rates_hz"
+  ],
+  "result": {
+    "numeric_profile": "f64-state/f32-static-weight/u16-delay",
+    "population_names": [
+      "L23E",
+      "L23I",
+      "L4E",
+      "L4I",
+      "L5E",
+      "L5I",
+      "L6E",
+      "L6I"
+    ],
+    "population_neurons": [
+      207,
+      58,
+      219,
+      55,
+      49,
+      11,
+      144,
+      29
+    ],
+    "neuron_count": 772,
+    "projection_count": 55,
+    "synapse_count": 29885,
+    "estimated_topology_bytes": 322946,
+    "resident_topology_bytes": 322946,
+    "spike_counts": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "delivered_events": 91,
+    "population_rates_hz": [
+      0.048309178743961345,
+      0.0,
+      0.045662100456621,
+      0.0,
+      0.2040816326530612,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "scope": "New bounded reproduction at the pinned Atlas commit: 1% neuron and indegree scales, 100 ms, two fresh processes with two identical repetitions each. This does not reproduce full-scale scientific rates or historical benchmark timings.",
+  "private_execution_record_sha256": "40078b651d15e3387007cde4aca83481a05b66c18ca0037e11113627f7f142d5",
+  "commands_recorded_privately": true,
+  "public_reproduction_command": "python experiments/reproduction/pd14/reproduce.py --output output/pd14-smoke",
+  "result_files": "evidence/pd14-public-history/",
+  "matches_previous_deterministic_result": true,
+  "fetch_route": "Before publication, the canonical Git URL was redirected to the verified local rewritten mirror for this invocation only."
+}

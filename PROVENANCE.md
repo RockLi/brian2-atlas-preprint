@@ -1,5 +1,11 @@
 # Capture provenance
 
+Public copies are path-redacted exports. Original hashes in historical records
+identify the privately preserved originals; use the root
+`migration/public-path-redaction.json` and `migration/public-commit-map.json`
+to verify public copies and resolve source revisions.
+
+
 The initial manuscript import was captured from the development checkout of `RockLi/brian2` on 2026-10-08. Its HEAD was `81eb571d78292a0e24a8e79980ea0d5c26e8a48c`, and the checkout included additional uncommitted work.
 
 `migration/paper-import.json` records the original path, new path, byte count, and SHA-256 for each captured file. The source manuscript lived under `docs/preprint/`, which was ignored by the original repository's root Git rules; copying only committed files would have omitted it.

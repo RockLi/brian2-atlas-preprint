@@ -3,5 +3,5 @@
   "english_manuscript_sha256": "54c7fb563191b23d48dc72d104df8f9c27768c844fd16f5ce4417495f8112257",
   "english_supplement_sha256": "b46a8701a5504bfc123cf742ddb18ec99dabd03ff24b74f931e7b97ed8f518fc",
   "scope": "Current English manuscript and integrated supplements; matched Chinese editorial updates clarify per-host memory limits and remove regression-run maintenance prose. Scientific values and original screenshot pixels unchanged.",
-  "atlas_commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161"
+  "atlas_commit": "e609068369a7ec370968cd885ef562c83e4daa03"
 }

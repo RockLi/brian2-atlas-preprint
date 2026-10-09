@@ -3,7 +3,7 @@ name = "atlas-preprint-pd14"
 version = "0.1.0"
 edition = "2021"
 publish = false
-license = "CECILL-2.1"
+license = "Apache-2.0"
 description = "Pinned Atlas consumer for the archived PD14 feasibility model"
 
 [[bin]]
@@ -11,5 +11,5 @@ name = "atlas-preprint-pd14"
 path = "../../legacy/brian2-rust/src/bin/pd14.rs"
 
 [dependencies]
-b2-runner = { git = "ssh://git@github.com/RockLi/brian2-atlas.git", rev = "bf1cf30af55a4a14ae42d0d75534728385b62d06" }
+b2-runner = { git = "ssh://git@github.com/RockLi/brian2-atlas.git", rev = "b769c21004a89e2a6f3a14521f23012db654aadd" }
 serde_json = { version = "1", features = ["float_roundtrip"] }

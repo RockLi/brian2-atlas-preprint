@@ -1,0 +1,76 @@
+{
+  "delivered_events": 91,
+  "delivered_events_per_second": 29473.283278413703,
+  "duration_ms": 100.0,
+  "estimated_topology_bytes": 322946,
+  "indegree_scale": 0.01,
+  "model": "Potjans-Diesmann-2014",
+  "neuron_count": 772,
+  "neuron_scale": 0.01,
+  "numeric_profile": "f64-state/f32-static-weight/u16-delay",
+  "population_names": [
+    "L23E",
+    "L23I",
+    "L4E",
+    "L4I",
+    "L5E",
+    "L5I",
+    "L6E",
+    "L6I"
+  ],
+  "population_neurons": [
+    207,
+    58,
+    219,
+    55,
+    49,
+    11,
+    144,
+    29
+  ],
+  "population_rates_hz": [
+    0.048309178743961345,
+    0.0,
+    0.045662100456621,
+    0.0,
+    0.2040816326530612,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "projection_count": 55,
+  "reference_rates_hz": [
+    0.903,
+    2.965,
+    4.414,
+    5.876,
+    7.569,
+    8.633,
+    1.105,
+    7.829
+  ],
+  "repetitions": 2,
+  "resident_topology_bytes": 322946,
+  "schema": "b2-pd14-benchmark-v1",
+  "seed": 55,
+  "simulation_median_seconds": 0.003087542,
+  "simulation_relative_spread": 0.037354309674168,
+  "simulation_seconds": [
+    0.002972209,
+    0.003087542
+  ],
+  "spike_counts": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "synapse_count": 29885,
+  "topology_build_seconds": 0.003445166,
+  "topology_edges_per_second": 8674473.160364406,
+  "warmups": 0
+}
