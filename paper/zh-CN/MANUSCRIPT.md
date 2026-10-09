@@ -174,7 +174,7 @@ Worker将执行与界面隔离，并支持批次、进度和取消。批次大�
 
 ### 4.1 工作负载与测量组
 
-本文实现发布于[brian2-atlas仓库，提交`a40a58bc8b664592bf19e3d2755627c96f7e3161`](https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161)。工作负载驱动、冻结源码清单、输入及测量记录归档于[brian2-atlas-preprint仓库，提交`edea16f9a60db02bb4a02ae0bc1c679d22fd740c`](https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c)。更新后的树突网络测量组使用该归档记录的统一源码快照重新导出模型并构建。各CPU、GPU、MPI、浏览器和训练测量组所用的确切源码版本、输入、工具链与验收范围均在补充材料中列明。
+本文实现发布于[brian2-atlas仓库，提交`a40a58bc8b664592bf19e3d2755627c96f7e3161`](https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161)。工作负载驱动、冻结源码清单、输入及测量记录归档于[brian2-atlas-preprint仓库，提交`6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd`](https://github.com/RockLi/brian2-atlas-preprint/tree/6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd)。更新后的树突网络测量组使用该归档记录的统一源码快照重新导出模型并构建。各CPU、GPU、MPI、浏览器和训练测量组所用的确切源码版本、输入、工具链与验收范围均在补充材料中列明。
 
 证据按具有标识的测量组组织。CPU全连接组研究使用FlyWire v783，包含139,255个神经元与15,091,983条有向加权边[10](#ref10)。这些边汇总54,492,922个接触点，接触点不作为独立边对象仿真。CPU动力学为统一兴奋性LIF。MPI研究采用EI变体，增加580个输入源及刺激/切断条件。共享图规模不意味着动力学工作负载相同。
 
@@ -487,7 +487,7 @@ CPU工作估计为启发式，GPU调优器用三个样本评估小型固定策�
 
 配套证据包包含源码/证据映射、机器可读图输入和确定性图生成脚本。[补充材料](../SUPPLEMENTARY.md)给出源码快照、模型与数据集来源、复现命令和保留报告记录。大数组及部分历史产物保存在这些记录标识的独立归档中，不包含于稿件包。
 
-本文实现发布于[brian2-atlas仓库，提交`a40a58bc8b664592bf19e3d2755627c96f7e3161`](https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161)。[brian2-atlas-preprint证据归档，提交`edea16f9a60db02bb4a02ae0bc1c679d22fd740c`](https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c)提供工作负载脚本、源码清单和实验记录。[固定版本PD14复现入口](../../experiments/reproduction/pd14/README.md)记录其固定Atlas提交及成功的重新构建和运行结果。[验收索引](../data/release_validation/acceptance.json)及补充材料记录各实验的源码版本与验收范围。
+本文实现发布于[brian2-atlas仓库，提交`a40a58bc8b664592bf19e3d2755627c96f7e3161`](https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161)。[brian2-atlas-preprint证据归档，提交`6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd`](https://github.com/RockLi/brian2-atlas-preprint/tree/6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd)提供工作负载脚本、源码清单和实验记录。[固定版本PD14复现入口](../../experiments/reproduction/pd14/README.md)记录其固定Atlas提交及成功的重新构建和运行结果。[验收索引](../data/release_validation/acceptance.json)及补充材料记录各实验的源码版本与验收范围。
 
 [相互连接网络容量证据](../data/capacity/evidence.json)保留历史固定主机观测；[弱扩展证据](../data/capacity/weak-evidence.json)保留至8.6亿神经元的全部五个验收布局、数值小模型、终态资源报告、完整输出审计和源码标识。大型输入输出数组仍保存在标识的远程归档，保留记录包含哈希及准入/验收范围。这些隔离实验不构成当前开发发布的联合验证。
 

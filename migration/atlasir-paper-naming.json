@@ -10,5 +10,20 @@
   ],
   "raw_screenshots_modified": false,
   "new_scientific_experiments": false,
-  "wire_schema": "b2ir-v1 (unchanged compatibility identifier)"
+  "wire_schema": "b2ir-v1 (unchanged compatibility identifier)",
+  "preprint_source_commit": "6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd",
+  "pdf_qa": "../paper/validation/current_commit_pdf_qa.json",
+  "pdfs": {
+    "en": {
+      "pages": 44,
+      "sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
+      "outside_page_characters": 0
+    },
+    "zh": {
+      "pages": 38,
+      "sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
+      "outside_page_characters": 0
+    }
+  },
+  "legacy_name_scope": "Wire/ABI identifiers, compatibility entry points and frozen historical evidence remain unchanged. Original Figure S1 screenshots visibly retain captured B2IR labels; displayed captions and current prose use AtlasIR."
 }

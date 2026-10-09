@@ -89,35 +89,41 @@
     "main_figures": 10,
     "main_tables": 7,
     "bibliography_entries": 16,
-    "figure_svg_hashes_unchanged": true,
+    "figure_svg_hashes_unchanged": false,
     "translation_validation": "../../zh-CN/translation_validation.json",
     "pdf_qa": "../../validation/current_commit_pdf_qa.json",
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
+        "sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "b72f6c55223d2239ef633606b483318b778f3448d4e016e308ef302720547e2d",
+        "sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "4f44d99f9175bdb5c98e48e0fcd6937bb350d342685faa5d777a1db66ca9709d",
-      "SUPPLEMENTARY.md": "9d68246c024f9fd598e7c3c9b182864bb013eb310d1c5b544595e52dcc90b761",
-      "zh-CN/MANUSCRIPT.md": "70e2ea29d036eec2bccabcdb5d5db20f720eaf76d9d62989678a98cda495c4e8",
-      "zh-CN/DENDRITIC_SUPPLEMENT.md": "99253696dbf84ca99f3d647a4b3c17be8430a9567084af99a0ba849490417a99"
-    }
+      "MANUSCRIPT.md": "53aaf05e84455fae7477bbfe710fc544b5fc8d6568ae3242cc9ba0940d3afbf6",
+      "SUPPLEMENTARY.md": "11ea411a83a96d4b9e0e47397062ee42e3663193c994b79aa0943ba7b01145a2",
+      "zh-CN/MANUSCRIPT.md": "6ef1c727d155730251a350ca4b364cffe9b6333dc6db3ee20aeac1470a147e57",
+      "zh-CN/DENDRITIC_SUPPLEMENT.md": "1f2d007595a61a839d9abadfeb94d7672a0ab7233415c4aec01a6285ca5f7b51"
+    },
+    "changed_figure_svgs": [
+      "fig1_architecture.svg",
+      "fig7_browser.svg",
+      "fig9_heterogeneous_mpi.svg"
+    ],
+    "figure_change_scope": "AtlasIR labels only; remaining figures and retained measurement data hashes unchanged."
   },
   "editorial_update": {
-    "scope": "Fixed new-repository citations; removed development-branch, local-checkout and migration-process narrative. Original experiment records and measurements unchanged.",
-    "evidence_repository_commit": "edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
+    "scope": "AtlasIR public name and fixed new-repository citations; original measurement identities and values unchanged.",
+    "evidence_repository_commit": "6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd",
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes."
   },
-  "maintained_implementation_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e",
+  "maintained_implementation_commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161",
   "public_api": {
     "commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
     "report_url": "https://github.com/RockLi/brian2-atlas/blob/3db257b072fc142b2b268d872c4d7a8129daa248/migration/atlas-public-api.json",
@@ -148,5 +154,16 @@
     "experiments_repeated": false,
     "mam_analysis_tests_passed": 30,
     "nmda_cli_checks_passed": 6
+  },
+  "atlasir_public_name": {
+    "commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161",
+    "report_url": "https://github.com/RockLi/brian2-atlas/blob/a40a58bc8b664592bf19e3d2755627c96f7e3161/migration/atlasir-public-name.json",
+    "tests_passed": 140,
+    "subtests_passed": 47,
+    "hardware_tests_skipped": 10,
+    "test_failures": 0,
+    "browser_worker_cases_passed": 9,
+    "wire_and_abi_compatibility_preserved": true,
+    "experiments_repeated": false
   }
 }

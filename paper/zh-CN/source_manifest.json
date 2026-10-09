@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
-  "english_manuscript_sha256": "4f44d99f9175bdb5c98e48e0fcd6937bb350d342685faa5d777a1db66ca9709d",
-  "english_supplement_sha256": "9d68246c024f9fd598e7c3c9b182864bb013eb310d1c5b544595e52dcc90b761",
-  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Evidence-repository citation includes restored experiment programs; experimental identities and measured values unchanged.",
-  "atlas_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e"
+  "english_pdf_sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
+  "english_manuscript_sha256": "53aaf05e84455fae7477bbfe710fc544b5fc8d6568ae3242cc9ba0940d3afbf6",
+  "english_supplement_sha256": "11ea411a83a96d4b9e0e47397062ee42e3663193c994b79aa0943ba7b01145a2",
+  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. AtlasIR naming and fixed repository citations; measured values and original screenshot pixels unchanged.",
+  "atlas_commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161"
 }

@@ -3,75 +3,109 @@
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint.pdf",
     "pages": 44,
-    "sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
+    "sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/f90d2b63952092a6c5531f5989ba58b240922b6e"
+      "https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
+      1,
       2,
       3,
+      4,
+      7,
+      8,
+      10,
+      12,
       13,
       15,
       20,
+      23,
       24,
       25,
       28,
+      30,
+      32,
       33,
-      36
+      36,
+      42,
+      43
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-1.png",
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-2.png",
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-3.png"
+      "/atlas-storage/0001/output/paper-atlasir-review/en-contact-1.png",
+      "/atlas-storage/0001/output/paper-atlasir-review/en-contact-2.png",
+      "/atlas-storage/0001/output/paper-atlasir-review/en-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; both changed evidence-repository citation pages reviewed at full size. No clipping or overlap.",
+      "scope": "All pages reviewed in contact sheets; changed architecture/browser/MPI diagrams, fixed-commit citations and retained S1 screenshot panel reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
+        4,
         13,
-        33
-      ]
-    }
+        23,
+        28,
+        33,
+        43
+      ],
+      "original_screenshot_labels": "Original captured pixels, including legacy B2IR labels, retained without modification."
+    },
+    "text_name_check_scope": "Extractable manuscript, captions and generated diagram text; excludes original screenshot pixels."
   },
   "zh": {
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint-zh-CN.pdf",
     "pages": 38,
-    "sha256": "b72f6c55223d2239ef633606b483318b778f3448d4e016e308ef302720547e2d",
+    "sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/f90d2b63952092a6c5531f5989ba58b240922b6e"
+      "https://github.com/RockLi/brian2-atlas/tree/a40a58bc8b664592bf19e3d2755627c96f7e3161"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
+      1,
       2,
+      3,
+      5,
+      6,
+      8,
+      9,
       10,
       11,
       13,
       16,
       19,
       20,
+      21,
       22,
       23,
+      25,
+      26,
       27,
-      30
+      30,
+      36,
+      37
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-1.png",
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-2.png",
-      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-3.png"
+      "/atlas-storage/0001/output/paper-atlasir-review/zh-contact-1.png",
+      "/atlas-storage/0001/output/paper-atlasir-review/zh-contact-2.png",
+      "/atlas-storage/0001/output/paper-atlasir-review/zh-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; both changed evidence-repository citation pages reviewed at full size. No clipping or overlap.",
+      "scope": "All pages reviewed in contact sheets; changed architecture/browser/MPI diagrams, fixed-commit citations and retained S1 screenshot panel reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
+        3,
         10,
-        27
-      ]
-    }
+        19,
+        23,
+        27,
+        37
+      ],
+      "original_screenshot_labels": "Original captured pixels, including legacy B2IR labels, retained without modification."
+    },
+    "text_name_check_scope": "Extractable manuscript, captions and generated diagram text; excludes original screenshot pixels."
   }
 }

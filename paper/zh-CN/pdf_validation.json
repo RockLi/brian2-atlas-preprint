@@ -1,6 +1,6 @@
 {
   "status": "text-and-layout-checks-passed",
-  "pdf_sha256": "b72f6c55223d2239ef633606b483318b778f3448d4e016e308ef302720547e2d",
+  "pdf_sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
   "page_count": 38,
   "chinese_character_count": 28454,
   "outside_page_characters": 0,
@@ -10,10 +10,15 @@
   "content_checks": "All 10 main figures, 7 main tables, S21.1–S21.6, S13/Table S5, Table S4, Figure S2 and three S1 panels; major exact event counts and resource quantities present.",
   "visual_review": {
     "status": "passed",
-    "scope": "All pages reviewed in contact sheets; both changed evidence-repository citation pages reviewed at full size. No clipping or overlap.",
+    "scope": "All pages reviewed in contact sheets; changed architecture/browser/MPI diagrams, fixed-commit citations and retained S1 screenshot panel reviewed at full size. No clipping or overlap.",
     "full_size_pages": [
+      3,
       10,
-      27
-    ]
+      19,
+      23,
+      27,
+      37
+    ],
+    "original_screenshot_labels": "Original captured pixels, including legacy B2IR labels, retained without modification."
   }
 }

@@ -7,7 +7,7 @@
   },
   {
     "file": "fig1_architecture.svg",
-    "source_sha256": "bf7899a2ba970760ebd67001f7fd2dc1d941c81e195695e5dc88dadfff0a29b3",
+    "source_sha256": "cc8ffe1c92bf212ff2d50830e60c75083e0a55dc4502f99ccc0eb32bfc532247",
     "translated_text_nodes": 14,
     "geometry_and_embedded_images_unchanged": true
   },
@@ -43,7 +43,7 @@
   },
   {
     "file": "fig7_browser.svg",
-    "source_sha256": "9f2c907ee241b178d0a700df230b473b8dbd4a81a36be7f2f37309844f23c356",
+    "source_sha256": "e61ee8bd41aa5ab62a2c925f6cbc7fafabe9098d2dcdaa5903f565c6051d7ae5",
     "translated_text_nodes": 16,
     "geometry_and_embedded_images_unchanged": true
   },
@@ -55,7 +55,7 @@
   },
   {
     "file": "fig9_heterogeneous_mpi.svg",
-    "source_sha256": "ac5d2b4043645a5d8a4b0317c2e0e0170b6c90f572a9a69cec8f25a1419642de",
+    "source_sha256": "66320fe72e3a454d6dafee420589f6ef29ffe88e5029f0ada542afb95331e9f5",
     "translated_text_nodes": 28,
     "geometry_and_embedded_images_unchanged": true
   }
