@@ -50,3 +50,13 @@ The product migration cutoff is the third frozen increment (`20261008T161008Z`),
 [Cutoff paper and reproduction integrity](migration/final-paper-reproduction-integrity.json) preserves checksums at the migration cutoff. Subsequent manuscript edits are checked in the [current PDF validation](paper/validation/current_commit_pdf_qa.json).
 
 The [current paper validation](paper/data/release_validation/acceptance.json) distinguishes the maintained implementation and public API revision from the CUDA and PD14 qualification revisions. The 709-case CUDA follow-up and repeated PD14 workflow are retained at `bf1cf30af55a4a14ae42d0d75534728385b62d06`; changing the manuscript implementation citation does not relabel those measurements. English and Chinese reading versions are checked together.
+
+## License, citation and scope
+
+Original code is licensed under [Apache-2.0](LICENSE). Original manuscript,
+figures and research data by Xinjun Li are licensed under
+[CC BY 4.0](LICENSES/CC-BY-4.0.txt). Imported Brian2 code and third-party
+datasets, model sources and images retain their own terms. See
+[LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the boundaries and
+[CITATION.cff](CITATION.cff) for citation metadata. Record the exact commit used;
+no paper DOI or formal release is asserted by these metadata.

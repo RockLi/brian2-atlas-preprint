@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_pdf_sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
+  "source_pdf_sha256": "74fb54e96908a0f1ed9d660e1afe5ea8589996881b639412f181419656644f1e",
   "checks": {
     "english_pdf_sha256": true,
     "english_manuscript_sha256": true,
@@ -57,9 +57,9 @@
     "figure_data_geometry": true,
     "s1_original_pixels_and_crops": true
   },
-  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. AtlasIR naming and fixed repository citations; measured values and original screenshot pixels unchanged.",
+  "scope": "Current English manuscript and integrated supplements; matched Chinese editorial updates clarify per-host memory limits and remove regression-run maintenance prose. Scientific values and original screenshot pixels unchanged.",
   "chinese_sources": {
-    "MANUSCRIPT.md": "6ef1c727d155730251a350ca4b364cffe9b6333dc6db3ee20aeac1470a147e57",
+    "MANUSCRIPT.md": "31c5d121636c467130ca7095390492d6eef4d61f7f8cb7570bb630c0107874cc",
     "DENDRITIC_SUPPLEMENT.md": "1f2d007595a61a839d9abadfeb94d7672a0ab7233415c4aec01a6285ca5f7b51",
     "RESOURCE_ANALYSIS.md": "26ba01b54f1e9ac26e3b8dcff5d876b6f50b5dfc0b951dccab167ba8fb9af481",
     "b2ir_panels.json": "0a2f8ea8f5695d44f819e60c6a6844da42c83e6bfb1ca55e5951fe798a6907d6"

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite this research compendium and the exact commit used. License applicability differs by material; see LICENSE_SCOPE.md."
+type: dataset
+title: "Brian2 Atlas research compendium: A Unified Intermediate Representation and Execution Architecture for Heterogeneous and Distributed Neural Simulation"
+authors:
+  - family-names: Li
+    given-names: Xinjun
+repository-code: https://github.com/RockLi/brian2-atlas-preprint
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+  - CECILL-2.1

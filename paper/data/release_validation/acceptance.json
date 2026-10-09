@@ -89,36 +89,32 @@
     "main_figures": 10,
     "main_tables": 7,
     "bibliography_entries": 16,
-    "figure_svg_hashes_unchanged": false,
+    "figure_svg_hashes_unchanged": true,
     "translation_validation": "../../zh-CN/translation_validation.json",
     "pdf_qa": "../../validation/current_commit_pdf_qa.json",
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
+        "sha256": "74fb54e96908a0f1ed9d660e1afe5ea8589996881b639412f181419656644f1e",
         "outside_page_characters": 0
       },
       "zh": {
-        "pages": 38,
-        "sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
+        "pages": 39,
+        "sha256": "783f6ddfd192e0a28e0774812a1aeddcd98df2cc4539d24b7ba8f4aa61d3dc31",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "53aaf05e84455fae7477bbfe710fc544b5fc8d6568ae3242cc9ba0940d3afbf6",
-      "SUPPLEMENTARY.md": "11ea411a83a96d4b9e0e47397062ee42e3663193c994b79aa0943ba7b01145a2",
-      "zh-CN/MANUSCRIPT.md": "6ef1c727d155730251a350ca4b364cffe9b6333dc6db3ee20aeac1470a147e57",
+      "MANUSCRIPT.md": "54c7fb563191b23d48dc72d104df8f9c27768c844fd16f5ce4417495f8112257",
+      "SUPPLEMENTARY.md": "b46a8701a5504bfc123cf742ddb18ec99dabd03ff24b74f931e7b97ed8f518fc",
+      "zh-CN/MANUSCRIPT.md": "31c5d121636c467130ca7095390492d6eef4d61f7f8cb7570bb630c0107874cc",
       "zh-CN/DENDRITIC_SUPPLEMENT.md": "1f2d007595a61a839d9abadfeb94d7672a0ab7233415c4aec01a6285ca5f7b51"
     },
-    "changed_figure_svgs": [
-      "fig1_architecture.svg",
-      "fig7_browser.svg",
-      "fig9_heterogeneous_mpi.svg"
-    ],
-    "figure_change_scope": "AtlasIR labels only; remaining figures and retained measurement data hashes unchanged."
+    "changed_figure_svgs": [],
+    "figure_change_scope": "No SVG changes in this editorial/license update; compared with preprint commit 78cfce5bf0967ce1a4800d99159e3428d8ca6f27."
   },
   "editorial_update": {
-    "scope": "AtlasIR public name and fixed new-repository citations; original measurement identities and values unchanged.",
+    "scope": "Remove dated regression-maintenance prose and clarify the 660 GiB host for the maximum other-host peak in English and Chinese. No scientific values changed.",
     "evidence_repository_commit": "6a8a6bfd94cc6cad5d7665e33836c971ddf53bcd",
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes."
@@ -165,5 +161,11 @@
     "browser_worker_cases_passed": 9,
     "wire_and_abi_compatibility_preserved": true,
     "experiments_repeated": false
+  },
+  "publication_review": {
+    "report": "../../../migration/publication-audit-20261009.json",
+    "history_path_cleanup": "unresolved",
+    "credentials_confirmed": 0,
+    "license_scope": "../../../LICENSE_SCOPE.md"
   }
 }

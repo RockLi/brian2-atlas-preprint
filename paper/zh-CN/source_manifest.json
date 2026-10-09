@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "43a90487bf1d5b6561f73a3140b08de583f052f052b555b010224a0a67243cf6",
-  "english_manuscript_sha256": "53aaf05e84455fae7477bbfe710fc544b5fc8d6568ae3242cc9ba0940d3afbf6",
-  "english_supplement_sha256": "11ea411a83a96d4b9e0e47397062ee42e3663193c994b79aa0943ba7b01145a2",
-  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. AtlasIR naming and fixed repository citations; measured values and original screenshot pixels unchanged.",
+  "english_pdf_sha256": "74fb54e96908a0f1ed9d660e1afe5ea8589996881b639412f181419656644f1e",
+  "english_manuscript_sha256": "54c7fb563191b23d48dc72d104df8f9c27768c844fd16f5ce4417495f8112257",
+  "english_supplement_sha256": "b46a8701a5504bfc123cf742ddb18ec99dabd03ff24b74f931e7b97ed8f518fc",
+  "scope": "Current English manuscript and integrated supplements; matched Chinese editorial updates clarify per-host memory limits and remove regression-run maintenance prose. Scientific values and original screenshot pixels unchanged.",
   "atlas_commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161"
 }

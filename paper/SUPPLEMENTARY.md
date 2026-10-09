@@ -49,7 +49,7 @@ The AtlasIR baseline has three hash layers and a reference-f64 profile. Target f
 
 The regression constructs three single-neuron groups and one synapse. The synaptic weight starts at one; its clock-driven derivative is 1/ms. A summed updater publishes the current weight to a target variable. A third group reads that variable via a Brian linked variable and advances dx/dt = external/ms with Euler at dt = 1 ms. A start-slot monitor observes four ticks. The documented canonical x sequence is [0, 1, 3, 6]. The [0, 0, 0, 0] comparison illustrates the rejected transformation that postpones the summed writes until the end; it is not output produced by the corrected engine.
 
-In September 2026, the existing regression was rerun on the GPU/browser checkout using the repository Python environment:
+The regression can be run in the repository Python environment:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=brian2-rust/python:. \
@@ -57,7 +57,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=brian2-rust/python:. \
   -k summed_linked_reader_observes_every_tick -q
 ```
 
-Result: **1 passed, 49 deselected**, with 11 Pyparsing deprecation warnings; reported test duration 1.70 s. The test compares all captured monitor, final reader and final target arrays across reference, AOT and Brian NumPy. Figure 2 is an explanatory rendering of the documented example; the saved test checks implementation agreement rather than claiming a formal proof for arbitrary transformations.
+The test compares all captured monitor, final reader and final target arrays across reference, AOT and Brian NumPy; these arrays agree for this example. Figure 2 is an explanatory rendering of the documented example; the saved test checks implementation agreement rather than claiming a formal proof for arbitrary transformations.
 
 ## S4. CPU and memory cohorts
 

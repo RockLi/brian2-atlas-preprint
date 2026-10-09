@@ -1,24 +1,20 @@
 {
   "status": "text-and-layout-checks-passed",
-  "pdf_sha256": "98d6e3070e2b3c13cedc1725e4d82f13a42c80c95a8430359584f031fabcbe3d",
-  "page_count": 38,
-  "chinese_character_count": 28454,
+  "pdf_sha256": "783f6ddfd192e0a28e0774812a1aeddcd98df2cc4539d24b7ba8f4aa61d3dc31",
+  "page_count": 39,
+  "chinese_character_count": 28455,
   "outside_page_characters": 0,
-  "portrait_pages": 35,
+  "portrait_pages": 36,
   "original_screenshot_landscape_pages": 3,
   "english_pdf_matches_current_translation_manifest": true,
   "content_checks": "All 10 main figures, 7 main tables, S21.1–S21.6, S13/Table S5, Table S4, Figure S2 and three S1 panels; major exact event counts and resource quantities present.",
   "visual_review": {
     "status": "passed",
-    "scope": "All pages reviewed in contact sheets; changed architecture/browser/MPI diagrams, fixed-commit citations and retained S1 screenshot panel reviewed at full size. No clipping or overlap.",
+    "scope": "All pages reviewed in contact sheets; edited Figure 2 captions and cgroup peak paragraphs reviewed at full size. No clipping or overlap.",
     "full_size_pages": [
-      3,
-      10,
-      19,
-      23,
-      27,
-      37
+      4,
+      24
     ],
-    "original_screenshot_labels": "Original captured pixels, including legacy B2IR labels, retained without modification."
+    "contact_sheet_storage": "Local review artifacts, not distributed"
   }
 }
