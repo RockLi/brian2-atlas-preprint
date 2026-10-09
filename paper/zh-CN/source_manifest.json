@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "7b4a321895c863a3435da34206affed54268548d9922e1cc6cd9870609fc2660",
-  "english_manuscript_sha256": "579eaaeb48e16887ea16cd84465fba044a75161b92180bafc66052c1c0325426",
-  "english_supplement_sha256": "1bc425ff01e426c8ffd6e34f46a00d0e851347c8f3a3803c7dfb8b17d9cce11d",
-  "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Updated maintained-code citation and scoped CUDA qualification; historical cohort identities and values are retained.",
+  "english_pdf_sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
+  "english_manuscript_sha256": "d397df86b5ffff44d792ea9c805c2da43d50f8bc313d8c90f2db545edceeffc3",
+  "english_supplement_sha256": "3878eef5bc1f0a312d4debd3d627d4fa174b6923f3847b4ed983cc4655df28b2",
+  "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Fixed repository citations; experimental identities and values unchanged.",
   "atlas_commit": "bf1cf30af55a4a14ae42d0d75534728385b62d06"
 }

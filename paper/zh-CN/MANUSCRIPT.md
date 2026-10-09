@@ -174,7 +174,7 @@ Worker将执行与界面隔离，并支持批次、进度和取消。批次大�
 
 ### 4.1 工作负载与测量组
 
-统一源码迁移基准从next-dev捕获实际前端、执行后端、模型驱动与测试，包含未提交改动，共1,695个文件；内容清单标识为cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112。更新后的树突网络测量组使用该快照重新导出模型并构建。此前CPU、GPU、MPI、浏览器和训练测量组，在独立复测通过前继续保留各自的源码、输入和工具链身份；统一快照不构成所有已报告实验已使用同一实现的追溯证据。测量组迁移索引随补充材料保留。
+本文实现发布于[brian2-atlas仓库，提交`bf1cf30af55a4a14ae42d0d75534728385b62d06`](https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06)。工作负载驱动、冻结源码清单、输入及测量记录归档于[brian2-atlas-preprint仓库，提交`d66c3e160e634d0e87575084c335cd2761ab52b5`](https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5)。更新后的树突网络测量组使用该归档记录的统一源码快照重新导出模型并构建。各CPU、GPU、MPI、浏览器和训练测量组所用的确切源码版本、输入、工具链与验收范围均在补充材料中列明。
 
 证据按具有标识的测量组组织。CPU全连接组研究使用FlyWire v783，包含139,255个神经元与15,091,983条有向加权边[10](#ref10)。这些边汇总54,492,922个接触点，接触点不作为独立边对象仿真。CPU动力学为统一兴奋性LIF。MPI研究采用EI变体，增加580个输入源及刺激/切断条件。共享图规模不意味着动力学工作负载相同。
 
@@ -487,7 +487,7 @@ CPU工作估计为启发式，GPU调优器用三个样本评估小型固定策�
 
 配套证据包包含源码/证据映射、机器可读图输入和确定性图生成脚本。[补充材料](../SUPPLEMENTARY.md)给出源码快照、模型与数据集来源、复现命令和保留报告记录。大数组及部分历史产物保存在这些记录标识的独立归档中，不包含于稿件包。
 
-维护中的实现为[brian2-atlas提交`bf1cf30af55a4a14ae42d0d75534728385b62d06`](https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06)，已合入`dev`。[研究仓库](https://github.com/RockLi/brian2-atlas-preprint)保留论文、脚本和证据。此前检查使用next-dev提交81eb571d78292a0e24a8e79980ea0d5c26e8a48c及记录的本地改动，其[检查清单](../data/v3/review_snapshot.json)继续标识历史检查。各基准保留实际源码和工具链身份。[固定版本PD14复现入口](../../experiments/reproduction/pd14/README.md)已使用维护提交重新构建并运行；[附加证据索引](../data/v3/evidence.json)保留此前实验范围。
+本文实现发布于[brian2-atlas仓库，提交`bf1cf30af55a4a14ae42d0d75534728385b62d06`](https://github.com/RockLi/brian2-atlas/tree/bf1cf30af55a4a14ae42d0d75534728385b62d06)。[brian2-atlas-preprint证据归档，提交`d66c3e160e634d0e87575084c335cd2761ab52b5`](https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5)提供工作负载脚本、源码清单和实验记录。[固定版本PD14复现入口](../../experiments/reproduction/pd14/README.md)已使用该实现提交重新构建并运行。[验收索引](../data/release_validation/acceptance.json)及补充材料记录各实验的源码版本与验收范围。
 
 [相互连接网络容量证据](../data/capacity/evidence.json)保留历史固定主机观测；[弱扩展证据](../data/capacity/weak-evidence.json)保留至8.6亿神经元的全部五个验收布局、数值小模型、终态资源报告、完整输出审计和源码标识。大型输入输出数组仍保存在标识的远程归档，保留记录包含哈希及准入/验收范围。这些隔离实验不构成当前开发发布的联合验证。
 

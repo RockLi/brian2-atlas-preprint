@@ -95,19 +95,25 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "7b4a321895c863a3435da34206affed54268548d9922e1cc6cd9870609fc2660",
+        "sha256": "b1c5dab69e84fbd5c63ce934f16d4cee1bea2e20587dacbc1bcd20bafa7b09a3",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "c8097d95046f7f2c2afcedac9da43cca7ed87cf919f19bc57740c134e6bac6b5",
+        "sha256": "66025f42ae84457d9d09bcb3453a57d08480d1f03914aa92af09c1917ebf009f",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "579eaaeb48e16887ea16cd84465fba044a75161b92180bafc66052c1c0325426",
-      "SUPPLEMENTARY.md": "1bc425ff01e426c8ffd6e34f46a00d0e851347c8f3a3803c7dfb8b17d9cce11d",
-      "zh-CN/MANUSCRIPT.md": "a216dc918eddad1be79a8c3fe414d27eaacf7c8e9f7d08eecbd7c74389ae7ea6"
+      "MANUSCRIPT.md": "d397df86b5ffff44d792ea9c805c2da43d50f8bc313d8c90f2db545edceeffc3",
+      "SUPPLEMENTARY.md": "3878eef5bc1f0a312d4debd3d627d4fa174b6923f3847b4ed983cc4655df28b2",
+      "zh-CN/MANUSCRIPT.md": "7997c6b7b4717473026eccc6446f3e0ce0d69aa3c97141fa46c9bbe449781ac9"
     }
+  },
+  "editorial_update": {
+    "scope": "Fixed new-repository citations; removed development-branch, local-checkout and migration-process narrative. Original experiment records and measurements unchanged.",
+    "evidence_repository_commit": "d66c3e160e634d0e87575084c335cd2761ab52b5",
+    "experiments_repeated": false,
+    "reason": "Editorial changes only; no implementation, model, input or measurement changes."
   }
 }

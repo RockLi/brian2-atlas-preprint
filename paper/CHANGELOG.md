@@ -1,5 +1,11 @@
 # Manuscript revisions
 
+## 2026-10-09: final repository citations
+
+- Cite fixed commits in brian2-atlas and brian2-atlas-preprint in Sections 4.1 and Code and data availability.
+- Remove development-branch and migration bookkeeping from the manuscript and supplement; replace local checkout links with fixed repository links. Original experiment records remain unchanged.
+- Editorial changes only; experimental source identities and reported measurements are unchanged.
+
 ## 2026-10-09: committed Atlas source and CUDA qualification
 
 - Pin the maintained implementation and PD14 consumer to `bf1cf30af55a4a14ae42d0d75534728385b62d06` on `dev`.
