@@ -1,5 +1,10 @@
 # Manuscript revisions
 
+## 2026-10-09: explicit backend independence
+
+- Clarify that Atlas implements its own execution paths without runtime dependence on Brian2CUDA, Brian2GeNN or GeNN.
+- Distinguish external benchmark comparators from Atlas execution components, while retaining the documented Brian2 frontend and NVIDIA toolchain dependencies.
+
 ## 2026-10-09: Atlas public backend API
 
 - Describe AtlasDevice and the brian2_atlas / atlas public entry points; cite implementation commit `3db257b072fc142b2b268d872c4d7a8129daa248`.

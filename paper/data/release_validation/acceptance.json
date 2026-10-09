@@ -95,19 +95,19 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "23a35167df7600aa6a7383f2d21b274e18306dbe5188fb9f2da904c19e92f9d6",
+        "sha256": "f409f6583bdf85ce6045b444f014c42f73d46478f52d12dad93b2ffcf9ce3329",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "f3ba74c2383c78dcd03069f2a3e6edb9b19063247c75710ea3d7a48b25472138",
+        "sha256": "9e34c6cd79436bcf594cdb0fbeca13e08bec4766c5a3ff27de2b7b24dd975f93",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "38db8104133e88e5b436d381729943040b600a29ceaba92985a75d9c1ea60072",
-      "SUPPLEMENTARY.md": "f383b7123e9892e9e9824ad8e0df101848eff814a1f7b98633dd1ba7b79e8949",
-      "zh-CN/MANUSCRIPT.md": "c5147a35f61942f9e91febe83ae2a3ca5039f7b1e2c208cf8de277e15e5409e1"
+      "MANUSCRIPT.md": "24fb4c8314ac5cbb7094633ce3c44dd32722fb2ae19827f9dd45325003aedc3d",
+      "SUPPLEMENTARY.md": "f274569ae6323a9340f1c99dfd35822d1d865d5fa2876a9f1349350e1c45eaa6",
+      "zh-CN/MANUSCRIPT.md": "8a4e148cdabc20316d16c4973ce11dad30fa8698f74b4d306d5d78d02c374866"
     }
   },
   "editorial_update": {
@@ -124,5 +124,11 @@
     "subtests_passed": 17,
     "installed_flow": "CPU/reference, AOT, training, fresh-process checkpoint and Metal training passed",
     "prior_experiment_sources_retained": true
+  },
+  "backend_independence_clarification": {
+    "source_commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
+    "inspection": "Atlas Device and CUDA runtime modules plus distribution dependencies; Brian2CUDA/Brian2GeNN/GeNN imports occur in external comparator scripts, not Atlas runtime modules.",
+    "scope": "Documentation only; Brian2 frontend and NVIDIA toolchain/driver dependencies remain explicit.",
+    "experiments_repeated": false
   }
 }
