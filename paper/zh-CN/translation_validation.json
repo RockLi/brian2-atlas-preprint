@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_pdf_sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
+  "source_pdf_sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
   "checks": {
     "english_pdf_sha256": true,
     "english_manuscript_sha256": true,
@@ -57,9 +57,9 @@
     "figure_data_geometry": true,
     "s1_original_pixels_and_crops": true
   },
-  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Repository-wide stale-content corrections; experimental identities and values unchanged.",
+  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Evidence-repository citation includes restored experiment programs; experimental identities and measured values unchanged.",
   "chinese_sources": {
-    "MANUSCRIPT.md": "b47ddc178da331e998c452024c1adfd33d2d301bc46fcea7ad2a1f6a1090328a",
+    "MANUSCRIPT.md": "70e2ea29d036eec2bccabcdb5d5db20f720eaf76d9d62989678a98cda495c4e8",
     "DENDRITIC_SUPPLEMENT.md": "99253696dbf84ca99f3d647a4b3c17be8430a9567084af99a0ba849490417a99",
     "RESOURCE_ANALYSIS.md": "26ba01b54f1e9ac26e3b8dcff5d876b6f50b5dfc0b951dccab167ba8fb9af481",
     "b2ir_panels.json": "0203b5be6642e85614734e87837eb6bcb9606638bbb203935b0f0478eaaf4508"

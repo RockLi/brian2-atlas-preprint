@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
-  "english_manuscript_sha256": "bc14f340adad49a7091249dadc42737240c86f414c8057f88a354e6671f64d02",
-  "english_supplement_sha256": "ed46a9bb038d2265426ce6bfb8fc2b26d4c43be2dade2f8e75980da06b4b4ab2",
-  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Repository-wide stale-content corrections; experimental identities and values unchanged.",
+  "english_pdf_sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
+  "english_manuscript_sha256": "4f44d99f9175bdb5c98e48e0fcd6937bb350d342685faa5d777a1db66ca9709d",
+  "english_supplement_sha256": "9d68246c024f9fd598e7c3c9b182864bb013eb310d1c5b544595e52dcc90b761",
+  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Evidence-repository citation includes restored experiment programs; experimental identities and measured values unchanged.",
   "atlas_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e"
 }

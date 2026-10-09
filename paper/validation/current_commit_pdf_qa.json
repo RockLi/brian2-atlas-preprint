@@ -3,9 +3,9 @@
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint.pdf",
     "pages": 44,
-    "sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
+    "sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
       "https://github.com/RockLi/brian2-atlas/tree/f90d2b63952092a6c5531f5989ba58b240922b6e"
     ],
@@ -23,19 +23,16 @@
       36
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-stale-audit-review/en-contact-1.png",
-      "/atlas-storage/0001/output/paper-stale-audit-review/en-contact-2.png",
-      "/atlas-storage/0001/output/paper-stale-audit-review/en-contact-3.png"
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-1.png",
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-2.png",
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/en-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; changed source-citation, architecture, dendritic-method and supplement pages reviewed at full size. No clipping or overlap.",
+      "scope": "All pages reviewed in contact sheets; both changed evidence-repository citation pages reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
-        3,
         13,
-        17,
-        33,
-        36
+        33
       ]
     }
   },
@@ -43,9 +40,9 @@
     "status": "passed",
     "pdf": "/atlas-storage/0001/repos/brian2-atlas-preprint/output/pdf/brian2-atlas-preprint-zh-CN.pdf",
     "pages": 38,
-    "sha256": "1adf49993804bcb769ae7aa9469b4260eba72252ffb385825ff3d39501b8ce85",
+    "sha256": "b72f6c55223d2239ef633606b483318b778f3448d4e016e308ef302720547e2d",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/d66c3e160e634d0e87575084c335cd2761ab52b5",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
       "https://github.com/RockLi/brian2-atlas/blob/bf1cf30af55a4a14ae42d0d75534728385b62d06/migration/cuda-cutoff-followup.json",
       "https://github.com/RockLi/brian2-atlas/tree/f90d2b63952092a6c5531f5989ba58b240922b6e"
     ],
@@ -64,19 +61,16 @@
       30
     ],
     "contact_sheets": [
-      "/atlas-storage/0001/output/paper-stale-audit-review/zh-contact-1.png",
-      "/atlas-storage/0001/output/paper-stale-audit-review/zh-contact-2.png",
-      "/atlas-storage/0001/output/paper-stale-audit-review/zh-contact-3.png"
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-1.png",
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-2.png",
+      "/atlas-storage/0001/output/paper-experiment-code-audit-review/zh-contact-3.png"
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "All pages reviewed in contact sheets; changed source-citation, architecture, dendritic-method and supplement pages reviewed at full size. No clipping or overlap.",
+      "scope": "All pages reviewed in contact sheets; both changed evidence-repository citation pages reviewed at full size. No clipping or overlap.",
       "full_size_pages": [
-        2,
         10,
-        13,
-        27,
-        30
+        27
       ]
     }
   }

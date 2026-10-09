@@ -6,6 +6,7 @@
 - Restore missing NMDA, connected-capacity and external training qualification programs; add three macaque analysis fixtures and 95 exact hash-referenced source contents.
 - Verify 2,453 imported file/member hashes, parse 2,043 Python sources, pass 30 macaque analysis checks and six NMDA CLI import checks.
 - Record three unresolved historical Neural Lab build assets and external model/raw-data requirements. No new scientific simulation or benchmark is run.
+- Pin the English/Chinese evidence-repository citation to `edea16f9a60db02bb4a02ae0bc1c679d22fd740c`, which contains the restored programs. Reported numbers remain unchanged.
 - See [experiment-code coverage](../experiments/COVERAGE.md) for the family-by-family scope.
 
 ## 2026-10-09: repository-wide stale-content audit

@@ -466,7 +466,13 @@
     "distinct_tracked_research_variants": 773,
     "scope": "Research entry points, tools and experimental tests; ignored evidence/build directories are audited separately from paper source records. Local branch heads and backup tracking refs; upstream Brian-team feature branches excluded.",
     "ignored_evidence_followup": "Paper source hashes separately checked against local archives and read-only remote experiment sources. macOS ._ metadata ignored.",
-    "outside_final_paper": "Male-CNS/MNIST, affective studies, later MAM seed1752/closed-loop and later training development are not silently merged into the approved product cutoff or the final reported cohorts."
+    "outside_final_paper": "Male-CNS/MNIST, affective studies, later MAM seed1752/closed-loop and later training development are not silently merged into the approved product cutoff or the final reported cohorts.",
+    "detailed_inventory": {
+      "path": "migration/experiment-source-inventory-20261009.json.gz",
+      "sha256": "f2477b3f8e1b688711cab69f29c59f1697cbd620cbac97d3028b442f4d49c89d",
+      "working_file_entries_excluding_macos_resource_forks": 5983,
+      "comparison_baseline": "Initial committed repository trees before this experiment-code repair; target matches are not recomputed after new imports."
+    }
   },
   "source_hash_audit": {
     "references": 1412,
@@ -543,7 +549,8 @@
         "exit_code": 0
       }
     ],
-    "nmda_cli_argument": "--help"
+    "nmda_cli_argument": "--help",
+    "source_whitespace": "Original captured byte contents retained, including historical CSV CRLF and whitespace; not normalized because import manifests verify original hashes."
   },
   "known_external_dependencies": [
     "Pinned third-party model repositories and framework/toolchain installations",

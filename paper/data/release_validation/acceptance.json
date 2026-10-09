@@ -95,25 +95,25 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
+        "sha256": "3a701f58a79ed69afe98f28c8d07a706612f3beaef6752ee9e6006399580be94",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "1adf49993804bcb769ae7aa9469b4260eba72252ffb385825ff3d39501b8ce85",
+        "sha256": "b72f6c55223d2239ef633606b483318b778f3448d4e016e308ef302720547e2d",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "bc14f340adad49a7091249dadc42737240c86f414c8057f88a354e6671f64d02",
-      "SUPPLEMENTARY.md": "ed46a9bb038d2265426ce6bfb8fc2b26d4c43be2dade2f8e75980da06b4b4ab2",
-      "zh-CN/MANUSCRIPT.md": "b47ddc178da331e998c452024c1adfd33d2d301bc46fcea7ad2a1f6a1090328a",
+      "MANUSCRIPT.md": "4f44d99f9175bdb5c98e48e0fcd6937bb350d342685faa5d777a1db66ca9709d",
+      "SUPPLEMENTARY.md": "9d68246c024f9fd598e7c3c9b182864bb013eb310d1c5b544595e52dcc90b761",
+      "zh-CN/MANUSCRIPT.md": "70e2ea29d036eec2bccabcdb5d5db20f720eaf76d9d62989678a98cda495c4e8",
       "zh-CN/DENDRITIC_SUPPLEMENT.md": "99253696dbf84ca99f3d647a4b3c17be8430a9567084af99a0ba849490417a99"
     }
   },
   "editorial_update": {
     "scope": "Fixed new-repository citations; removed development-branch, local-checkout and migration-process narrative. Original experiment records and measurements unchanged.",
-    "evidence_repository_commit": "d66c3e160e634d0e87575084c335cd2761ab52b5",
+    "evidence_repository_commit": "edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes."
   },
@@ -139,5 +139,14 @@
     "targeted_tests_passed": 10,
     "experiments_repeated": false,
     "report": "../../../migration/stale-content-audit-20261009.json"
+  },
+  "experiment_code_audit": {
+    "report": "../../../migration/final-preprint-experiment-coverage-20261009.json",
+    "evidence_commit": "edea16f9a60db02bb4a02ae0bc1c679d22fd740c",
+    "scientific_driver_families_accounted_for": true,
+    "all_historical_build_assets_present": false,
+    "experiments_repeated": false,
+    "mam_analysis_tests_passed": 30,
+    "nmda_cli_checks_passed": 6
   }
 }
