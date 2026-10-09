@@ -58,7 +58,8 @@ assert len(cpu_rows) == 8
 read(CPU / 'PD14_LOCAL_16GB.md', 'text')
 read(CPU / 'LITWIN_KUMAR_RESULTS.md', 'text')
 read(args.gpu_root / 'EXECUTION_PLAN.md', 'text')
-read(args.gpu_root / 'B2IR.md', 'text')
+ir_spec = args.gpu_root / 'AtlasIR.md'
+read(ir_spec if ir_spec.exists() else args.gpu_root / 'B2IR.md', 'text')
 read(args.mpi_root / 'MPI.md', 'text')
 read(args.gpu_root / 'WASM.md', 'text')
 read(args.gpu_root / 'tests/test_synapses.py', 'text')

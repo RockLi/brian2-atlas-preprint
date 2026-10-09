@@ -1,0 +1,14 @@
+{
+  "schema": "atlasir-paper-naming-v1",
+  "atlas_commit": "a40a58bc8b664592bf19e3d2755627c96f7e3161",
+  "scope": "Current paper, generated diagram labels, translated captions and PDF bookmarks use AtlasIR. Frozen source/evidence and original screenshot pixels retain their captured identity.",
+  "measurement_data_unchanged": true,
+  "changed_diagram_labels": [
+    "fig1_architecture",
+    "fig7_browser",
+    "fig9_heterogeneous_mpi"
+  ],
+  "raw_screenshots_modified": false,
+  "new_scientific_experiments": false,
+  "wire_schema": "b2ir-v1 (unchanged compatibility identifier)"
+}

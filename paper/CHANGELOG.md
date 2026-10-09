@@ -1,5 +1,11 @@
 # Manuscript revisions
 
+## 2026-10-09: AtlasIR public name
+
+- Use AtlasIR consistently in the current English/Chinese manuscript, supplementary text, generated diagram labels, figure captions and PDF bookmarks.
+- Link the maintained AtlasIR specification and public API. Frozen wire/ABI identifiers remain compatible with existing models and source hashes.
+- Preserve raw measurement records, original screenshots and frozen source archives. No experiment is relabeled as a new run.
+
 ## 2026-10-09: final-paper experiment-code coverage
 
 - Audit all final-manuscript and S1–S21 study families against source branches, worktrees and retained evidence.

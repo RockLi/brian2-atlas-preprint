@@ -25,7 +25,7 @@ with tempfile.TemporaryDirectory(prefix='atlas-zh-pdf-') as profile:
         t=page.get_textpage().get_text_range()
         if 'S13. 附加树突CPU证据' in t:w.add_outline_item('补充材料S13：树突CPU验证与缓存消融',i)
         if 'S21. 以860亿神经元' in t:w.add_outline_item('补充材料S21：条件资源分析',i)
-        if '补充图S1' in t and 'a |' in t:w.add_outline_item('补充图S1：活动回放与B2IR检查',i)
+        if '补充图S1' in t and 'a |' in t:w.add_outline_item('补充图S1：活动回放与AtlasIR检查',i)
     document.close()
     w.add_metadata({'/Title':'面向异构与分布式神经仿真的统一中间表示与执行架构','/Author':'Xinjun Li','/Subject':'brian2-atlas；中文译稿；异构与分布式神经仿真'})
     with OUTPUT.open('wb') as f:w.write(f)

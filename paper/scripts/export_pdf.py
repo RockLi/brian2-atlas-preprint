@@ -10,7 +10,7 @@ import subprocess
 import tempfile
 from pypdf import PdfReader, PdfWriter
 import pypdfium2 as pdfium
-from pdf_supplements import append_b2ir_figure
+from pdf_supplements import append_atlasir_figure
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--chromium', type=Path, default=os.environ.get('CHROMIUM'),
@@ -157,7 +157,7 @@ if resource_section.exists():
                       if 'S21. Conditional resource analysis' in text]
     assert len(resource_pages) == 1, resource_pages
     writer.add_outline_item('Supplement S21 | Conditional full-reference resources', resource_pages[0])
-append_b2ir_figure(writer)
+append_atlasir_figure(writer)
 writer.add_metadata({'/Author': 'Xinjun Li', '/Subject': 'brian2-atlas; heterogeneous and distributed neural simulation'})
 with OUTPUT.open('wb') as handle:
     writer.write(handle)

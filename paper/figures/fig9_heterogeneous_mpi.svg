@@ -149,7 +149,7 @@ z
     <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.07968" y="27.79014" transform="rotate(-0 15.07968 27.79014)">a  Explicit simulation rank assignment</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(320.868844 45.136655)">B2IR → DistributedPlan</text>
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(312.834156 45.136655)">AtlasIR → DistributedPlan</text>
     <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(203.395719 64.780405)">Ownership + ordered rank backends + numerical profile</text>
    </g>
    <g id="text_3">

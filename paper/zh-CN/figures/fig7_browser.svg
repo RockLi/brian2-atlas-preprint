@@ -36,7 +36,7 @@
    <g id="text_2">
     <text style="font-size: 9px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(134.300880 69.732877)">通用WASM</text>
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(134.30088 79.877565)" />
-    <text style="font-size: 9px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(134.300880 96.732877)">B2IR与WasmPlan验证</text>
+    <text style="font-size: 9px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(134.300880 96.732877)">AtlasIR与WasmPlan验证</text>
     <text style="font-size: 9px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(134.300880 109.879206)">共享f64参考运行时／Worker</text>
     <text style="font-size: 9px; font-family: 'Hiragino Sans GB', 'Arial'; fill: #172a39; text-anchor: middle" transform="translate(134.300880 123.732877)">下方为Neural Lab界面</text>
    </g>

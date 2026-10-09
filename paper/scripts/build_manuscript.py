@@ -102,7 +102,7 @@ def arrow(ax,a,b,color=GREY):
 # 1: architecture. Explicitly separate retained frontend and target implementations.
 fig,ax=plt.subplots(figsize=(11,7.6)); ax.set(xlim=(0,1),ylim=(0,1));ax.axis('off')
 box(ax,.20,.87,.60,.095,'Retained Brian2 frontend\nObjects • equations • units • abstract update statements')
-box(ax,.22,.70,.56,.105,'B2IR: Definition / Instance / Run\nTypes • clocks • events • effects • identities',GREEN)
+box(ax,.22,.70,.56,.105,'AtlasIR: Definition / Instance / Run\nTypes • clocks • events • effects • identities',GREEN)
 arrow(ax,(.5,.87),(.5,.817))
 box(ax,.12,.52,.76,.115,'Independent validation → LogicalPlan\nCompleted dependencies • clocks • transformation eligibility',GREEN)
 arrow(ax,(.5,.70),(.5,.647))
@@ -208,7 +208,7 @@ assert hashlib.sha256(screenshot.read_bytes()).hexdigest()==expected
 fig=plt.figure(figsize=(11.4,13.1))
 ax=fig.add_axes([.025,.785,.95,.19]);ax.axis('off');ax.set(xlim=(0,1),ylim=(0,1))
 ax.text(0,1.04,'a  Browser execution profiles',fontweight='bold',fontsize=12)
-for x,title,body in [(.012,'Generic WASM','B2IR + WasmPlan validation\nShared f64 reference / Worker\nNeural Lab interface below'),
+for x,title,body in [(.012,'Generic WASM','AtlasIR + WasmPlan validation\nShared f64 reference / Worker\nNeural Lab interface below'),
                      (.347,'Experimental WebGPU','WASM validation → WGSL\nRestricted independent-cell f32\nNot used in the screenshot'),
                      (.682,'Model-specific WASM AOT','Separate frozen generated model\n139,255 neurons / 15.1M edges\n13 fixed-input CPU/WASM checks')]:
     box(ax,x,.32,.302,.58,title+'\n\n'+body,GREEN if x>.6 else BLUE,9)
@@ -250,7 +250,7 @@ save(fig, 'fig8_nmda')
 # 9: rank-specific simulation execution; qualification records remain distinct.
 fig=plt.figure(figsize=(11.4,6.1));ax=fig.add_axes([.02,.02,.96,.96]);ax.set_xlim(0,1);ax.set_ylim(0,1);ax.axis('off')
 ax.text(.01,.98,'a  Explicit simulation rank assignment',fontsize=16,fontweight='bold',va='top')
-box(ax,.19,.865,.62,.065,'B2IR → DistributedPlan\nOwnership + ordered rank backends + numerical profile',BLUE,14)
+box(ax,.19,.865,.62,.065,'AtlasIR → DistributedPlan\nOwnership + ordered rank backends + numerical profile',BLUE,14)
 box(ax,.04,.725,.41,.085,'CPU rank\nf64 neuron-state update',BLUE,14)
 box(ax,.55,.725,.41,.085,'GPU rank · alternative adapter\nMetal or CUDA · f32 neuron-state update',GREEN,14)
 box(ax,.04,.58,.41,.095,'Rank-local CPU host work\nThreshold/reset · synapses · queues · recording',BLUE,14)

@@ -73,7 +73,7 @@ z
    <g id="text_2">
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(101.398849 69.732877)">Generic WASM</text>
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(134.30088 79.877565)"/>
-    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(70.459239 96.732877)">B2IR + WasmPlan validation</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(65.294083 96.732877)">AtlasIR + WasmPlan validation</text>
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(66.570255 109.879206)">Shared f64 reference / Worker</text>
     <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #172a39" transform="translate(73.664083 123.732877)">Neural Lab interface below</text>
    </g>

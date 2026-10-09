@@ -17,7 +17,7 @@ mapping={
 'Coordinator host':'协调主机','Worker cap range':'工作主机限额范围','Coordinator cap':'协调主机限额',
 'Baseline time /':'基准耗时／','measured time':'实测耗时','d  Descriptive weak efficiency':'d  描述性弱扩展效率','Simulation':'仿真','Launch':'启动',
 'Retained Brian2 frontend':'保留的Brian2前端','Objects • equations • units • abstract update statements':'对象 • 方程 • 单位 • 抽象更新语句',
-'B2IR: Definition / Instance / Run':'B2IR：定义／实例／运行','Types • clocks • events • effects • identities':'类型 • 时钟 • 事件 • 效应 • 标识',
+'AtlasIR: Definition / Instance / Run':'AtlasIR：定义／实例／运行','Types • clocks • events • effects • identities':'类型 • 时钟 • 事件 • 效应 • 标识',
 'Independent validation → LogicalPlan':'独立验证 → LogicalPlan','Completed dependencies • clocks • transformation eligibility':'补全的依赖 • 时钟 • 变换适用性',
 'Physical planning within the selected backend':'已选后端内的物理规划','Rules + work estimates • optional verified GPU calibration':'规则与工作量估算 • 可选的已验证GPU校准',
 'CPU plan':'CPU计划','GPU plans':'GPU计划','MPI ranks':'MPI进程','Shared reference':'共享参考运行时',
@@ -38,7 +38,7 @@ mapping={
 'Memory (decimal GB)':'内存（十进制GB）','a  Native-child RSS':'a  原生子进程RSS','b  Summed process-tree peaks':'b  进程树峰值之和',
 '3 fresh processes':'3个新进程','1,000 s replay each':'每次重放1,000 s','41 final fields exact':'41个最终字段完全一致','11 trajectory segments exact':'11段轨迹完全一致',
 'c  Process-restart conformance':'c  进程重启一致性','a  Browser execution profiles':'a  浏览器执行配置','Generic WASM':'通用WASM',
-'B2IR + WasmPlan validation':'B2IR与WasmPlan验证','Shared f64 reference / Worker':'共享f64参考运行时／Worker',
+'AtlasIR + WasmPlan validation':'AtlasIR与WasmPlan验证','Shared f64 reference / Worker':'共享f64参考运行时／Worker',
 'Neural Lab interface below':'下方为Neural Lab界面','Experimental WebGPU':'实验性WebGPU','WASM validation → WGSL':'WASM验证 → WGSL',
 'Restricted independent-cell f32':'受限的独立细胞f32','Not used in the screenshot':'截图未使用此路径','Model-specific WASM AOT':'模型专用WASM AOT',
 'Separate frozen generated model':'独立冻结的生成模型','139,255 neurons / 15.1M edges':'139,255个神经元／1,510万条边',
@@ -60,7 +60,7 @@ mapping={
 '31 CUDA MPI tests passed':'31项CUDA MPI测试通过','One L4 · shared device 0':'单张L4 · 共享设备0','Not multi-GPU validation':'不是多GPU验证',
 'Explicit assignment; no automatic placement, mixed-vendor cluster proof or speedup claim':'显式分配；不声称自动放置、混合厂商集群验证或加速',
 }
-keep={'A','B','C','D','Rust','Brian C++','Rust AOT','Metal / CUDA','DistributedPlan','WasmPlan','a  M1 Ultra','b  EPYC 9454 × 2','CPU f64','CPU','Metal','f32','CUDA','Rust CPU f64','CUDA f32','Brian','C++','Brian2 C++','Atlas CPU','Brian2 / Atlas','B2IR → DistributedPlan'}
+keep={'A','B','C','D','Rust','Brian C++','Rust AOT','Metal / CUDA','DistributedPlan','WasmPlan','a  M1 Ultra','b  EPYC 9454 × 2','CPU f64','CPU','Metal','f32','CUDA','Rust CPU f64','CUDA f32','Brian','C++','Brian2 C++','Atlas CPU','Brian2 / Atlas','AtlasIR → DistributedPlan'}
 inventory=json.loads((D/'figure_text_inventory.json').read_text())
 assert set(inventory)==set(mapping)|keep,(set(inventory)-set(mapping)-keep)
 (D/'figure_labels.json').write_text(json.dumps({'translations':mapping,'retained_names':sorted(keep)},ensure_ascii=False,indent=2)+'\n')

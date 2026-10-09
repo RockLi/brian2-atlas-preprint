@@ -22,7 +22,7 @@ All numerical-study driver families now have identified code in the two reposito
 | heterogeneous-mpi | Figure 9; S17 | [mpi_heterogeneous.py](https://github.com/RockLi/brian2-atlas/tree/f90d2b63952092a6c5531f5989ba58b240922b6e/brian2-rust/examples/mpi_heterogeneous.py), [evidence.json](../paper/data/mpi_heterogeneous/evidence.json). Retains CPU/Metal simulation and separate CUDA training qualification scopes. |
 | connected-capacity | Figure 10; Table 6; S19/S20 | [capacity](../experiments/legacy/capacity), [source-versions](../experiments/source-versions). 66 study files added. Exact preparation and generated MPI source identities recovered; large inputs/outputs and fleet settings remain separately supplied. |
 | conditional-resource-analysis | Figure S2; S21 | [analyze_full_scale_resources.py](../paper/scripts/analyze_full_scale_resources.py), [full_scale](../paper/data/full_scale). Analysis script and 12 frozen source files present; conditional arithmetic, not a new full-scale execution. |
-| online-b2ir-capture | Figure S1; S18 | [b2ir_visualization](../paper/data/b2ir_visualization). Retained screenshot/template capture only. The online application is a separate deployment; no hash-matched executed bundle was available for this illustration. |
+| online-atlasir-capture | Figure S1; S18 | [b2ir_visualization](../paper/data/b2ir_visualization). Retained screenshot/template capture only. The online application is a separate deployment; no hash-matched executed bundle was available for this illustration. |
 
 ## Gaps found and repaired
 

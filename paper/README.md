@@ -21,7 +21,7 @@
 
 ## 实现与验收范围
 
-维护中的实现为 [brian2-atlas](https://github.com/RockLi/brian2-atlas)，论文引用固定 commit；准确版本见正文与[验收记录](data/release_validation/acceptance.json)。公开入口为 `brian2_atlas`、`AtlasDevice` 和 `set_device("atlas", ...)`；`brian2_rust` 与 `rust_standalone` 保留兼容。Rust 是实现语言，Atlas 是统一后端名称。
+维护中的实现为 [brian2-atlas](https://github.com/RockLi/brian2-atlas)，论文引用固定 commit；准确版本见正文与[验收记录](data/release_validation/acceptance.json)。公开入口为 `brian2_atlas`、`AtlasDevice` 和 `set_device("atlas", ...)`；`brian2_rust` 与 `rust_standalone` 保留兼容。Rust 是实现语言，Atlas 是统一后端名称，AtlasIR 是共享中间表示的公开名称。
 
 Atlas 保留 Brian2 建模前端，独立实现其执行路径。Brian2CUDA、Brian2GeNN 和 GeNN 是部分实验的外部比较对象，不是 Atlas 运行时依赖；CUDA 执行仍需要 NVIDIA 工具链与驱动。
 
