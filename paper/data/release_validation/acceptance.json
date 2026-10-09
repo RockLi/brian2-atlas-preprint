@@ -95,19 +95,20 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "f409f6583bdf85ce6045b444f014c42f73d46478f52d12dad93b2ffcf9ce3329",
+        "sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 38,
-        "sha256": "9e34c6cd79436bcf594cdb0fbeca13e08bec4766c5a3ff27de2b7b24dd975f93",
+        "sha256": "1adf49993804bcb769ae7aa9469b4260eba72252ffb385825ff3d39501b8ce85",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "24fb4c8314ac5cbb7094633ce3c44dd32722fb2ae19827f9dd45325003aedc3d",
-      "SUPPLEMENTARY.md": "f274569ae6323a9340f1c99dfd35822d1d865d5fa2876a9f1349350e1c45eaa6",
-      "zh-CN/MANUSCRIPT.md": "8a4e148cdabc20316d16c4973ce11dad30fa8698f74b4d306d5d78d02c374866"
+      "MANUSCRIPT.md": "bc14f340adad49a7091249dadc42737240c86f414c8057f88a354e6671f64d02",
+      "SUPPLEMENTARY.md": "ed46a9bb038d2265426ce6bfb8fc2b26d4c43be2dade2f8e75980da06b4b4ab2",
+      "zh-CN/MANUSCRIPT.md": "b47ddc178da331e998c452024c1adfd33d2d301bc46fcea7ad2a1f6a1090328a",
+      "zh-CN/DENDRITIC_SUPPLEMENT.md": "99253696dbf84ca99f3d647a4b3c17be8430a9567084af99a0ba849490417a99"
     }
   },
   "editorial_update": {
@@ -116,7 +117,7 @@
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes."
   },
-  "maintained_implementation_commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
+  "maintained_implementation_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e",
   "public_api": {
     "commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
     "report_url": "https://github.com/RockLi/brian2-atlas/blob/3db257b072fc142b2b268d872c4d7a8129daa248/migration/atlas-public-api.json",
@@ -130,5 +131,13 @@
     "inspection": "Atlas Device and CUDA runtime modules plus distribution dependencies; Brian2CUDA/Brian2GeNN/GeNN imports occur in external comparator scripts, not Atlas runtime modules.",
     "scope": "Documentation only; Brian2 frontend and NVIDIA toolchain/driver dependencies remain explicit.",
     "experiments_repeated": false
+  },
+  "stale_content_audit": {
+    "commit": "f90d2b63952092a6c5531f5989ba58b240922b6e",
+    "previous_implementation_commit": "3db257b072fc142b2b268d872c4d7a8129daa248",
+    "runtime_scope": "Docstrings and diagnostic labels only; execution logic and experiment inputs unchanged.",
+    "targeted_tests_passed": 10,
+    "experiments_repeated": false,
+    "report": "../../../migration/stale-content-audit-20261009.json"
   }
 }

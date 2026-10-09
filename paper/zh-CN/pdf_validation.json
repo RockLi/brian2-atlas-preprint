@@ -1,8 +1,8 @@
 {
   "status": "text-and-layout-checks-passed",
-  "pdf_sha256": "9e34c6cd79436bcf594cdb0fbeca13e08bec4766c5a3ff27de2b7b24dd975f93",
+  "pdf_sha256": "1adf49993804bcb769ae7aa9469b4260eba72252ffb385825ff3d39501b8ce85",
   "page_count": 38,
-  "chinese_character_count": 28517,
+  "chinese_character_count": 28454,
   "outside_page_characters": 0,
   "portrait_pages": 35,
   "original_screenshot_landscape_pages": 3,
@@ -10,10 +10,13 @@
   "content_checks": "All 10 main figures, 7 main tables, S21.1–S21.6, S13/Table S5, Table S4, Figure S2 and three S1 panels; major exact event counts and resource quantities present.",
   "visual_review": {
     "status": "passed",
-    "scope": "All pages reviewed in contact sheets; backend-independence and comparator paragraphs reviewed at full size. No clipping or overlap.",
+    "scope": "All pages reviewed in contact sheets; changed source-citation, architecture, dendritic-method and supplement pages reviewed at full size. No clipping or overlap.",
     "full_size_pages": [
       2,
-      11
+      10,
+      13,
+      27,
+      30
     ]
   }
 }

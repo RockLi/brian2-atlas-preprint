@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "f409f6583bdf85ce6045b444f014c42f73d46478f52d12dad93b2ffcf9ce3329",
-  "english_manuscript_sha256": "24fb4c8314ac5cbb7094633ce3c44dd32722fb2ae19827f9dd45325003aedc3d",
-  "english_supplement_sha256": "f274569ae6323a9340f1c99dfd35822d1d865d5fa2876a9f1349350e1c45eaa6",
-  "scope": "Translate all content in the current 44-page English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Public Atlas API and backend independence clarified; experimental identities and values unchanged.",
-  "atlas_commit": "3db257b072fc142b2b268d872c4d7a8129daa248"
+  "english_pdf_sha256": "ddeccba3b012a6df57aeffc5f6d5567e5caf53d8735abac4bfe5d03af947b5ae",
+  "english_manuscript_sha256": "bc14f340adad49a7091249dadc42737240c86f414c8057f88a354e6671f64d02",
+  "english_supplement_sha256": "ed46a9bb038d2265426ce6bfb8fc2b26d4c43be2dade2f8e75980da06b4b4ab2",
+  "scope": "Translate the current English PDF: main manuscript, Appendix A, integrated S13/S5, S21/S4/S2 and S1 panels. Repository-wide stale-content corrections; experimental identities and values unchanged.",
+  "atlas_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e"
 }

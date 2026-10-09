@@ -1,8 +1,10 @@
 # 论点、证据与补证矩阵
 
+> 写作阶段记录：以下内容按各节记录日期保留，不是当前实现或验收状态。当前稿件、图表数量和验证入口见[论文索引](README.md)。
+
 ## v3 增量证据 — 2026-10-07
 
-以下补充基于当前 next-dev 与本地未提交开发；后续历史矩阵仍代表原 cohort。
+以下为 2026-10-07 的写作期检查记录；后续修订与当前结果以正文和验收记录为准，不能将本节旧性能值当作最终表5。
 
 | 论点 | 保留来源 | 可支持结论与限制 |
 |---|---|---|
@@ -78,7 +80,7 @@ MPI 与 GPU 共享 B2IR/前端设计基础，但当前不是同一个完整集�
 
 ### E05 — CPU 吞吐及大模型
 
-- 来源：[CPU 阶段报告](../../brian2-rust/PROJECT_STAGE_REPORT_20260906.md)、[CPU 回归](../../brian2-rust/REGRESSION_20260907.md)、[FlyWire 跨机器结果](../../brian2-rust/FLYWIRE_CROSS_HOST_RESULTS.md)、[PD14/NEST](../../brian2-rust/PD14_NEST_COMPARISON.md)。
+- 来源：[CPU 阶段报告](../history/brian2-rust/PROJECT_STAGE_REPORT_20260906.md)、[CPU 回归](../history/brian2-rust/REGRESSION_20260907.md)、[FlyWire 跨机器结果](../history/brian2-rust/FLYWIRE_CROSS_HOST_RESULTS.md)、[PD14/NEST](../history/brian2-rust/PD14_NEST_COMPARISON.md)。
 - 已有：多种语义/模型、串行与多线程比较、degree-balanced 与事件路径消融。
 - 可写：具体工作负载、线程与编译环境下的收益及自身扩展。
 - 尚需：选定一种正式 CPU cohort；查原始报告与样本是否仍可访问。不能混用不同日期的最佳数值拼出总表。
@@ -121,7 +123,7 @@ MPI 与 GPU 共享 B2IR/前端设计基础，但当前不是同一个完整集�
 
 ### E10 — 全规模可塑性与恢复
 
-- 来源：[LK 结果](../../brian2-rust/LITWIN_KUMAR_RESULTS.md)、[模型定义](../../brian2-rust/LITWIN_KUMAR.md)、[后续优化记录](../../brian2-rust/NO_REGRESSION_20260907.md)。
+- 来源：[LK 结果](../history/brian2-rust/LITWIN_KUMAR_RESULTS.md)、[模型定义](../history/brian2-rust/LITWIN_KUMAR.md)、[后续优化记录](../history/brian2-rust/NO_REGRESSION_20260907.md)。
 - 已有：4,000 E/1,000 I、约五百万显式连接的 triplet-plasticity 变体；训练与自发阶段、控制实验、敏感性与新进程恢复。其标记为 `paper_reproduction: false`。
 - 代表恢复证据：三个新进程重放完整 1,000 s spontaneous phase，41 个最终字段及 11 段记录精确一致。
 - 重要边界：native RSS 优势不必转化为完整进程树内存优势；较早一个完整记录 cohort 在 1,000 s 时正有这种反例。恢复准备耗时须与 compiled throughput 分开。
@@ -130,7 +132,7 @@ MPI 与 GPU 共享 B2IR/前端设计基础，但当前不是同一个完整集�
 
 ### E11 — 小内存机器上的 PD14
 
-- 来源：[16 GB PD14](../../brian2-rust/PD14_LOCAL_16GB.md)。
+- 来源：[16 GB PD14](../history/brian2-rust/PD14_LOCAL_16GB.md)。
 - 已有：77,169 neurons、298,880,968 synapses，Rust 在 16 GB M3 完成 10 s；C++ 前端物化阶段超过控制内存预算，严重 swapping 后停止。
 - 可写：此 workload/configuration 下程序化原生构图的可用性差异。
 - 不写：macOS 实际发生 OOM kill。报告明确没有观察到内核 OOM kill；也不是完整精度/拓扑位流相同的性能实验。

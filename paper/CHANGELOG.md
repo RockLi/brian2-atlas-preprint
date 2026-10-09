@@ -1,5 +1,12 @@
 # Manuscript revisions
 
+## 2026-10-09: repository-wide stale-content audit
+
+- Refresh the manuscript index to 10 main figures, 7 main tables, 16 references and S1–S21; distinguish current validation from cutoff records.
+- Repair supplementary evidence links after the repository split and identify planning documents as dated writing records.
+- Describe the dendritic retest by its frozen measurement source, without implying a rerun on the current development head.
+- Synchronize English and Chinese reading versions; measured values and figure data remain unchanged.
+
 ## 2026-10-09: explicit backend independence
 
 - Clarify that Atlas implements its own execution paths without runtime dependence on Brian2CUDA, Brian2GeNN or GeNN.

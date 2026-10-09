@@ -9,8 +9,8 @@ The product implementation is maintained in [RockLi/brian2-atlas](https://github
 - [Manuscript source](paper/MANUSCRIPT.md)
 - [Portable reading version](paper/MANUSCRIPT.html)
 - [Supplementary methods and evidence](paper/SUPPLEMENTARY.md)
-- [Evidence and experiment matrix](paper/EVIDENCE_MATRIX.md)
-- [Original manuscript material index](paper/README.md)
+- [Dated writing-stage evidence matrix](paper/EVIDENCE_MATRIX.md)
+- [Current manuscript material index](paper/README.md)
 
 The captured figure-building environment uses Python 3.14.4. Install the plotting dependencies and rebuild from retained data:
 
@@ -21,7 +21,7 @@ python -m pip install -r paper/requirements-lock.txt
 python paper/scripts/build_manuscript.py
 ```
 
-The complete dependency versions are pinned in `paper/requirements-lock.txt`; `paper/requirements.txt` lists the direct dependencies. A clean local rebuild reproduced all tracked manuscript outputs byte-for-byte ([validation record](migration/clean-manuscript-build.json)).
+The complete dependency versions are pinned in `paper/requirements-lock.txt`; `paper/requirements.txt` lists the direct dependencies. A clean local rebuild reproduced the outputs at the revision recorded in the [initial build validation](migration/clean-manuscript-build.json). Current structure and figure hashes are in the [build report](paper/validation/build_report.json).
 
 The generator defaults to Matplotlib’s bundled fonts, avoiding host font-discovery differences. It writes the figures, `paper/MANUSCRIPT.html`, and `paper/validation/build_report.json`. Its checks cover retained-file hashes, figure/table structure, and consistency of the reported numbers. They do not constitute new simulations or hardware measurements.
 
@@ -45,6 +45,6 @@ The upstream Brian2 author and license files are retained with the imported mate
 
 The product migration cutoff is the third frozen increment (`20261008T161008Z`), explicitly selected by the user. Later development is recorded as a separate future port. The [migration report](https://github.com/RockLi/brian2-atlas/blob/dev/migration/FINAL_REPORT.md) summarizes the accepted product, distribution checks, historical limits and remaining publication tasks.
 
-[Final paper and reproduction integrity](migration/final-paper-reproduction-integrity.json) confirms that the current generated figures, PDF, pinned model, binary and actual run artifacts still match their accepted checksums.
+[Cutoff paper and reproduction integrity](migration/final-paper-reproduction-integrity.json) preserves checksums at the migration cutoff. Subsequent manuscript edits are checked in the [current PDF validation](paper/validation/current_commit_pdf_qa.json).
 
-The [current paper validation](paper/data/release_validation/acceptance.json) records the merged Atlas commit, 709-case CUDA qualification and the repeated PD14 result at that commit. English and Chinese reading versions were rebuilt with historical measurement identities retained.
+The [current paper validation](paper/data/release_validation/acceptance.json) distinguishes the maintained implementation and public API revision from the CUDA and PD14 qualification revisions. The 709-case CUDA follow-up and repeated PD14 workflow are retained at `bf1cf30af55a4a14ae42d0d75534728385b62d06`; changing the manuscript implementation citation does not relabel those measurements. English and Chinese reading versions are checked together.

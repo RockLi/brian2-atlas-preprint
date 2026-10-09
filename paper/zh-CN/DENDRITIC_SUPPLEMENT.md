@@ -6,7 +6,7 @@
 
 保留的适配模型包含十六个源码文件，树摘要为89cb7eba9d314176f61e05795c1f6aebf08cb84825df46a59b0fb60d0ae2b108；运行元数据记录的模型源码版本为73feb595ede908a368947d932055dc0a4e1b3817。上述上游参考快照与保留的适配器是不同来源记录。统一运行时快照不替代外部模型源码身份。
 
-当前代码的网络复测绑定统一源码身份cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112（[清单](../data/common_source/manifest.json)、[冻结记录](../data/common_source/freeze.json)）；重新生成模型的SHA-256为52a5202630b2689abda2eabfa87fd43b32ca15041266af0f2613d4b302378490。冻结拓扑保持一致。当前独立Rust验证器从匹配该快照的源码构建；保留Cargo.lock、rustc 1.98.1及既有Zig 0.16.0 C/C++环境。激活顺序为Cython、关闭缓存、启用缓存、启用缓存、关闭缓存、Cython，每次舍弃一次预热后进行三次无分析器测量。[默认实现汇总](../data/common_source/aggregate.json)与[同源码消融](../data/common_source/aggregate-uncached.json)均通过协议、亲和性、拓扑及全部21项状态数组门槛。共同Cython中位数为9.796825735 s；关闭缓存与默认实现的Rust中位数分别为11.564384068 s和7.631756929 s。四次新导出的模型哈希完全一致，全部原生状态／事件文件哈希也完全一致。默认实现的Cython/Rust比值为1.283692055；缓存复用使耗时降低34.006%。
+冻结源码的网络复测绑定统一源码身份cc67a82bfeed8ce850c264b4ace7924b9b56be116b4132bb3e4eed9e2b020112（[清单](../data/common_source/manifest.json)、[冻结记录](../data/common_source/freeze.json)）；重新生成模型的SHA-256为52a5202630b2689abda2eabfa87fd43b32ca15041266af0f2613d4b302378490。冻结拓扑保持一致。匹配的独立Rust验证器从匹配该快照的源码构建；保留Cargo.lock、rustc 1.98.1及既有Zig 0.16.0 C/C++环境。激活顺序为Cython、关闭缓存、启用缓存、启用缓存、关闭缓存、Cython，每次舍弃一次预热后进行三次无分析器测量。[默认实现汇总](../data/common_source/aggregate.json)与[同源码消融](../data/common_source/aggregate-uncached.json)均通过协议、亲和性、拓扑及全部21项状态数组门槛。共同Cython中位数为9.796825735 s；关闭缓存与默认实现的Rust中位数分别为11.564384068 s和7.631756929 s。四次新导出的模型哈希完全一致，全部原生状态／事件文件哈希也完全一致。默认实现的Cython/Rust比值为1.283692055；缓存复用使耗时降低34.006%。
 
 **表S5 | 同源码端点缓存消融。** 两种策略采用同一冻结源码、重新生成的B2IR、完整拓扑、数值精度、编译器选项及Cython对照。每行报告每后端在100 ms模型时间上的六次测量观察；时间均为稳态仿真／所需记录中位数，单位秒。比值为Cython除以Rust。关闭缓存是显式实验消融；默认实现启用端点复用。
 
