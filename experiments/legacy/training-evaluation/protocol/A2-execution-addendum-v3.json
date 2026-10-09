@@ -1,0 +1,145 @@
+{
+  "admission_evidence_path": "evidence/data-preparation/atlas-a2-admission/result.json",
+  "admission_status": "pending; consult evidence result, do not infer acceptance from contract freeze",
+  "data_manifest_sha256": "a60a6442e59416233ce1bdebd93a7bb9cc8faa80cb6e7d69092c9e0f607cd2ac",
+  "execution_state": "pending_admission_and_adapter_qualification",
+  "forward": {
+    "beta": 0.95,
+    "comparison": "strict >",
+    "initial_state": "float64 zeros B by276; no carry",
+    "loss": "cross entropy; global-batch mean",
+    "readout": "5*mean_t(output spikes)",
+    "scheduling": "all drift and threshold first; current-tick input and recurrent spikes update next membrane; detached subtract reset",
+    "surrogate": "g(m)=1/(1+5*abs(m))**2",
+    "threshold": 1.0
+  },
+  "frozen_before_any_A2_training_or_performance": true,
+  "global_batch": 32,
+  "hardware": "authorized 100.90.28.27 CPU",
+  "initialization": {
+    "arrays": {
+      "11": {
+        "path": "evidence/data-preparation/atlas-a2-admission/shared-weights/seed-11.npz",
+        "raw_array_sha256": {
+          "bank_0": "c4b3bf289e608e3747ab576b9ab2d59b0cca6963798a394a89386f645a41afcd",
+          "bank_1": "e5e4bbcf4d045216cb05ced34a79033581b4707947a22af3d133e6cd7834c439",
+          "bank_2": "00b467b888bef612c79e700045e22d1ab9f73c88c029bed34c5a82bc47ab0cf4"
+        },
+        "sha256": "172d92bed163be46556cca4e9c483380ce12c6935372334a2a568789eb4cb70b"
+      },
+      "23": {
+        "path": "evidence/data-preparation/atlas-a2-admission/shared-weights/seed-23.npz",
+        "raw_array_sha256": {
+          "bank_0": "4aa64b74e77b6c9e3c045cecfa55cae6c1a4878527c127e4a2d5d4b1e2de668d",
+          "bank_1": "062bce6159229db23723875eed6353d1c6836178d7b2f9c76c7bcbba65a8a328",
+          "bank_2": "d590003ee7737afdc812dd3372a1a9b9b983d147ce16c76f6f59ab8d3851e1d1"
+        },
+        "sha256": "6fb564af624d894bf60db0f02cace00c02d1773eda2111899a0d4d89b1cf3273"
+      },
+      "37": {
+        "path": "evidence/data-preparation/atlas-a2-admission/shared-weights/seed-37.npz",
+        "raw_array_sha256": {
+          "bank_0": "66c69082350d33a56d5772efec6590c3f0af555e5553cd83e624e4251d550095",
+          "bank_1": "10b991d14698cc880107b35fa402ed2332d18c1a01cadb921347f091c62beead",
+          "bank_2": "cf4b6c9325655ddba80ff62dc0c386c5e7eb1b6406f67629b0e6e36454b119d9"
+        },
+        "sha256": "09defdd671973a36954ed1a41e714246ed3acabb54d46f5e6c11114fa8a2b4a2"
+      },
+      "51": {
+        "path": "evidence/data-preparation/atlas-a2-admission/shared-weights/seed-51.npz",
+        "raw_array_sha256": {
+          "bank_0": "3e1d773245c258c4a9c89de1bb3af1a3a1fdb495d4a94ef0ad038dbeac75340c",
+          "bank_1": "6707e80d03832f579125497391f9b0d5ae31ae7d316ce668bf9bd7666c0ab08b",
+          "bank_2": "77913da8292c138e609dd55c687fe1f2141403ff48ee1595bd75847cff81eb3c"
+        },
+        "sha256": "ed5837a60e5fac7a8f98700edccb50608c592089dd65aa9f801c142561b31086"
+      },
+      "71": {
+        "path": "evidence/data-preparation/atlas-a2-admission/shared-weights/seed-71.npz",
+        "raw_array_sha256": {
+          "bank_0": "040675e9bd3f2e24df11936a57b8341b815ff2c4ae4fce7965ba5dfb4f99094f",
+          "bank_1": "3457b7654c888681bcb6dc3f47e35da7088c8d09d6945193ab240476bf8dd9b7",
+          "bank_2": "7d2b42d6c19c9412ff4a26fabeffb2f2544f605bdcf5fc817db62c7489c659dc"
+        },
+        "sha256": "456ab45dfcceebe7bcb6ecbfba4ca5309b801db51e9f1b4aadc60b2d31b2b23b"
+      }
+    },
+    "distribution": "normal(0,sqrt(2/fan_in)); input then recurrent then output; source-major flattened float64",
+    "first_moment": "float64 zeros",
+    "generator": "NumPy PCG64(seed)",
+    "numpy_version": "2.5.2",
+    "second_moment": "float64 zeros",
+    "seeds": [
+      11,
+      23,
+      37,
+      51,
+      71
+    ],
+    "step": 0
+  },
+  "microbatch_enabled": false,
+  "numeric_profile": {
+    "backward": "float64",
+    "forward": "float64",
+    "id": "cpu_fp64",
+    "input_cast": "exact integer counts tofloat64",
+    "input_storage": "uint16 count bins; integer JSON tokens",
+    "loss_reduction": "mean over original global B32",
+    "optimizer": "float64",
+    "parameter_cast": "none",
+    "parameters": "float64"
+  },
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "kind": "Adam",
+    "learning_rate": 0.001,
+    "updates": "one per original global batch; no microbatch enabled",
+    "weight_decay": 0
+  },
+  "original_case_retained_on_rejection": true,
+  "plan_identity": {
+    "path": "evidence/data-preparation/atlas-a2-admission/plan.json",
+    "sha256": "fa5dac2f58bb4ca6582f9c1ccd19f5b659701f59dc9bc1eab32e13a2f514cfca"
+  },
+  "preprocessing": {
+    "labels_policy": "test labels remain sealed",
+    "path": "data/shd/processed/preprocess.json",
+    "sha256": "59dbd54454a432683ed7fc6c6e372dc063ccb9bd4d6a1b7a8e0b5af8e38dacd2",
+    "split_sha256": "ea3bcc8183dbace8827029e11315af6920542f915c169b50b518dd976e0d5f63"
+  },
+  "previous_protocol": {
+    "path": "protocol/execution-plan-r2.json",
+    "sha256": "cc3dc9f0219db5d1ab3fdb16760cecce7114903244e62294110aa7b64b16d118"
+  },
+  "qualification": "No A2 engine is qualified by this admission audit; requires prior Q0/recurrent profile plus A2 finite-value/run checks",
+  "schema": "atlas-a2-execution-addendum-v3",
+  "scope": "A2 CPU FP64 dense recurrent contract and seed11 software admission; qualification still required",
+  "shape": {
+    "B": 32,
+    "T": 1370,
+    "channels": 700,
+    "dt_seconds": 0.001,
+    "sizes": [
+      700,
+      256,
+      20
+    ]
+  },
+  "topology": {
+    "additional_delay_ticks": 0,
+    "input": "dense 700 to256",
+    "output": "dense256 to20",
+    "projection_order": [
+      "input",
+      "recurrent",
+      "output"
+    ],
+    "recurrent": "dense256 to256 including self-connections",
+    "source_major_parameter_order": true
+  },
+  "training_config_scope": "learning_rate .001 and weight multiplier1.0 are preregistered HPO members, not selected winners",
+  "workload": "A2"
+}

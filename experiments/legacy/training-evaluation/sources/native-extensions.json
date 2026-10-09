@@ -1,0 +1,14 @@
+[
+  {
+    "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2/memory/cythondynamicarray.cpython-314-darwin.so",
+    "destination": "snapshot/brian2/memory/cythondynamicarray.cpython-314-darwin.so",
+    "sha256": "6c2e167e9cfdee22737d28f6e9e40900f58f69123f1ba33cde04528f54e27674",
+    "role": "prebuilt CPython 3.14 extension from repository; isolated copy"
+  },
+  {
+    "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2/synapses/cythonspikequeue.cpython-314-darwin.so",
+    "destination": "snapshot/brian2/synapses/cythonspikequeue.cpython-314-darwin.so",
+    "sha256": "1e2bba404fc60caafd2b41cf7027f1f2d73b68fe01df960212a7bbeb9310b2c0",
+    "role": "prebuilt CPython 3.14 extension from repository; isolated copy"
+  }
+]

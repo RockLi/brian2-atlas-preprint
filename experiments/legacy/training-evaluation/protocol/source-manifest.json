@@ -1,0 +1,24 @@
+{
+  "research_date": "2026-10-04",
+  "purpose": "Verbatim research sources, not new benchmark evidence",
+  "sources": [
+    {
+      "origin": "/atlas-home/0004/workspace/next-brain.ai/next-brain.ai/model-platform/docs/training-competitive-analysis-2026-10-04.md",
+      "archived_path": "sources/training-competitive-analysis-2026-10-04.md",
+      "sha256": "1d48e34121af2dfcfd2abfd299e574e6288eb816f48e8c012ede3e5c50fbcf8c",
+      "bytes": 27789
+    },
+    {
+      "origin": "/atlas-home/0004/workspace/next-brain.ai/next-brain.ai/model-platform/docs/training-engine-evaluation-v1.md",
+      "archived_path": "sources/training-engine-evaluation-v1.md",
+      "sha256": "6931a6c398cf461717e9c648348d8909b0692d56c06538479d7ba5ba3d6e7654",
+      "bytes": 40580
+    },
+    {
+      "origin": "/atlas-home/0004/workspace/next-brain.ai/next-brain.ai/model-platform/docs/validation/training-engine-evaluation-v1.plan.json",
+      "archived_path": "sources/training-engine-evaluation-v1.plan.json",
+      "sha256": "b4b812302ffae35dded951b0a5fc912a3f85183102477030437f010c9d487e7c",
+      "bytes": 43407
+    }
+  ]
+}

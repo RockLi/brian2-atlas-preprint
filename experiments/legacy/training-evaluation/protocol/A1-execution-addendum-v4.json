@@ -1,0 +1,109 @@
+{
+  "schema": "atlas-a1-execution-addendum-v4",
+  "status": "frozen_pretraining",
+  "workload": "A1",
+  "purpose": "MNIST pipeline sanity; no engine-leadership claim from this task alone",
+  "prior_protocol": "protocol/execution-plan-r2.json",
+  "authorized_execution_host": "rock-mac-studio-1.local (100.90.28.27)",
+  "sizes": [
+    784,
+    128,
+    10
+  ],
+  "T": 100,
+  "global_batch": 32,
+  "train_samples": 55000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "formal_seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "max_epochs": 10,
+  "total_wall_cap_seconds_per_seed": 1800,
+  "wall_scope": "Coordinator before fresh worker launch through cold imports/compile, array verification, A1 numerical qualification, input construction/copy, full training API, complete validation, checkpoint I/O and once-only final test. No additional test grace budget.",
+  "HPO": false,
+  "encoding": "Cast original uint8 pixels to float64, divide by255.0, flatten row-major784; repeat the same analogue current for all100ticks. No Poisson draw, augmentation or feature fit.",
+  "split": "Use existing immutable data/mnist/processed train_indices.npy and validation_indices.npy. Official test images and labels are decoded only after a full-epoch selected checkpoint exists.",
+  "initial_parameters": {
+    "generator": "NumPy Generator(PCG64(seed))",
+    "draw_order": "input-to-hidden then hidden-to-output; source-major flattened banks",
+    "distribution": "normal(0,sqrt(2/fan_in)); float64",
+    "shared_arrays": "Materialize all five seeds before fitting; archive bytes and SHA256. Engines load common arrays rather than regenerate from equal seed."
+  },
+  "shuffle": {
+    "generator": "Independent NumPy Generator(PCG64(seed+1000003))",
+    "rule": "For each epoch in1..10 draw one complete permutation of the frozen55000 training indices; archive all10 permutations before fitting.",
+    "train_batches_per_epoch": 1719,
+    "last_train_batch_samples": 24,
+    "drop_last": false,
+    "validation_order": "ascending immutable validation_indices, all5000; final batch8",
+    "test_order": "official order0..9999, all10000; final batch16"
+  },
+  "numeric_profile": {
+    "id": "cpu_fp64",
+    "forward": "float64",
+    "backward": "float64",
+    "master_parameters": "float64",
+    "parameter_cast": "none",
+    "optimizer": "float64 Adam; lr0.001, beta1=0.9, beta2=0.999, epsilon=1e-8, weight_decay=0",
+    "batch_reduction": "mean over actual batch size, including24sample final training batch; one Adam step per batch",
+    "state": "Explicit zero voltage per example; no carry across batches",
+    "equations": "canonical_lif_v1: drift/strict threshold before synaptic update; beta0.95, theta1, detached subtract reset; fast-sigmoid VJP slope5",
+    "readout": "5*mean_t(output spikes); cross_entropy"
+  },
+  "resource_profile": "Atlas CPU and Torch CPU requested1compute thread; macOS core affinity unavailable. JAX is not implemented by the initial pipeline and must not be silently substituted.",
+  "views_initially_implemented": [
+    "atlas",
+    "snntorch_fp64 layerwise",
+    "spikingjelly_frontier layerwise"
+  ],
+  "compile": "Optional Torch compile is a separate view; fresh per-run cache and actual-path A1 qualification required; cold compile consumes the same1800s cap.",
+  "qualification": "Require matching prior dense Q0. Within the1800s worker, compare three actual full-B32/T100 MNIST training updates against independent oracle: loss, parameter gradients, weights and Adam moments. Reset to common initial arrays before epoch1. Small/dynamic final batch must retain declared semantics; actual tail-shape qualification is also required.",
+  "selection": "Complete all55000 training samples and all5000 validation samples before an epoch is eligible. Select maximal integer validation correct count; earliest epoch wins ties. Save each improved checkpoint with hash before committing the selection record.",
+  "time_to_quality_targets": [
+    0.9,
+    0.95
+  ],
+  "continue_training_rule": "After each complete epoch and checkpoint bookkeeping, continue only if another epoch remains and remaining seconds exceed1.10*just_completed_epoch_wall + 1.25*2*just_completed_validation_wall +2.0. Otherwise begin final evaluation. This fixed reserve heuristic may still censor test at the hard cap.",
+  "test_policy": {
+    "attempts_per_seed": 1,
+    "gate": "A selected checkpoint from a fully completed epoch exists and wall budget remains; restore that checkpoint, write durable test-start marker, then decode official test bytes.",
+    "completion": "Report test accuracy/loss only after all10000 samples finish within the same1800s cap.",
+    "cap_before_any_epoch": "censored; no selected checkpoint; test labels remain sealed",
+    "cap_during_test": "test_status=censored_at_cap; retain bestvalidation/checkpoint; no partial test accuracy and no retry",
+    "once_only_ledger": "Exclusive-create evidence/a1-v4-test-once/{view}-seed-{seed}-{contract_sha256}.json before decoding test labels; persists across fresh run directories, preventing retry of the same formal view/seed."
+  },
+  "failure_policy": "Keep unsupported, unqualified, dependency failure, budget_rejected, timeout, divergence and incomplete test as separate outcomes; preserve all five formal seeds and original sample/epoch denominators. No truncated epoch, shorterT, smaller global batch or extra cap after results.",
+  "freeze_basis": "Coordinator review before any A1 execution; existing user authorization covers this evaluation. --allow-run is an accidental-execution guard, not a request for new user approval.",
+  "implementation_sha256": "fbc00965cc8023ee6574c31760b66a9b34385b539b349057bac1bca30d80de42",
+  "qualification_engine_binding": "q0 report engine must exactly match requested engine; all Torch Q0 raw compile flags must match requested compile mode; Atlas Q0 raw runtime/training API hashes must match.",
+  "supervision": "Track own descendants by PID+creation time, including independent sessions; clean tracked remnants also after normal worker exit; Popen.wait exclusively reaps direct worker, preserving signal exit code.",
+  "prior_revision": {
+    "path": "protocol/A1-execution-addendum-v3.json",
+    "sha256": "bd79134cfc8ba23bddc3026b22a82656eb909126b16768dfa086d633d70bf7a6",
+    "execution_state": "v3 preserved, never uploaded or executed as an A1 model/data workload"
+  },
+  "revision_reason": "Preserve strict >0 neuron threshold in validation/test by keeping Torch/SJ training mode and disabling autograd only; add actual no-gradient threshold boundary qualification before fitting.",
+  "evaluation_forward_policy": {
+    "atlas": "Native evaluate operation with explicit initial state, no optimizer update",
+    "torch": "model.train(True) for training, validation and final test; torch.set_grad_enabled(False) only during validation/test",
+    "reason": "This model contains no Dropout or BatchNorm; SpikingJelly eval mode otherwise replaces the configured strict surrogate with >=0 heaviside.",
+    "actual_path": "record_states=False; same model callable for qualification and measured workload, including optional torch.compile"
+  },
+  "boundary_qualification": {
+    "before_epoch1": true,
+    "budget": "Included in the same strict 1800 second total wall cap, including optional extra compile",
+    "formal_zero_state_unchanged": true,
+    "explicit_initial_scope": "Qualification-only B2 full-width 784-128-10, selected hidden/output voltages at neighboring representable FP64 values around theta/beta; all training/validation/test batches still begin at zero",
+    "full_shape": "B2,T100 actual no-gradient callable versus independent oracle loss/logits; Atlas also compares all actual native first-tick spikes",
+    "actual_margin": "Record actual charged voltage minus threshold for both real Torch neuron cells under no_grad and train(True); each cell must include exactly zero margin and return strict >0 spikes, with negative and positive neighbors",
+    "compiled_observability": "Additional B2,T1 full-width no-gradient fixture through the same eager/compiled callable directly checks first-output logits == 5*strict-threshold-spikes and independent oracle; clearly auxiliary, does not shorten formal T100",
+    "direct_surrogate": "Record strict spike outputs for explicit margins [-2^-20,0,+2^-20] under no_grad; eager cell checks do not substitute for compiled callable checks",
+    "failure": "Any missing zero boundary or mismatch yields unqualified; no formal training begins",
+    "reset": "Reset common initial weights and optimizer after qualification before epoch1"
+  }
+}

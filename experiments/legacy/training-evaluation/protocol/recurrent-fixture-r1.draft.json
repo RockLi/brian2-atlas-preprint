@@ -1,0 +1,61 @@
+{
+  "schema": "recurrent-fixture-proposal-v1",
+  "status": "draft_pending_parent_confirmation_before_fixture_generation_or_remote_execution",
+  "source_case_manifest": "protocol/finite-engine-cases.json",
+  "case_selection": "Exactly the nine case_id values beginning R-; unchanged B, T, input, hidden, output, density and workload_ids; no new Cartesian combinations or refinements in this queue.",
+  "seeds": [11, 23, 37, 51, 71],
+  "input": {
+    "values": [0, 1, 2],
+    "probabilities": [0.9, 0.095, 0.005],
+    "dtype": "integer counts in common JSON; cast IEEE float64 for compute",
+    "stream": "One PCG64 default_rng(SeedSequence([seed, 101, sample_index])) per batch sample; choice over shape (T,128). Sampling a shorter T gives an exact prefix of the longer sequence for that same sample.",
+    "coupling": "Within a seed, input arrays at equal T are identical for every N and p; temporal scans share per-sample prefixes. Network and optimizer initial state do not depend on T."
+  },
+  "topology": {
+    "feedforward": "All input->hidden and all hidden->output directed edges; explicit target-major edge lists with source-major dense bank parameter_ids, matching the qualified graph convention.",
+    "recurrent_candidates": "All N*N directed hidden->hidden ordered pairs including diagonal self-connections; no parallel edges.",
+    "recurrent_edge_sampling": "Independent Bernoulli(p) for every candidate, generated one target row at a time. For target j use default_rng(SeedSequence([seed,202,N,j])).random(N) < p. Keep sources in ascending order; concatenate targets in ascending order.",
+    "density_one": "The p=1 case includes all N*N candidate edges, including the diagonal; it is still the explicit-edge graph view.",
+    "density_coupling": "For fixed seed,N, the same uniforms generate nested p=.01,.1,1 topologies. Record actual E, density E/(N*N), self-edge count and per-target indegrees; do not assert exact p*N indegree.",
+    "parameter_sharing": "No recurrent tying: each retained edge has one independent parameter bank index 0..E-1 in (target,source) order.",
+    "self_connection_evidence": "The frozen E3/E6/E7 source specifies density but does not prescribe self inclusion/exclusion. The no-self rule found in semantic-contracts.json applies only to L2. Inclusion here is a proposed new explicit decision and needs confirmation; the existing Q0 recurrent graph includes diagonal edges.",
+    "delay": "No delay buffers. All groups drift and threshold first; all feedforward and recurrent additions follow, influencing the next threshold stage."
+  },
+  "initialization": {
+    "input_bank": "default_rng(SeedSequence([seed,303,N])) Normal(0,sqrt(2/128)) in source-major shape (128,N)",
+    "output_bank": "default_rng(SeedSequence([seed,304,N])) Normal(0,sqrt(2/N)) in source-major shape (N,20)",
+    "recurrent_bank": "For target j, default_rng(SeedSequence([seed,305,N,j])).normal(0,1,size=N), retain the same Bernoulli edge mask and multiply by sqrt(2/max(1,p*N)).",
+    "recurrent_normalization_note": "Expected-fan-in normalization is a proposed policy, not specified by the original source. It changes deterministically with p before any results exist; common surviving edges share standard-normal draws but their scale differs with p. Report spike counts/rates; do not interpret density scans as activity-matched timing.",
+    "state": "All initial voltages zero for every sample and every public train call; no implicit carry between global batches.",
+    "labels": "arange(B) % 20",
+    "dynamics": "beta=.95, threshold=1, strict >, subtract reset with stopped spike VJP, slope-5 fast sigmoid surrogate, logits=5*mean(output_spikes), global-batch mean CE",
+    "optimizer": "Adam float64 parameters and moments, lr=.001, beta1=.9, beta2=.999, eps=1e-8, eps_root=0, no decay; one optimizer step per full global batch."
+  },
+  "qualification_and_admission": {
+    "oracle": "Existing independent NumPy graph forward_vjp; actual competitor cells/transforms via the qualified graph_competitor adapter.",
+    "scope": "Full-size per-case qualification of states, spikes, logits, CE loss, initial VJP, each bank gradient, local surrogate VJP, one SGD update and three Adam steps. Diagnostics are not performance scores.",
+    "atlas": "Exact current-request canonical JSON bytes and v2 graph tape formula before each attempted native update; retain earlier admitted/executed steps when a later optimizer state exceeds 64 MiB. A software budget rejection is never a physical OOM.",
+    "no_reduction": "No microbatching, shorter T, smaller N/B, pruning, TBPTT, or removal of self edges in response to a result.",
+    "admission_only": "Optional separate exact-admission queue over all nine cases/five seeds; it does not qualify an engine or manufacture a native execution result."
+  },
+  "proposed_queue": {
+    "views": ["atlas", "snntorch_fp64", "spikingjelly_frontier_compile", "spyx_jit", "brainstate_jit"],
+    "first_stage": "Prepare fixtures and exact Atlas admission, then bounded qualification; no recurrent performance timings claimed by this initial queue.",
+    "per_seed_view_seconds": 360,
+    "per_case_view_aggregate_seconds": 1800,
+    "max_total_qualification_seconds": 81000,
+    "scope_note": "9 cases * 5 views * 5 seeds; every cell retains an explicit outcome, including unqualified, timeout, software rejection and OOM. Shared fixture preparation and admission work are recorded separately.",
+    "proposed_supervisor_rss_guard_bytes": 68719476736,
+    "rss_guard_decision": "Needs confirmation: a 64 GiB contemporaneous process-tree RSS guard protects the shared 128 GiB host; a guard-triggered kill would be resource_limit, never physical OOM or an engine capacity failure.",
+    "hardware_disclosure": "Only user-selected 100.90.28.27 host; same E1 environment settings. JAX worker pool is not confined to one CPU by OMP=1. RSS contains qualification and compilation artifacts and is not training-only memory.",
+    "concurrency": "No remote preparation, admission counting, compilation, qualification or performance while the ongoing E1-small/E1-large performance phase is active."
+  },
+  "confirmation_required_for": [
+    "Bernoulli per-candidate sparse sampling rather than fixed edge count or fixed indegree",
+    "Include self-connections (the original R source leaves this unspecified)",
+    "Expected-fan-in recurrent weight normalization sqrt(2/max(1,p*N))",
+    "Independent coupled RNG streams preserving temporal prefixes and fixed network across T",
+    "64 GiB process-tree RSS guard and separate resource_limit outcome",
+    "225 full-size seed/view qualification cells with 22.5-hour maximum active budget, within the existing 72-hour CPU reservation"
+  ]
+}

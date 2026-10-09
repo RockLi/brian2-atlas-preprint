@@ -1,0 +1,392 @@
+contender_id,workload_id,coverage,reason
+atlas,Q0,mandatory,Numerical fixtures：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,E1,mandatory,Dense LIF：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,E2,specialized,Tied-weight convolutional SNN：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,E3,mandatory,Sparse recurrent LIF：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,E4,mandatory,Adaptive two-state：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,E5,specialized,Explicit complex point-neuron equations：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,E6,mandatory,Full-sequence capacity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,E7,mandatory,Width capacity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,L1,mandatory,Pair STDP exact-event fixture：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,L2,mandatory,Sparse E/I local plasticity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,A1,mandatory,MNIST pipeline sanity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,A2,mandatory,SHD full SG-BPTT：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+atlas,A3,specialized,SHD algorithm comparison：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,F1,specialized,Single-compartment HH parameter fitting：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,F2,specialized,Multicompartment HH：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,F3,specialized,Deep convolution or Spikformer：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+atlas,M1,mandatory,Preregistered Brian2 model corpus：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。
+brian2,Q0,specialized,Numerical fixtures：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2,L1,mandatory,Pair STDP exact-event fixture：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。
+brian2,L2,mandatory,Sparse E/I local plasticity：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。
+brian2,A1,not_applicable,A1 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。
+brian2,A2,not_applicable,A2 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。
+brian2,A3,not_applicable,A3 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。
+brian2,F1,specialized,Single-compartment HH parameter fitting：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2,F2,specialized,Multicompartment HH：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2,F3,not_applicable,F3 的深层卷积边界不在 brian2 本轮专项；其选定范围为原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；不外推能力缺失。
+brian2,M1,mandatory,Preregistered Brian2 model corpus：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。
+brian2cuda,Q0,specialized,Numerical fixtures：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2cuda,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2cuda,L1,specialized,Pair STDP exact-event fixture：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2cuda,L2,specialized,Sparse E/I local plasticity：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2cuda,A1,not_applicable,A1 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。
+brian2cuda,A2,not_applicable,A2 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。
+brian2cuda,A3,not_applicable,A3 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。
+brian2cuda,F1,not_applicable,F1 的HH/多室边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。
+brian2cuda,F2,not_applicable,F2 的HH/多室边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。
+brian2cuda,F3,not_applicable,F3 的深层卷积边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。
+brian2cuda,M1,specialized,Preregistered Brian2 model corpus：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2genn,Q0,specialized,Numerical fixtures：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2genn,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2genn,L1,specialized,Pair STDP exact-event fixture：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2genn,L2,specialized,Sparse E/I local plasticity：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2genn,A1,not_applicable,A1 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。
+brian2genn,A2,not_applicable,A2 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。
+brian2genn,A3,not_applicable,A3 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。
+brian2genn,F1,not_applicable,F1 的HH/多室边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。
+brian2genn,F2,not_applicable,F2 的HH/多室边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。
+brian2genn,F3,not_applicable,F3 的深层卷积边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。
+brian2genn,M1,specialized,Preregistered Brian2 model corpus：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+genn,Q0,not_applicable,Q0 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。
+genn,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+genn,L1,specialized,Pair STDP exact-event fixture：纳入原生 GeNN 局部可塑性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+genn,L2,specialized,Sparse E/I local plasticity：纳入原生 GeNN 局部可塑性；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+genn,A1,not_applicable,A1 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。
+genn,A2,not_applicable,A2 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。
+genn,A3,not_applicable,A3 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。
+genn,F1,not_applicable,F1 的HH/多室边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。
+genn,F2,not_applicable,F2 的HH/多室边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。
+genn,F3,not_applicable,F3 的深层卷积边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。
+genn,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；genn 的有限工程预算用于原生 GeNN 局部可塑性，不宣称它不能迁移。
+snntorch,Q0,mandatory,Numerical fixtures：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,E1,mandatory,Dense LIF：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,E2,specialized,Tied-weight convolutional SNN：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+snntorch,E3,mandatory,Sparse recurrent LIF：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,E4,mandatory,Adaptive two-state：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,E5,specialized,Explicit complex point-neuron equations：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+snntorch,E6,mandatory,Full-sequence capacity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,E7,mandatory,Width capacity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 snntorch 的有限任务是核心 SG-BPTT 及 Torch 合法优化，未安排另写局部学习引擎；并非框架不支持的结论。
+snntorch,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 snntorch 的有限任务是核心 SG-BPTT 及 Torch 合法优化，未安排另写局部学习引擎；并非框架不支持的结论。
+snntorch,A1,mandatory,MNIST pipeline sanity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,A2,mandatory,SHD full SG-BPTT：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。
+snntorch,A3,specialized,SHD algorithm comparison：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+snntorch,F1,not_applicable,F1 的HH/多室边界不在 snntorch 本轮专项；其选定范围为核心 SG-BPTT 及 Torch 合法优化；不外推能力缺失。
+snntorch,F2,not_applicable,F2 的HH/多室边界不在 snntorch 本轮专项；其选定范围为核心 SG-BPTT 及 Torch 合法优化；不外推能力缺失。
+snntorch,F3,specialized,Deep convolution or Spikformer：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+snntorch,M1,specialized,Preregistered Brian2 model corpus：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,Q0,specialized,Numerical fixtures：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,E1,specialized,Dense LIF：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,E2,not_applicable,E2 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,E3,not_applicable,E3 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,E4,specialized,Adaptive two-state：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,E5,not_applicable,E5 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,E6,not_applicable,E6 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,E7,not_applicable,E7 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,L1,specialized,Pair STDP exact-event fixture：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 spikingjelly_stable 的有限任务是稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担，未安排另写局部学习引擎；并非框架不支持的结论。
+spikingjelly_stable,A1,specialized,MNIST pipeline sanity：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,A2,not_applicable,A2 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,A3,not_applicable,A3 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。
+spikingjelly_stable,F1,not_applicable,F1 的HH/多室边界不在 spikingjelly_stable 本轮专项；其选定范围为稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；不外推能力缺失。
+spikingjelly_stable,F2,not_applicable,F2 的HH/多室边界不在 spikingjelly_stable 本轮专项；其选定范围为稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；不外推能力缺失。
+spikingjelly_stable,F3,specialized,Deep convolution or Spikformer：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_stable,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；spikingjelly_stable 的有限工程预算用于稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担，不宣称它不能迁移。
+spikingjelly_frontier,Q0,mandatory,Numerical fixtures：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,E1,mandatory,Dense LIF：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,E2,specialized,Tied-weight convolutional SNN：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_frontier,E3,mandatory,Sparse recurrent LIF：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,E4,mandatory,Adaptive two-state：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,E5,specialized,Explicit complex point-neuron equations：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_frontier,E6,mandatory,Full-sequence capacity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,E7,mandatory,Width capacity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 spikingjelly_frontier 的有限任务是核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界，未安排另写局部学习引擎；并非框架不支持的结论。
+spikingjelly_frontier,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 spikingjelly_frontier 的有限任务是核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界，未安排另写局部学习引擎；并非框架不支持的结论。
+spikingjelly_frontier,A1,mandatory,MNIST pipeline sanity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,A2,mandatory,SHD full SG-BPTT：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,A3,specialized,SHD algorithm comparison：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spikingjelly_frontier,F1,not_applicable,F1 的HH/多室边界不在 spikingjelly_frontier 本轮专项；其选定范围为核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；不外推能力缺失。
+spikingjelly_frontier,F2,not_applicable,F2 的HH/多室边界不在 spikingjelly_frontier 本轮专项；其选定范围为核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；不外推能力缺失。
+spikingjelly_frontier,F3,mandatory,Deep convolution or Spikformer：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。
+spikingjelly_frontier,M1,specialized,Preregistered Brian2 model corpus：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,Q0,specialized,Numerical fixtures：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,E1,specialized,Dense LIF：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,E2,not_applicable,E2 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,E3,specialized,Sparse recurrent LIF：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,E4,specialized,Adaptive two-state：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,E5,not_applicable,E5 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,E6,not_applicable,E6 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,E7,not_applicable,E7 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,L1,specialized,Pair STDP exact-event fixture：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 norse 的有限任务是E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线，未安排另写局部学习引擎；并非框架不支持的结论。
+norse,A1,specialized,MNIST pipeline sanity：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+norse,A2,not_applicable,A2 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,A3,not_applicable,A3 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。
+norse,F1,not_applicable,F1 的HH/多室边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。
+norse,F2,not_applicable,F2 的HH/多室边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。
+norse,F3,not_applicable,F3 的深层卷积边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。
+norse,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；norse 的有限工程预算用于E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线，不宣称它不能迁移。
+spyx,Q0,mandatory,Numerical fixtures：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,E1,mandatory,Dense LIF：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,E2,specialized,Tied-weight convolutional SNN：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spyx,E3,mandatory,Sparse recurrent LIF：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,E4,mandatory,Adaptive two-state：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,E5,specialized,Explicit complex point-neuron equations：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spyx,E6,mandatory,Full-sequence capacity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,E7,mandatory,Width capacity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 spyx 的有限任务是NNX/JAX 普通 reset LIF、循环和长序列，未安排另写局部学习引擎；并非框架不支持的结论。
+spyx,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 spyx 的有限任务是NNX/JAX 普通 reset LIF、循环和长序列，未安排另写局部学习引擎；并非框架不支持的结论。
+spyx,A1,mandatory,MNIST pipeline sanity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,A2,mandatory,SHD full SG-BPTT：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。
+spyx,A3,specialized,SHD algorithm comparison：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+spyx,F1,not_applicable,F1 的HH/多室边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。
+spyx,F2,not_applicable,F2 的HH/多室边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。
+spyx,F3,not_applicable,F3 的深层卷积边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。
+spyx,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；spyx 的有限工程预算用于NNX/JAX 普通 reset LIF、循环和长序列，不宣称它不能迁移。
+sinabs_exodus,Q0,specialized,Numerical fixtures：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+sinabs_exodus,E1,specialized,Dense LIF：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+sinabs_exodus,E2,specialized,Tied-weight convolutional SNN：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+sinabs_exodus,E3,not_applicable,E3 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,E4,not_applicable,E4 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,E5,not_applicable,E5 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,E6,not_applicable,E6 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,E7,not_applicable,E7 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 sinabs_exodus 的有限任务是EXODUS CUDA 前馈 LIF/卷积限定子集，未安排另写局部学习引擎；并非框架不支持的结论。
+sinabs_exodus,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 sinabs_exodus 的有限任务是EXODUS CUDA 前馈 LIF/卷积限定子集，未安排另写局部学习引擎；并非框架不支持的结论。
+sinabs_exodus,A1,specialized,MNIST pipeline sanity：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+sinabs_exodus,A2,not_applicable,A2 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,A3,not_applicable,A3 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。
+sinabs_exodus,F1,not_applicable,F1 的HH/多室边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。
+sinabs_exodus,F2,not_applicable,F2 的HH/多室边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。
+sinabs_exodus,F3,not_applicable,F3 的深层卷积边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。
+sinabs_exodus,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；sinabs_exodus 的有限工程预算用于EXODUS CUDA 前馈 LIF/卷积限定子集，不宣称它不能迁移。
+lava_dl_slayer,Q0,specialized,Numerical fixtures：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+lava_dl_slayer,E1,not_applicable,E1 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,E2,not_applicable,E2 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,E3,not_applicable,E3 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,E4,specialized,Adaptive two-state：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+lava_dl_slayer,E5,specialized,Explicit complex point-neuron equations：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+lava_dl_slayer,E6,not_applicable,E6 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,E7,not_applicable,E7 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 lava_dl_slayer 的有限任务是可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，未安排另写局部学习引擎；并非框架不支持的结论。
+lava_dl_slayer,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 lava_dl_slayer 的有限任务是可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，未安排另写局部学习引擎；并非框架不支持的结论。
+lava_dl_slayer,A1,not_applicable,A1 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。
+lava_dl_slayer,A2,specialized,SHD full SG-BPTT：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+lava_dl_slayer,A3,specialized,SHD algorithm comparison：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+lava_dl_slayer,F1,not_applicable,F1 的HH/多室边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。
+lava_dl_slayer,F2,not_applicable,F2 的HH/多室边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。
+lava_dl_slayer,F3,not_applicable,F3 的深层卷积边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。
+lava_dl_slayer,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；lava_dl_slayer 的有限工程预算用于可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，不宣称它不能迁移。
+rockpool,Q0,specialized,Numerical fixtures：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+rockpool,E1,not_applicable,E1 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,E2,not_applicable,E2 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,E3,not_applicable,E3 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,E4,specialized,Adaptive two-state：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+rockpool,E5,specialized,Explicit complex point-neuron equations：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+rockpool,E6,not_applicable,E6 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,E7,not_applicable,E7 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 rockpool 的有限任务是E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，未安排另写局部学习引擎；并非框架不支持的结论。
+rockpool,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 rockpool 的有限任务是E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，未安排另写局部学习引擎；并非框架不支持的结论。
+rockpool,A1,not_applicable,A1 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。
+rockpool,A2,specialized,SHD full SG-BPTT：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+rockpool,A3,specialized,SHD algorithm comparison：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+rockpool,F1,not_applicable,F1 的HH/多室边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。
+rockpool,F2,not_applicable,F2 的HH/多室边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。
+rockpool,F3,not_applicable,F3 的深层卷积边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。
+rockpool,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；rockpool 的有限工程预算用于E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，不宣称它不能迁移。
+bindsnet,Q0,not_applicable,Q0 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。
+bindsnet,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+bindsnet,L1,specialized,Pair STDP exact-event fixture：纳入局部 STDP 规则对照；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+bindsnet,L2,specialized,Sparse E/I local plasticity：纳入局部 STDP 规则对照；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+bindsnet,A1,not_applicable,A1 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。
+bindsnet,A2,not_applicable,A2 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。
+bindsnet,A3,not_applicable,A3 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。
+bindsnet,F1,not_applicable,F1 的HH/多室边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。
+bindsnet,F2,not_applicable,F2 的HH/多室边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。
+bindsnet,F3,not_applicable,F3 的深层卷积边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。
+bindsnet,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；bindsnet 的有限工程预算用于局部 STDP 规则对照，不宣称它不能迁移。
+brainpy_classic,Q0,specialized,Numerical fixtures：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainpy_classic,E1,specialized,Dense LIF：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainpy_classic,E2,not_applicable,E2 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,E3,not_applicable,E3 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,E4,specialized,Adaptive two-state：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainpy_classic,E5,not_applicable,E5 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,E6,not_applicable,E6 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,E7,not_applicable,E7 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 brainpy_classic 的有限任务是旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担，未安排另写局部学习引擎；并非框架不支持的结论。
+brainpy_classic,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 brainpy_classic 的有限任务是旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担，未安排另写局部学习引擎；并非框架不支持的结论。
+brainpy_classic,A1,not_applicable,A1 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,A2,not_applicable,A2 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,A3,not_applicable,A3 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。
+brainpy_classic,F1,not_applicable,F1 的HH/多室边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。
+brainpy_classic,F2,not_applicable,F2 的HH/多室边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。
+brainpy_classic,F3,not_applicable,F3 的深层卷积边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。
+brainpy_classic,M1,specialized,Preregistered Brian2 model corpus：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainx_state,Q0,mandatory,Numerical fixtures：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,E1,mandatory,Dense LIF：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,E2,specialized,Tied-weight convolutional SNN：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainx_state,E3,mandatory,Sparse recurrent LIF：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,E4,mandatory,Adaptive two-state：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,E5,specialized,Explicit complex point-neuron equations：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainx_state,E6,mandatory,Full-sequence capacity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,E7,mandatory,Width capacity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 brainx_state 的有限任务是brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT，未安排另写局部学习引擎；并非框架不支持的结论。
+brainx_state,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 brainx_state 的有限任务是brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT，未安排另写局部学习引擎；并非框架不支持的结论。
+brainx_state,A1,mandatory,MNIST pipeline sanity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,A2,mandatory,SHD full SG-BPTT：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。
+brainx_state,A3,specialized,SHD algorithm comparison：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brainx_state,F1,not_applicable,F1 的HH/多室边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。
+brainx_state,F2,not_applicable,F2 的HH/多室边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。
+brainx_state,F3,not_applicable,F3 的深层卷积边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。
+brainx_state,M1,specialized,Preregistered Brian2 model corpus：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+braintrace,Q0,specialized,Numerical fixtures：纳入SHD 在线算法与自身资格，非同梯度 BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+braintrace,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braintrace,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 braintrace 的有限任务是SHD 在线算法与自身资格，非同梯度 BPTT，未安排另写局部学习引擎；并非框架不支持的结论。
+braintrace,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 braintrace 的有限任务是SHD 在线算法与自身资格，非同梯度 BPTT，未安排另写局部学习引擎；并非框架不支持的结论。
+braintrace,A1,not_applicable,A1 未纳入 braintrace 的本轮有限专项，预算聚焦SHD 在线算法与自身资格，非同梯度 BPTT；其他框架承担该覆盖，保留此格且不判不支持。
+braintrace,A2,not_applicable,A2 未纳入 braintrace 的本轮有限专项，预算聚焦SHD 在线算法与自身资格，非同梯度 BPTT；其他框架承担该覆盖，保留此格且不判不支持。
+braintrace,A3,mandatory,SHD algorithm comparison：纳入SHD 在线算法与自身资格，非同梯度 BPTT；完整指定案例与失败记录必须交付。
+braintrace,F1,not_applicable,F1 的HH/多室边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。
+braintrace,F2,not_applicable,F2 的HH/多室边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。
+braintrace,F3,not_applicable,F3 的深层卷积边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。
+braintrace,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；braintrace 的有限工程预算用于SHD 在线算法与自身资格，非同梯度 BPTT，不宣称它不能迁移。
+mlgenn,Q0,specialized,Numerical fixtures：纳入SHD EventProp/e-prop、CUDA 数据并行；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+mlgenn,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+mlgenn,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 mlgenn 的有限任务是SHD EventProp/e-prop、CUDA 数据并行，未安排另写局部学习引擎；并非框架不支持的结论。
+mlgenn,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 mlgenn 的有限任务是SHD EventProp/e-prop、CUDA 数据并行，未安排另写局部学习引擎；并非框架不支持的结论。
+mlgenn,A1,specialized,MNIST pipeline sanity：纳入SHD EventProp/e-prop、CUDA 数据并行；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+mlgenn,A2,not_applicable,A2 未纳入 mlgenn 的本轮有限专项，预算聚焦SHD EventProp/e-prop、CUDA 数据并行；其他框架承担该覆盖，保留此格且不判不支持。
+mlgenn,A3,mandatory,SHD algorithm comparison：纳入SHD EventProp/e-prop、CUDA 数据并行；完整指定案例与失败记录必须交付。
+mlgenn,F1,not_applicable,F1 的HH/多室边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。
+mlgenn,F2,not_applicable,F2 的HH/多室边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。
+mlgenn,F3,not_applicable,F3 的深层卷积边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。
+mlgenn,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；mlgenn 的有限工程预算用于SHD EventProp/e-prop、CUDA 数据并行，不宣称它不能迁移。
+nest,Q0,specialized,Numerical fixtures：纳入CPU 局部网络分区与 SHD e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+nest,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest,L1,mandatory,Pair STDP exact-event fixture：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。
+nest,L2,mandatory,Sparse E/I local plasticity：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。
+nest,A1,not_applicable,A1 未纳入 nest 的本轮有限专项，预算聚焦CPU 局部网络分区与 SHD e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest,A2,not_applicable,A2 未纳入 nest 的本轮有限专项，预算聚焦CPU 局部网络分区与 SHD e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest,A3,mandatory,SHD algorithm comparison：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。
+nest,F1,not_applicable,F1 的HH/多室边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。
+nest,F2,not_applicable,F2 的HH/多室边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。
+nest,F3,not_applicable,F3 的深层卷积边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。
+nest,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；nest 的有限工程预算用于CPU 局部网络分区与 SHD e-prop，不宣称它不能迁移。
+nest_gpu,Q0,not_applicable,Q0 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest_gpu,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+nest_gpu,L1,specialized,Pair STDP exact-event fixture：纳入GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+nest_gpu,L2,specialized,Sparse E/I local plasticity：纳入GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+nest_gpu,A1,not_applicable,A1 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest_gpu,A2,not_applicable,A2 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest_gpu,A3,not_applicable,A3 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。
+nest_gpu,F1,not_applicable,F1 的HH/多室边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。
+nest_gpu,F2,not_applicable,F2 的HH/多室边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。
+nest_gpu,F3,not_applicable,F3 的深层卷积边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。
+nest_gpu,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；nest_gpu 的有限工程预算用于GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不宣称它不能迁移。
+brian2modelfitting,Q0,specialized,Numerical fixtures：纳入HH 参数拟合，原仿真与外层优化分别核验；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2modelfitting,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+brian2modelfitting,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 brian2modelfitting 的有限任务是HH 参数拟合，原仿真与外层优化分别核验，未安排另写局部学习引擎；并非框架不支持的结论。
+brian2modelfitting,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 brian2modelfitting 的有限任务是HH 参数拟合，原仿真与外层优化分别核验，未安排另写局部学习引擎；并非框架不支持的结论。
+brian2modelfitting,A1,not_applicable,A1 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。
+brian2modelfitting,A2,not_applicable,A2 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。
+brian2modelfitting,A3,not_applicable,A3 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。
+brian2modelfitting,F1,mandatory,Single-compartment HH parameter fitting：纳入HH 参数拟合，原仿真与外层优化分别核验；完整指定案例与失败记录必须交付。
+brian2modelfitting,F2,specialized,Multicompartment HH：纳入HH 参数拟合，原仿真与外层优化分别核验；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+brian2modelfitting,F3,not_applicable,F3 的深层卷积边界不在 brian2modelfitting 本轮专项；其选定范围为HH 参数拟合，原仿真与外层优化分别核验；不外推能力缺失。
+brian2modelfitting,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；brian2modelfitting 的有限工程预算用于HH 参数拟合，原仿真与外层优化分别核验，不宣称它不能迁移。
+jaxley,Q0,specialized,Numerical fixtures：纳入单室/多室生物物理求导与拟合；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+jaxley,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+jaxley,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 jaxley 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。
+jaxley,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 jaxley 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。
+jaxley,A1,not_applicable,A1 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+jaxley,A2,not_applicable,A2 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+jaxley,A3,not_applicable,A3 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+jaxley,F1,mandatory,Single-compartment HH parameter fitting：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。
+jaxley,F2,mandatory,Multicompartment HH：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。
+jaxley,F3,not_applicable,F3 的深层卷积边界不在 jaxley 本轮专项；其选定范围为单室/多室生物物理求导与拟合；不外推能力缺失。
+jaxley,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；jaxley 的有限工程预算用于单室/多室生物物理求导与拟合，不宣称它不能迁移。
+braincell,Q0,specialized,Numerical fixtures：纳入单室/多室生物物理求导与拟合；先做指定语义/能力资格，合格且资源到位后执行指定子集。
+braincell,E1,not_applicable,E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E2,not_applicable,E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E3,not_applicable,E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E4,not_applicable,E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E5,not_applicable,E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E6,not_applicable,E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,E7,not_applicable,E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。
+braincell,L1,not_applicable,L1 是原 Brian 事件/局部更新规则；本轮 braincell 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。
+braincell,L2,not_applicable,L2 是原 Brian 事件/局部更新规则；本轮 braincell 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。
+braincell,A1,not_applicable,A1 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+braincell,A2,not_applicable,A2 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+braincell,A3,not_applicable,A3 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。
+braincell,F1,mandatory,Single-compartment HH parameter fitting：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。
+braincell,F2,mandatory,Multicompartment HH：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。
+braincell,F3,not_applicable,F3 的深层卷积边界不在 braincell 本轮专项；其选定范围为单室/多室生物物理求导与拟合；不外推能力缺失。
+braincell,M1,not_applicable,迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；braincell 的有限工程预算用于单室/多室生物物理求导与拟合，不宣称它不能迁移。

@@ -1,0 +1,15 @@
+{
+  "copied_at_utc": "2026-10-04T11:05:09.528468+00:00",
+  "source_host": "100.90.28.27",
+  "scope": "small prepared source/control evidence only, no model arrays or new local runtime",
+  "files": {
+    "tools/measure_e1_small_cold_r1.py": "bdc2e0420f1df2556fdbdde1c0b5e13a82f2ab25fad280b0330cbcd4bcc9c94b",
+    "tools/validate_a1_v4.py": "e4371d0d1518c1bd2fd8ebb876b08a6c99b63d4abdde04a2c9d48b091c31314d",
+    "tools/run_a1_v4_validation_when_ready.py": "874cf7424c73864d5e27269ff3fc5447c63948a4d9c5f5742ccf5e5a350626d8",
+    "tools/seal_a1_v4_fixture_receipt.py": "adac6c7dfe149df6c05105c480b3c1583ec23a3208a29a70edb443934ca08f85",
+    "tools/e5_oracle_r1.py": "e97e982996dea2303d6a6b5c9f75747ee48a58cc3f8845c8728fcb76ae05ea4b",
+    "tools/qualify_e5_v5_r1.py": "22a105ecbabef4cb7086228ebf28d680928b2b6c256ddea02bdd2e5a03a0a471",
+    "tools/retry_m12_gsl_r2.py": "9413d38161a48723a4d268a12f4cf2959a77bf30ef649605fa9ee81d8e2b3235",
+    "tools/run_extended_followup_r1.py": "e9fb17f00975d22533e09e9497a58b16c8f6258c4d80da5911118a77ddf80bc2"
+  }
+}

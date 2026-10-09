@@ -1,0 +1,145 @@
+{
+  "previous_manifest_sha256": "9c7ce84baf0703d6a6e7745b138fbb1eeed5bdda3c1118a7036fc1d729366493",
+  "files": [
+    {
+      "path": "SHA256SUMS.json",
+      "sha256": "9c7ce84baf0703d6a6e7745b138fbb1eeed5bdda3c1118a7036fc1d729366493",
+      "bytes": 4364
+    },
+    {
+      "path": "brian-corpus-manifest.json",
+      "sha256": "5ec3fc3f11f0d84fb20ed7597ee08bb82ab47559b029081fed237ed9eeabff98",
+      "bytes": 12884
+    },
+    {
+      "path": "build_protocol.py",
+      "sha256": "ccfefb6cfba17f02a573ddc1f662bfd5d04d4883b1df54f7a9799dd3902d240d",
+      "bytes": 35544
+    },
+    {
+      "path": "corpus/originals/COBAHH.py",
+      "sha256": "7ec70b45e7cbfc567fe2a9379281363d9d686ed75185eb830fcd4d0c5b037528",
+      "bytes": 2335
+    },
+    {
+      "path": "corpus/originals/CUBA.py",
+      "sha256": "96626269038fa51eb027e689a27ccc28d9b1b1034c16799a1480282d9175ced4",
+      "bytes": 1400
+    },
+    {
+      "path": "corpus/originals/IF_curve_LIF.py",
+      "sha256": "e71ce2ba28af76c904b89286bb0d2dc9ddd7348f655fce40234cb4b2f5aff143",
+      "bytes": 655
+    },
+    {
+      "path": "corpus/originals/adaptive_threshold.py",
+      "sha256": "2f7bc020a95c86889ed5aa6e0e2a4141f25212ae50a06c75e10973ded6120ebe",
+      "bytes": 883
+    },
+    {
+      "path": "corpus/originals/advanced/compare_GSL_to_conventional.py",
+      "sha256": "c8e128efbc6b495c2cd4db5a84b332d6dbb5b7b9ab157037a3036da7b936e54e",
+      "bytes": 4641
+    },
+    {
+      "path": "corpus/originals/advanced/custom_events.py",
+      "sha256": "e3610a43145bf6de7b62f99c5f3535216ef900be193fb38e18a5609622150118",
+      "bytes": 2548
+    },
+    {
+      "path": "corpus/originals/advanced/stochastic_odes.py",
+      "sha256": "02f7cd7aeefc1e25f9bbde8dceca1d4f05e1d38e51bccfca1220b165061089bb",
+      "bytes": 2963
+    },
+    {
+      "path": "corpus/originals/compartmental/hodgkin_huxley_1952.py",
+      "sha256": "030bbfa0ab1cee4f2f09d958c578509b57f7e0ec7cabbc394c762a18e1306c41",
+      "bytes": 1579
+    },
+    {
+      "path": "corpus/originals/frompapers/Brette_Gerstner_2005.py",
+      "sha256": "66f84e2bb70aa57e1d43dbe1ae93ddde8140080b69d40aca3bb3e405c110b341",
+      "bytes": 1343
+    },
+    {
+      "path": "corpus/originals/frompapers/Izhikevich_2003.py",
+      "sha256": "ba977b478486c7818c561f37dc9667fdb7b68dfec7a6dd808b10ea5780655a52",
+      "bytes": 2583
+    },
+    {
+      "path": "corpus/originals/synapses/STDP.py",
+      "sha256": "ce4c0d38cae989143876e46a3923120f70b2996ee1f065b5f82075b0873e0c39",
+      "bytes": 1430
+    },
+    {
+      "path": "corpus/originals/synapses/jeffress.py",
+      "sha256": "6aa4341140423d7fccd3cc9d092801fcd971e9db44c2a8313c26e510c0f6d099",
+      "bytes": 2074
+    },
+    {
+      "path": "coverage-matrix.csv",
+      "sha256": "5f3953e6ac1867c74908bee5e3f716918558e217006f772000d1932c9eef25ee",
+      "bytes": 78164
+    },
+    {
+      "path": "coverage-matrix.json",
+      "sha256": "9d9cfaaa214718ba7da92fabe93450a23683f7255751aac397bd8e54e7f21976",
+      "bytes": 204352
+    },
+    {
+      "path": "coverage-matrix.md",
+      "sha256": "43ba3426832bc9b5bf7041129f7788349f39a37ad82063040854be3b13019683",
+      "bytes": 3100
+    },
+    {
+      "path": "execution-plan-r2.json",
+      "sha256": "cc3dc9f0219db5d1ab3fdb16760cecce7114903244e62294110aa7b64b16d118",
+      "bytes": 62658
+    },
+    {
+      "path": "execution-plan.json",
+      "sha256": "3729d20c4f7b679b7462d3023a12b07a7c98ccc6bb2403b96f430e745adc5b7e",
+      "bytes": 59922
+    },
+    {
+      "path": "execution-protocol-r2.zh.md",
+      "sha256": "ef0341ba038e00b5124a8a9b5ade9d65651d22174b2e6674fed83a336e63f1c5",
+      "bytes": 2582
+    },
+    {
+      "path": "execution-protocol.zh.md",
+      "sha256": "9ac154f8b6c580cce8354284ba294940400bc7e8ec011b641e54ccac68bbfacf",
+      "bytes": 13736
+    },
+    {
+      "path": "finite-engine-cases.json",
+      "sha256": "6bf5cf95444ffa8c85eaf2b388fd56879b5820cda7078a1066fbfcd01b6c544d",
+      "bytes": 5629
+    },
+    {
+      "path": "semantic-contracts.json",
+      "sha256": "eaea29ada59e3cb8395a99cbacad843ef13cb80369020e40c47d78454b513a0a",
+      "bytes": 9665
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "79c368db0bfcfff7dfc6ab6658db8bc74c382e08985001aaa32b52fbdb65e750",
+      "bytes": 1093
+    },
+    {
+      "path": "sources/training-competitive-analysis-2026-10-04.md",
+      "sha256": "1d48e34121af2dfcfd2abfd299e574e6288eb816f48e8c012ede3e5c50fbcf8c",
+      "bytes": 27789
+    },
+    {
+      "path": "sources/training-engine-evaluation-v1.md",
+      "sha256": "6931a6c398cf461717e9c648348d8909b0692d56c06538479d7ba5ba3d6e7654",
+      "bytes": 40580
+    },
+    {
+      "path": "sources/training-engine-evaluation-v1.plan.json",
+      "sha256": "b4b812302ffae35dded951b0a5fc912a3f85183102477030437f010c9d487e7c",
+      "bytes": 43407
+    }
+  ]
+}

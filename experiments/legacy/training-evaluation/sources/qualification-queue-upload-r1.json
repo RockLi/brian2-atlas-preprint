@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-04T10:02:13.301835+00:00",
+  "purpose": "new independently serialized remote qualification/admission queue; no model execution locally",
+  "files": {
+    "tools/run_qualification_followup_queue.py": {
+      "sha256": "e817804130a5fe5e1adf2fb5655b41c20d1a1a56495a5c09cbd5fe8a43b003e0",
+      "bytes": 8649
+    },
+    "tools/run_recurrent_queue.py": {
+      "sha256": "2f29be1bdc9548866587a46eb7255ddf597c29a04330d585ea89ae8409106f3f",
+      "bytes": 18486
+    },
+    "tools/generate_recurrent_cases.py": {
+      "sha256": "5da896fa7bce9c4ad294535439ccdbc18281d1b61c30640c4859e7488e137b75",
+      "bytes": 5335
+    },
+    "tools/qualify_recurrent_case.py": {
+      "sha256": "36abea3b4121ab65259f006dfadd1c0740699b4cb6ae5b9192337ce03902a22c",
+      "bytes": 13699
+    },
+    "tools/run_conv_queue.py": {
+      "sha256": "173dea0d320e047d2632e3219f1c822126df84281ce77008076733b4b02a3a23",
+      "bytes": 7894
+    },
+    "tools/generate_conv_cases.py": {
+      "sha256": "55bf410928a6b00a7d8eee9b4b7753d6c83f37d204139b2cb865156b00009d02",
+      "bytes": 6510
+    },
+    "tools/qualify_conv_case.py": {
+      "sha256": "38fd4fc433ffd2b45470fd46547276ce2356afd334a163eeed3ed6dc4d86bad8",
+      "bytes": 12133
+    },
+    "tools/qualify_e4.py": {
+      "sha256": "b23ee9d77527c81419695f1206408a323438aacf7da811d68708915800b361b5",
+      "bytes": 23316
+    },
+    "tools/qualify_metal_q0.py": {
+      "sha256": "9ebb0b0573fe1e221adca77f183c40e6415f64c9edf36e3c3dfab57b4f6dfa40",
+      "bytes": 28859
+    },
+    "adapters/conv_competitor.py": {
+      "sha256": "67ef914260f2756000aed40b37ffed43ea47e6f5e9e174bb4399fc441eab0bf7",
+      "bytes": 13544
+    },
+    "protocol/recurrent-fixture-r1.json": {
+      "sha256": "4f2bdaf01a6d587370a6ccde226c7012fd65c2d6ccc7811e002e699f86a792a0",
+      "bytes": 7284
+    },
+    "protocol/e2-convolution-r1.json": {
+      "sha256": "1cbed7ad7302e571ddc704b7506633be25988b94a7bd79b8da71e9d35a67f80c",
+      "bytes": 5546
+    },
+    "protocol/recurrent-reference-view-note.json": {
+      "sha256": "f4e6e852b62d1ba0486009a2d145b2c21d56840980da5e4dbf5566f30b212116",
+      "bytes": 1788
+    },
+    "evidence/h0r/contract.json": {
+      "sha256": "359ddc6ffe26d323dc7cb79c9dc372ec100c4f2496a4eb422f12a0a707072505",
+      "bytes": 6800
+    },
+    "evidence/h0r/preparation-status.json": {
+      "sha256": "ccf563018c8d2fd9ac040d59725d49bee1dcb6b06409683407ead6cff46873a8",
+      "bytes": 2203
+    },
+    "evidence/h0r/README.zh.md": {
+      "sha256": "ad13b81e00a4bf08206fc4083fbec37c32d1c72339970f3e992842c1981dc7f4",
+      "bytes": 8269
+    },
+    "evidence/e4/preparation-status.json": {
+      "sha256": "4b033ef0a365afe012a5f4e46f6451e472dc0c886b617411d5c31175d8b4eefc",
+      "bytes": 701
+    },
+    "evidence/e4/README.zh.md": {
+      "sha256": "74c77a49c4a69e629f0a4dd5a9423bc691b511ad374de763bac04cf349536311",
+      "bytes": 5794
+    }
+  }
+}

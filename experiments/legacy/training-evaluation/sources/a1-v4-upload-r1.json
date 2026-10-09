@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-04T10:10:23.910664+00:00",
+  "scope": "Five formal seeds times five implemented Atlas/Torch views; all computation remote after qualification queue",
+  "review": "Independent read-only review verified no barrier self-deadlock,25 distinct rotated slots,1800s total worker cap,once-only complete heldout policy,known-cleanup-failure stop",
+  "files": {
+    "tools/run_a1_queue_v4.py": "cdf0f6ba85745bd425099336ed115cd706adcaff897eac944ac76e745ca164b5",
+    "tools/run_a1_mnist_v4.py": "fbc00965cc8023ee6574c31760b66a9b34385b539b349057bac1bca30d80de42",
+    "protocol/A1-execution-addendum-v4.json": "4ee22dcb3d0be876ec4ea3246cc10aab86ff90f52795a29f5b9ac4cb8102d102",
+    "evidence/a1-pipeline-preflight-v4-r1.json": "a387a8e41ded4539200702dba92b9e56aca673cae3c1ce50650a6155a1e4346c"
+  }
+}

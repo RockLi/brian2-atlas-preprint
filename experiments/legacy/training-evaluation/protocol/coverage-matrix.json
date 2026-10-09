@@ -1,0 +1,4986 @@
+{
+  "dimensions": [
+    23,
+    17
+  ],
+  "cell_count": 391,
+  "counts": {
+    "mandatory": 57,
+    "specialized": 77,
+    "not_applicable": 257
+  },
+  "scope_note": "coverage is an evaluation obligation, not a verified framework capability; pending cells never count as completed",
+  "cells": [
+    {
+      "contender_id": "atlas",
+      "workload_id": "Q0",
+      "coverage": "mandatory",
+      "reason": "Numerical fixtures：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E1",
+      "coverage": "mandatory",
+      "reason": "Dense LIF：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E3",
+      "coverage": "mandatory",
+      "reason": "Sparse recurrent LIF：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E4",
+      "coverage": "mandatory",
+      "reason": "Adaptive two-state：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E6",
+      "coverage": "mandatory",
+      "reason": "Full-sequence capacity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "E7",
+      "coverage": "mandatory",
+      "reason": "Width capacity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "L1",
+      "coverage": "mandatory",
+      "reason": "Pair STDP exact-event fixture：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "L2",
+      "coverage": "mandatory",
+      "reason": "Sparse E/I local plasticity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "A1",
+      "coverage": "mandatory",
+      "reason": "MNIST pipeline sanity：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "A2",
+      "coverage": "mandatory",
+      "reason": "SHD full SG-BPTT：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "F1",
+      "coverage": "specialized",
+      "reason": "Single-compartment HH parameter fitting：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "F2",
+      "coverage": "specialized",
+      "reason": "Multicompartment HH：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "F3",
+      "coverage": "specialized",
+      "reason": "Deep convolution or Spikformer：纳入Atlas 原生接口与 Brian 转换路径；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "atlas",
+      "workload_id": "M1",
+      "coverage": "mandatory",
+      "reason": "Preregistered Brian2 model corpus：纳入Atlas 原生接口与 Brian 转换路径；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2 评估 原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "L1",
+      "coverage": "mandatory",
+      "reason": "Pair STDP exact-event fixture：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "L2",
+      "coverage": "mandatory",
+      "reason": "Sparse E/I local plasticity：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 brian2 的本轮有限专项，预算聚焦原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "F1",
+      "coverage": "specialized",
+      "reason": "Single-compartment HH parameter fitting：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "F2",
+      "coverage": "specialized",
+      "reason": "Multicompartment HH：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brian2 本轮专项；其选定范围为原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2",
+      "workload_id": "M1",
+      "coverage": "mandatory",
+      "reason": "Preregistered Brian2 model corpus：纳入原版 Cython/C++ 单线程/OpenMP 的原方程和局部学习；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2cuda 评估 Brian 方程及局部学习 CUDA 扩展，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "L2",
+      "coverage": "specialized",
+      "reason": "Sparse E/I local plasticity：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 brian2cuda 的本轮有限专项，预算聚焦Brian 方程及局部学习 CUDA 扩展；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brian2cuda 本轮专项；其选定范围为Brian 方程及局部学习 CUDA 扩展；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2cuda",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入Brian 方程及局部学习 CUDA 扩展；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2genn 评估 Brian 到 GeNN 转换兼容性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "L2",
+      "coverage": "specialized",
+      "reason": "Sparse E/I local plasticity：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 brian2genn 的本轮有限专项，预算聚焦Brian 到 GeNN 转换兼容性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brian2genn 本轮专项；其选定范围为Brian 到 GeNN 转换兼容性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2genn",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入Brian 到 GeNN 转换兼容性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "Q0",
+      "coverage": "not_applicable",
+      "reason": "Q0 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 genn 评估 原生 GeNN 局部可塑性，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入原生 GeNN 局部可塑性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "L2",
+      "coverage": "specialized",
+      "reason": "Sparse E/I local plasticity：纳入原生 GeNN 局部可塑性；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 genn 的本轮有限专项，预算聚焦原生 GeNN 局部可塑性；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 genn 本轮专项；其选定范围为原生 GeNN 局部可塑性；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "genn",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；genn 的有限工程预算用于原生 GeNN 局部可塑性，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "Q0",
+      "coverage": "mandatory",
+      "reason": "Numerical fixtures：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E1",
+      "coverage": "mandatory",
+      "reason": "Dense LIF：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E3",
+      "coverage": "mandatory",
+      "reason": "Sparse recurrent LIF：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E4",
+      "coverage": "mandatory",
+      "reason": "Adaptive two-state：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E6",
+      "coverage": "mandatory",
+      "reason": "Full-sequence capacity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "E7",
+      "coverage": "mandatory",
+      "reason": "Width capacity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 snntorch 的有限任务是核心 SG-BPTT 及 Torch 合法优化，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 snntorch 的有限任务是核心 SG-BPTT 及 Torch 合法优化，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "A1",
+      "coverage": "mandatory",
+      "reason": "MNIST pipeline sanity：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "A2",
+      "coverage": "mandatory",
+      "reason": "SHD full SG-BPTT：纳入核心 SG-BPTT 及 Torch 合法优化；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 snntorch 本轮专项；其选定范围为核心 SG-BPTT 及 Torch 合法优化；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 snntorch 本轮专项；其选定范围为核心 SG-BPTT 及 Torch 合法优化；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "F3",
+      "coverage": "specialized",
+      "reason": "Deep convolution or Spikformer：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "snntorch",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入核心 SG-BPTT 及 Torch 合法优化；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E1",
+      "coverage": "specialized",
+      "reason": "Dense LIF：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E4",
+      "coverage": "specialized",
+      "reason": "Adaptive two-state：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 spikingjelly_stable 的有限任务是稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "A1",
+      "coverage": "specialized",
+      "reason": "MNIST pipeline sanity：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 spikingjelly_stable 的本轮有限专项，预算聚焦稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 spikingjelly_stable 本轮专项；其选定范围为稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 spikingjelly_stable 本轮专项；其选定范围为稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "F3",
+      "coverage": "specialized",
+      "reason": "Deep convolution or Spikformer：纳入稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_stable",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；spikingjelly_stable 的有限工程预算用于稳定版的 E1/E4 与流程交叉参考；完整曲线由独立前沿版本承担，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "Q0",
+      "coverage": "mandatory",
+      "reason": "Numerical fixtures：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E1",
+      "coverage": "mandatory",
+      "reason": "Dense LIF：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E3",
+      "coverage": "mandatory",
+      "reason": "Sparse recurrent LIF：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E4",
+      "coverage": "mandatory",
+      "reason": "Adaptive two-state：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E6",
+      "coverage": "mandatory",
+      "reason": "Full-sequence capacity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "E7",
+      "coverage": "mandatory",
+      "reason": "Width capacity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 spikingjelly_frontier 的有限任务是核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 spikingjelly_frontier 的有限任务是核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "A1",
+      "coverage": "mandatory",
+      "reason": "MNIST pipeline sanity：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "A2",
+      "coverage": "mandatory",
+      "reason": "SHD full SG-BPTT：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 spikingjelly_frontier 本轮专项；其选定范围为核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 spikingjelly_frontier 本轮专项；其选定范围为核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "F3",
+      "coverage": "mandatory",
+      "reason": "Deep convolution or Spikformer：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spikingjelly_frontier",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入核心 SG-BPTT 的 Triton/FlexSN/memopt 强优化资格与深度边界；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E1",
+      "coverage": "specialized",
+      "reason": "Dense LIF：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E3",
+      "coverage": "specialized",
+      "reason": "Sparse recurrent LIF：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E4",
+      "coverage": "specialized",
+      "reason": "Adaptive two-state：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 norse 的有限任务是E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "A1",
+      "coverage": "specialized",
+      "reason": "MNIST pipeline sanity：纳入E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 norse 的本轮有限专项，预算聚焦E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 norse 本轮专项；其选定范围为E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "norse",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；norse 的有限工程预算用于E1/E3/E4 数值交叉参考，有限范围不扩展全容量曲线，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "Q0",
+      "coverage": "mandatory",
+      "reason": "Numerical fixtures：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E1",
+      "coverage": "mandatory",
+      "reason": "Dense LIF：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E3",
+      "coverage": "mandatory",
+      "reason": "Sparse recurrent LIF：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E4",
+      "coverage": "mandatory",
+      "reason": "Adaptive two-state：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E6",
+      "coverage": "mandatory",
+      "reason": "Full-sequence capacity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "E7",
+      "coverage": "mandatory",
+      "reason": "Width capacity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 spyx 的有限任务是NNX/JAX 普通 reset LIF、循环和长序列，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 spyx 的有限任务是NNX/JAX 普通 reset LIF、循环和长序列，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "A1",
+      "coverage": "mandatory",
+      "reason": "MNIST pipeline sanity：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "A2",
+      "coverage": "mandatory",
+      "reason": "SHD full SG-BPTT：纳入NNX/JAX 普通 reset LIF、循环和长序列；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入NNX/JAX 普通 reset LIF、循环和长序列；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 spyx 本轮专项；其选定范围为NNX/JAX 普通 reset LIF、循环和长序列；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "spyx",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；spyx 的有限工程预算用于NNX/JAX 普通 reset LIF、循环和长序列，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E1",
+      "coverage": "specialized",
+      "reason": "Dense LIF：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 sinabs_exodus 的有限任务是EXODUS CUDA 前馈 LIF/卷积限定子集，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 sinabs_exodus 的有限任务是EXODUS CUDA 前馈 LIF/卷积限定子集，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "A1",
+      "coverage": "specialized",
+      "reason": "MNIST pipeline sanity：纳入EXODUS CUDA 前馈 LIF/卷积限定子集；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 sinabs_exodus 的本轮有限专项，预算聚焦EXODUS CUDA 前馈 LIF/卷积限定子集；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 sinabs_exodus 本轮专项；其选定范围为EXODUS CUDA 前馈 LIF/卷积限定子集；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "sinabs_exodus",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；sinabs_exodus 的有限工程预算用于EXODUS CUDA 前馈 LIF/卷积限定子集，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E4",
+      "coverage": "specialized",
+      "reason": "Adaptive two-state：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 lava_dl_slayer 的有限任务是可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 lava_dl_slayer 的有限任务是可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 lava_dl_slayer 的本轮有限专项，预算聚焦可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "A2",
+      "coverage": "specialized",
+      "reason": "SHD full SG-BPTT：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 lava_dl_slayer 本轮专项；其选定范围为可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "lava_dl_slayer",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；lava_dl_slayer 的有限工程预算用于可学习动力学/延迟的 E4/E5 资格及 SHD 原生算法，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E4",
+      "coverage": "specialized",
+      "reason": "Adaptive two-state：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 rockpool 的有限任务是E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 rockpool 的有限任务是E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 rockpool 的本轮有限专项，预算聚焦E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "A2",
+      "coverage": "specialized",
+      "reason": "SHD full SG-BPTT：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 rockpool 本轮专项；其选定范围为E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "rockpool",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；rockpool 的有限工程预算用于E4/E5 参数约束与 SHD；纯 LIF 重复内核由 EXODUS 承担，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "Q0",
+      "coverage": "not_applicable",
+      "reason": "Q0 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 bindsnet 评估 局部 STDP 规则对照，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入局部 STDP 规则对照；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "L2",
+      "coverage": "specialized",
+      "reason": "Sparse E/I local plasticity：纳入局部 STDP 规则对照；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 bindsnet 的本轮有限专项，预算聚焦局部 STDP 规则对照；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 bindsnet 本轮专项；其选定范围为局部 STDP 规则对照；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "bindsnet",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；bindsnet 的有限工程预算用于局部 STDP 规则对照，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E1",
+      "coverage": "specialized",
+      "reason": "Dense LIF：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E4",
+      "coverage": "specialized",
+      "reason": "Adaptive two-state：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 brainpy_classic 的有限任务是旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 brainpy_classic 的有限任务是旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 brainpy_classic 的本轮有限专项，预算聚焦旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brainpy_classic 本轮专项；其选定范围为旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainpy_classic",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入旧栈 E1/E4 交叉参考；完整曲线由 brainx_state 承担；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "Q0",
+      "coverage": "mandatory",
+      "reason": "Numerical fixtures：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E1",
+      "coverage": "mandatory",
+      "reason": "Dense LIF：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E2",
+      "coverage": "specialized",
+      "reason": "Tied-weight convolutional SNN：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E3",
+      "coverage": "mandatory",
+      "reason": "Sparse recurrent LIF：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E4",
+      "coverage": "mandatory",
+      "reason": "Adaptive two-state：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E5",
+      "coverage": "specialized",
+      "reason": "Explicit complex point-neuron equations：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E6",
+      "coverage": "mandatory",
+      "reason": "Full-sequence capacity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "E7",
+      "coverage": "mandatory",
+      "reason": "Width capacity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 brainx_state 的有限任务是brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 brainx_state 的有限任务是brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "A1",
+      "coverage": "mandatory",
+      "reason": "MNIST pipeline sanity：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "A2",
+      "coverage": "mandatory",
+      "reason": "SHD full SG-BPTT：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "A3",
+      "coverage": "specialized",
+      "reason": "SHD algorithm comparison：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brainx_state 本轮专项；其选定范围为brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brainx_state",
+      "workload_id": "M1",
+      "coverage": "specialized",
+      "reason": "Preregistered Brian2 model corpus：纳入brainpy.state/brainstate 的 JIT/scan/remat SG-BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入SHD 在线算法与自身资格，非同梯度 BPTT；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 braintrace 评估 SHD 在线算法与自身资格，非同梯度 BPTT，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 braintrace 的有限任务是SHD 在线算法与自身资格，非同梯度 BPTT，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 braintrace 的有限任务是SHD 在线算法与自身资格，非同梯度 BPTT，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 braintrace 的本轮有限专项，预算聚焦SHD 在线算法与自身资格，非同梯度 BPTT；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 braintrace 的本轮有限专项，预算聚焦SHD 在线算法与自身资格，非同梯度 BPTT；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "A3",
+      "coverage": "mandatory",
+      "reason": "SHD algorithm comparison：纳入SHD 在线算法与自身资格，非同梯度 BPTT；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 braintrace 本轮专项；其选定范围为SHD 在线算法与自身资格，非同梯度 BPTT；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braintrace",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；braintrace 的有限工程预算用于SHD 在线算法与自身资格，非同梯度 BPTT，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入SHD EventProp/e-prop、CUDA 数据并行；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 mlgenn 评估 SHD EventProp/e-prop、CUDA 数据并行，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 mlgenn 的有限任务是SHD EventProp/e-prop、CUDA 数据并行，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 mlgenn 的有限任务是SHD EventProp/e-prop、CUDA 数据并行，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "A1",
+      "coverage": "specialized",
+      "reason": "MNIST pipeline sanity：纳入SHD EventProp/e-prop、CUDA 数据并行；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 mlgenn 的本轮有限专项，预算聚焦SHD EventProp/e-prop、CUDA 数据并行；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "A3",
+      "coverage": "mandatory",
+      "reason": "SHD algorithm comparison：纳入SHD EventProp/e-prop、CUDA 数据并行；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 mlgenn 本轮专项；其选定范围为SHD EventProp/e-prop、CUDA 数据并行；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "mlgenn",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；mlgenn 的有限工程预算用于SHD EventProp/e-prop、CUDA 数据并行，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入CPU 局部网络分区与 SHD e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest 评估 CPU 局部网络分区与 SHD e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "L1",
+      "coverage": "mandatory",
+      "reason": "Pair STDP exact-event fixture：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "L2",
+      "coverage": "mandatory",
+      "reason": "Sparse E/I local plasticity：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 nest 的本轮有限专项，预算聚焦CPU 局部网络分区与 SHD e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 nest 的本轮有限专项，预算聚焦CPU 局部网络分区与 SHD e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "A3",
+      "coverage": "mandatory",
+      "reason": "SHD algorithm comparison：纳入CPU 局部网络分区与 SHD e-prop；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 nest 本轮专项；其选定范围为CPU 局部网络分区与 SHD e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；nest 的有限工程预算用于CPU 局部网络分区与 SHD e-prop，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "Q0",
+      "coverage": "not_applicable",
+      "reason": "Q0 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 nest_gpu 评估 GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "L1",
+      "coverage": "specialized",
+      "reason": "Pair STDP exact-event fixture：纳入GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "L2",
+      "coverage": "specialized",
+      "reason": "Sparse E/I local plasticity：纳入GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 nest_gpu 的本轮有限专项，预算聚焦GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "F1",
+      "coverage": "not_applicable",
+      "reason": "F1 的HH/多室边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "F2",
+      "coverage": "not_applicable",
+      "reason": "F2 的HH/多室边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 nest_gpu 本轮专项；其选定范围为GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "nest_gpu",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；nest_gpu 的有限工程预算用于GPU 模型分区及匹配局部可塑性，不能继承 NEST CPU e-prop，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入HH 参数拟合，原仿真与外层优化分别核验；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 brian2modelfitting 评估 HH 参数拟合，原仿真与外层优化分别核验，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 brian2modelfitting 的有限任务是HH 参数拟合，原仿真与外层优化分别核验，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 brian2modelfitting 的有限任务是HH 参数拟合，原仿真与外层优化分别核验，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 brian2modelfitting 的本轮有限专项，预算聚焦HH 参数拟合，原仿真与外层优化分别核验；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "F1",
+      "coverage": "mandatory",
+      "reason": "Single-compartment HH parameter fitting：纳入HH 参数拟合，原仿真与外层优化分别核验；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "F2",
+      "coverage": "specialized",
+      "reason": "Multicompartment HH：纳入HH 参数拟合，原仿真与外层优化分别核验；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 brian2modelfitting 本轮专项；其选定范围为HH 参数拟合，原仿真与外层优化分别核验；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "brian2modelfitting",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；brian2modelfitting 的有限工程预算用于HH 参数拟合，原仿真与外层优化分别核验，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入单室/多室生物物理求导与拟合；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 jaxley 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 jaxley 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 jaxley 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 jaxley 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "F1",
+      "coverage": "mandatory",
+      "reason": "Single-compartment HH parameter fitting：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "F2",
+      "coverage": "mandatory",
+      "reason": "Multicompartment HH：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 jaxley 本轮专项；其选定范围为单室/多室生物物理求导与拟合；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "jaxley",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；jaxley 的有限工程预算用于单室/多室生物物理求导与拟合，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "Q0",
+      "coverage": "specialized",
+      "reason": "Numerical fixtures：纳入单室/多室生物物理求导与拟合；先做指定语义/能力资格，合格且资源到位后执行指定子集。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E1",
+      "coverage": "not_applicable",
+      "reason": "E1 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E2",
+      "coverage": "not_applicable",
+      "reason": "E2 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E3",
+      "coverage": "not_applicable",
+      "reason": "E3 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E4",
+      "coverage": "not_applicable",
+      "reason": "E4 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E5",
+      "coverage": "not_applicable",
+      "reason": "E5 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E6",
+      "coverage": "not_applicable",
+      "reason": "E6 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "E7",
+      "coverage": "not_applicable",
+      "reason": "E7 是指定 surrogate 全 BPTT 引擎赛道；本轮 braincell 评估 单室/多室生物物理求导与拟合，不把其他梯度/局部学习/仿真算法硬接入同梯度速度榜。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "L1",
+      "coverage": "not_applicable",
+      "reason": "L1 是原 Brian 事件/局部更新规则；本轮 braincell 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "L2",
+      "coverage": "not_applicable",
+      "reason": "L2 是原 Brian 事件/局部更新规则；本轮 braincell 的有限任务是单室/多室生物物理求导与拟合，未安排另写局部学习引擎；并非框架不支持的结论。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "A1",
+      "coverage": "not_applicable",
+      "reason": "A1 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "A2",
+      "coverage": "not_applicable",
+      "reason": "A2 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "A3",
+      "coverage": "not_applicable",
+      "reason": "A3 未纳入 braincell 的本轮有限专项，预算聚焦单室/多室生物物理求导与拟合；其他框架承担该覆盖，保留此格且不判不支持。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "F1",
+      "coverage": "mandatory",
+      "reason": "Single-compartment HH parameter fitting：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "F2",
+      "coverage": "mandatory",
+      "reason": "Multicompartment HH：纳入单室/多室生物物理求导与拟合；完整指定案例与失败记录必须交付。",
+      "capability_status": "unqualified",
+      "qualification_status": "not_run",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": [
+        "environment_pin",
+        "adapter",
+        "semantic_qualification",
+        "hardware_resource_manifest"
+      ]
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "F3",
+      "coverage": "not_applicable",
+      "reason": "F3 的深层卷积边界不在 braincell 本轮专项；其选定范围为单室/多室生物物理求导与拟合；不外推能力缺失。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    },
+    {
+      "contender_id": "braincell",
+      "workload_id": "M1",
+      "coverage": "not_applicable",
+      "reason": "迁移完整分母本轮重点核验 Atlas/Brian 及明确选定适配路径；braincell 的有限工程预算用于单室/多室生物物理求导与拟合，不宣称它不能迁移。",
+      "capability_status": "not_applicable",
+      "qualification_status": "not_applicable",
+      "execution_status": "not_run",
+      "performance_run": false,
+      "pending": []
+    }
+  ]
+}

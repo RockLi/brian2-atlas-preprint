@@ -1,0 +1,1936 @@
+{
+  "schema": "atlas-paper-referenced-source-archive-v1",
+  "archive": "referenced-sources.tar.gz",
+  "archive_sha256": "0d8bca40f76062b8917b0ecf942acabcf89d48d1e568f785fe4988cf19610012",
+  "members": [
+    {
+      "sha256": "033f4078ef8a84cee355fc4606881be1db5e08f6bf4913b1046bfc92483e9260",
+      "bytes": 16655,
+      "member": "sha256/033f4078ef8a84cee355fc4606881be1db5e08f6bf4913b1046bfc92483e9260",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_cuda.cu"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_cuda.cu"
+      }
+    },
+    {
+      "sha256": "04a5c08583d45993d82a31cdd5ea0f99943d955bd2b9ccb0c51f6de8c06fd869",
+      "bytes": 38314,
+      "member": "sha256/04a5c08583d45993d82a31cdd5ea0f99943d955bd2b9ccb0c51f6de8c06fd869",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/planner.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/planner.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/planner.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/planner.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/planner.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/planner.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "f248773e1e69f613e2a22a45b77c3d3e2ad3d08b",
+        "path": "brian2-rust/python/brian2_rust/planner.py"
+      }
+    },
+    {
+      "sha256": "0784c1d67b91dd94300f91ac026118c1ad839406cb777a374658efad91bc224c",
+      "bytes": 3820,
+      "member": "sha256/0784c1d67b91dd94300f91ac026118c1ad839406cb777a374658efad91bc224c",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/gpu_validation.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/gpu_validation.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/gpu_validation.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/gpu_validation.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/gpu_validation.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/gpu_validation.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/gpu_validation.py"
+      }
+    },
+    {
+      "sha256": "07bb8d6367c6999c137df0da957ce8d155c14ebf40e1c841de675e380a04ff13",
+      "bytes": 642891,
+      "member": "sha256/07bb8d6367c6999c137df0da957ce8d155c14ebf40e1c841de675e380a04ff13",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h03-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h03-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "0b12b28fa936e50fe5cae99bd43f42064983dff57fbc5d8c08c719ed467e14b7",
+      "bytes": 36286215,
+      "member": "sha256/0b12b28fa936e50fe5cae99bd43f42064983dff57fbc5d8c08c719ed467e14b7",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h30-policy48-v3-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h30-policy48-v3/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "0cd8c0e3e8ad79721b6670597f15c7fac8c3515965f843fb69a3ad1f7c13ec4f",
+      "bytes": 1364,
+      "member": "sha256/0cd8c0e3e8ad79721b6670597f15c7fac8c3515965f843fb69a3ad1f7c13ec4f",
+      "references": [
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/resource_limits.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/source-b128.tar.gz",
+        "member": "python/brian2_rust/resource_limits.py"
+      }
+    },
+    {
+      "sha256": "1242819cdcb525277deef48c66fbc8af8258dfcd244a3e140c730dc8b1064c52",
+      "bytes": 31724,
+      "member": "sha256/1242819cdcb525277deef48c66fbc8af8258dfcd244a3e140c730dc8b1064c52",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h24-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h24-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "156071707f6166fa7c6e7a7c4b41f9f5d4415094fe2274101c9641d461dfeaf3",
+      "bytes": 22955,
+      "member": "sha256/156071707f6166fa7c6e7a7c4b41f9f5d4415094fe2274101c9641d461dfeaf3",
+      "references": [
+        {
+          "record": "paper/data/neural_lab_capture.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/lab.js"
+        }
+      ],
+      "recovery": {
+        "git_blob": "eecf96008df30e2f712d6f54a683c9ad6ff0c768",
+        "path": "brian2-rust/wasm/lab.js",
+        "reconstructed_asset_version": "50d818ceef70c8ec"
+      }
+    },
+    {
+      "sha256": "1c41e53190a7fd065eea9246d2ad1c3a22048787a65d4c727378ed36146dcfd3",
+      "bytes": 7167,
+      "member": "sha256/1c41e53190a7fd065eea9246d2ad1c3a22048787a65d4c727378ed36146dcfd3",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_training_nested_index_codegen.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_training_nested_index_codegen.py"
+      }
+    },
+    {
+      "sha256": "2118f528035b4a6f676bfe0f717df7ecc915b9a476311036f58e4dcf38bca1c1",
+      "bytes": 12190,
+      "member": "sha256/2118f528035b4a6f676bfe0f717df7ecc915b9a476311036f58e4dcf38bca1c1",
+      "references": [
+        {
+          "record": "paper/data/neural_lab_capture.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/models.js"
+        }
+      ],
+      "recovery": {
+        "git_blob": "e8778fd19203a2ef04ba733a1844b97af3a1ed20",
+        "path": "brian2-rust/wasm/models.js",
+        "reconstructed_asset_version": "50d818ceef70c8ec"
+      }
+    },
+    {
+      "sha256": "21dd41e218fdc5abe5d39959e369fe75bb99586071d1b367a3420a3ef0dfaefc",
+      "bytes": 20893,
+      "member": "sha256/21dd41e218fdc5abe5d39959e369fe75bb99586071d1b367a3420a3ef0dfaefc",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/plan.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/plan.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/plan.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/plan.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/plan.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/plan.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "59046b09eea4079b511bc82c2e6c213fc72bfb0f",
+        "path": "brian2-rust/python/brian2_rust/plan.py"
+      }
+    },
+    {
+      "sha256": "223a990a925fc04c0190d335f4282a5701102240fd8c0b3849a79e474ef11d73",
+      "bytes": 1481,
+      "member": "sha256/223a990a925fc04c0190d335f4282a5701102240fd8c0b3849a79e474ef11d73",
+      "references": [
+        {
+          "record": "paper/data/neural_lab_capture.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/runtime.js"
+        }
+      ],
+      "recovery": {
+        "git_blob": "46ca4ac0e9a7053fc0620c27404cd8d4d9c3d273",
+        "path": "brian2-rust/wasm/runtime.js",
+        "reconstructed_asset_version": "50d818ceef70c8ec"
+      }
+    },
+    {
+      "sha256": "232ee6ca4679193389afd7c0d8e17a6f5be6d8ccda34ddca7b247f19c0db4382",
+      "bytes": 138555,
+      "member": "sha256/232ee6ca4679193389afd7c0d8e17a6f5be6d8ccda34ddca7b247f19c0db4382",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/device.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/device.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/device.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/device.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/device.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/device.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/device.py"
+      }
+    },
+    {
+      "sha256": "277a605ac708a60cbddaee10a1da71fd43eefcdee222e9751096b74d747d4196",
+      "bytes": 36893,
+      "member": "sha256/277a605ac708a60cbddaee10a1da71fd43eefcdee222e9751096b74d747d4196",
+      "references": [
+        {
+          "record": "paper/data/plan_selection.json",
+          "source": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/python/brian2_rust/planner.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "79c730d320c925835f5a31c5a208a1091beadbb2",
+        "path": "brian2-rust/python/brian2_rust/planner.py"
+      }
+    },
+    {
+      "sha256": "30c945bc08f5d23813203fdbe1845a5471f1f341a02b875eed87e47d93a31a3f",
+      "bytes": 2066,
+      "member": "sha256/30c945bc08f5d23813203fdbe1845a5471f1f341a02b875eed87e47d93a31a3f",
+      "references": [
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "src/resource_limits.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-256m-20261007/source.tar.gz",
+        "member": "src/resource_limits.rs"
+      }
+    },
+    {
+      "sha256": "31db7e57f100743c2199ba1f8cfd3808c7c5d36f7c320b0196bc019065a322eb",
+      "bytes": 883577,
+      "member": "sha256/31db7e57f100743c2199ba1f8cfd3808c7c5d36f7c320b0196bc019065a322eb",
+      "references": [
+        {
+          "record": "paper/data/capacity/pilot-owner30-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-owner30/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "32ab9c7217c1a6c973dc7ddcd0b9249e39be772df374b629db4fb13c1e352d90",
+      "bytes": 6522330,
+      "member": "sha256/32ab9c7217c1a6c973dc7ddcd0b9249e39be772df374b629db4fb13c1e352d90",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h12-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h12-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "3809a7c716603cd5e8a1ab8058ee11c3fe796ec1e7a5edb7738823806a490018",
+      "bytes": 15671,
+      "member": "sha256/3809a7c716603cd5e8a1ab8058ee11c3fe796ec1e7a5edb7738823806a490018",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2/codegen/generators/numpy_generator.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2/codegen/generators/numpy_generator.py"
+      }
+    },
+    {
+      "sha256": "3d493dcefed67170b535e62956d9a6d9cc78801092284eb1846b2fd49ef8653b",
+      "bytes": 16858,
+      "member": "sha256/3d493dcefed67170b535e62956d9a6d9cc78801092284eb1846b2fd49ef8653b",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/src/training/delay/layout.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/src/training/delay/layout.rs"
+      }
+    },
+    {
+      "sha256": "40bedc1238ca8d092185d0b6118f67a54f86d98f09bcd6ec16084a997bcc5d63",
+      "bytes": 39108,
+      "member": "sha256/40bedc1238ca8d092185d0b6118f67a54f86d98f09bcd6ec16084a997bcc5d63",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_functions.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_functions.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_functions.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_functions.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_functions.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_functions.py"
+      }
+    },
+    {
+      "sha256": "4348a90ad795f545c07bfb75cd42ace845d291dbbedb57683178e9a30e1260a0",
+      "bytes": 2806191,
+      "member": "sha256/4348a90ad795f545c07bfb75cd42ace845d291dbbedb57683178e9a30e1260a0",
+      "references": [
+        {
+          "record": "paper/data/capacity/256m-capacity-256m-owner60-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/capacity-256m-owner60/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "44cd4a14ec081861f6a7be0b0b32809648377bc799d7756b35d3b43ad4d3aac0",
+      "bytes": 1364,
+      "member": "sha256/44cd4a14ec081861f6a7be0b0b32809648377bc799d7756b35d3b43ad4d3aac0",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/resource_limits.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/resource_limits.py"
+      }
+    },
+    {
+      "sha256": "4f3ae0cb92f32d35d157ab7b5469d3e8ffb42cd3304e44241f39fcb8b5305d75",
+      "bytes": 3129,
+      "member": "sha256/4f3ae0cb92f32d35d157ab7b5469d3e8ffb42cd3304e44241f39fcb8b5305d75",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_cuda.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_cuda.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_cuda.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_cuda.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_cuda.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_cuda.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_cuda.py"
+      }
+    },
+    {
+      "sha256": "51bf761fea1cfe780fbc8e626e4abfbeb0e3173424bf86e2841b6cf58a1a1ddf",
+      "bytes": 16105,
+      "member": "sha256/51bf761fea1cfe780fbc8e626e4abfbeb0e3173424bf86e2841b6cf58a1a1ddf",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h12-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h12-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "524187b28cec2119cee0d88733f3eed1ff9540028451481b3a3bd3bae7c2f3a1",
+      "bytes": 7413,
+      "member": "sha256/524187b28cec2119cee0d88733f3eed1ff9540028451481b3a3bd3bae7c2f3a1",
+      "references": [
+        {
+          "record": "paper/data/plan_selection.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/gpu_tuning_cache.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "2acbf8464b6b880e5294a90ae1e42267048fbd1f",
+        "path": "brian2-rust/python/brian2_rust/gpu_tuning_cache.py"
+      }
+    },
+    {
+      "sha256": "528d7ec772c9293265bf2e64e6d89befe46993c2cf1c4a8f7fee7279266ae5c4",
+      "bytes": 4960,
+      "member": "sha256/528d7ec772c9293265bf2e64e6d89befe46993c2cf1c4a8f7fee7279266ae5c4",
+      "references": [
+        {
+          "record": "paper/data/capacity/pilot-owner30-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-owner30/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "55e4c5f270ee304ca07eb93e6adbf212db993913e2311a5ec5fc80fb8638a28a",
+      "bytes": 34633,
+      "member": "sha256/55e4c5f270ee304ca07eb93e6adbf212db993913e2311a5ec5fc80fb8638a28a",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_equations.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_equations.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_equations.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_equations.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_equations.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_equations.py"
+      }
+    },
+    {
+      "sha256": "6c117184ea5230f1665a802e522644df2c2e10d88a847b947b955970b6c64b4e",
+      "bytes": 11337,
+      "member": "sha256/6c117184ea5230f1665a802e522644df2c2e10d88a847b947b955970b6c64b4e",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "tests/test_resource_limits.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "tests/test_resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "tests/test_resource_limits.py"
+      }
+    },
+    {
+      "sha256": "6c2760f656c266e9598c48351fe886cb83d38ce8ce34158ac3dcb9df20994448",
+      "bytes": 3989,
+      "member": "sha256/6c2760f656c266e9598c48351fe886cb83d38ce8ce34158ac3dcb9df20994448",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h03-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h03-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "6ebd87933c914f50e4a71943bdaf0a5d83029931530bdb3264a21ad6f981e6ce",
+      "bytes": 37274256,
+      "member": "sha256/6ebd87933c914f50e4a71943bdaf0a5d83029931530bdb3264a21ad6f981e6ce",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h30-v3-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h30-v3/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "6fa94e6a92f950036822c5d8dde428b179f7f00d332a5c7cdd4dee007ef48bf7",
+      "bytes": 24216047,
+      "member": "sha256/6fa94e6a92f950036822c5d8dde428b179f7f00d332a5c7cdd4dee007ef48bf7",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h24-v2-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h24-v2/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "744d04911ddb91d59fb6f9602fe20c236ebcda8b87e9697e499507fb37a655cb",
+      "bytes": 2066,
+      "member": "sha256/744d04911ddb91d59fb6f9602fe20c236ebcda8b87e9697e499507fb37a655cb",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "src/resource_limits.rs"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "src/resource_limits.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "src/resource_limits.rs"
+      }
+    },
+    {
+      "sha256": "74cebc8682b4cdc616eb482c1f0e0bfe16caac8e262c9efcf2b3ad326ff437e3",
+      "bytes": 18684,
+      "member": "sha256/74cebc8682b4cdc616eb482c1f0e0bfe16caac8e262c9efcf2b3ad326ff437e3",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "tools/mpi_teleport_launch.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "tools/mpi_teleport_launch.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "tools/mpi_teleport_launch.py"
+      }
+    },
+    {
+      "sha256": "75ec3578d0b66b98594841ba36a4fafcc8524809af41447aa342d609a22cd267",
+      "bytes": 121185,
+      "member": "sha256/75ec3578d0b66b98594841ba36a4fafcc8524809af41447aa342d609a22cd267",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_brian_dynamic.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_brian_dynamic.py"
+      }
+    },
+    {
+      "sha256": "76610c12e5ec7108228adab27555c508785e717de47c42833b4f782002f3dfb2",
+      "bytes": 1364,
+      "member": "sha256/76610c12e5ec7108228adab27555c508785e717de47c42833b4f782002f3dfb2",
+      "references": [
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-256m-20261007/source.tar.gz",
+        "member": "python/brian2_rust/resource_limits.py"
+      }
+    },
+    {
+      "sha256": "76cb38e0fd5705aa0376bb8b28949e87d55a5923110bb6379282f1ac374d16f7",
+      "bytes": 2066,
+      "member": "sha256/76cb38e0fd5705aa0376bb8b28949e87d55a5923110bb6379282f1ac374d16f7",
+      "references": [
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "src/resource_limits.rs"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "src/resource_limits.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/source-b128.tar.gz",
+        "member": "src/resource_limits.rs"
+      }
+    },
+    {
+      "sha256": "783ededfe93279225631b16a3af921b5d085d5fd5e734ed25b26787a41bce3d6",
+      "bytes": 5365,
+      "member": "sha256/783ededfe93279225631b16a3af921b5d085d5fd5e734ed25b26787a41bce3d6",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_brian_regular.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_brian_regular.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_brian_regular.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_brian_regular.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_brian_regular.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_brian_regular.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_brian_regular.py"
+      }
+    },
+    {
+      "sha256": "7e4ed1c1c106dfaf1577747eb725b34fe9bd5fdb7abda5e537d20cdf247f0d6e",
+      "bytes": 5934,
+      "member": "sha256/7e4ed1c1c106dfaf1577747eb725b34fe9bd5fdb7abda5e537d20cdf247f0d6e",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_optional_examples.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_optional_examples.py"
+      }
+    },
+    {
+      "sha256": "8105952c3881696fac0197150f49390c53241847642c9abaa3307e556e76482f",
+      "bytes": 903539,
+      "member": "sha256/8105952c3881696fac0197150f49390c53241847642c9abaa3307e556e76482f",
+      "references": [
+        {
+          "record": "paper/data/capacity/86m-major-owner30-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/major-owner30/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "81ade1bd2524f688de8077d87f1a8a9e5cedc750038bdce4c9cd58b149a4dad8",
+      "bytes": 4951,
+      "member": "sha256/81ade1bd2524f688de8077d87f1a8a9e5cedc750038bdce4c9cd58b149a4dad8",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "experiment/prepare-p12.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "experiment/prepare-p12.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "experiment/prepare-p12.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "experiment/prepare-p12.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "experiment/prepare-p12.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "experiment/prepare-p12.py"
+      }
+    },
+    {
+      "sha256": "824500237b5f0a754b21de53b2df932df7188bfb7f18ad37ac526c49b29084f1",
+      "bytes": 21000,
+      "member": "sha256/824500237b5f0a754b21de53b2df932df7188bfb7f18ad37ac526c49b29084f1",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_effects.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_effects.py"
+      }
+    },
+    {
+      "sha256": "83e218c1ecd739713228e9ef1bc23e7f955955b459bc4f55be3644698afe7889",
+      "bytes": 1874624,
+      "member": "sha256/83e218c1ecd739713228e9ef1bc23e7f955955b459bc4f55be3644698afe7889",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h06-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h06-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "88e0d598c2bac4d863be7ad115655fcc2fd58a17db608cc87cb0a6652b651bcd",
+      "bytes": 18214,
+      "member": "sha256/88e0d598c2bac4d863be7ad115655fcc2fd58a17db608cc87cb0a6652b651bcd",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "src/training/delay/layout.rs"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "src/training/delay/layout.rs"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "src/training/delay/layout.rs"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "src/training/delay/layout.rs"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "src/training/delay/layout.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "src/training/delay/layout.rs"
+      }
+    },
+    {
+      "sha256": "8b261a88f8a1924aefcb58d9e3e088b1d30a51b6438fc73e56d4eb7359599609",
+      "bytes": 32049,
+      "member": "sha256/8b261a88f8a1924aefcb58d9e3e088b1d30a51b6438fc73e56d4eb7359599609",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h24-v2-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h24-v2/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "8dbcc4ead72ed0add77f9d996851dc21ece886628ce6aa3f398354ae0f3cfe80",
+      "bytes": 8061,
+      "member": "sha256/8dbcc4ead72ed0add77f9d996851dc21ece886628ce6aa3f398354ae0f3cfe80",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h06-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h06-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "93a867aedcc5e4deb7b8909600d0c81d90de46b528accfd00889253151ec8066",
+      "bytes": 11398,
+      "member": "sha256/93a867aedcc5e4deb7b8909600d0c81d90de46b528accfd00889253151ec8066",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "tests/test_resource_limits_corrected_n256.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "tests/test_resource_limits_corrected_n256.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "tests/test_resource_limits_corrected_n256.py"
+      }
+    },
+    {
+      "sha256": "951bf3f5be66b1c6ad3ded363dda93eafca23836c269cc880f07b4461a27ffb0",
+      "bytes": 5477,
+      "member": "sha256/951bf3f5be66b1c6ad3ded363dda93eafca23836c269cc880f07b4461a27ffb0",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "experiment/prepare-owner60.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "experiment/prepare-owner60.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "experiment/prepare-owner60.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "experiment/prepare-owner60.py"
+      }
+    },
+    {
+      "sha256": "9d5dd1b0b059669e2c7a66d53009b2beed21bfed793ab717bbd926db601a86d4",
+      "bytes": 6368618,
+      "member": "sha256/9d5dd1b0b059669e2c7a66d53009b2beed21bfed793ab717bbd926db601a86d4",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h12-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h12-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "9fad47b154035ac931e749c483d65e9bcdb2072e8c29048df49f60428190de45",
+      "bytes": 11985,
+      "member": "sha256/9fad47b154035ac931e749c483d65e9bcdb2072e8c29048df49f60428190de45",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_wasm.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_wasm.py"
+      }
+    },
+    {
+      "sha256": "a0f9a71b79ccede0d6bb28561e772b562ff2688b521f7f91eec0a0c9f7eb3b9e",
+      "bytes": 5073,
+      "member": "sha256/a0f9a71b79ccede0d6bb28561e772b562ff2688b521f7f91eec0a0c9f7eb3b9e",
+      "references": [
+        {
+          "record": "paper/data/capacity/86m-major-owner30-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/major-owner30/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "a215708ca4119e71ac69646022d2dc60cf3d49c1014718162e098a61816e3f26",
+      "bytes": 5088,
+      "member": "sha256/a215708ca4119e71ac69646022d2dc60cf3d49c1014718162e098a61816e3f26",
+      "references": [
+        {
+          "record": "paper/data/capacity/128m-owner30-128m-b600m-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/owner30-128m-b600m/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "a315ce7a2373dce36ea650f437699807116333dfaa5ccf401efe7e7417f754ff",
+      "bytes": 11336,
+      "member": "sha256/a315ce7a2373dce36ea650f437699807116333dfaa5ccf401efe7e7417f754ff",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_resource_limits.py"
+      }
+    },
+    {
+      "sha256": "a4465b399d451e4ef3d9784fc415085ab2b9e5d50695f8f426b0eb2945cf0ceb",
+      "bytes": 19158,
+      "member": "sha256/a4465b399d451e4ef3d9784fc415085ab2b9e5d50695f8f426b0eb2945cf0ceb",
+      "references": [
+        {
+          "record": "paper/data/plan_selection.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/plan.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "187f91861b2b3ae7cdcf90208d629456dbf81144",
+        "path": "brian2-rust/python/brian2_rust/plan.py"
+      }
+    },
+    {
+      "sha256": "a5af32b86fbcae611d399e0157d579fa4d89d474ef577808a99a38326f8796d5",
+      "bytes": 7601,
+      "member": "sha256/a5af32b86fbcae611d399e0157d579fa4d89d474ef577808a99a38326f8796d5",
+      "references": [
+        {
+          "record": "paper/data/plan_selection.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/python/brian2_rust/gpu_autotune.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "44ae4cb50f5321f10b84fdf00d6667ed84d9d2fe",
+        "path": "brian2-rust/python/brian2_rust/gpu_autotune.py"
+      }
+    },
+    {
+      "sha256": "a70af0a54b326d29d6032cbc64464ffdfed2d182b96a02a352e5ee6a469b0b02",
+      "bytes": 1914808,
+      "member": "sha256/a70af0a54b326d29d6032cbc64464ffdfed2d182b96a02a352e5ee6a469b0b02",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h06-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h06-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "a9648e4072e228d967022d4f7f02babefed8a540f79608e03d86f0092e00e10e",
+      "bytes": 131983,
+      "member": "sha256/a9648e4072e228d967022d4f7f02babefed8a540f79608e03d86f0092e00e10e",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_brian_dynamic.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_brian_dynamic.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_brian_dynamic.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_brian_dynamic.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_brian_dynamic.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_brian_dynamic.py"
+      }
+    },
+    {
+      "sha256": "a9f30e3f5223bd92ae7c2f22c8e268639d1b4273e066bc357d94642cb14ceba5",
+      "bytes": 654441,
+      "member": "sha256/a9f30e3f5223bd92ae7c2f22c8e268639d1b4273e066bc357d94642cb14ceba5",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h03-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h03-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "aaecb027751d50f1f942a853e35f6bdabfbda59d940d093ce727292ef8fb3088",
+      "bytes": 37665,
+      "member": "sha256/aaecb027751d50f1f942a853e35f6bdabfbda59d940d093ce727292ef8fb3088",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_functions.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_functions.py"
+      }
+    },
+    {
+      "sha256": "ab11e08e536a187fb61d5e3d4ee0a6cb48725f71cad5fee4af7453f42a95805c",
+      "bytes": 8059,
+      "member": "sha256/ab11e08e536a187fb61d5e3d4ee0a6cb48725f71cad5fee4af7453f42a95805c",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "experiment/prepare-scaling.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "experiment/prepare-scaling.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "experiment/prepare-scaling.py"
+      }
+    },
+    {
+      "sha256": "ab5d56ddfd053a02e4466be731a3e055f0873f04d9d4ef49704c45528aa7d738",
+      "bytes": 6668,
+      "member": "sha256/ab5d56ddfd053a02e4466be731a3e055f0873f04d9d4ef49704c45528aa7d738",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_results_bounded.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_results_bounded.py"
+      }
+    },
+    {
+      "sha256": "ab8dc5024bb66e43518804a9d17dcefab66109b4bd06f2b624bca3985fc78210",
+      "bytes": 2065,
+      "member": "sha256/ab8dc5024bb66e43518804a9d17dcefab66109b4bd06f2b624bca3985fc78210",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/src/resource_limits.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/src/resource_limits.rs"
+      }
+    },
+    {
+      "sha256": "abc4f6c6cc4ad6a06fcef22593097df7d24df5c2690e6b320b64f98146a395c9",
+      "bytes": 39962,
+      "member": "sha256/abc4f6c6cc4ad6a06fcef22593097df7d24df5c2690e6b320b64f98146a395c9",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h30-policy48-v3-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h30-policy48-v3/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "aee1b2243468edd22b1bbf61735e0ead083821f75ad30d7dab3578dc9aa62f22",
+      "bytes": 7035,
+      "member": "sha256/aee1b2243468edd22b1bbf61735e0ead083821f75ad30d7dab3578dc9aa62f22",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_training_nested_parameter_frontend.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_training_nested_parameter_frontend.py"
+      }
+    },
+    {
+      "sha256": "b0e83c7d387d5e4aa57f55cd5e907fc270992d8e4239278417a287c15e7d8f82",
+      "bytes": 8341,
+      "member": "sha256/b0e83c7d387d5e4aa57f55cd5e907fc270992d8e4239278417a287c15e7d8f82",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_training_callback_effects.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_training_callback_effects.py"
+      }
+    },
+    {
+      "sha256": "b12b0568dc77d92e9e11e955576c0f24429a569ac10d506ba5769f1d5bc05fdc",
+      "bytes": 15812,
+      "member": "sha256/b12b0568dc77d92e9e11e955576c0f24429a569ac10d506ba5769f1d5bc05fdc",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h12-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h12-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "b4ddd9496f85932e4e3ef87a215ddf7b30dd404078a28019a54b4ad6501d3dc7",
+      "bytes": 2947,
+      "member": "sha256/b4ddd9496f85932e4e3ef87a215ddf7b30dd404078a28019a54b4ad6501d3dc7",
+      "references": [
+        {
+          "record": "paper/data/neural_lab_capture.json",
+          "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/worker.js"
+        }
+      ],
+      "recovery": {
+        "git_blob": "f2a50f2b82a65770af3f96b713356cb70c64e13b",
+        "path": "brian2-rust/wasm/worker.js",
+        "reconstructed_asset_version": "50d818ceef70c8ec"
+      }
+    },
+    {
+      "sha256": "b57506882a371d70e665814930328e78489834c2dd3795418d17d93fa2e92c85",
+      "bytes": 64635,
+      "member": "sha256/b57506882a371d70e665814930328e78489834c2dd3795418d17d93fa2e92c85",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_brian.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_brian.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_brian.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_brian.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_brian.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_brian.py"
+      }
+    },
+    {
+      "sha256": "bf111f4d398880edf43c84d0b2098d34d28be263fd350a5aa55b9ded23edbfe5",
+      "bytes": 7947,
+      "member": "sha256/bf111f4d398880edf43c84d0b2098d34d28be263fd350a5aa55b9ded23edbfe5",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h06-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h06-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "bf39a76675acfa7289347da85707dc5aec93a556d0f36db8ec047178b70df2de",
+      "bytes": 514,
+      "member": "sha256/bf39a76675acfa7289347da85707dc5aec93a556d0f36db8ec047178b70df2de",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "Cargo.toml"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "Cargo.toml"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "Cargo.toml"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "Cargo.toml"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "Cargo.toml"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/Cargo.toml"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "Cargo.toml"
+      }
+    },
+    {
+      "sha256": "bfaa2b094dde33b688a7c6a2d7d23819d1bb5937c403f01e719eab9796fcb909",
+      "bytes": 29754,
+      "member": "sha256/bfaa2b094dde33b688a7c6a2d7d23819d1bb5937c403f01e719eab9796fcb909",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_effects.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_effects.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_effects.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_effects.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_effects.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_effects.py"
+      }
+    },
+    {
+      "sha256": "c0ce01ae9879d00acbb3eb415d7e4e25d31d1d725cb8944935efb72752903a5a",
+      "bytes": 13307,
+      "member": "sha256/c0ce01ae9879d00acbb3eb415d7e4e25d31d1d725cb8944935efb72752903a5a",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_native_training.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_native_training.py"
+      }
+    },
+    {
+      "sha256": "c15fb841883757eb103e46418932e0336b8f5113a10c9ca99915f334aad1dbfd",
+      "bytes": 33931,
+      "member": "sha256/c15fb841883757eb103e46418932e0336b8f5113a10c9ca99915f334aad1dbfd",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training.py"
+      }
+    },
+    {
+      "sha256": "c593b42cca8853ceb90385198ae78c10e470818cfa5c78efb70509359b887d16",
+      "bytes": 919,
+      "member": "sha256/c593b42cca8853ceb90385198ae78c10e470818cfa5c78efb70509359b887d16",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_codegen_sums.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_codegen_sums.py"
+      }
+    },
+    {
+      "sha256": "c83026a62afdb344c8f4ed0ab30db661531b461d6437f732350a42a8bd49c248",
+      "bytes": 11337,
+      "member": "sha256/c83026a62afdb344c8f4ed0ab30db661531b461d6437f732350a42a8bd49c248",
+      "references": [
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "tests/test_resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-256m-20261007/source.tar.gz",
+        "member": "tests/test_resource_limits.py"
+      }
+    },
+    {
+      "sha256": "caab156972e96a7a7219cbe639e3a357294730eb7936f65d64e1ba57892f323c",
+      "bytes": 904443,
+      "member": "sha256/caab156972e96a7a7219cbe639e3a357294730eb7936f65d64e1ba57892f323c",
+      "references": [
+        {
+          "record": "paper/data/capacity/128m-owner30-128m-b600m-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/owner30-128m-b600m/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "cbbed7e5d8f47caee4a07b282310a9e11ce5e93ec14b126206e757543af29434",
+      "bytes": 5209,
+      "member": "sha256/cbbed7e5d8f47caee4a07b282310a9e11ce5e93ec14b126206e757543af29434",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "src/training/delay.rs"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "src/training/delay.rs"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "src/training/delay.rs"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "src/training/delay.rs"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "src/training/delay.rs"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/src/training/delay.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "src/training/delay.rs"
+      }
+    },
+    {
+      "sha256": "cfa77239adb3a7f075b41c7537ff5bf56adccd1c355ca375ca9dcc421936e790",
+      "bytes": 64535,
+      "member": "sha256/cfa77239adb3a7f075b41c7537ff5bf56adccd1c355ca375ca9dcc421936e790",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_brian.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_brian.py"
+      }
+    },
+    {
+      "sha256": "cfdb5d5e61ec5562744d3ef1a92c1a8b8e00fa6379fc90149b5bb782d879b79e",
+      "bytes": 34015,
+      "member": "sha256/cfdb5d5e61ec5562744d3ef1a92c1a8b8e00fa6379fc90149b5bb782d879b79e",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/training_equations.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/python/brian2_rust/training_equations.py"
+      }
+    },
+    {
+      "sha256": "d03084741600e85be638854841405e06b3ad5995a5e4130224de58529b67ba5f",
+      "bytes": 34634,
+      "member": "sha256/d03084741600e85be638854841405e06b3ad5995a5e4130224de58529b67ba5f",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training.py"
+      }
+    },
+    {
+      "sha256": "d52402647126bfbb11f236fff445a99a3e0e6db924d51f453694d057a46626b3",
+      "bytes": 20570,
+      "member": "sha256/d52402647126bfbb11f236fff445a99a3e0e6db924d51f453694d057a46626b3",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "src/training/delay/rebuild.rs"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "src/training/delay/rebuild.rs"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "src/training/delay/rebuild.rs"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "src/training/delay/rebuild.rs"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "src/training/delay/rebuild.rs"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/src/training/delay/rebuild.rs"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "src/training/delay/rebuild.rs"
+      }
+    },
+    {
+      "sha256": "d713014bc22a0a585f2b53483d125db4fbefca45069e2bd37f9a586a85bc4f6b",
+      "bytes": 6482,
+      "member": "sha256/d713014bc22a0a585f2b53483d125db4fbefca45069e2bd37f9a586a85bc4f6b",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/training_brian_events.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/training_brian_events.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/training_brian_events.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/training_brian_events.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/training_brian_events.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/training_brian_events.py"
+      }
+    },
+    {
+      "sha256": "d95718709dfb10dfbc293106501c4fc8ab0af17b58b3ec4637c044df6e14158f",
+      "bytes": 10114,
+      "member": "sha256/d95718709dfb10dfbc293106501c4fc8ab0af17b58b3ec4637c044df6e14158f",
+      "references": [
+        {
+          "record": "paper/data/capacity/256m-capacity-256m-owner60-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/capacity-256m-owner60/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "da2eb896cfab00e5fb663345f9c373859c322d8656d387bbbd1cd47561bab80a",
+      "bytes": 3694,
+      "member": "sha256/da2eb896cfab00e5fb663345f9c373859c322d8656d387bbbd1cd47561bab80a",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_diehl_cook_example.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_diehl_cook_example.py"
+      }
+    },
+    {
+      "sha256": "db8615685488a3bd8dda05faf8a39cb8d5442713d96497140527cafc89e5d2ef",
+      "bytes": 4433,
+      "member": "sha256/db8615685488a3bd8dda05faf8a39cb8d5442713d96497140527cafc89e5d2ef",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/gpu_initialization.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/gpu_initialization.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/gpu_initialization.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/gpu_initialization.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/gpu_initialization.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/gpu_initialization.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/gpu_initialization.py"
+      }
+    },
+    {
+      "sha256": "e4fe7a71930ec06d487d4b49505d0a85997e26e4ce84584a3bc2a52c654f5559",
+      "bytes": 11398,
+      "member": "sha256/e4fe7a71930ec06d487d4b49505d0a85997e26e4ce84584a3bc2a52c654f5559",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "tests/test_resource_limits_corrected_n860.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "tests/test_resource_limits_corrected_n860.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "tests/test_resource_limits_corrected_n860.py"
+      }
+    },
+    {
+      "sha256": "e55d4c4189be614d82abfa686e53f31c4c6591799a37ca03af4d60bba0f46cc7",
+      "bytes": 101395,
+      "member": "sha256/e55d4c4189be614d82abfa686e53f31c4c6591799a37ca03af4d60bba0f46cc7",
+      "references": [
+        {
+          "record": "paper/data/figure_data.json",
+          "source": "/private/tmp/brian2-flywire-mnist/brian2-rust/tests/test_synapses.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "e63082ecedcfa140fe713dc070a1ede19613d452",
+        "path": "brian2-rust/tests/test_synapses.py"
+      }
+    },
+    {
+      "sha256": "e86acc666c9c1f017c97243751cce0e4585b26b433d1a0947552864599eaa40e",
+      "bytes": 123302,
+      "member": "sha256/e86acc666c9c1f017c97243751cce0e4585b26b433d1a0947552864599eaa40e",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_synapses.py"
+        }
+      ],
+      "recovery": {
+        "git_blob": "9fc2b0d991311257d4c0519909b94f66f8bc94e3",
+        "path": "brian2-rust/tests/test_synapses.py"
+      }
+    },
+    {
+      "sha256": "eccf0b29ed8ac11fce76c02e9ab015a8312ceee6c07dc05a4c7d568a59f59877",
+      "bytes": 11337,
+      "member": "sha256/eccf0b29ed8ac11fce76c02e9ab015a8312ceee6c07dc05a4c7d568a59f59877",
+      "references": [
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "tests/test_resource_limits.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "tests/test_resource_limits.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/source-b128.tar.gz",
+        "member": "tests/test_resource_limits.py"
+      }
+    },
+    {
+      "sha256": "ee30e2f6f12135f6f34fccf4390e19580a0fa597c0cb04247ddb74d1ed8d190d",
+      "bytes": 23580747,
+      "member": "sha256/ee30e2f6f12135f6f34fccf4390e19580a0fa597c0cb04247ddb74d1ed8d190d",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-pilot-weak1pct-h24-v1-resources.json",
+          "source": "mpi/main.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/pilot-weak1pct-h24-v1/mpi/main.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "f4c791d1e7f9e1aec2f93e3cb035fa2598b7f129b6d43dff556c990e3bcc3920",
+      "bytes": 40086,
+      "member": "sha256/f4c791d1e7f9e1aec2f93e3cb035fa2598b7f129b6d43dff556c990e3bcc3920",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h30-v3-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h30-v3/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    },
+    {
+      "sha256": "f82ce11042fd11a04a2d5a1d3952db0858bbadd7204a3b6a66090255d478fa84",
+      "bytes": 3903,
+      "member": "sha256/f82ce11042fd11a04a2d5a1d3952db0858bbadd7204a3b6a66090255d478fa84",
+      "references": [
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/tests/test_results_times.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-storage/0002/brian2-atlas-migration-20261008/snapshots/historical-source-recovery/review-v3-source-overlay.tar.gz",
+        "member": "brian2-rust/tests/test_results_times.py"
+      }
+    },
+    {
+      "sha256": "f8dbea22a30852a1f646735e5528fccf70f0c9e61226a9192e21746c3d921d4f",
+      "bytes": 48453,
+      "member": "sha256/f8dbea22a30852a1f646735e5528fccf70f0c9e61226a9192e21746c3d921d4f",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/spec.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/spec.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/spec.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/spec.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/spec.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/spec.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/spec.py"
+      }
+    },
+    {
+      "sha256": "f9b96d8a00c01b9f3fb2eeb910b8fbc0110d76630fe2364339ea0f33cab85dde",
+      "bytes": 4940,
+      "member": "sha256/f9b96d8a00c01b9f3fb2eeb910b8fbc0110d76630fe2364339ea0f33cab85dde",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "experiment/prepare.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "experiment/prepare.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "experiment/prepare.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "experiment/prepare.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "experiment/prepare.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "experiment/prepare.py"
+      }
+    },
+    {
+      "sha256": "fb55e8473a0b0f70d9bccee8d621680d4d6b896e411c24a864db5f5ea5e91a59",
+      "bytes": 4145,
+      "member": "sha256/fb55e8473a0b0f70d9bccee8d621680d4d6b896e411c24a864db5f5ea5e91a59",
+      "references": [
+        {
+          "record": "paper/data/full_scale/source-identity.json",
+          "source": "python/brian2_rust/__init__.py"
+        },
+        {
+          "record": "paper/data/capacity/source-b128-identity.json",
+          "source": "python/brian2_rust/__init__.py"
+        },
+        {
+          "record": "paper/data/capacity/weak-source-identity.json",
+          "source": "python/brian2_rust/__init__.py"
+        },
+        {
+          "record": "paper/data/capacity/256m-source-identity.json",
+          "source": "python/brian2_rust/__init__.py"
+        },
+        {
+          "record": "paper/data/capacity/engine-source-readback.json",
+          "source": "python/brian2_rust/__init__.py"
+        },
+        {
+          "record": "paper/data/v3/review_snapshot.json",
+          "source": "brian2-rust/python/brian2_rust/__init__.py"
+        }
+      ],
+      "recovery": {
+        "archive": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-count-scaling-1pct-20261007/source.tar.gz",
+        "member": "python/brian2_rust/__init__.py"
+      }
+    },
+    {
+      "sha256": "fd1986b7ec2e4f520c873e17f0cc35f842cb264edab21847306475655414e03c",
+      "bytes": 4085,
+      "member": "sha256/fd1986b7ec2e4f520c873e17f0cc35f842cb264edab21847306475655414e03c",
+      "references": [
+        {
+          "record": "paper/data/capacity/weak-weak1pct-h03-v1-resources.json",
+          "source": "mpi/instance-identities.rs"
+        }
+      ],
+      "recovery": {
+        "remote_host": "hk-prod-model-ae02-23",
+        "path": "/atlas-home/0003/atlas-capacity-86m-20261007/weak1pct-h03-v1/mpi/instance-identities.rs",
+        "read_only": true
+      }
+    }
+  ],
+  "unresolved": [
+    {
+      "record": "paper/data/neural_lab_capture.json",
+      "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/index.html",
+      "sha256": "73e218382fac337e07a62016cddc440ee775ff145d7eda98cbea9e7d3e13272f",
+      "in_repositories": [],
+      "archive_catalog": []
+    },
+    {
+      "record": "paper/data/neural_lab_capture.json",
+      "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/lab.css",
+      "sha256": "72880f812beac7787000628525733ba8e29ac9f74a54faab489e7ba079b68f9f",
+      "in_repositories": [],
+      "archive_catalog": []
+    },
+    {
+      "record": "paper/data/neural_lab_capture.json",
+      "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/pkg/b2_runner.js",
+      "sha256": "d6914da9a18a0eacf0d8a86289b530e312a639d5534ea392d4c468a51ba87a37",
+      "in_repositories": [],
+      "archive_catalog": []
+    }
+  ],
+  "scope": "Exact bytes for referenced code absent from current repository trees. Four browser JS assets are reconstructed with the recorded deterministic asset-version substitution and match the original SHA-256. No new experiment or historical-result relabeling."
+}

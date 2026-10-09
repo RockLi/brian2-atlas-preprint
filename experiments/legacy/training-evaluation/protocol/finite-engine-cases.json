@@ -1,0 +1,289 @@
+{
+  "case_count": 19,
+  "cases": [
+    {
+      "case_id": "E1-small",
+      "workload_ids": [
+        "E1"
+      ],
+      "layers": [
+        128,
+        128,
+        10
+      ],
+      "T": 128,
+      "B": 16
+    },
+    {
+      "case_id": "E1-large",
+      "workload_ids": [
+        "E1"
+      ],
+      "layers": [
+        512,
+        1024,
+        1024,
+        20
+      ],
+      "T": 128,
+      "B": 32
+    },
+    {
+      "case_id": "E2-conv",
+      "workload_ids": [
+        "E2"
+      ],
+      "input": [
+        1,
+        28,
+        28
+      ],
+      "conv_channels": [
+        16,
+        32
+      ],
+      "kernel": 3,
+      "stride": 2,
+      "padding": 1,
+      "readout": [
+        128,
+        10
+      ],
+      "T": 100,
+      "B": 16,
+      "weight_tying": true
+    },
+    {
+      "case_id": "R-N128-T512-p0.1",
+      "workload_ids": [
+        "E3",
+        "E7"
+      ],
+      "input": 128,
+      "hidden": 128,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T512-p0.1",
+      "workload_ids": [
+        "E3",
+        "E6",
+        "E7"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N2048-T512-p0.1",
+      "workload_ids": [
+        "E3",
+        "E7"
+      ],
+      "input": 128,
+      "hidden": 2048,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T512-p0.01",
+      "workload_ids": [
+        "E3"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 0.01,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T512-p1",
+      "workload_ids": [
+        "E3"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 1.0,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T128-p0.1",
+      "workload_ids": [
+        "E6"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 128,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T2048-p0.1",
+      "workload_ids": [
+        "E6"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 2048,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N512-T8192-p0.1",
+      "workload_ids": [
+        "E6"
+      ],
+      "input": 128,
+      "hidden": 512,
+      "output": 20,
+      "T": 8192,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "R-N8192-T512-p0.1",
+      "workload_ids": [
+        "E7"
+      ],
+      "input": 128,
+      "hidden": 8192,
+      "output": 20,
+      "T": 512,
+      "B": 16,
+      "density": 0.1,
+      "recurrence": "same-tick spikes, next-threshold influence"
+    },
+    {
+      "case_id": "E4-T512-fixed_dynamics",
+      "workload_ids": [
+        "E4"
+      ],
+      "layers": [
+        128,
+        256,
+        20
+      ],
+      "T": 512,
+      "B": 16,
+      "model": "E4",
+      "parameter_mode": "fixed_dynamics"
+    },
+    {
+      "case_id": "E4-T512-trainable_dynamics",
+      "workload_ids": [
+        "E4"
+      ],
+      "layers": [
+        128,
+        256,
+        20
+      ],
+      "T": 512,
+      "B": 16,
+      "model": "E4",
+      "parameter_mode": "trainable_dynamics"
+    },
+    {
+      "case_id": "E4-T2048-fixed_dynamics",
+      "workload_ids": [
+        "E4"
+      ],
+      "layers": [
+        128,
+        256,
+        20
+      ],
+      "T": 2048,
+      "B": 16,
+      "model": "E4",
+      "parameter_mode": "fixed_dynamics"
+    },
+    {
+      "case_id": "E4-T2048-trainable_dynamics",
+      "workload_ids": [
+        "E4"
+      ],
+      "layers": [
+        128,
+        256,
+        20
+      ],
+      "T": 2048,
+      "B": 16,
+      "model": "E4",
+      "parameter_mode": "trainable_dynamics"
+    },
+    {
+      "case_id": "E5-AdEx",
+      "workload_ids": [
+        "E5"
+      ],
+      "layers": [
+        128,
+        128,
+        20
+      ],
+      "T": 512,
+      "B": 8,
+      "dt_ms": 0.1,
+      "model": "AdEx"
+    },
+    {
+      "case_id": "E5-Izhikevich",
+      "workload_ids": [
+        "E5"
+      ],
+      "layers": [
+        128,
+        128,
+        20
+      ],
+      "T": 512,
+      "B": 8,
+      "dt_ms": 0.1,
+      "model": "Izhikevich"
+    },
+    {
+      "case_id": "E5-synthetic_four_state",
+      "workload_ids": [
+        "E5"
+      ],
+      "layers": [
+        128,
+        128,
+        20
+      ],
+      "T": 512,
+      "B": 8,
+      "dt_ms": 0.1,
+      "model": "synthetic_four_state"
+    }
+  ],
+  "deduplication": "A result may carry several workload IDs only if arrays, model, state/precision/adapter, hardware and run scope are identical. E3 is the five-point one-axis scan; no unregistered 3x3 grid.",
+  "capacity_refinement": {
+    "max_new_points_per_boundary": 3,
+    "maximum_total_additional_engine_points_per_implementation_hardware": 6,
+    "rule": "One T boundary and one N boundary; floor(sqrt(lower*upper)) strictly inside neighboring success/failure sizes; retain software/physical/timeout boundary type."
+  }
+}

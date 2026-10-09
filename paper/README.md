@@ -14,6 +14,7 @@
 | [PDF 构建说明](PDF.md) | 从保留数据生成阅读版本 |
 | [当前验收记录](data/release_validation/acceptance.json) | 实现引用、CUDA/PD14 验收及当前 PDF 身份 |
 | [PDF 检查](validation/current_commit_pdf_qa.json) | 页数、链接、文本边界与视觉复核 |
+| [实验代码覆盖清单](../experiments/COVERAGE.md) | 正文及 S1–S21 的代码入口、已补齐内容与仍存在的构建限制 |
 | [修订记录](CHANGELOG.md) | 各轮修订的实际范围 |
 
 默认 PDF 包含正文、Appendix A、S13 / Table S5、S21 / Table S4 / Figure S2，以及三页 Supplementary Figure S1。其余补充章节见完整 SUPPLEMENTARY.md。生成的 PDF 位于仓库根目录 `output/pdf/`，不纳入 Git。

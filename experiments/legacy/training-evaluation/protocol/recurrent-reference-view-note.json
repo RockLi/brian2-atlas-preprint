@@ -1,0 +1,12 @@
+{
+  "schema": "recurrent-implementation-scope-note-v1",
+  "date": "2026-10-04",
+  "coordinator_decision": "Do not automatically enqueue the 225 full-size qualification slots. First run the 45 exact Atlas admission cases and a small anchor after other timed phases finish; review efficient matmul/sparse recurrent implementations before broad competitor execution.",
+  "affected_implementation": "adapters/graph_competitor.py, as reused by tools/qualify_recurrent_case.py",
+  "implementation_role": "graph-indexed reference qualification view",
+  "not_claimed": ["strongest native optimized recurrent engine", "recurrent performance leaderboard", "engine capacity boundary"],
+  "mechanism": "The indexed gather/scatter adapter can retain B*T*E edge intermediates for autograd. At wide/long fixed cases, adapter intermediates and retained diagnostic state/spike Python lists may exceed the guard even when a dense matmul or efficient sparse implementation of the same engine could fit.",
+  "resource_limit_interpretation": "A 64 GiB guard hit belongs to this adapter/qualification harness and recorded phase. It is not a physical OOM, cannot be generalized to the engine's capacity, and cannot establish an Atlas capacity advantage.",
+  "immutable_items": "The frozen recurrent fixture contract, existing scripts, fixed shape denominator, and eventual outcomes stay unchanged. This note restricts the immediate launch plan and interpretation, not model semantics.",
+  "future_optimized_view": "Use a separately versioned matmul/sparse adapter, requalify against the same independent oracle, keep the indexed reference result, and retain identical frozen arrays. E2's independent baseline uses actual conv2d and must not inherit the indexed scatter implementation as its strong baseline."
+}

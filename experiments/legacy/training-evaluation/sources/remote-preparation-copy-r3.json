@@ -1,0 +1,49 @@
+{
+  "schema": "remote-small-copy-r3",
+  "created_utc": "2026-10-04T11:48:33.398359+00:00",
+  "remote": "100.90.28.27",
+  "scope": "Static architecture diagnosis, independent impact addendum, preparation-only coordinator and completed qualification summary",
+  "files": {
+    "evidence/h0r-native-load-diagnosis-r1/static-diagnosis.json": {
+      "bytes": 19183,
+      "sha256": "877b667746e33ee43a0587e349091b41dfedeebe46774864496b6bbfac8037c5"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/static-diagnosis-r2.json": {
+      "bytes": 4673,
+      "sha256": "6ce46531791e49e24d19688a9f32881e69188d8a615c69dcf7ddca901289f012"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/architecture-context-cpu.json": {
+      "bytes": 9323,
+      "sha256": "b34ae55d544a6e872f6b2fa29279c8c8d7d9fecd3ec6d083c6347b45aaf785a4"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/architecture-context-jax.json": {
+      "bytes": 9323,
+      "sha256": "5dadae73246d59f21b974ba79b871fd0c8b462989f8db1c75771ceb2fdb7013b"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/architecture-context-default.json": {
+      "bytes": 8455,
+      "sha256": "ff7606c4de0cb8adb8b9b5b2d0b913ebace7e439f72b2ebe27d8efae17d18a37"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/arm64-toolchain-availability.json": {
+      "bytes": 2425,
+      "sha256": "8c8d7350327588bab2b2a3f7fd83a644f9fa1b08f763a20889772e14cc8a1bbf"
+    },
+    "evidence/h0r-native-load-diagnosis-r1/rust-and-runtime-inventory.json": {
+      "bytes": 8402,
+      "sha256": "a64c1be942be9b6329df8f6b9ffd568d58ec2de487e1aeebf4580c80dd827061"
+    },
+    "reports/runtime-architecture-r1/impact.zh.md": {
+      "bytes": 6266,
+      "sha256": "d85869529a5055c50f7aa5c0168014002edb7e571c6b750c64245fccc1fae06a"
+    },
+    "reports/qualification-followup-r1/summary.zh.md": {
+      "bytes": 7475,
+      "sha256": "68f118c1cf5cef90d65fdb3c8b1226f4d414232d81d5fdfd206c0a8d189ada56"
+    },
+    "tools/run_arm64_runtime_followup_r1.py": {
+      "bytes": 9198,
+      "sha256": "c4af4ff3484fe793c670c8472183c563b3f1d6551c7b8ae9233592fa5d410b5e"
+    }
+  },
+  "model_execution": false
+}

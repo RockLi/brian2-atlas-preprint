@@ -1,0 +1,78 @@
+{
+  "schema": "b2-mam-reference-ensemble-protocol-v1",
+  "stage": "post-baseline exploratory reference variability",
+  "baseline_observed": true,
+  "diagnostic_seeds": [
+    1729,
+    1730,
+    1731
+  ],
+  "future_confirmation_seeds": [
+    1750,
+    1751,
+    1752,
+    1753,
+    1754
+  ],
+  "native_layout": {
+    "ranks": 48,
+    "threads": 4,
+    "nodes": [
+      "25",
+      "81",
+      "83",
+      "71",
+      "82",
+      "84"
+    ],
+    "cpu_equivalents_per_node": 32
+  },
+  "neurons": 4129924,
+  "recurrent_synapses": 24126516728,
+  "parameters_sha256": "ee1a642c94b9d6e808627c54f78162e7f5d87f4140ba56496c5dfee3ed900d3e",
+  "native_builder_sha256": "a7eef84bafbf5720e1619290a91328d8b65350c1b5695d19fff7093e51d8290f",
+  "duration_ms": 2500,
+  "warmup_ms": 500,
+  "physical_observation_ticks": [
+    5000,
+    25000
+  ],
+  "endpoint": "[start,end)",
+  "dt_ms": 0.1,
+  "analysis_bin_ms": 1,
+  "analysis_sampling_seed": 20260908,
+  "metrics": [
+    "all 254 population mean rates and single-cell rate distributions",
+    "all population sampled LvR: eligible and zero-padded means; eligibility counts",
+    "all population sampled mean pairwise correlations and sample counts",
+    "all 32 area rates and first/second-half means",
+    "all area 1 ms time series; burst/occupancy and spectral methods require separate frozen definitions before hypothesis testing"
+  ],
+  "comparison": {
+    "unit": "independent simulator realization",
+    "same_integer_seed_is_not_paired_graph_or_input": true,
+    "diagnostics": "Per-population reference values, ranges, sample standard deviations and Rust-baseline position. Two or three references are exploratory; sample range is not a prediction or equivalence interval.",
+    "equivalence_margins": null,
+    "acceptance_test": null,
+    "scientific_equivalence": false,
+    "holdout_rule": "Audit full-condition fidelity and define scientifically meaningful metrics/margins using reference evidence before inspecting Rust confirmation realizations. Do not fit margins to known Rust discrepancies."
+  },
+  "resources": {
+    "max_active_full_jobs": 1,
+    "per_proxy_memory_gib": 256,
+    "swap_bytes": 0,
+    "per_run_timeout_seconds": 1800,
+    "chunk_ms": 50,
+    "max_spikes_per_chunk_rank": 2000000,
+    "max_spikes_per_rank": 8000000,
+    "max_event_bytes_all_ranks": 3072000000,
+    "analysis_memory_gib": 16,
+    "analysis_timeout_seconds": 600,
+    "fresh_admission_required": true
+  },
+  "next_run": {
+    "simulator": "NEST",
+    "seed": 1730
+  },
+  "long_duration_and_performance_acceptance": "Open; this pilot does not replace paper-duration/condition validation or tuned speed/cost benchmarks."
+}

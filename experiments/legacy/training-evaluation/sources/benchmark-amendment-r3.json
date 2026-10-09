@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-04T09:07:37.574015+00:00",
+  "reason": "Pre-performance review: qualify actual timed update, measure true first public update before diagnostics, suppress unnecessary trajectory recording, use empty per-job compiler caches; actual public second/third Adam and exception taxonomy verified before performance",
+  "performance_results_seen": false,
+  "files": {
+    "tools/benchmark_competitor.py": "2321b1ef829c8a9fe4820d558ddc7acdf88cc5080911e7ac95a3f10909789505",
+    "tools/run_remote_benchmark_v2.py": "80a5df4ec9ac48ad43e02f8801f0ea9d847b7391d13f64d7dbb4bd0c7dd56ce8"
+  },
+  "retained_baseline": "sources/remote-adapters-r2.tar.gz",
+  "engine_source_changed": false
+}

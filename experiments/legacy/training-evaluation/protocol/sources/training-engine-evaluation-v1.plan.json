@@ -1,0 +1,1341 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "atlas-training-engine-evaluation-v1",
+  "research_date": "2026-10-04",
+  "status": "freeze_candidate",
+  "executable": false,
+  "benchmark_results": [],
+  "note": "Research and protocol only. This plan is not a runner or a completed benchmark. Null pins and unresolved artifacts block execution freeze.",
+  "documents": {
+    "analysis": "../training-competitive-analysis-2026-10-04.md",
+    "protocol": "../training-engine-evaluation-v1.md"
+  },
+  "hypotheses": [
+    {
+      "id": "P1",
+      "claim": "Lower end-to-end training-step cost under identical model, gradient, precision and resource contracts."
+    },
+    {
+      "id": "P2",
+      "claim": "Larger trainable model or full sequence within identical physical memory resources."
+    },
+    {
+      "id": "P3",
+      "claim": "Lower total time or resource cost to a preregistered held-out validation quality."
+    },
+    {
+      "id": "P4",
+      "claim": "Lower conversion and verification effort for a preregistered Brian2 model corpus."
+    }
+  ],
+  "scope": {
+    "core": "Fixed-topology point-neuron networks, LIF through explicitly defined adaptive and multistate models, full SG-BPTT; CPU and single CUDA GPU first.",
+    "complementary": [
+      "Original Brian2 local plasticity",
+      "Online or event-based learning time-to-quality",
+      "Brian model conversion and trained-parameter replay"
+    ],
+    "frontier": [
+      "Single-compartment HH fitting",
+      "Multicompartment biophysics",
+      "Deep convolutional SNN and Spikformer"
+    ],
+    "excluded_from_v1_hardware": [
+      "TPU",
+      "AMD HIP performance",
+      "Neuromorphic chips"
+    ],
+    "unsupported_is_not_a_speedup": true,
+    "no_cross_algorithm_speedup_claims": true,
+    "no_platform_limits_as_engine_limits": true
+  },
+  "evidence_snapshot": {
+    "platform_git_head_at_inspection": "5c47b81ce220428709e3dc39447c3c17bcb12c09",
+    "platform_worktree_dirty": true,
+    "platform_bundle": {
+      "id": "f6609476fdb99f15afe7e868388db085d420ebf240c80068bcfea8cb95e65762",
+      "manifest_files_verified": 18,
+      "inspection": "sha256_integrity_only",
+      "os_arch": "macOS arm64",
+      "proves_performance": false,
+      "selected_as_benchmark_build": false
+    },
+    "atlas_source_environment_lock": null,
+    "history": [
+      {
+        "id": "v3_cpu_two_hosts_20261002",
+        "evidence": "mpi-evidence/training-crosshost-20261002/README.md",
+        "path_base": "atlas_source_checkout",
+        "meaning": "Two physical CPU hosts, 1+1 and 2+2 ranks, small-model correctness and serialized optimizer replay only; not current-v5 scaling."
+      },
+      {
+        "id": "v4r3_single_l4_20261003",
+        "evidence": "mpi-evidence/training-rk-refractory-20261003/README.md",
+        "path_base": "atlas_source_checkout",
+        "meaning": "Single physical L4, multiple ranks sharing that GPU; not multi-GPU scaling."
+      }
+    ],
+    "current_source_caveats": [
+      "A supported Brian Network-to-training-plan frontend exists, including selected dynamic v5 cases.",
+      "No complete general trained-parameter writeback plus independent Brian replay chain was found.",
+      "Current v5 CUDA hardware qualification was not found; older v4 L4 results do not qualify v5.",
+      "MPI partitions computation but replicates complete model, input and tape; this is not memory sharding.",
+      "Native training single-process multithreading was not found; simulation AOT threading is not training evidence.",
+      "Native tape request has a 1 GiB cap and JSON input a 64 MiB cap; these are software admission budgets, not measured RSS/VRAM.",
+      "Public trainer.step currently includes JSON, temporary files and subprocess startup; MPI also includes launch.",
+      "GPU numeric profile includes FP32 forward/backward and host FP64 optimizer; do not label as wholly FP32.",
+      "Historical acceptance source hashes have not been reconciled against the current dirty development checkout."
+    ]
+  },
+  "contenders": [
+    {
+      "id": "atlas",
+      "role": "core",
+      "candidate_release": null,
+      "source": "local native source snapshot to archive",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "L",
+        "A",
+        "M",
+        "F"
+      ]
+    },
+    {
+      "id": "brian2",
+      "role": "reference",
+      "candidate_release": "2.10.1_candidate",
+      "source": "https://brian2.readthedocs.io/en/stable/user/computation.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L",
+        "M",
+        "F"
+      ],
+      "required_modes": [
+        "cython_runtime",
+        "cpp_standalone_1thread",
+        "cpp_standalone_openmp"
+      ]
+    },
+    {
+      "id": "brian2cuda",
+      "role": "local_learning_gpu",
+      "candidate_release": null,
+      "source": "https://github.com/brian-team/brian2cuda",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L",
+        "M"
+      ]
+    },
+    {
+      "id": "brian2genn",
+      "role": "bridge_compatibility",
+      "candidate_release": null,
+      "source": "https://brian2genn.readthedocs.io/en/stable/introduction/exclusions.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L",
+        "M"
+      ]
+    },
+    {
+      "id": "genn",
+      "role": "code_generation",
+      "candidate_release": null,
+      "source": "https://github.com/genn-team/genn",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L"
+      ],
+      "note": "Native GeNN capabilities do not automatically apply to Brian2GeNN or mlGeNN."
+    },
+    {
+      "id": "snntorch",
+      "role": "core",
+      "candidate_release": "1.0.0",
+      "source": "https://pypi.org/project/snntorch/1.0.0/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A",
+        "M"
+      ],
+      "candidate_distribution_sha256": "b5a85f6f44c6d27c8a1dcea16cb18a630d00b8d2f3cfec85b7e580cb177e606b"
+    },
+    {
+      "id": "spikingjelly_stable",
+      "role": "reference",
+      "candidate_release": "0.0.0.0.14",
+      "source": "https://pypi.org/project/spikingjelly/0.0.0.0.14/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "L",
+        "A",
+        "F"
+      ],
+      "candidate_distribution_sha256": "9f43c8f3164909e8503d6b5488a16c07b4e5338c6a70529fca408593c4baf151"
+    },
+    {
+      "id": "spikingjelly_frontier",
+      "role": "core",
+      "candidate_release": "2.0.0rc1_or_pinned_commit",
+      "source": "https://pypi.org/project/spikingjelly/2.0.0rc1/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A",
+        "F"
+      ],
+      "required_optimization_audit": [
+        "Triton",
+        "FlexSN",
+        "memopt",
+        "DDP",
+        "FSDP2",
+        "TP",
+        "PP"
+      ],
+      "note": "Latest documentation features require exact RC or source qualification; they are not all assumed present in the RC wheel."
+    },
+    {
+      "id": "norse",
+      "role": "cross_reference",
+      "candidate_release": "1.1.0",
+      "source": "https://pypi.org/project/norse/1.1.0/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "L",
+        "A"
+      ],
+      "candidate_distribution_sha256": "3f70b8579251316761f7a950680136029fcd9d92bbcc53531366d088a8aaf0c8"
+    },
+    {
+      "id": "spyx",
+      "role": "core",
+      "candidate_release": "1.0.0",
+      "source": "https://pypi.org/project/spyx/1.0.0/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A"
+      ],
+      "candidate_distribution_sha256": "1ae5f46e57eee5641fe31cc6adb83a8ae7fcce63ac15cccf3075a3dd1d010cc1",
+      "note": "Current NNX stack differs from legacy Haiku research notebooks. Reset-free associative scan is not an equivalent ordinary LIF optimization."
+    },
+    {
+      "id": "sinabs_exodus",
+      "role": "feedforward_cuda_challenger",
+      "candidate_release": null,
+      "source": "https://github.com/synsense/sinabs-exodus",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A"
+      ],
+      "note": "Qualify exact surrogate and reset derivative; target compatible IAF/LIF/Conv cases, not arbitrary dynamics."
+    },
+    {
+      "id": "lava_dl_slayer",
+      "role": "dynamics_delay_challenger",
+      "candidate_release": null,
+      "source": "https://lava-nc.org/lava-lib-dl/slayer/slayer.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A"
+      ],
+      "note": "Lava inference process distribution does not establish SLAYER training distribution."
+    },
+    {
+      "id": "rockpool",
+      "role": "parameter_training_and_deployment",
+      "candidate_release": null,
+      "source": "https://rockpool.ai/in-depth/howto-constrained-opt.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A"
+      ],
+      "note": "Pure LIF performance can use direct EXODUS to avoid duplicate kernels; deployment hardware outside v1."
+    },
+    {
+      "id": "bindsnet",
+      "role": "local_reward_plasticity",
+      "candidate_release": null,
+      "source": "https://github.com/BindsNET/bindsnet",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L"
+      ],
+      "note": "Local learning is not automatically an SG-BPTT benchmark."
+    },
+    {
+      "id": "brainpy_classic",
+      "role": "reference",
+      "candidate_release": "2.8.2",
+      "source": "https://github.com/brainpy/BrainPy/releases",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "M"
+      ]
+    },
+    {
+      "id": "brainx_state",
+      "role": "core",
+      "candidate_release": "brainstate_0.5.4_plus_separately_locked_brainpy_state",
+      "source": "https://brainx.chaobrain.com/summ/brainpy-to-brainx.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "E",
+        "A",
+        "M"
+      ],
+      "required_optimization_audit": [
+        "jit",
+        "scan",
+        "remat",
+        "pmap2",
+        "shard_map"
+      ]
+    },
+    {
+      "id": "braintrace",
+      "role": "algorithm",
+      "candidate_release": "0.2.6",
+      "source": "https://github.com/chaobrain/braintrace/releases",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "A"
+      ],
+      "note": "Approximate online algorithms are not interchangeable with full BPTT."
+    },
+    {
+      "id": "mlgenn",
+      "role": "algorithm_and_data_parallel",
+      "candidate_release": "fca7e2c70df181014c0d0effddadb09ef3b9a91a",
+      "source": "https://github.com/genn-team/ml_genn/tree/fca7e2c70df181014c0d0effddadb09ef3b9a91a",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "A"
+      ],
+      "parallel_evidence": "CUDA MPI plus NCCL synchronous data parallel; does not demonstrate model-capacity sharding."
+    },
+    {
+      "id": "nest",
+      "role": "local_online_model_parallel",
+      "candidate_release": null,
+      "source": "https://nest-simulator.readthedocs.io/en/stable/auto_examples/eprop_plasticity/index.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L",
+        "A"
+      ],
+      "note": "An e-prop tutorial requires distributed data/collection adaptation; simulator MPI alone does not qualify this adapter."
+    },
+    {
+      "id": "nest_gpu",
+      "role": "local_learning_model_parallel",
+      "candidate_release": null,
+      "source": "https://nest-gpu.readthedocs.io/en/latest/guides/multigpu_simulations.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "L"
+      ],
+      "note": "Do not assume CPU NEST e-prop and GPU model catalog have identical training features."
+    },
+    {
+      "id": "brian2modelfitting",
+      "role": "fitting_reference",
+      "candidate_release": null,
+      "source": "https://brian2modelfitting.readthedocs.io/en/latest/",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "F"
+      ],
+      "note": "Simulator execution and SBI density-estimator training have distinct device profiles."
+    },
+    {
+      "id": "jaxley",
+      "role": "biophysical_frontier",
+      "candidate_release": "0.14.0",
+      "source": "https://github.com/jaxleyverse/jaxley/releases",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "F"
+      ],
+      "note": "HH differentiation is not evidence of LIF surrogate-backward support."
+    },
+    {
+      "id": "braincell",
+      "role": "biophysical_frontier",
+      "candidate_release": null,
+      "source": "https://brainx.chaobrain.com/summ/brainpy-to-brainx.html",
+      "environment_lock": null,
+      "qualification_status": "not_run",
+      "tracks": [
+        "F"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "Q",
+      "purpose": "Numerical and execution qualification; no performance ranking."
+    },
+    {
+      "id": "E",
+      "purpose": "Identical discrete model and gradient engine comparison; adapted-canonical and native-optimized implementations identified."
+    },
+    {
+      "id": "L",
+      "purpose": "Identical original equations and local learning update rules; no invented BPTT baseline."
+    },
+    {
+      "id": "A",
+      "purpose": "Same task and resource/tuning budget, possibly different learning algorithm; time-to-quality and Pareto results."
+    },
+    {
+      "id": "F",
+      "purpose": "Capability frontier and fitting; no forced comparison of inequivalent models or solvers."
+    },
+    {
+      "id": "M",
+      "purpose": "Migration effort and before/after-training independent replay."
+    }
+  ],
+  "semantic_profiles": {
+    "canonical_lif_v1": {
+      "status": "candidate_requires_adapter_qualification",
+      "scheduling": "For every tick, compute all non-input populations' drift and thresholds from prior state; only then propagate input/current-tick presynaptic spikes and apply subtract reset.",
+      "equations": [
+        "u_t = beta * v_t",
+        "s_t = 1 if u_t > theta else 0",
+        "v_(t+1) = u_t + W * (x_t for input edges, s_t for internal edges) - theta * stop_gradient(s_t)"
+      ],
+      "dt_ms": 1,
+      "tau_ms": 20,
+      "beta": 0.95,
+      "theta": 1,
+      "initial_voltage": 0,
+      "surrogate": "g(m) = 1 / (1 + 5 * abs(m))^2",
+      "loss": "cross_entropy(logits=5 * mean_over_time(output_spikes), target), mean over global batch",
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.001,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "epsilon": 1e-8,
+        "weight_decay": 0
+      },
+      "bias": false,
+      "refractory": false,
+      "noise": false,
+      "state_carry_between_examples": false,
+      "note": "This is a synchronous reference fixture, not a claim about each framework's default neuron semantics."
+    },
+    "multistate": {
+      "equation_artifacts": null,
+      "required_fields": [
+        "units",
+        "dt",
+        "solver",
+        "simultaneous_or_sequential_state_updates",
+        "threshold_stage",
+        "reset_stage",
+        "reset_gate_gradient",
+        "reset_expression_gradient",
+        "refractory",
+        "trainable_parameter_bounds",
+        "delay_bin_rule",
+        "duplicate_spike_rule"
+      ],
+      "note": "An arbitrary four-state equation is not HH."
+    },
+    "stochastic": {
+      "policy": "Store common realized random draws and hashes for strict comparisons; equal seeds alone are insufficient."
+    },
+    "precision_profiles": [
+      {
+        "id": "cpu_fp64",
+        "forward": "float64",
+        "backward": "float64",
+        "optimizer": "float64"
+      },
+      {
+        "id": "gpu_f32_opt_f64",
+        "forward": "float32",
+        "backward": "float32",
+        "optimizer": "float64",
+        "note": "Atlas observed forward/backward FP32 and host FP64 optimizer profile. Match precision and gradient contract, not implementation placement. Re-audit selected backend and include its real transfer costs.",
+        "profile_scope": "Observed v3/v4 GPU path; re-audit selected build, including any v5 path, before execution freeze.",
+        "master_parameters": "float64",
+        "parameter_cast": "cast master parameters to float32 on each public execution",
+        "per_sample_gradient": "float32",
+        "batch_gradient_reduction": "cast each sample gradient to float64, accumulate in declared sample order and apply global-batch normalization",
+        "per_sample_loss": "float32",
+        "batch_loss_reduction": "convert sample loss to float64 and compute mean",
+        "mpi_reduction": "Record exact rank order, normalization, accumulator dtype and collective in selected build; currently unresolved.",
+        "input_storage": "int_count_JSON_or_float_array_must_be_frozen",
+        "communication_dtype": null,
+        "atlas_observed_placement": {
+          "optimizer": "host",
+          "master_parameters": "host"
+        },
+        "placement_policy": "Matching the numerical contract does not require competitors to copy Atlas placement or launch structure. A device-resident float64 optimizer is legal if qualified. Record all actual transfers and placement."
+      },
+      {
+        "id": "native_best",
+        "forward": "record_actual",
+        "backward": "record_actual",
+        "optimizer": "record_actual",
+        "note": "AMP/TF32 and mixed profiles have independent quality results; no strict-engine ratio across profiles."
+      }
+    ],
+    "full_bptt_policy": "Checkpoint/recompute or lossless compression is legal after gradient qualification. TBPTT is a separate learning algorithm. Atlas TBPTT currently retains a full-sequence tape."
+  },
+  "workloads": [
+    {
+      "id": "Q0",
+      "track": "Q",
+      "name": "Numerical fixtures",
+      "shape": [
+        2,
+        4,
+        2
+      ],
+      "steps": 32,
+      "batch": 2,
+      "variants": [
+        "subthreshold",
+        "spike_margin",
+        "threshold_boundary",
+        "reset",
+        "delay",
+        "negative_current",
+        "learned_tau",
+        "two_state",
+        "shared_weight",
+        "recurrent_edge",
+        "one_sgd_update",
+        "one_adam_update"
+      ],
+      "fixture_sha256": null,
+      "execution_tier": "qualification"
+    },
+    {
+      "id": "E1",
+      "track": "E",
+      "name": "Dense LIF",
+      "cases": [
+        {
+          "id": "small",
+          "layers": [
+            128,
+            128,
+            10
+          ],
+          "steps": 128,
+          "batch": 16
+        },
+        {
+          "id": "large",
+          "layers": [
+            512,
+            1024,
+            1024,
+            20
+          ],
+          "steps": 128,
+          "batch": 32
+        }
+      ],
+      "execution_tier": "core"
+    },
+    {
+      "id": "E2",
+      "track": "E",
+      "name": "Tied-weight convolutional SNN",
+      "input": [
+        1,
+        28,
+        28
+      ],
+      "conv_channels": [
+        16,
+        32
+      ],
+      "kernel": 3,
+      "stride": 2,
+      "padding": 1,
+      "readout": [
+        128,
+        10
+      ],
+      "steps": 100,
+      "batch": 16,
+      "bias": false,
+      "execution_tier": "coverage",
+      "note": "Must preserve convolutional weight tying; unrolled untied dense weights are not the same model."
+    },
+    {
+      "id": "E3",
+      "track": "E",
+      "name": "Sparse recurrent LIF",
+      "inputs": 128,
+      "hidden_widths": [
+        128,
+        512,
+        2048
+      ],
+      "outputs": 20,
+      "densities": [
+        0.01,
+        0.1,
+        1
+      ],
+      "base_hidden": 512,
+      "base_density": 0.1,
+      "steps": 512,
+      "batch": 16,
+      "scan": "one_axis_at_a_time",
+      "storage_report": [
+        "logical_edges",
+        "stored_values",
+        "dense_mask_or_sparse"
+      ],
+      "execution_tier": "core"
+    },
+    {
+      "id": "E4",
+      "track": "E",
+      "name": "Adaptive two-state",
+      "hidden": 256,
+      "batch": 16,
+      "steps": [
+        512,
+        2048
+      ],
+      "parameter_modes": [
+        "fixed_dynamics",
+        "trainable_dynamics"
+      ],
+      "equation_sha256": null,
+      "execution_tier": "core",
+      "inputs": 128,
+      "outputs": 20
+    },
+    {
+      "id": "E5",
+      "track": "E",
+      "name": "Explicit complex point-neuron equations",
+      "models": [
+        "AdEx",
+        "Izhikevich",
+        "explicit_four_state"
+      ],
+      "dt_ms": 0.1,
+      "equation_sha256": null,
+      "execution_tier": "coverage",
+      "note": "Separate exact units and equations for each model; no HH inference from state count."
+    },
+    {
+      "id": "E6",
+      "track": "E",
+      "name": "Full-sequence capacity",
+      "inputs": 128,
+      "hidden": 512,
+      "outputs": 20,
+      "density": 0.1,
+      "batch": 16,
+      "steps": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "execution_tier": "core",
+      "memory_modes": [
+        "native_full_bptt",
+        "qualified_checkpoint_or_lossless_compression"
+      ]
+    },
+    {
+      "id": "E7",
+      "track": "E",
+      "name": "Width capacity",
+      "inputs": 128,
+      "hidden_widths": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "outputs": 20,
+      "density": 0.1,
+      "batch": 16,
+      "steps": 512,
+      "execution_tier": "core",
+      "note": "Fixed density changes edge count quadratically; report neurons and effective edges/parameters separately."
+    },
+    {
+      "id": "L1",
+      "track": "L",
+      "name": "Pair STDP exact-event fixture",
+      "variants": [
+        "pre_before_post",
+        "post_before_pre",
+        "same_tick",
+        "fixed_delay",
+        "heterogeneous_delay"
+      ],
+      "equation_sha256": null,
+      "execution_tier": "qualification"
+    },
+    {
+      "id": "L2",
+      "track": "L",
+      "name": "Sparse E/I local plasticity",
+      "neurons": [
+        1000,
+        4000,
+        16000
+      ],
+      "indegree": 100,
+      "excitatory_fraction": 0.8,
+      "duration_seconds": [
+        1,
+        10
+      ],
+      "dt_ms": 0.1,
+      "equation_sha256": null,
+      "execution_tier": "core_local",
+      "note": "Preregister neuron, delay, STDP, initial weights and input. Fixed indegree, not fixed density, defines this scaling family."
+    },
+    {
+      "id": "A1",
+      "track": "A",
+      "name": "MNIST pipeline sanity",
+      "layers": [
+        784,
+        128,
+        10
+      ],
+      "steps": 100,
+      "train_samples": 55000,
+      "validation_samples": 5000,
+      "test_samples": 10000,
+      "max_epochs": 10,
+      "batch": 32,
+      "preprocessing_sha256": null,
+      "execution_tier": "sanity",
+      "note": "No temporal-learning or engine leadership claim from this task alone."
+    },
+    {
+      "id": "A2",
+      "track": "A",
+      "name": "SHD full SG-BPTT",
+      "inputs": 700,
+      "recurrent_hidden": 256,
+      "outputs": 20,
+      "dt_ms": 1,
+      "batch": 32,
+      "max_epochs": 50,
+      "max_training_wall_seconds": 7200,
+      "validation_accuracy_targets": [
+        0.5,
+        0.7,
+        0.8
+      ],
+      "steps": null,
+      "steps_rule": "T = floor(maximum unlabeled event timestamp / dt) + 1, using left-closed bins [k*dt, (k+1)*dt). Only timestamp extents may be read from test data for this shape manifest; test labels and scores remain sealed. Freeze preprocessing and exact T before fitting or timing. No event truncation.",
+      "event_binning": "integer counts; duplicate events preserved",
+      "readout": "frozen before execution; canonical profile if qualified",
+      "execution_tier": "core_task"
+    },
+    {
+      "id": "A3",
+      "track": "A",
+      "name": "SHD algorithm comparison",
+      "inherits_task": "A2",
+      "algorithms": [
+        "SG-BPTT",
+        "EventProp",
+        "e-prop",
+        "BrainTrace_selected_online"
+      ],
+      "hpo": {
+        "trials_per_contender": 8,
+        "max_epochs_per_trial": 10,
+        "max_wall_seconds_per_trial": 1800,
+        "tuning_seeds": [
+          101,
+          103
+        ],
+        "selection": "Mean validation accuracy across the two tuning seeds; failed runs score 0 for selection and remain visible. Tie-break by lower total tuning wall time, then configuration ID. No best-seed selection.",
+        "budget": "same trial and wall-time ceilings, same device budget; report both actual resource usage and achieved quality",
+        "configurations_per_contender": 8,
+        "runs_per_configuration": 2,
+        "total_tuning_runs_per_contender": 16,
+        "trial_definition": "One trial denotes a configuration; evaluate both tuning seeds 101 and 103. Each training run has a separate 10-epoch or 1800-second ceiling."
+      },
+      "final_seeds": [
+        11,
+        23,
+        37,
+        51,
+        71
+      ],
+      "max_epochs": 50,
+      "max_training_wall_seconds": 7200,
+      "execution_tier": "algorithm"
+    },
+    {
+      "id": "F1",
+      "track": "F",
+      "name": "Single-compartment HH parameter fitting",
+      "states": [
+        "v",
+        "m",
+        "h",
+        "n"
+      ],
+      "equation_sha256": null,
+      "stimulus_sha256": null,
+      "loss_sha256": null,
+      "execution_tier": "frontier",
+      "compare": [
+        "same_optimizer_forward_engine",
+        "best_native_method_time_to_heldout_error"
+      ],
+      "note": "No parameter identifiability claim from low voltage error alone."
+    },
+    {
+      "id": "F2",
+      "track": "F",
+      "name": "Multicompartment HH",
+      "morphology_sha256": null,
+      "equation_sha256": null,
+      "execution_tier": "frontier"
+    },
+    {
+      "id": "F3",
+      "track": "F",
+      "name": "Deep convolution or Spikformer",
+      "architecture_sha256": null,
+      "execution_tier": "frontier"
+    },
+    {
+      "id": "M1",
+      "track": "M",
+      "name": "Preregistered Brian2 model corpus",
+      "corpus_sha256": null,
+      "categories": [
+        "basic_LIF",
+        "recurrent_sparse",
+        "adaptive",
+        "conductance",
+        "delay_and_refractory",
+        "local_plasticity",
+        "custom_event_or_dynamic_connectivity"
+      ],
+      "report": [
+        "all_models_denominator",
+        "accepted_without_changes",
+        "changed_lines",
+        "engineering_minutes",
+        "removed_mechanisms",
+        "forward_equivalence",
+        "gradient_qualification",
+        "trained_parameter_writeback",
+        "independent_Brian_replay"
+      ],
+      "execution_tier": "migration",
+      "note": "No claim of supporting most Brian2 models before representative corpus and denominator are frozen."
+    }
+  ],
+  "data_artifacts": {
+    "synthetic": {
+      "generator_sha256": null,
+      "input_sha256": null,
+      "initial_parameter_sha256": null,
+      "noise_draw_sha256": null,
+      "policy": "Reuse materialized arrays; active-rate scans separate from fixed-input strict comparisons."
+    },
+    "mnist": {
+      "source": "https://yann.lecun.org/exdb/mnist/",
+      "archive_sha256": null,
+      "split_sha256": null,
+      "validation_policy": "Fixed stratified training-only 5000 sample split; official test sealed for final reporting."
+    },
+    "shd": {
+      "source": "https://zenkelab.org/resources/spiking-heidelberg-datasets-shd/",
+      "official_train_samples": 8156,
+      "official_test_samples": 2264,
+      "classes": 20,
+      "input_channels": 700,
+      "archive_sha256": null,
+      "hdf5_sha256": null,
+      "split_sha256": null,
+      "preprocessing_sha256": null,
+      "validation_policy": "Speaker-aware split from official training set only, with class coverage checked; exact speaker/sample index selection must be preregistered before any model fitting.",
+      "test_policy": "Timestamp extent only is allowed for fixed input-shape metadata; test labels and scores are sealed until final selected-checkpoint evaluation. No hyperparameter or model selection from test."
+    }
+  },
+  "hardware_slots": [
+    {
+      "id": "H0",
+      "platform": "Apple arm64",
+      "resources": [
+        "CPU",
+        "Metal"
+      ],
+      "manifest": null,
+      "rank_with_cuda": false
+    },
+    {
+      "id": "H1",
+      "platform": "Linux CPU",
+      "physical_core_budgets": [
+        1,
+        8,
+        32
+      ],
+      "manifest": null,
+      "note": "Only physically available budgets; pin affinity and NUMA. Threaded and MPI implementations labeled separately."
+    },
+    {
+      "id": "H2",
+      "platform": "Linux CUDA",
+      "physical_gpus": 1,
+      "manifest": null
+    },
+    {
+      "id": "H3",
+      "platform": "Linux CUDA single host",
+      "physical_gpus": [
+        2,
+        4
+      ],
+      "manifest": null
+    },
+    {
+      "id": "H4",
+      "platform": "Linux CPU or CUDA two hosts",
+      "placements": [
+        "1+1",
+        "2+2"
+      ],
+      "manifest": null,
+      "comparison": "same physical device count on one host",
+      "note": "Two physical hosts, independent device identities and network measurements required."
+    }
+  ],
+  "required_hardware_manifest_fields": [
+    "hostname",
+    "cpu_model",
+    "physical_cores",
+    "logical_threads",
+    "numa",
+    "ram_bytes",
+    "gpu_model",
+    "gpu_uuid",
+    "gpu_memory_bytes",
+    "driver",
+    "cuda_or_metal_version",
+    "interconnect",
+    "network_type",
+    "network_bandwidth",
+    "os",
+    "power_policy",
+    "process_affinity",
+    "thread_environment",
+    "exclusive_or_shared"
+  ],
+  "parallel_contracts": [
+    {
+      "id": "independent_experiments",
+      "meaning": "Different seeds or parameter trials; not acceleration of one training update."
+    },
+    {
+      "id": "data_parallel_strong",
+      "meaning": "Same global batch, sample order, loss normalization and optimizer update; divide across ranks."
+    },
+    {
+      "id": "data_parallel_weak",
+      "meaning": "Same local batch, increased global batch; report throughput separately and remeasure quality."
+    },
+    {
+      "id": "model_partition",
+      "meaning": "Declare placement of parameters, optimizer state, recurrent state, activations and tape separately."
+    },
+    {
+      "id": "cross_host_placement",
+      "meaning": "Compare same total physical resources and global batch on one versus two physical hosts."
+    },
+    {
+      "id": "qualified_microbatch_accumulation",
+      "meaning": "Optional preregistered implementation variant: same global batch, sequence, initialization and loss normalization; sum gradients then perform exactly one Adam update. Carry all necessary state correctly. Includes every microbatch public call and launch.",
+      "qualification": "Independent Q0 full-gradient and optimizer-update comparison including accumulation precision. Do not assume available in Atlas public API.",
+      "default_enabled": false,
+      "note": "No silent runtime substitution for a budget_rejected monolithic case; report both cells. Not equivalent when batch-dependent operations or differing state semantics change the model."
+    }
+  ],
+  "qualification": {
+    "oracle": "Independent NumPy or Torch/custom-VJP implementation and Brian forward comparison where applicable; not only Atlas CPU versus Atlas GPU.",
+    "compare": [
+      "state_trajectories",
+      "spike_indices",
+      "loss",
+      "all_trainable_gradients",
+      "one_optimizer_step",
+      "distributed_update",
+      "checkpoint_restore"
+    ],
+    "finite_difference": "Only smooth subgraphs. A hard-threshold finite difference is not a valid surrogate-gradient oracle.",
+    "tolerances": {
+      "fp64_state_and_gradient": {
+        "atol": 1e-10,
+        "rtol": 1e-8
+      },
+      "fp32_state": {
+        "atol": 0.00001,
+        "rtol": 0.0001
+      },
+      "fp32_gradient": {
+        "atol": 0.0001,
+        "rtol": 0.001
+      },
+      "spike_events": "Exact agreement on fixtures with a recorded positive threshold margin; boundary fixtures separately classified."
+    },
+    "tolerance_change_policy": "Any justified revision creates a new protocol revision before performance comparisons; never silently relax after seeing a contender fail.",
+    "silent_fallback_allowed": false
+  },
+  "measurement": {
+    "seeds": [
+      11,
+      23,
+      37,
+      51,
+      71
+    ],
+    "independent_process_repetitions": 5,
+    "warmup_steps": 10,
+    "measured_steps_per_process": 50,
+    "perf_case_wall_cap_seconds": 1800,
+    "timeout_policy": "At the cap record execution_status=timeout, termination_reason=wall_time_cap and completed-work count; never silently shrink model/batch/T or score a partial run as completed.",
+    "warm_definition": "Exclude one-time model construction/compilation, but include all recurring public API work, including Atlas process/MPI launch costs.",
+    "cold_definition": "New process with empty framework compilation cache; report cache state and complete time to first valid optimizer update.",
+    "step_scope": [
+      "required_input_transfer",
+      "forward",
+      "loss",
+      "backward",
+      "gradient_aggregation",
+      "optimizer_update",
+      "mandatory_output_materialization",
+      "mandatory_json_files_process_launch"
+    ],
+    "task_scope": "Preparation/compile + data loading + all training and validation + recovery; report components and total separately. Download time separately, no hidden compile advantage.",
+    "async_synchronization": "Primary wall time is the coordinator's complete public API call through all-rank completion, including serialization, files and launch. Synchronize all devices at boundaries. Maximum rank elapsed time is a separate distributed-work diagnostic, never a replacement for coordinator wall time.",
+    "memory": [
+      "peak_process_RSS_per_rank",
+      "peak_GPU_allocated",
+      "peak_GPU_reserved",
+      "driver_process_VRAM",
+      "peak_per_device",
+      "summed_resource_allocation",
+      "unified_memory_if_applicable"
+    ],
+    "statistics": "Process-level distributions, paired training seeds, median and uncertainty; steps within one process are not independent replicates. Report all seeds and failures.",
+    "optimized_baselines": "Default correct configuration plus strongest documented and qualified legal backend/checkpoint configuration. Record adaptation effort; do not constrain competitors to intentionally slow Python loops.",
+    "no_unqualified_geometric_mean": true,
+    "clock_and_price_sources_required_for_cost_claims": true,
+    "seed_repetition_mapping": "Five independent processes, one seed per process in order [11,23,37,51,71], each with 10 warmup and 50 measured steps; not 5 seeds times 5 processes.",
+    "admission_preflight": {
+      "required": true,
+      "before_timing_fields": [
+        "exact_request_bytes",
+        "input_storage_dtype",
+        "input_encoding",
+        "max_tape_bytes",
+        "estimated_native_array_bytes",
+        "actual_logical_edges",
+        "parameter_and_optimizer_serialized_bytes"
+      ],
+      "atlas_tape_budget_bytes": 1073741824,
+      "note": "For capacity tests use the published supported maximum, not the 64 MiB default. A 64 MiB JSON or 1 GiB tape admission limit is a software budget rejection, not observed physical OOM.",
+      "no_silent_model_shrink": true
+    },
+    "capacity_boundary_refinement": {
+      "strategy": "After adjacent success/failure on the preregistered width or T ladder, insert at most three floor(sqrt(lower*upper)) integer geometric midpoints while other dimensions stay fixed. Stop if no integer lies strictly between bounds.",
+      "repetitions": "Re-run every inserted size with the same five-process rule or its preregistered capped variant.",
+      "no_extrapolation": true,
+      "failed_upper_bound_required": true,
+      "note": "If the highest ladder point succeeds, report at least that capacity, not a measured maximum. For software admission failures, report the admitted bound separately from physical memory."
+    }
+  },
+  "result_schema": {
+    "required": [
+      "plan_revision",
+      "case_id",
+      "case_variant",
+      "contender_id",
+      "framework_commit_or_wheel_hash",
+      "adapter_sha256",
+      "environment_lock_sha256",
+      "input_sha256",
+      "initial_parameter_sha256",
+      "hardware_manifest_sha256",
+      "numeric_profile",
+      "learning_algorithm",
+      "parallel_contract",
+      "seed",
+      "repetition",
+      "capability_status",
+      "execution_status",
+      "qualification_report",
+      "metrics",
+      "stdout_stderr_artifacts",
+      "qualification_status",
+      "quality_status",
+      "termination_reason"
+    ],
+    "capability_status_values": [
+      "verified_native",
+      "verified_adapter",
+      "documented_not_tested",
+      "unqualified",
+      "unsupported_documented",
+      "not_applicable"
+    ],
+    "execution_status_values": [
+      "not_run",
+      "completed",
+      "dependency_error",
+      "semantic_mismatch",
+      "oom",
+      "budget_rejected",
+      "timeout",
+      "numerical_divergence"
+    ],
+    "status_note": "Capability, numerical qualification, execution, quality and termination are separate fields. Software admission rejection is not measured OOM. Missing hardware is not framework unsupported. Completed execution need not meet quality; timeout and quality_not_reached can coexist.",
+    "metrics": [
+      "cold_first_step_s",
+      "compile_s",
+      "public_step_median_s",
+      "forward_s",
+      "backward_s",
+      "optimizer_s",
+      "communication_s",
+      "serialization_launch_s",
+      "samples_per_s",
+      "logical_events_per_s",
+      "peak_RSS_bytes",
+      "peak_VRAM_bytes",
+      "time_to_validation_target_s",
+      "total_wall_s",
+      "device_hours",
+      "final_validation_accuracy",
+      "final_test_accuracy",
+      "success_rate",
+      "engineering_minutes"
+    ],
+    "counterfactual_status_policy": "Not applicable and unqualified rows remain visible and are never converted into infinite speedups.",
+    "qualification_status_values": [
+      "not_run",
+      "passed",
+      "failed",
+      "not_applicable"
+    ],
+    "quality_status_values": [
+      "not_evaluated",
+      "target_reached",
+      "quality_not_reached",
+      "not_applicable"
+    ],
+    "termination_reason_values": [
+      "not_started",
+      "workload_completed",
+      "epoch_cap",
+      "wall_time_cap",
+      "memory_exhaustion",
+      "admission_limit",
+      "dependency_failure",
+      "semantic_failure",
+      "numerical_failure"
+    ]
+  },
+  "decision_rules": {
+    "productization_candidate": {
+      "family_preregistered": true,
+      "adjacent_scale_points": 2,
+      "proposed_min_speedup": 2,
+      "proposed_min_capacity_ratio": 2,
+      "requirements": [
+        "same semantics and precision/resource contract",
+        "qualification passed",
+        "complete end-to-end scope",
+        "quality noninferiority under preregistered rule",
+        "all failure and unsupported rows visible"
+      ],
+      "note": "Internal suggested threshold, not an industry standard or an established result. Capacity and speed are separate claims."
+    },
+    "quality_noninferiority": {
+      "candidate_margin_accuracy_points": 1,
+      "statistical_rule": "Preregister paired-seed confidence interval method before freeze; a wide interval is inconclusive, not equivalence."
+    },
+    "go": "Prioritize a named model family if cost, capacity or migration benefit survives strong optimized competitors.",
+    "no_go": "Do not market engine leadership if benefit exists only versus a weak baseline, inequivalent algorithm, different precision, or omitted startup.",
+    "task_value": {
+      "candidate_min_successful_seeds": 4,
+      "total_seeds": 5,
+      "note": "Internal candidate rule; all seeds, quality uncertainty and total task cost remain visible."
+    },
+    "distributed_value": {
+      "candidate_speedup_two_devices": 1.5,
+      "candidate_speedup_four_devices": 2.5,
+      "minimum_preregistered_workloads": 2,
+      "note": "Same global batch and complete public-step boundary, same numeric and resource contract. Product-value candidate, not MPI correctness acceptance."
+    }
+  },
+  "freeze_gates": [
+    {
+      "id": "G1",
+      "status": "pending",
+      "requires": "Archive exact Atlas source and selected public API; hash any dirty patch and generated binaries."
+    },
+    {
+      "id": "G2",
+      "status": "pending",
+      "requires": "Full per-contender dependency/build lock plus runnable installation smoke checks."
+    },
+    {
+      "id": "G3",
+      "status": "pending",
+      "requires": "Model equations, adapters, input/weights/noise arrays and corpus hashes."
+    },
+    {
+      "id": "G4",
+      "status": "pending",
+      "requires": "Dataset archive, preprocessing and train/validation/test split hashes."
+    },
+    {
+      "id": "G5",
+      "status": "pending",
+      "requires": "Physical hardware, driver, topology and resource/cost budget manifest."
+    },
+    {
+      "id": "G6",
+      "status": "pending",
+      "requires": "Independent numerical qualification and chosen tolerances before performance collection."
+    },
+    {
+      "id": "G7",
+      "status": "pending",
+      "requires": "Final finite run matrix, statistical method, stop rules, HPO and total resource budget."
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "qualification_and_freeze",
+      "requires": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "outputs": [
+        "Q0",
+        "L1",
+        "capability_matrix"
+      ],
+      "completion": "G6 and G7 resolved, immutable execution manifest issued."
+    },
+    {
+      "id": "P1",
+      "name": "CPU_and_single_GPU",
+      "requires": [
+        "G6",
+        "G7"
+      ],
+      "outputs": [
+        "E1",
+        "E3",
+        "E4",
+        "E6",
+        "E7",
+        "A1",
+        "A2",
+        "L2"
+      ],
+      "coverage_extensions": [
+        "E2",
+        "E5",
+        "A3"
+      ],
+      "parallel_panels": [
+        "M1",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "note": "Frontier panels start with capability qualification, not mandatory full-scale execution."
+    },
+    {
+      "id": "P2",
+      "name": "physical_multi_GPU",
+      "requires": [
+        "qualified_multi_rank_update",
+        "physical_GPU_manifest",
+        "single_device_baselines"
+      ],
+      "outputs": [
+        "strong_scaling",
+        "weak_throughput",
+        "capacity_by_partition"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "cross_host",
+      "requires": [
+        "same_resource_single_host_baseline",
+        "two_physical_hosts_manifest"
+      ],
+      "outputs": [
+        "same_resource_placement_comparison"
+      ],
+      "note": "CPU-only and CUDA jobs are separate hardware subtracks."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "atlas-owner30-128m-prospective-v1",
+  "case": "owner30-128m",
+  "neurons": 128000000,
+  "connections": 128000000000,
+  "reference_neuron_count": 86000000000,
+  "neuron_count_percent": 0.14883720930232558,
+  "duration_ms": 100,
+  "dt_ms": 0.1,
+  "precision": "reference-f64",
+  "hosts": 30,
+  "ranks": 30,
+  "populations": 30,
+  "projections": 900,
+  "excitatory_populations": 24,
+  "inhibitory_populations": 6,
+  "worker_memory_gib": 256,
+  "cpu_ids": [
+    1
+  ],
+  "local_edge_guard": 4290000000,
+  "local_edges_minmax": [
+    4266666000,
+    4266667000
+  ],
+  "largest_projection_edges": 142222245,
+  "timeout_seconds": 1800,
+  "file_cap_gib": 8,
+  "minimum_free_gib": 128,
+  "maximum_runs_per_configuration": 1,
+  "automatic_timeout_extension": false,
+  "core_array_gib_minmax": [
+    80.42652182281017,
+    80.42654044926167
+  ],
+  "illustrative_peak_linear_estimate_gib": 95.65413222202035,
+  "illustrative_output_linear_estimate_bytes": 6818528957.023255,
+  "estimate_scope": "Core arrays exclude queues/states/scratch/output; linear estimates from 86M are not guaranteed peaks. Activity and collective performance can change.",
+  "source_archive_sha256": "7d79504ed7b710b3a003aedddac477b07e661f56206542eafeab7503f5c7108e",
+  "source_location": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/source-b128",
+  "script_sha256": "2e7f7dc8fcdc429a4538b1aaad92fd799442ea39a377d9c46969b6433805fd88",
+  "script_change": "Only experiment-script upper neuron assertion changed from 86M to 128M. Existing 128M engine cap, numerical kernels and default resource ceilings unchanged.",
+  "prior_numeric_gate": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/pilot-owner30-validation.json",
+  "prior_large_audit": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/brain-fraction-86m-20261007/major-owner30-audit.json",
+  "scientific_scope": "Synthetic connected capacity only; not anatomical human brain, maximum capacity, speedup/scaling curve or full-scale feasibility."
+}

@@ -1,0 +1,555 @@
+{
+  "schema": "atlas-final-preprint-experiment-coverage-v1",
+  "date": "2026-10-09",
+  "atlas_commit": "f90d2b63952092a6c5531f5989ba58b240922b6e",
+  "preprint_base_commit": "38bd6a11cd18f92e019b1b479142771629887553",
+  "scope": "Every experimental or illustrative family in the final main manuscript and S1-S21 reviewed for driver location, source identity and material dependencies. Source availability and bounded checks are distinct from fresh end-to-end scientific reproduction.",
+  "all_historical_build_assets_present": false,
+  "all_experiments_rerun_on_latest_atlas": false,
+  "scientific_driver_families_accounted_for": true,
+  "cohorts": [
+    {
+      "id": "semantic-example",
+      "paper": "Figure 2; S3",
+      "code": [
+        {
+          "repository": "atlas",
+          "path": "brian2-rust/tests/test_synapses.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Current semantic test plus exact historical referenced test content in the source-version archive."
+    },
+    {
+      "id": "cpu-flywire",
+      "paper": "Figure 4; S4",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/flywire_benchmark.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/flywire_import.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "FlyWire input data and historical runtime/toolchain remain separately identified."
+    },
+    {
+      "id": "pd14",
+      "paper": "Figure 4; S4",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/reproduction/pd14/README.md"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/src/bin/pd14.rs"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Pinned bounded reproduction passed previously; full historical resource run is separate."
+    },
+    {
+      "id": "mpi-flywire",
+      "paper": "Figure 3; S6",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/mpi_flywire.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/benchmark_mpi_flywire.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Before/after performance versions retain their individual source identities."
+    },
+    {
+      "id": "macaque-multi-area",
+      "paper": "Figure 3; Table 2; S6/S11",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/mpi_multi_area.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/fetch_multi_area_source.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/export_multi_area_parameters.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/mam_nest_reference.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/mam_v1_140_six_realization_cohort.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "249 imported research files verified. Three missing protocol/activity fixtures restored; 30 bounded analysis checks pass. Upstream model is fetched at 0a658be40bef3249cbe452f38809edf7d2f524ba; large raw arrays remain external. Seed1752/closed-loop worktrees are later diagnostic work, not the reported 1729/1750/1751 cohort."
+    },
+    {
+      "id": "gpu-ring-cuba",
+      "paper": "Figure 5; S5",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/gpu_stdp_precompiled.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/gpu_precompiled.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "External Brian2CUDA/GeNN comparators require the recorded separate environments."
+    },
+    {
+      "id": "plan-selection-cache",
+      "paper": "Table 3; S9",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/gpu_autotune_benchmark.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/gpu_tuning_cache_benchmark.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Exact referenced historical planning modules are also in source-versions."
+    },
+    {
+      "id": "litwin-kumar",
+      "paper": "Figure 6; S4",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/litwin_kumar_benchmark.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/litwin_kumar_checkpoint.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Documented assembly variant, not complete reproduction of the external paper."
+    },
+    {
+      "id": "browser-execution",
+      "paper": "Figure 7; S7",
+      "code": [
+        {
+          "repository": "atlas",
+          "path": "brian2-rust/wasm"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/tools/package_flywire_browser.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/flywire_learning"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Current browser implementation and full-connectome packaging programs present; historical model/binary inputs keep their separate identities."
+    },
+    {
+      "id": "neural-lab-capture",
+      "paper": "Figure 7b; S7.1",
+      "code": [
+        {
+          "repository": "atlas",
+          "path": "brian2-rust/wasm"
+        },
+        {
+          "repository": "preprint",
+          "path": "paper/data/neural_lab_capture.json"
+        },
+        {
+          "repository": "preprint",
+          "path": "paper/data/neural-lab.browser.json"
+        }
+      ],
+      "status": "historical-build-incomplete",
+      "scope": "Current source and original screenshot/export present; exact old index.html, lab.css and pkg/b2_runner.js remain unresolved. Four JS assets reconstructed to exact recorded hashes."
+    },
+    {
+      "id": "native-training",
+      "paper": "Section 5.7; S12/S12.1",
+      "code": [
+        {
+          "repository": "atlas",
+          "path": "brian2-rust/tests/test_training_cuda_capabilities.py"
+        },
+        {
+          "repository": "atlas",
+          "path": "migration/cuda-cutoff-followup.json"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/training-evaluation"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Native runtime/tests in Atlas; external qualification drivers and full captured snapshot restored. No new training benchmark or accuracy claim."
+    },
+    {
+      "id": "nmda-skaar",
+      "paper": "Figure 8; Table 4; S14",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/nmda2025"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "112 first-party study files added, six core CLI checks pass. External upstream model must be fetched at 68e6dd970cfc6bab26459fcb8c34ee0f16560d9e; it is not vendored."
+    },
+    {
+      "id": "contextual-dendritic",
+      "paper": "Table 5; S13/S14",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/contextual_dendritic_single_neuron_benchmark.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/brian2-rust/examples/contextual_dendritic_benchmark_aggregate.py"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "408 imported research files verified; upstream model snapshot dbb77525f2662199544f5a0d3dcc9c18b0e1c853 is a separate input. Preserved source records do not imply complete Onasch paper reproduction."
+    },
+    {
+      "id": "heterogeneous-mpi",
+      "paper": "Figure 9; S17",
+      "code": [
+        {
+          "repository": "atlas",
+          "path": "brian2-rust/examples/mpi_heterogeneous.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "paper/data/mpi_heterogeneous/evidence.json"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Retains CPU/Metal simulation and separate CUDA training qualification scopes."
+    },
+    {
+      "id": "connected-capacity",
+      "paper": "Figure 10; Table 6; S19/S20",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "experiments/legacy/capacity"
+        },
+        {
+          "repository": "preprint",
+          "path": "experiments/source-versions"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "66 study files added. Exact preparation and generated MPI source identities recovered; large inputs/outputs and fleet settings remain separately supplied."
+    },
+    {
+      "id": "conditional-resource-analysis",
+      "paper": "Figure S2; S21",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "paper/scripts/analyze_full_scale_resources.py"
+        },
+        {
+          "repository": "preprint",
+          "path": "paper/data/full_scale"
+        }
+      ],
+      "status": "driver-code-present",
+      "scope": "Analysis script and 12 frozen source files present; conditional arithmetic, not a new full-scale execution."
+    },
+    {
+      "id": "online-b2ir-capture",
+      "paper": "Figure S1; S18",
+      "code": [
+        {
+          "repository": "preprint",
+          "path": "paper/data/b2ir_visualization"
+        }
+      ],
+      "status": "capture-evidence-present-not-a-reproduction",
+      "scope": "Retained screenshot/template capture only. The online application is a separate deployment; no hash-matched executed bundle was available for this illustration."
+    }
+  ],
+  "branch_audit": {
+    "refs": [
+      {
+        "ref": "refs/heads/codex/affective-ai-research-20260912",
+        "commit": "c1a7c9621ee2cc7bca696e449edcc9981ec016b1",
+        "research_files": 510
+      },
+      {
+        "ref": "refs/heads/codex/execution-plan-research",
+        "commit": "d8474dc0145d6b95834931bac12d45f08ce37743",
+        "research_files": 239
+      },
+      {
+        "ref": "refs/heads/codex/flywire-benchmark",
+        "commit": "4031b0778ab50938b965e3ead701a3cf7ec49461",
+        "research_files": 36
+      },
+      {
+        "ref": "refs/heads/codex/flywire-learning",
+        "commit": "7ba20b8c958021bb8de0d106b3ce2804d5a13527",
+        "research_files": 63
+      },
+      {
+        "ref": "refs/heads/codex/flywire-mnist",
+        "commit": "d8474dc0145d6b95834931bac12d45f08ce37743",
+        "research_files": 239
+      },
+      {
+        "ref": "refs/heads/codex/flywire-vision",
+        "commit": "03b2b3c4566caf3d37c4e4eebbf5b5e7238642d1",
+        "research_files": 239
+      },
+      {
+        "ref": "refs/heads/codex/male-cns-v1",
+        "commit": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+        "research_files": 512
+      },
+      {
+        "ref": "refs/heads/codex/mam-runtime-forward-port",
+        "commit": "1870cc1c2c4531c71b2ca3dbb7069c725f88a29e",
+        "research_files": 514
+      },
+      {
+        "ref": "refs/heads/codex/mam-stdio-recovery",
+        "commit": "cd88ef186ce7161ddbaed5c24ad4fa2ec232b07f",
+        "research_files": 527
+      },
+      {
+        "ref": "refs/heads/codex/merge-gpu-20260911",
+        "commit": "bc99efaa3e0d844c980f54a70cb6385f54102225",
+        "research_files": 240
+      },
+      {
+        "ref": "refs/heads/codex/mpi-cpu",
+        "commit": "35b6a6e04bc9a9009c5c4d87c78d342e4ea76574",
+        "research_files": 321
+      },
+      {
+        "ref": "refs/heads/codex/mpi-file-backed-events",
+        "commit": "24ae77b79ac889938272714cbb7f05e456609bc1",
+        "research_files": 527
+      },
+      {
+        "ref": "refs/heads/codex/mpi-neighbor-spikes",
+        "commit": "af9b3b268229106d94ab109032ec868da5199f4d",
+        "research_files": 517
+      },
+      {
+        "ref": "refs/heads/codex/mpi-output-storage",
+        "commit": "b610589ffba4094e21c5606a8fe14a96a4b70647",
+        "research_files": 502
+      },
+      {
+        "ref": "refs/heads/codex/spike-generator-budget",
+        "commit": "1e56c2f3d6dc226fdca29d4b0f03f92e33096c11",
+        "research_files": 510
+      },
+      {
+        "ref": "refs/heads/gate0/minimal-rust-backend",
+        "commit": "c53fff0858170dea08e8bcb2395daecf1b36a57c",
+        "research_files": 7
+      },
+      {
+        "ref": "refs/heads/master",
+        "commit": "cf0b25cce13b620aac740873e88ba91061a70275",
+        "research_files": 0
+      },
+      {
+        "ref": "refs/heads/next-dev",
+        "commit": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+        "research_files": 512
+      },
+      {
+        "ref": "refs/remotes/backup/codex/mpi-file-backed-events",
+        "commit": "24ae77b79ac889938272714cbb7f05e456609bc1",
+        "research_files": 527
+      },
+      {
+        "ref": "refs/remotes/backup/codex/mpi-neighbor-spikes",
+        "commit": "af9b3b268229106d94ab109032ec868da5199f4d",
+        "research_files": 517
+      },
+      {
+        "ref": "refs/remotes/backup/codex/mpi-output-storage",
+        "commit": "358fdb8762ef5213f2f3ed2b8f6cbd4813b60b44",
+        "research_files": 491
+      },
+      {
+        "ref": "refs/remotes/backup/gate0/minimal-rust-backend",
+        "commit": "2385d16d2c461dd735afb8aaee84bf064b87af55",
+        "research_files": 510
+      },
+      {
+        "ref": "refs/remotes/backup/next-dev",
+        "commit": "81eb571d78292a0e24a8e79980ea0d5c26e8a48c",
+        "research_files": 512
+      }
+    ],
+    "worktrees": [
+      {
+        "path": "/atlas-home/0004/workspace/bettiai/brian2",
+        "exists": true,
+        "research_files": 3431
+      },
+      {
+        "path": "/private/tmp/b2-spike-generator-budget",
+        "exists": false,
+        "research_files": 0
+      },
+      {
+        "path": "/private/tmp/b2-stageperf-bfae9880",
+        "exists": false,
+        "research_files": 0
+      },
+      {
+        "path": "/private/tmp/brian2-flywire-learning",
+        "exists": false,
+        "research_files": 0
+      },
+      {
+        "path": "/private/tmp/brian2-mpi-cpu",
+        "exists": false,
+        "research_files": 0
+      },
+      {
+        "path": "/atlas-home/0004/.codex-workspaces/worktrees/ce0f6d7e-0554-41c3-89f6-4bced919c670/brian2",
+        "exists": true,
+        "research_files": 528
+      },
+      {
+        "path": "/atlas-worktree/0005/brian2",
+        "exists": true,
+        "research_files": 514
+      },
+      {
+        "path": "/atlas-worktree/0006/brian2",
+        "exists": true,
+        "research_files": 527
+      },
+      {
+        "path": "/atlas-storage/0002/brian2-mpi-20260908/mpi-file-backed-events",
+        "exists": true,
+        "research_files": 1054
+      },
+      {
+        "path": "/atlas-storage/0002/brian2-mpi-20260908/mpi-output-storage-20260913",
+        "exists": true,
+        "research_files": 912
+      }
+    ],
+    "distinct_tracked_research_variants": 773,
+    "scope": "Research entry points, tools and experimental tests; ignored evidence/build directories are audited separately from paper source records. Local branch heads and backup tracking refs; upstream Brian-team feature branches excluded.",
+    "ignored_evidence_followup": "Paper source hashes separately checked against local archives and read-only remote experiment sources. macOS ._ metadata ignored.",
+    "outside_final_paper": "Male-CNS/MNIST, affective studies, later MAM seed1752/closed-loop and later training development are not silently merged into the approved product cutoff or the final reported cohorts."
+  },
+  "source_hash_audit": {
+    "references": 1412,
+    "initial_references_found_in_repo_files": 1202,
+    "initial_missing_unique_contents": 98,
+    "recovered_unique_contents": 95,
+    "remaining_unique_contents": 3,
+    "unresolved": [
+      {
+        "record": "paper/data/neural_lab_capture.json",
+        "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/index.html",
+        "sha256": "73e218382fac337e07a62016cddc440ee775ff145d7eda98cbea9e7d3e13272f",
+        "in_repositories": [],
+        "archive_catalog": []
+      },
+      {
+        "record": "paper/data/neural_lab_capture.json",
+        "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/lab.css",
+        "sha256": "72880f812beac7787000628525733ba8e29ac9f74a54faab489e7ba079b68f9f",
+        "in_repositories": [],
+        "archive_catalog": []
+      },
+      {
+        "record": "paper/data/neural_lab_capture.json",
+        "source": "/private/tmp/brian2-execution-plan-research/brian2-rust/output/wasm/pkg/b2_runner.js",
+        "sha256": "d6914da9a18a0eacf0d8a86289b530e312a639d5534ea392d4c468a51ba87a37",
+        "in_repositories": [],
+        "archive_catalog": []
+      }
+    ],
+    "limitations": "This is an audit of explicit code hashes present in retained JSON records, not proof that every historical transitive dependency or unrecorded local change is reconstructable."
+  },
+  "validation": {
+    "imported_file_hashes_verified": 2453,
+    "python_files_syntax_checked": 2043,
+    "source_version_members_verified": 95,
+    "mam_analysis_tests_passed": 30,
+    "nmda_core_cli_checks_passed": 6,
+    "new_simulations_or_remote_jobs": false,
+    "mam_test_modules": [
+      "experiments.legacy.brian2-rust.tests.test_mam_comparison_windows",
+      "experiments.legacy.brian2-rust.tests.test_mam_native_v1_140_geometry",
+      "experiments.legacy.brian2-rust.tests.test_mam_native_v1_140_selector",
+      "experiments.legacy.brian2-rust.tests.test_mam_native_v1_140_stream",
+      "experiments.legacy.brian2-rust.tests.test_mam_reference_ensemble",
+      "experiments.legacy.brian2-rust.tests.test_mam_v1_140_selector",
+      "experiments.legacy.brian2-rust.tests.test_mam_v1_140_six_realization_cohort.SixV1CohortTest",
+      "experiments.legacy.brian2-rust.tests.test_mam_v1_140_spectrum"
+    ],
+    "mam_test_scope": "Analysis/selector/stream checks against bounded fixtures; no new scientific simulation.",
+    "nmda_cli_checks": [
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/run_rust_fixture.py",
+        "exit_code": 0
+      },
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/run_cpp_timed_fixture.py",
+        "exit_code": 0
+      },
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/prepare_cpu_frozen_model.py",
+        "exit_code": 0
+      },
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/prepare_mpi_frozen_model.py",
+        "exit_code": 0
+      },
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/measure_cpu_frozen.py",
+        "exit_code": 0
+      },
+      {
+        "script": "experiments/legacy/nmda2025/benchmarks/published/nmda_skaar_2025/scripts/run_cpu_campaign.py",
+        "exit_code": 0
+      }
+    ],
+    "nmda_cli_argument": "--help"
+  },
+  "known_external_dependencies": [
+    "Pinned third-party model repositories and framework/toolchain installations",
+    "Large raw model/input/output arrays in their retained archives",
+    "Original historical engine revisions and any source outside the declared snapshot scope; not all history is a self-contained build in these two checkouts",
+    "Three unrecovered historical Neural Lab browser build assets",
+    "Online B2IR illustration has no hash-matched executed source bundle; its capture states that limit"
+  ]
+}

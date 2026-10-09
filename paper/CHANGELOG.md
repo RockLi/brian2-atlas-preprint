@@ -1,5 +1,13 @@
 # Manuscript revisions
 
+## 2026-10-09: final-paper experiment-code coverage
+
+- Audit all final-manuscript and S1–S21 study families against source branches, worktrees and retained evidence.
+- Restore missing NMDA, connected-capacity and external training qualification programs; add three macaque analysis fixtures and 95 exact hash-referenced source contents.
+- Verify 2,453 imported file/member hashes, parse 2,043 Python sources, pass 30 macaque analysis checks and six NMDA CLI import checks.
+- Record three unresolved historical Neural Lab build assets and external model/raw-data requirements. No new scientific simulation or benchmark is run.
+- See [experiment-code coverage](../experiments/COVERAGE.md) for the family-by-family scope.
+
 ## 2026-10-09: repository-wide stale-content audit
 
 - Refresh the manuscript index to 10 main figures, 7 main tables, 16 references and S1–S21; distinguish current validation from cutoff records.

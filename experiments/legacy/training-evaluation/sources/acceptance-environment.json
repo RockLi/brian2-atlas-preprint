@@ -1,0 +1,10 @@
+{
+  "PYTHONPATH": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/python",
+  "MPLCONFIGDIR": "/tmp/b2-training-mpl",
+  "B2_TRAIN_RUNNER": "/atlas-home/0004/workspace/bettiai/brian2/brian2-rust/mpi-evidence/training-neuron-noise-final-r4-20261004/b2-train",
+  "B2_TEST_GPU": "1",
+  "B2_TEST_MPI": "1",
+  "FI_PROVIDER": "tcp",
+  "CFLAGS": "-fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -g0",
+  "CXXFLAGS": "-fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -g0"
+}

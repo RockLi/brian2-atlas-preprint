@@ -1,0 +1,350 @@
+{
+  "status": "specified_pending_oracle_and_adapter_qualification",
+  "revision": "equations-r1",
+  "shared": {
+    "loss": "cross_entropy(logits=5 * mean_over_time(output_spikes), target), mean over global batch",
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.001,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08,
+      "weight_decay": 0
+    },
+    "reset_gate": "stop_gradient on reset condition; continuous reset expressions remain differentiable",
+    "batch_state": "zero or explicitly declared initial state for each independent sample",
+    "input_rule": "count-bin arrays; all populations threshold from pre-synaptic-update states; feedforward and recurrent events added only afterwards",
+    "output": "canonical LIF readout; outputs use the same global scheduling as hidden states",
+    "finite_difference": "smooth subgraphs only; hand-derived surrogate VJP is the spike gradient oracle"
+  },
+  "E4": {
+    "name": "adaptive_threshold_euler_r1",
+    "units": "dimensionless v,a; time in ms",
+    "dt_ms": 1,
+    "equations": [
+      "uv = (1-dt/tau_v)*v",
+      "ua = (1-dt/tau_a)*a",
+      "margin = uv-(1+ua)",
+      "s = 1[margin>0]",
+      "v_next = uv + W*feed + R*s - (1+ua)*stop_gradient(s)",
+      "a_next = ua+k*s"
+    ],
+    "surrogate": "ds/dmargin = 1/(1+5*abs(margin))^2; adaptation increment k*s keeps the surrogate path",
+    "initial": {
+      "v": 0,
+      "a": 0,
+      "tau_v_ms": 20,
+      "tau_a_ms": 200,
+      "k": 0.1
+    },
+    "trainable_transforms": {
+      "tau_v_ms": "5+95*sigmoid(z_v)",
+      "tau_a_ms": "20+980*sigmoid(z_a)",
+      "k": "2*sigmoid(z_k)"
+    },
+    "parameter_modes": [
+      "fixed_dynamics",
+      "weights_plus_shared_hidden_tau_v_tau_a_k"
+    ],
+    "raw_initialization": "z=log((physical-low)/(high-physical)) evaluated in FP64, stored common scalar arrays",
+    "topology": "feedforward [128,256,20]; R absent in this fixture",
+    "qualification_shape": [
+      2,
+      4,
+      2
+    ],
+    "qualification_T": 32,
+    "qualification_B": 2,
+    "performance_T": [
+      512,
+      2048
+    ],
+    "performance_B": 16,
+    "refractory": false,
+    "delays": "zero",
+    "noise": false,
+    "identity_note": "Explicit adaptive threshold model, not interchangeable with AdEx or a library default ALIF."
+  },
+  "E5": {
+    "common": {
+      "shape": [
+        128,
+        128,
+        20
+      ],
+      "B": 8,
+      "T": 512,
+      "dt_ms": 0.1,
+      "qualification_shape": [
+        2,
+        4,
+        2
+      ],
+      "qualification_B": 2,
+      "qualification_T": 32,
+      "solver": "simultaneous forward Euler from old state",
+      "trainable": "synaptic weights only",
+      "hidden_to_output": "canonical LIF, beta=1-0.1/20; theta=1",
+      "input_weights": "hidden voltage impulses in the declared voltage units, output weights dimensionless",
+      "refractory": false,
+      "noise": false,
+      "schedule": "Euler drift all groups; threshold all groups; deliver input/internal spikes; apply reset last. Hard reset overrides same-tick voltage input."
+    },
+    "AdEx": {
+      "source_model": "corpus/originals/frompapers/Brette_Gerstner_2005.py",
+      "units": "mV, ms, pA, pF, nS; pA/pF=mV/ms",
+      "equations": [
+        "uv=v+dt*(gL*(EL-v)+gL*DeltaT*exp((v-VT)/DeltaT)+I-a)/C",
+        "ua=a+dt*(a_adapt*(v-EL)-a)/tau_a",
+        "s=1[uv>Vcut]",
+        "v_next=(1-stop(s))*(uv+voltage_feed)+stop(s)*Vr",
+        "a_next=ua+b*stop(s)"
+      ],
+      "parameters": {
+        "C_pF": 281,
+        "gL_nS": 30,
+        "EL_mV": -70.6,
+        "VT_mV": -50.4,
+        "DeltaT_mV": 2,
+        "Vcut_mV": -40.4,
+        "tau_a_ms": 144,
+        "a_adapt_nS": 4,
+        "b_pA": 80.5,
+        "Vr_mV": -70.6,
+        "I_pA": 500
+      },
+      "initial": {
+        "v_mV": -70.6,
+        "a_pA": 0
+      },
+      "surrogate": "margin=(uv-Vcut)/2mV; ds/du=g(margin)/(2mV)",
+      "boundary": "No exp clipping; non-finite evaluation is numerical_divergence, not silently stabilized."
+    },
+    "Izhikevich": {
+      "source_model": "corpus/originals/frompapers/Izhikevich_2003.py",
+      "units": "standard dimensionless Izh numeric variables; time in ms",
+      "equations": [
+        "uv=v+dt*(0.04*v*v+5*v+140-u+I)",
+        "uu=u+dt*a*(b*v-u)",
+        "s=1[uv>=30]",
+        "v_next=(1-stop(s))*(uv+voltage_feed)+stop(s)*c",
+        "u_next=uu+d*stop(s)"
+      ],
+      "parameters": {
+        "a": 0.02,
+        "b": 0.2,
+        "c": -65,
+        "d": 8,
+        "I": 5
+      },
+      "initial": {
+        "v": -65,
+        "u": -13
+      },
+      "surrogate": "margin=(uv-30)/10; ds/duv=g(margin)/10",
+      "difference_from_original": "Controlled homogeneous/noise-free network at dt=.1ms; explicitly new E fixture, not an unchanged migration success."
+    },
+    "synthetic_four_state": {
+      "identity": "Controlled four-state linear-filter adaptive spiking fixture; not HH",
+      "units": "dimensionless states, ms",
+      "equations": [
+        "uv=v+dt*(-v-.2*a+.4*p)/2",
+        "ua=a+dt*(-a)/10",
+        "up=p+dt*(q-p)",
+        "uq=q+dt*(-q)/.5",
+        "s=1[uv>1]",
+        "v_next=uv-stop(s)",
+        "a_next=ua+.1*s",
+        "p_next=up",
+        "q_next=uq+W*feed"
+      ],
+      "initial": {
+        "v": 0,
+        "a": 0,
+        "p": 0,
+        "q": 0
+      },
+      "surrogate": "g(uv-1)",
+      "reset_note": "v reset gate detached; a increment keeps surrogate path"
+    }
+  },
+  "L2": {
+    "name": "CUBA_exact_fixed_indegree_with_optional_pair_STDP_r1",
+    "source_model": "corpus/originals/CUBA.py",
+    "equations": [
+      "dv/dt=(ge+gi-(v-El))/tau_m, except refractory holds v",
+      "dge/dt=-ge/tau_e",
+      "dgi/dt=-gi/tau_i"
+    ],
+    "parameters": {
+      "tau_m_ms": 20,
+      "tau_e_ms": 5,
+      "tau_i_ms": 10,
+      "El_mV": -49,
+      "threshold_mV": -50,
+      "reset_mV": -60,
+      "refractory_ms": 5,
+      "we_initial_mV": 1.62,
+      "wi_mV": -9
+    },
+    "flow": [
+      "em=exp(-dt/tau_m); ee=exp(-dt/tau_e); ei=exp(-dt/tau_i)",
+      "uv=El+(v-El)*em+ge*tau_e/(tau_m-tau_e)*(em-ee)+gi*tau_i/(tau_m-tau_i)*(em-ei)",
+      "uge=ge*ee; ugi=gi*ei"
+    ],
+    "schedule": "Exact drift from old states; eligible threshold uv>-50; all presynaptic arrivals in (target,source,edge_id) order; post events after pre; reset last. Initial next_allowed_tick=0; a spike at tick t permits threshold again at t+50 for dt=.1ms.",
+    "initial": "v=-60+10*materialized_uniform01 mV; ge=gi=0; common arrays",
+    "drive": "El=-49mV tonic drive, no external random runtime drive",
+    "edges": "Every target draws exactly 80 distinct E sources and 20 distinct I sources without replacement, excluding itself; no multiedges. E count=.8*N.",
+    "delay": "edge_id sorted lexicographically (target,source); delay_ms=1+(edge_id mod 3), exact integer bins 10/20/30",
+    "plasticity": "Only E-to-E edges plastic, all other weights static. L1 exact pair rule with dimensionless wbar multiplied by 3.24mV; initial wbar=.5, clip [0,1]; tau_pre=10ms,tau_post=12ms,pre increment=.08,post increment=-.09. Same-tick pre before post. The input current uses weight before its STDP update.",
+    "dimensions": {
+      "N": [
+        1000,
+        4000,
+        16000
+      ],
+      "duration_seconds": [
+        1,
+        10
+      ],
+      "dt_ms": 0.1,
+      "modes": [
+        "static",
+        "stdp"
+      ]
+    },
+    "qualification": {
+      "N": 125,
+      "duration_ms": 100,
+      "reason": "100 distinct incoming sources fit smallest graph while retaining 80:20 sources"
+    },
+    "output": "spike/event counts all populations; voltage traces selected fixed IDs; per-edge final weight and trace hashes; no task quality inference from firing rate",
+    "pending": [
+      "L1 executed artifact hash",
+      "independent exact-flow/refractory qualification",
+      "materialized edge lists and input arrays"
+    ]
+  },
+  "L1": {
+    "source": "../adapters/brian_validation.py",
+    "status": "adapter_defined_results_pending_at_protocol_authoring",
+    "Nsyn": 8,
+    "dt_ms": 1,
+    "T": 16,
+    "rule": "all-to-all additive event-driven pair STDP, exact exponential lazy decay of both traces to current event; pre then post at same tick; weight clip[0,1]",
+    "tau_pre_ms": 10,
+    "tau_post_ms": 12,
+    "pre_increment": 0.08,
+    "post_increment": -0.09,
+    "w0": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.99,
+      0.01
+    ],
+    "pre_delay_ticks": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      0,
+      0
+    ],
+    "post_delay_ticks": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pre_times": [
+      [
+        2
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "post_times": [
+      [
+        5
+      ],
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "pre_event": "decay both traces; apre+=.08; w=clip(w+apost,0,1)",
+    "post_event": "decay both traces; apost-=.09; w=clip(w+apre,0,1)",
+    "proof": "per tick weights/lazy traces/lastupdate, pre/post arrival counts and per-event independent oracle log; exact spike schedule"
+  }
+}

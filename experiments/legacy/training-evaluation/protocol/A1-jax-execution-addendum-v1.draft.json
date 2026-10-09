@@ -1,0 +1,136 @@
+{
+  "schema": "atlas-a1-jax-execution-addendum-v1",
+  "status": "draft_pretraining",
+  "workload": "A1",
+  "purpose": "Separate A1 Spyx/Brainstate phase after v4; same learning task, host-configuration observations only; no HPO.",
+  "prior_protocol": "protocol/execution-plan-r2.json",
+  "authorized_execution_host": "rock-mac-studio-1.local (100.90.28.27)",
+  "sizes": [
+    784,
+    128,
+    10
+  ],
+  "T": 100,
+  "global_batch": 32,
+  "train_samples": 55000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "formal_seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "max_epochs": 10,
+  "total_wall_cap_seconds_per_seed": 1800,
+  "wall_scope": "Coordinator before fresh worker launch through cold imports/compile, array verification, A1 numerical qualification, input construction/copy, full training API, complete validation, checkpoint I/O and once-only final test. No additional test grace budget.",
+  "HPO": false,
+  "encoding": "Cast original uint8 pixels to float64, divide by255.0, flatten row-major784; repeat the same analogue current for all100ticks. No Poisson draw, augmentation or feature fit.",
+  "split": "Use existing immutable data/mnist/processed train_indices.npy and validation_indices.npy. Official test images and labels are decoded only after a full-epoch selected checkpoint exists.",
+  "initial_parameters": {
+    "generator": "NumPy Generator(PCG64(seed))",
+    "draw_order": "input-to-hidden then hidden-to-output; source-major flattened banks",
+    "distribution": "normal(0,sqrt(2/fan_in)); float64",
+    "shared_arrays": "Materialize all five seeds before fitting; archive bytes and SHA256. Engines load common arrays rather than regenerate from equal seed."
+  },
+  "shuffle": {
+    "generator": "Independent NumPy Generator(PCG64(seed+1000003))",
+    "rule": "For each epoch in1..10 draw one complete permutation of the frozen55000 training indices; archive all10 permutations before fitting.",
+    "train_batches_per_epoch": 1719,
+    "last_train_batch_samples": 24,
+    "drop_last": false,
+    "validation_order": "ascending immutable validation_indices, all5000; final batch8",
+    "test_order": "official order0..9999, all10000; final batch16"
+  },
+  "numeric_profile": {
+    "id": "cpu_fp64",
+    "forward": "float64",
+    "backward": "float64",
+    "master_parameters": "float64",
+    "parameter_cast": "none",
+    "optimizer": "float64 Adam; lr0.001, beta1=0.9, beta2=0.999, epsilon=1e-8, weight_decay=0",
+    "batch_reduction": "mean over actual batch size, including24sample final training batch; one Adam step per batch",
+    "state": "Explicit zero voltage per example; no carry across batches",
+    "equations": "canonical_lif_v1: drift/strict threshold before synaptic update; beta0.95, theta1, detached subtract reset; fast-sigmoid VJP slope5",
+    "readout": "5*mean_t(output spikes); cross_entropy"
+  },
+  "resource_profile": "JAX CPU FP64 host-config diagnostics. OMP/BLAS requested1 does not qualify a single-thread JAX worker pool. resource_qualification=false; no strict1thread performance ranking.",
+  "views_initially_implemented": [
+    "Spyx genuine LIF JIT",
+    "Brainstate HiddenState/scan/grad/jit with explicit canonical cell"
+  ],
+  "compile": "Mandatory actual JIT per batch/time shape. Input and label values are runtime arguments, never first-batch constants. All compile/import/setup/input/transfer/qualification/validation/test work consumes the same total1800s.",
+  "qualification": "Matching prior four-case framework dense Q0 and bound source identities are necessary but insufficient. Inside the same1800s: three actual B32/T100 Adam updates and one actual tailB24 update versus independent oracle loss/logits/initial VJP/gradients/weights/moments/counter; pure-forward B32/B8/B16 with unchanged parameters/moments/counter; B2/T100 exact-threshold/neighbors with actual compiled first-tick margin/spikes; save/reset/restore weights+Adam moments/count. Reset to common arrays and zero Adam before epoch1.",
+  "selection": "Complete all55000 training samples and all5000 validation samples before an epoch is eligible. Select maximal integer validation correct count; earliest epoch wins ties. Save each improved checkpoint with hash before committing the selection record.",
+  "time_to_quality_targets": [
+    0.9,
+    0.95
+  ],
+  "continue_training_rule": "After each complete epoch and checkpoint bookkeeping, continue only if another epoch remains and remaining seconds exceed1.10*just_completed_epoch_wall + 1.25*2*just_completed_validation_wall +2.0. Otherwise begin final evaluation. This fixed reserve heuristic may still censor test at the hard cap.",
+  "test_policy": {
+    "attempts_per_seed": 1,
+    "gate": "A selected checkpoint from a fully completed epoch exists and wall budget remains; restore that checkpoint, write durable test-start marker, then decode official test bytes.",
+    "completion": "Report test accuracy/loss only after all10000 samples finish within the same1800s cap.",
+    "cap_before_any_epoch": "censored; no selected checkpoint; test labels remain sealed",
+    "cap_during_test": "test_status=censored_at_cap; retain bestvalidation/checkpoint; no partial test accuracy and no retry",
+    "once_only_ledger": "Exclusive-create evidence/a1-jax-v1-test-once/{engine}-jit-seed-{seed}.json before decoding test labels. Engine/seed is unique even if a later contract hash changes; contract hash is recorded in ledger content. Existing A1v4 ledgers are never read as permission to test or overwritten."
+  },
+  "failure_policy": "Keep unsupported, unqualified, dependency failure, budget_rejected, timeout, divergence and incomplete test as separate outcomes; preserve all five formal seeds and original sample/epoch denominators. No truncated epoch, shorterT, smaller global batch or extra cap after results.",
+  "freeze_basis": "Static separate-phase draft prepared under existing user authorization. Coordinator review/freeze precedes any model execution. --allow-run is an accidental-execution guard, not a new user-approval request. Independent v4 closed-full-audit fixture receipt and queue-frozen Q0 report/raw identities are mandatory before a new frozen contract can be created; draft cannot execute.",
+  "implementation_sha256": "4818a1faec3fa0b4f034580837ead2c9ca79ccf5019603648d059669487d7fae",
+  "qualification_engine_binding": "Prior Q0 engine exactly matches spyx or brainx_state, all four cases/checks pass, actual raw input/parameter dtype float64 and JAX x64=true; all Q0 identities still match. Actual framework and JAX package versions also must match the prior Q0 raw evidence.",
+  "supervision": "Track own descendants by PID+creation time, including independent sessions; clean tracked remnants also after normal worker exit; Popen.wait exclusively reaps direct worker, preserving signal exit code.",
+  "revision_reason": "Add genuine Spyx and Brainstate as two new formal A1 views with shared actual v4 arrays and same strict selection/test/cap policy; keep JAX resource-unqualified for strict1thread comparisons.",
+  "evaluation_forward_policy": {
+    "implementation": "Pure framework forward compiled separately from gradient/Adam function; no autodiff transform or optimizer update in validation/test.",
+    "neuron_semantics": "Same strict >0 threshold, synchronous drift-before-synaptic-update equations and per-example zero voltage as training.",
+    "synchronization": "jax.block_until_ready on the entire actual returned train/evaluate tuple before timing/host conversion."
+  },
+  "boundary_qualification": {
+    "scope": "Qualification-only B2 full width and T100 explicit initial voltage; ordinary training/validation/test remain zero state.",
+    "expected": "Negative/zero/positive representable FP64 drift-minus-threshold margins in hidden and output cells.",
+    "observed": "Actual compiled framework forward returns first-tick margin and spike arrays; require exact zero at intended zero cells, correct neighbor signs, strict >0 spikes and independent oracle loss/logits/spikes.",
+    "failure": "Missing actual zero margin or any mismatch is unqualified; no assumption that JIT rounding automatically preserves the boundary."
+  },
+  "formal_engines": [
+    "spyx",
+    "brainx_state"
+  ],
+  "base_a1_reference": {
+    "contract": "protocol/A1-execution-addendum-v4.json",
+    "sha256": "4ee22dcb3d0be876ec4ea3246cc10aab86ff90f52795a29f5b9ac4cb8102d102",
+    "policy": "Preserve v3/v4 bytes and all existing test ledgers; no re-run or HPO of another framework view."
+  },
+  "shared_reference": {
+    "directory": "fixtures/a1-v4",
+    "contract_sha256": "4ee22dcb3d0be876ec4ea3246cc10aab86ff90f52795a29f5b9ac4cb8102d102",
+    "generator_sha256": "fbc00965cc8023ee6574c31760b66a9b34385b539b349057bac1bca30d80de42",
+    "policy": "Read existing actual archived arrays/epoch permutations and verify their manifest/file digests; this phase cannot regenerate or choose another seed/order.",
+    "manifest_sha256": null,
+    "seed_files": {},
+    "pending_reason": "v4 shared arrays are not yet prepared; independent closed full-audit receipt must seal actual manifest and all five files before any JAX model execution"
+  },
+  "source_bindings": {
+    "tools/run_a1_mnist_v4.py": "fbc00965cc8023ee6574c31760b66a9b34385b539b349057bac1bca30d80de42",
+    "protocol/A1-execution-addendum-v4.json": "4ee22dcb3d0be876ec4ea3246cc10aab86ff90f52795a29f5b9ac4cb8102d102",
+    "adapters/a1_jax_adapter_v1.py": "625c76469d83b057ab5a82e65d2f4a0e1ea53bb8f4f2d1579883d815c1bbb346",
+    "adapters/jax_adapter.py": "286cfa6df151d8ae3d05a937c0e9ca4545736db2434308da7c0ed02378624831",
+    "adapters/oracle.py": "80dd94c5be77bdf1857c2f22a2c7853eec871f47a1bee7caab2f946311d72bdb",
+    "tools/prepare_data.py": "9c7815c4c3bf647ba46e68ef2b5d96ffefb5721f70535c273246404efb58b276",
+    "environment/jax-lock.txt": "52eb289987704af80b6e59f96b5a91884e48ec71a68d8cfc9c8b68632470e9c3"
+  },
+  "framework_scope": {
+    "spyx": "Actual spyx.nn.LIF(beta=1) and actual spyx.axn.superspike(k=5), explicit drift before cell, zero-forward derivative correction detaches reset.",
+    "brainx_state": "Actual brainstate.HiddenState plus transform.scan/grad/jit. Cell equations are explicitly supplied canonical LIF; no claim to a BrainPy native neuron class.",
+    "no_fallback": "Import/transform/qualification failure is retained as failure. Never replace a requested framework with plain JAX."
+  },
+  "bound_interpreter": "environment/jax/bin/python; sys.prefix must resolve to this exact environment",
+  "fixture_receipt": {
+    "status": "pending",
+    "required_schema": "a1-v4-fixture-receipt-v1",
+    "required_status": "sealed_after_closed_full_audit"
+  },
+  "q0_reference": {},
+  "run_once_policy": "Before any framework execution, the new serial queue exclusively claims each engine/seed, binds its exact output/contract/freeze and the worker exclusively records its first entry. Fresh output paths or changed contract hashes cannot rerun an engine/seed; original v4 ledgers remain untouched."
+}

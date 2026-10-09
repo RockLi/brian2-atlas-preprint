@@ -1,0 +1,26 @@
+{
+  "schema": "remote-small-copy-r4",
+  "created_utc": "2026-10-04T11:57:03.155915+00:00",
+  "scope": "Preparation-only independent ARM64 build entry, frozen source/lock binding and7synthetic controls",
+  "independent_review": "No blocking issue found; future outer owned-process-tree supervision is required; any successful build remains unqualified",
+  "files": {
+    "tools/build_arm64_runtime_r1.py": {
+      "bytes": 11418,
+      "sha256": "930a5bd5366351a66344c9b588e545f537d29335261ecf2e07569be1439752ed"
+    },
+    "evidence/runtime-arm64-preparation-r1/build-contract.json": {
+      "bytes": 5764,
+      "sha256": "6a4add6ba4c1eca58ad8b813b303d47e98db3d5c41c9ea250720a691e04cd1d9"
+    },
+    "evidence/runtime-arm64-preparation-r1/control-tests.json": {
+      "bytes": 224,
+      "sha256": "7158507429700b93f49b4aad6b9467b0a5b2e7022e2729ff0a4a419cf7bcefa0"
+    },
+    "evidence/runtime-arm64-preparation-r1/test_controls.py": {
+      "bytes": 3961,
+      "sha256": "580c0e96244f5fd77854f1ea39bd38403974ee816ffa6a42f0813198568defe8"
+    }
+  },
+  "build_executed": false,
+  "model_executed": false
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "atlas-86m-prospective-protocol-v1",
+  "neurons": 86000000,
+  "connections": 86000000000,
+  "fraction_percent_of_86B": 0.1,
+  "mean_indegree": 1000,
+  "populations": 8,
+  "fractions": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.05,
+    0.05,
+    0.05,
+    0.05
+  ],
+  "projections": 64,
+  "max_projection_connections": 3440000000,
+  "dt_ms": 0.1,
+  "initial_duration_ms": 100,
+  "precision": "reference-f64",
+  "rank_count": 240,
+  "node_count": 30,
+  "ranks_per_host": 8,
+  "cpu_quota_per_host": 8,
+  "memory_gib_per_host": 256,
+  "local_edge_guard_per_rank": 450000000,
+  "runtime_timeout_seconds": 1800,
+  "file_cap_gib": 8,
+  "minimum_free_gib": 128,
+  "source_change": "Only isolated Python/Rust neuron opt-in ceiling 16M->128M; 1M defaults and all semantic/work/array checks retained.",
+  "pilot": {
+    "neurons": 24000,
+    "connections": 24000000,
+    "duration_ms": 100,
+    "ranks": 240,
+    "required": "Exact spikes, states/traces within 1e-12, delivered events equal independent Rust reference; full rank/host coverage and resource exits zero."
+  },
+  "maximum_runs_per_configuration": 1,
+  "automatic_timeout_extension": false,
+  "scientific_scope": "Synthetic E/I capacity test with changed population partition; not original human anatomy, not strong/weak scaling or NEST speed comparison.",
+  "memory_layout_lower_bound": {
+    "connection_array_bytes_assuming_target_u32_weight_f64_delay_usize": 1720000000000,
+    "replicated_csr_bytes": 1320960000000,
+    "bytes_per_node_from_two_components": 101365333333,
+    "scope": "Necessary arrays only; excludes construction temporaries, spike queues, population data, result gathering and allocator overhead. Cgroups remain the admission boundary."
+  }
+}

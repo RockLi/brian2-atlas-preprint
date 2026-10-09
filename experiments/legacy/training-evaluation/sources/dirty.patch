@@ -1,0 +1,1225 @@
+diff --git a/brian2-rust/.gitignore b/brian2-rust/.gitignore
+index 303ff463e..97eda9bb0 100644
+--- a/brian2-rust/.gitignore
++++ b/brian2-rust/.gitignore
+@@ -1,3 +1,5 @@
+ /target
++/target-mpi-training/
++/target-native-training/
+ /output
+ /.cache/
+diff --git a/brian2-rust/Cargo.toml b/brian2-rust/Cargo.toml
+index 3b0684566..65f0c10e3 100644
+--- a/brian2-rust/Cargo.toml
++++ b/brian2-rust/Cargo.toml
+@@ -4,6 +4,7 @@ version = "0.0.1"
+ edition = "2021"
+ publish = false
+ description = "Gate 0 experimental Brian2 reference standalone runner"
++default-run = "b2-runner"
+ license = "CECILL-2.1"
+ 
+ [dependencies]
+@@ -14,5 +15,9 @@ sha2 = "0.10"
+ [lib]
+ crate-type = ["rlib", "cdylib"]
+ 
++[[bin]]
++name = "b2-train"
++path = "src/train_main.rs"
++
+ [target.'cfg(target_arch = "wasm32")'.dependencies]
+ wasm-bindgen = "=0.2.100"
+diff --git a/brian2-rust/MPI.md b/brian2-rust/MPI.md
+index 48b20f9c0..aa169071a 100644
+--- a/brian2-rust/MPI.md
++++ b/brian2-rust/MPI.md
+@@ -8,6 +8,9 @@ B2IR v1 和独立 Rust reference 不变。MPI 是可选运行依赖，普通 CPU
+ [MPI_GPU.md](MPI_GPU.md)；它要求显式 `mixed-f32` 数值模式。本文以下仍描述
+ 默认的 CPU `reference-f64` 契约。
+ 
++2026-10-02 新增显式/binary 连接的 pre/post STDP、分段续跑和边界磁盘恢复，详见
++[MPI_TRAINING.md](MPI_TRAINING.md)。下表已更新；既有性能记录仍属于其原验收版本。
++
+ ## 使用
+ 
+ 安装 MPICH 或 Open MPI，使同一套实现的 `mpicc` 和 `mpiexec` 在 PATH 中；
+@@ -94,14 +97,14 @@ Python launcher 有超时并终止本地进程组；这不提供集群故障恢
+ 
+ | 支持 | 暂不支持，会在规划阶段拒绝 |
+ | --- | --- |
+-| 一个共享 clock，标准 update/threshold/reset 和 pre pathway 槽 | 多 clock、自定义执行槽 |
++| 一个共享 clock，标准 update/threshold/reset 和 pre/post pathway 槽；NeuronGroup after_groups regular guard | 多 clock、其他自定义执行槽 |
+ | bool/f32/f64/i32/i64/u32/u64 神经元状态和参数、固定 refractory | 表达式 refractory |
+ | 静态显式、binary CSR 或 fixed-total recipe；重复边、子组、循环连接 | fixed-indegree procedural |
+-| 非负整数 tick 延迟、多 pre pathway；fixed-total 支持 clipped-normal/uniform 逐边延迟 | binary CSR 逐边延迟、on_post |
+-| 显式/binary 的可变 f64 突触状态、clock-driven update、post `summed`；on_pre 写本地突触或目标状态 | 可变 fixed-total 状态、pre `summed`、非 f64 可变突触状态 |
++| 非负整数 tick 延迟、多 pre/post pathway；fixed-total 支持 clipped-normal/uniform 逐边延迟 | binary CSR 逐边延迟 |
++| 显式/binary 的可变 bool/f32/f64/i32/i64/u32/u64 突触状态、clock/event-driven update、post `summed`；pre/post 写本地突触或目标状态 | 可变 fixed-total 状态、pre `summed`、远端 pre 写入；binary 逐边非 f64 参数 |
+ | on_pre 读取常量/目标状态、全程只读的突触前状态 | 运行中可变突触前状态读取、linked variables |
+ | SpikeGenerator、普通 spike 和 StateMonitor；原 counter RNG | 自定义事件、EventMonitor、用户 Function |
+-| 一次从 tick 0 开始的 activation | 分段续跑、pending 恢复、分布式 checkpoint |
++| 显式/binary 分段续跑、pending 恢复和同配置边界 checkpoint；fixed-total 一次 tick-0 activation | fixed-total 续跑、运行中 rank checkpoint、重新分区恢复 |
+ 
+ 突触前状态只有在所有神经元和突触 CodeObject（含 refractory 隐式写入）都不写入
+ 该状态时才可读取；计划保存 `readonly_pre_states` 证明。FlyWire 的静态
+@@ -180,7 +183,8 @@ Allreduce/Exscan 计算 source-major 全局边身份；有界 Alltoallv 把连
+ 全程只读的突触前状态目前仍复制到各 rank，作为静态读取数据；每个投影还保留
+ 全局 source-offset 索引。StateMonitor 仍采用完整记录布局（非 owner 占位），结束时归并；
+ spike/EventStream 历史只在 rank 0 保存。rank 0 的最终输出缓冲区随记录量增长。
+-因此仍需控制监控规模，也尚未提供分布式 checkpoint 或输出流式归并。
++因此仍需控制监控规模。边界 checkpoint 收集到协调端，并非各 rank 独立快照；
++尚未提供运行中的分散 checkpoint 或输出流式归并。
+ 
+ 每 rank 一个线程；Linux 自动绑核按节点内 rank 选择，尊重进程已有的 CPU 允许集合，
+ 避免所有本地 rank 都绑定第一个核心。`rank_cpu_ids` 记录实际选择，-1 表示未绑核。
+diff --git a/brian2-rust/MPI_GPU.md b/brian2-rust/MPI_GPU.md
+index 360282fb1..f5a843f92 100644
+--- a/brian2-rust/MPI_GPU.md
++++ b/brian2-rust/MPI_GPU.md
+@@ -8,6 +8,10 @@
+ 重置、突触运算、延迟队列、监视器及 MPI 通信仍由该 rank 的 CPU 执行。
+ 这是神经元更新卸载版本，不是全网络 GPU 驻留版本。
+ 
++2026-10-02：同一 rank/设备/数值政策下增加分段 STDP、pending 恢复和边界 checkpoint，
++详见 [MPI_TRAINING.md](MPI_TRAINING.md)。单机原生 Metal surrogate BPTT 的不同执行范围
++见 [NATIVE_TRAINING.md](NATIVE_TRAINING.md)；MPI GPU 更新卸载不包含分布式 BPTT。
++
+ ## 使用
+ 
+ Python 程序只启动一次，Device 自己调用 `mpiexec`：
+diff --git a/brian2-rust/examples/gpu_baseline.py b/brian2-rust/examples/gpu_baseline.py
+index 49a8e6e7b..b6d443136 100644
+--- a/brian2-rust/examples/gpu_baseline.py
++++ b/brian2-rust/examples/gpu_baseline.py
+@@ -49,6 +49,12 @@ def cpu_f32_control(net,duration,output,*,event_delivery="scan",prepared=None):
+     from types import SimpleNamespace
+     from brian2_rust.export import lower_network
+     from brian2_rust.cuda import CudaExecutor,build_cuda_plan
++    # This adapter bypasses Network.run's lifecycle. Align shared Clock
++    # objects to this Network's absolute time before direct lowering, just as
++    # Brian's normal activation does; a previous comparison may have used the
++    # same defaultclock with a different backend.
++    for clock in {obj.clock for obj in net.sorted_objects}:
++        clock.set_interval(net.t,net.t+duration)
+     model=lower_network(net,duration)
+     control=SimpleNamespace(model=model,directory=output/'control',
+         plan=build_cuda_plan(model,numeric_mode='float32',event_delivery=event_delivery))
+diff --git a/brian2-rust/examples/gpu_stdp_compare.py b/brian2-rust/examples/gpu_stdp_compare.py
+index ba7e616a8..e5dc62033 100644
+--- a/brian2-rust/examples/gpu_stdp_compare.py
++++ b/brian2-rust/examples/gpu_stdp_compare.py
+@@ -170,11 +170,15 @@ def brian_run(backend,neurons,degree,steps,output,split=False,*,prepared=None,cp
+     b.get_device().reinit();b.prefs.core.default_float_dtype=np.float64 if backend in {'rust','cpp-f64'} else np.float32
+     if backend in {'rust','cpu-f32','metal','cuda'}:
+         import brian2_rust
++        from brian2.devices.device import all_devices
++        all_devices['rust_standalone'].reinit()
+         options=dict(engine='aot' if backend=='rust' else 'reference',directory=output/'project',
+-            runner=Path(__file__).resolve().parents[1]/'target/release/b2-runner')
++            runner=Path(os.environ.get('B2_RUNNER',Path(__file__).resolve().parents[1]/'target/release/b2-runner')))
+         if backend in {'metal','cuda'}:options.update(engine=backend,numeric_mode='float32',event_delivery='sparse')
+         b.set_device('rust_standalone',**options)
+     elif backend=='cpp-f64':
++        from brian2.devices.device import all_devices
++        all_devices['cpp_standalone'].reinit()
+         if cpp_threads not in (1,2,4):raise ValueError('CPP OpenMP threads must be 1, 2 or 4')
+         import sys
+         if sys.platform=='darwin':
+diff --git a/brian2-rust/python/brian2_rust/__init__.py b/brian2-rust/python/brian2_rust/__init__.py
+index d992ed075..78cb60003 100644
+--- a/brian2-rust/python/brian2_rust/__init__.py
++++ b/brian2-rust/python/brian2_rust/__init__.py
+@@ -64,3 +64,17 @@ def connect_fixed_indegree(synapses, indegree, *, seed=None, initializers=None,
+ 
+ from .wasm import WasmPlan, export_wasm_bundle
+ __all__ += ["WasmPlan", "export_wasm_bundle"]
++
++from .training import NativeLIFTrainer, lif_training_plan
++__all__ += ["NativeLIFTrainer", "lif_training_plan"]
++from .training_graph import dense_training_projection, conv2d_training_projection
++__all__ += ["dense_training_projection", "conv2d_training_projection"]
++
++from .training_equations import compile_training_equation, neuron_parameter_bank
++__all__ += ["compile_training_equation", "neuron_parameter_bank"]
++
++from .training_brian import BrianTrainingBundle, TrainingConversionError, lower_brian_training
++__all__ += ["BrianTrainingBundle", "TrainingConversionError", "lower_brian_training"]
++
++from .training_brian_dynamic import lower_brian_dynamic_training
++__all__ += ["lower_brian_dynamic_training"]
+diff --git a/brian2-rust/python/brian2_rust/device.py b/brian2-rust/python/brian2_rust/device.py
+index 1c0e95556..f223d58a5 100644
+--- a/brian2-rust/python/brian2_rust/device.py
++++ b/brian2-rust/python/brian2_rust/device.py
+@@ -59,6 +59,7 @@ def _read_checkpoint(path):
+     """Read a checksummed checkpoint or an earlier plain state dictionary."""
+     with Path(path).open("rb") as stream:
+         stored = pickle.load(stream)
++        require(not stream.read(1), "Rust checkpoint has trailing data")
+     if isinstance(stored, dict) and "_rust_checkpoint_format" in stored:
+         require(stored["_rust_checkpoint_format"] == 1 and
+                 set(stored) == {"_rust_checkpoint_format", "payload", "sha256"},
+@@ -147,6 +148,7 @@ def __init__(self):
+         self._pending_layouts = {}
+         self._procedural_synapses = WeakKeyDictionary()
+         self._binary_continuation_contracts = {}
++        self._mpi_continuation_contract = None
+         self._queued_network = None
+         self._queued_model = None
+         self._queued_segments = []
+@@ -517,12 +519,17 @@ def set_random_state(self, state):
+     def network_store(self, network, name="default", filename=None):
+         """Store Brian state plus delayed-event continuation metadata."""
+         require(type(name) is str and name, "checkpoint name must be non-empty")
++        mpi_contract = self._mpi_checkpoint_contract(network)
++        if self._mpi_continuation_contract is not None and self._network_id == network.id:
++            from .mpi_checkpoint import verify
++            verify(self._mpi_continuation_contract, mpi_contract or {})
+         Network.store.original_function(network, name=name, filename=None)
+         state = network._stored_state[name]
+         state["_rust_device_state"] = {
+             "pending_events": copy.deepcopy(self._pending_events),
+             "pending_layouts": copy.deepcopy(self._pending_layouts),
+             "binary_contracts": copy.deepcopy(self._binary_continuation_contracts),
++            "mpi_contract": mpi_contract,
+         }
+         if filename is not None:
+             path = Path(filename)
+@@ -545,6 +552,10 @@ def network_restore(self, network, name="default", filename=None,
+         require("_rust_device_state" in state,
+                 "checkpoint does not contain Rust Device continuation state")
+         device_state = copy.deepcopy(state["_rust_device_state"])
++        current_contract = self._mpi_checkpoint_contract(network)
++        if current_contract is not None or device_state.get('mpi_contract') is not None:
++            from .mpi_checkpoint import verify
++            verify(device_state.get('mpi_contract'), current_contract or {})
+         restored = {key: value for key, value in state.items()
+                     if key != "_rust_device_state"}
+         temporary = f"__rust_restore_{id(restored)}"
+@@ -566,11 +577,20 @@ def network_restore(self, network, name="default", filename=None,
+         self._pending_events = device_state["pending_events"]
+         self._pending_layouts = device_state["pending_layouts"]
+         self._binary_continuation_contracts = device_state.get("binary_contracts", {})
++        self._mpi_continuation_contract = device_state.get('mpi_contract')
+         if not restore_random_state:
+             # Brian's contract requires a fresh stream when RNG restoration is
+             # not requested. Counter draws remain worker-count independent.
+             self._rng_seed = int.from_bytes(os.urandom(8), "little")
+ 
++    def _mpi_checkpoint_contract(self, network):
++        if self.build_options.get('engine') != 'mpi':
++            return None
++        from .mpi_checkpoint import contract
++        with packed_export():
++            model = lower_network(network, 0 * second, rng_seed=self._rng_seed)
++        return contract(model, self.build_options, self._runner())
++
+     @staticmethod
+     def _connection_expression(expression, synapses, sources, targets,
+                                source_count, target_count, namespace,
+@@ -1281,6 +1301,7 @@ def _prepare_network_identity(self, network):
+         self._pending_events = {}
+         self._pending_layouts = {}
+         self._binary_continuation_contracts = {}
++        self._mpi_continuation_contract = None
+         for clock in {obj.clock for obj in network.sorted_objects}:
+             clock.set_interval(network.t, network.t)
+ 
+@@ -2072,6 +2093,8 @@ def _execute_model(self, network, model, objects, advance_clock, profile=False,
+                         "binary CSR changed after attachment")
+         runner = self._runner()
+         engine = self.build_options.get("engine", "reference")
++        require(self._mpi_continuation_contract is None or engine == 'mpi',
++                'MPI checkpoint configuration mismatch: engine')
+         has_synapse_endpoints = any(
+             synapse.get("source_synapse") is not None or
+             synapse.get("target_synapse") is not None
+@@ -2079,12 +2102,17 @@ def _execute_model(self, network, model, objects, advance_clock, profile=False,
+         require(not has_synapse_endpoints or engine == "reference",
+                 "Synapses edge endpoints currently require engine='reference'")
+         distributed_plan = None
++        mpi_contract = None
+         if engine == "mpi":
+             from .distributed import build_distributed_plan
+             distributed_plan = build_distributed_plan(
+                 model, ranks=self.build_options.get("ranks", 2), runner=runner,
+                 rank_backends=self.build_options.get("rank_backends"),
+                 numeric_mode=self.build_options.get("numeric_mode", "reference-f64"))
++            from .mpi_checkpoint import contract, verify
++            mpi_contract = contract(model, self.build_options, runner)
++            if self._mpi_continuation_contract is not None:
++                verify(self._mpi_continuation_contract, mpi_contract)
+         has_spatial = any(
+             population.get("spatial") is not None
+             for population in model["definition"]["populations"])
+@@ -2192,6 +2220,7 @@ def _execute_model(self, network, model, objects, advance_clock, profile=False,
+         self._network_id = network.id
+         self._pending_events = next_pending
+         self._pending_layouts = next_layouts
++        self._mpi_continuation_contract = mpi_contract
+         self._run_count += 1
+         self.last_run_directory = directory
+         if (not self.build_options.get("retain_run_artifacts", True) and
+diff --git a/brian2-rust/python/brian2_rust/distributed.py b/brian2-rust/python/brian2_rust/distributed.py
+index 4a45256a4..60fecb2aa 100644
+--- a/brian2-rust/python/brian2_rust/distributed.py
++++ b/brian2-rust/python/brian2_rust/distributed.py
+@@ -188,8 +188,6 @@ def require(condition, reason):
+             raise PlanValidationError(f"MPI v1: {reason}")
+ 
+     require(len(d["clocks"]) == 1, "only one shared clock is supported")
+-    require(all(c["start_tick"] == 0 for c in model["run"]["clocks"]),
+-            "only a fresh activation is supported; continuation requires a later backend")
+     require(not d["functions"], "portable/native Functions are not yet supported")
+     pops = d["populations"]
+     owners = tuple([None] * len(pops) if population_owners is None else population_owners)
+@@ -219,7 +217,8 @@ def require(condition, reason):
+         for code in p["code_objects"]:
+             expected = {"state_update": "groups", "threshold": "thresholds", "reset": "resets",
+                         "run_regularly": "synapses", "poisson_input": "synapses"}
+-            require(code["kind"] in expected and code["when"] == expected[code["kind"]],
++            require(code["kind"] in expected and (code["when"] == expected[code["kind"]] or
++                    code['kind'] == 'run_regularly' and code['when'] == 'after_groups'),
+                     "population code must use a supported canonical slot")
+     incoming = [[0] * len(d["synapses"]) for _ in range(ranks)]
+     route_counts = {}
+@@ -229,16 +228,24 @@ def require(condition, reason):
+         topology = values["topology"]
+         require(topology["kind"] in {"explicit", "binary_csr", "fixed_total"},
+                 "topology must be explicit, binary CSR or fixed_total")
+-        require(all(s["dtype"] == "f64" for s in syn["states"]),
+-                "synapse state storage must be f64")
+-        require(all(s["dtype"] == "f64" for s in syn["parameters"]), "synapse parameters must be f64")
+-        allowed = {"synapses": "synapses", "synapse_state_update": "groups",
++        require(all(s["dtype"] in {"bool", "f32", "f64", "i32", "i64", "u32", "u64"}
++                    for s in syn["states"] + syn["parameters"]), "synapse storage dtype is unsupported")
++        require(not {'live', 'born', 'active_after'} <= {s['name'] for s in syn['states']} or
++                any(path['kind'] == 'pre' for path in values['pathways']),
++                'bounded structural generation fields require a pre pathway')
++        allowed = {"synapses": "synapses", "synapses_post": "synapses", "synapse_state_update": "groups",
+                    "summed_variable": "groups"}
+         require(all(c["kind"] in allowed and c["when"] == allowed[c["kind"]]
+                     for c in syn["code_objects"]),
+-                "only standard on_pre, clock-driven state update and postsynaptic summed code are supported")
++                "only standard pre/post, clock-driven state update and postsynaptic summed code are supported")
+         require(not syn["states"] or topology["kind"] != "fixed_total",
+                 "mutable fixed_total synapses require distributed initializer support")
++        require(topology['kind'] != 'fixed_total' or all(c['start_tick'] == 0 for c in model['run']['clocks']),
++                'procedural fixed-total supports only a fresh activation')
++        require(topology['kind'] != 'fixed_total' or all(s['dtype'] == 'f64' for s in syn['parameters']),
++                'procedural synapse parameters must be f64')
++        require(topology['kind'] != 'binary_csr' or all(s['dtype'] == 'f64' for s in syn['parameters'] if s['index_domain'] != 'scalar'),
++                'binary CSR columns require f64 parameters')
+         for code in syn["code_objects"]:
+             for alias in set(code["effects"]["reads"]) & set(syn["pre_state_aliases"]):
+                 state = syn["pre_state_aliases"][alias]
+@@ -248,7 +255,7 @@ def require(condition, reason):
+                 readonly_pre_states.add((source, state))
+             writes = set(code["effects"]["writes"])
+             synapse_states = {state["name"] for state in syn["states"]}
+-            if code["kind"] == "synapses":
++            if code["kind"] in {"synapses", "synapses_post"}:
+                 require(writes <= synapse_states | set(syn["post_state_aliases"]),
+                         "on_pre may only write local synapse or target-neuron state")
+             elif code["kind"] == "synapse_state_update":
+@@ -259,8 +266,8 @@ def require(condition, reason):
+                         "only postsynaptic summed variables are target-owned without a cross-rank reduction")
+                 require(not writes, "summed-variable code must write only its declared reduction target")
+         for path in values["pathways"]:
+-            require(path["kind"] == "pre" and path["event"] == "spike", "only pre spike pathways are supported")
+-            require(not path["pending"], "pending events require continuation support")
++            require(path["kind"] in {"pre", "post"} and path["event"] == "spike", "only pre/post spike pathways are supported")
++            require(not path["pending"] or topology["kind"] != "fixed_total", "procedural pending events are unsupported")
+             require(all(delay >= 0 for delay in path["delay_ticks"]), "synaptic delays must be nonnegative integer ticks")
+         if topology["kind"] == "fixed_total":
+             procedural.append(q)
+diff --git a/brian2-rust/python/brian2_rust/mpi_codegen.py b/brian2-rust/python/brian2_rust/mpi_codegen.py
+index caf4f3725..08c99b9e6 100644
+--- a/brian2-rust/python/brian2_rust/mpi_codegen.py
++++ b/brian2-rust/python/brian2_rust/mpi_codegen.py
+@@ -124,14 +124,13 @@
+     fn collect_u64(&self, values: Vec<u64>, total: usize, population: usize) -> Result<Vec<u64>> {
+         self.collect_bits(&values, total, population)
+     }
+-    fn collect_indexed_f64(&self, ids: &[usize], values: Vec<f64>, total: usize) -> Result<Vec<f64>> {
+-        check(ids.len() == values.len(), "indexed MPI result length mismatch")?;
++    fn collect_indexed_bits(&self, ids: &[usize], bits: Vec<u64>, total: usize) -> Result<Vec<u64>> {
++        check(ids.len() == bits.len(), "indexed MPI result length mismatch")?;
+         let ids: Vec<u64> = ids.iter().copied().map(u64::try_from).collect::<std::result::Result<_,_>>()?;
+-        let bits: Vec<u64> = values.into_iter().map(f64::to_bits).collect();
+         let mut result = vec![0; if self.rank == 0 { total } else { 0 }];
+         mpi_check(unsafe { b2mpi_collect_indexed(ids.as_ptr(), bits.as_ptr(),
+             i32::try_from(bits.len())?, result.as_mut_ptr(), i32::try_from(total)?) })?;
+-        Ok(result.into_iter().map(f64::from_bits).collect())
++        Ok(result)
+     }
+     fn merge_f64(&self, values: &mut [f64], owner: impl Fn(usize) -> bool) -> Result<()> {
+         let mut bits: Vec<u64> = values.iter().enumerate().map(|(i,v)| if owner(i) { v.to_bits() } else { 0 }).collect();
+@@ -314,9 +313,16 @@ def collect_results(model, plan):
+                                                model["instance"]["synapses"], strict=True)):
+         if synapse["states"]:
+             total = values["topology"].get("edge_count", len(values.get("source", ())))
+-            for i, _state in enumerate(synapse["states"]):
+-                lines.append(f"    let s{q}_state_{i} = mpi.collect_indexed_f64(&s{q}_original_edges, s{q}_state_{i}, {total})?;")
+-    delivered = usize_sum(f"s{q}_delivered" for q in range(len(model["definition"]["synapses"]))) or "0usize"
++            for i, state in enumerate(synapse["states"]):
++                dtype = state['dtype']
++                to_bits = {'f64': 'v.to_bits()', 'f32': 'v.to_bits() as u64',
++                           'i32': 'v as u32 as u64'}.get(dtype, 'v as u64')
++                from_bits = {'f64': 'f64::from_bits(v)', 'f32': 'f32::from_bits(v as u32)',
++                             'bool': 'v as u8'}.get(dtype, f'v as {dtype}')
++                lines.append(f"    let s{q}_state_{i} = mpi.collect_indexed_bits(&s{q}_original_edges, s{q}_state_{i}.into_iter().map(|v| {to_bits}).collect(), {total})?.into_iter().map(|v| {from_bits}).collect::<Vec<_>>();")
++    delivered = usize_sum(f"s{q}_delivered + s{q}_post_delivered" if any(
++        path['kind'] == 'post' for path in model['instance']['synapses'][q]['pathways']) else f's{q}_delivered'
++        for q in range(len(model["definition"]["synapses"]))) or "0usize"
+     owned = [sum(end-start for start, end in shard.population_ranges) for shard in plan.shards]
+     lines += [f"    let owned: [u64; {plan.ranks}] = {owned!r};",
+               f"    let rank_work = mpi.gather(&[owned[mpi.rank], mpi.emitted.get() as u64, ({delivered}) as u64])?;",
+@@ -333,6 +339,8 @@ def collect_results(model, plan):
+               '    let rank_queue_capacity_bytes = mpi.gather(&[u64::try_from(queue_capacity_bytes)?])?;']
+     for q in range(len(model["definition"]["synapses"])):
+         lines.append(f"    s{q}_delivered = mpi.sum(s{q}_delivered)?;")
++        if any(path['kind'] == 'post' for path in model['instance']['synapses'][q]['pathways']):
++            lines.append(f"    s{q}_post_delivered = mpi.sum(s{q}_post_delivered)?;")
+     lines.append('    let mut topology_report = String::from("[");')
+     for position, q in enumerate(plan.procedural_projections):
+         edge_count = model["instance"]["synapses"][q]["topology"]["edge_count"]
+diff --git a/brian2-rust/python/brian2_rust/mpi_partition.py b/brian2-rust/python/brian2_rust/mpi_partition.py
+index c5ee5d9d2..0ed4f0ebd 100644
+--- a/brian2-rust/python/brian2_rust/mpi_partition.py
++++ b/brian2-rust/python/brian2_rust/mpi_partition.py
+@@ -139,7 +139,8 @@ def slices():
+                 integers([local]); integers(counts)
+                 for _, target in slices():
+                     integers(target, '<u4')
+-                needs_original_edges = random_edges(synapse) or bool(synapse['states'])
++                needs_original_edges = random_edges(synapse) or bool(synapse['states']) or any(path['kind'] == 'post' for path in state['pathways']) or any(
++                    path['pending'] and len(set(path['delay_ticks'])) != 1 for path in state['pathways'])
+                 if needs_original_edges:
+                     for ids, _ in slices():
+                         integers(ids)
+@@ -166,9 +167,22 @@ def slices():
+                     else:
+                         for ids, _ in slices():
+                             integers([delays[int(i)] for i in ids])
+-                    if pathway['pending']:
+-                        raise ValueError('MPI continuation is unsupported')
+-                    integers([0])
++                    # Endpoint batches are expanded through this rank's CSR.
++                    # Per-edge pending items must instead be mapped from the
++                    # stable global creation identity to compact local storage.
++                    pending = pathway['pending']
++                    if not uniform:
++                        local_map = {int(edge): local for local, edge in enumerate(
++                            edge for ids, _ in slices() for edge in ids)}
++                        pending = [dict(event, item=local_map[event['item']])
++                                   for event in pending if event['item'] in local_map]
++                    integers([len(pending)])
++                    integers([event['delivery_tick'] for event in pending])
++                    integers([event['item'] for event in pending])
++            integers([clock['start_tick'] for clock in model['run']['clocks']])
++            import struct
++            from .native import _number
++            out.write(struct.pack('<d', _number(model['run']['start']) + _number(model['run']['duration'])))
+         hashes[path.name] = file_hash(path)
+     # The CLI argument remains an immutable index. Each process opens its own
+     # shard, even when all files are available on a shared filesystem.
+@@ -207,13 +221,17 @@ def synapse_loading(model, q, plan):
+              f'    check({s}offsets[0] == 0 && {s}offsets[{n}] == {s}local_edge_count && {s}offsets.windows(2).all(|w| w[0]<=w[1]), "invalid rank CSR")?;',
+              f'    let {s}target_index = data.u32_vec({s}local_edge_count)?;',
+              f'    check({s}target_index.iter().all(|&i| (i as usize) < {syn["target_count"]} && mpi.owns(i as usize+{syn["target_start"]}, {model["definition"]["populations"][syn["target_population"]]["count"]}, {syn["target_population"]})), "non-owned rank edge")?;']
+-    if random_edges(syn) or syn['states']:
++    if random_edges(syn) or syn['states'] or any(path['kind'] == 'post' for path in values['pathways']) or any(
++            path['pending'] and len(set(path['delay_ticks'])) != 1 for path in values['pathways']):
+         lines += [f'    let {s}original_edges = data.usize_vec({s}local_edge_count)?;',
+                   f'    check({s}original_edges.iter().all(|&e| e < {s}edge_count), "invalid global edge identity")?;']
+     for i, symbol in enumerate(syn['states']):
+-        lines.append(f'    let mut {s}state_{i} = data.f64_vec({s}local_edge_count)?;')
++        from .native import _rust_dtype
++        lines.append(f'    let mut {s}state_{i} = data.{_rust_dtype(symbol)}_vec({s}local_edge_count)?;')
+     for i, symbol in enumerate(syn['parameters']):
+-        read = 'data.f64()?' if symbol['index_domain'] == 'scalar' else f'data.f64_vec({s}local_edge_count)?'
++        from .native import _rust_dtype
++        dtype = _rust_dtype(symbol)
++        read = f'data.{dtype}()?' if symbol['index_domain'] == 'scalar' else f'data.{dtype}_vec({s}local_edge_count)?'
+         lines.append(f'    let {s}parameter_{i} = {read};')
+     for r, path in enumerate(values['pathways']):
+         prefix = s if r == 0 else f's{q}p{r}_'
+@@ -222,14 +240,16 @@ def synapse_loading(model, q, plan):
+         count = '1' if uniform else f'{s}local_edge_count'
+         lines += [f'    let {prefix}delay_values = data.usize_vec({count})?;',
+                   f'    let {prefix}pending_count = data.usize()?;',
+-                  f'    check({prefix}pending_count == 0, "MPI pending events unsupported")?;',
+-                  f'    let {prefix}pending_ticks: Vec<usize> = Vec::new();',
+-                  f'    let {prefix}pending_items: Vec<usize> = Vec::new();']
++                  f'    let {prefix}pending_ticks = data.usize_vec({prefix}pending_count)?;',
++                  f'    let {prefix}pending_items = data.usize_vec({prefix}pending_count)?;']
+         if uniform:
+             lines += [f'    check({prefix}delay_values[0] == {delays[0]}, "delay mismatch")?;',
+                       f'    let {prefix}delay_ticks = {delays[0]}usize;']
+         else:
+             lines.append(f'    let {prefix}delay_ticks = {prefix}delay_values;')
++    if any(path['kind'] == 'post' for path in values['pathways']):
++        lines.append(f'    let ({s}target_offsets, mut {s}target_edges) = source_csr_u32(&{s}target_index, {syn["target_count"]});')
++        lines.append(f'    for target in 0..{syn["target_count"]} {{ {s}target_edges[{s}target_offsets[target]..{s}target_offsets[target+1]].sort_unstable_by_key(|&edge| {s}original_edges[edge as usize]); }}')
+     lines += [f'    let mut {s}delivered = 0usize;', f'    let mut {s}post_delivered = 0usize;']
+     return lines
+ 
+diff --git a/brian2-rust/python/brian2_rust/mpi_queue_compact.py b/brian2-rust/python/brian2_rust/mpi_queue_compact.py
+index 363c158e0..d7d653001 100644
+--- a/brian2-rust/python/brian2_rust/mpi_queue_compact.py
++++ b/brian2-rust/python/brian2_rust/mpi_queue_compact.py
+@@ -67,5 +67,9 @@ def compact_queue_source(model, source):
+     source = _once(source,
+         'queue_capacity_items.checked_mul(std::mem::size_of::<usize>())',
+         'queue_capacity_items.checked_mul(std::mem::size_of::<u32>())')
++    # Restored pending items enter the same checked source/local-edge domain
++    # as the shared additive kernel's ordinary enqueue operation.
++    source = re.sub(r'((?:plan_s\d+p\d+_queue|mpi_pathway_queues\[\d+\])\[slot\]\.push\()(item|edge)(\);)',
++                    r'\1\2 as u32\3', source)
+     return source, {'compacted': True, 'index_bits': 32, 'pathways': count,
+                     'overflow_policy': 'reject-before-narrowing', 'fifo_order': 'unchanged'}
+diff --git a/brian2-rust/python/brian2_rust/slot_codegen.py b/brian2-rust/python/brian2_rust/slot_codegen.py
+index d22c5b5b6..f85b809dc 100644
+--- a/brian2-rust/python/brian2_rust/slot_codegen.py
++++ b/brian2-rust/python/brian2_rust/slot_codegen.py
+@@ -20,15 +20,21 @@ def initialize_queues(model, *, distributed=False):
+             p = definition[f"{endpoint}_population"]
+             steps = model["definition"]["populations"][p]["steps"]
+             lines += [f"    let mut {queue}: Vec<Vec<usize>> = vec![Vec::new(); (({maximum})+1).min({steps}usize.max(1))];"]
+-            if distributed:
++            if distributed and instance['topology']['kind'] == 'fixed_total':
++                # Procedural v1 has no pending arrays or continuation contract.
++                continue
++            if distributed and not pathway['pending']:
+                 continue
+             lines += [
+                       f"    for (&delivery, &item) in {prefix}pending_ticks.iter().zip(&{prefix}pending_items) {{",
+                       f"        let slot = delivery % {queue}.len();"]
+             if uniform:
+-                lines += _edges_for_endpoint(model, q, endpoint, "item", indent="        ")
+-                lines.append(f"            {queue}[slot].push(edge);")
+-                lines.append("        }")
++                if distributed and endpoint == "source":
++                    lines.append(f"        if s{q}_local_edge_count != 0 && s{q}_offsets[item] != s{q}_offsets[item+1] {{ {queue}[slot].push(item); }}")
++                else:
++                    lines += _edges_for_endpoint(model, q, endpoint, "item", indent="        ", distributed=distributed)
++                    lines.append(f"            {queue}[slot].push(edge);")
++                    lines.append("        }")
+             else:
+                 lines.append(f"        {queue}[slot].push(item);")
+             lines.append("    }")
+@@ -630,6 +636,19 @@ def producer(node):
+                 if distributed:
+                     # Storage is compact; counter RNG still uses the original edge ID.
+                     vector = [line.replace("edge as u64", f"s{q}_original_edges[edge] as u64") for line in vector]
++                    # Next Brain's bounded-candidate contract: active_after is
++                    # birth time plus the pre delay. A previous generation's
++                    # delayed emission must never update a newly born edge,
++                    # including its automatically lowered event-driven traces.
++                    state_positions = {s['name']: i for i, s in enumerate(synapse['states'])}
++                    if {'live', 'born', 'active_after'} <= state_positions.keys():
++                        pre_r, pre_path = next((k, path) for k, path in enumerate(instance['pathways']) if path['kind'] == 'pre')
++                        pre_prefix = f's{q}_' if pre_r == 0 else f's{q}p{pre_r}_'
++                        pre_uniform = len(set(pre_path['delay_ticks'])) == 1
++                        pre_delay = f'{pre_prefix}delay_ticks' if pre_uniform else f'{pre_prefix}delay_ticks[edge]'
++                        active = f's{q}_state_{state_positions["active_after"]}[edge]'
++                        append([f'let birth_tick = (({active} / p{p}_dt).round() as usize).saturating_sub({pre_delay});',
++                                f'if p{p}_tick.saturating_sub({delay}) < birth_tick {{ continue; }}'])
+                 append(vector)
+                 append(_synapse_writes(model, q, code, symbols))
+                 counter = "delivered" if pathway["kind"] == "pre" else "post_delivered"
+diff --git a/brian2-rust/src/lib.rs b/brian2-rust/src/lib.rs
+index ecd3f46e0..063d461cf 100644
+--- a/brian2-rust/src/lib.rs
++++ b/brian2-rust/src/lib.rs
+@@ -7,6 +7,7 @@ mod executor;
+ mod gpu_initialization;
+ mod resource_limits;
+ pub mod large_topology;
++pub mod training;
+ #[cfg(target_arch = "wasm32")]
+ mod wasm;
+ mod wasm_plan;
+diff --git a/brian2-rust/src/model.rs b/brian2-rust/src/model.rs
+index 10c22bcee..9d12be5dc 100644
+--- a/brian2-rust/src/model.rs
++++ b/brian2-rust/src/model.rs
+@@ -1256,7 +1256,8 @@ impl Expr {
+                 check(
+                     (*dtype == DType::F64 || dtype.is_integer())
+                         && (matches!(source, DType::Bool | DType::F32 | DType::F64)
+-                            || source.is_integer()),
++                            || source.is_integer()
++                            || matches!(source, DType::Index | DType::Tick)),
+                     "invalid numeric cast",
+                 )?;
+                 Ok(*dtype)
+@@ -4775,6 +4776,29 @@ fn verify_protocol(value: &serde_json::Value) -> Result<()> {
+ mod tests {
+     use super::*;
+ 
++    #[test]
++    fn explicit_integer_cast_accepts_tick_and_index_domains() {
++        let symbols = BTreeMap::from([
++            ("tick".to_string(), DType::Tick),
++            ("index".to_string(), DType::Index),
++        ]);
++        let functions = BTreeMap::new();
++        for name in ["tick", "index"] {
++            let expression = Expr::Cast {
++                dtype: DType::I64,
++                arg: Box::new(Expr::Load {
++                    name: name.to_string(),
++                }),
++            };
++            assert!(
++                expression
++                    .infer(&symbols, &mut BTreeSet::new(), &functions)
++                    .unwrap()
++                    == DType::I64
++            );
++        }
++    }
++
+     #[test]
+     fn complete_refractory_effects_only_after_validating_frozen_wire_graph() {
+         let value: serde_json::Value =
+diff --git a/brian2-rust/tests/test_execution_plan.py b/brian2-rust/tests/test_execution_plan.py
+index be8f3c56f..c8d7594a0 100644
+--- a/brian2-rust/tests/test_execution_plan.py
++++ b/brian2-rust/tests/test_execution_plan.py
+@@ -12,6 +12,7 @@
+ sys.path.insert(0, str(ROOT / "python"))
+ from brian2_rust.plan import (build_execution_plan, explain_plan, PlanValidationError,
+                              verify_execution_plan)
++from brian2_rust import planner
+ from brian2_rust.native import generate_source, write_project
+ from brian2_rust.protocol import attach_protocol, canonical_bytes
+ 
+@@ -101,3 +102,31 @@ def test_artifact_policy_drift_rejected_even_if_source_unchanged(model, tmp_path
+     with pytest.raises(ArtifactCompatibilityError, match="plan policy"):
+         write_compatible_instance(model, tmp_path/"native", destination)
+     assert not destination.exists()
++
++
++def test_slot_plan_skips_synapses_without_event_routes(monkeypatch):
++    """Pure state/summed synapses do not have a pre/post event route."""
++    monkeypatch.setattr(
++        planner,
++        "general_cpu_choices",
++        lambda _model: {
++            "synapse_routes": {0: 0, 2: 0},
++            "route_keys": [("population/0/event/spike", 0)],
++        },
++    )
++    slot_model = {
++        "definition": {
++            "populations": [{}],
++            "synapses": [{}, {}, {}],
++        }
++    }
++
++    choices = planner.slot_cpu_choices(slot_model)
++
++    assert choices["route_keys"] == [
++        ("population/0/event/spike", 0),
++        ("population/0/event/spike", 0),
++    ]
++    assert choices["route_members"] == [[0], [2]]
++    assert choices["synapse_routes"] == {0: 0, 2: 1}
++    assert 1 not in choices["synapse_routes"]
+diff --git a/brian2-rust/tests/test_mpi.py b/brian2-rust/tests/test_mpi.py
+index 6bf0937b6..d016f5030 100644
+--- a/brian2-rust/tests/test_mpi.py
++++ b/brian2-rust/tests/test_mpi.py
+@@ -249,7 +249,7 @@ def test_stateful_postsummed_plan_and_source(device, tmp_path):
+     assert sum(shard.incoming_edges[0] for shard in plan.shards) == 7
+     source = (tmp_path / "mpi/main.rs").read_text()
+     assert "for edge in 0..s0_local_edge_count" in source
+-    assert "collect_indexed_f64(&s0_original_edges" in source
++    assert "collect_indexed_bits(&s0_original_edges" in source
+     assert "for target_state in 0.max(p1_start)..4.min(p1_stop)" in source
+     assert "rank_peak_rss_bytes" in source
+     summed = source.split("// canonical node synapse/0/code/0", 1)[1].split(
+@@ -418,7 +418,7 @@ def test_mpi_wrong_world_and_one_rank_input_failure_abort(device, tmp_path):
+ 
+ 
+ @real_mpi
+-def test_device_mpi_results_and_continuation_gate(device, tmp_path):
++def test_device_mpi_results_and_continuation(device, tmp_path):
+     b.set_device("rust_standalone", engine="mpi", ranks=4, directory=tmp_path / "device", runner=RUNNER)
+     clock = b.Clock(dt=b.second/1024)
+     pop = b.NeuronGroup(5, "dv/dt=512*Hz:1", threshold="v>1", reset="v=rand()", clock=clock, method="euler")
+@@ -437,9 +437,9 @@ def test_device_mpi_results_and_continuation_gate(device, tmp_path):
+     report = device.explain_plan(format="dict")
+     assert report["runtime_binding"]["backend"] == "mpi"
+     assert report["runtime_binding"]["observed"]["ranks"] == 4
+-    with pytest.raises(PlanValidationError, match="fresh activation"):
+-        net.run(clock.dt)
+-    assert not (tmp_path / "device/run-0002").exists()
++    net.run(clock.dt)
++    assert net.t == 10 * clock.dt
++    assert (tmp_path / "device/run-0002").exists()
+ 
+ 
+ def test_reject_cross_population_clock_and_functions(device):
+diff --git a/brian2-rust/tests/test_mpi_queue_compact.py b/brian2-rust/tests/test_mpi_queue_compact.py
+index 422e38939..9064aa003 100644
+--- a/brian2-rust/tests/test_mpi_queue_compact.py
++++ b/brian2-rust/tests/test_mpi_queue_compact.py
+@@ -5,16 +5,47 @@
+ import shutil
+ import subprocess
+ 
++import brian2 as b
+ import pytest
+ 
+ from brian2_rust.distributed import write_mpi_project, compile_mpi_project, run_mpi_project
+ from brian2_rust.mpi_queue_compact import compact_additive_kernel, compact_queue_source
+-from test_mpi import device as device, real_mpi, RUNNER, network_model
++from test_mpi import device as device, real_mpi, RUNNER
++from brian2_rust.export import lower_network
++from brian2_rust.protocol import attach_protocol
+ from test_mpi_prebuild import model_and_owners
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ 
+ 
++@real_mpi
++@pytest.mark.usefixtures('device')
++@pytest.mark.parametrize('uniform', [False, True])
++def test_narrow_restored_pending_matches_reference(tmp_path, uniform):
++    clock = b.Clock(dt=b.ms)
++    source = b.NeuronGroup(5, 'x:1', threshold='True', reset='x=0', clock=clock)
++    target = b.NeuronGroup(7, 'x:1', clock=clock)
++    synapses = b.Synapses(source, target, 'w:1 (constant)', on_pre='x_post+=w', clock=clock)
++    synapses.connect(i=[4,0,2,0], j=[1,6,3,6])
++    synapses.w = [0.5,-0.25,0.125,0.75]
++    synapses.delay = (3 if uniform else [1,3,2,4])*clock.dt
++    model = lower_network(b.Network(source,target,synapses), 17*clock.dt)
++    for syn in model['instance']['synapses']:
++        path = syn['pathways'][0]
++        # B2IR admits only arrivals in this activation; Device keeps later
++        # events in its continuation state for future segments.
++        path['pending'] = [dict(delivery_tick=2, item=0), dict(delivery_tick=6, item=1)]
++    attach_protocol(model)
++    write_mpi_project(model, tmp_path/'mpi', ranks=2, compact_queue_indices=True)
++    compile_mpi_project(tmp_path/'mpi', opt_level=0)
++    run_mpi_project(tmp_path/'mpi', tmp_path/'observed')
++    (tmp_path/'model.json').write_text(json.dumps(model))
++    subprocess.run([str(RUNNER),str(tmp_path/'model.json'),str(tmp_path/'reference')],
++                   check=True,capture_output=True,timeout=30)
++    for name in ('results.bin','events.bin'):
++        assert (tmp_path/'observed'/name).read_bytes()==(tmp_path/'reference'/name).read_bytes()
++
++
+ @pytest.mark.parametrize('checked', [False, True])
+ def test_narrow_kernel_matches_wide_fifo_and_state_bits(tmp_path, checked):
+     rustc = shutil.which('rustc')
+diff --git a/brian2-rust/tests/test_mpi_teleport_launch.py b/brian2-rust/tests/test_mpi_teleport_launch.py
+index 04caf3a24..5f234cf1f 100644
+--- a/brian2-rust/tests/test_mpi_teleport_launch.py
++++ b/brian2-rust/tests/test_mpi_teleport_launch.py
+@@ -54,6 +54,39 @@ def test_explicit_root_storage_keeps_path_validation():
+     assert not module.guard_paths_valid('/', '/', '/atlas-home/0003/mam/guard.py', allow_root=True)
+ 
+ 
++def test_runtime_environment_reaches_guarded_controller(tmp_path, monkeypatch):
++    class CapturedCommand(Exception):
++        pass
++    def capture(command, **kwargs):
++        args = __import__('shlex').split(command[-1])
++        assert 'ASAN_OPTIONS=detect_leaks=0:abort_on_error=1' in args
++        assert 'UBSAN_OPTIONS=halt_on_error=1:print_stacktrace=1' in args
++        raise CapturedCommand
++    monkeypatch.setattr(module.subprocess, 'Popen', capture)
++    with pytest.raises(CapturedCommand):
++        module.launch(nodes=['node'], ips=['192.168.0.1'], ranks_per_node=1,
++                      remote_base='/atlas-home/0003/mam', application=['/bin/true'],
++                      output=tmp_path/'run', login='root',
++                      guard_script='/atlas-home/0003/mam/guard.py', guard_volume='/',
++                      guard_allow_root_volume=True,
++                      runtime_environment={
++                          'UBSAN_OPTIONS': 'halt_on_error=1:print_stacktrace=1',
++                          'ASAN_OPTIONS': 'detect_leaks=0:abort_on_error=1'})
++
++
++@pytest.mark.parametrize('environment', [
++    [], {'BAD-NAME': 'x'}, {'1BAD': 'x'}, {'GOOD': 1}, {'GOOD': 'bad\0value'}])
++def test_invalid_runtime_environment_never_launches(tmp_path, monkeypatch, environment):
++    def unexpected(*args, **kwargs):
++        pytest.fail('invalid runtime environment reached subprocess')
++    monkeypatch.setattr(module.subprocess, 'Popen', unexpected)
++    with pytest.raises(ValueError, match='runtime environment'):
++        module.launch(nodes=['node'], ips=['192.168.0.1'], ranks_per_node=1,
++                      remote_base='/atlas-home/0003/mam', application=['/bin/true'],
++                      output=tmp_path/'run', runtime_environment=environment)
++    assert not (tmp_path/'run').exists()
++
++
+ @pytest.mark.parametrize('file_options,expected_file_mib', [({},64),({'guard_file_mib':512},512),
+     ({'guard_file_mib':12288},12288),({'guard_file_mib':16384},16384),({'guard_file_mib':24576},24576),({'guard_file_mib':131072},131072)])
+ def test_larger_explicit_budget_reaches_both_cgroup_and_remote_admission(tmp_path, monkeypatch,file_options,expected_file_mib):
+@@ -61,6 +94,10 @@ class CapturedCommand(Exception):
+         pass
+     def capture(command, **kwargs):
+         args = __import__('shlex').split(command[-1])
++        assert '--pipe' not in args
++        assert '--wait' in args and '--collect' in args
++        assert '--property=StandardOutput=journal' in args
++        assert '--property=StandardError=journal' in args
+         assert '--property=MemoryMax=32768M' in args
+         assert args[args.index('--memory-mib') + 1] == '32768'
+         assert args[args.index('--file-mib') + 1] == str(expected_file_mib)
+diff --git a/brian2-rust/tools/mpi_teleport_launch.py b/brian2-rust/tools/mpi_teleport_launch.py
+index a1745a12b..c896add15 100644
+--- a/brian2-rust/tools/mpi_teleport_launch.py
++++ b/brian2-rust/tools/mpi_teleport_launch.py
+@@ -10,6 +10,7 @@
+ import json
+ from pathlib import Path, PurePosixPath
+ import queue
++import re
+ import shlex
+ import signal
+ import subprocess
+@@ -51,11 +52,19 @@ def guard_paths_valid(volume, remote_base, script, *, allow_root=False):
+             and base.is_relative_to(root) and guard.is_relative_to(root))
+ 
+ 
++def runtime_environment_valid(environment):
++    """Only accept explicit, shell-safe environment variable assignments."""
++    return (isinstance(environment, dict)
++            and all(isinstance(name, str) and re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", name)
++                    and isinstance(value, str) and "\0" not in value
++                    for name, value in environment.items()))
++
++
+ def launch(*, nodes, ips, ranks_per_node, remote_base, application, output,
+            interface="bond0", timeout=120, tsh="tsh", tsh_args=(), login="rock", mpi_prefix=None,
+            guard_script=None, guard_memory_mib=2048, guard_cpu_percent=200, guard_volume="/data/brick2", guard_allow_root_volume=False,
+            guard_file_mib=64, guard_cpu_count=8, guard_cpu_ids=None,
+-           guard_min_free_gib=None, guard_node_overrides=None):
++           guard_min_free_gib=None, guard_node_overrides=None, runtime_environment=None):
+     if len(nodes) != len(ips) or len(set(nodes)) != len(nodes) or len(set(ips)) != len(ips):
+         raise ValueError("nodes and IPs must be distinct paired lists")
+     if not nodes or ranks_per_node < 1 or timeout < 1:
+@@ -74,6 +83,8 @@ def launch(*, nodes, ips, ranks_per_node, remote_base, application, output,
+     if guard_min_free_gib is not None and (not guard_script or type(guard_min_free_gib) is not int
+             or not 1 <= guard_min_free_gib <= 4096):
+         raise ValueError('minimum disk reserve requires a guard and integer GiB in 1..4096')
++    if runtime_environment is not None and not runtime_environment_valid(runtime_environment):
++        raise ValueError("runtime environment requires a string mapping with valid variable names")
+     if guard_node_overrides is not None:
+         if not guard_script or not isinstance(guard_node_overrides,dict) or not set(guard_node_overrides)<=set(nodes):
+             raise ValueError('guard node overrides must name configured nodes')
+@@ -102,6 +113,7 @@ def launch(*, nodes, ips, ranks_per_node, remote_base, application, output,
+     libdir = (mpi_prefix + "/lib") if mpi_prefix else remote_base + "/deps/usr/lib/x86_64-linux-gnu"
+     env_args = ["env", "LD_LIBRARY_PATH=" + libdir,
+                 "UCX_TLS=tcp,self,sm", "UCX_NET_DEVICES="+interface]
++    env_args += [f"{name}={value}" for name, value in sorted((runtime_environment or {}).items())]
+     # ch3:sock can select an address by global rank; do not depend on DNS.
+     env_args += [f"MPICH_INTERFACE_HOSTNAME_R{rank}={ip}"
+                  for rank, ip in enumerate(ip for ip in ips for _ in range(ranks_per_node))]
+@@ -111,19 +123,29 @@ def launch(*, nodes, ips, ranks_per_node, remote_base, application, output,
+         "-iface", interface, "-hosts", ",".join(f"{ip}:{ranks_per_node}" for ip in ips),
+         "-n", str(len(nodes)*ranks_per_node), *application]
+     processes, commands, transcripts = {}, {}, {}
++    observers, observer_commands, control_transcripts = {}, {}, {}
+     events = queue.Queue()
+     workers = []
+     started = time.monotonic()
+     error = None
+ 
+     def spawn(label, node, args):
++        unit = job_id+"-"+label
+         if guard_script:
+             placement = (guard_node_overrides or {}).get(node,{})
+             report_base = placement.get('remote_base',remote_base)
+             volume = placement.get('volume',guard_volume)
+             script = placement.get('script',guard_script)
+-            args = ["systemd-run", "--expand-environment=no", "--quiet", "--pipe", "--wait", "--collect",
+-                    "--service-type=exec", "--unit="+job_id+"-"+label, "--uid=rock",
++            # Keep the service's stdio owned by systemd.  A long-lived
++            # `systemd-run --pipe` client makes the workload inherit a pipe
++            # whose reader is the Teleport session; if that observation
++            # session disappears, the next successful diagnostic write can
++            # kill mpiexec with SIGPIPE even though every rank is healthy.
++            # Journal followers below are observation-only and can disappear
++            # without changing the transient service's file descriptors.
++            args = ["systemd-run", "--expand-environment=no", "--quiet", "--wait", "--collect",
++                    "--service-type=exec", "--unit="+unit, "--uid=rock",
++                    "--property=StandardOutput=journal", "--property=StandardError=journal",
+                     "--property=MemoryMax="+str(guard_memory_mib)+"M",
+                     "--property=MemorySwapMax=0", "--property=CPUQuota="+str(guard_cpu_percent)+"%",
+                     "--property=AllowedCPUs="+guard_cpuset, "--property=TasksMax=64",
+@@ -138,14 +160,29 @@ def spawn(label, node, args):
+         command = [tsh, *tsh_args, "ssh", f"{login}@{node}", shlex.join(args)]
+         process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                    text=True, start_new_session=True, bufsize=1)
+-        processes[label], commands[label], transcripts[label] = process, command, []
+-        def read():
++        processes[label], commands[label], transcripts[label], control_transcripts[label] = process, command, [], []
++        def read_control():
+             for line in process.stdout:
+-                events.put((label, line))
+-            events.put((label, None))
+-        thread = threading.Thread(target=read, daemon=True)
++                events.put((label, "control", line))
++            events.put((label, "control", None))
++        thread = threading.Thread(target=read_control, daemon=True)
+         workers.append(thread)
+         thread.start()
++        if guard_script:
++            journal_args = ["journalctl", "--no-pager", "--output=cat", "--follow",
++                            "--lines=all", "--unit="+unit+".service"]
++            journal_command = [tsh, *tsh_args, "ssh", f"{login}@{node}", shlex.join(journal_args)]
++            observer = subprocess.Popen(journal_command, stdin=subprocess.DEVNULL,
++                                        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
++                                        text=True, start_new_session=True, bufsize=1)
++            observers[label], observer_commands[label] = observer, journal_command
++            def read_journal():
++                for line in observer.stdout:
++                    events.put((label, "journal", line))
++                events.put((label, "journal", None))
++            journal_thread = threading.Thread(target=read_journal, daemon=True)
++            workers.append(journal_thread)
++            journal_thread.start()
+ 
+     spawn("controller", nodes[0], controller_args)
+     proxies, closed = set(), set()
+@@ -154,20 +191,24 @@ def read():
+             if time.monotonic()-started > timeout+15:
+                 raise TimeoutError("Teleport/Hydra launch exceeded deadline")
+             try:
+-                label, line = events.get(timeout=0.2)
++                label, source, line = events.get(timeout=0.2)
+             except queue.Empty:
+                 if processes["controller"].poll() is not None and "controller" in closed:
+                     break
+                 continue
+             if line is None:
+-                closed.add(label)
+-                if label == "controller":
+-                    break
++                if source == "control":
++                    closed.add(label)
++                    if label == "controller":
++                        break
+                 continue
+-            transcripts[label].append(line)
+-            with (output / f"{label}.log").open("a") as stream:
+-                stream.write(line)
+-            if label == "controller" and line.startswith("HYDRA_LAUNCH: "):
++            if source == "journal" or not guard_script:
++                transcripts[label].append(line)
++                with (output / f"{label}.log").open("a") as stream:
++                    stream.write(line)
++            else:
++                control_transcripts[label].append(line)
++            if label == "controller" and (source == "journal" or not guard_script) and line.startswith("HYDRA_LAUNCH: "):
+                 proxy_id, args = parse_proxy(line, bindir+"/hydra_pmi_proxy", ips[0], len(nodes))
+                 if proxy_id in proxies:
+                     raise ValueError("duplicate Hydra proxy launch")
+@@ -192,21 +233,37 @@ def read():
+                 except subprocess.TimeoutExpired:
+                     os.killpg(process.pid, signal.SIGKILL)
+                     process.wait()
++        for observer in observers.values():
++            if observer.poll() is None:
++                try:
++                    import os
++                    os.killpg(observer.pid, signal.SIGTERM)
++                    observer.wait(timeout=5)
++                except ProcessLookupError:
++                    pass
++                except subprocess.TimeoutExpired:
++                    os.killpg(observer.pid, signal.SIGKILL)
++                    observer.wait()
+         for worker in workers:
+             worker.join(timeout=1)
+         while not events.empty():
+-            label, line = events.get_nowait()
++            label, source, line = events.get_nowait()
+             if line is not None:
+-                transcripts[label].append(line)
++                (transcripts if source == "journal" or not guard_script else control_transcripts)[label].append(line)
+         for label, lines in transcripts.items():
+             (output/f"{label}.log").write_text("".join(lines))
++        for label, lines in control_transcripts.items():
++            if lines:
++                (output/f"{label}-systemd-run.log").write_text("".join(lines))
+         result = {"schema": "b2-teleport-hydra-launch-v0", "nodes": nodes, "ips": ips,
+             "ranks_per_node": ranks_per_node, "commands": commands,
+             "returncodes": {label:p.returncode for label,p in processes.items()},
+             "wall_seconds": time.monotonic()-started, "error": error,
+             "remote_timeout_seconds": timeout,
++            "runtime_environment": runtime_environment,
+             "resource_guard": {"script":guard_script,"volume":guard_volume,"allow_root_volume":guard_allow_root_volume,"memory_mib":guard_memory_mib,"cpu_percent":guard_cpu_percent,"cpu_count":guard_cpu_count,**({"cpu_ids":guard_cpu_ids} if guard_cpu_ids is not None else {}),"file_mib":guard_file_mib,"unit_prefix":job_id,**({"minimum_free_gib":guard_min_free_gib} if guard_min_free_gib is not None else {}),**({"node_overrides":guard_node_overrides} if guard_node_overrides is not None else {})} if guard_script else None,
+-            "transport": "Teleport control; Hydra/MPI data over private network"}
++            "transport": "Teleport observation; systemd-owned journal stdio; Hydra/MPI data over private network",
++            "observer_commands": observer_commands}
+         (output/"launch.json").write_text(json.dumps(result,indent=2)+"\n")
+     return result
+ 
+diff --git a/brian2/codegen/codeobject.py b/brian2/codegen/codeobject.py
+index 07ad3a2ce..16a0d0043 100644
+--- a/brian2/codegen/codeobject.py
++++ b/brian2/codegen/codeobject.py
+@@ -15,6 +15,7 @@
+ from brian2.utils.stringtools import code_representation, indent
+ 
+ from .translation import analyse_identifiers
++from .indices import order_by_index
+ 
+ __all__ = ["CodeObject", "constant_or_scalar"]
+ 
+@@ -474,11 +475,16 @@ def create_runner_codeobj(
+     ]
+     compiler_kwds = _merge_compiler_kwds(all_keywords)
+ 
+-    # Add the indices needed by the variables
+-    for varname in list(variables):
+-        var_index = all_variable_indices[varname]
+-        if var_index not in ("_idx", "0"):
+-            variables[var_index] = all_variables[var_index]
++    # Indices can themselves be indexed references. Include their complete
++    # dependency chain before asking a code generator to load the arrays.
++    # Templates can own self-indexed metadata (SpikeGeneratorGroup's
++    # spike_number). Such metadata is not an abstract array-read dependency;
++    # generators still reject a self-index if abstract code tries to read it.
++    for varname in order_by_index(
++        list(variables), all_variable_indices, allow_self_index=True
++    ):
++        if varname not in variables:
++            variables[varname] = all_variables[varname]
+ 
+     return device.code_object(
+         owner=group,
+diff --git a/brian2/codegen/generators/base.py b/brian2/codegen/generators/base.py
+index d423df737..c9bb38407 100644
+--- a/brian2/codegen/generators/base.py
++++ b/brian2/codegen/generators/base.py
+@@ -8,6 +8,7 @@
+     check_for_order_independence,
+ )
+ from brian2.codegen.translation import make_statements
++from brian2.codegen.indices import order_by_index
+ from brian2.core.functions import Function
+ from brian2.core.variables import ArrayVariable
+ from brian2.utils.logger import get_logger
+@@ -197,24 +198,31 @@ def array_read_write(self, statements):
+             for varname, var in list(variables.items())
+             if isinstance(var, ArrayVariable) and varname in write
+         }
+-        # Gather the indices stored as arrays (ignore _idx which is special)
+-        indices = set()
+-        indices |= {
+-            variable_indices[varname]
+-            for varname in read
+-            if variable_indices[varname] not in ("_idx", "0")
+-            and isinstance(variables[variable_indices[varname]], ArrayVariable)
+-        }
+-        indices |= {
+-            variable_indices[varname]
+-            for varname in write
+-            if variable_indices[varname] not in ("_idx", "0")
+-            and isinstance(variables[variable_indices[varname]], ArrayVariable)
+-        }
++        indices = self.array_indices(read | write)
+         # don't list arrays that are read explicitly and used as indices twice
+         read -= indices
+         return read, write, indices
+ 
++    def array_indices(self, variable_names):
++        """Return all array indices, including an index's own dependencies."""
++        ordered = order_by_index(sorted(variable_names), self.variable_indices)
++        return {
++            self.variable_indices[name]
++            for name in ordered
++            if self.variable_indices[name] not in ("_idx", "0")
++            and isinstance(self.variables[self.variable_indices[name]], ArrayVariable)
++        }
++
++    def ordered_array_reads(self, read, indices):
++        """Load each array once, after any arrays used to compute its index."""
++        return [
++            name
++            for name in order_by_index(
++                sorted(indices) + sorted(read), self.variable_indices
++            )
++            if isinstance(self.variables[name], ArrayVariable)
++        ]
++
+     def get_conditional_write_vars(self):
+         """
+         Helper function, returns a dict of mappings ``(varname, condition_var_name)`` indicating that
+@@ -242,6 +250,9 @@ def arrays_helper(self, statements):
+             for var in write
+             if var in conditional_write_vars
+         }
++        # A conditional-write flag can introduce another indexed reference.
++        indices |= self.array_indices(read | write | indices)
++        read -= indices
+         return read, write, indices, conditional_write_vars
+ 
+     def has_repeated_indices(self, statements):
+diff --git a/brian2/codegen/generators/cpp_generator.py b/brian2/codegen/generators/cpp_generator.py
+index 1868ba56f..fad78099d 100644
+--- a/brian2/codegen/generators/cpp_generator.py
++++ b/brian2/codegen/generators/cpp_generator.py
+@@ -1,4 +1,3 @@
+-import itertools
+ 
+ import numpy
+ 
+@@ -316,7 +315,7 @@ def translate_statement(self, statement):
+     def translate_to_read_arrays(self, read, write, indices):
+         lines = []
+         # index and read arrays (index arrays first)
+-        for varname in itertools.chain(sorted(indices), sorted(read)):
++        for varname in self.ordered_array_reads(read, indices):
+             index_var = self.variable_indices[varname]
+             var = self.variables[varname]
+             if varname not in write:
+diff --git a/brian2/codegen/generators/cython_generator.py b/brian2/codegen/generators/cython_generator.py
+index b66f26061..0905e5e30 100644
+--- a/brian2/codegen/generators/cython_generator.py
++++ b/brian2/codegen/generators/cython_generator.py
+@@ -1,4 +1,3 @@
+-import itertools
+ 
+ from brian2.codegen.cpp_prefs import C99Check
+ from brian2.core.functions import DEFAULT_FUNCTIONS, Function
+@@ -179,7 +178,7 @@ def translate_one_statement_sequence(self, statements, scalar=False):
+ 
+     def translate_to_read_arrays(self, read, indices):
+         lines = []
+-        for varname in itertools.chain(sorted(indices), sorted(read)):
++        for varname in self.ordered_array_reads(read, indices):
+             var = self.variables[varname]
+             index = self.variable_indices[varname]
+             arrayname = self.get_array_name(var)
+diff --git a/brian2/codegen/generators/numpy_generator.py b/brian2/codegen/generators/numpy_generator.py
+index 2a9793a43..ec6632418 100644
+--- a/brian2/codegen/generators/numpy_generator.py
++++ b/brian2/codegen/generators/numpy_generator.py
+@@ -1,4 +1,3 @@
+-import itertools
+ 
+ import numpy as np
+ 
+@@ -185,7 +184,7 @@ def vectorise_code(self, statements, variables, variable_indices, index="_idx"):
+                     write = write - {statement.var}
+                 ufunc_lines.extend(
+                     self.write_arrays(
+-                        [statement], read, write, variables, variable_indices
++                        [statement], read | indices, write, variables, variable_indices
+                     )
+                 )
+                 lines.extend(ufunc_lines)
+@@ -225,7 +224,7 @@ def vectorise_code(self, statements, variables, variable_indices, index="_idx"):
+             lines.extend(
+                 indent(code)
+                 for code in self.write_arrays(
+-                    statements, read, write, variables, variable_indices
++                    statements, read | indices, write, variables, variable_indices
+                 )
+             )
+         return lines
+@@ -233,7 +232,7 @@ def vectorise_code(self, statements, variables, variable_indices, index="_idx"):
+     def read_arrays(self, read, write, indices, variables, variable_indices):
+         # index and read arrays (index arrays first)
+         lines = []
+-        for varname in itertools.chain(indices, read):
++        for varname in self.ordered_array_reads(read, indices):
+             var = variables[varname]
+             index = variable_indices[varname]
+             # if index in iterate_all:
+@@ -322,7 +321,7 @@ def translate_one_statement_sequence(self, statements, scalar=False):
+                 )
+                 lines.append(line)
+             lines.extend(
+-                self.write_arrays(statements, read, write, variables, variable_indices)
++                self.write_arrays(statements, read | indices, write, variables, variable_indices)
+             )
+         else:
+             # More complex translation to deal with repeated indices
+diff --git a/brian2/codegen/runtime/cython_rt/templates/synapses.pyx b/brian2/codegen/runtime/cython_rt/templates/synapses.pyx
+index 2e80734f6..7358377f6 100644
+--- a/brian2/codegen/runtime/cython_rt/templates/synapses.pyx
++++ b/brian2/codegen/runtime/cython_rt/templates/synapses.pyx
+@@ -15,41 +15,41 @@ cdef extern from "spikequeue.h":
+ 
+ {% block maincode %}
+      # Extract the raw C++ object pointer from the Python capsule.
+-    cdef object capsule = _queue_capsule
+-    cdef CSpikeQueue* cpp_queue = <CSpikeQueue*>PyCapsule_GetPointer(capsule, "CSpikeQueue")
++    cdef object _queue_capsule_object = _queue_capsule
++    cdef CSpikeQueue* _queue_pointer = <CSpikeQueue*>PyCapsule_GetPointer(_queue_capsule_object, "CSpikeQueue")
+ 
+     # Now we call the C++ peek method directly to get the current spike vector.
+     # This returns a pointer to std::vector<int32_t> containing synapse IDs
+     # that are ready for processing in the current time step.
+-    cdef vector[int32_t]* spike_vector = cpp_queue.peek()
+-    cdef size_t num_spikes = dereference(spike_vector).size()
++    cdef vector[int32_t]* _spike_vector = _queue_pointer.peek()
++    cdef size_t _num_spikes = dereference(_spike_vector).size()
+ 
+     # Early exit for empty queue - avoid all processing overhead
+-    if num_spikes == 0:
+-        cpp_queue.advance()
++    if _num_spikes == 0:
++        _queue_pointer.advance()
+         return
+ 
+     # Access the underlying raw data pointer of the vector
+-    cdef int32_t* spike_data = &dereference(spike_vector)[0]
++    cdef int32_t* _spike_data = &dereference(_spike_vector)[0]
+ 
+     # scalar code
+     _vectorisation_idx = 1
+     {{ scalar_code | autoindent }}
+ 
+ 
+-    cdef size_t i = 0
+-    cdef int32_t synapse_id
+-    while i < num_spikes:
+-        synapse_id = spike_data[i]
++    cdef size_t _spike_cursor = 0
++    cdef int32_t _synapse_id
++    while _spike_cursor < _num_spikes:
++        _synapse_id = _spike_data[_spike_cursor]
+ 
+-        _idx = synapse_id
++        _idx = _synapse_id
+         _vectorisation_idx = _idx
+ 
+         {{ vector_code | autoindent }}
+ 
+-        i += 1
++        _spike_cursor += 1
+ 
+     # Move the queue forward to the next time step
+-    cpp_queue.advance()
++    _queue_pointer.advance()
+ 
+ {% endblock %}
+diff --git a/brian2/equations/unitcheck.py b/brian2/equations/unitcheck.py
+index d324d24d4..89ecee635 100644
+--- a/brian2/equations/unitcheck.py
++++ b/brian2/equations/unitcheck.py
+@@ -87,9 +87,9 @@ def check_units_statements(code, variables):
+             continue  # skip empty lines
+ 
+         varname, op, expr, comment = parse_statement(line)
+-        if op in ("+=", "-=", "*=", "/=", "%="):
++        if op in ("+=", "-=", "*=", "/=", "//=", "%="):
+             # Replace statements such as "w *=2" by "w = w * 2"
+-            expr = f"{varname} {op[0]} {expr}"
++            expr = f"{varname} {op[:-1]} ({expr})"
+         elif op == "=":
+             pass
+         else:

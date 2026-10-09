@@ -4,6 +4,8 @@ This repository contains the manuscript, retained experimental evidence, figure 
 
 The product implementation is maintained in [RockLi/brian2-atlas](https://github.com/RockLi/brian2-atlas). Experimental results retain their original source identities. The current Atlas development branch must not be substituted for an experiment's recorded revision.
 
+The [experiment-code coverage audit](experiments/COVERAGE.md) maps every final-paper study to its drivers and identifies historical build/input limitations.
+
 ## Manuscript and figures
 
 - [Manuscript source](paper/MANUSCRIPT.md)

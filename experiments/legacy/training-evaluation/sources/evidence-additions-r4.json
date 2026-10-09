@@ -1,0 +1,75 @@
+{
+  "schema": "evaluation-evidence-additions-v1",
+  "created_utc": "2026-10-04T09:21:12.399107+00:00",
+  "meaning": "Append-only version inventory; original protocol and freeze files are preserved. Not a claim that pending slices are executable.",
+  "files": {
+    "protocol/A2-execution-addendum-v3.json": {
+      "sha256": "2bf445ac0b7c25d59734da155c6a96f7f90888bba7060be5b60da586c16675b9",
+      "bytes": 5983
+    },
+    "protocol/SHA256SUMS.json": {
+      "sha256": "9c7ce84baf0703d6a6e7745b138fbb1eeed5bdda3c1118a7036fc1d729366493",
+      "bytes": 4364
+    },
+    "protocol/SHA256SUMS.r2.json": {
+      "sha256": "0004abb403a766b9644f74cac046da2b0a89f275cb055fe59cfbfb5ee90317d9",
+      "bytes": 4801
+    },
+    "protocol/brian-corpus-manifest.json": {
+      "sha256": "5ec3fc3f11f0d84fb20ed7597ee08bb82ab47559b029081fed237ed9eeabff98",
+      "bytes": 12884
+    },
+    "protocol/coverage-matrix.json": {
+      "sha256": "9d9cfaaa214718ba7da92fabe93450a23683f7255751aac397bd8e54e7f21976",
+      "bytes": 204352
+    },
+    "protocol/execution-plan-r2.json": {
+      "sha256": "cc3dc9f0219db5d1ab3fdb16760cecce7114903244e62294110aa7b64b16d118",
+      "bytes": 62658
+    },
+    "protocol/execution-plan.json": {
+      "sha256": "3729d20c4f7b679b7462d3023a12b07a7c98ccc6bb2403b96f430e745adc5b7e",
+      "bytes": 59922
+    },
+    "protocol/finite-engine-cases.json": {
+      "sha256": "6bf5cf95444ffa8c85eaf2b388fd56879b5820cda7078a1066fbfcd01b6c544d",
+      "bytes": 5629
+    },
+    "protocol/semantic-contracts.json": {
+      "sha256": "eaea29ada59e3cb8395a99cbacad843ef13cb80369020e40c47d78454b513a0a",
+      "bytes": 9665
+    },
+    "protocol/source-manifest.json": {
+      "sha256": "79c368db0bfcfff7dfc6ab6658db8bc74c382e08985001aaa32b52fbdb65e750",
+      "bytes": 1093
+    },
+    "protocol/coverage-matrix.md": {
+      "sha256": "43ba3426832bc9b5bf7041129f7788349f39a37ad82063040854be3b13019683",
+      "bytes": 3100
+    },
+    "protocol/execution-protocol-r2.zh.md": {
+      "sha256": "ef0341ba038e00b5124a8a9b5ade9d65651d22174b2e6674fed83a336e63f1c5",
+      "bytes": 2582
+    },
+    "protocol/execution-protocol.zh.md": {
+      "sha256": "9ac154f8b6c580cce8354284ba294940400bc7e8ec011b641e54ccac68bbfacf",
+      "bytes": 13736
+    },
+    "tools/prepare_data.py": {
+      "sha256": "9c7815c4c3bf647ba46e68ef2b5d96ffefb5721f70535c273246404efb58b276",
+      "bytes": 33868
+    },
+    "evidence/data-preparation/atlas-a2-admission-result.json": {
+      "sha256": "71dc16604f6e847f10b0c84a3cd4cd955018121827cdab39c1d3cfdc9ca651be",
+      "bytes": 4499
+    },
+    "evidence/data-preparation/SUMMARY.md": {
+      "sha256": "3261a231ebec1547ee8ad63cce581205531237d464549142fb123a793d4b739d",
+      "bytes": 4087
+    },
+    "evidence/data-preparation/remote-data-evidence/data/data-manifest.json": {
+      "sha256": "a60a6442e59416233ce1bdebd93a7bb9cc8faa80cb6e7d69092c9e0f607cd2ac",
+      "bytes": 6479
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "recurrent-matrix-implementation-v1",
+  "status": "prepared_before_any_matrix_execution",
+  "purpose": "Independent matrix projection candidate for the frozen fixed unique-weight R graphs; small Q0 only until coordinator schedules more work.",
+  "existing_protocol_unchanged": ["recurrent-fixture-r1.json", "finite-engine-cases.json"],
+  "existing_implementations_unchanged": ["graph_competitor.py", "generate_recurrent_cases.py", "qualify_recurrent_case.py", "run_recurrent_queue.py", "conv_competitor.py", "generate_conv_cases.py", "qualify_conv_case.py", "run_conv_queue.py"],
+  "new_files": ["adapters/recurrent_matrix_v1.py", "tools/qualify_recurrent_matrix_v1.py", "tools/run_recurrent_matrix_q0.py"],
+  "scope": {
+    "accepted": "Fixed, sorted unique (target,source) edges; one scalar bank parameter per edge; fixed beta and threshold; nondelayed projections. Existing nine R cases are representable without fixture changes.",
+    "rejected": ["tied weights", "duplicate edge coordinates", "unsorted coordinates", "delays", "masks", "trainable dynamics", "undeclared graph fields"],
+    "semantics": "At every tick all layers drift, apply strict > threshold and subtract detached-reset spikes. Only then are input and same-tick spikes projected to post-reset voltages, so recurrent current changes the next threshold. No layerwise retiming.",
+    "training": "FP64; CE on 5*mean_T(output spikes); surrogate 1/(1+5*abs(margin))^2; SGD lr .001; Adam lr .001, beta1 .9, beta2 .999, eps 1e-8 outside sqrt; three steps.",
+    "cells": {"snntorch_fp64": "snntorch.Leaky", "spikingjelly": "spikingjelly.activation_based.neuron.LIFNode", "spyx": "spyx.nn.LIF with drift before beta=1 cell and detached-reset correction", "brainx_state": "canonical equations inside brainstate.HiddenState and actual transform.scan/grad/jit; not a default BrainPy neuron"},
+    "matrix_orientation": "[target,source], y = matrix @ feed.T; preserve exact bank parameter identity through reshapes or one gather per forward.",
+    "auto_storage": "Complete projections use dense matmul. Incomplete projections use native Torch COO sparse.mm or JAX BCOO. Choice depends only on frozen topology, never results.",
+    "dense_storage": "Explicit separate view; all projections use dense matrices, absent edges fixed zero and not optimizer parameters. Not an automatic fallback.",
+    "compile": "Torch eager is the default new matrix view. Optional fullgraph=True is separate and must independently qualify; rejection cannot trigger eager fallback. JAX variants JIT the derivative and full Adam step.",
+    "frozen_R_data": "Same count inputs .9/.095/.005, self-inclusive Bernoulli graphs, initial weights and independent SeedSequence streams from recurrent-fixture-r1.json. No new full R fixtures or retuned dimensions.",
+    "unqualified_extra_layouts": "Generic parameter permutation is implemented but Q0 targets the source-major/target-major bank layouts used by the fixed R fixtures. No arbitrary-layout qualification claim."
+  },
+  "memory_and_performance_limits": {
+    "old_reference_audit": "graph_competitor.py gathers B x E feed and multiplies per-edge weights on each tick; autodiff can retain temporal edge intermediates.",
+    "new_design": "Construct each projection matrix once per forward before the time loop/scan. Each tick uses whole-layer dense/sparse matrix multiplication; no explicit adapter-level B x E tensor in the temporal loop.",
+    "not_proven": "Native operator backward, compiler temporaries and memory scaling remain unmeasured. Removing explicit adapter edge intermediates is not proof of O(BTN+E) total peak RSS or capacity superiority.",
+    "jax_sparse": "BCOO is an experimental reference implementation. Official JAX documentation does not recommend it for performance-critical use. This native sparse view is not a strongest optimized JAX baseline claim.",
+    "diagnostics": "run_case returns full state/spike/gradient histories and optimizer diagnostics. It is a qualification entry point, not a public API performance worker.",
+    "resources": "Whole process-tree RSS includes qualification, oracle, serialization and compiler caches. OMP=1 does not restrict the JAX thread pool to one core."
+  },
+  "q0": {
+    "shape": {"sizes": [2,4,2], "B": 2, "T": 32, "seed": 11},
+    "common_arrays": "Reuse fixtures/q0.json signed diagnostic inputs and FF weights unchanged. This anchor is distinct from the frozen count-distribution full R workload.",
+    "dense": "Use graph_fixture(shared=False); reorder only recurrent bank to target-major identity indexing, matching full R p=1. Feedforward banks remain source-major.",
+    "sparse": "From dense Q0 retain coordinates where (source+2*target)%3 != 0, keep target/source order and compact bank IDs. Self edges follow this same fixed predicate.",
+    "initial_variants": "Zero initial and the existing strict-threshold boundary/nonzero graph initial array; four cases total.",
+    "checks": ["all states and exact spikes", "logits and loss", "all parameter gradients and initial-state VJP", "local arbitrary-cotangent surrogate VJP for competitors", "one SGD update", "three complete Adam steps with states, spikes, VJP, all weights, moments and step count", "direct same-case Atlas comparison plus independent NumPy graph oracle"],
+    "oracle": "Existing independent atlas_graph_qualification.forward_vjp and independent NumPy Adam; no framework math imported into oracle.",
+    "tolerance": {"atol": 1e-10, "rtol": 1e-8, "spikes": "exact"},
+    "not_qualified": ["arbitrary external whole-network cotangents", "delays", "tied parameters", "trainable dynamics", "checkpoint restore", "full R shapes", "performance"]
+  },
+  "bounded_remote_queue": {
+    "host": "100.90.28.27 / rock-mac-studio-1.local",
+    "order": ["Atlas small anchor", "snnTorch", "SpikingJelly eager unless explicitly fullgraph", "Spyx", "brainstate"],
+    "slots": 5,
+    "per_slot_s": 300,
+    "maximum_slot_s": 1500,
+    "rss_guard_bytes": 68719476736,
+    "cleanup": "Reuse frozen run_recurrent_queue.launch: retain every observed descendant PID+create_time identity, kill/verify complete owned tree including native sessions, exclude direct Popen child from psutil reaping.",
+    "classification": "Timeout phase records engine execution, native prefix replay, diagnostic conversion, independent oracle or artifact saving separately. Guard hit is resource_limit. Software rejection/exit without terminal JSON is not OOM. No failure is a performance score.",
+    "no_overlap": "Reject when another evaluation preparation, worker or supervisor is present; only run after coordinator establishes a serial slot.",
+    "no_full_queue": "No R225 qualification, no full-size fixture generation, no new performance workload or benchmark entry point."
+  },
+  "official_operator_references": [
+    {"url": "https://docs.pytorch.org/docs/2.14/generated/torch.sparse.mm.html", "fact": "COO sparse-dense backward supported for both operands; installed remote version still requires Q0."},
+    {"url": "https://docs.jax.dev/en/latest/jax.experimental.sparse.html", "fact": "BCOO supports transforms but is experimental reference code and is not recommended for performance-critical use."},
+    {"url": "https://docs.jax.dev/en/latest/_autosummary/jax.experimental.sparse.BCOO.html", "fact": "Sparse BCOO data/index constructor accepts indices_sorted and unique_indices declarations."}
+  ],
+  "execution_status_at_creation": "Not executed. Local checks limited to AST/JSON parsing. No model imports, remote upload or compute."
+}

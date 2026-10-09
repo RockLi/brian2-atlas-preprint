@@ -1,0 +1,42 @@
+{
+  "schema": "remote-small-copy-r5",
+  "created_utc": "2026-10-04T12:00:18.152311+00:00",
+  "files": {
+    "tools/arm64_artifact_gate_r1.py": {
+      "sha256": "37589818b19c5d17e89bbe547148034b4b908c181b7328804676c3b2ffddf20e",
+      "bytes": 7259
+    },
+    "tools/qualify_dense_arm64_r1.py": {
+      "sha256": "2dcabf162327a7ae0d1ae215d03097ac2cf0ce4a90744827d69f6ef9ac80b178",
+      "bytes": 7312
+    },
+    "tools/qualify_metal_arm64_r1.py": {
+      "sha256": "bbbfddffb0194394d4ca058c680e5a89a1408e3bc1691361da1d034f4fdd9a23",
+      "bytes": 31215
+    },
+    "tools/test_qualify_arm64_r1.py": {
+      "sha256": "b159cd1d9e5c733e836e9fbb67e022b475a50c383e9440a084adca325a268d7d",
+      "bytes": 14596
+    },
+    "tools/qualify_arm64_r1.final-synthetic-checks.json": {
+      "sha256": "27894861b68db903cc9806438fb8c07f2a6b52b82be13fd0afba7827127b5351",
+      "bytes": 6336
+    },
+    "tools/qualify_arm64_r1.synthetic-checks.json": {
+      "sha256": "3a01ab31153e460146d0dd196abf5623c0ca2019e42e8bf0bf19024e9eba07d9",
+      "bytes": 5974
+    },
+    "tools/qualify_arm64_r1.USAGE.txt": {
+      "sha256": "bd260d420a063a53afc176283b5caa94a2ee5962408f5c1ea7afb80297200200",
+      "bytes": 4701
+    },
+    "tools/qualify_arm64_r1.source-delta.json": {
+      "sha256": "eacdc0e552a8da25b598818ddcb138a385f8308045bc68cd4dce400357f8c0b2",
+      "bytes": 2970
+    }
+  },
+  "scope": "IndependentARM64qualification preparation only;64finalstdlib controls verified; old60check receipt retained as historical",
+  "model_execution": false,
+  "compiler_execution": false,
+  "same_ISA_qualification_available": false
+}
