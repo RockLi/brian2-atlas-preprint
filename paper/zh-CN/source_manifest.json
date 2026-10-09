@@ -1,7 +1,8 @@
 {
-  "english_pdf_sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
-  "english_manuscript_sha256": "aedff3a84c2cd40dfea06017beccf00ade11928b0d8f6d645eec8c58d5c30b74",
-  "english_supplement_sha256": "b64db8896c9be5acce06610743f22b8dbc447ba9bee97a7ccbf9c8e55dcff535",
+  "english_pdf_sha256": "7963dda63c74e4d05113a0253994d2b49c38f96bd92f77e69cde8f7a945145b0",
+  "english_manuscript_sha256": "a2aa7c24ef617584ef09371185778cf6d942c8cd4a087223b059be894eb601c2",
+  "english_supplement_sha256": "021a3413ac904394e32026f6fa5a87220f477e820072ebac39293bcd5cbe2daf",
   "scope": "Matched English/Chinese current paper with public rewritten commit citations, path-safe PDF links, unchanged scientific values and original screenshot pixels.",
-  "atlas_commit": "e609068369a7ec370968cd885ef562c83e4daa03"
+  "atlas_commit": "ae649a244e28d7d4b3eb5df4e35215e14c1378c7",
+  "evidence_tag": "biorxiv-v1"
 }

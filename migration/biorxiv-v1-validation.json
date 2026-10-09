@@ -1,0 +1,20 @@
+{
+  "schema": "atlas-evidence-release-validation-v1",
+  "tag": "biorxiv-v1",
+  "software_commit": "ae649a244e28d7d4b3eb5df4e35215e14c1378c7",
+  "paper_source_commit": "ab60e8097e6977d2fb8e69413ad1436911b271ef",
+  "build_manuscript": "passed",
+  "translation_checks": "passed",
+  "pdf_checks": "passed",
+  "figure_svgs_unchanged": 22,
+  "experiments_repeated": false,
+  "scope": "Citation and release metadata changes only; experimental inputs, figures and results unchanged.",
+  "history_security_rescan": {
+    "engine_new_findings": 0,
+    "evidence_new_findings": 0,
+    "evidence_existing_verified_sha256_false_positives": 11,
+    "atlas_added_home_or_volume_path_findings": 0,
+    "archive_scan_skips": 0
+  },
+  "publication": "GitHub Release and Zenodo DOI require successful integration verification; a tag alone does not establish archival publication."
+}

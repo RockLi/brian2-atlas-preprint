@@ -95,27 +95,27 @@
     "pdfs": {
       "en": {
         "pages": 44,
-        "sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
+        "sha256": "7963dda63c74e4d05113a0253994d2b49c38f96bd92f77e69cde8f7a945145b0",
         "outside_page_characters": 0
       },
       "zh": {
         "pages": 39,
-        "sha256": "97099d2e4ed638cd6731b51c9a8d49c1ddb4745307fafc9c8ea83f53895878c7",
+        "sha256": "64dad41d701628e6764ecb2ee4a70983fce0f22449bdb9808e6222025a14ff99",
         "outside_page_characters": 0
       }
     },
     "source_sha256": {
-      "MANUSCRIPT.md": "aedff3a84c2cd40dfea06017beccf00ade11928b0d8f6d645eec8c58d5c30b74",
-      "SUPPLEMENTARY.md": "b64db8896c9be5acce06610743f22b8dbc447ba9bee97a7ccbf9c8e55dcff535",
-      "zh-CN/MANUSCRIPT.md": "0256100446639bf11b30e7fff02c995463fb3db32c4c887e54379ded6a365926",
+      "MANUSCRIPT.md": "a2aa7c24ef617584ef09371185778cf6d942c8cd4a087223b059be894eb601c2",
+      "SUPPLEMENTARY.md": "021a3413ac904394e32026f6fa5a87220f477e820072ebac39293bcd5cbe2daf",
+      "zh-CN/MANUSCRIPT.md": "80fef86a36ce536456d27f285fe71ff37c86b8f04d68c75964c4255f97e5a626",
       "zh-CN/DENDRITIC_SUPPLEMENT.md": "1f2d007595a61a839d9abadfeb94d7672a0ab7233415c4aec01a6285ca5f7b51"
     },
     "changed_figure_svgs": [],
-    "figure_change_scope": "No SVG changes in this editorial/license update; compared with preprint commit 78cfce5bf0967ce1a4800d99159e3428d8ca6f27."
+    "figure_change_scope": "All 22 English/Chinese SVGs byte-identical to preprint commit f04326d368370597f4b2ca5e835f2bee476d2efa."
   },
   "editorial_update": {
     "scope": "Release citation update only; scientific values and figures unchanged.",
-    "evidence_repository_commit": "7f83c69f9958cc515c472bb57ea018c77c18ff94",
+    "evidence_repository_commit": "ab60e8097e6977d2fb8e69413ad1436911b271ef",
     "experiments_repeated": false,
     "reason": "Editorial changes only; no implementation, model, input or measurement changes.",
     "evidence_repository_tag": "biorxiv-v1"

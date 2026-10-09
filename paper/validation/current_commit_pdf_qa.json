@@ -3,29 +3,29 @@
     "status": "passed",
     "pdf": "output/pdf/brian2-atlas-preprint.pdf",
     "pages": 44,
-    "sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
+    "sha256": "7963dda63c74e4d05113a0253994d2b49c38f96bd92f77e69cde8f7a945145b0",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/experiments/reproduction/pd14/README.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/SUPPLEMENTARY.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/capacity/evidence.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/capacity/weak-evidence.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/active-regression.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/aggregate-uncached.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/aggregate.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/evidence-audit.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/freeze.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/manifest.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/regression-tests.log",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/full_scale/analysis.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/full_scale/resource_scenarios.csv",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/release_validation/acceptance.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_linear.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_nonlinear.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_review.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/scripts/analyze_full_scale_resources.py",
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/7f83c69f9958cc515c472bb57ea018c77c18ff94",
-      "https://github.com/RockLi/brian2-atlas/blob/e609068369a7ec370968cd885ef562c83e4daa03/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/e609068369a7ec370968cd885ef562c83e4daa03"
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/experiments/reproduction/pd14/README.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/SUPPLEMENTARY.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/capacity/evidence.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/capacity/weak-evidence.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/active-regression.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/aggregate-uncached.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/aggregate.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/evidence-audit.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/freeze.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/manifest.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/regression-tests.log",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/full_scale/analysis.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/full_scale/resource_scenarios.csv",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/release_validation/acceptance.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_linear.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_nonlinear.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_review.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/scripts/analyze_full_scale_resources.py",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/biorxiv-v1",
+      "https://github.com/RockLi/brian2-atlas/blob/ae649a244e28d7d4b3eb5df4e35215e14c1378c7/migration/cuda-cutoff-followup.json",
+      "https://github.com/RockLi/brian2-atlas/tree/ae649a244e28d7d4b3eb5df4e35215e14c1378c7"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
@@ -60,7 +60,7 @@
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "Final fixed-commit citation pages reviewed at full size. The preceding editorial version was reviewed on all contact sheets and its edited captions/memory clauses at full size; final changes are commit labels and link annotations. All final pages passed text and page-bound checks.",
+      "scope": "Release source-citation pages checked at full size; all final pages passed text and bounds checks. Figures are byte-identical to the previously reviewed version.",
       "full_size_pages": [
         13,
         33
@@ -70,7 +70,7 @@
     "public_links": {
       "file_uri_count": 0,
       "fixed_repository_targets_verified": 19,
-      "all_link_count": 37
+      "all_link_count": 44
     },
     "text_name_check_scope": "Extractable prose and generated labels; original screenshot pixels retain captured labels."
   },
@@ -78,29 +78,29 @@
     "status": "passed",
     "pdf": "output/pdf/brian2-atlas-preprint-zh-CN.pdf",
     "pages": 39,
-    "sha256": "97099d2e4ed638cd6731b51c9a8d49c1ddb4745307fafc9c8ea83f53895878c7",
+    "sha256": "64dad41d701628e6764ecb2ee4a70983fce0f22449bdb9808e6222025a14ff99",
     "new_commit_links": [
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/experiments/reproduction/pd14/README.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/SUPPLEMENTARY.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/capacity/evidence.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/capacity/weak-evidence.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/active-regression.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/aggregate-uncached.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/aggregate.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/evidence-audit.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/freeze.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/manifest.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/common_source/regression-tests.log",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/full_scale/analysis.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/full_scale/resource_scenarios.csv",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/release_validation/acceptance.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_linear.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_nonlinear.json",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/data/v3/dendritic_review.md",
-      "https://github.com/RockLi/brian2-atlas-preprint/blob/7f83c69f9958cc515c472bb57ea018c77c18ff94/paper/scripts/analyze_full_scale_resources.py",
-      "https://github.com/RockLi/brian2-atlas-preprint/tree/7f83c69f9958cc515c472bb57ea018c77c18ff94",
-      "https://github.com/RockLi/brian2-atlas/blob/e609068369a7ec370968cd885ef562c83e4daa03/migration/cuda-cutoff-followup.json",
-      "https://github.com/RockLi/brian2-atlas/tree/e609068369a7ec370968cd885ef562c83e4daa03"
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/experiments/reproduction/pd14/README.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/SUPPLEMENTARY.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/capacity/evidence.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/capacity/weak-evidence.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/active-regression.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/aggregate-uncached.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/aggregate.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/evidence-audit.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/freeze.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/manifest.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/common_source/regression-tests.log",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/full_scale/analysis.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/full_scale/resource_scenarios.csv",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/release_validation/acceptance.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_linear.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_nonlinear.json",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/data/v3/dendritic_review.md",
+      "https://github.com/RockLi/brian2-atlas-preprint/blob/ab60e8097e6977d2fb8e69413ad1436911b271ef/paper/scripts/analyze_full_scale_resources.py",
+      "https://github.com/RockLi/brian2-atlas-preprint/tree/biorxiv-v1",
+      "https://github.com/RockLi/brian2-atlas/blob/ae649a244e28d7d4b3eb5df4e35215e14c1378c7/migration/cuda-cutoff-followup.json",
+      "https://github.com/RockLi/brian2-atlas/tree/ae649a244e28d7d4b3eb5df4e35215e14c1378c7"
     ],
     "outside_page_characters": 0,
     "changed_pages": [
@@ -135,7 +135,7 @@
     ],
     "visual_review": {
       "status": "passed",
-      "scope": "Final fixed-commit citation pages reviewed at full size. The preceding editorial version was reviewed on all contact sheets and its edited captions/memory clauses at full size; final changes are commit labels and link annotations. All final pages passed text and page-bound checks.",
+      "scope": "Release source-citation pages checked at full size; all final pages passed text and bounds checks. Figures are byte-identical to the previously reviewed version.",
       "full_size_pages": [
         10,
         27
@@ -145,7 +145,7 @@
     "public_links": {
       "file_uri_count": 0,
       "fixed_repository_targets_verified": 19,
-      "all_link_count": 37
+      "all_link_count": 43
     },
     "text_name_check_scope": "Extractable prose and generated labels; original screenshot pixels retain captured labels."
   }

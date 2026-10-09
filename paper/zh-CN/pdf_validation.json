@@ -1,6 +1,6 @@
 {
   "status": "text-and-layout-checks-passed",
-  "pdf_sha256": "97099d2e4ed638cd6731b51c9a8d49c1ddb4745307fafc9c8ea83f53895878c7",
+  "pdf_sha256": "64dad41d701628e6764ecb2ee4a70983fce0f22449bdb9808e6222025a14ff99",
   "page_count": 39,
   "chinese_character_count": 28455,
   "outside_page_characters": 0,
@@ -10,16 +10,11 @@
   "content_checks": "All 10 main figures, 7 main tables, S21.1–S21.6, S13/Table S5, Table S4, Figure S2 and three S1 panels; major exact event counts and resource quantities present.",
   "visual_review": {
     "status": "passed",
-    "scope": "Final fixed-commit citation pages reviewed at full size. The preceding editorial version was reviewed on all contact sheets and its edited captions/memory clauses at full size; final changes are commit labels and link annotations. All final pages passed text and page-bound checks.",
+    "scope": "Release source-citation pages checked at full size; all final pages passed text and bounds checks. Figures are byte-identical to the previously reviewed version.",
     "full_size_pages": [
       10,
       27
     ],
     "contact_sheet_storage": "Private local review artifacts; not distributed"
-  },
-  "public_links": {
-    "file_uri_count": 0,
-    "fixed_repository_targets_verified": 19,
-    "all_link_count": 37
   }
 }
