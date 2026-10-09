@@ -1,7 +1,7 @@
 {
-  "english_pdf_sha256": "74fb54e96908a0f1ed9d660e1afe5ea8589996881b639412f181419656644f1e",
-  "english_manuscript_sha256": "54c7fb563191b23d48dc72d104df8f9c27768c844fd16f5ce4417495f8112257",
-  "english_supplement_sha256": "b46a8701a5504bfc123cf742ddb18ec99dabd03ff24b74f931e7b97ed8f518fc",
-  "scope": "Current English manuscript and integrated supplements; matched Chinese editorial updates clarify per-host memory limits and remove regression-run maintenance prose. Scientific values and original screenshot pixels unchanged.",
+  "english_pdf_sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
+  "english_manuscript_sha256": "aedff3a84c2cd40dfea06017beccf00ade11928b0d8f6d645eec8c58d5c30b74",
+  "english_supplement_sha256": "b64db8896c9be5acce06610743f22b8dbc447ba9bee97a7ccbf9c8e55dcff535",
+  "scope": "Matched English/Chinese current paper with public rewritten commit citations, path-safe PDF links, unchanged scientific values and original screenshot pixels.",
   "atlas_commit": "e609068369a7ec370968cd885ef562c83e4daa03"
 }

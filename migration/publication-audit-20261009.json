@@ -236,5 +236,37 @@
       "confirmed_credentials": 0,
       "gitleaks_raw_candidates": 11
     }
+  },
+  "final_pdfs": {
+    "en": {
+      "pages": 44,
+      "sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
+      "outside_page_characters": 0
+    },
+    "zh": {
+      "pages": 39,
+      "sha256": "97099d2e4ed638cd6731b51c9a8d49c1ddb4745307fafc9c8ea83f53895878c7",
+      "outside_page_characters": 0
+    }
+  },
+  "final_pdf_link_checks": {
+    "en": {
+      "file_uri_count": 0,
+      "fixed_repository_targets_verified": 19,
+      "all_link_count": 37
+    },
+    "zh": {
+      "file_uri_count": 0,
+      "fixed_repository_targets_verified": 19,
+      "all_link_count": 37
+    }
+  },
+  "final_delta_scan": {
+    "engine_files": 5,
+    "preprint_files": 32,
+    "scanner": "Gitleaks 8.30.1 dir with no allowlists",
+    "secret_findings": 0,
+    "home_or_volume_path_matches": 0,
+    "scope": "Source/rendered/QA changes after the independently scanned rewritten histories; final report fields contain counts and repository-relative references."
   }
 }

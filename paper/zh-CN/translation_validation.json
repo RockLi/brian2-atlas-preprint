@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_pdf_sha256": "74fb54e96908a0f1ed9d660e1afe5ea8589996881b639412f181419656644f1e",
+  "source_pdf_sha256": "c9f451f7e68a83fce274a8f3a02bb8b6c77ba589d8fa904031707f328e81732a",
   "checks": {
     "english_pdf_sha256": true,
     "english_manuscript_sha256": true,
@@ -57,9 +57,9 @@
     "figure_data_geometry": true,
     "s1_original_pixels_and_crops": true
   },
-  "scope": "Current English manuscript and integrated supplements; matched Chinese editorial updates clarify per-host memory limits and remove regression-run maintenance prose. Scientific values and original screenshot pixels unchanged.",
+  "scope": "Matched English/Chinese current paper with public rewritten commit citations, path-safe PDF links, unchanged scientific values and original screenshot pixels.",
   "chinese_sources": {
-    "MANUSCRIPT.md": "31c5d121636c467130ca7095390492d6eef4d61f7f8cb7570bb630c0107874cc",
+    "MANUSCRIPT.md": "0256100446639bf11b30e7fff02c995463fb3db32c4c887e54379ded6a365926",
     "DENDRITIC_SUPPLEMENT.md": "1f2d007595a61a839d9abadfeb94d7672a0ab7233415c4aec01a6285ca5f7b51",
     "RESOURCE_ANALYSIS.md": "26ba01b54f1e9ac26e3b8dcff5d876b6f50b5dfc0b951dccab167ba8fb9af481",
     "b2ir_panels.json": "0a2f8ea8f5695d44f819e60c6a6844da42c83e6bfb1ca55e5951fe798a6907d6"
