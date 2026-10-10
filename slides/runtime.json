@@ -1,0 +1,14 @@
+{
+  "bundle": "26.1007.11041",
+  "node": "24.19.0",
+  "python": "3.12.14",
+  "node_packages": {
+    "@oai/artifact-tool": "2.8.89",
+    "sharp": "0.35.5"
+  },
+  "fonts": [
+    "Arial",
+    "Arial Unicode MS"
+  ],
+  "presentation_skill_bundle": "26.1007.11041"
+}

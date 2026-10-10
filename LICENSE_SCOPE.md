@@ -6,8 +6,8 @@ engine is in [brian2-atlas](https://github.com/RockLi/brian2-atlas).
 
 | Material | Applicable terms |
 | --- | --- |
-| Original experimental, analysis, figure-generation and reproduction code by Xinjun Li | [Apache-2.0](LICENSE) |
-| Original manuscript text, translations, author-created figures/tables and original research data authored by Xinjun Li | [CC BY 4.0](LICENSES/CC-BY-4.0.txt); attribute Xinjun Li, the work title, this repository and the version/commit, and indicate changes |
+| Original experimental, analysis, figure-generation, slide-generation and reproduction code by Xinjun Li | [Apache-2.0](LICENSE) |
+| Original manuscript and slide text, translations, author-created figures/tables and original research data authored by Xinjun Li | [CC BY 4.0](LICENSES/CC-BY-4.0.txt); attribute Xinjun Li, the work title, this repository and the version/commit, and indicate changes |
 | Imported Brian2 source and Brian2-derived code | CeCILL-2.1 and preserved component notices in [Brian2-LICENSE](LICENSES/Brian2-LICENSE) |
 | Third-party model/data inputs, photographs, screenshots and other incorporated works | Their source-specific terms and attribution; they are excluded from the blanket original-content grant |
 

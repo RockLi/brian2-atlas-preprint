@@ -1,0 +1,4 @@
+# Finished documents are binary; retain original SVG input bytes.
+*.pdf binary
+*.pptx binary
+assets/**/*.svg -whitespace

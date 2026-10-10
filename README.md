@@ -13,6 +13,17 @@ The `biorxiv-v1` annotated tag identifies this evidence archive and pairs with
 `main` holds the frozen archive; ongoing work belongs on `dev`.
 The paper-version label does not assert that a bioRxiv submission or DOI exists.
 
+## Ongoing maintenance
+
+Maintain manuscript sources in `paper/`, presentations in `slides/`, and experiment
+and reproduction materials in `experiments/` on this repository's `dev` branch.
+The engine continues in `brian2-atlas`; release tags remain frozen.
+
+The [current slides](slides/README.md) publish the English PDF, English generation
+sources, figure inputs and the verified rebuild procedure for
+[preprint v2](https://doi.org/10.5281/zenodo.23273257). Chinese slide materials and
+editable PowerPoint files belong in the ignored `slides/local/` directory.
+
 ## Manuscript and figures
 
 - [Manuscript source](paper/MANUSCRIPT.md)

@@ -1,0 +1,14 @@
+{
+  "preprint": "https://doi.org/10.5281/zenodo.23273257",
+  "figures": {
+    "en/fig1.svg": "Figure 1, English",
+    "en/fig7.svg": "Figure 7, English; embedded browser workbench image used by both decks",
+    "en/fig9.svg": "Figure 9, English; panel a is cropped during build"
+  },
+  "sha256": {
+    "assets/en/fig1.svg": "cc8ffe1c92bf212ff2d50830e60c75083e0a55dc4502f99ccc0eb32bfc532247",
+    "assets/en/fig7.svg": "e61ee8bd41aa5ab62a2c925f6cbc7fafabe9098d2dcdaa5903f565c6051d7ae5",
+    "assets/en/fig9.svg": "66320fe72e3a454d6dafee420589f6ef29ffe88e5029f0ada542afb95331e9f5"
+  },
+  "rights": "Original figures: Xinjun Li, CC BY 4.0. Incorporated screenshot content retains source-specific terms under LICENSE_SCOPE.md."
+}
