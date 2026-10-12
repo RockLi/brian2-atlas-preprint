@@ -1,0 +1,15 @@
+{
+  "schema": "atlas-training-increment-gate-v1",
+  "gate_sha256": "6ad3bc786a251b7cf14d708bcd3b5f0a3f1dad20425d5d35c4321f814e21eee2",
+  "mode": "metal",
+  "started_unix": 1791818775.3067899,
+  "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "modules": [
+    "brian2-rust/tests/test_native_training_gpu_mpi.py"
+  ],
+  "b2_runner_sha256": "7583ed8003b2c4c85542d115126067855d82ba42b83530ee064ce38ad49515f4",
+  "b2_train_runner_sha256": "dead3375100f51489f16e19e6a88f4689f6e248cad00503961a355fc335b9a52",
+  "exit_code": 0,
+  "ended_unix": 1791818816.732398,
+  "collect_only": false
+}

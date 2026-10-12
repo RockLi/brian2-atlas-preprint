@@ -1,0 +1,6 @@
+{
+  "brian_version": "2.10.1.post241",
+  "training_api": true,
+  "simulation_binary": true,
+  "training_binary": true
+}

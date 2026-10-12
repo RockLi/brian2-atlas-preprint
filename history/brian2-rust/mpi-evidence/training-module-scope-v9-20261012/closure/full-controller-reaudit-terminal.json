@@ -1,0 +1,12 @@
+{
+  "command": [
+    "<legacy-source>/.venv/bin/python",
+    "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/run.py"
+  ],
+  "pid": 58393,
+  "actual_wait": 0,
+  "wait": "subprocess.wait",
+  "seconds": 490.62578415870667,
+  "script_sha256": "2e1e22a0d2660d1f956996b940ce3b0d7d7a47a796a49a082ea9e19968044c38",
+  "log_sha256": "299da3d4565110b92ff1c10993eda54249de0bced7a3e6f96fb72afa4fbc4829"
+}

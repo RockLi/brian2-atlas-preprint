@@ -1,0 +1,11 @@
+{
+  "actual_wait": 0,
+  "passed": 51,
+  "receipt_sha256": "dc93c08c385f039279a0b0bd21bc94cebb11212322f67850041ca399d0d35e86",
+  "log_sha256": "d17f12f16aca2a34e2672b8d1e7eecd07c1eb7f27c76aaceaa627a4da38bf6df",
+  "snapshot_sha256": "29c7501d9e1d665d278d9422e9f3017e50c02164a7eeb088e1accaf7212dc835",
+  "current_sources_match": true,
+  "runner_unchanged": true,
+  "complete_goal_proven": false,
+  "cloud_calls": 0
+}

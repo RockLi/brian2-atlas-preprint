@@ -1,0 +1,638 @@
+[
+  {
+    "path": "brian2-rust/examples/modal_native_training.py",
+    "source_blob": "d686a216a58ddc413c2d7da4b9c91afe5a2452a2",
+    "sha256": "8879c22f87220a581d5f597551688ab30ac4c39f464d36662482b9b90582a33d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/examples/modal_native_training_v4.py",
+    "source_blob": "366a9351c4dda8ebe6cfeb4026e408503357b640",
+    "sha256": "acd1b23d496d0d65b2629158351404ad54bbc29607e1878bb3b5f0d8829aaebb",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training.py",
+    "source_blob": "d28a6062693f6374549df2fcc22279386c312761",
+    "sha256": "66ce6f1e7de7cd1032006d79ebfe1d4ec5f278d664ae75fd84bc5cef98c4d1dc",
+    "mode": "selective-hunks"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_batch_locals.py",
+    "source_blob": "cd0946ee4ade671c31f11e01c1d32628d663b9de",
+    "sha256": "e9797f69ce95d252281c8dd14ea7a77b0644533d268e004cfb7f37ee54fec1cb",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_batch_poisson.py",
+    "source_blob": "9ba40a74e6cd0bcf4cc30e69d16bfb1ab22802f6",
+    "sha256": "2292517849d60bc37d639505bcb020a1feb9acc67e857de9e22b22611636e5b9",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_batch_random.py",
+    "source_blob": "954ec8dee617ff99a486310cc8e8da0279a398d0",
+    "sha256": "3093a47616c7d8834f81bb356d2aff3c52b934e95093d030dc638ea1093de1a0",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_brian.py",
+    "source_blob": "6411d803e3e861583c2aea6aa2321b7cdf31ec26",
+    "sha256": "2e962c43953c3fc136b9fc79cf420dd84883db7dbeafee880c97cf6dbda73384",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+    "source_blob": "9cabf0d15329058062418dd21634f9cd759b0ad6",
+    "sha256": "bfc99dc6853813fd4b02608eaf7494ed2d730e37cd56154ac9f773132be0817f",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_callback_noise.py",
+    "source_blob": "53c0e06f8d9e2afaec14c2edd0d7231cf93c2686",
+    "sha256": "c43defb1e7397118d2541319461ed0879a7b9671d21d85691cf2ba5ecec1a1a3",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_callback_poisson.py",
+    "source_blob": "8c586d3d82a37862c5b4aed2e5a8625c44a74ee1",
+    "sha256": "33e2ceef40c6ce4072f9542c244b23cef2b71245c28049635edaee9da1b1a8dd",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_callback_scalar.py",
+    "source_blob": "69763f49db3382181cb972ab30ca41a4e1ee3ea3",
+    "sha256": "c6ad8172d481a5e79c2e86a29013ed6fa6394ff4b1d445f358391885a9fb615a",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_callback_vector.py",
+    "source_blob": "a0205c317b6e3d26f09896bde0cac1c412646ec4",
+    "sha256": "7783d602c0293d9dd03b9cc6c998cca0807ead43b179d48be5e6502e975d49a8",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_cuda.cu",
+    "source_blob": "67ca5dad582f3894ae1c0002fae1bcdec2a43a39",
+    "sha256": "e45860e2a15dd3015aaef0d966af674d56c6c88c56c674bd7f47a9cf19047fcc",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_cuda.py",
+    "source_blob": "e3dba5b2b8dc474bedae9bf9b8476edf3f55c5bf",
+    "sha256": "a214c8f24e99589728623f20bf67506d03e9c99484d959dee9a01aab990d9bb2",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_dynamic.metal",
+    "source_blob": "8281fcd8f1906493c0acb5d80ef593da30947ecd",
+    "sha256": "6beae8d470dc8cf479c4aa09dad80abbe0f1ae96cfa7c4c30f6806381e3a2b79",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_dynamic_mpi.metal",
+    "source_blob": "8c746c5f6373fb81152d76fc1c8b7a7995c7da62",
+    "sha256": "721308fe433351e1d10e1d8a910b92a455667c28f8a107839cd15da33e512a9b",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_effects.py",
+    "source_blob": "a8b6493b986b1fed3357b68d7525cfc648c5ac31",
+    "sha256": "5a687a70740e54db82c9b8f7860a3110c6f45fa4e0b8c160d5d7cd497a0b1f35",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_event_captures.py",
+    "source_blob": "474ed4a7186c01892fb6f296236d6d3daa57e12f",
+    "sha256": "740313aaf2a5d7fc5d18399e1f88e8dc376acb755c22911402c41cd81347dfc3",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_metal.m",
+    "source_blob": "ae019d49668a336dc0c7c257dc8fc3e3598b10a4",
+    "sha256": "1348fc5f35674adfc51e5ab0a96115587cace9239ce89629164868dfa2974e0d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_neuron_whole.py",
+    "source_blob": "50cd3c7ec4d45a834fc534a252cf179bb9e71056",
+    "sha256": "900b0de8eb1d77fe808b5af194289f53b80f6140f689fea5f844f16f17f522d9",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_regular_whole.py",
+    "source_blob": "23e3e8f67d87388b6be9c51f8f41cfc1ffb9f7d9",
+    "sha256": "f58a52658ba656cd72079512ff0916ac5207e01c3131ba9028cb6cd09d53ec9b",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/python/brian2_rust/training_threshold_noise.py",
+    "source_blob": "dff5803b2b78dee040005a433aaeba7b59a7d169",
+    "sha256": "a18c8e7567ebf1eaed4cb5b9b571c2eff20843467d2959e5e8993169e080e55a",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/src/training/dynamic.rs",
+    "source_blob": "8a035bf33e9361f98e88716deabe1e4ec25bf2ac",
+    "sha256": "716392b5c285f7ac53a23cfa20ebc53ee1c151c4e80b1f9eb3ccd78c320421a9",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/src/training/dynamic_gpu.rs",
+    "source_blob": "76ba8cff473d00f3a75aa701a57dea545b9b7458",
+    "sha256": "8f13843f99da4436f5ff4d8f7ff6aa9eb2642677e78c970a37a9e06918bb951a",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/src/training/poisson_cache.rs",
+    "source_blob": "696bd03296295b2a7b8492b6c69a1944027a17ca",
+    "sha256": "aa27445410b53a95adf94552e3dc84f9b8020782e900a152846b51608d3e6c88",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/src/training/poisson_gpu_cache.rs",
+    "source_blob": "ce73d27c06943a810656e081ab9f5c2ae252d431",
+    "sha256": "aa42c1f453208280c74e7c77fc38e0c2b3bfef0c424ccb4003e89e318abe7134",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/src/training/poisson_ir.rs",
+    "source_blob": "1839f90ee78034f4ed2ee922ad5104b9ae9ac1da",
+    "sha256": "7d36c5caef30e9ff90795aa3b97474f16c3c083a5d11e79d3bc8f6248e032f0e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_modal_training_run_control.py",
+    "source_blob": "4906b48a3372d31d77f02c104ea94e86656c59f2",
+    "sha256": "8f12f31b5c01b48b437e7d6229f0978947ce4983f1fbce4c1f203341ee91fe2e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_native_training.py",
+    "source_blob": "ab21753d95f1327ad7f2c3310642d2085f4eb4df",
+    "sha256": "c0ce01ae9879d00acbb3eb415d7e4e25d31d1d725cb8944935efb72752903a5a",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_batch_poisson_captures.py",
+    "source_blob": "478dd1593d53b54913085014ad1bdb77bb4ec12c",
+    "sha256": "ac916bd7f64d905848af9b2c4af489286a8a8b339b31eb726c07bd13808d43df",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_batch_poisson_compile.py",
+    "source_blob": "52a6f756cf77f59565b838cff1969951ecbff7f8",
+    "sha256": "da626eb620b7330e95645f64e6224eaaa22d7a9d7661c68d251b4f73ec635c5d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_batch_readonly_captures.py",
+    "source_blob": "af37944f7c08defca01766993e85fa6a99c9299a",
+    "sha256": "862b03f5333b818a1c512c09261d6760ea82393f4656979d6dc7d83376d0bdfb",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_affine_compile.py",
+    "source_blob": "b591758ad8987dcae0b5105c3d5f9b39c1ae22d9",
+    "sha256": "2c58c589e7e1966e59c1e8088b3d0496c9b0ce640fa74f2ad609455faba9633d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_affine_noise.py",
+    "source_blob": "f2f3308df1b9ec56cd7f24f941a7b992d620c8c3",
+    "sha256": "3532f8da474a2fcf6d5696017b17c7f6b8154969c53b0d28110f37c67a031310",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_body_noise.py",
+    "source_blob": "1658c0035f65a3a79f3a5faffc81e933f25d382d",
+    "sha256": "dbf105aaa51cced6a2dd2f5342b3eed28343777148226c45882ae794b0f7f07f",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_body_noise_compile.py",
+    "source_blob": "6f5c1b0602f47afa9f97f662ccb7ec1f81298a83",
+    "sha256": "099a402410aad077abc9cef3d64f6779ab3a940533ff6a8f140148255e860334",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_body_poisson.py",
+    "source_blob": "cbf265af1e4606a2f82f21e13a508e837e3938d0",
+    "sha256": "0faaaf888d50f48cd57ed1cdbbd4ca75930146319fa31fadee432a6b7c672023",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_body_poisson_compile.py",
+    "source_blob": "685ac9bdfab1542e903fcef220e6399d13736f09",
+    "sha256": "eb220c49f38ce5b51fcee1e14d435ae85679b26140b95e3d52f9b84ea6b9d407",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_fixed_shape_rng.py",
+    "source_blob": "06780788d15ea5cf123f1426ef509a957f5257b0",
+    "sha256": "6dcbc6b0dbea1655aac3ed612570075f460c05c5e71c50fda088678831cd512b",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_inferred_compile.py",
+    "source_blob": "0da4c0a28c7b80aa7e960a307797eaa9fd27403f",
+    "sha256": "f5cb17250b97c8cbf4cc33c4602574ad245c3bcee20c11865a0d63c823a93d10",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_inferred_noise.py",
+    "source_blob": "5c40d59197c92e4c7b89cba960b4d560db2022cc",
+    "sha256": "28011dba694bc05c58d66d4c5137e6671b1ae31a711a94da646ef0550dd1ca1d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_noise_functions.py",
+    "source_blob": "92392ff699e6d5b4d0107d5f1abdfcaafc9a3b7e",
+    "sha256": "0f396efbe97c5a0317cfd5507f01ef785ba7eeed7dbf9f89b515cd9ae2cc62c8",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_rng_alias_compile.py",
+    "source_blob": "492da791da1099822b692329beed9c960a2ba37e",
+    "sha256": "e82b104186927fd3587128e90ac97d3c2115eb9b744f6650c09b4754b0170b71",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_rng_alias_functions.py",
+    "source_blob": "17e3101be42515c3de6a552f7ffecabd738c4d1e",
+    "sha256": "f13c46f6f53a05b652c9787b66af2f595da698130efa2534d560c119c659eef6",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_rng_alias_noise.py",
+    "source_blob": "a9f8f846bde791ffcf1034af02f78b15493af7e6",
+    "sha256": "05e9f5354ba757be5232b724a69a8cc2fa4a5a37f94b026d8ebcadbbe9d8da65",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_scalar_compile.py",
+    "source_blob": "6ee0878947b491e603f1c36d9e00adaef59d5e7c",
+    "sha256": "8986bbd48c7ae2aec76a9a9be81aa32ceecf14331db0e5781a56337c9030ee52",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_scalar_noise.py",
+    "source_blob": "429a4446ac4a70514068ecc500003ab5db4f14cb",
+    "sha256": "149340cf6854e745f6108bed7c6353ef7257e42559d62a6b751111d2deabd0a3",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_scalar_poisson.py",
+    "source_blob": "3dcca7596433cb6cd705b41f7be2604b47526263",
+    "sha256": "24b480e7095f96ac6a1b6ab8aeaa147826c9810465e298fed3676afc95dd241e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_scalar_poisson_compile.py",
+    "source_blob": "ef830144f80c053aace772ddf3ea8ada41244167",
+    "sha256": "89ba64af2211281e793de2611fb113a830c87089836068c79cadd70e570dc132",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_scalar_poisson_functions.py",
+    "source_blob": "d7844cec709b6fe48e107876e6c0eb85f15b5a9a",
+    "sha256": "4e845ddf838aafce7a504e4559fc7aae5a5bda729c68166d405b2009316cae39",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_uncaptured_compile.py",
+    "source_blob": "69e012c6158b1f406d6a9dc402bb9ac619c6336d",
+    "sha256": "37d946811c8193655114ab475b2dfd336dd674b363f7f85deba827183df020dc",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_uncaptured_functions.py",
+    "source_blob": "d7bdaf7a282285d3e57ed1f3fac8ba90ebfdcc9e",
+    "sha256": "cf0fdd06bfa0469eb82fc8b5ac5cd0b84a8a800626c2bba7a83df17de3167e6e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_callback_uncaptured_noise.py",
+    "source_blob": "23e1ed79e8ac573f42a08b397270b95c3885ec0e",
+    "sha256": "6ae5bbccbc64a4dcd73082e9e25070ccf8b32484c2d80d7539ed4720f5303383",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_cuda_exports.py",
+    "source_blob": "d89b010329943b8f616714c406b105be78d0fbdd",
+    "sha256": "abefe46fa05343e5f8ae1640fc85fdc52555b7b4d540f5faf51b0268e852ea3f",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_cuda_source.py",
+    "source_blob": "4e79fa13f277e2942cd59039103307a824593b82",
+    "sha256": "43184ed46c3083e6b0d3f74a0491f5a586959f201b35f5132acdc92bf592185b",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_explicit_poisson_size.py",
+    "source_blob": "a7ab610554f512edecd2ac2483cb681e9a21e538",
+    "sha256": "aff664a387a3628f3c557836757c080c267e2466c61cb5116424f37d08a9b30d",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_fresh_readonly.py",
+    "source_blob": "6f75d30c208bd7bce58a84bca7f39cc0c5aa4161",
+    "sha256": "fa3023ab951af303963c4e5fdd32ad318aa6ba5e623733fe0de3799eb006c03b",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_full_slice_effects.py",
+    "source_blob": "fa65f8421d84aa61ca9dffaf566858e79709f636",
+    "sha256": "c7b1c05c7e5d79628f424cb5b85a24682d3fddc4cfd8a1d3ad254a4be87667e2",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_indirect_gpu.py",
+    "source_blob": "b8fefc636e8e60c85c33faf053c4c234c9effbae",
+    "sha256": "dd2db52070a6894f73ab7391f31602a1af2759fd0fd3ce2031e5ec7c8a24cd11",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_integrator_callback_rng.py",
+    "source_blob": "79d5f04db3e3d642727d0a8017b959817829582a",
+    "sha256": "4e7b200abc587772e6197c020e551bb738753f106d086da261f4edfe6ef8c00e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_integrator_shared_rng.py",
+    "source_blob": "378fc2b1ccdc3475a6d89be2e77e89fe8e237bca",
+    "sha256": "ae8e4eb3c5a361cbc2533074ca6607891b5c4bca49ac5a18ab73f356c974b6c3",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_mixed_shape_rng.py",
+    "source_blob": "4e4ccf216862ac3053b7f6dfa15381f60c60bce7",
+    "sha256": "ddbb01103819c0ec240283394b8926ded48bae7c5e4e45824da96cfbb0764847",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_mutable_captures.py",
+    "source_blob": "8cb0d21d43378a36dbfa464182fcca0a359d5e04",
+    "sha256": "a9659d9fc93127baa7ecd46e2fd4aff45a7debad40aa89ce0d9b6726437aae84",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_nested_index_codegen.py",
+    "source_blob": "41ca111e2d884dcde72f27249a39daebc2eeaf79",
+    "sha256": "1c41e53190a7fd065eea9246d2ad1c3a22048787a65d4c727378ed36146dcfd3",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_neuron_whole_integrator_rng.py",
+    "source_blob": "e76496a2cbe52d9cda3b0555ddb65bc0fe7fae48",
+    "sha256": "ab82bae3cc0738e95d74eea098e700c40ebc9116958c5eb7adabe6d084b04d83",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_neuron_whole_refractory_rng.py",
+    "source_blob": "a652512204183828bad4c139f2b81487f5719efe",
+    "sha256": "db03c43ea583790aeea098cca001e48a184daf099da2ecee23bf87e9c554ed34",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_neuron_whole_reset_rng.py",
+    "source_blob": "1754e9d1fb0c982e3276d9f013e9db43c9943abb",
+    "sha256": "9c8f8f2b8216d801bdec9648009eda819e672b768efdad8f749f4e3f1f52654f",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_neuron_whole_rng.py",
+    "source_blob": "311de9b00c46d9219447d25b6a32654bf06ee42a",
+    "sha256": "dfc23b977abee8db4804ff098b4dfdfb8878482b56dc57ab81a9252ef9162641",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_neuron_whole_xi_rng.py",
+    "source_blob": "7dee37f5a352c49ed8b95ee1694672b2087946b4",
+    "sha256": "eb7bffae16853ab5672c123a1d4e6720f176ba66fd6aab192a30671097ddd1e1",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_parameter_gather.py",
+    "source_blob": "bdf37bc8d59e43c90df6dcbdbea8f785bc4ef5e8",
+    "sha256": "8e19f7d9a680b5c615484dcd29b1cebf8d7145cad6220549763ec57fe4307140",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_poisson_capture_rates.py",
+    "source_blob": "04114425561bd361d55dda9caf2c245dd2f7c693",
+    "sha256": "9cbe1412bfa7c06bfaa76af6ce42f3368da9cd3c64d1fe9fb0b9807177f01da2",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_poisson_masked_whole.py",
+    "source_blob": "1009e788868845ec089e76ba20d0dc914f2ecfec",
+    "sha256": "98d6f338449d33e1dd38846db08eeb2ecb6e0c87c18824be8abc59ab29bbfb9e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_precise_clock.py",
+    "source_blob": "cb5b67a6ca7c563a39ef744c3975b7a000b24615",
+    "sha256": "3fef465cc848d8c2504f8efb3c209054a813cf4a5668f87343f05a89d96bdf6c",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_callback_rng.py",
+    "source_blob": "d06f4f8b8094e0b17968de8f9fa8e81d81e6ef83",
+    "sha256": "3ef6b55b1f927bdb8beaf62d91c2f389824c3a775d853c5f524eb172306697ed",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_callback_rng_compile.py",
+    "source_blob": "4bcdb2d5fd0600cb2ee73b16a810c2edfa589783",
+    "sha256": "0b52c7f8fe839c50c40525d8ebe8cb2b5e789d1b886cf63fd7edb19c785ccfce",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_hybrid_vjps.py",
+    "source_blob": "9631f60b21fee569f59e0dac501f3437b420d9b9",
+    "sha256": "89d6e73cc54aafd547c9889cb6cfc29d92560382b71eee05e6fca3694e243095",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_scalar_fallback_rng.py",
+    "source_blob": "1acef26e0474811a28fc0db86d7b4e6d124c1627",
+    "sha256": "f14642fad280a85f63e2dd9a0f8ea110c83226cfae3444548a457f599ccd10c5",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_shared_rng.py",
+    "source_blob": "991e060d098c3cd886de056a796f5da8ae863bc6",
+    "sha256": "580bf7f4f83e241e9b264b2663cebfe18da798374f95e5ecc8e94944fd02db70",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_vector_rng.py",
+    "source_blob": "b1d98f5095f4ab19814909b07e237b14d1be1960",
+    "sha256": "c25f66594cb715196e8797ea56bf99e1ca79e4b2602403ca88ee41db6f0615a8",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_vector_rng_compile.py",
+    "source_blob": "9a8e389bc600dce35ffeeea064a0dbaed8ff78c6",
+    "sha256": "560facc70d28eb76e57c14a56c268570028a46b305a98d8dda0914a459a18142",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_regular_whole_compile.py",
+    "source_blob": "d5a2587b7e390fad0e3717fd56a2da0d1c52e750",
+    "sha256": "781609305b16cb8ca337594cf3c261ba48fbad4f29882499ee36cff78b676822",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_reset_callback_rng.py",
+    "source_blob": "5207db975e0fdb2bc85224df0814551f8d698798",
+    "sha256": "6c0698b7f137abfa612b0f3dda533a50bb303bb9d049406015ed36e4c94486cf",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_reset_shared_rng.py",
+    "source_blob": "770c5e669ffe5a208808d3e0408e9db372b86287",
+    "sha256": "bb994d489efb067388efa09729f6acacfac944beea05b90828420260c7a82a29",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_scalar_event_rng.py",
+    "source_blob": "0344e61a567d87c4bc20660fb150072246b4d6a8",
+    "sha256": "0ecb324e455b04fc9684d4bb234d4cd602888b5c6c1d27dbf04c7b93f0481a1c",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_scalar_event_rng_compile.py",
+    "source_blob": "e84e02f16ecbf1ad91cd0748ba6800ef8196915b",
+    "sha256": "9573fee39bb4327d7412b639571104ba444e21906b98dcce7b6ee0951dea33d7",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_scalar_event_rng_functions.py",
+    "source_blob": "f3f6e843e1ce8092660c5372573cbcd9ad497dbf",
+    "sha256": "9dcb8ce0a4473c12e4c7275af0a91889ef6e5d88f30bac6fd98860931bf8e5fc",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_scalar_event_rng_guards.py",
+    "source_blob": "9e31c332ab7c9cbc17faa9355ce75426b43de0eb",
+    "sha256": "1f3f7335f3795517a198ae1b9f89b39f87dc6f1c167b1d41207c5ed7f9838016",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_selected_poisson_candidate_domain.py",
+    "source_blob": "0b0757d3ece4f018cb0fdbd14d551c268c12583a",
+    "sha256": "47c79f2ba820b74fe22b3ebf858e1a1a0234c0a8f30891490b4c6d9afaa5ca50",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_selected_poisson_reset_surrogate.py",
+    "source_blob": "854fec3039aa3ca1aa64006e567d3c8abd7d2cc7",
+    "sha256": "55b347385be27076fd3dd45ae9173302cd84e48345379588cf2d3b7d79189191",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_shared_capture_views.py",
+    "source_blob": "19e0f3ce86b59593f013d52b528f26a9807ab129",
+    "sha256": "e8fdf34bb4952fd320b2f34085e28e04ae97af8e73111d70c6242b7228c71670",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_short_term_plasticity_vjp.py",
+    "source_blob": "718cae7597abef9bb78f68955b236253f482b3b7",
+    "sha256": "5d9053ebe7520501ffae16fe1a0ab9d86838bea45921b0206e5b61921ad3c9ad",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_synaptic_scalar_fallback_rng.py",
+    "source_blob": "ba2707600bde320b219c8489170eab8a58778ae9",
+    "sha256": "4edbdf002546949541a9928c6eeb8c99005f813f2bf3f44dd82edf91a622c9be",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_threshold_callback_rng.py",
+    "source_blob": "0a90105e39b358fe199f08d5c8231876617df0cf",
+    "sha256": "c7da88c94a4e9224d2f999c76c648c15d554628167ec5d72cc4663bb812f34ad",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_threshold_shared_rng.py",
+    "source_blob": "2be8ce477a5a0dea3e173033e622809846e6c088",
+    "sha256": "44af435ab6c04ab1f7bd638bba6a2334d15ce7e0c0b10efe479c52abcc68cba9",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_caller_lengths.py",
+    "source_blob": "d765ae35e9e0f5e7848cdbd8cebeff092dc3bd2f",
+    "sha256": "686d5719a88ab84bd8fe12b9e995f77e729ef2df4a248f9d697a83d4ffca3ea7",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_mixed_typed_threshold_rng.py",
+    "source_blob": "a89d199dbaa4cf386ac00623924902f2a13b13ad",
+    "sha256": "de2e763a612915633c7907522b6da83a2bc0ca91498196c1ca0f0c53c54dae00",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_neuron_phase_rng.py",
+    "source_blob": "77476b6ffec80f5079a98302ad9002f8de5bf05d",
+    "sha256": "771aee978631e7df74191109ea8bc31a8f7a5f60c583d81e7e6163c49d8285cf",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_phase_signed_uniform.py",
+    "source_blob": "96cb185ba58d6e5266a1268065389ea15dd411d0",
+    "sha256": "76b9aa0de867bfbf4c42a373bb24b7de53564e16d4f009d390318d1b888f8861",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_reset_alias_copy_rng.py",
+    "source_blob": "576478ca1686659a5d134bc6e68dd2cd1da4a406",
+    "sha256": "facb489a2fa6f6a2c3943e3c77d9a31710bb0986d5d43a2cdce022aa6400beeb",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_size_rng.py",
+    "source_blob": "12d3207cda21afa4169276ebc73bba370ce0ff12",
+    "sha256": "fca578382dc01a3ecc7c6d6148e35abbd0c0796d7ad99e4baffdc90c200d487e",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_threshold_predicates_rng.py",
+    "source_blob": "586dd03ee37004613b5f657c738b8d4f3d3ce45b",
+    "sha256": "5d1322c42cf20d74cf90f719c0fdb5005e18c73d187715d454103f4ea3eb9804",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tests/test_training_whole_typed_threshold_rng.py",
+    "source_blob": "9f513ea04bf469ece8dfdcbdb29c9404bc15008d",
+    "sha256": "08dd59481bcd8042d991badfb0158ed5e09400b38fd3c854bac6bff251cc5475",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tools/verify_native_training_crosshost.py",
+    "source_blob": "6dfd2c0e5890ad0b7a4bacfb3519a782eb44e4b5",
+    "sha256": "9aa56521f5bd3c4261837a59228613ccb98f9256903d4c2b65cd9e67d76d6607",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2-rust/tools/verify_next_brain_mpi_training.py",
+    "source_blob": "0cfad4523b050baba839e84b1f083a55274dcc6b",
+    "sha256": "65a69b3a37c89d977402cefc6f09ff4d9f7b3b203cb57ed66e4180f7e5acb5e5",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2/codegen/translation.py",
+    "source_blob": "6b8668a0a6f73c9ea49a92ff1d4dd9a2df462c2a",
+    "sha256": "48c866291a6ae110efe65e046d7b78844ab907feeff9babfa9f28d417bf4a78c",
+    "mode": "review-source-delta"
+  },
+  {
+    "path": "brian2/tests/test_codegen.py",
+    "source_blob": "5aa132b36a5d8059f91e42d5546bfa214a7891d0",
+    "sha256": "3bc4b8375409b3b0e63478ef38bff0bc66ef4d59ea5267e7de9c3c30f24908d5",
+    "mode": "selective-hunks"
+  }
+]

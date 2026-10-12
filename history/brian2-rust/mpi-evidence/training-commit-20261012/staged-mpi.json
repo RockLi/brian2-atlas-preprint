@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "<legacy-source>/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "brian2-rust/tests/test_mpi_training.py::test_stdp_reference_exact[False-2]",
+    "brian2-rust/tests/test_mpi_training.py::test_segment_checkpoint_branch_exact[False-2]",
+    "--junitxml=<legacy-source>/brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.xml"
+  ],
+  "actual_wait": 0,
+  "pid": 69285,
+  "wall_seconds": 14.021936834033113,
+  "scope": "isolated staged checkout; genuine local two-rank MPI and fresh-process checkpoint restore"
+}

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "<legacy-source>/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "brian2-rust/tests/test_native_training.py",
+    "brian2-rust/tests/test_training_stochastic.py",
+    "brian2-rust/tests/test_training_dynamic.py",
+    "brian2-rust/tests/test_modal_training_run_control.py",
+    "brian2-rust/tests/test_training_cuda_source.py",
+    "brian2-rust/tests/test_training_cuda_exports.py",
+    "--junitxml=<legacy-source>/brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.xml"
+  ],
+  "actual_wait": 0,
+  "pid": 68440,
+  "wall_seconds": 38.06496725004399,
+  "runner_sha256": "23353fa4ba48e2d0ee6397635ffd276ead86635382adb9dd39cab48e94c5276d",
+  "scope": "isolated staged checkout; compact debug build; GPU/MPI not enabled"
+}

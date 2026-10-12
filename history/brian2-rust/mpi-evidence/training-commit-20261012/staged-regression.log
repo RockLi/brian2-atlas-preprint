@@ -1,0 +1,12 @@
+...............sssss............................................ssssssss [ 40%]
+ssssssssssssssss.............................ssssssss................... [ 81%]
+.....ss.........................                                         [100%]
+=============================== warnings summary ===============================
+brian2-rust/tests/test_native_training.py: 6 warnings
+brian2-rust/tests/test_training_stochastic.py: 86 warnings
+brian2-rust/tests/test_training_dynamic.py: 16 warnings
+  <temporary>/b2-training-commit-ykfih_y4/brian2/parsing/statements.py:51: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'
+    parsed = STATEMENT.parse_string(code, parseAll=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+137 passed, 39 skipped, 108 warnings in 22.45s

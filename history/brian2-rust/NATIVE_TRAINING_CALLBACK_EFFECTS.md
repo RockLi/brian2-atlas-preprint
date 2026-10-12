@@ -378,3 +378,13 @@ scatter后跨边重读已按原始NumPy阶段顺序实现；临时数组/别名�
 最终787输入/843资产29完整模块已启动，同一冻结版4项实际Metal检查通过。
 共享可变捕获需要原生状态存储，仍明确拒绝；其实际原始反例与复制/标量化
 路径均已验证。详见 `mpi-evidence/training-callback-callables-20261007/README.md`。
+
+
+### 整列 refractory 更新（2026-10-09，267冻结验收运行中）
+
+固定/时长表达式/Boolean refractory 已与整列随机积分组合接通，保留完整callback与条件caller写回。10 CPU全梯度、18原子性、4非零零率和5Metal对照取得开发终态；真实MPI2/Metal冻结作业wait0，23446dispatch。932源码/983资产、107模块collect15483；267不同本地身份正在验收，完整107未接受。上一版931/982的311已严格接受。详见 mpi-evidence/training-neuron-whole-refractory-rng-20261009/README.md 与 NEXT.md。新探针确认update/threshold整列callback复用stream1，下一轮须修复；整列refractory阈值/reset与完整原始范围仍未全部达成。无云调用，跨机器后置，goal保持active。
+
+
+### 整列跨阶段随机流／refractory阈值（2026-10-09，隔离候选）
+
+发现update/threshold复用callback stream1，隔离候选已按调度追加独立流并接通refractory阈值。120个不同CPU身份和6个Metal开发场景通过，真实MPI2/Metal候选wait0、27046dispatch。生产932/983保持不变等待上一版267严格接受；候选933/984、108模块collect15843，276本地身份正在验收，尚未合入或接受。详见mpi-evidence/training-whole-neuron-phase-streams-20261009/README.md和NEXT.md。reset实际NumPy empty/partial/full均完整调用一次并抽样/修改4列，原生绑定仍待实现。Uniform legacy允许反向宽度；不添加错误拒绝规则。Uniform Inf原子性属于前置校验；Normal负scale/Poisson负rate与非法索引才证明后续阈值错误路径。无云调用，跨机器后置，完整原始目标active。

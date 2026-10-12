@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "passed_call_count": 55,
+  "requested": 55,
+  "report_sha256": "74fda9ecdd90ff84db4bd4836a605c2b7eefbde75a5f0a6ce9ce8d0e3ea5ee2d",
+  "payload_sha256": "78919364a6b9f1b4c6e065f9715647200259672500567f5e6cd487042ce6a2b4",
+  "actual_wait": 0,
+  "timed_out": false,
+  "all_requested_collected_before_GPU": true,
+  "physical_GPU_count": 1,
+  "cross_host_verified": false,
+  "complete_goal_proven": false,
+  "cloud_calls": 0
+}

@@ -24,6 +24,12 @@ sources, figure inputs and the verified rebuild procedure for
 [preprint v2](https://doi.org/10.5281/zenodo.23273257). Chinese slide materials and
 editable PowerPoint files belong in the ignored `slides/local/` directory.
 
+Current engine development acceptance is maintained separately from paper measurements.
+The [training increment](validation/training-port-f73/README.md) contains the
+source comparison, historical import mapping and reproducible CPU/Metal/MPI/CUDA
+gates for the incremental Atlas port. These records do not replace the frozen
+source identities of published paper experiments.
+
 ## Manuscript and figures
 
 - [Manuscript source](paper/MANUSCRIPT.md)

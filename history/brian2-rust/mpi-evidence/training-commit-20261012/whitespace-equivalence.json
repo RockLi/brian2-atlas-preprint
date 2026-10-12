@@ -1,0 +1,14 @@
+[
+  {
+    "path": "brian2-rust/python/brian2_rust/training_effects.py",
+    "validated_sha256": "6ae081a6d997bcbf228f0311b19a9d445010e040bd58af654b7384c1b9807d01",
+    "commit_sha256": "5a687a70740e54db82c9b8f7860a3110c6f45fa4e0b8c160d5d7cd497a0b1f35",
+    "python_ast_unchanged": true
+  },
+  {
+    "path": "brian2-rust/tests/test_training_nested_parameter_frontend.py",
+    "validated_sha256": "aee1b2243468edd22b1bbf61735e0ead083821f75ad30d7dab3578dc9aa62f22",
+    "commit_sha256": "4996d2e8809071f94bad11b6fa670b0dfabf625e9ecbae720dd0541ec7046ac9",
+    "python_ast_unchanged": true
+  }
+]

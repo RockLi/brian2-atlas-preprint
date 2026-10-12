@@ -1,0 +1,8 @@
+..                                                                       [100%]
+=============================== warnings summary ===============================
+brian2-rust/tests/test_mpi_training.py: 30 warnings
+  <temporary>/b2-training-commit-ykfih_y4/brian2/parsing/statements.py:51: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'
+    parsed = STATEMENT.parse_string(code, parseAll=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2 passed, 30 warnings in 12.88s

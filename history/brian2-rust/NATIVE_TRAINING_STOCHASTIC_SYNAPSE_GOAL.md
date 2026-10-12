@@ -1,3 +1,95 @@
+# 随机方程与动态突触：原始范围实现与验收完成
+
+原始 S1–S4、D1–D5、C1–C8、E1–E4 共 21 条要求已逐项通过源码与实际执行审查；
+最终 11 个验收条件全部成立，`complete_goal_proven=true`，缺失条件为空。
+跨主机／多物理 GPU 验证按用户要求后置，不属于本次完成范围。
+
+实现包括 Brian 原生加性 Euler、随机 Heun 和 Milstein，多状态／共享／命名噪声及
+状态与参数相关噪声幅度梯度；原生随机地址、重放、carry 与检查点；逐边连续及
+事件驱动突触状态、pre/post 顺序、STDP／STP、完整事件路径梯度、full／TBPTT；
+延迟队列、summed 状态、不应期、别名、外部时间输入，以及 CPU／Metal／CUDA
+和本机 MPI。原有有界 SSA、资源预算、Brian 内置随机积分限制和明确的输入契约
+保持有效；这份完成结论对应下述原始范围。
+
+完整范围保留 272 个模块、34,754 个有序身份：CPU 12,940 通过／21,814 经认证
+硬件跳过；Metal 23,877 通过／10,877 CUDA 硬件跳过。每个后端 266 个非空测试
+进程实际退出 0；6 个空辅助模块的收集退出 5 按空集合契约核对。CUDA 当前生产
+源码的 236 个不同实机用例通过，包含全部 175 个原命名 CUDA 参数；编译／ABI
+检查 21 项及同字节 Rust 库 51 项实际通过。全部原始身份与断言范围保留。
+
+原完整会话 1304 的外层退出信息过期，实际退出码保持未知；每个测试进程的真实
+退出、阶段日志及 XML 均保留。随后同一不可变完整控制器重新审查现有成功结果，
+实际退出 0；完成审计实际退出 0。4,352 份原测试记录前后哈希完全一致，未新增
+测试进程，未新增云作业。旧失败与各版本证据保持独立。
+
+- [逐项完成报告](mpi-evidence/training-goal-audit-20261010/completion-gates-v9-modules.json)
+- [真实闭合退出与完整性记录](mpi-evidence/training-module-scope-v9-20261012/closure/receipt.json)
+- [CPU 完整验收](mpi-evidence/training-module-scope-v9-20261012/cpu-accepted.json)
+- [Metal 完整验收](mpi-evidence/training-module-scope-v9-20261012/metal-accepted.json)
+- [当前 CUDA 全部原命名参数](mpi-evidence/training-requirement-cuda-v5-20261010/named-CUDA-accepted.json)
+
+以下保留各开发阶段的历史记录，包括当时的未完成状态；当前结论以上述完成报告为准。
+
+---
+
+2026-10-09 scheduled vector callback RNG：array/重复索引vectorised中接入数组 Normal/Uniform/Poisson/混合流，pure与mutable captures，跨scalar块/多个vector语句/普通randn保持不同stream；认证pure/effect context可组合，修复ShapeEffects arrays被domain operand list覆盖。125不同开发测试实际exit0（79新46旧），含真实Brian/carry/checkpoint、全银行/连续初态full/TBPTT、score/非零零率CF与第二元素非法参数atomic。实际MPI2子进程32868 wait0/Metal1342 dispatch。910/966、80完整模块冻结，11261唯一身份collect wait0，旧9966保留，新1295；462同版正在预检，未接受，完整80未启动。vector scalar RNG/whole及任意sizes/integrator-threshold-reset RNG等范围仍未完成；cross-host后置，goal active。见mpi-evidence/training-regular-vector-rng-20261009/README.md。
+
+2026-10-09 scheduled scalar callback RNG：公共 run_regularly scalar块接入 Normal/Uniform/Poisson/混合流，pure与完整mutable captures，once-per-clock顺序、共享快照/stream保留。70开发检查各实际exit0（50新、20旧），含原始Brian/carry/checkpoint、全参数/连续初态full/TBPTT、正率score/非零零率counterfactual及非法采样恢复后atomic。907/963、76完整模块冻结；9966唯一身份实际collect wait0，保留全部旧9414，381同版预检已启动尚未接受。58完整Metal保持运行；最新完整组合与CUDA未验收。Whole RNG/任意sizes/vector regular/integrator/threshold/reset RNG等范围未完成，cross-host后置，原始goal active。见mpi-evidence/training-regular-scalar-rng-20261009/README.md。
+
+2026-10-09 scalar FIFO同版冻结：71模块9414真实身份/904源码960资产SHA完整，旧8978全保留、新436；326请求身份实际存在，controller15607/pid59121运行同版预检，尚未接受/完整71未启动。旧295接受和68 queue53322保留，运行58 Metal保持，原始goal active。见mpi-evidence/training-scalar-event-rng-20261009/README.md。
+
+2026-10-09 scalar FIFO event RNG：Normal/Uniform/Poisson每arrival独立采样，pure与whole capture接入，真实stream/emission身份不变；scalar Python refractory if覆盖全部lifted prelude/physical capture/eager检查/采样，条件内外stream不移位，关闭skip/激活异常atomic。76项开发各实际exit0，含全bank/连续初态full/TBPTT、正率score/零率非零counterfactual、guard时间序列及旧路径；两fixture失败修复XML保留。904/960、71模块冻结，326同版待接受。旧295已pytest/audit0接受，68完整队列53322等58 Metal，未启动66替换且269保留。whole RNG/arbitrary sizes/non-event RNG/mutable lanes/neuron跨列/latest CUDA及全组合验收未完成，cross-host后置，原始goal active。见mpi-evidence/training-scalar-event-rng-20261009/README.md。
+
+2026-10-09 scalar Poisson冻结收集：68模块8978真实身份、900/956 SHA完整，295同版预检controller50499/pid23823执行中，额外raw第二lane先活跃CPU/Metal/MPI原始恢复两场景实际exit0且工作源码匹配冻结。旧269 pytest/audit0已接受，66完整队列21984等运行58 Metal；仅未启动64 queue替换，232接受保留，原始goal active。见mpi-evidence/training-callback-scalar-poisson-20261009/README.md。
+
+2026-10-09 标量Poisson callback：首个实际raw FIFO arrival native lazy sampling→integer cache→共享scalar物理count，inactive lane不采样/不注册score；array/vectorised支持默认/派生rate/两流/immutable alias与过滤至零行。75开发检查各实际exit0，含全部银行和连续初态full/TBPTT正率score/零率反事实和派生rate链式VJP；初次内部赋值路由失败已修且XML保留。900/956、68完整模块冻结，295同版预检待接受。旧232已真实wait0/audit0，64队列176等运行58 Metal，旧66 269预检继续。whole RNG/arbitrary sizes/non-event与scalar FIFO callback/mutable lanes/neuron跨列/latest CUDA和全组合验收未完成，cross-host后置，原始goal active。见mpi-evidence/training-callback-scalar-poisson-20261009/README.md。
+
+2026-10-09 RNG alias同版冻结：896源码/952资产，66完整模块实际collect91935 wait0为8762身份，旧8480全保留、新282；269请求身份实际存在，controller37670/pid92753已启动同版预检，尚未接受/完整未启动。旧64预检及58 Metal保持。原始整体goal active。见mpi-evidence/training-callback-rng-alias-20261009/README.md。
+
+2026-10-09 标准 RNG 导入别名与 Poisson rate keyword：模块/direct import/closure真实identity认证，local shadow与replacement检查；lam=和literal size=None接入。58编译/Python/旧路径、4CPU/Metal/MPI原始恢复与全VJP、3Poisson正率/零率VJP各实际exit0。66完整模块冻结，完整collect和269同版预检待接受。运行58 Metal/旧64预检保持。scalar Poisson/whole RNG/任意size/非event随机上下文/mutable lanes/neuron跨列/latest CUDA和全组合验收仍待完成，跨机器后置，原始goal active。见mpi-evidence/training-callback-rng-alias-20261009/README.md。
+
+2026-10-09 完整58 CPU接受：7416身份/886源码942资产SHA完整，2516pass/4900合法硬件skip，supervisor59936实际wait0和audit0；自动进入Metal test68679，保持运行。冻结58不是最新无capture head，双端/原始goal尚未接受。最新64模块232同版预检仍运行。见mpi-evidence/training-callback-affine-noise-20261009/cpu-acceptance.json。
+
+2026-10-09 uncaptured callback RNG：无captured_arrays、direct-return、无AugAssign纯函数、直接标量return接入Normal/Uniform。认证random_sites可路由到effect，return随机结果先保存，全scalar保存不依赖capture；namespace常量caller源补齐。原始恢复/full-TBPTT全银行连续初态/边界回滚/过滤/独立Python与旧路径45项本轮真实通过。893/949、64模块冻结，collect67747 actualwait0为8480身份/SHA完整，496新身份，232预检controller74782执行中。旧scalar v2 204已真实接受，未启动60替换后174仍保留；62 queue58473等运行5859933/test60108。整体goal active，非event随机上下文、scalar Poisson、whole RNG/其他size/import、更多组合、mutable lanes、neuron跨列及latest CUDA/完整验收仍未完成，跨机器后置。见mpi-evidence/training-callback-uncaptured-noise-20261009/README.md。
+
+2026-10-09 scalar v2冻结接受：204 pytest child32157 actualwait0／audit58350 actualwait0，无skip/fail/error，890/946前后SHA、actual collect/XML同序和请求身份完整。62完整7984身份，queue58473等运行58 sequence59933/test60108，仅未启动60队列替换且174接受保留；v1失败保留。当前head继续无captured/direct-return形式，与204冻结不同，整体goal active，完整未验收。见mpi-evidence/training-callback-scalar-noise-v2-20261009/README.md。
+
+2026-10-09 scalar callback v2：43项开发与修复回归4项多批真实通过（有交集）。v1同版204预检实际wait1，5pass/1 legacy masked array Poisson capture漏写fail，890/946SHA完整，未audit/launch/完整启动，全部失败证据保留。v2仅对scalar_normal_sites生效以恢复旧数组compaction，另行890/946、62完整模块冻结，collect31104真实wait0为7984身份/SHA完整，204预检controller39675执行中。旧174接受、待60 queue85162、运行58 sequence59933/test60108保持。完整goal active，无capture/direct-return scalar、标量Poisson、whole RNG、其他尺寸/import、更广组合、mutable lanes、neuron跨列和latest CUDA/完整验收仍待完成，跨机器后置。见mpi-evidence/training-callback-scalar-noise-v2-20261009/README.md。
+
+2026-10-09 scalar callback采样：normal/uniform scalar(size=None/缺省)、randn()/rand()在有捕获数组的回调中每次共享一个实际raw arrival首事件counter样本。单列scalar临时状态、旧alias及过滤至零行语义修复；共享mean/scale全部银行/连续初态full/TBPTT、恢复/边界/回滚/重复stream/独立Python与旧路径43项本轮真实通过。890/946、62完整模块冻结，collect17064真实wait0为7984身份/SHA完整、348新身份，204预检controller58105执行中。58完整59933/test60108保持；60旧174真实接受，待85162队列只新实际接受后才能替换。原始goal active，无captured/直接return scalar、whole RNG、其他尺寸/import、更广组合、mutable lanes、neuron跨列及latest CUDA与完整验收仍待完成，跨机器后置。见mpi-evidence/training-callback-scalar-noise-20261009/README.md。
+
+2026-10-09 隐式尺寸冻结接受：174同版pytest child65173 actualwait0／audit85116 actualwait0，无skip/fail/error，888/944前后SHA、actual collect/XML同序及请求身份集合完整。60完整7636身份，queue85162等待已运行58 sequence59933/test60108；原始goal active，当前head已继续标量draw开发，与174冻结不同，不借174宣称新head已接受。见mpi-evidence/training-callback-inferred-noise-20261009/README.md。
+
+2026-10-09 callback隐式采样尺寸：normal/uniform省略size及显式size=None按两参数广播推断selected域；默认标量first+selected second亦接入，其他whole/scalar域仍明确拒绝而非改变采样身份。原始恢复、全银行/连续初态full/TBPTT与边界/回滚、独立Python和旧接口共24项本轮真实通过。888/944、60完整模块冻结，collect64401真实wait0为7636身份/SHA完整，174预检controller30024执行中。58完整59933/test60108保持运行，旧158接受保留；54完整实际wait1为2404pass/2已修正旧参考fail/4708合法skip，7114身份同序882/938SHA完整。原始完整goal active，其他size/import、scalar/whole域、更广组合、mutable lanes、neuron跨列及latest CUDA仍待完成，跨机器后置。见mpi-evidence/training-callback-inferred-noise-20261009/README.md。
+
+2026-10-09 callback仿射冻结接受：158同版实际pytest child32329 wait0／audit52642 wait0，无skip/fail/error；886/942前后SHA和actual collect/XML同序一致，当前源码匹配=True。58完整模块7416身份，完整CPU/Metal等待既有运行作业实际terminal，尚未整体验收。旧136接受保留；整体goal active，size/spelling、scalar/whole域、更广组合、mutable lanes、neuron跨列与latest CUDA仍待完成，跨机器后置。见 mpi-evidence/training-callback-affine-noise-20261009/README.md。
+
+2026-10-09 callback仿射采样：实现normal(loc,scale,size=len(array))／uniform(low,high,size=len(array))，实际参数顺序与缺省值、参数梯度、恢复及atomic回滚。34项开发实际通过（多批范围有交集），188新身份collect0；886/942、58完整模块冻结，完整collection32217 actualwait0为7416唯一身份／SHA完整。158同版预检controller46396执行中，54完整63151/63180保持运行，56旧136接受及待队列1378保留到新实际接受。完整goal active，其余size/spelling、scalar/whole域、更广组合、mutable lanes、neuron跨列及latest CUDA尚待完成，跨机器后置。见 mpi-evidence/training-callback-affine-noise-20261009/README.md。
+
+2026-10-09 callback内部Normal/Uniform冻结接受：136同版实际pytest child84658 wait0／audit1241 wait0，无skip/fail/error，884/940前后SHA、actual collect/XML同序完整，请求身份集合一致，当前884源码匹配。56完整模块实际7228身份，queue1378等待运行中的54 sequence63151/test63180，未中断／重启。新56包含array prior_statement参考修正；旧50 actualwait1的2194pass/2fail/4300skip与876/932证据保留。整体goal active，仿射API/更多size和spellings、scalar/whole draw、更广组合、mutable lanes、neuron跨列及latest CUDA仍待实现或验收，跨机器后置。见 mpi-evidence/training-callback-body-noise-20261009/README.md。
+
+2026-10-09 callback内部Normal/Uniform：认证标准randn(len(x))/rand(len(x))与builtin len，显式追踪selected domain，即使无Poisson保留原caller作用域及whole/selected混合写。原始恢复2、全部bank/连续初态full/TBPTT2、Normal/Uniform/Poisson三流且Normal参与rate2、独立compiler/domain/旧Poisson15各actual0。50完整CPU真实wait1：2194pass/2fail/4300合法skip、6496身份876/932SHA完整，两array prior_statement参考误读尚未发布h，修正array .7/vectorised1，三CPU/Metal/MPI项actual0。新114身份collect0；884/940、56完整模块冻结，实际完整collect为7228身份/SHA完整，136预检controller68097执行中。54完整63151/63180保持运行，56等待其真实terminal，整体尚未验收。仿射API/更多size与spellings、scalar/whole draw、更广nested/guard、mutable lanes、neuron跨列及latest CUDA仍未完成，goal active、cross-host后置。见 mpi-evidence/training-callback-body-noise-20261009/README.md。
+
+2026-10-09 callback内部Poisson冻结接受：116同版真实pytest child41582 wait0／audit58116 wait0，无skip/fail/error；882/938前后SHA和actual collection/XML同序完整、当前882源码匹配。54完整模块实际7114身份，54 queue58230等待运行中的50 sequence66509/test66873实际terminal。仅未启动52 queue7873已被替换，旧100接受保留；controller29130实际241/childwait-15为待队列替换，无52完整启动，不算测试失败。整体goal active；scalar/whole内部draw、显式size/其他RNG拼写、Normal/Uniform body、更广组合、mutable lanes、neuron跨列与latest CUDA仍待完成，跨机器后置。见 mpi-evidence/training-callback-body-poisson-20261009/README.md。
+
+2026-10-09 callback内部Poisson：认证标准np.random.poisson并保留loaded-body验证，直线函数体提升到原始caller作用域；参数/捕获alias、inplace及RHS顺序保留，whole alias写入读取实际selected缓存。原始恢复2、全部bank/连续初态full/TBPTT普通+正率score/非零零率反事实2、atomic2、两次callback/外部内部stream2、独立compiler与旧路径及新增VJP10各实际exit0。114新身份collect0；882/938、54完整模块冻结，实际完整collect41648 wait0为7114唯一身份/SHA完整。116预检controller1642/PID41546执行中，未整体验收，50完整保持运行，52待队列仅新实际接受后可替换。scalar/whole-domain内部draw、显式size/其他spellings、Normal/Uniform body、更广组合、mutable lanes、neuron跨列及latest CUDA仍待实现或验收，整体goal active、cross-host后置。见 mpi-evidence/training-callback-body-poisson-20261009/README.md。
+
+2026-10-09 refractory whole Poisson冻结接受：100同版真实pytest child91878 wait0／audit7716 wait0，无skip/fail/error，878/934前后SHA及actual collection/XML同序一致，当前878源码匹配冻结。52完整模块实际7000身份，完整queue7873等待运行中的50 sequence66509/test66873实际终态。只未启动51 queue74774已被替换，旧88冻结接受保留；51controller99266实际241/childwait-15为pending队列替换，不是测试失败，未有51完整启动。整体goal active，callback内部随机、更广alias/RHS/LHS与mixed形状/guard、mutable lanes、neuron跨列及latest CUDA仍待完成；跨机器后置。见 mpi-evidence/training-poisson-masked-whole-20261009/README.md。
+
+2026-10-09 refractory whole Poisson：真实原始对照证明 masked q(h) 修改误传同RHS后续h，修复为每次物理读取独立 boolean 副本；whole producer anchor 继承原条件，采样使用真实过滤 count/ordinal。raw singleton／derived恢复2、empty/shape/negative atomic3、全bank/全部连续初态full/TBPTT及原路径回归5、full whole prefix和shape恢复2各actual0；零率反事实明确非零损失变化。216新身份collect0；878/934、52完整模块冻结，完整实际collect91899 wait0得到7000唯一身份/SHA一致。100预检controller29130/PID91867执行中，完整未验收；50完整66509/66873保持，51队列74774仅在新实际接受后才可替换。callback内部random、更广组合、mutable lanes、neuron跨列及latest CUDA仍未完成，整体goal active、cross-host后置。见 mpi-evidence/training-poisson-masked-whole-20261009/README.md。
+
+2026-10-09 whole Poisson rate 冻结接受：88项实际pytest child60969 wait0／audit74672 wait0，无skip/fail/error；877源码/933资产前后SHA一致、actual collection/XML同序，当前生产前端与训练测试匹配。51完整模块实际收集6784身份，完整queue74774等待运行中的50 sequence66509，未整体验收。旧47完整CPU真实wait1：2098pass/20fail/4164合法skip，872/928SHA完整，失败身份与此前44完全相同（16共享／4只读参考），修正保留在50/51；完整50仍在运行。整体goal active，masked whole rate／callback内部随机／mutable lanes／neuron跨列及latest CUDA仍待完成，跨机器后置。见 mpi-evidence/training-poisson-whole-rates-20261009/README.md。
+
+2026-10-09 whole Poisson rate：raw closure／倒序银行／singleton／固定派生数组保留完整引用，到实际 sampler 位置投影；全部 rate 域与实际 shape 检查、回调参数副本修改沿后续 RHS 保留，真实 CPU/Metal/MPI 定点梯度与恢复／回滚通过。新模块288身份实际collect0。877源码/933资产、51完整模块冻结，完整实际collect61476 wait0得到6784唯一身份/SHA一致；88同版预检controller99266/PID60956执行中，完整双端尚未验收。masked whole rate、callback内部random、更多alias/RHS/LHS、mutable lanes、neuron跨列及latest CUDA仍待完成，整体goal active、cross-host后置。见 mpi-evidence/training-poisson-whole-rates-20261009/README.md。
+
+2026-10-09 Poisson冻结接受：876源码/932资产、50完整模块，同版74真实childwait0/audit0，无skip/fail/error，actual collect/XML身份同序与前后SHA一致（1330/18427）。仅未启动48完整queue72162已由50完整queue18519取代，旧47预检接受证据保留；实际运行47完整sequence70978/test71256未中断，50仍等待其真实terminal，完整双端未验收。原始完整goal active，更广raw closure rate、callback内部random、alias/RHS、mutable lanes、neuron跨列与latest CUDA仍未完成；cross-host后置。见 mpi-evidence/training-batch-poisson-20261009/README.md。
+
+2026-10-09 批次Poisson/capture接通：有序SSA/per-arrival int32缓存保留原NumPy语句作用域与真实callback-rate顺序；原生正率likelihood rate VJP与零率完整counterfactual replay保留，全部bank/连续初态full/TBPTT CPU/Metal/MPI已定点验证非零梯度。refractory屏蔽负rate无采样/历史/梯度，restore后负rate/zero replay域错误连Poisson cache一起原子回滚。多个Poisson及Normal/Poisson混合独立stream/到达身份和恢复已证；真实过程中callable/保留名/fixture实际array标记/alias紧凑列/integer缓存失败保留并修复。最终876源码/932资产、50完整模块冻结80309实际0；新两个完整模块154身份最终真实collect0/SHA一致。74同版预检→audit→50完整CPU/Metal顺序controller84347/PID1297执行中，未整体验收。旧44实际wait1：20fail/1982pass/3932skip且SHA一致；16shared发布阶段误当scatter及4readonly独立尾随队列参考已定点修正，完整修复待50验收。旧47完整70978/71256保持运行，旧48仅待队列72162将在新实际接受后取代；旧48的47预检/audit0保留。更广raw closure rate向量、callback内部random、alias/RHS、mutable lanes、neuron跨列、latest CUDA仍待完成，原goal active、cross-host后置。见 mpi-evidence/training-batch-poisson-20261009/README.md。
+
+2026-10-09 长度v1接受与共享reference修正：43同版真实childwait0/audit0，无skip/fail/error，873/929 SHA及collection/XML身份顺序一致；随后真实88308 wait1暴露shared-capture空write_order第三发布阶段误当v_post scatter，修正按实际accum且更新snapshot后full/TBPTT全bank/全部连续初态CPU/Metal/MPI4项63439实际0。v1完整launch据已知参考错误主动exit241（controller48748真实241），无完整启动。v2冻结69179实际0，真实v1比较证明仅共享测试参考变化，生产/runner/48完整模块一致；47同版预检→audit→完整CPU/Metal controller97073/PID65419正在执行，原整体目标active，仍未完整验收。见 mpi-evidence/training-whole-caller-lengths-v2-20261009/README.md。
+
+2026-10-09 动态whole caller长度：单元素capture与selected rand/randn得到动态长度，跨indexed-write存储增加detached int32实际长度；别名/inplace/rebind独立版本保留实际前缀，padding不求值，restore后非法广播原子回滚。真实旧反例15075 exit1保留；前向/restore4、全bank/全部连续初态full/TBPTT VJP3、独立版本3、零padding域/shape回滚4共14开发项真实exit0。最终源码873/929资产、48完整模块冻结66425实际0；新模块60身份collect92587实际0且SHA一致。同版43预检→audit→48完整CPU/Metal顺序链session48748/controller56562执行中，仍未整体验收；已有真实完整回归保留。更广mask/metadata、Poisson callback/replay非零rate VJP、mutable lanes、neuron跨列、latest CUDA仍待完成；跨机器后置，原完整goal active。见 mpi-evidence/training-whole-caller-lengths-20261009/README.md。
+
 2026-10-09 whole随机/时间冻结接受：47完整模块872源码/928资产，30同版真实childwait0/audit0，无skip/fail/error，真实collection/XML身份同序且前后SHA一致（24782/28368）。仅未启动46完整queue86827已由47完整queue28502取代，旧22通过证据保留；运行44完整sequence36397/test36878未中断，47完整等待其真实terminal，尚未整体验收。动态selected-length whole、Poisson/callback等更广原目标仍未完成，goal active。
 
 2026-10-09 whole随机/时间跨阶段：旧46冻结91912 actual1证明固定cap N>1与未知selected rand/randn组合未推导长度；ShapeEffects在合法one/N广播时推导固定N且保留runtime shape检查，singleton结果仍动态长度待实现。紧凑缓存包含回调参数外全部RHS随机操作数，列重编译纳入新分配context slot；21221/81477实际unknown compacted context失败保留修复。原始Brian/逐步restore/采样次数/序列3、固定采样全bank/全部连续初态full/TBPTT3、restore后shape错state/clock/sequence原子回滚2分别真实0（71005/31333/63642），本轮8项开发通过。新模块84身份collect0，47完整模块872源码/928资产冻结73407实际0，30同版预检→audit→取代仅未启动46队列→等待旧44完整actual terminal→47完整CPU/Metal已启动顺序控制链，尚未整体验收。动态selected-length whole、Poisson/callback、mutable delay lane、neuron跨列、latest CUDA等原完整目标仍未完成，goal active，跨机器后置。见 mpi-evidence/training-whole-caller-random-20261008/README.md。
@@ -2386,7 +2478,7 @@ chunkfeafa9，101.23秒；741冻结源码保持不变。原67身份快照与开�
 旧完整28622已终态exit1 chunk1363f6：2443 pass932 skip2缺少参考程序的失败，
 3377精确身份和736源码hash核验，独立补齐资源后的2项通过，原full不改记为green。
 最新48完整模块3911身份已启动，**LIVE46085**，冻结于
-/atlas-storage/0002/b2-pure-functions-validation-o77bo80u；原scalar39模块**LIVE6078**。
+<archive>/b2-pure-functions-validation-o77bo80u；原scalar39模块**LIVE6078**。
 最新预计2845 pass1066 NVIDIA-only skip，仅实际终态/XML/hash审计通过才接受。
 旧bitwise40完整控制器未启动，其110身份完全纳入最新48模块。原完整目标仍active。
 
@@ -2407,7 +2499,7 @@ Final frozen181 IDs:137 pass44 NVIDIA-only skip0failed,97775 exit0 chunk3562fb,
 units passed, generated CUDA host C++ syntax only, default runners unchanged.
 Earlier14 failures and subsequent173-ID development result remain retained.
 Latest49 complete modules/4024 IDs is LIVE78304 under
-/atlas-storage/0002/b2-pure-statements-validation-b02expqg; expected2927 pass1097 skip
+<archive>/b2-pure-statements-validation-b02expqg; expected2927 pass1097 skip
 only after a real terminal/XML/hash audit. Older48-module3911-ID full46085 is
 still live. This is progress within the original complete stochastic/dynamic
 objective, not whole-goal completion; cross-host deferred, no cloud/NVIDIA run.
@@ -2434,7 +2526,7 @@ Boolean-fixture failures, missing-plugin/config/collection and metadata failures
 remain preserved. CUDA checks are translated host syntax, not NVIDIA hardware.
 
 Latest52 complete modules/4302 plannedIDs is LIVE61441, initialchunk0fddf7,
-`/atlas-storage/0002/b2-pure-branches-validation-vc43319d`; await actual terminal and
+`<archive>/b2-pure-branches-validation-vc43319d`; await actual terminal and
 its own strict audit. Older48/49-module full46085/78304 remain separate and
 live. Evidence and remaining work are in
 `mpi-evidence/training-pure-branches-20261005/{README,NEXT}.md`.
@@ -2567,7 +2659,7 @@ running，已推进到98%，不能伪造终态或重启。当前312覆盖旧249/
 当前312和未覆盖的729 GPU门；原完整目标active、跨主机暂缓、无新云作业。
 
 旧Metal53/4375实际exec68504 exit0 chunk487309：3194p1181skip，源哈希一致。
-strict audit actualexit0 chunk5a1356（/private/tmp/b2-metal-full-audit.log），744源/
+strict audit actualexit0 chunk5a1356（<temporary>/b2-metal-full-audit.log），744源/
 1654资产、53模块所有精确身份与runtime一致。这是旧cache/weak/SDE阶段来源，
 不能替代新端点/外部输入前端。现729/14 Metal已启动62563初始chunkaffbd7，
 其后执行最新外部前端GPU验收。原完整目标active，无云/NVIDIA作业。
@@ -2842,3 +2934,204 @@ MPI2、实际GPU调度及未使用无效算术必须失败。现有766公共输�
 mpi-evidence/training-callback-effects-prototype-20261006。后续必须接入真实Brian
 状态/动作布局，并补充只读/捕获/链接/共享/跨神经元效果、语法/单位/元数据、
 恢复和失败原子性验证；这些仍属于未完成项。完整目标保持active。
+
+### 定时向量回调共享标量采样（2026-10-09）
+
+Normal/Uniform/Poisson标量在向量callback中每整块采样一次，支持纯返回和可变捕获，混合标量/数组Poisson及显式数组写回。124不同增量开发测试通过；真实MPI2/Metal1198 GPU dispatch通过。913/969、82模块冻结，11696身份收集成功；484同版预检运行中，尚未接受，完整组合尚未启动。上一版462仅属于910/966，已严格接受。证据mpi-evidence/training-regular-shared-rng-20261009/README.md。仍需状态相关混合Poisson梯度/链式边界审计、标量fallback/更广尺寸与上下文/其他随机入口和动态delay等；完整目标active，跨主机后置，本轮无云调用。
+
+混合Poisson梯度补充：状态相关数组rate的全参数/所有连续初态likelihood梯度及上游零边界引起下游重采样的反事实已通过六项独立CPU/Metal MPI2 full/TBPTT对照。新增测试模块尚未纳入82冻结484预检；证据training-regular-shared-rng-20261009/hybrid-supplemental.json。目标仍active。
+
+### 定时scalar fallback随机路径（2026-10-09）
+
+不能向量化的重复索引定时回调已支持每行Normal/Uniform/Poisson/mixed采样、纯返回和whole mutable captures，并修正显式标量索引写回优先于捕获修改的顺序。共享eager Sequence森林降低编译预算，同时保留未使用参数验证和条件内惰性。915/971最终冻结27身份实际wait0严格接受（17新增、10旧），真实MPI2/Metal646 dispatch。84完整模块收集11753身份，501请求齐全；501预检等待旧484实际终态后执行，完整84未启动/接受。更广尺寸/上下文、其他随机入口、动态delay及最新CUDA等仍待完成；目标active，cross-host后置。本轮无云调用。证据mpi-evidence/training-regular-scalar-fallback-rng-20261009/README.md。
+
+### 突触定时scalar fallback随机回调（2026-10-09）
+
+突触ownership probes接通认证随机body的符号规划；实际采样仍在执行caller上下文。完整捕获列数与突触行数独立，修复三突触/两神经元缓冲索引错误。原始Brian start/after_groups、carry/restore、full/TBPTT全银行/连续初态、非零零率CF及w-mask剪枝/再生、inactive非法率屏蔽、历史count保持和失败原子性已验证。916/972最终20身份严格wait0接受（12新增、8旧），真实MPI2/Metal720 dispatch。85完整模块collect11834，旧11753保留；517预检等待501终态，完整85未启动/验收。旧913/969的484严格接受只属于旧版。范围仍包括其他随机入口、动态delay及更广语义，目标active，本轮无云调用，cross-host后置。证据mpi-evidence/training-synaptic-scalar-fallback-rng-20261009/README.md。
+
+### 生成积分阶段的随机callback（2026-10-09）
+
+神经元及连续突触选定数组Normal/Uniform/Poisson/mixed body按阶段顺序提升；随机callback声明时钟，命名xi/显式调用保留原stream，callback追加新流。Euler/RK2/RK4、Euler/Heun/Milstein的xi组合、原始Brian/carry/restore、full/TBPTT全银行/所有连续初态、Poisson score及非法参数原子回滚已验证。mixed RK4过预算通过无条件依赖根共享修复，保留SSA检查/分支/Poisson rate惰性，ABI未变。917/973最终27严格接受（23新4旧），真实MPI2/Metal304 dispatch。完整清单补旧typed模块到88，collect13070，旧11834保留，544预检等待517终态，完整88未验收。旧501仅属于915/971已接受。Scalar/whole/任意size积分、threshold/reset RNG、动态delay及更多语义仍待开发，目标active，无云调用，cross-host后置。证据mpi-evidence/training-integrator-callback-rng-20261009/README.md。
+
+
+2026-10-09 重置阶段选定数组随机 callback：
+Normal/Uniform/Poisson/mixed 按调用顺序提升，接续已分配 stream，物理神经元索引不受事件选择重编号；保留 NumPy 选择副本、整组捕获与显式写回。空/部分/全部事件、纯/可变返回、原始 Brian/carry/restore、full/TBPTT 全银行/连续初态、Poisson score、恢复后非法第二行回滚、显式 randn 流独立与电压捕获已验证。918/974 最终 68 项加 4 项旧域检查严格接受，共 72 不同身份（56 新16旧）。真实 MPI2/Metal 560 dispatch，runner/ABI 未改。首轮缓存哈希审计失败已保留，修正只排除可变 pytest cache，源码不变；最终核验真实退出码/collection/XML/哈希通过。93 完整模块 collect13448，旧13070全保留；完整93未启动/验收，既有58/517/544作业不替换。标量 once-per-block/whole/更多size积分及重置随机、threshold RNG、动态delay、更多Brian语义与最新CUDA仍待开发/验证；目标active，无云调用，cross-host后置。证据 mpi-evidence/training-reset-callback-rng-20261009/README.md。
+
+
+2026-10-09 阈值选定数组随机 callback：
+Normal/Uniform/Poisson/mixed 按实际调用顺序提升，保留左右操作数借用/临时值、重复调用及 eager and/or。修复 Compare 内回调漏提升与嵌套 Sequence 布尔结果标记丢失，原生ABI/128节点限制不变。原始 SpikeMonitor/carry/restore、refractory仍执行、full/TBPTT 全银行/连续初态、Poisson score、恢复后非法第二行回滚与积分/阈值/reset 三阶段独立流已实测。919/970 最终66不同身份严格接受（60新6旧），collection/pytest真实wait0、实际XML顺序/请求集合/全部资产SHA完整；真实MPI2/Metal368 dispatch。旧即时g.spikes误用、Compare漏提升及布尔标记拒绝的失败证据保留。完整96模块collect13874，旧13448全保留，完整96尚未启动/验收。既有58完整Metal/544预检保持原进程。整块scalar/whole/更多size积分、阈值、reset随机与动态delay、更广Brian语义、最新CUDA及完整组合仍待完成；目标active，cross-host后置，无云调用。证据 mpi-evidence/training-threshold-callback-rng-20261009/README.md。
+
+
+2026-10-09 阈值 once-per-block 标量随机 callback：
+共享 raw Normal/Uniform 与int32 Poisson count独立物理缓存，按真实site顺序采样并在所有神经元margin替换为共享读取；Poisson scalar rate依赖子图单独执行，score只注册一次，零率CF同时改变整组计数。支持前一共享Normal进入后续Poisson rate，mean/spread链式score保留。原始SpikeMonitor/carry/restore、pure/mutable、eager比较、refractory、full/TBPTT全bank/连续初态、正率score/非零整组零率CF、恢复后非法域atomic已验证。共享Normal+arrayPoisson混合前向/恢复与旧array mixed predicate全VJP也通过，混合尺寸新独立梯度待验收。921/972最终66不同身份严格接受（56新10旧），actualwait0/collection/XML顺序/请求集合/SHA完整，真实MPI2/Metal432 dispatch；runner/ABI未变。97完整模块collect13958，旧13874全保留，完整97未启动/接受。旧58在886/942双端各7416身份严格接受（CPU2516pass/4900硬件skip；Metal4966pass/2450CUDA skip）；85完整95783现CPU执行且ps确认，544旧917预检已接受，88queue6770等待已运行85。旧验收不替代本轮921。积分/reset标量once-per-block、其他whole/size/跨列、动态delay、更广Brian/最新CUDA/完整目标验收待补齐；目标active，无云调用，跨主机后置。证据mpi-evidence/training-threshold-shared-rng-20261009/README.md。
+
+
+2026-10-09：积分阶段 once-per-block 标量随机回调
+
+神经元与连续突触生成积分阶段支持共享Normal/Uniform raw与detached int32 Poisson count，按实际阶段顺序采样一次并供所有行读取；rate依赖子图及Normal→Poisson链式score保留，零率反事实作用整个调用块。原始Brian/恢复、Euler/RK2/RK4与xi的Heun/Milstein组合、full/TBPTT全银行/连续初态、正率score/非零神经元和突触整组零率CF、非法域atomic已验证。重构导致阈值辅助函数局部导入错误，被旧回归发现，修复后重新冻结并全部重跑。922/973最终82不同身份严格接受（70新8旧+4突触零率补充），真实wait0/collection/XML顺序/请求集合/SHA完整，MPI2/Metal720dispatch，runner/ABI未变。98完整模块collect14063，旧13958保留；完整98未执行/接受。既有85完整CPU与88等待队列保留。reset每整块标量、更多whole/size/跨列和混合尺寸梯度、动态delay、更广Brian语义/最新CUDA/完整组合待补齐；目标active，无云调用，跨主机后置。证据 mpi-evidence/training-integrator-shared-rng-20261009/README.md。
+
+
+2026-10-09：重置阶段 once-per-block 标量随机回调
+
+Normal/Uniform raw与detached int32 Poisson count在重置事件行写回前采样一次，所有事件行共享缓存；空选择仍调用、校验并更新whole capture。绑定capture/selected/scalar eager三类程序，保持副本、别名与显式写回顺序；Normal→Poisson链式率/score保留。候选与scalar eager率DAG不同SSA排列按表达式结构核对，不同参数率/向前随机依赖仍拒绝。原始Brian/SpikeMonitor、pure/mutable、empty/subset/all、显式randn、capture v别名、refractory、carry/restore、full/TBPTT全银行/连续初态、正率score与非零整组零率CF、非法域atomic通过。首次SSA误拒绝及零率fixture未跨边界的失败保留，修复后923/974冻结70不同身份严格接受（58新12旧），真实wait0/请求集合/collection/XML/SHA完整，MPI2/Metal1168dispatch，runner/ABI未改。99完整模块collect14150，旧14063保留；完整99未执行/接受，既有85完整CPU与88等待队列保留。更多whole/size/跨列/混合尺寸梯度、动态delay、更广Brian/最新CUDA/完整目标组合仍待补齐；目标active，无云调用，跨主机后置。证据 mpi-evidence/training-reset-shared-rng-20261009/README.md。
+
+
+2026-10-09：共享与逐行混合尺寸随机回调的独立梯度验收
+
+共享Normal与逐行Poisson、共享Normal进入arrayPoisson rate链式score，在threshold/reset/neuron integrator/continuous synapse integrator加入独立原始Python参考；pure/mutable、Euler/RK2、真实stream/domain/physical row、原始Brian/SpikeMonitor/carry/restore、full/TBPTT所有参数银行/连续初态、四种位置非零逐行零率CF、非法第二行率及共享spread恢复回滚已验证。924/975冻结最终88不同身份严格接受（80新8旧），actualwait0/请求集合/collection/XML顺序/SHA完整，MPI2/Metal656dispatch。仅新增完整测试模块，无生产/Rust/shader/runner/ABI改动。首轮synaptic a布局假设及比较列表修改provenance的测试失败保留并修复。100完整模块collect14270，旧14150保留；完整100未执行/接受，既有85 CPU/88等待队列保留。额外原始Brian探测具体复现4列capture供2行neuron调用的Normal/Uniform宽度拒绝，以及Poisson(size=len(captured))认证拒绝，作为下一阶段真实未完成项；探测未启动原生/GPU。Whole/显式size/跨列、动态delay、更广Brian/最新CUDA/完整组合仍待补齐，goal active，无云调用，cross-host后置。证据 mpi-evidence/training-mixed-shape-rng-20261009/README.md。
+
+
+2026-10-09：显式Poisson长度与整列定时随机回调
+
+支持Poisson(size=len(array))率广播，scalar率生成每输出行独立counts，空输出仍校验scalar率而不读空array率。保留keyword顺序与共享Normal→arrayPoisson链式score。Whole regular4列capture供2行caller保留四列raw/count、整数/负索引/越界校验及全部capture写回；ownership探测正确识别constant capture真实修改，编译仍要求整数索引。926/977最终202不同身份严格接受（190新12旧），实际wait0/collection/XML顺序/请求集合/SHA完整，MPI2/Metal736dispatch。覆盖原始Brian/恢复、Euler/RK2、period1/2、full/TBPTT全银行/连续初态、state-dependent Poisson初态score与非零零率CF、empty/非法率/越界回滚。仅Python4文件+2完整测试模块，无Rust/shader/runner/ABI变化。102模块collect14555，旧14270保留；完整102未执行/接受，85运行/88等待队列保留。Neuron阈值/积分/reset不同宽度capture绑定仍待实现，literal/更多size、boolean/slice选择、dynamic delay、最新CUDA/完整目标组合未齐；goal active，无云调用，cross-host后置。证据 mpi-evidence/training-explicit-size-rng-20261009/README.md。
+
+
+2026-10-09：神经元整列捕获有序阈值
+
+4 列 capture 供 2 行 neuron 的 Normal/Uniform/Poisson/state-rate Poisson 阈值保留四列抽样与真实物理状态；整数 gather 后生成两行边际，整块快照写回，再按 neuron 绑定原生边际归属。密集骨架仅用于分配与单位校验，真实阈值完整替换；有序浮点边际保留 surrogate，integer/Boolean/refractory 更广整列绑定仍待补齐。928/979 冻结最终 76 不同身份严格接受（64 新、12 旧），实际 wait0/collection/XML 顺序/请求集合/工作区源码与冻结资产 SHA 一致；MPI2/Metal 816 dispatch，runner/ABI 未改。覆盖原始 Brian/SpikeMonitor、carry/store/restore、四种比较方向、full/TBPTT 全参数与全部连续初态、正率 score、非零零率 CF、越界/非法域 atomic。103 模块 collect14675，旧14555 全保留；完整103未执行/接受，旧85运行与88等待保留。整列 neuron update/reset、更多 size/选择/谓词/refractory/随机上下文、dynamic delay 剩余范围、最新 CUDA 与当前完整组合仍未齐；goal active，本轮无云调用，cross-host 后置。证据 mpi-evidence/training-neuron-whole-rng-20261009/README.md。
+
+
+2026-10-09：神经元整列捕获 Euler/RK2/RK4 更新
+
+实际生成的 NumPy 积分按语句保存 scalar/array 阶段缓冲，避免整个 RK2/RK4 DAG 超过128节点；完整4列 capture 与2行 caller保持独立采样及递增stream。vector-block入口复制读写状态，closure仍绑定真实物理存储，所有阶段后按原写顺序显式写回。完整切片捕获规范化支持膜电位alias，caller copy避免被物理closure污染。929/980最终冻结210不同身份严格接受（126新+72前轮阈值/Euler update+12旧），pytest48839/collection48789实际wait0，root1446 actualexit0 fcfff1，审计0 8bf4bf；请求/collection/XML顺序/工作区与资产SHA完整，无skip/fail/error。覆盖四种随机函数、原始Brian/恢复、full/TBPTT所有参数与所有连续初态、正率score、非零零率CF、越界/非法域atomic、捕获膜电位forward/VJP。MPI2/Metal1392dispatch，runner/ABI未改。104完整模块collect14864，旧14675保留；完整104未执行/接受，85运行/88等待队列保留。原始探测确认whole xi/refractory update/threshold/empty reset各仍调用4次4列callback，当前仍拒绝；另实证局部标量full slice错误接受，typed候选仅standalone修复尚未合入。上述与更多size/选择/谓词/动态delay等原始范围、最新CUDA和当前完整组合仍未齐；goal active，无云调用，跨主机后置。证据 mpi-evidence/training-neuron-whole-integrator-rng-20261009/README.md。
+
+
+2026-10-09：完整切片类型修复与整列命名 SDE
+
+实际一维数组 full slice 通过 intrinsic 验证，普通/随机提升保留类型校验，scalar/zero-dim/readonly 与原始 Python 对照，caller local alias 和原子回滚通过。整列 Euler/Heun/Milstein 的 xi 按名称保留 stream，实际每行标准噪声和生成阶段系数存入动态缓存，callback 后续流。CPU基础36、状态相关扩散24、多状态共享xi_a/独立xi_b12、非零零率与atomic22均通过；typed首批17+补8通过。原始声明顺序须取实际生成代码并映射噪声名，不能按set顺序冒充stream。旧完整85测试wait0（4150pass/7684skip）但审计1因8个非硬件pure mixed跳过，未接受、Metal未启动；当前补齐真实pure_mixed并取消skip，20 CPU对照通过，不放宽审计。full88已实际接续sequence89642/supervisor89645，ps确认live，保留。931/982冻结106模块collect15207，旧14864全保留；真实MPI2/Metal状态相关Milstein+state-ratePoisson作业wait0/1360dispatch。311同版增量根session58196仍运行，未收到终态/未严格接受；首个harness选择器断言失败且pytest未启动，失败保留，仅harness修正后使用同一资产启动。完整106未执行/接受，无新完整队列/云调用。whole refractory/reset、更多尺寸/选择/动态delay等原始范围、最新CUDA及当前完整组合仍待补齐，goal active，cross-host后置。证据 mpi-evidence/training-neuron-whole-xi-rng-20261009/README.md。
+
+
+### 整列 refractory 更新（2026-10-09，267冻结验收运行中）
+
+固定/时长表达式/Boolean refractory 已与整列随机积分组合接通，保留完整callback与条件caller写回。10 CPU全梯度、18原子性、4非零零率和5Metal对照取得开发终态；真实MPI2/Metal冻结作业wait0，23446dispatch。932源码/983资产、107模块collect15483；267不同本地身份正在验收，完整107未接受。上一版931/982的311已严格接受。详见 mpi-evidence/training-neuron-whole-refractory-rng-20261009/README.md 与 NEXT.md。新探针确认update/threshold整列callback复用stream1，下一轮须修复；整列refractory阈值/reset与完整原始范围仍未全部达成。无云调用，跨机器后置，goal保持active。
+
+
+### 整列跨阶段随机流／refractory阈值（2026-10-09，隔离候选）
+
+发现update/threshold复用callback stream1，隔离候选已按调度追加独立流并接通refractory阈值。120个不同CPU身份和6个Metal开发场景通过，真实MPI2/Metal候选wait0、27046dispatch。生产932/983保持不变等待上一版267严格接受；候选933/984、108模块collect15843，276本地身份正在验收，尚未合入或接受。详见mpi-evidence/training-whole-neuron-phase-streams-20261009/README.md和NEXT.md。reset实际NumPy empty/partial/full均完整调用一次并抽样/修改4列，原生绑定仍待实现。Uniform legacy允许反向宽度；不添加错误拒绝规则。Uniform Inf原子性属于前置校验；Normal负scale/Poisson负rate与非法索引才证明后续阈值错误路径。无云调用，跨机器后置，完整原始目标active。
+
+
+### 当前状态核对（2026-10-09，整列重置与组合谓词继续开发）
+
+前文中的“267/276运行中”是历史记录：932版267与933版276均已取得真实wait0并严格接受，生产现为933源码/984资产。整列重置、固定随机尺寸及隐式Poisson surrogate候选已汇总为938源码/989资产，113完整模块收集16278个唯一身份；566个CPU/Metal身份仍运行，尚未合入或接受。原生51库测试、22个CPU/Metal单样本与12个批量恢复开发场景已通过；实际MPI/Metal报告6358dispatch且checkpoint仅含真实观察。详情以training-selected-poisson-reset-surrogate-20261009的收据为准。
+
+另一独立候选正在补齐整列随机回调的Boolean/AND/OR/NOT/等值阈值入口。首个真实Brian恢复对照和所有参数/连续初态的独立梯度对照已通过CPU MPI；完整开发模块与Metal尚待终态，未合入。原生Boolean身份复制证明修复保留surrogate梯度。详情见training-whole-threshold-predicates-20261009/README.md。
+
+这些证据不等于完整目标完成：当前版本完整组合回归、最新CUDA实机、剩余Brian语义与动态突触组合仍须逐项核对。跨机器继续按用户要求后置；本轮没有云调用。
+
+
+### 整列回调整数／浮点谓词（2026-10-09，未合入）
+
+整列Boolean/AND/OR/NOT/等值候选已完成182个不同CPU/Metal身份：91每后端，实际wait0、collection/XML顺序与源码hash匹配，原生51库测试通过。另一隔离候选统一按原始类型编译整列阈值：六种int32比较保持精确和离散导数，浮点有序比较保留surrogate与inclusive语义；16777217/16777216精度边界、Poisson零/正率、refractory、full/TBPTT、恢复及全部参数/连续初态的72 CPU场景通过，96混合谓词与40旧模块CPU回归也通过。首批6 Metal场景实际wait0；完整208 Metal仍运行。新增两个CPU原子性场景验证真实观察缓存不掩盖false-event候选非法率，并验证detached reset仍执行合法实际Brian前向；对应Metal排在208之后，无自动重试。证据见training-whole-threshold-predicates-20261009与training-whole-typed-thresholds-20261009收据。
+
+生产仍为933/984；938/989的566冻结回归尚待终态。上述均为未合入开发证据，不是完整目标完成；当前完整组合回归、最新CUDA实机和原始范围逐项验收仍未完成。无云调用，跨机器后置。
+
+
+### 原始目标验收范围核对（2026-10-09）
+
+整合942源码/993资产已冻结，117近期前端模块collect17061、旧16278全部保留。但117不是完整目标：核对所有训练／原生训练模块得到268模块、34565唯一身份，均已在同一冻结资产上收集成功并验SHA，尚未完整执行。当前源8项原始核心CPU/MPI预检实际wait0，无skip/fail/error，覆盖STDP前向/独立VJP、MPI恢复、异步衰减、延迟梯度、随机突触Milstein、共享Heun与原生随机分布/独立性。
+
+旧88完整队列已关闭，不能继续称live：pytest实际wait0、4562pass/8508skip，但严格audit1因8个pure-mixed逻辑skip，Metal未启动，旧版未接受。当前942同8身份全部真实执行通过；不放宽skip规则，不改写旧失败。1156个当前源冻结增量已准备并等待正在执行的566、208Metal和2域错误Metal全部实际成功后自动单次接续；生产仍933/984，未合入新候选。完整268执行、最新CUDA与逐项完成审计仍未完成，目标active，跨机器后置，无云调用。
+
+
+### 566冻结接受／完整验收已门禁排队（2026-10-09）
+
+938源码/989资产的566冻结增量已实际wait0，无fail/error/skip，collection/XML/请求与源码／runner哈希一致；14修改、5新增已合入并严格接受。942/993的1156冻结增量已接续运行，尚未接受或合入。typed当前开发矩阵CPU/Metal各208身份加各2域错误身份均实际通过，共420不同当前源身份，不替代1156冻结或完整目标验收。
+
+完整268模块CPU禁GPU模式收集与原GPU启用模式的34565身份和顺序完全一致。完整CPU→Metal验收已通过控制器门禁排队：等待1156源码严格接受后启动，实际测试／审计失败即停止，无自动重试；每次检查冻结资产、native／reference／controller哈希、XML顺序，记录skip实际guard/设备参数/运行环境，拒绝逻辑或启用Metal的skip。4真实硬件禁用skip分类及8旧逻辑skip拒绝预检通过；首次fixture定位错误的审计失败保留。CUDA实机仍未验证，跨机器后置，无云调用，完整目标active。
+
+
+### STP全部梯度补充验收（2026-10-09，当前实现不改动）
+
+逐项审计发现现有STP用例计算gradients却只断言Brian前向／最终状态，缺少全部参数／连续初态的独立VJP证据。新增test_training_short_term_plasticity_vjp.py：u/r逐边状态、w/U/tauf/taur训练参数，更新u后传递、随后耗减r，读取v_pre与显式时间项；独立线性恢复闭式／稳定性多项式，完整事件路径一次门控，full/TBPTT、detach、serial/MPI2、split/store/restore与实际Brian。
+
+当前未改动942/993实现和5ae83e...runner，120个不同身份收集，CPU40真实wait0无skip/fail/error，所有银行和每个连续初态有限差分通过；首批Metal3实际通过，完整Metal40仍运行。补充源码独立冻结，最终验收需同时核对原268模块34565身份与新增1模块120身份，即269模块34685身份。不能把新模块加入旧快照后冒充同一历史收据；942实现字节未改变。requirements-audit.json映射原始9类要求／具体测试族／已检查终态，仍标记完整当前范围验收未完成，8个编号实现约束与事件／别名／外部状态契约继续待最终逐项核对。942的1156冻结增量仍运行，生产938/989；无云调用，跨机器后置，目标active。
+
+STP补充终态：完整CPU40与Metal40均实际wait0，无fail/error/skip；accept.py重读两份XML，80不同请求身份／顺序与源码、942实现993资产、runner哈希全匹配，accepted-supplement.json严格接受。当前实现没有因此修改，942的1156仍运行，生产938；原始目标最终审计需同时包含未来268完整执行和本补充80接受证据。CUDA及完整整体范围仍未完成，目标active。
+
+
+### 编号约束／别名／输入契约预检（2026-10-09）
+
+当前942冻结源15个不同约束身份实际wait0，无fail/error/skip、XML顺序与993资产／runner SHA核对通过：7个非法阈值margin计划拒绝、pre/post实际排序、Cython summed清零累加、prune/regrow恢复、共享状态生命周期、外部输入表VJP、实际Metal MPI owner归约、nonroot域错误原子性，以及dual-write/refractory自连接别名写回。constraint-audit.json映射原始8编号约束及4事件组合／refractory／autapse／外部状态契约，标明当前终态覆盖及仍待完整执行的范围。审计最初用不存在的origin词汇定位delay源码而失败，现使用实际pending/history结构；原失败保留，不涉及运行时修复。反向state-trigger门贡献累加回非detach的history状态，经历史搬移动作跨tick回传；当前delay独立差分仍需完整验收。
+
+1156冻结仍运行，268完整CPU→Metal门禁仍等待；STP80补充已接受。原始9要求、8编号及4额外契约未因预检通过被缩窄；完整当前范围与最新CUDA实机尚未完成。无云调用，跨机器后置，目标active。
+
+
+### 2026-10-10：1156 增量接受、CUDA ABI 修复合入及完整范围续接
+
+942/993 的 1156 项固定增量现已实际全部通过、严格接受并合入，无失败、错误或跳过。独立 CUDA 检查发现并修复两类真实缺陷：scalar 辅助函数缺少 device 声明，以及四个主机能力接口缺少 C 链接声明。21 项真实 Clang／C++ ABI 检查、实际 NVCC 库的全部 16 个能力接口检查及 MPI 预检通过；单张 L4 的 28 项固定回归实际全部通过，约 465 秒，无源码变化、越界导入或超时。两份 CUDA 源码已按独立门禁合入，940 份其余基础源码保持原哈希。七个数值 shader 和生成 CUDA 数值内核保持原字节；没有 CPU fallback。
+
+此前版本文件生成钩子造成报告丢失的作业，以及 3 通过／1 接口失败的作业均保留为历史失败，未充当通过证据。最新严格报告为 training-cuda-frozen-proposal-20261009/cloud-capability-exports-fix/audited-result.json，源码合入为 training-cuda-capability-exports-20261010/merged-verified.json。
+
+原始 268 模块／34565 身份的 CPU 全范围回归已启动，随后接续 Metal；现已接受的 STP 补充 80 项和新增编译模块 21 项独立计数。重新核对 9 类原始要求、8 项编号约束和 4 项额外契约后，另选原始范围中 16 个 CUDA 用例补事件衰减、summed、refractory、别名、外部表、多时钟及非根 rank 原子性证据；上传实现与上述 28 项通过版本逐字节一致，作业已启动，终态仍待检查。具体映射见 training-goal-audit-20261010/current-requirement-evidence.json 和 training-cuda-contracts-20261010/selected-tests.json。
+
+用户已明确给予 Modal 持续授权，后续本项目验证不再逐次请求；默认仍保持单张 L4、每个 GPU 容器 900 秒、零自动重试。跨主机按用户要求暂缓。整体目标继续 active，定向 CUDA 和增量通过不代替原始全范围或逐项完成审计。
+
+
+补充 CUDA 契约终态（2026-10-10）：training-cuda-contracts-20261010/cloud-contracts/audited-result.json 已严格接受 16 项，实际 wait0、完整身份／JUnit顺序与固定包哈希一致，无 fail/error/skip/timeout。覆盖事件驱动推进、独立随机参数及延迟初态 VJP、summed／refractory／selective组合、优化器与 runtime 状态迁移、8 本地 MPI rank 与非根错误回滚、自连接 dual-write 别名、外部状态表全部梯度／替换恢复、linked summed、多时钟 summed VJP 和 batch 随机地址独立性。加前轮 28 项，共 44 不重复的当前 L4 用例。原始 9+8+4 要求映射保留，原始268 CPU全范围进程已确认运行，Metal在其后排队；整体目标仍未完成，跨主机继续暂缓。
+
+
+### 2026-10-10：补齐首次只读调用的真实状态提交缺口
+
+逐项源码审查发现此前只读原子性矩阵都先传权重或先训练，漏掉全新 trainer 的隐式 optimizer 初始化。实际 evaluate／gradients 会将 state=None 变成原生初始化状态，检查点发生变化，即使 step/噪声计数没有增加。原版8失败／8通过的真实CPU记录保留；不把旧 green tests 当作此要求完成。
+
+仅将 Python self.state 提交移到 operation==train 内，原生数值程序、计划、shader和训练提交逻辑不变。新48个身份覆盖SDE／随机动态突触、隐式／显式权重、evaluate／gradients、serial／MPI2，以及CPU／Metal／CUDA。每后端16实际通过，要求全部持久字段和检查点字节保持不变、重复读取一致、恢复后首次训练与未经读取的对照完全一致。training-fresh-readonly-20261010/accepted-fix.json已严格接受并合入；CUDA完整报告在training-fresh-readonly-cuda-20261010/cloud-contracts。
+
+旧修复前268基线合作式SIGINT结束，实际退出码2，629passed／958硬件skip，原控制器和日志保留，不当作最终版本的完整验收。最终源码重新固定为946源码／997资产；保留原34565身份及顺序，追加STP120、Clang3、ABI18、首次只读48，共272模块／34754身份。首次全局排序导致原身份顺序拒绝的日志保留，恢复原顺序后实际收集全部通过。最终CPU→Metal完整流程会话91279已启动，失败即停、无自动重试。
+
+当前三轮不同固定版本的L4证据共60个不重复身份：44个数值／动态契约与16个新状态提交修复。原始9+8+4要求及跨主机暂缓保留；整体仍需最终完整范围终态和逐项源码审查，完成审计completion-gates.json仍为未完成。
+
+### 2026-10-10：V2 当前源码 CUDA 重新验收
+
+V1 完整 CPU 回归实际退出 1，1227 通过、2024 跳过；唯一失败为过时的 Poisson 显式 size 拒绝断言。修正后保留同一测试身份，真实 NumPy 与降级回调在长度 0／1／3 上比较数值、输入和完整 RNG 状态；该模块 30 项及 V2 冻结包的 14 个编译契约模块 229 项均实际通过。V2 同时固定共享工作区九项代码生成／资源预算变更，独立原生构建退出 0，946 源码／997 资产仍完整固定。V1 失败原证据保留，未算接受。
+
+按用户 Modal 常设授权，直接从 V2 固定源码生成两个完整上传包，分别运行 28 和 32 个原有 CUDA 身份，均实际退出 0，无失败、错误、跳过或超时。每次仍为一张 L4、GPU 容器最多 900 秒、无自动重试。GPU 分配前均通过 21 项编译／ABI、NVCC 全部 16 能力接口、2／4 rank MPI 及完整用例收集检查。合并审计确认 60 个不同身份及顺序、完整 XML、两包 925 文件、166 实现文件及当前 946 源码哈希一致；两批 Linux runner 哈希为 7c8e690f5ef637ffd3d53b2682c82a7a2984241f1d89873a8c46b1c60aed3cd4，kernel 为 e916d4d4dad331e2339cd04f24b9a87c435ebe9c912661aabf35866680073a1a。
+
+当前 current-CUDA-acceptance.json 已严格接受，CUDA_current_source_accepted 为 true。21 条原始要求的源码审查绑定 31 文件及 10 份实际执行证据，未提前置 proven。完整 V2 272 模块／34754 身份 CPU 会话 47622 仍运行，Metal 待 CPU 真实通过后接续；当前 STP runner 与整体语义验收仍依赖该完整终态，目标保持 active。跨主机按用户要求后置。
+
+当前 CUDA 审计的内存反向检查暴露 setup 身份遗漏核对，已补 setup／call／teardown 各阶段精确身份及顺序检查。再次接受真实 60 项，六种伪证据均拒绝；缺失一个终态批次保持 pending。current-CUDA-negative-checks.json 真实退出 0，未修改任何执行证据或运行进程。此审计强化不改变训练实现及 V2 固定源码。
+
+续接验收：会话 47622 再次确认 live。当前最新审计器四项语义反向检查实际退出 0，外来身份、源码片段变化、未知源码差异和提前完成均拒绝，见 semantic-gate-negative-checks-v4.json。V2 CPU 捕获 1002 条完整跳过已逐条核对：504 Metal、498 CUDA，均符合当前禁用硬件及真实 guard、源码哈希；该前缀检查不充当全量通过。S1／E2 四个命名函数缺少独立当前终态，另启动原范围全部 85 身份、同一冻结源码和 runner 的 Brian SDE 对照／限制与 refractory 塑性 Cython 对照／差分，会话 28305；仍待真实退出和 XML，不计为通过。没有新云调用，整体目标仍 active。
+
+S1／E2 补充终态：28305 实际退出 0，全部 85 通过，无失败、错误或跳过，控制器总时长 98.55 秒。audit_contracts.py 独立核对真实 wait／PID、85 XML 身份及顺序、控制器、runner、997 冻结资产和946当前源码后接受，accepted.json 已写入。semantic-review.json 现绑定 11 份实际执行证据，21 条要求均有证据，仍保留完整范围待验收；最新版审计器四项内存反向检查再次实际退出 0。named-contract-coverage.json 进一步确认全部命名函数都在完整原范围内，剩余18函数未绑定当前终态，按其原有全部180身份另启动 CPU→Metal 补充，会话69042，无自动重试、无云调用。完整会话47622继续 live，整体未完成。
+
+当前库与命名契约 CPU 终态：V2 cargo release／lib／locked／offline／单线程51项全部通过，无失败／忽略／过滤，2079实际退出0，94.12秒，audit.py另行退出0核对实际命令、PID、51身份、日志、997资产、946当前源和未改runner。命名180的CPU阶段实际wait0，385.76秒，110通过、35 Metal／35 CUDA禁用硬件跳过；独立重新审计全部身份顺序、真实guard、源码及控制器后接受，Metal继续运行69042。semantic-review绑定12执行证据，named-contract-coverage-after-cpu.json确认所有原始命名函数均有至少一个真实通过身份；此不代表全部参数／后端完成。原覆盖文件因selected.json已绑定而保持字节。完整回归47622仍live，目标未完成，未调用新云作业。
+
+命名契约 Metal／合并终态：69042实际退出0；Metal实际wait0，557.02秒，145通过、35 CUDA禁用硬件跳过。两个阶段每阶段180请求身份／顺序完整核对；独立重新审计实际终态、源／runner／控制器哈希与全部硬件guard后，合并145个不同真实通过身份接受（accepted-combined.json）。semantic-review绑定13执行证据，所有原始命名函数均有通过记录，仍不代表34754全参数范围完成。最新版四项反向检查11859实际退出0，receipt v6保留此前版本；完成审计6506实际退出2明确未完成。完整47622继续live，跨主机后置，无新云调用，目标active。
+
+
+2026-10-10：完整回归 v2 CPU 真实退出 1（2743 通过、4099 硬件跳过、1 失败），失败为 test_request_timeout_is_local_transport_setting[120]。根因是验证入口的全局默认超时覆盖了模拟 runner 的默认 120 秒；生产 API 和测试断言未改动。原始失败 XML、终端和序列报告均保留。
+
+新增 training-final-scope-v3-20261010：原字节复用 v2 的不可变源码/测试/native/scope，超时延长仅限指定真实 native runner 的隐式默认调用，模拟 runner 默认和显式参数原样保留。5 项入口约束以及原始错误报告模块全部 39 项 CPU/MPI 测试真实通过，独立报告检查通过；完成检查仍要求全部原始验收，v7 四项负向检查通过。已启动新的完整 CPU→Metal 回归，272 模块/34754 原始顺序身份；不再 fail-fast，收集全部失败，零失败等通过标准不变，无自动重试，无云调用。当前目标仍 active。
+
+
+2026-10-10：完整回归 v3 在约 22% 出现三个 pathway delay 前端失败，完整会话继续收集其余结果。training-event-delay-failure-20261010 四项原始测试真实复现 3 失败/1 通过（两个 scalar delay 增量写入 KeyError、共享 delay 读取无法解析）。候选补齐 pathway variables 并前置既有 scalar/shared delay 写入约束；第二版四项原始测试实际全部通过，第一版失败也已保留。候选尚未写入生产源码，正在独立副本执行五个相关原始模块全部 290 身份的 CPU→Metal 验证，完整目标仍 active。
+
+第二版 pathway delay 候选的邻近 CPU 回归真实退出 0：116 项通过、174 项仅硬件跳过，四个原版失败均实际通过。Metal 阶段已启动；原完整回归仍继续收集，候选尚未合入，目标仍 active。
+
+2026-10-10：pathway delay 第二版修复在隔离副本经五个原始模块全部 290 身份的 CPU→Metal 验证及独立核对后写入工作区。CPU 116 通过/174 硬件跳过，Metal 203 通过/87 CUDA 跳过，共 203 个不同身份通过，四个原版失败全部通过。唯一源码差异为 training_brian_dynamic.py，native/测试不变。旧完整回归继续收集且不能验收；最新前端 CUDA 与完整回归仍需完成，目标 active。
+
+2026-10-10 最新源码验证续接：v4 34754 身份/272 模块实际收集退出0，原顺序和完整范围不变；五项入口不变量和39项原始 CPU/MPI 错误处理全部实际通过、独立审计退出0。28/34 两个固定 CUDA 包隔离收集通过，按常设 Modal 授权启动首批 L4，仍为每次一张、900秒GPU容器、720秒测试、无重试；未提前计为 CUDA 通过。最新全量 CPU→Metal 串行控制器已排队等待旧版完整诊断结束，只接受恰为已修复四项的失败清单，其他新失败会停下待修复。完整目标仍active。
+
+2026-10-10 最新前端 CUDA 验收完成：v4 28/34 两批按 Modal 常设授权串行运行，全部62个不同原有身份实际通过，无失败/错误/跳过/超时；每次最多一张L4、900秒容器、无重试，实际502.08和312.51秒。两项新增选择覆盖共享scalar delay跨边梯度和捕获delay全银行/初始状态梯度。audit_current_cuda_v4.py 核对完整当前946源码、全部上传及实现文件、原始身份和各阶段、XML、硬件及MPI；current-CUDA-acceptance-v4.json接受，6项伪证据拒绝/缺失批次pending。新版21条要求保持原范围，源码手工审查片段逐字核对位移；closure实际退出2诚实保留CPU/Metal完整范围、当前STP/只读组合及语义证明未完成。old v3仍继续完整诊断；v4串行队列继续等待。两次云作业已结束，目标active，跨主机后置。
+
+最新源码状态契约补充：两个原始完整模块共168身份每后端均真实执行CPU→Metal；CPU 56通过/112禁用硬件跳过，Metal112通过/56CUDA跳过，两阶段actual_wait0。独立审计核对完整原参数/顺序、真实终态/PID/XML、逐条硬件guard、946当前源码/997冻结资产/native/controls后接受，共112不同真实通过（STP80+readonly32）。结合本轮当前CUDA16 readonly，全部48只读原子性及当前STP80 gate成立。最新21项要求仍要求完整CPU/Metal，未提前proven。另按原范围启动剩余30个命名函数的全部333原参数身份CPU→Metal，全部原始断言不变，无云调用/重试，不替代34754完整范围。旧诊断继续运行，v4完整仍串行排队，目标active。
+
+最新46命名函数直接证据补齐：剩余30函数原333参数身份CPU271通过/62硬件跳过，Metal302通过/31CUDA跳过，两阶段实际0、独立审计实际0，原21要求所有46命名函数现有最新真实通过，所有proven仍false直到全量。新暴露staged-delay旧293模块CPU实际1（101KeyError delay/192硬件跳过），当前同模块CPU101/Metal197真实0、独立比较0；唯一差异同一namespace修复，101旧失败全部当前CPU通过，加此前4共105已证实修复。未新增产品源码编辑。旧全量继续收集；原队列保持live/原字节，新接续队列仅在原队列实际拒绝、完整34754终态失败精确105且各hash一致时启动当前完整CPU→Metal，未知失败保持待修复。八项最新验收反向检查实际0，未改真实执行证据。无新云作业/重试，跨主机继续后置，目标active。
+
+
+## 2026-10-10 v5：事件路径探针错误转换
+
+修复前三个完整原模块独立确认 10 项失败；修复后 CPU 72 项通过、Metal 92 项通过，共 92 个不同原测试实际通过，全部原断言及原生二进制保持不变。已应用路径存储检查前移与 SyntaxError→TrainingConversionError 原因链包装。新版完整范围重新收集为 272 模块/34,754 项；39 项错误报告与 5 项运行器不变量通过。六个完整延迟模块和当前 CUDA 83 项回归准备/执行中，旧 v3 完整 CPU 诊断保持运行。旧 v4 的 CUDA 62 项证据仍属于旧前端版本。新版完整 CPU/Metal 与 CUDA 尚未验收，目标未完成。证据：mpi-evidence/training-final-scope-v5-20261010；修复审计：training-implicit-refractory-failure-20261010/repair-accepted.json。
+
+
+### v5 当前 CUDA 实机验收及完整回归启动
+
+按照用户 Modal 持续授权，两次串行单 L4 作业28/55项均实际通过、无超时、无重试，独立合并审计83项与当前源码/完整身份/真实GPU使用一致。GPU前完整收集、21项编译/ABI、NVCC16能力接口和MPI门禁均通过，两个云作业均已结束。验收反例六项全部拒绝，缺批次保持pending。
+
+六个完整延迟模块 CPU 实际217通过/366硬件跳过，Metal执行中。新版完整CPU首次执行已独立启动（272模块/34754原身份）；通过并严格审计后才启动完整Metal。等待控制器在训练开始前保存所有控制文件并实际退出143，旧完整诊断未停止。新版仍缺完整CPU/Metal、完整STP/readonly及21要求最终验收，不算目标完成。最新入口：mpi-evidence/training-goal-audit-20261010/audit_completion_v5.py。
+
+
+### v5 补齐全部原命名CUDA参数
+
+逐项原要求核对发现46个命名函数合739个原身份，其中CUDA175个。当前83项云端通过只覆盖其中22个；剩余153个完整原参数已冻结为13个严格串行批次，各单L4/900秒容器/720秒测试/无重试，任一非0停止后续。首批9项本地隔离收集0退出，云端控制器已启动。新增完整门禁要求全部175项当前源码实际通过；旧83项通过保留但不替代全部原GPU参数。完整CPU与延迟完整Metal继续运行，整体目标未完成。计划/控制器/独立验收位于mpi-evidence/training-requirement-cuda-v5-20261010。

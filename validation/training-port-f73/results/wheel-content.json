@@ -1,0 +1,27 @@
+{
+  "wheel": "brian2_atlas-0.1.0-cp314-cp314-macosx_26_0_arm64.whl",
+  "wheel_sha256": "ba7db02e088b169730ca8c49d63c4494a3a9c3b4d76ee784e1cd585ad0d52593",
+  "verified_product_modules": [
+    "brian2-rust/python/brian2_rust/training.py",
+    "brian2-rust/python/brian2_rust/training_batch_locals.py",
+    "brian2-rust/python/brian2_rust/training_batch_poisson.py",
+    "brian2-rust/python/brian2_rust/training_batch_random.py",
+    "brian2-rust/python/brian2_rust/training_brian.py",
+    "brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+    "brian2-rust/python/brian2_rust/training_callback_noise.py",
+    "brian2-rust/python/brian2_rust/training_callback_poisson.py",
+    "brian2-rust/python/brian2_rust/training_callback_scalar.py",
+    "brian2-rust/python/brian2_rust/training_callback_vector.py",
+    "brian2-rust/python/brian2_rust/training_cuda.cu",
+    "brian2-rust/python/brian2_rust/training_cuda.py",
+    "brian2-rust/python/brian2_rust/training_dynamic.metal",
+    "brian2-rust/python/brian2_rust/training_dynamic_mpi.metal",
+    "brian2-rust/python/brian2_rust/training_effects.py",
+    "brian2-rust/python/brian2_rust/training_event_captures.py",
+    "brian2-rust/python/brian2_rust/training_metal.m",
+    "brian2-rust/python/brian2_rust/training_neuron_whole.py",
+    "brian2-rust/python/brian2_rust/training_regular_whole.py",
+    "brian2-rust/python/brian2_rust/training_threshold_noise.py"
+  ],
+  "exact_content_match": true
+}

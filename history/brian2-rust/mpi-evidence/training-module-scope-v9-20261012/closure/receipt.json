@@ -1,0 +1,12 @@
+{
+  "original_outer_exit_unknown": true,
+  "controller_actual_wait": 0,
+  "completion_audit_actual_wait": 0,
+  "original_test_records_unchanged": true,
+  "cpu_receipt_sha256": "4535ce6dd52ac7fab0611c3c19be2208d2e41a91e7f25f85c1971bb535ca2fdd",
+  "metal_receipt_sha256": "c31d09307218510266d86990819cac453bbdb7464ca0ad371a27ea22534b64e0",
+  "completion_report_sha256": "f33668a660cacf1481ee8c7d3440d81a605e14e45197527a3c229a26348db0fe",
+  "driver_sha256": "f5873bab8a76716a12e652652a5aa20f649fd8aa847c37d04408402e2125e86a",
+  "complete_goal_proven": true,
+  "missing_gates": []
+}

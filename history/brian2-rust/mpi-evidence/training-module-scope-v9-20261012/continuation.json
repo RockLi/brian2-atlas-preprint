@@ -1,0 +1,45 @@
+{
+  "active_full_session": null,
+  "phase": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012",
+  "snapshot_sha256": "71b3803ec773c6f513a8f837e8e3508d1dae4245efb418309645ed4a94a8d12a",
+  "CPU_complete": true,
+  "CPU_passed": 12940,
+  "CPU_hardware_skipped": 21814,
+  "CPU_receipt_sha256": "4535ce6dd52ac7fab0611c3c19be2208d2e41a91e7f25f85c1971bb535ca2fdd",
+  "Metal_observation": {
+    "accepted_modules": 272,
+    "passed": 23877,
+    "hardware_skipped": 10877
+  },
+  "observation_time": 1791786424.607977,
+  "complete_goal_proven": true,
+  "next_actions": [],
+  "cloud_jobs_active": 0,
+  "cross_host_user_deferred": true,
+  "earlier_sessions": {
+    "v8_89598_actual_exit": 1,
+    "preparation_8358_actual_exit": 0,
+    "preflight_39009_actual_exit": 0,
+    "collection_83790_actual_exit": 0,
+    "reuse_checks_37906_actual_exit": 0
+  },
+  "completion_preflight_session": 55281,
+  "completion_preflight_actual_exit": 2,
+  "completion_preflight_missing_gates": [
+    "metal_complete_original_scope",
+    "fresh_readonly_current_atomicity_accepted",
+    "all_original_requirements_semantically_reviewed",
+    "STP_current_runner_accepted"
+  ],
+  "completion_preflight_report_sha256": "d8100b181b273dfe6e2e7bd537554da7f2e6d4bf710d6f0c6eada3d6fd50f67b",
+  "current_module": null,
+  "current_finished": null,
+  "current_total": null,
+  "original_session_id": 1304,
+  "original_outer_actual_exit": null,
+  "closure_session_id": 65683,
+  "closure_actual_exit": 0,
+  "Metal_complete": true,
+  "Metal_receipt_sha256": "c31d09307218510266d86990819cac453bbdb7464ca0ad371a27ea22534b64e0",
+  "completion_report_sha256": "f33668a660cacf1481ee8c7d3440d81a605e14e45197527a3c229a26348db0fe"
+}

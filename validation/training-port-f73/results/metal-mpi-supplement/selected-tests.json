@@ -1,0 +1,6 @@
+[
+  "brian2-rust/tests/test_native_training_gpu_mpi.py::test_gpu_target_owned_gradients_and_optimizer[metal-False-None-zero-graph-2]",
+  "brian2-rust/tests/test_native_training_gpu_mpi.py::test_gpu_mpi_empty_owners_and_evaluate[metal]",
+  "brian2-rust/tests/test_native_training_gpu_mpi.py::test_gpu_mpi_fresh_process_mask_freeze_checkpoint[metal]",
+  "brian2-rust/tests/test_native_training_gpu_mpi.py::test_gpu_mpi_domain_failure_is_atomic[metal]"
+]

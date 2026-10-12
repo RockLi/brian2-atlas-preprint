@@ -9,6 +9,42 @@ other admitted expressions. Use `lower_brian_dynamic_training` (or
 `backend='metal'`. The CUDA implementation shares the device interpreter but
 has not yet been accepted on NVIDIA hardware.
 
+## Whole closure rates in event callbacks
+
+The dynamic array/vectorised event frontend retains a callback-returned whole
+rate array until the actual Poisson site. Reversed parameter-bank views,
+singleton broadcasting and fixed-length derived rate arrays use the current
+bank or independent whole-column storage. Shape and whole-rate domain checks
+precede selected sampling; positive-rate scores and zero-rate replay keep the
+native gradient contracts. Callback mutation of an argument copy remains
+visible to subsequent operands in the original statement.
+
+CPU, Metal and local MPI development cases cover checkpoint recovery, bank
+replacement, all bank and continuous initial-state VJPs, and atomic rate/shape
+failures. Refractory boolean selections retain independent physical reads per RHS
+occurrence, including a callback returning a whole rate object. Development
+checks cover singleton and fixed derived rates, full-vector successful prefixes,
+nonzero positive/zero-rate gradients, and empty/shape/negative rollback. The
+frozen 52-module full regression is pending; broader combinations and random
+calls inside callback bodies remain unfinished. See
+[the exact frozen evidence](mpi-evidence/training-poisson-masked-whole-20261009/README.md).
+
+## Poisson inside captured callbacks
+
+The dynamic array/vectorised event frontend also authenticates standard
+`np.random.poisson(x)` in a captured callback's straight-line body when `x`
+belongs to the selected argument domain. It lifts the body into the original
+caller statement scope, preserving argument/capture object identity, prior
+mutations and Python operand order. The native event site samples; subsequent
+whole capture writes consume selected cached counts.
+
+Development checks cover repeated callbacks, external/internal stream mixing,
+checkpoint restore, all bank and continuous initial-state full/TBPTT VJPs, and
+negative-rate/zero-rate replay-domain rollback. Scalar and whole-domain callback
+draws, explicit sizes/other RNG spellings and Normal/Uniform bodies remain
+unfinished. The 54-module full regression is pending. See
+[the frozen evidence](mpi-evidence/training-callback-body-poisson-20261009/README.md).
+
 ## Static multi-state plans
 
 The direct scalar v3 extension preserves analog projections and its original

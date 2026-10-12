@@ -1,0 +1,8 @@
+{
+  "session_id": 65683,
+  "actual_exit": 0,
+  "source": "unified exec tool terminal result",
+  "driver_sha256": "f5873bab8a76716a12e652652a5aa20f649fd8aa847c37d04408402e2125e86a",
+  "controller_terminal_sha256": "b019ee78f815e2c85735c3ddd36a972ba0dc181416744a7922f824cedfaa83c2",
+  "audit_terminal_sha256": "a897ca117f316262f186697063b643131c0ce04b5d0c1fe815ed0a1664313039"
+}

@@ -1,0 +1,13 @@
+{
+  "actual_wait": 0,
+  "wait": "exec tool actual process completion",
+  "passed": 21,
+  "failed": 0,
+  "skipped": 0,
+  "translator_sha256": "a214c8f24e99589728623f20bf67506d03e9c99484d959dee9a01aab990d9bb2",
+  "host_source_sha256": "e45860e2a15dd3015aaef0d966af674d56c6c88c56c674bd7f47a9cf19047fcc",
+  "generated_kernel_sha256": "e916d4d4dad331e2339cd04f24b9a87c435ebe9c912661aabf35866680073a1a",
+  "numeric_kernel_unchanged": true,
+  "CUDA_execution": false,
+  "cloud_calls": 0
+}

@@ -1,0 +1,544 @@
+{"mode": "cpu", "module_index": 0, "module": "brian2-rust/tests/test_training_async_actions.py", "counts": {"passed": 31, "skipped": 54, "metal_disabled": 27, "cuda_disabled": 27}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 1, "module": "brian2-rust/tests/test_training_batch_capture_noise.py", "counts": {"passed": 28, "skipped": 56, "metal_disabled": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 2, "module": "brian2-rust/tests/test_training_batch_capture_temporaries.py", "counts": {"passed": 168, "skipped": 336, "metal_disabled": 168, "cuda_disabled": 168}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 3, "module": "brian2-rust/tests/test_training_batch_event_captures.py", "counts": {"passed": 94, "skipped": 188, "metal_disabled": 94, "cuda_disabled": 94}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 4, "module": "brian2-rust/tests/test_training_batch_external_inputs.py", "counts": {"passed": 34, "skipped": 44, "metal_disabled": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 5, "module": "brian2-rust/tests/test_training_batch_local_lifetimes.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 6, "module": "brian2-rust/tests/test_training_batch_poisson_captures.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 7, "module": "brian2-rust/tests/test_training_batch_poisson_compile.py", "counts": {"passed": 10}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 8, "module": "brian2-rust/tests/test_training_batch_private_readonly_captures.py", "counts": {"passed": 25, "skipped": 48, "metal_disabled": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 9, "module": "brian2-rust/tests/test_training_batch_random_compile.py", "counts": {"passed": 5}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 10, "module": "brian2-rust/tests/test_training_batch_readonly_bank_carry.py", "counts": {"passed": 6, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 11, "module": "brian2-rust/tests/test_training_batch_readonly_captures.py", "counts": {"passed": 44, "skipped": 88, "metal_disabled": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 12, "module": "brian2-rust/tests/test_training_boolean_thresholds.py", "counts": {"passed": 40, "skipped": 27, "metal_disabled": 16, "cuda_disabled": 11}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 13, "module": "brian2-rust/tests/test_training_brian.py", "counts": {"passed": 22, "skipped": 1, "metal_disabled": 1}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 14, "module": "brian2-rust/tests/test_training_brian_dynamic.py", "counts": {"passed": 28}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 15, "module": "brian2-rust/tests/test_training_brian_integrators.py", "counts": {"passed": 23, "skipped": 8, "metal_disabled": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 16, "module": "brian2-rust/tests/test_training_brian_multistate.py", "counts": {"passed": 7}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 17, "module": "brian2-rust/tests/test_training_cached_noise.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 18, "module": "brian2-rust/tests/test_training_cached_noise_edges.py", "counts": {"passed": 15, "skipped": 20, "metal_disabled": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 19, "module": "brian2-rust/tests/test_training_cached_weak_sde.py", "counts": {"passed": 22, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 20, "module": "brian2-rust/tests/test_training_callback_affine_compile.py", "counts": {"passed": 8}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 21, "module": "brian2-rust/tests/test_training_callback_affine_noise.py", "counts": {"passed": 60, "skipped": 120, "metal_disabled": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 22, "module": "brian2-rust/tests/test_training_callback_body_noise.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 23, "module": "brian2-rust/tests/test_training_callback_body_noise_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 24, "module": "brian2-rust/tests/test_training_callback_body_poisson.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 25, "module": "brian2-rust/tests/test_training_callback_body_poisson_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 26, "module": "brian2-rust/tests/test_training_callback_callables.py", "counts": {"passed": 76, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 27, "module": "brian2-rust/tests/test_training_callback_effect_bounds.py", "counts": {"passed": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 28, "module": "brian2-rust/tests/test_training_callback_effect_vjps.py", "counts": {"passed": 32, "skipped": 64, "metal_disabled": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 29, "module": "brian2-rust/tests/test_training_callback_effects.py", "counts": {"passed": 155, "skipped": 304, "metal_disabled": 152, "cuda_disabled": 152}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 30, "module": "brian2-rust/tests/test_training_callback_fixed_shape_rng.py", "counts": {"passed": 31, "skipped": 62, "metal_disabled": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 31, "module": "brian2-rust/tests/test_training_callback_inferred_compile.py", "counts": {"passed": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 32, "module": "brian2-rust/tests/test_training_callback_inferred_noise.py", "counts": {"passed": 72, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 33, "module": "brian2-rust/tests/test_training_callback_noise_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 34, "module": "brian2-rust/tests/test_training_callback_rng_alias_compile.py", "counts": {"passed": 30}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 35, "module": "brian2-rust/tests/test_training_callback_rng_alias_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 36, "module": "brian2-rust/tests/test_training_callback_rng_alias_noise.py", "counts": {"passed": 84, "skipped": 168, "metal_disabled": 84, "cuda_disabled": 84}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 37, "module": "brian2-rust/tests/test_training_callback_scalar_compile.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 38, "module": "brian2-rust/tests/test_training_callback_scalar_noise.py", "counts": {"passed": 112, "skipped": 224, "metal_disabled": 112, "cuda_disabled": 112}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 39, "module": "brian2-rust/tests/test_training_callback_scalar_poisson.py", "counts": {"passed": 68, "skipped": 136, "metal_disabled": 68, "cuda_disabled": 68}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 40, "module": "brian2-rust/tests/test_training_callback_scalar_poisson_compile.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 41, "module": "brian2-rust/tests/test_training_callback_scalar_poisson_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 42, "module": "brian2-rust/tests/test_training_callback_uncaptured_compile.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 43, "module": "brian2-rust/tests/test_training_callback_uncaptured_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 44, "module": "brian2-rust/tests/test_training_callback_uncaptured_noise.py", "counts": {"passed": 160, "skipped": 320, "metal_disabled": 160, "cuda_disabled": 160}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 45, "module": "brian2-rust/tests/test_training_capture_callbacks.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 46, "module": "brian2-rust/tests/test_training_capture_integrators.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 47, "module": "brian2-rust/tests/test_training_captured_constants.py", "counts": {"passed": 109, "skipped": 216, "metal_disabled": 108, "cuda_disabled": 108}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 48, "module": "brian2-rust/tests/test_training_captured_path_delays.py", "counts": {"passed": 42, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 49, "module": "brian2-rust/tests/test_training_clock_checkpoint.py", "counts": {"passed": 27, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 50, "module": "brian2-rust/tests/test_training_clock_itinerary.py", "counts": {"passed": 69, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 51, "module": "brian2-rust/tests/test_training_constant_equation_effects.py", "counts": {"passed": 90, "skipped": 180, "metal_disabled": 90, "cuda_disabled": 90}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 52, "module": "brian2-rust/tests/test_training_constant_links.py", "counts": {"passed": 22, "skipped": 21, "metal_disabled": 12, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 53, "module": "brian2-rust/tests/test_training_cross_linked.py", "counts": {"passed": 14, "skipped": 22, "metal_disabled": 11, "cuda_disabled": 11}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 54, "module": "brian2-rust/tests/test_training_crosshost_evidence.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 55, "module": "brian2-rust/tests/test_training_delay_batch.py", "counts": {"passed": 3}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 56, "module": "brian2-rust/tests/test_training_delay_update.py", "counts": {"passed": 40, "skipped": 34, "metal_disabled": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 57, "module": "brian2-rust/tests/test_training_delays.py", "counts": {"passed": 100}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 58, "module": "brian2-rust/tests/test_training_discrete_external_inputs.py", "counts": {"passed": 22, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 59, "module": "brian2-rust/tests/test_training_discrete_frontend.py", "counts": {"passed": 19, "skipped": 30, "metal_disabled": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 60, "module": "brian2-rust/tests/test_training_division.py", "counts": {"passed": 53, "skipped": 100, "metal_disabled": 50, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 61, "module": "brian2-rust/tests/test_training_dynamic.py", "counts": {"passed": 53}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 62, "module": "brian2-rust/tests/test_training_dynamic_clocks.py", "counts": {"passed": 68}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 63, "module": "brian2-rust/tests/test_training_dynamic_gpu.py", "counts": {"skipped": 90, "metal_disabled": 45, "cuda_disabled": 45}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 64, "module": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py", "counts": {"skipped": 58, "metal_disabled": 29, "cuda_disabled": 29}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 65, "module": "brian2-rust/tests/test_training_dynamic_refractory.py", "counts": {"passed": 111}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 66, "module": "brian2-rust/tests/test_training_dynamic_static_sde.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 67, "module": "brian2-rust/tests/test_training_dynamic_thresholds.py", "counts": {"passed": 34, "skipped": 28, "metal_disabled": 19, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 68, "module": "brian2-rust/tests/test_training_empty_reset_effects.py", "counts": {"passed": 32, "skipped": 64, "metal_disabled": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 69, "module": "brian2-rust/tests/test_training_empty_reset_poisson.py", "counts": {"passed": 14, "skipped": 28, "metal_disabled": 14, "cuda_disabled": 14}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 70, "module": "brian2-rust/tests/test_training_empty_synaptic_regular_effects.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 71, "module": "brian2-rust/tests/test_training_error_reports.py", "counts": {"passed": 39}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 72, "module": "brian2-rust/tests/test_training_event_callback_effects.py", "counts": {"passed": 269, "skipped": 536, "metal_disabled": 268, "cuda_disabled": 268}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 73, "module": "brian2-rust/tests/test_training_event_captures.py", "counts": {"passed": 34, "skipped": 64, "metal_disabled": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 74, "module": "brian2-rust/tests/test_training_event_delay.py", "counts": {"passed": 28, "skipped": 20, "metal_disabled": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 75, "module": "brian2-rust/tests/test_training_event_delay_gradients.py", "counts": {"passed": 5, "skipped": 8, "metal_disabled": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 76, "module": "brian2-rust/tests/test_training_event_delay_integrations.py", "counts": {"passed": 7, "skipped": 2, "metal_disabled": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 77, "module": "brian2-rust/tests/test_training_event_noise.py", "counts": {"passed": 19, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 78, "module": "brian2-rust/tests/test_training_event_returned_constants.py", "counts": {"passed": 60, "skipped": 120, "metal_disabled": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 79, "module": "brian2-rust/tests/test_training_event_staged_callbacks.py", "counts": {"passed": 206, "skipped": 408, "metal_disabled": 204, "cuda_disabled": 204}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 80, "module": "brian2-rust/tests/test_training_event_staged_delay.py", "counts": {"passed": 101, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 81, "module": "brian2-rust/tests/test_training_explicit_poisson_size.py", "counts": {"passed": 61, "skipped": 122, "metal_disabled": 61, "cuda_disabled": 61}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 82, "module": "brian2-rust/tests/test_training_external_neuron_links.py", "counts": {"passed": 45, "skipped": 60, "metal_disabled": 30, "cuda_disabled": 30}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 83, "module": "brian2-rust/tests/test_training_external_selector_roots.py", "counts": {"passed": 24, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 84, "module": "brian2-rust/tests/test_training_external_state_inputs.py", "counts": {"passed": 24, "skipped": 20, "metal_disabled": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 85, "module": "brian2-rust/tests/test_training_full_slice_effects.py", "counts": {"passed": 25, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 86, "module": "brian2-rust/tests/test_training_guarded_callback_effects.py", "counts": {"passed": 164, "skipped": 324, "metal_disabled": 162, "cuda_disabled": 162}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 87, "module": "brian2-rust/tests/test_training_guarded_event_effects.py", "counts": {"passed": 268, "skipped": 532, "metal_disabled": 266, "cuda_disabled": 266}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 88, "module": "brian2-rust/tests/test_training_guarded_integrator_effects.py", "counts": {"passed": 80, "skipped": 160, "metal_disabled": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 89, "module": "brian2-rust/tests/test_training_guarded_scalar_captures.py", "counts": {"passed": 42, "skipped": 84, "metal_disabled": 42, "cuda_disabled": 42}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 90, "module": "brian2-rust/tests/test_training_heterogeneous.py", "counts": {"passed": 50, "skipped": 18, "metal_disabled": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 91, "module": "brian2-rust/tests/test_training_implicit_refractory.py", "counts": {"passed": 21, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 92, "module": "brian2-rust/tests/test_training_indexed_external_inputs.py", "counts": {"passed": 23, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 93, "module": "brian2-rust/tests/test_training_indexed_regular_effects.py", "counts": {"passed": 52, "skipped": 104, "metal_disabled": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 94, "module": "brian2-rust/tests/test_training_indirect.py", "counts": {"passed": 37, "skipped": 2, "metal_disabled": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 95, "module": "brian2-rust/tests/test_training_indirect_frontend.py", "counts": {"passed": 39, "skipped": 50, "metal_disabled": 25, "cuda_disabled": 25}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 96, "module": "brian2-rust/tests/test_training_indirect_gpu.py", "counts": {"skipped": 101, "metal_disabled": 51, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 97, "module": "brian2-rust/tests/test_training_indirect_migration.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 98, "module": "brian2-rust/tests/test_training_integer_bitwise.py", "counts": {"passed": 44, "skipped": 66, "metal_disabled": 33, "cuda_disabled": 33}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 99, "module": "brian2-rust/tests/test_training_integer_ir.py", "counts": {"passed": 27, "skipped": 36, "metal_disabled": 18, "cuda_disabled": 18}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 100, "module": "brian2-rust/tests/test_training_integrator_callback_effects.py", "counts": {"passed": 81, "skipped": 162, "metal_disabled": 81, "cuda_disabled": 81}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 101, "module": "brian2-rust/tests/test_training_integrator_callback_rng.py", "counts": {"passed": 44, "skipped": 88, "metal_disabled": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 102, "module": "brian2-rust/tests/test_training_integrator_shared_rng.py", "counts": {"passed": 35, "skipped": 70, "metal_disabled": 35, "cuda_disabled": 35}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 103, "module": "brian2-rust/tests/test_training_keyword_defaults.py", "counts": {"passed": 48, "skipped": 76, "metal_disabled": 38, "cuda_disabled": 38}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 104, "module": "brian2-rust/tests/test_training_linked.py", "counts": {"passed": 48, "skipped": 30, "metal_disabled": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 105, "module": "brian2-rust/tests/test_training_masked_batch_captures.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 106, "module": "brian2-rust/tests/test_training_masked_multistatement_captures.py", "counts": {"passed": 78, "skipped": 156, "metal_disabled": 78, "cuda_disabled": 78}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 107, "module": "brian2-rust/tests/test_training_masked_operand_copies.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 108, "module": "brian2-rust/tests/test_training_math_sde.py", "counts": {"passed": 120, "skipped": 240, "metal_disabled": 120, "cuda_disabled": 120}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 109, "module": "brian2-rust/tests/test_training_migration.py", "counts": {"passed": 50}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 110, "module": "brian2-rust/tests/test_training_mixed_capture_domains.py", "counts": {"passed": 6, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 111, "module": "brian2-rust/tests/test_training_mixed_capture_lengths.py", "counts": {"passed": 38, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 112, "module": "brian2-rust/tests/test_training_mixed_capture_vjps.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 113, "module": "brian2-rust/tests/test_training_mixed_shape_rng.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 114, "module": "brian2-rust/tests/test_training_multiclock_frontend.py", "counts": {"passed": 67, "skipped": 126, "metal_disabled": 63, "cuda_disabled": 63}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 115, "module": "brian2-rust/tests/test_training_multiclock_synapses.py", "counts": {"passed": 22, "skipped": 44, "metal_disabled": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 116, "module": "brian2-rust/tests/test_training_multiclock_transitions.py", "counts": {"passed": 23, "skipped": 44, "metal_disabled": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 117, "module": "brian2-rust/tests/test_training_mutable_captures.py", "counts": {"passed": 30, "skipped": 44, "metal_disabled": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 118, "module": "brian2-rust/tests/test_training_mutable_constant_effects.py", "counts": {"passed": 62, "skipped": 124, "metal_disabled": 62, "cuda_disabled": 62}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 119, "module": "brian2-rust/tests/test_training_nested_index_codegen.py", "counts": {"passed": 23}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 120, "module": "brian2-rust/tests/test_training_nested_parameter_frontend.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 121, "module": "brian2-rust/tests/test_training_nested_regular_effects.py", "counts": {"passed": 124, "skipped": 248, "metal_disabled": 124, "cuda_disabled": 124}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 122, "module": "brian2-rust/tests/test_training_nested_synapse.py", "counts": {"passed": 24, "skipped": 48, "metal_disabled": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 123, "module": "brian2-rust/tests/test_training_nested_synapse_vjp.py", "counts": {"passed": 15, "skipped": 30, "metal_disabled": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 124, "module": "brian2-rust/tests/test_training_neuron_captures.py", "counts": {"passed": 50, "skipped": 100, "metal_disabled": 50, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 125, "module": "brian2-rust/tests/test_training_neuron_noise.py", "counts": {"passed": 28, "skipped": 46, "metal_disabled": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 126, "module": "brian2-rust/tests/test_training_neuron_shared_capture_domains.py", "counts": {"passed": 8, "skipped": 16, "metal_disabled": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 127, "module": "brian2-rust/tests/test_training_neuron_shared_capture_views.py", "counts": {"passed": 20, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 128, "module": "brian2-rust/tests/test_training_neuron_shared_capture_vjps.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 129, "module": "brian2-rust/tests/test_training_neuron_whole_integrator_rng.py", "counts": {"passed": 63, "skipped": 126, "metal_disabled": 63, "cuda_disabled": 63}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 130, "module": "brian2-rust/tests/test_training_neuron_whole_refractory_rng.py", "counts": {"passed": 92, "skipped": 184, "metal_disabled": 92, "cuda_disabled": 92}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 131, "module": "brian2-rust/tests/test_training_neuron_whole_reset_rng.py", "counts": {"passed": 80, "skipped": 160, "metal_disabled": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 132, "module": "brian2-rust/tests/test_training_neuron_whole_rng.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 133, "module": "brian2-rust/tests/test_training_neuron_whole_xi_rng.py", "counts": {"passed": 94, "skipped": 188, "metal_disabled": 94, "cuda_disabled": 94}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 134, "module": "brian2-rust/tests/test_training_parameter_gather.py", "counts": {"passed": 23, "skipped": 43, "metal_disabled": 22, "cuda_disabled": 21}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 135, "module": "brian2-rust/tests/test_training_parameter_gather_frontend.py", "counts": {"passed": 23, "skipped": 44, "metal_disabled": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 136, "module": "brian2-rust/tests/test_training_partial_capture_aliases.py", "counts": {"passed": 26, "skipped": 52, "metal_disabled": 26, "cuda_disabled": 26}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 137, "module": "brian2-rust/tests/test_training_partial_capture_views.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 138, "module": "brian2-rust/tests/test_training_partial_capture_vjps.py", "counts": {"passed": 96, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 139, "module": "brian2-rust/tests/test_training_partial_overlap_vjps.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 140, "module": "brian2-rust/tests/test_training_partial_readonly_bank.py", "counts": {"passed": 6, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 141, "module": "brian2-rust/tests/test_training_pathway_storage.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 142, "module": "brian2-rust/tests/test_training_poisson_brian.py", "counts": {"passed": 9, "skipped": 18, "metal_disabled": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 143, "module": "brian2-rust/tests/test_training_poisson_capture_rates.py", "counts": {"passed": 96, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 144, "module": "brian2-rust/tests/test_training_poisson_checkpoint_gpu.py", "counts": {"passed": 80, "skipped": 108, "metal_disabled": 54, "cuda_disabled": 54}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 145, "module": "brian2-rust/tests/test_training_poisson_core.py", "counts": {"passed": 23, "skipped": 14, "metal_disabled": 14}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 146, "module": "brian2-rust/tests/test_training_poisson_event_replay.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 147, "module": "brian2-rust/tests/test_training_poisson_gpu.py", "counts": {"passed": 34, "skipped": 62, "metal_disabled": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 148, "module": "brian2-rust/tests/test_training_poisson_gpu_boundary.py", "counts": {"passed": 67, "skipped": 124, "metal_disabled": 62, "cuda_disabled": 62}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 149, "module": "brian2-rust/tests/test_training_poisson_gpu_vjp.py", "counts": {"passed": 54, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 150, "module": "brian2-rust/tests/test_training_poisson_masked_whole.py", "counts": {"passed": 72, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 151, "module": "brian2-rust/tests/test_training_poisson_retirement.py", "counts": {"passed": 33, "skipped": 66, "metal_disabled": 33, "cuda_disabled": 33}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 152, "module": "brian2-rust/tests/test_training_poisson_shared.py", "counts": {"passed": 68}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 153, "module": "brian2-rust/tests/test_training_poisson_shared_gpu.py", "counts": {"passed": 70, "skipped": 132, "metal_disabled": 66, "cuda_disabled": 66}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 154, "module": "brian2-rust/tests/test_training_poisson_ssa.py", "counts": {"passed": 22, "skipped": 2, "metal_disabled": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 155, "module": "brian2-rust/tests/test_training_poisson_static.py", "counts": {"passed": 102}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 156, "module": "brian2-rust/tests/test_training_poisson_static_gpu.py", "counts": {"skipped": 294, "metal_disabled": 147, "cuda_disabled": 147, "passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 157, "module": "brian2-rust/tests/test_training_poisson_zero.py", "counts": {"passed": 33}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 158, "module": "brian2-rust/tests/test_training_poisson_zero_vjp.py", "counts": {"passed": 57}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 159, "module": "brian2-rust/tests/test_training_positional_only_callbacks.py", "counts": {"passed": 18, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 160, "module": "brian2-rust/tests/test_training_precise_clock.py", "counts": {"passed": 14, "skipped": 15, "metal_disabled": 8, "cuda_disabled": 7}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 161, "module": "brian2-rust/tests/test_training_private_arrays.py", "counts": {"passed": 95, "skipped": 176, "metal_disabled": 88, "cuda_disabled": 88}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 162, "module": "brian2-rust/tests/test_training_pure_branches.py", "counts": {"passed": 61, "skipped": 88, "metal_disabled": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 163, "module": "brian2-rust/tests/test_training_pure_functions.py", "counts": {"passed": 40, "skipped": 28, "metal_disabled": 15, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 164, "module": "brian2-rust/tests/test_training_pure_loops.py", "counts": {"passed": 37, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 165, "module": "brian2-rust/tests/test_training_pure_real_control.py", "counts": {"passed": 81, "skipped": 150, "metal_disabled": 75, "cuda_disabled": 75}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 166, "module": "brian2-rust/tests/test_training_pure_returns.py", "counts": {"passed": 11, "skipped": 18, "metal_disabled": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 167, "module": "brian2-rust/tests/test_training_pure_statements.py", "counts": {"passed": 51, "skipped": 62, "metal_disabled": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 168, "module": "brian2-rust/tests/test_training_random_refractory.py", "counts": {"passed": 20, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 169, "module": "brian2-rust/tests/test_training_readonly_capture_view_ownership.py", "counts": {"passed": 2}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 170, "module": "brian2-rust/tests/test_training_readonly_captures.py", "counts": {"passed": 97, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 171, "module": "brian2-rust/tests/test_training_refractory.py", "counts": {"passed": 57, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 172, "module": "brian2-rust/tests/test_training_regular.py", "counts": {"passed": 22, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 173, "module": "brian2-rust/tests/test_training_regular_callback_rng.py", "counts": {"passed": 114, "skipped": 228, "metal_disabled": 114, "cuda_disabled": 114}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 174, "module": "brian2-rust/tests/test_training_regular_callback_rng_compile.py", "counts": {"passed": 37}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 175, "module": "brian2-rust/tests/test_training_regular_edges.py", "counts": {"passed": 10, "skipped": 16, "metal_disabled": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 176, "module": "brian2-rust/tests/test_training_regular_hybrid_vjps.py", "counts": {"passed": 6, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 177, "module": "brian2-rust/tests/test_training_regular_scalar_fallback_rng.py", "counts": {"passed": 13, "skipped": 26, "metal_disabled": 13, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 178, "module": "brian2-rust/tests/test_training_regular_shared_rng.py", "counts": {"passed": 143, "skipped": 286, "metal_disabled": 143, "cuda_disabled": 143}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 179, "module": "brian2-rust/tests/test_training_regular_ufunc_effects.py", "counts": {"passed": 145, "skipped": 288, "metal_disabled": 144, "cuda_disabled": 144}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 180, "module": "brian2-rust/tests/test_training_regular_vector_rng.py", "counts": {"passed": 155, "skipped": 310, "metal_disabled": 155, "cuda_disabled": 155}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 181, "module": "brian2-rust/tests/test_training_regular_vector_rng_compile.py", "counts": {"passed": 61}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 182, "module": "brian2-rust/tests/test_training_regular_whole_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 183, "module": "brian2-rust/tests/test_training_repeated_capture_views.py", "counts": {"passed": 37, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 184, "module": "brian2-rust/tests/test_training_reset_callback_effects.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 185, "module": "brian2-rust/tests/test_training_reset_callback_rng.py", "counts": {"passed": 28, "skipped": 56, "metal_disabled": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 186, "module": "brian2-rust/tests/test_training_reset_capture_alias_vjps.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 187, "module": "brian2-rust/tests/test_training_reset_captures.py", "counts": {"passed": 55, "skipped": 108, "metal_disabled": 54, "cuda_disabled": 54}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 188, "module": "brian2-rust/tests/test_training_reset_effect_bounds.py", "counts": {"passed": 4, "skipped": 8, "metal_disabled": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 189, "module": "brian2-rust/tests/test_training_reset_shared_rng.py", "counts": {"passed": 29, "skipped": 58, "metal_disabled": 29, "cuda_disabled": 29}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 190, "module": "brian2-rust/tests/test_training_returned_captures.py", "counts": {"passed": 96, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 191, "module": "brian2-rust/tests/test_training_rk_refractory.py", "counts": {"passed": 113, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 192, "module": "brian2-rust/tests/test_training_runtime_refractory.py", "counts": {"passed": 135, "skipped": 140, "metal_disabled": 70, "cuda_disabled": 70}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 193, "module": "brian2-rust/tests/test_training_scalar_event_rng.py", "counts": {"passed": 92, "skipped": 184, "metal_disabled": 92, "cuda_disabled": 92}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 194, "module": "brian2-rust/tests/test_training_scalar_event_rng_compile.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 195, "module": "brian2-rust/tests/test_training_scalar_event_rng_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "cpu", "module_index": 196, "module": "brian2-rust/tests/test_training_scalar_event_rng_guards.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 197, "module": "brian2-rust/tests/test_training_scalar_stochastic.py", "counts": {"passed": 47, "skipped": 76, "metal_disabled": 38, "cuda_disabled": 38}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 198, "module": "brian2-rust/tests/test_training_selected_capture_mixing.py", "counts": {"passed": 16, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 199, "module": "brian2-rust/tests/test_training_selected_capture_returns.py", "counts": {"passed": 53, "skipped": 104, "metal_disabled": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 200, "module": "brian2-rust/tests/test_training_selected_inplace_columns.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 201, "module": "brian2-rust/tests/test_training_selected_multishape_captures.py", "counts": {"passed": 16, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 202, "module": "brian2-rust/tests/test_training_selected_poisson_candidate_domain.py", "counts": {"passed": 2, "skipped": 4, "metal_disabled": 2, "cuda_disabled": 2}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 203, "module": "brian2-rust/tests/test_training_selected_poisson_reset_surrogate.py", "counts": {"passed": 17, "skipped": 34, "metal_disabled": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 204, "module": "brian2-rust/tests/test_training_shared_capture_typed_views.py", "counts": {"passed": 8, "skipped": 16, "metal_disabled": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 205, "module": "brian2-rust/tests/test_training_shared_capture_views.py", "counts": {"passed": 60, "skipped": 120, "metal_disabled": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 206, "module": "brian2-rust/tests/test_training_spike_buffers.py", "counts": {"passed": 22, "skipped": 34, "metal_disabled": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 207, "module": "brian2-rust/tests/test_training_standard_math.py", "counts": {"passed": 59, "skipped": 106, "metal_disabled": 53, "cuda_disabled": 53}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 208, "module": "brian2-rust/tests/test_training_state_refractory.py", "counts": {"passed": 35, "skipped": 62, "metal_disabled": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 209, "module": "brian2-rust/tests/test_training_static_control_sde.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 210, "module": "brian2-rust/tests/test_training_static_timed_inputs.py", "counts": {"passed": 118, "skipped": 160, "metal_disabled": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 211, "module": "brian2-rust/tests/test_training_static_vjp_activity.py", "counts": {"passed": 62, "skipped": 88, "metal_disabled": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 212, "module": "brian2-rust/tests/test_training_stochastic.py", "counts": {"passed": 60, "skipped": 18, "metal_disabled": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 213, "module": "brian2-rust/tests/test_training_stochastic_refractory_combined.py", "counts": {"passed": 24, "skipped": 48, "metal_disabled": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 214, "module": "brian2-rust/tests/test_training_stochastic_refractory_vjp.py", "counts": {"passed": 18, "skipped": 36, "metal_disabled": 18, "cuda_disabled": 18}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 215, "module": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py", "counts": {"passed": 31, "skipped": 50, "metal_disabled": 25, "cuda_disabled": 25}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 216, "module": "brian2-rust/tests/test_training_strided_capture_banks.py", "counts": {"passed": 9, "skipped": 12, "metal_disabled": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 217, "module": "brian2-rust/tests/test_training_strided_capture_views.py", "counts": {"passed": 144, "skipped": 288, "metal_disabled": 144, "cuda_disabled": 144}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 218, "module": "brian2-rust/tests/test_training_strided_external_captures.py", "counts": {"passed": 24, "skipped": 48, "metal_disabled": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 219, "module": "brian2-rust/tests/test_training_subgroup.py", "counts": {"passed": 32, "skipped": 64, "metal_disabled": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 220, "module": "brian2-rust/tests/test_training_subgroup_callback_effects.py", "counts": {"passed": 60, "skipped": 120, "metal_disabled": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 221, "module": "brian2-rust/tests/test_training_subgroup_edges.py", "counts": {"passed": 21, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 222, "module": "brian2-rust/tests/test_training_subgroup_vjp.py", "counts": {"passed": 21, "skipped": 42, "metal_disabled": 21, "cuda_disabled": 21}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 223, "module": "brian2-rust/tests/test_training_summed.py", "counts": {"passed": 60}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 224, "module": "brian2-rust/tests/test_training_synaptic_callback_callables.py", "counts": {"passed": 72, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 225, "module": "brian2-rust/tests/test_training_synaptic_callback_effects.py", "counts": {"passed": 126, "skipped": 252, "metal_disabled": 126, "cuda_disabled": 126}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 226, "module": "brian2-rust/tests/test_training_synaptic_draws.py", "counts": {"passed": 4, "skipped": 8, "metal_disabled": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 227, "module": "brian2-rust/tests/test_training_synaptic_endpoints.py", "counts": {"passed": 23, "skipped": 46, "metal_disabled": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 228, "module": "brian2-rust/tests/test_training_synaptic_regular_effects.py", "counts": {"passed": 112, "skipped": 224, "metal_disabled": 112, "cuda_disabled": 112}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 229, "module": "brian2-rust/tests/test_training_synaptic_scalar_fallback_rng.py", "counts": {"passed": 27, "skipped": 54, "metal_disabled": 27, "cuda_disabled": 27}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 230, "module": "brian2-rust/tests/test_training_threshold_callback_effects.py", "counts": {"passed": 72, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 231, "module": "brian2-rust/tests/test_training_threshold_callback_rng.py", "counts": {"passed": 30, "skipped": 60, "metal_disabled": 30, "cuda_disabled": 30}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 232, "module": "brian2-rust/tests/test_training_threshold_effect_predicates.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 233, "module": "brian2-rust/tests/test_training_threshold_shared_rng.py", "counts": {"passed": 28, "skipped": 56, "metal_disabled": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 234, "module": "brian2-rust/tests/test_training_time.py", "counts": {"passed": 62, "skipped": 20, "metal_disabled": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 235, "module": "brian2-rust/tests/test_training_timed_constant_effects.py", "counts": {"passed": 80, "skipped": 160, "metal_disabled": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 236, "module": "brian2-rust/tests/test_training_timed_inputs.py", "counts": {"passed": 43, "skipped": 30, "metal_disabled": 17, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 237, "module": "brian2-rust/tests/test_training_typed_callback_effects.py", "counts": {"passed": 88, "skipped": 176, "metal_disabled": 88, "cuda_disabled": 88}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 238, "module": "brian2-rust/tests/test_training_typed_effect_bounds.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 239, "module": "brian2-rust/tests/test_training_typed_event_effects.py", "counts": {"passed": 192, "skipped": 384, "metal_disabled": 192, "cuda_disabled": 192}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 240, "module": "brian2-rust/tests/test_training_typed_event_replay.py", "counts": {"passed": 48, "skipped": 96, "metal_disabled": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 241, "module": "brian2-rust/tests/test_training_typed_integrator_effects.py", "counts": {"passed": 200, "skipped": 400, "metal_disabled": 200, "cuda_disabled": 200}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 242, "module": "brian2-rust/tests/test_training_typed_synaptic_integrators.py", "counts": {"passed": 168, "skipped": 336, "metal_disabled": 168, "cuda_disabled": 168}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 243, "module": "brian2-rust/tests/test_training_typed_threshold_effects.py", "counts": {"passed": 16, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 244, "module": "brian2-rust/tests/test_training_uniform.py", "counts": {"passed": 19, "skipped": 34, "metal_disabled": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 245, "module": "brian2-rust/tests/test_training_vjp_activity.py", "counts": {"passed": 92, "skipped": 168, "metal_disabled": 84, "cuda_disabled": 84}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 246, "module": "brian2-rust/tests/test_training_warm_functions.py", "counts": {"passed": 10, "skipped": 4, "metal_disabled": 2, "cuda_disabled": 2}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 247, "module": "brian2-rust/tests/test_training_whole_caller_carry.py", "counts": {"passed": 36, "skipped": 72, "metal_disabled": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 248, "module": "brian2-rust/tests/test_training_whole_caller_derived.py", "counts": {"passed": 52, "skipped": 104, "metal_disabled": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 249, "module": "brian2-rust/tests/test_training_whole_caller_lengths.py", "counts": {"passed": 20, "skipped": 40, "metal_disabled": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 250, "module": "brian2-rust/tests/test_training_whole_caller_random.py", "counts": {"passed": 28, "skipped": 56, "metal_disabled": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 251, "module": "brian2-rust/tests/test_training_whole_mixed_typed_threshold_rng.py", "counts": {"passed": 96, "skipped": 192, "metal_disabled": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 252, "module": "brian2-rust/tests/test_training_whole_neuron_phase_rng.py", "counts": {"passed": 120, "skipped": 240, "metal_disabled": 120, "cuda_disabled": 120}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 253, "module": "brian2-rust/tests/test_training_whole_phase_signed_uniform.py", "counts": {"passed": 12, "skipped": 24, "metal_disabled": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 254, "module": "brian2-rust/tests/test_training_whole_reset_alias_copy_rng.py", "counts": {"passed": 5, "skipped": 10, "metal_disabled": 5, "cuda_disabled": 5}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 255, "module": "brian2-rust/tests/test_training_whole_selected_captures.py", "counts": {"passed": 68, "skipped": 136, "metal_disabled": 68, "cuda_disabled": 68}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 256, "module": "brian2-rust/tests/test_training_whole_size_rng.py", "counts": {"passed": 34, "skipped": 68, "metal_disabled": 34, "cuda_disabled": 34}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 257, "module": "brian2-rust/tests/test_training_whole_threshold_predicates_rng.py", "counts": {"passed": 91, "skipped": 182, "metal_disabled": 91, "cuda_disabled": 91}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 258, "module": "brian2-rust/tests/test_training_whole_typed_threshold_rng.py", "counts": {"passed": 72, "skipped": 144, "metal_disabled": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 259, "module": "brian2-rust/tests/test_training_wrapper_bodies.py", "counts": {"passed": 231, "skipped": 456, "metal_disabled": 228, "cuda_disabled": 228}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 260, "module": "brian2-rust/tests/test_native_training.py", "counts": {"passed": 15, "skipped": 5, "metal_disabled": 5}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 261, "module": "brian2-rust/tests/test_native_training_cuda.py", "counts": {"skipped": 36, "cuda_disabled": 18, "metal_disabled": 18}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 262, "module": "brian2-rust/tests/test_native_training_equations.py", "counts": {"passed": 13, "skipped": 8, "metal_disabled": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 263, "module": "brian2-rust/tests/test_native_training_gpu_mpi.py", "counts": {"skipped": 38, "metal_disabled": 19, "cuda_disabled": 19}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 264, "module": "brian2-rust/tests/test_native_training_graph.py", "counts": {"passed": 16, "skipped": 13, "metal_disabled": 13}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 265, "module": "brian2-rust/tests/test_native_training_mpi.py", "counts": {"passed": 20}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 266, "module": "brian2-rust/tests/test_native_training_multistate.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 267, "module": "brian2-rust/tests/test_native_training_multistate_gpu.py", "counts": {"skipped": 46, "metal_disabled": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 268, "module": "brian2-rust/tests/test_training_short_term_plasticity_vjp.py", "counts": {"passed": 40, "skipped": 80, "metal_disabled": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 269, "module": "brian2-rust/tests/test_training_cuda_source.py", "counts": {"passed": 3}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 270, "module": "brian2-rust/tests/test_training_cuda_exports.py", "counts": {"passed": 18}, "actual_wait": 0}
+{"mode": "cpu", "module_index": 271, "module": "brian2-rust/tests/test_training_fresh_readonly.py", "counts": {"passed": 16, "skipped": 32, "metal_disabled": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 0, "module": "brian2-rust/tests/test_training_async_actions.py", "counts": {"passed": 58, "skipped": 27, "cuda_disabled": 27}, "actual_wait": 0}
+{"mode": "metal", "module_index": 1, "module": "brian2-rust/tests/test_training_batch_capture_noise.py", "counts": {"passed": 56, "skipped": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "metal", "module_index": 2, "module": "brian2-rust/tests/test_training_batch_capture_temporaries.py", "counts": {"passed": 336, "skipped": 168, "cuda_disabled": 168}, "actual_wait": 0}
+{"mode": "metal", "module_index": 3, "module": "brian2-rust/tests/test_training_batch_event_captures.py", "counts": {"passed": 188, "skipped": 94, "cuda_disabled": 94}, "actual_wait": 0}
+{"mode": "metal", "module_index": 4, "module": "brian2-rust/tests/test_training_batch_external_inputs.py", "counts": {"passed": 56, "skipped": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "metal", "module_index": 5, "module": "brian2-rust/tests/test_training_batch_local_lifetimes.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 6, "module": "brian2-rust/tests/test_training_batch_poisson_captures.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 7, "module": "brian2-rust/tests/test_training_batch_poisson_compile.py", "counts": {"passed": 10}, "actual_wait": 0}
+{"mode": "metal", "module_index": 8, "module": "brian2-rust/tests/test_training_batch_private_readonly_captures.py", "counts": {"passed": 49, "skipped": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "metal", "module_index": 9, "module": "brian2-rust/tests/test_training_batch_random_compile.py", "counts": {"passed": 5}, "actual_wait": 0}
+{"mode": "metal", "module_index": 10, "module": "brian2-rust/tests/test_training_batch_readonly_bank_carry.py", "counts": {"passed": 12, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 11, "module": "brian2-rust/tests/test_training_batch_readonly_captures.py", "counts": {"passed": 88, "skipped": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "metal", "module_index": 12, "module": "brian2-rust/tests/test_training_boolean_thresholds.py", "counts": {"passed": 56, "skipped": 11, "cuda_disabled": 11}, "actual_wait": 0}
+{"mode": "metal", "module_index": 13, "module": "brian2-rust/tests/test_training_brian.py", "counts": {"passed": 23}, "actual_wait": 0}
+{"mode": "metal", "module_index": 14, "module": "brian2-rust/tests/test_training_brian_dynamic.py", "counts": {"passed": 28}, "actual_wait": 0}
+{"mode": "metal", "module_index": 15, "module": "brian2-rust/tests/test_training_brian_integrators.py", "counts": {"passed": 27, "skipped": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 16, "module": "brian2-rust/tests/test_training_brian_multistate.py", "counts": {"passed": 7}, "actual_wait": 0}
+{"mode": "metal", "module_index": 17, "module": "brian2-rust/tests/test_training_cached_noise.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 18, "module": "brian2-rust/tests/test_training_cached_noise_edges.py", "counts": {"passed": 25, "skipped": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "metal", "module_index": 19, "module": "brian2-rust/tests/test_training_cached_weak_sde.py", "counts": {"passed": 42, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 20, "module": "brian2-rust/tests/test_training_callback_affine_compile.py", "counts": {"passed": 8}, "actual_wait": 0}
+{"mode": "metal", "module_index": 21, "module": "brian2-rust/tests/test_training_callback_affine_noise.py", "counts": {"passed": 120, "skipped": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "metal", "module_index": 22, "module": "brian2-rust/tests/test_training_callback_body_noise.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 23, "module": "brian2-rust/tests/test_training_callback_body_noise_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 24, "module": "brian2-rust/tests/test_training_callback_body_poisson.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 25, "module": "brian2-rust/tests/test_training_callback_body_poisson_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 26, "module": "brian2-rust/tests/test_training_callback_callables.py", "counts": {"passed": 148, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 27, "module": "brian2-rust/tests/test_training_callback_effect_bounds.py", "counts": {"passed": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 28, "module": "brian2-rust/tests/test_training_callback_effect_vjps.py", "counts": {"passed": 64, "skipped": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "metal", "module_index": 29, "module": "brian2-rust/tests/test_training_callback_effects.py", "counts": {"passed": 307, "skipped": 152, "cuda_disabled": 152}, "actual_wait": 0}
+{"mode": "metal", "module_index": 30, "module": "brian2-rust/tests/test_training_callback_fixed_shape_rng.py", "counts": {"passed": 62, "skipped": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "metal", "module_index": 31, "module": "brian2-rust/tests/test_training_callback_inferred_compile.py", "counts": {"passed": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 32, "module": "brian2-rust/tests/test_training_callback_inferred_noise.py", "counts": {"passed": 144, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 33, "module": "brian2-rust/tests/test_training_callback_noise_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 34, "module": "brian2-rust/tests/test_training_callback_rng_alias_compile.py", "counts": {"passed": 30}, "actual_wait": 0}
+{"mode": "metal", "module_index": 35, "module": "brian2-rust/tests/test_training_callback_rng_alias_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 36, "module": "brian2-rust/tests/test_training_callback_rng_alias_noise.py", "counts": {"passed": 168, "skipped": 84, "cuda_disabled": 84}, "actual_wait": 0}
+{"mode": "metal", "module_index": 37, "module": "brian2-rust/tests/test_training_callback_scalar_compile.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 38, "module": "brian2-rust/tests/test_training_callback_scalar_noise.py", "counts": {"passed": 224, "skipped": 112, "cuda_disabled": 112}, "actual_wait": 0}
+{"mode": "metal", "module_index": 39, "module": "brian2-rust/tests/test_training_callback_scalar_poisson.py", "counts": {"passed": 136, "skipped": 68, "cuda_disabled": 68}, "actual_wait": 0}
+{"mode": "metal", "module_index": 40, "module": "brian2-rust/tests/test_training_callback_scalar_poisson_compile.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 41, "module": "brian2-rust/tests/test_training_callback_scalar_poisson_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 42, "module": "brian2-rust/tests/test_training_callback_uncaptured_compile.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 43, "module": "brian2-rust/tests/test_training_callback_uncaptured_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 44, "module": "brian2-rust/tests/test_training_callback_uncaptured_noise.py", "counts": {"passed": 320, "skipped": 160, "cuda_disabled": 160}, "actual_wait": 0}
+{"mode": "metal", "module_index": 45, "module": "brian2-rust/tests/test_training_capture_callbacks.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 46, "module": "brian2-rust/tests/test_training_capture_integrators.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 47, "module": "brian2-rust/tests/test_training_captured_constants.py", "counts": {"passed": 217, "skipped": 108, "cuda_disabled": 108}, "actual_wait": 0}
+{"mode": "metal", "module_index": 48, "module": "brian2-rust/tests/test_training_captured_path_delays.py", "counts": {"passed": 82, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 49, "module": "brian2-rust/tests/test_training_clock_checkpoint.py", "counts": {"passed": 39, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 50, "module": "brian2-rust/tests/test_training_clock_itinerary.py", "counts": {"passed": 75, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 51, "module": "brian2-rust/tests/test_training_constant_equation_effects.py", "counts": {"passed": 180, "skipped": 90, "cuda_disabled": 90}, "actual_wait": 0}
+{"mode": "metal", "module_index": 52, "module": "brian2-rust/tests/test_training_constant_links.py", "counts": {"passed": 34, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 53, "module": "brian2-rust/tests/test_training_cross_linked.py", "counts": {"passed": 25, "skipped": 11, "cuda_disabled": 11}, "actual_wait": 0}
+{"mode": "metal", "module_index": 54, "module": "brian2-rust/tests/test_training_crosshost_evidence.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 55, "module": "brian2-rust/tests/test_training_delay_batch.py", "counts": {"passed": 3}, "actual_wait": 0}
+{"mode": "metal", "module_index": 56, "module": "brian2-rust/tests/test_training_delay_update.py", "counts": {"passed": 57, "skipped": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "metal", "module_index": 57, "module": "brian2-rust/tests/test_training_delays.py", "counts": {"passed": 100}, "actual_wait": 0}
+{"mode": "metal", "module_index": 58, "module": "brian2-rust/tests/test_training_discrete_external_inputs.py", "counts": {"passed": 34, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 59, "module": "brian2-rust/tests/test_training_discrete_frontend.py", "counts": {"passed": 34, "skipped": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "metal", "module_index": 60, "module": "brian2-rust/tests/test_training_division.py", "counts": {"passed": 103, "skipped": 50, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "metal", "module_index": 61, "module": "brian2-rust/tests/test_training_dynamic.py", "counts": {"passed": 53}, "actual_wait": 0}
+{"mode": "metal", "module_index": 62, "module": "brian2-rust/tests/test_training_dynamic_clocks.py", "counts": {"passed": 68}, "actual_wait": 0}
+{"mode": "metal", "module_index": 63, "module": "brian2-rust/tests/test_training_dynamic_gpu.py", "counts": {"passed": 45, "skipped": 45, "cuda_disabled": 45}, "actual_wait": 0}
+{"mode": "metal", "module_index": 64, "module": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py", "counts": {"passed": 29, "skipped": 29, "cuda_disabled": 29}, "actual_wait": 0}
+{"mode": "metal", "module_index": 65, "module": "brian2-rust/tests/test_training_dynamic_refractory.py", "counts": {"passed": 111}, "actual_wait": 0}
+{"mode": "metal", "module_index": 66, "module": "brian2-rust/tests/test_training_dynamic_static_sde.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 67, "module": "brian2-rust/tests/test_training_dynamic_thresholds.py", "counts": {"passed": 53, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 68, "module": "brian2-rust/tests/test_training_empty_reset_effects.py", "counts": {"passed": 64, "skipped": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "metal", "module_index": 69, "module": "brian2-rust/tests/test_training_empty_reset_poisson.py", "counts": {"passed": 28, "skipped": 14, "cuda_disabled": 14}, "actual_wait": 0}
+{"mode": "metal", "module_index": 70, "module": "brian2-rust/tests/test_training_empty_synaptic_regular_effects.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 71, "module": "brian2-rust/tests/test_training_error_reports.py", "counts": {"passed": 39}, "actual_wait": 0}
+{"mode": "metal", "module_index": 72, "module": "brian2-rust/tests/test_training_event_callback_effects.py", "counts": {"passed": 537, "skipped": 268, "cuda_disabled": 268}, "actual_wait": 0}
+{"mode": "metal", "module_index": 73, "module": "brian2-rust/tests/test_training_event_captures.py", "counts": {"passed": 66, "skipped": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "metal", "module_index": 74, "module": "brian2-rust/tests/test_training_event_delay.py", "counts": {"passed": 38, "skipped": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "metal", "module_index": 75, "module": "brian2-rust/tests/test_training_event_delay_gradients.py", "counts": {"passed": 9, "skipped": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 76, "module": "brian2-rust/tests/test_training_event_delay_integrations.py", "counts": {"passed": 8, "skipped": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "metal", "module_index": 77, "module": "brian2-rust/tests/test_training_event_noise.py", "counts": {"passed": 31, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 78, "module": "brian2-rust/tests/test_training_event_returned_constants.py", "counts": {"passed": 120, "skipped": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "metal", "module_index": 79, "module": "brian2-rust/tests/test_training_event_staged_callbacks.py", "counts": {"passed": 410, "skipped": 204, "cuda_disabled": 204}, "actual_wait": 0}
+{"mode": "metal", "module_index": 80, "module": "brian2-rust/tests/test_training_event_staged_delay.py", "counts": {"passed": 197, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 81, "module": "brian2-rust/tests/test_training_explicit_poisson_size.py", "counts": {"passed": 122, "skipped": 61, "cuda_disabled": 61}, "actual_wait": 0}
+{"mode": "metal", "module_index": 82, "module": "brian2-rust/tests/test_training_external_neuron_links.py", "counts": {"passed": 75, "skipped": 30, "cuda_disabled": 30}, "actual_wait": 0}
+{"mode": "metal", "module_index": 83, "module": "brian2-rust/tests/test_training_external_selector_roots.py", "counts": {"passed": 44, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 84, "module": "brian2-rust/tests/test_training_external_state_inputs.py", "counts": {"passed": 34, "skipped": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "metal", "module_index": 85, "module": "brian2-rust/tests/test_training_full_slice_effects.py", "counts": {"passed": 37, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 86, "module": "brian2-rust/tests/test_training_guarded_callback_effects.py", "counts": {"passed": 326, "skipped": 162, "cuda_disabled": 162}, "actual_wait": 0}
+{"mode": "metal", "module_index": 87, "module": "brian2-rust/tests/test_training_guarded_event_effects.py", "counts": {"passed": 534, "skipped": 266, "cuda_disabled": 266}, "actual_wait": 0}
+{"mode": "metal", "module_index": 88, "module": "brian2-rust/tests/test_training_guarded_integrator_effects.py", "counts": {"passed": 160, "skipped": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "metal", "module_index": 89, "module": "brian2-rust/tests/test_training_guarded_scalar_captures.py", "counts": {"passed": 84, "skipped": 42, "cuda_disabled": 42}, "actual_wait": 0}
+{"mode": "metal", "module_index": 90, "module": "brian2-rust/tests/test_training_heterogeneous.py", "counts": {"passed": 59, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 91, "module": "brian2-rust/tests/test_training_implicit_refractory.py", "counts": {"passed": 41, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 92, "module": "brian2-rust/tests/test_training_indexed_external_inputs.py", "counts": {"passed": 43, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 93, "module": "brian2-rust/tests/test_training_indexed_regular_effects.py", "counts": {"passed": 104, "skipped": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "metal", "module_index": 94, "module": "brian2-rust/tests/test_training_indirect.py", "counts": {"passed": 38, "skipped": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "metal", "module_index": 95, "module": "brian2-rust/tests/test_training_indirect_frontend.py", "counts": {"passed": 64, "skipped": 25, "cuda_disabled": 25}, "actual_wait": 0}
+{"mode": "metal", "module_index": 96, "module": "brian2-rust/tests/test_training_indirect_gpu.py", "counts": {"passed": 51, "skipped": 50, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "metal", "module_index": 97, "module": "brian2-rust/tests/test_training_indirect_migration.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 98, "module": "brian2-rust/tests/test_training_integer_bitwise.py", "counts": {"passed": 77, "skipped": 33, "cuda_disabled": 33}, "actual_wait": 0}
+{"mode": "metal", "module_index": 99, "module": "brian2-rust/tests/test_training_integer_ir.py", "counts": {"passed": 45, "skipped": 18, "cuda_disabled": 18}, "actual_wait": 0}
+{"mode": "metal", "module_index": 100, "module": "brian2-rust/tests/test_training_integrator_callback_effects.py", "counts": {"passed": 162, "skipped": 81, "cuda_disabled": 81}, "actual_wait": 0}
+{"mode": "metal", "module_index": 101, "module": "brian2-rust/tests/test_training_integrator_callback_rng.py", "counts": {"passed": 88, "skipped": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "metal", "module_index": 102, "module": "brian2-rust/tests/test_training_integrator_shared_rng.py", "counts": {"passed": 70, "skipped": 35, "cuda_disabled": 35}, "actual_wait": 0}
+{"mode": "metal", "module_index": 103, "module": "brian2-rust/tests/test_training_keyword_defaults.py", "counts": {"passed": 86, "skipped": 38, "cuda_disabled": 38}, "actual_wait": 0}
+{"mode": "metal", "module_index": 104, "module": "brian2-rust/tests/test_training_linked.py", "counts": {"passed": 63, "skipped": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "metal", "module_index": 105, "module": "brian2-rust/tests/test_training_masked_batch_captures.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 106, "module": "brian2-rust/tests/test_training_masked_multistatement_captures.py", "counts": {"passed": 156, "skipped": 78, "cuda_disabled": 78}, "actual_wait": 0}
+{"mode": "metal", "module_index": 107, "module": "brian2-rust/tests/test_training_masked_operand_copies.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 108, "module": "brian2-rust/tests/test_training_math_sde.py", "counts": {"passed": 240, "skipped": 120, "cuda_disabled": 120}, "actual_wait": 0}
+{"mode": "metal", "module_index": 109, "module": "brian2-rust/tests/test_training_migration.py", "counts": {"passed": 50}, "actual_wait": 0}
+{"mode": "metal", "module_index": 110, "module": "brian2-rust/tests/test_training_mixed_capture_domains.py", "counts": {"passed": 12, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 111, "module": "brian2-rust/tests/test_training_mixed_capture_lengths.py", "counts": {"passed": 74, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 112, "module": "brian2-rust/tests/test_training_mixed_capture_vjps.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 113, "module": "brian2-rust/tests/test_training_mixed_shape_rng.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 114, "module": "brian2-rust/tests/test_training_multiclock_frontend.py", "counts": {"passed": 130, "skipped": 63, "cuda_disabled": 63}, "actual_wait": 0}
+{"mode": "metal", "module_index": 115, "module": "brian2-rust/tests/test_training_multiclock_synapses.py", "counts": {"passed": 44, "skipped": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "metal", "module_index": 116, "module": "brian2-rust/tests/test_training_multiclock_transitions.py", "counts": {"passed": 45, "skipped": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "metal", "module_index": 117, "module": "brian2-rust/tests/test_training_mutable_captures.py", "counts": {"passed": 52, "skipped": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "metal", "module_index": 118, "module": "brian2-rust/tests/test_training_mutable_constant_effects.py", "counts": {"passed": 124, "skipped": 62, "cuda_disabled": 62}, "actual_wait": 0}
+{"mode": "metal", "module_index": 119, "module": "brian2-rust/tests/test_training_nested_index_codegen.py", "counts": {"passed": 23}, "actual_wait": 0}
+{"mode": "metal", "module_index": 120, "module": "brian2-rust/tests/test_training_nested_parameter_frontend.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 121, "module": "brian2-rust/tests/test_training_nested_regular_effects.py", "counts": {"passed": 248, "skipped": 124, "cuda_disabled": 124}, "actual_wait": 0}
+{"mode": "metal", "module_index": 122, "module": "brian2-rust/tests/test_training_nested_synapse.py", "counts": {"passed": 48, "skipped": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "metal", "module_index": 123, "module": "brian2-rust/tests/test_training_nested_synapse_vjp.py", "counts": {"passed": 30, "skipped": 15, "cuda_disabled": 15}, "actual_wait": 0}
+{"mode": "metal", "module_index": 124, "module": "brian2-rust/tests/test_training_neuron_captures.py", "counts": {"passed": 100, "skipped": 50, "cuda_disabled": 50}, "actual_wait": 0}
+{"mode": "metal", "module_index": 125, "module": "brian2-rust/tests/test_training_neuron_noise.py", "counts": {"passed": 51, "skipped": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "metal", "module_index": 126, "module": "brian2-rust/tests/test_training_neuron_shared_capture_domains.py", "counts": {"passed": 16, "skipped": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "metal", "module_index": 127, "module": "brian2-rust/tests/test_training_neuron_shared_capture_views.py", "counts": {"passed": 40, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 128, "module": "brian2-rust/tests/test_training_neuron_shared_capture_vjps.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 129, "module": "brian2-rust/tests/test_training_neuron_whole_integrator_rng.py", "counts": {"passed": 126, "skipped": 63, "cuda_disabled": 63}, "actual_wait": 0}
+{"mode": "metal", "module_index": 130, "module": "brian2-rust/tests/test_training_neuron_whole_refractory_rng.py", "counts": {"passed": 184, "skipped": 92, "cuda_disabled": 92}, "actual_wait": 0}
+{"mode": "metal", "module_index": 131, "module": "brian2-rust/tests/test_training_neuron_whole_reset_rng.py", "counts": {"passed": 160, "skipped": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "metal", "module_index": 132, "module": "brian2-rust/tests/test_training_neuron_whole_rng.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 133, "module": "brian2-rust/tests/test_training_neuron_whole_xi_rng.py", "counts": {"passed": 188, "skipped": 94, "cuda_disabled": 94}, "actual_wait": 0}
+{"mode": "metal", "module_index": 134, "module": "brian2-rust/tests/test_training_parameter_gather.py", "counts": {"passed": 45, "skipped": 21, "cuda_disabled": 21}, "actual_wait": 0}
+{"mode": "metal", "module_index": 135, "module": "brian2-rust/tests/test_training_parameter_gather_frontend.py", "counts": {"passed": 45, "skipped": 22, "cuda_disabled": 22}, "actual_wait": 0}
+{"mode": "metal", "module_index": 136, "module": "brian2-rust/tests/test_training_partial_capture_aliases.py", "counts": {"passed": 52, "skipped": 26, "cuda_disabled": 26}, "actual_wait": 0}
+{"mode": "metal", "module_index": 137, "module": "brian2-rust/tests/test_training_partial_capture_views.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 138, "module": "brian2-rust/tests/test_training_partial_capture_vjps.py", "counts": {"passed": 192, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 139, "module": "brian2-rust/tests/test_training_partial_overlap_vjps.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 140, "module": "brian2-rust/tests/test_training_partial_readonly_bank.py", "counts": {"passed": 12, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 141, "module": "brian2-rust/tests/test_training_pathway_storage.py", "counts": {"passed": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 142, "module": "brian2-rust/tests/test_training_poisson_brian.py", "counts": {"passed": 18, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 143, "module": "brian2-rust/tests/test_training_poisson_capture_rates.py", "counts": {"passed": 192, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 144, "module": "brian2-rust/tests/test_training_poisson_checkpoint_gpu.py", "counts": {"passed": 134, "skipped": 54, "cuda_disabled": 54}, "actual_wait": 0}
+{"mode": "metal", "module_index": 145, "module": "brian2-rust/tests/test_training_poisson_core.py", "counts": {"passed": 37}, "actual_wait": 0}
+{"mode": "metal", "module_index": 146, "module": "brian2-rust/tests/test_training_poisson_event_replay.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 147, "module": "brian2-rust/tests/test_training_poisson_gpu.py", "counts": {"passed": 65, "skipped": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "metal", "module_index": 148, "module": "brian2-rust/tests/test_training_poisson_gpu_boundary.py", "counts": {"passed": 129, "skipped": 62, "cuda_disabled": 62}, "actual_wait": 0}
+{"mode": "metal", "module_index": 149, "module": "brian2-rust/tests/test_training_poisson_gpu_vjp.py", "counts": {"passed": 102, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 150, "module": "brian2-rust/tests/test_training_poisson_masked_whole.py", "counts": {"passed": 144, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 151, "module": "brian2-rust/tests/test_training_poisson_retirement.py", "counts": {"passed": 66, "skipped": 33, "cuda_disabled": 33}, "actual_wait": 0}
+{"mode": "metal", "module_index": 152, "module": "brian2-rust/tests/test_training_poisson_shared.py", "counts": {"passed": 68}, "actual_wait": 0}
+{"mode": "metal", "module_index": 153, "module": "brian2-rust/tests/test_training_poisson_shared_gpu.py", "counts": {"passed": 136, "skipped": 66, "cuda_disabled": 66}, "actual_wait": 0}
+{"mode": "metal", "module_index": 154, "module": "brian2-rust/tests/test_training_poisson_ssa.py", "counts": {"passed": 23, "skipped": 1, "cuda_disabled": 1}, "actual_wait": 0}
+{"mode": "metal", "module_index": 155, "module": "brian2-rust/tests/test_training_poisson_static.py", "counts": {"passed": 102}, "actual_wait": 0}
+{"mode": "metal", "module_index": 156, "module": "brian2-rust/tests/test_training_poisson_static_gpu.py", "counts": {"passed": 153, "skipped": 147, "cuda_disabled": 147}, "actual_wait": 0}
+{"mode": "metal", "module_index": 157, "module": "brian2-rust/tests/test_training_poisson_zero.py", "counts": {"passed": 33}, "actual_wait": 0}
+{"mode": "metal", "module_index": 158, "module": "brian2-rust/tests/test_training_poisson_zero_vjp.py", "counts": {"passed": 57}, "actual_wait": 0}
+{"mode": "metal", "module_index": 159, "module": "brian2-rust/tests/test_training_positional_only_callbacks.py", "counts": {"passed": 34, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 160, "module": "brian2-rust/tests/test_training_precise_clock.py", "counts": {"passed": 22, "skipped": 7, "cuda_disabled": 7}, "actual_wait": 0}
+{"mode": "metal", "module_index": 161, "module": "brian2-rust/tests/test_training_private_arrays.py", "counts": {"passed": 183, "skipped": 88, "cuda_disabled": 88}, "actual_wait": 0}
+{"mode": "metal", "module_index": 162, "module": "brian2-rust/tests/test_training_pure_branches.py", "counts": {"passed": 105, "skipped": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "metal", "module_index": 163, "module": "brian2-rust/tests/test_training_pure_functions.py", "counts": {"passed": 55, "skipped": 13, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "metal", "module_index": 164, "module": "brian2-rust/tests/test_training_pure_loops.py", "counts": {"passed": 57, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 165, "module": "brian2-rust/tests/test_training_pure_real_control.py", "counts": {"passed": 156, "skipped": 75, "cuda_disabled": 75}, "actual_wait": 0}
+{"mode": "metal", "module_index": 166, "module": "brian2-rust/tests/test_training_pure_returns.py", "counts": {"passed": 20, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 167, "module": "brian2-rust/tests/test_training_pure_statements.py", "counts": {"passed": 82, "skipped": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "metal", "module_index": 168, "module": "brian2-rust/tests/test_training_random_refractory.py", "counts": {"passed": 40, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 169, "module": "brian2-rust/tests/test_training_readonly_capture_view_ownership.py", "counts": {"passed": 2}, "actual_wait": 0}
+{"mode": "metal", "module_index": 170, "module": "brian2-rust/tests/test_training_readonly_captures.py", "counts": {"passed": 193, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 171, "module": "brian2-rust/tests/test_training_refractory.py", "counts": {"passed": 63, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 172, "module": "brian2-rust/tests/test_training_regular.py", "counts": {"passed": 38, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 173, "module": "brian2-rust/tests/test_training_regular_callback_rng.py", "counts": {"passed": 228, "skipped": 114, "cuda_disabled": 114}, "actual_wait": 0}
+{"mode": "metal", "module_index": 174, "module": "brian2-rust/tests/test_training_regular_callback_rng_compile.py", "counts": {"passed": 37}, "actual_wait": 0}
+{"mode": "metal", "module_index": 175, "module": "brian2-rust/tests/test_training_regular_edges.py", "counts": {"passed": 18, "skipped": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "metal", "module_index": 176, "module": "brian2-rust/tests/test_training_regular_hybrid_vjps.py", "counts": {"passed": 12, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 177, "module": "brian2-rust/tests/test_training_regular_scalar_fallback_rng.py", "counts": {"passed": 26, "skipped": 13, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "metal", "module_index": 178, "module": "brian2-rust/tests/test_training_regular_shared_rng.py", "counts": {"passed": 286, "skipped": 143, "cuda_disabled": 143}, "actual_wait": 0}
+{"mode": "metal", "module_index": 179, "module": "brian2-rust/tests/test_training_regular_ufunc_effects.py", "counts": {"passed": 289, "skipped": 144, "cuda_disabled": 144}, "actual_wait": 0}
+{"mode": "metal", "module_index": 180, "module": "brian2-rust/tests/test_training_regular_vector_rng.py", "counts": {"passed": 310, "skipped": 155, "cuda_disabled": 155}, "actual_wait": 0}
+{"mode": "metal", "module_index": 181, "module": "brian2-rust/tests/test_training_regular_vector_rng_compile.py", "counts": {"passed": 61}, "actual_wait": 0}
+{"mode": "metal", "module_index": 182, "module": "brian2-rust/tests/test_training_regular_whole_compile.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 183, "module": "brian2-rust/tests/test_training_repeated_capture_views.py", "counts": {"passed": 73, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 184, "module": "brian2-rust/tests/test_training_reset_callback_effects.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 185, "module": "brian2-rust/tests/test_training_reset_callback_rng.py", "counts": {"passed": 56, "skipped": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "metal", "module_index": 186, "module": "brian2-rust/tests/test_training_reset_capture_alias_vjps.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 187, "module": "brian2-rust/tests/test_training_reset_captures.py", "counts": {"passed": 109, "skipped": 54, "cuda_disabled": 54}, "actual_wait": 0}
+{"mode": "metal", "module_index": 188, "module": "brian2-rust/tests/test_training_reset_effect_bounds.py", "counts": {"passed": 8, "skipped": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 189, "module": "brian2-rust/tests/test_training_reset_shared_rng.py", "counts": {"passed": 58, "skipped": 29, "cuda_disabled": 29}, "actual_wait": 0}
+{"mode": "metal", "module_index": 190, "module": "brian2-rust/tests/test_training_returned_captures.py", "counts": {"passed": 192, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 191, "module": "brian2-rust/tests/test_training_rk_refractory.py", "counts": {"passed": 125, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 192, "module": "brian2-rust/tests/test_training_runtime_refractory.py", "counts": {"passed": 205, "skipped": 70, "cuda_disabled": 70}, "actual_wait": 0}
+{"mode": "metal", "module_index": 193, "module": "brian2-rust/tests/test_training_scalar_event_rng.py", "counts": {"passed": 184, "skipped": 92, "cuda_disabled": 92}, "actual_wait": 0}
+{"mode": "metal", "module_index": 194, "module": "brian2-rust/tests/test_training_scalar_event_rng_compile.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 195, "module": "brian2-rust/tests/test_training_scalar_event_rng_functions.py", "counts": {}, "actual_wait": 5}
+{"mode": "metal", "module_index": 196, "module": "brian2-rust/tests/test_training_scalar_event_rng_guards.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 197, "module": "brian2-rust/tests/test_training_scalar_stochastic.py", "counts": {"passed": 85, "skipped": 38, "cuda_disabled": 38}, "actual_wait": 0}
+{"mode": "metal", "module_index": 198, "module": "brian2-rust/tests/test_training_selected_capture_mixing.py", "counts": {"passed": 32, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 199, "module": "brian2-rust/tests/test_training_selected_capture_returns.py", "counts": {"passed": 105, "skipped": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "metal", "module_index": 200, "module": "brian2-rust/tests/test_training_selected_inplace_columns.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 201, "module": "brian2-rust/tests/test_training_selected_multishape_captures.py", "counts": {"passed": 32, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 202, "module": "brian2-rust/tests/test_training_selected_poisson_candidate_domain.py", "counts": {"passed": 4, "skipped": 2, "cuda_disabled": 2}, "actual_wait": 0}
+{"mode": "metal", "module_index": 203, "module": "brian2-rust/tests/test_training_selected_poisson_reset_surrogate.py", "counts": {"passed": 34, "skipped": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "metal", "module_index": 204, "module": "brian2-rust/tests/test_training_shared_capture_typed_views.py", "counts": {"passed": 16, "skipped": 8, "cuda_disabled": 8}, "actual_wait": 0}
+{"mode": "metal", "module_index": 205, "module": "brian2-rust/tests/test_training_shared_capture_views.py", "counts": {"passed": 120, "skipped": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "metal", "module_index": 206, "module": "brian2-rust/tests/test_training_spike_buffers.py", "counts": {"passed": 39, "skipped": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "metal", "module_index": 207, "module": "brian2-rust/tests/test_training_standard_math.py", "counts": {"passed": 112, "skipped": 53, "cuda_disabled": 53}, "actual_wait": 0}
+{"mode": "metal", "module_index": 208, "module": "brian2-rust/tests/test_training_state_refractory.py", "counts": {"passed": 66, "skipped": 31, "cuda_disabled": 31}, "actual_wait": 0}
+{"mode": "metal", "module_index": 209, "module": "brian2-rust/tests/test_training_static_control_sde.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 210, "module": "brian2-rust/tests/test_training_static_timed_inputs.py", "counts": {"passed": 198, "skipped": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "metal", "module_index": 211, "module": "brian2-rust/tests/test_training_static_vjp_activity.py", "counts": {"passed": 106, "skipped": 44, "cuda_disabled": 44}, "actual_wait": 0}
+{"mode": "metal", "module_index": 212, "module": "brian2-rust/tests/test_training_stochastic.py", "counts": {"passed": 69, "skipped": 9, "cuda_disabled": 9}, "actual_wait": 0}
+{"mode": "metal", "module_index": 213, "module": "brian2-rust/tests/test_training_stochastic_refractory_combined.py", "counts": {"passed": 48, "skipped": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "metal", "module_index": 214, "module": "brian2-rust/tests/test_training_stochastic_refractory_vjp.py", "counts": {"passed": 36, "skipped": 18, "cuda_disabled": 18}, "actual_wait": 0}
+{"mode": "metal", "module_index": 215, "module": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py", "counts": {"passed": 56, "skipped": 25, "cuda_disabled": 25}, "actual_wait": 0}
+{"mode": "metal", "module_index": 216, "module": "brian2-rust/tests/test_training_strided_capture_banks.py", "counts": {"passed": 15, "skipped": 6, "cuda_disabled": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 217, "module": "brian2-rust/tests/test_training_strided_capture_views.py", "counts": {"passed": 288, "skipped": 144, "cuda_disabled": 144}, "actual_wait": 0}
+{"mode": "metal", "module_index": 218, "module": "brian2-rust/tests/test_training_strided_external_captures.py", "counts": {"passed": 48, "skipped": 24, "cuda_disabled": 24}, "actual_wait": 0}
+{"mode": "metal", "module_index": 219, "module": "brian2-rust/tests/test_training_subgroup.py", "counts": {"passed": 64, "skipped": 32, "cuda_disabled": 32}, "actual_wait": 0}
+{"mode": "metal", "module_index": 220, "module": "brian2-rust/tests/test_training_subgroup_callback_effects.py", "counts": {"passed": 120, "skipped": 60, "cuda_disabled": 60}, "actual_wait": 0}
+{"mode": "metal", "module_index": 221, "module": "brian2-rust/tests/test_training_subgroup_edges.py", "counts": {"passed": 37, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 222, "module": "brian2-rust/tests/test_training_subgroup_vjp.py", "counts": {"passed": 42, "skipped": 21, "cuda_disabled": 21}, "actual_wait": 0}
+{"mode": "metal", "module_index": 223, "module": "brian2-rust/tests/test_training_summed.py", "counts": {"passed": 60}, "actual_wait": 0}
+{"mode": "metal", "module_index": 224, "module": "brian2-rust/tests/test_training_synaptic_callback_callables.py", "counts": {"passed": 144, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 225, "module": "brian2-rust/tests/test_training_synaptic_callback_effects.py", "counts": {"passed": 252, "skipped": 126, "cuda_disabled": 126}, "actual_wait": 0}
+{"mode": "metal", "module_index": 226, "module": "brian2-rust/tests/test_training_synaptic_draws.py", "counts": {"passed": 8, "skipped": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 227, "module": "brian2-rust/tests/test_training_synaptic_endpoints.py", "counts": {"passed": 46, "skipped": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "metal", "module_index": 228, "module": "brian2-rust/tests/test_training_synaptic_regular_effects.py", "counts": {"passed": 224, "skipped": 112, "cuda_disabled": 112}, "actual_wait": 0}
+{"mode": "metal", "module_index": 229, "module": "brian2-rust/tests/test_training_synaptic_scalar_fallback_rng.py", "counts": {"passed": 54, "skipped": 27, "cuda_disabled": 27}, "actual_wait": 0}
+{"mode": "metal", "module_index": 230, "module": "brian2-rust/tests/test_training_threshold_callback_effects.py", "counts": {"passed": 144, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 231, "module": "brian2-rust/tests/test_training_threshold_callback_rng.py", "counts": {"passed": 60, "skipped": 30, "cuda_disabled": 30}, "actual_wait": 0}
+{"mode": "metal", "module_index": 232, "module": "brian2-rust/tests/test_training_threshold_effect_predicates.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 233, "module": "brian2-rust/tests/test_training_threshold_shared_rng.py", "counts": {"passed": 56, "skipped": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "metal", "module_index": 234, "module": "brian2-rust/tests/test_training_time.py", "counts": {"passed": 72, "skipped": 10, "cuda_disabled": 10}, "actual_wait": 0}
+{"mode": "metal", "module_index": 235, "module": "brian2-rust/tests/test_training_timed_constant_effects.py", "counts": {"passed": 160, "skipped": 80, "cuda_disabled": 80}, "actual_wait": 0}
+{"mode": "metal", "module_index": 236, "module": "brian2-rust/tests/test_training_timed_inputs.py", "counts": {"passed": 60, "skipped": 13, "cuda_disabled": 13}, "actual_wait": 0}
+{"mode": "metal", "module_index": 237, "module": "brian2-rust/tests/test_training_typed_callback_effects.py", "counts": {"passed": 176, "skipped": 88, "cuda_disabled": 88}, "actual_wait": 0}
+{"mode": "metal", "module_index": 238, "module": "brian2-rust/tests/test_training_typed_effect_bounds.py", "counts": {"passed": 6}, "actual_wait": 0}
+{"mode": "metal", "module_index": 239, "module": "brian2-rust/tests/test_training_typed_event_effects.py", "counts": {"passed": 384, "skipped": 192, "cuda_disabled": 192}, "actual_wait": 0}
+{"mode": "metal", "module_index": 240, "module": "brian2-rust/tests/test_training_typed_event_replay.py", "counts": {"passed": 96, "skipped": 48, "cuda_disabled": 48}, "actual_wait": 0}
+{"mode": "metal", "module_index": 241, "module": "brian2-rust/tests/test_training_typed_integrator_effects.py", "counts": {"passed": 400, "skipped": 200, "cuda_disabled": 200}, "actual_wait": 0}
+{"mode": "metal", "module_index": 242, "module": "brian2-rust/tests/test_training_typed_synaptic_integrators.py", "counts": {"passed": 336, "skipped": 168, "cuda_disabled": 168}, "actual_wait": 0}
+{"mode": "metal", "module_index": 243, "module": "brian2-rust/tests/test_training_typed_threshold_effects.py", "counts": {"passed": 32, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 244, "module": "brian2-rust/tests/test_training_uniform.py", "counts": {"passed": 36, "skipped": 17, "cuda_disabled": 17}, "actual_wait": 0}
+{"mode": "metal", "module_index": 245, "module": "brian2-rust/tests/test_training_vjp_activity.py", "counts": {"passed": 176, "skipped": 84, "cuda_disabled": 84}, "actual_wait": 0}
+{"mode": "metal", "module_index": 246, "module": "brian2-rust/tests/test_training_warm_functions.py", "counts": {"passed": 12, "skipped": 2, "cuda_disabled": 2}, "actual_wait": 0}
+{"mode": "metal", "module_index": 247, "module": "brian2-rust/tests/test_training_whole_caller_carry.py", "counts": {"passed": 72, "skipped": 36, "cuda_disabled": 36}, "actual_wait": 0}
+{"mode": "metal", "module_index": 248, "module": "brian2-rust/tests/test_training_whole_caller_derived.py", "counts": {"passed": 104, "skipped": 52, "cuda_disabled": 52}, "actual_wait": 0}
+{"mode": "metal", "module_index": 249, "module": "brian2-rust/tests/test_training_whole_caller_lengths.py", "counts": {"passed": 40, "skipped": 20, "cuda_disabled": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 250, "module": "brian2-rust/tests/test_training_whole_caller_random.py", "counts": {"passed": 56, "skipped": 28, "cuda_disabled": 28}, "actual_wait": 0}
+{"mode": "metal", "module_index": 251, "module": "brian2-rust/tests/test_training_whole_mixed_typed_threshold_rng.py", "counts": {"passed": 192, "skipped": 96, "cuda_disabled": 96}, "actual_wait": 0}
+{"mode": "metal", "module_index": 252, "module": "brian2-rust/tests/test_training_whole_neuron_phase_rng.py", "counts": {"passed": 240, "skipped": 120, "cuda_disabled": 120}, "actual_wait": 0}
+{"mode": "metal", "module_index": 253, "module": "brian2-rust/tests/test_training_whole_phase_signed_uniform.py", "counts": {"passed": 24, "skipped": 12, "cuda_disabled": 12}, "actual_wait": 0}
+{"mode": "metal", "module_index": 254, "module": "brian2-rust/tests/test_training_whole_reset_alias_copy_rng.py", "counts": {"passed": 10, "skipped": 5, "cuda_disabled": 5}, "actual_wait": 0}
+{"mode": "metal", "module_index": 255, "module": "brian2-rust/tests/test_training_whole_selected_captures.py", "counts": {"passed": 136, "skipped": 68, "cuda_disabled": 68}, "actual_wait": 0}
+{"mode": "metal", "module_index": 256, "module": "brian2-rust/tests/test_training_whole_size_rng.py", "counts": {"passed": 68, "skipped": 34, "cuda_disabled": 34}, "actual_wait": 0}
+{"mode": "metal", "module_index": 257, "module": "brian2-rust/tests/test_training_whole_threshold_predicates_rng.py", "counts": {"passed": 182, "skipped": 91, "cuda_disabled": 91}, "actual_wait": 0}
+{"mode": "metal", "module_index": 258, "module": "brian2-rust/tests/test_training_whole_typed_threshold_rng.py", "counts": {"passed": 144, "skipped": 72, "cuda_disabled": 72}, "actual_wait": 0}
+{"mode": "metal", "module_index": 259, "module": "brian2-rust/tests/test_training_wrapper_bodies.py", "counts": {"passed": 459, "skipped": 228, "cuda_disabled": 228}, "actual_wait": 0}
+{"mode": "metal", "module_index": 260, "module": "brian2-rust/tests/test_native_training.py", "counts": {"passed": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 261, "module": "brian2-rust/tests/test_native_training_cuda.py", "counts": {"skipped": 18, "cuda_disabled": 18, "passed": 18}, "actual_wait": 0}
+{"mode": "metal", "module_index": 262, "module": "brian2-rust/tests/test_native_training_equations.py", "counts": {"passed": 17, "skipped": 4, "cuda_disabled": 4}, "actual_wait": 0}
+{"mode": "metal", "module_index": 263, "module": "brian2-rust/tests/test_native_training_gpu_mpi.py", "counts": {"passed": 19, "skipped": 19, "cuda_disabled": 19}, "actual_wait": 0}
+{"mode": "metal", "module_index": 264, "module": "brian2-rust/tests/test_native_training_graph.py", "counts": {"passed": 29}, "actual_wait": 0}
+{"mode": "metal", "module_index": 265, "module": "brian2-rust/tests/test_native_training_mpi.py", "counts": {"passed": 20}, "actual_wait": 0}
+{"mode": "metal", "module_index": 266, "module": "brian2-rust/tests/test_native_training_multistate.py", "counts": {"passed": 16}, "actual_wait": 0}
+{"mode": "metal", "module_index": 267, "module": "brian2-rust/tests/test_native_training_multistate_gpu.py", "counts": {"passed": 23, "skipped": 23, "cuda_disabled": 23}, "actual_wait": 0}
+{"mode": "metal", "module_index": 268, "module": "brian2-rust/tests/test_training_short_term_plasticity_vjp.py", "counts": {"passed": 80, "skipped": 40, "cuda_disabled": 40}, "actual_wait": 0}
+{"mode": "metal", "module_index": 269, "module": "brian2-rust/tests/test_training_cuda_source.py", "counts": {"passed": 3}, "actual_wait": 0}
+{"mode": "metal", "module_index": 270, "module": "brian2-rust/tests/test_training_cuda_exports.py", "counts": {"passed": 18}, "actual_wait": 0}
+{"mode": "metal", "module_index": 271, "module": "brian2-rust/tests/test_training_fresh_readonly.py", "counts": {"passed": 32, "skipped": 16, "cuda_disabled": 16}, "actual_wait": 0}

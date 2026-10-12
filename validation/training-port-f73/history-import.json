@@ -1,0 +1,471 @@
+{
+  "schema": "atlas-training-increment-history-import-v1",
+  "source_commit": "f73dcb20ca8c18b0b9f0427f119e33e67873742b",
+  "notice": "Historical legacy acceptance only; not evidence of execution against the current Atlas port. Public copies redact local paths. Original hashes are retained; historical audit programs require the separate original local archive.",
+  "files": [
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_ACCEPTANCE.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_ACCEPTANCE.md",
+      "source_blob": "d98c0c2c50f228e78862669fc45e405670d49e59",
+      "original_sha256": "76729bbfe715e4e646971c5da611d2a793658c8cc2d40c7e21eed9c0b040ae87",
+      "public_sha256": "76729bbfe715e4e646971c5da611d2a793658c8cc2d40c7e21eed9c0b040ae87",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_CACHED_NOISE.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_CACHED_NOISE.md",
+      "source_blob": "2f28a34ceb039663d707dc16c47beb4559c8ed05",
+      "original_sha256": "967442ddfc598b1c651c0552bc0b2d1b84f295dcbb31523ec84e3627ee0dde10",
+      "public_sha256": "967442ddfc598b1c651c0552bc0b2d1b84f295dcbb31523ec84e3627ee0dde10",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_CALLBACK_EFFECTS.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_CALLBACK_EFFECTS.md",
+      "source_blob": "4aa6f8b3585a8c34b0cf70a7662d06e4c0ef5578",
+      "original_sha256": "bcc48d9e157f5a82f1865bd4e6356b7ae292805a41b1f47486ac7593ec13870c",
+      "public_sha256": "bcc48d9e157f5a82f1865bd4e6356b7ae292805a41b1f47486ac7593ec13870c",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_DYNAMIC.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_DYNAMIC.md",
+      "source_blob": "340dab3b8eaeb0b05647bb03d8b5ea2f2d13045f",
+      "original_sha256": "5112b0e1bf0bdcf2c13e39fa598a38db6a71b87d065ddcf11913dd29be619900",
+      "public_sha256": "5112b0e1bf0bdcf2c13e39fa598a38db6a71b87d065ddcf11913dd29be619900",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_POISSON.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_POISSON.md",
+      "source_blob": "4b9a1b1e0eb0e0a4d025651ff1e4ab4ced3cb483",
+      "original_sha256": "3bb71c39db6483f8566e59c1b5626fb59b3b5d4dfa0290bdaa906153e22e932c",
+      "public_sha256": "3bb71c39db6483f8566e59c1b5626fb59b3b5d4dfa0290bdaa906153e22e932c",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_STOCHASTIC.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_STOCHASTIC.md",
+      "source_blob": "b6bcfe18224292edc9498c8db6c52150fd87fcdf",
+      "original_sha256": "6fc632a25a04400d6ece48a7378d76d8cb5805f11eb9ff844f6f21f75baedc59",
+      "public_sha256": "6fc632a25a04400d6ece48a7378d76d8cb5805f11eb9ff844f6f21f75baedc59",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/NATIVE_TRAINING_STOCHASTIC_SYNAPSE_GOAL.md",
+      "destination": "history/brian2-rust/NATIVE_TRAINING_STOCHASTIC_SYNAPSE_GOAL.md",
+      "source_blob": "162aa067aeb938febb266f586bf5bcd6f3e022ce",
+      "original_sha256": "f9177421f04588b148c5441988a6edf70a24d99681935fdb80eb84953f902b1f",
+      "public_sha256": "da7a88ed75565c96d91b3e9c525a7c809c91194f558aa55ee58d927115af1200",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/precommit-verification.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/precommit-verification.json",
+      "source_blob": "6712070a927cbd2cc23665160882908aaf4b3290",
+      "original_sha256": "b7e135045dabf8661b6e1d75f376311345a8b8939ca5a2a59347dc873be111b5",
+      "public_sha256": "b7e135045dabf8661b6e1d75f376311345a8b8939ca5a2a59347dc873be111b5",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.json",
+      "source_blob": "8e4bfcbc87755c1f1f9e4f6023df485540c96324",
+      "original_sha256": "953b1020338efffd22133e02e56b5689a8dfcc43231ef540af4413a691627a74",
+      "public_sha256": "e99926fcd3e5b35836c016a29f4344a2d646a8cf90cb3992a03bce8e146c5a49",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.log",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.log",
+      "source_blob": "a3b6de6a03faa058adc0f02a082e9424256cb4bf",
+      "original_sha256": "74469d7644e03f3bb8d138b3c28bf0c625eeb7a7a5db7b38367247a3c743071b",
+      "public_sha256": "5d46612f2bbcd231308d10b58a93bbaea3e8ec79a63a3649c6d46f52d4062345",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.xml",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-mpi.xml",
+      "source_blob": "41a8cf9aa239856dbe3d149cb639574e43ce703c",
+      "original_sha256": "5bf607289b2b5615eced9d61f91032d5248a9748721142381733917f4baa8518",
+      "public_sha256": "5bf607289b2b5615eced9d61f91032d5248a9748721142381733917f4baa8518",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.json",
+      "source_blob": "7099e0f05bd307373f56db5f2a7a4228a17397a2",
+      "original_sha256": "8b95286483ded990e25a2563eaecc9e434aa35bd9f063bc7bcc482c7ed70ca38",
+      "public_sha256": "ad5ae620e6c4a4a1d451d050044c857a07b590fe9f59673893dd00bf53c18e19",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.log",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.log",
+      "source_blob": "7d397522b0e7e65db55ff23a2045817a4416f55a",
+      "original_sha256": "cec90f9c90c711e9be6e88552962e9ca04d3782b0f0d336ded1164898ae22a78",
+      "public_sha256": "2994a3be2658d23e142168247ba96c7e5db4733fef2353326c2b9f3778499e11",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.xml",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/staged-regression.xml",
+      "source_blob": "233ffc07083ab6b1f59dbb8161acc43a42b3a093",
+      "original_sha256": "8c0e39e1a753ab0a7a10fbe1ca11897b37aad4054c0cb1680b5eaf823313ee8a",
+      "public_sha256": "615bd52056936c67776b4cf8b99bbfbc66e53c2e82d9f5401358318eb56635f8",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-commit-20261012/whitespace-equivalence.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-commit-20261012/whitespace-equivalence.json",
+      "source_blob": "aa0c5d58f0f51dcf10400f4064a4ea3a8729744e",
+      "original_sha256": "912582aa85f66c5cefff41af3ec601508750a1ac654b494b13b3c58af6c53c5d",
+      "public_sha256": "912582aa85f66c5cefff41af3ec601508750a1ac654b494b13b3c58af6c53c5d",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-cuda-capability-exports-20261010/combined-receipt.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-cuda-capability-exports-20261010/combined-receipt.json",
+      "source_blob": "d44b95aff8884c9ac7ef31c5d4d7d32d5e76c392",
+      "original_sha256": "9b2792d1d95fc0d868ad392661d3180e46eaebc61364d1ac5ffcb5090eee34b7",
+      "public_sha256": "9b2792d1d95fc0d868ad392661d3180e46eaebc61364d1ac5ffcb5090eee34b7",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-cuda-capability-exports-20261010/combined-tests.xml",
+      "destination": "history/brian2-rust/mpi-evidence/training-cuda-capability-exports-20261010/combined-tests.xml",
+      "source_blob": "c0af50ad15b89be6c55b3969dc3169bf5b7af112",
+      "original_sha256": "04be1f356b09dfce83d9dda16dc35132a61045ebe6358c940e858e19a530afdf",
+      "public_sha256": "04be1f356b09dfce83d9dda16dc35132a61045ebe6358c940e858e19a530afdf",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-current-rust-lib-20261010/accepted.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-current-rust-lib-20261010/accepted.json",
+      "source_blob": "b9800ee93cdbdc04f8b586f3c6f1de2e3c3ebbcf",
+      "original_sha256": "7999718300cd9e4fd08dc35bfa8f58dbe5e71935f5312187df325e1fb9a1de33",
+      "public_sha256": "7999718300cd9e4fd08dc35bfa8f58dbe5e71935f5312187df325e1fb9a1de33",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-current-rust-lib-20261010/receipt.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-current-rust-lib-20261010/receipt.json",
+      "source_blob": "0605993e2685e95466918b0fa5d6b52d1df7af00",
+      "original_sha256": "dc93c08c385f039279a0b0bd21bc94cebb11212322f67850041ca399d0d35e86",
+      "public_sha256": "dc93c08c385f039279a0b0bd21bc94cebb11212322f67850041ca399d0d35e86",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-current-rust-lib-20261010/terminal.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-current-rust-lib-20261010/terminal.json",
+      "source_blob": "1a0a5419ceb4021343181e129351eda59f5b14a1",
+      "original_sha256": "73f7b6b7ae5ed08238130b49a3649f9011400814d41d93f4ef5ef5d7826681ce",
+      "public_sha256": "73f7b6b7ae5ed08238130b49a3649f9011400814d41d93f4ef5ef5d7826681ce",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-final-cuda-contracts-v5-20261010/cloud-current/audited-result.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-final-cuda-contracts-v5-20261010/cloud-current/audited-result.json",
+      "source_blob": "931d8dc024671438fb7e1949078698770e8160eb",
+      "original_sha256": "e722543474ec43eea27980c59243e6d565ac3b36b79e05505d8a99a4e5b18ea4",
+      "public_sha256": "e722543474ec43eea27980c59243e6d565ac3b36b79e05505d8a99a4e5b18ea4",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-final-cuda-contracts-v5-20261010/cloud-current/report.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-final-cuda-contracts-v5-20261010/cloud-current/report.json",
+      "source_blob": "87b036140d3c7ba5cf248419ec7381ff49f4ba63",
+      "original_sha256": "74fda9ecdd90ff84db4bd4836a605c2b7eefbde75a5f0a6ce9ce8d0e3ea5ee2d",
+      "public_sha256": "74fda9ecdd90ff84db4bd4836a605c2b7eefbde75a5f0a6ce9ce8d0e3ea5ee2d",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-final-cuda-core-v5-20261010/cloud-current/audited-result.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-final-cuda-core-v5-20261010/cloud-current/audited-result.json",
+      "source_blob": "c578705e8e304b3c9ec590a450d9aa6870505adc",
+      "original_sha256": "bcd92447364afd934f9c6f46cb4a152b87ef9cf28c1d50b3ee1e48fde583b0ca",
+      "public_sha256": "bcd92447364afd934f9c6f46cb4a152b87ef9cf28c1d50b3ee1e48fde583b0ca",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-final-cuda-core-v5-20261010/cloud-current/report.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-final-cuda-core-v5-20261010/cloud-current/report.json",
+      "source_blob": "ff3bccd41b32cceca867fd93363dfc0ec6c40079",
+      "original_sha256": "139c8d7f8ec5ce6d932d82261b790f942c695af4801dbdad21d65010b308eccf",
+      "public_sha256": "139c8d7f8ec5ce6d932d82261b790f942c695af4801dbdad21d65010b308eccf",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-fresh-readonly-20261010/accepted-fix.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-fresh-readonly-20261010/accepted-fix.json",
+      "source_blob": "0fae2d65b25fbbad23d6ec912def335b7aed8563",
+      "original_sha256": "dff93e1e74d50f4e0817f02e9e1a44f8bb121ce3a3253608c752af3135531dd2",
+      "public_sha256": "dff93e1e74d50f4e0817f02e9e1a44f8bb121ce3a3253608c752af3135531dd2",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-goal-audit-20261010/audit_completion_v9_modules.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-goal-audit-20261010/audit_completion_v9_modules.py",
+      "source_blob": "7d832b12e059bdbb46a88a5d4ce1cbc04018a0b6",
+      "original_sha256": "d4bbeef2b21403a5f41e6e4c7fd1b060ff479329374329c7be9ffc3f47c043ac",
+      "public_sha256": "d4bbeef2b21403a5f41e6e4c7fd1b060ff479329374329c7be9ffc3f47c043ac",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-goal-audit-20261010/completion-gates-v9-modules.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-goal-audit-20261010/completion-gates-v9-modules.json",
+      "source_blob": "962299c81aed6bc73c3f30013efbbc47060eacc9",
+      "original_sha256": "f33668a660cacf1481ee8c7d3440d81a605e14e45197527a3c229a26348db0fe",
+      "public_sha256": "f33668a660cacf1481ee8c7d3440d81a605e14e45197527a3c229a26348db0fe",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-goal-audit-20261010/current-CUDA-acceptance-v5.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-goal-audit-20261010/current-CUDA-acceptance-v5.json",
+      "source_blob": "e52ea83ed98ac5302de687616405e93157a8a1f3",
+      "original_sha256": "cc822e14750ef8482f272a33fbdf304f6811c46dfa28f390f6504669273992f5",
+      "public_sha256": "cc822e14750ef8482f272a33fbdf304f6811c46dfa28f390f6504669273992f5",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-goal-audit-20261010/semantic-review.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-goal-audit-20261010/semantic-review.json",
+      "source_blob": "3aa05011430df3f1eda9f9801956ee156d123445",
+      "original_sha256": "ac12a0c5254792f7ff5350a86ce336b23b942e56409259412f97209649b4fd02",
+      "public_sha256": "ac12a0c5254792f7ff5350a86ce336b23b942e56409259412f97209649b4fd02",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/README.md",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/README.md",
+      "source_blob": "12b8a8c0e7137924646eddbdcb08c5c637008ff8",
+      "original_sha256": "00bde144fe94537b29cfcbeca5b26439b58039d5615adf0ca949fb00ec3dc2c0",
+      "public_sha256": "00bde144fe94537b29cfcbeca5b26439b58039d5615adf0ca949fb00ec3dc2c0",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure.py",
+      "source_blob": "e783d9ec65e7d4ccc111d601a2b69ba237d210d4",
+      "original_sha256": "f5873bab8a76716a12e652652a5aa20f649fd8aa847c37d04408402e2125e86a",
+      "public_sha256": "f5873bab8a76716a12e652652a5aa20f649fd8aa847c37d04408402e2125e86a",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit-launch.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit-launch.json",
+      "source_blob": "79da40fb6dd671b4ab589cc8add2881d511c6f44",
+      "original_sha256": "bf933bd32367a49eb558fe1f1f98eb57511dc1d2f227a8bda3ef3618c19fccef",
+      "public_sha256": "b384e1e93a844ece7ab244b8547d65e9baf14e3e6b404a04931434e055b42a5e",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit-terminal.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit-terminal.json",
+      "source_blob": "6de1160d2657f1a1cb34a80402281fea9ffb2118",
+      "original_sha256": "a897ca117f316262f186697063b643131c0ce04b5d0c1fe815ed0a1664313039",
+      "public_sha256": "bb55bff68f084eb7ae60363331eb7c6ae1db927aedbd8d33a2bf7b6dec9614b4",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit.log",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/completion-audit.log",
+      "source_blob": "20503d44bab913a1f3d17f349091a88b423df3ef",
+      "original_sha256": "f97c8ab71a6dbff4df10e1cea08d165fc4e82c6aa67df82954f49deaa3e09e71",
+      "public_sha256": "f97c8ab71a6dbff4df10e1cea08d165fc4e82c6aa67df82954f49deaa3e09e71",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/driver-terminal.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/driver-terminal.json",
+      "source_blob": "db1e92fe9f9fadb17f18c9f0d2f5931ee0cea13a",
+      "original_sha256": "418daf8859f5dd4969b4f3597dd1264f6ab049fdb4653d602b65a8c444f0ba7e",
+      "public_sha256": "418daf8859f5dd4969b4f3597dd1264f6ab049fdb4653d602b65a8c444f0ba7e",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/final-current-state-check.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/final-current-state-check.json",
+      "source_blob": "17aa3f77d223e68b743fc5e8650c404aeb8bac98",
+      "original_sha256": "61a760b33c2933aee8eeffbf75177124fd94634a6c79ffa18c27cb223667cc6b",
+      "public_sha256": "61a760b33c2933aee8eeffbf75177124fd94634a6c79ffa18c27cb223667cc6b",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit-launch.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit-launch.json",
+      "source_blob": "29e4c09795a937f03595eea7ab89d41d9c471529",
+      "original_sha256": "4600ea41e8bda0204fcd94c13971b62062a307b3efc3b21d34680b6b4ee01367",
+      "public_sha256": "2c8d7733e96eed63495b9629a6756b763852ac67e335818355a88097196d9926",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit-terminal.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit-terminal.json",
+      "source_blob": "01f2590782ebb48603e76a6b7f7bd22f3cc6c982",
+      "original_sha256": "b019ee78f815e2c85735c3ddd36a972ba0dc181416744a7922f824cedfaa83c2",
+      "public_sha256": "e0c233a14d53381d3c02ea1cea5f58e98ce0492eefc0bd424d5fb51200c7da05",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit.log",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/full-controller-reaudit.log",
+      "source_blob": "94ab27bc09962569450aea08afab2082acd73a96",
+      "original_sha256": "299da3d4565110b92ff1c10993eda54249de0bced7a3e6f96fb72afa4fbc4829",
+      "public_sha256": "299da3d4565110b92ff1c10993eda54249de0bced7a3e6f96fb72afa4fbc4829",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/original-session-observation.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/original-session-observation.json",
+      "source_blob": "fc935de17b8664764812bae50fd36eecfd1d4fcb",
+      "original_sha256": "a8a6b48f6fbec55a5309d7487513ae0bbe6bfbf5db6420edcf9973be18cf3719",
+      "public_sha256": "30ab434e20caf5e412cfaccefb0ac1a9c9aba49e31d2ff9afcc88b0aaf312ecb",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/original-test-records.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/original-test-records.json",
+      "source_blob": "7dbbcfed2fa71c339d438fe2d3ba5d8e273305c1",
+      "original_sha256": "ff7893c3e780f8c8fd3e140bd35debee08ef5d3418a09c7777bdd3a2b3e75cec",
+      "public_sha256": "939aa768afc9f68e84a94b7720a3af25c9d93672d4021512efa1bf9e23f660c4",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/receipt.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/receipt.json",
+      "source_blob": "dcccb9c932112b069405bcba8ea85850f527b581",
+      "original_sha256": "f2b66134ac8b572d4dd592e0627b5764ecf1f049ae196793b8996560b24448fe",
+      "public_sha256": "f2b66134ac8b572d4dd592e0627b5764ecf1f049ae196793b8996560b24448fe",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/test-record-integrity.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/closure/test-record-integrity.json",
+      "source_blob": "4f62a094caead630254fbaffb44d08eb58f815ea",
+      "original_sha256": "27c8c0fc3c50b2dc9f54596ce84d35b87a558c20a57e079b76edd3269aeda930",
+      "public_sha256": "27c8c0fc3c50b2dc9f54596ce84d35b87a558c20a57e079b76edd3269aeda930",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/continuation.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/continuation.json",
+      "source_blob": "201413d7369d571cbe31b69ad281fcb74adcb285",
+      "original_sha256": "46bd04fe35795c041d94b5a4fe40fb20f1ec74ad2633cd5a0aa0aacd0b76a732",
+      "public_sha256": "46bd04fe35795c041d94b5a4fe40fb20f1ec74ad2633cd5a0aa0aacd0b76a732",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/cpu-accepted.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/cpu-accepted.json",
+      "source_blob": "2a1ae00f6d0876b22a3912474e27f3e3a07adb0d",
+      "original_sha256": "4535ce6dd52ac7fab0611c3c19be2208d2e41a91e7f25f85c1971bb535ca2fdd",
+      "public_sha256": "2ac6518bac521b6598a7eee091ff7cf067da3ef33ad923992d6e79a3e9b240e3",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/goal-scope-collection.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/goal-scope-collection.json",
+      "source_blob": "335e9605fe4657fd7b0cea057a4e84155055c987",
+      "original_sha256": "8d1eb415541e0cd7e39e70e3aab254a762b18d26294f50ed02ad19832e78936b",
+      "public_sha256": "8d1eb415541e0cd7e39e70e3aab254a762b18d26294f50ed02ad19832e78936b",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/hardware_skip_capture.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/hardware_skip_capture.py",
+      "source_blob": "61aac5322ed043d48f605a8ec86179f6a4770cf6",
+      "original_sha256": "8805fdb37968025bc0fb603d74378567ef9fc02e27bd0acc9bce5b949bf39962",
+      "public_sha256": "8805fdb37968025bc0fb603d74378567ef9fc02e27bd0acc9bce5b949bf39962",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/lineage.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/lineage.json",
+      "source_blob": "f92ccf7e7090fe0fde3cc8cfe2a8a816dd009368",
+      "original_sha256": "103852659c954132ca3a9c90e2a9f23e0ab15630fc1b56edcbebc77a42e76f91",
+      "public_sha256": "45c8dbb1d775f801fdc9080a92568f798caa619a33ddf4003f8283ac12f9469b",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/metal-accepted.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/metal-accepted.json",
+      "source_blob": "258084294eb9edc05919a1aed1af30c5256f84b7",
+      "original_sha256": "c31d09307218510266d86990819cac453bbdb7464ca0ad371a27ea22534b64e0",
+      "public_sha256": "01a386339ba48200c65e1fd2737ad36a1fcec24b1dc7090215415fc39beafb74",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/run.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/run.py",
+      "source_blob": "9734eb92c7efda8eb9982bd266f049308f57fb3f",
+      "original_sha256": "2e1e22a0d2660d1f956996b940ce3b0d7d7a47a796a49a082ea9e19968044c38",
+      "public_sha256": "2e1e22a0d2660d1f956996b940ce3b0d7d7a47a796a49a082ea9e19968044c38",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/skip_policy.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/skip_policy.py",
+      "source_blob": "75718a258b9b75b3cb8b33a534c9d02c904350e4",
+      "original_sha256": "661efbecc16300924c171d1ab909b565f97563935fd1b5ad3adb97f77b183cb7",
+      "public_sha256": "661efbecc16300924c171d1ab909b565f97563935fd1b5ad3adb97f77b183cb7",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/snapshot.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/snapshot.json",
+      "source_blob": "785f4146250afe210a5dc391ec013d5108af4858",
+      "original_sha256": "71b3803ec773c6f513a8f837e8e3508d1dae4245efb418309645ed4a94a8d12a",
+      "public_sha256": "486e0a9e1d490097ce2dca169f0db02d1840254f5218dded87124d2ec66de7ea",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/status.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/status.json",
+      "source_blob": "63e78cb74e274b25830e1afc5d1ecee8f000cc1f",
+      "original_sha256": "317ca4e6345b31d47f4650b66d99062f2f803822c3958e15ea40ea3dfab36026",
+      "public_sha256": "1e086c2c02a7e2521a13f8f9e27347b33c2513212fc2ea7177d4bf4051856718",
+      "path_redacted": true
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/test-contract.patch",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/test-contract.patch",
+      "source_blob": "56022a6530e8168d7eed9ae1572d8d70ac32d092",
+      "original_sha256": "bad4d8264050f0986b94ff47a0ef421ffd1e9194f7e9bfb16d6e20e15afdfd9b",
+      "public_sha256": "bad4d8264050f0986b94ff47a0ef421ffd1e9194f7e9bfb16d6e20e15afdfd9b",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-module-scope-v9-20261012/validation_timeout.py",
+      "destination": "history/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/validation_timeout.py",
+      "source_blob": "3d7992bbbb0b0ae0958939209c9ac31f1e45037a",
+      "original_sha256": "a079acd3ca1f5f4e6d98aad512f0fc606c1767952e59a9bbd1268d436c59d5aa",
+      "public_sha256": "a079acd3ca1f5f4e6d98aad512f0fc606c1767952e59a9bbd1268d436c59d5aa",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/named-CUDA-accepted.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/named-CUDA-accepted.json",
+      "source_blob": "aa3207a766901e1d7df7a5772ba28fc6793bfc3f",
+      "original_sha256": "5520389b1ac3a8f8c668673894cebeb0ac57239ca8d6aa189694a4ebb1293adb",
+      "public_sha256": "5520389b1ac3a8f8c668673894cebeb0ac57239ca8d6aa189694a4ebb1293adb",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/plan.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/plan.json",
+      "source_blob": "512d8bd789f133842e28a0325cdd8ea490bdad39",
+      "original_sha256": "9af91ae76378e7915eb0775991fe563e19c2c0d4ec0bef47f87eb8cf175cee8c",
+      "public_sha256": "9af91ae76378e7915eb0775991fe563e19c2c0d4ec0bef47f87eb8cf175cee8c",
+      "path_redacted": false
+    },
+    {
+      "source_path": "brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/remaining-CUDA-acceptance-v5.json",
+      "destination": "history/brian2-rust/mpi-evidence/training-requirement-cuda-v5-20261010/remaining-CUDA-acceptance-v5.json",
+      "source_blob": "8510aa991c0b0dcfec4f7bdcfb5e1e4e7aa6a635",
+      "original_sha256": "11734e708dfa6a1edc4e5eee412cc93da84c9d87ca55da99c19031dbaaa31ffe",
+      "public_sha256": "11734e708dfa6a1edc4e5eee412cc93da84c9d87ca55da99c19031dbaaa31ffe",
+      "path_redacted": false
+    }
+  ]
+}

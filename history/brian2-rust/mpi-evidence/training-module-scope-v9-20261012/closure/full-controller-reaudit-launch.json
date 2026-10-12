@@ -1,0 +1,9 @@
+{
+  "command": [
+    "<legacy-source>/.venv/bin/python",
+    "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/run.py"
+  ],
+  "pid": 58393,
+  "started_at": 1791813528.216168,
+  "script_sha256": "2e1e22a0d2660d1f956996b940ce3b0d7d7a47a796a49a082ea9e19968044c38"
+}

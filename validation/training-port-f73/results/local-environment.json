@@ -1,0 +1,15 @@
+{
+  "python": "3.14.4",
+  "os": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "Cython": "3.3.0",
+    "sympy": "1.14.0",
+    "pytest": "9.1.1",
+    "pytest-timeout": "2.4.0",
+    "modal": "1.5.5"
+  },
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "mpi": "HYDRA build details:\n    Version:                                 5.0.1\n    Release Date:                            Fri Apr 10 09:45:31 AM CDT 2026\n    CC:                              clang        \n    Configure options:                       '--disable-option-checking' '--prefix=/opt/homebrew/Cellar/mpich/5.0.1' '--disable-dependency-tracking' '--disable-silent-rules' '--enable-fast=all,O3' '--enable-g=dbg' '--enable-romio' '--enable-shared' '--with-hwloc=/opt/homebrew/opt/hwloc' '--with-pm=hydra' '--mandir=/opt/homebrew/Cellar/mpich/5.0.1/share/man' 'F77=gfortran' 'FC=gfortran' 'CC=clang' 'CXX=clang++' '--cache-file=/dev/null' '--srcdir=.' 'CFLAGS= -fno-common -DNDEBUG -DNVALGRIND -g -O3' 'LDFLAGS= -L/opt/homebrew/opt/hwloc/lib' 'LIBS= ' 'CPPFLAGS= -DNETMOD_INLINE=__netmod_inline_ofi__ -DPOSIX_EAGER_INLINE=__posix_eager_inline_iqueue__ -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/src/mpl/include -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/modules/json-c -I/opt/homebrew/opt/hwloc/include -D_REENTRANT -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/src/mpi/romio/include -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/src/pmi/include -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/modules/libfabric/include -I<temporary>/mpich-20260616-6723-f8ndwy/mpich-5.0.1/src/mpi/datatype/typerep/yaksa/src/frontend/include'\n    Process Manager:                         pmi\n    Launchers available:                     ssh rsh fork slurm ll lsf sge manual persist\n    Topology libraries available:            hwloc\n    Resource management kernels available:   user slurm ll lsf sge pbs cobalt\n    Demux engines available:                 poll select"
+}

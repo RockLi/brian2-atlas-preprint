@@ -1,0 +1,12 @@
+{
+  "command": [
+    "<legacy-source>/.venv/bin/python",
+    "<legacy-source>/brian2-rust/mpi-evidence/training-goal-audit-20261010/audit_completion_v9_modules.py"
+  ],
+  "pid": 60054,
+  "actual_wait": 0,
+  "wait": "subprocess.wait",
+  "seconds": 233.06366610527039,
+  "script_sha256": "d4bbeef2b21403a5f41e6e4c7fd1b060ff479329374329c7be9ffc3f47c043ac",
+  "log_sha256": "f97c8ab71a6dbff4df10e1cea08d165fc4e82c6aa67df82954f49deaa3e09e71"
+}

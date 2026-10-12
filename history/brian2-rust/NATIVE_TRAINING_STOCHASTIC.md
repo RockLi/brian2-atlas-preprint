@@ -2,7 +2,8 @@
 
 2026-10-03，接续 [时间依赖](NATIVE_TRAINING_TIME.md)。本页描述已经接入的神经元
 随机微分方程；[随机方程与动态突触的整体目标](NATIVE_TRAINING_STOCHASTIC_SYNAPSE_GOAL.md)
-仍在进行中。本页是随机积分器的历史阶段记录；后续已接入
+已按原始范围完成实现和验收，见整体目标页首的逐项报告。
+本页是随机积分器的历史阶段记录；后续已接入
 [动态突触](NATIVE_TRAINING_DYNAMIC.md)、[显式神经元随机调用](NATIVE_TRAINING_NEURON_NOISE.md)、
 [随机缓存](NATIVE_TRAINING_CACHED_NOISE.md)和[随机 refractory](NATIVE_TRAINING_RANDOM_REFRACTORY.md)。
 这些实现仍不代表覆盖任意 Brian 语义。

@@ -1,0 +1,384 @@
+{
+  "schema": "atlas-training-increment-acceptance-v1",
+  "atlas_commit": "63b11d7421cb9d5db342784a0d95fa2bdd8b3ba1",
+  "status": "passed",
+  "pending": [],
+  "gates": {
+    "cpu": {
+      "directory": "cpu-resumed",
+      "exit_code": 0,
+      "counts": {
+        "passed": 1214,
+        "skipped": 2065
+      },
+      "skip_reasons": {
+        "actual native Metal GPU required": 5,
+        "local MPI opt-in": 1991,
+        "actual Metal setup required": 3,
+        "local MPI required": 6,
+        "Test only relevant for compiled code": 1,
+        "real MPI required": 20,
+        "real GPU and MPI required": 38,
+        "actual CUDA acceptance required": 1
+      },
+      "seconds": 1361.0670161247253,
+      "gate_sha256": "f6e98155e2726d4a901b61fc8ae3227a7dabdfb4dd7fadc18705f7db06a34fad"
+    },
+    "metal": {
+      "directory": "metal-resumed",
+      "exit_code": 0,
+      "counts": {
+        "passed": 323
+      },
+      "skip_reasons": {},
+      "seconds": 1384.199282169342,
+      "gate_sha256": "f6e98155e2726d4a901b61fc8ae3227a7dabdfb4dd7fadc18705f7db06a34fad"
+    },
+    "metal_mpi": {
+      "directory": "metal-mpi-supplement",
+      "exit_code": 0,
+      "counts": {
+        "passed": 4
+      },
+      "skip_reasons": {},
+      "seconds": 41.42560815811157,
+      "gate_sha256": "6ad3bc786a251b7cf14d708bcd3b5f0a3f1dad20425d5d35c4321f814e21eee2"
+    },
+    "mpi": {
+      "directory": "mpi-local-binary",
+      "exit_code": 0,
+      "counts": {
+        "passed": 97
+      },
+      "skip_reasons": {},
+      "seconds": 352.81006693840027,
+      "gate_sha256": "6ad3bc786a251b7cf14d708bcd3b5f0a3f1dad20425d5d35c4321f814e21eee2"
+    },
+    "mpi_fixed": {
+      "directory": "mpi-fixed",
+      "exit_code": 0,
+      "counts": {
+        "passed": 79
+      },
+      "skip_reasons": {},
+      "seconds": 259.88846802711487,
+      "gate_sha256": "448b7dbbc8f75ca8656971b6904a357f96f56aa0e1eacfa2acc9263c69b91405"
+    },
+    "cuda": {
+      "directory": "cuda-cached-build",
+      "exit_code": 0,
+      "counts": {
+        "passed": 333
+      },
+      "skip_reasons": {},
+      "seconds": 2018.3561754226685,
+      "gate_sha256": "6c4002a46d7500ac8459d3c4cb73a204c0711da0e77657fe71ed98bb4a10c963",
+      "uploaded_source_files_verified": 923
+    }
+  },
+  "rust_library_passed": 51,
+  "installed_wheel": "CPU/AOT/Metal and fresh-process checkpoint passed",
+  "modal_image": "Atlas install and native binaries passed",
+  "scope": "Incremental changed-module CPU regression and representative device/MPI gates. Same-host MPI, one physical L4; no cross-host/multi-GPU or new paper benchmark claim.",
+  "initial_mpi": {
+    "directory": "mpi-resumed",
+    "exit_code": 1,
+    "counts": {
+      "passed": 127,
+      "failure": 1,
+      "skipped": 4
+    },
+    "skip_reasons": {
+      "real GPU and MPI required": 4
+    },
+    "seconds": 350.01647996902466,
+    "gate_sha256": "f6e98155e2726d4a901b61fc8ae3227a7dabdfb4dd7fadc18705f7db06a34fad"
+  },
+  "attempts": [
+    {
+      "directory": "cuda",
+      "status": "no final receipt; interrupted setup or running"
+    },
+    {
+      "exit_code": null,
+      "error": "",
+      "error_type": "RemoteError",
+      "started_unix": 1791818145.452994,
+      "ended_unix": 1791818285.4926,
+      "directory": "cuda-repaired-upload",
+      "app_ids": [
+        "ap-521wWjlWmZX1oWjPv0Z5ui"
+      ]
+    },
+    {
+      "exit_code": 1,
+      "error": null,
+      "error_type": null,
+      "started_unix": 1791818314.151063,
+      "ended_unix": 1791818429.045355,
+      "directory": "cuda-complete-upload",
+      "app_ids": [
+        "ap-1RDHBHn12FpWOjYx04HEgy"
+      ]
+    },
+    {
+      "exit_code": null,
+      "error": "An image tried to run a build step after using `image.add_local_*` to include local files.\n\nRun `image.add_local_*` commands last in your image build to avoid rebuilding images with every local file change. Modal will then add these files to containers on startup instead, saving build time.\nIf you need to run other build steps after adding local files, set `copy=True` to copy the files directly into the image, at the expense of some added build time.\n\nExample:\n\nmy_image = (\n    Image.debian_slim()\n    .add_local_file(\"data.json\", copy=True)\n    .run_commands(\"python -m mypak\")  # this now works!\n)\n",
+      "error_type": "InvalidError",
+      "started_unix": 1791818589.832296,
+      "ended_unix": 1791818662.518662,
+      "directory": "cuda-qualified",
+      "app_ids": [
+        "ap-6U38SarU67tleVNfiuOi6b"
+      ]
+    },
+    {
+      "exit_code": null,
+      "error": "",
+      "error_type": "RemoteError",
+      "started_unix": 1791818814.9372978,
+      "ended_unix": 1791819610.2808142,
+      "directory": "cuda-final",
+      "app_ids": [
+        "ap-SNpbuOW3mXNzLFqXy7OmrL"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "error": null,
+      "error_type": null,
+      "started_unix": 1791819609.605288,
+      "ended_unix": 1791821757.830467,
+      "directory": "cuda-cached-build",
+      "app_ids": [
+        "ap-SrGUbArGZ0iDeR0qCsi7bU"
+      ]
+    }
+  ],
+  "evidence_files": [
+    {
+      "file": "results/cpu-resumed/result.json",
+      "original_sha256": "7b7586ecf27582d0dc01b9898a092492e8a2071cda1906c28eb2fd892cb64ef7",
+      "public_sha256": "7b7586ecf27582d0dc01b9898a092492e8a2071cda1906c28eb2fd892cb64ef7",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/cpu-resumed/results.xml",
+      "original_sha256": "99b96f2255c2befc6e87fbf9a41ba57a5aabb58cf81b0998f4e699520382ca23",
+      "public_sha256": "b97afab42bb7446a1f86ba2297e504d7dbecb53681ac2ea40b4df550aa959f01",
+      "path_redacted": true,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/cpu-resumed/selected-tests.json",
+      "original_sha256": "71b8a5833c5f66099626509311c3c17a258133c9599df7b5830a8f857dad5644",
+      "public_sha256": "71b8a5833c5f66099626509311c3c17a258133c9599df7b5830a8f857dad5644",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/metal-resumed/result.json",
+      "original_sha256": "a98529916b7722b232a10756914883305564551859c4d27b0b33080bbe0debce",
+      "public_sha256": "a98529916b7722b232a10756914883305564551859c4d27b0b33080bbe0debce",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/metal-resumed/results.xml",
+      "original_sha256": "2637341995504325a7fa4481fc3aa12756c5206eb5ea6c03660e5aca2cf32a04",
+      "public_sha256": "08590784c422a3c1ccf777738bd969bea9931c58345f3064eb2183b628c241ec",
+      "path_redacted": false,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/metal-resumed/selected-tests.json",
+      "original_sha256": "0911da219af00c166b84b2c3aa70440e65ed4209266dd8aa446fcf888d2973db",
+      "public_sha256": "0911da219af00c166b84b2c3aa70440e65ed4209266dd8aa446fcf888d2973db",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/metal-mpi-supplement/result.json",
+      "original_sha256": "efd464e5b8a95abf39241f885b4b196dc961cef000e1527c73b92462c6c455df",
+      "public_sha256": "efd464e5b8a95abf39241f885b4b196dc961cef000e1527c73b92462c6c455df",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/metal-mpi-supplement/results.xml",
+      "original_sha256": "c40a61cf450f469f89c387d38916dc71adfe550481a930b770bd3d74086def22",
+      "public_sha256": "e1f7c460a50396be4987a505c180b0b344c6c4c5de5e61f29255684539bf5d69",
+      "path_redacted": false,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/metal-mpi-supplement/selected-tests.json",
+      "original_sha256": "c1612958d6fda242ddf5073bc714e2038b8e24e34d45ab0bf3dec3975f473066",
+      "public_sha256": "c1612958d6fda242ddf5073bc714e2038b8e24e34d45ab0bf3dec3975f473066",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-local-binary/result.json",
+      "original_sha256": "c1c1aaeca459b71d1b97b24b9c9638bb4e8cb6ba4db94abe0c4a97f5e9e01e5a",
+      "public_sha256": "c1c1aaeca459b71d1b97b24b9c9638bb4e8cb6ba4db94abe0c4a97f5e9e01e5a",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-local-binary/results.xml",
+      "original_sha256": "5a0809d8474926659be3ab3759d80869af1358e0f8ecebb3fc7b53f48d42de0f",
+      "public_sha256": "948089a36fa4ec23bcc558afa4ce0384b369b71412bb2a35b29835c41c75874a",
+      "path_redacted": false,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/mpi-local-binary/selected-tests.json",
+      "original_sha256": "cf5ab6ca8488631b84370f4ed8c160be51960c9391bc16f49673592834c51ec2",
+      "public_sha256": "cf5ab6ca8488631b84370f4ed8c160be51960c9391bc16f49673592834c51ec2",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-fixed/result.json",
+      "original_sha256": "a4cdfab47e9c367d3a16f5b376f09fda5e1611d2afb59b520757f9e78d6e403a",
+      "public_sha256": "a4cdfab47e9c367d3a16f5b376f09fda5e1611d2afb59b520757f9e78d6e403a",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-fixed/results.xml",
+      "original_sha256": "482b375c003442e734892a7bce45366baaa65018dd5f566c187a82ad6cc171ce",
+      "public_sha256": "e54fb12ae14cbff5764e009302727abae58471044ddf39868c698c1d64ff1d2f",
+      "path_redacted": false,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/mpi-fixed/selected-tests.json",
+      "original_sha256": "d11bf927cff6351a83ee70e21d126fef74b995a8737ca70ade384a7cf5dbebdd",
+      "public_sha256": "d11bf927cff6351a83ee70e21d126fef74b995a8737ca70ade384a7cf5dbebdd",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/cuda-cached-build/result.json",
+      "original_sha256": "91e243a94f52b030896743f60a2f74eea06fe70077f2cff56bce8805086dcdf3",
+      "public_sha256": "91e243a94f52b030896743f60a2f74eea06fe70077f2cff56bce8805086dcdf3",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/cuda-cached-build/results.xml",
+      "original_sha256": "77d8bf30f6634ad1a551bb6d38fb6fe36c19c05c8a15cad9fc40a38f64387acd",
+      "public_sha256": "f72c3c14c57eabd136850f1a5600babb1a2c3e251e7367375b2f1fda2d9658c0",
+      "path_redacted": false,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/cuda-cached-build/selected-tests.json",
+      "original_sha256": "241c99a65ec0d3f70378ee7ee535e1406d122896b6ec71cf431cf13c634bc3a1",
+      "public_sha256": "241c99a65ec0d3f70378ee7ee535e1406d122896b6ec71cf431cf13c634bc3a1",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/installed.json",
+      "original_sha256": "9f7f6273c1eaaac1fadf0f02b993df18fcbe7424318363718b935f7e402ec27b",
+      "public_sha256": "cede678cfcd3d86be1b839e08e94bca0bc80a46628e0a02ae8c1a8611364c1a3",
+      "path_redacted": true,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/wheel-content.json",
+      "original_sha256": "9c95b14ade24abea41667443dd8f7f61fce5f70efbe82aa658d3a6da9f08e395",
+      "public_sha256": "9c95b14ade24abea41667443dd8f7f61fce5f70efbe82aa658d3a6da9f08e395",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/modal-image.json",
+      "original_sha256": "ac7d5037bad39c2f584df2f3d0aa126755e2996d70a54f4e6847151068aee676",
+      "public_sha256": "ac7d5037bad39c2f584df2f3d0aa126755e2996d70a54f4e6847151068aee676",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/rust-tests.log",
+      "original_sha256": "0e8b3336e5414be74e99f2a5ac80fc7da06c590532a746aa63950f93edfa59f6",
+      "public_sha256": "84a5fc014cd1502ca557035c1cfd8283a4ce97988beec8e559f287705bf035fe",
+      "path_redacted": true,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/local-environment.json",
+      "original_sha256": "cdd3f08958a20f4367e640171ef1ff51669acb055c9e7b9f89b76157e4f3cc7c",
+      "public_sha256": "fc66d8efbdf7d98476de48ddb3cd9a1e9ea7147dd5520f10712775cffaa99b01",
+      "path_redacted": true,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-resumed/result.json",
+      "original_sha256": "3f10c63da925b3b845c5df0554cdc6a4730e0f39fcfcfb2df667dd15d1dce0f0",
+      "public_sha256": "3f10c63da925b3b845c5df0554cdc6a4730e0f39fcfcfb2df667dd15d1dce0f0",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/mpi-resumed/results.xml",
+      "original_sha256": "3e122675ebc5419b3b8beac8820f15828a482dfeffbea1590c8cc1c63be4a02d",
+      "public_sha256": "a8d0979f6b9f3004790bd3cb99b73c42f96b5c6330e927c102da59dc5ac4ceea",
+      "path_redacted": true,
+      "whitespace_normalized": true
+    },
+    {
+      "file": "results/mpi-resumed/selected-tests.json",
+      "original_sha256": "eb1f6ab97636c4931bd5bc28bbc7340eabc35e60de5da45e8bfd1efb6f180241",
+      "public_sha256": "eb1f6ab97636c4931bd5bc28bbc7340eabc35e60de5da45e8bfd1efb6f180241",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/attempts/cuda-repaired-upload/report.json",
+      "original_sha256": "39dff4692b0294a77137de65bf9f5834041051d32eb36385291fe665561da1cb",
+      "public_sha256": "39dff4692b0294a77137de65bf9f5834041051d32eb36385291fe665561da1cb",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/attempts/cuda-complete-upload/report.json",
+      "original_sha256": "d7fa58fa716e1e12e475100f798f01a7d0f38e2d959ff6d4b53cfb36ead4defc",
+      "public_sha256": "d7fa58fa716e1e12e475100f798f01a7d0f38e2d959ff6d4b53cfb36ead4defc",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/attempts/cuda-qualified/report.json",
+      "original_sha256": "eed4842c66ee6196761e07b5dee0a4c1f7d9b76051fd242a45ff605657a64c1d",
+      "public_sha256": "eed4842c66ee6196761e07b5dee0a4c1f7d9b76051fd242a45ff605657a64c1d",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/attempts/cuda-final/report.json",
+      "original_sha256": "2e8eae86078642b26406c655913ef8ce8f42419e775a5fdcd4de9c7919588521",
+      "public_sha256": "2e8eae86078642b26406c655913ef8ce8f42419e775a5fdcd4de9c7919588521",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/attempts/cuda-cached-build/report.json",
+      "original_sha256": "1cba569b309eef8e1504fa00b79fe0681987b3f69505ca18ca42322ec96e41bf",
+      "public_sha256": "1cba569b309eef8e1504fa00b79fe0681987b3f69505ca18ca42322ec96e41bf",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    },
+    {
+      "file": "results/cuda-cached-build/source-hashes.json",
+      "original_sha256": "669181ab68985a9de73c70792b5ce67a94388521f809e1a953e7af6e112b16fe",
+      "public_sha256": "669181ab68985a9de73c70792b5ce67a94388521f809e1a953e7af6e112b16fe",
+      "path_redacted": false,
+      "whitespace_normalized": false
+    }
+  ]
+}

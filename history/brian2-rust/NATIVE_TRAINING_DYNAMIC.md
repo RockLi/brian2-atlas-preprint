@@ -15,10 +15,11 @@
 `lower_brian_training(..., dynamic=True)` and `lower_brian_dynamic_training(...)`
 snapshot Brian synaptic dynamics into native ordered state transforms. Python
 constructs SSA and transports results; native CPU or GPU code executes forward
-and reverse mode, with a Rust optimizer. CPU/local MPI and Metal/local MPI
-have local verification; CUDA source has not yet received v5 hardware verification.
-This is a partial milestone of the ongoing stochastic/dynamic
-training goal, not an assertion of arbitrary Brian compatibility.
+and reverse mode, with a Rust optimizer. The original stochastic/dynamic training scope is now accepted on CPU, Metal,
+CUDA and local MPI; see the [completion report](mpi-evidence/training-goal-audit-20261010/completion-gates-v9-modules.json).
+CUDA hardware evidence covers all 175 original named CUDA parameters. The
+sections below preserve the historical v5 interface description and its
+explicit Brian compatibility boundaries. Cross-host validation remains deferred.
 
 ## Use
 

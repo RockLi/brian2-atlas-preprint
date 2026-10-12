@@ -1,0 +1,31 @@
+{
+  "session_id": 1304,
+  "last_observed_live_at": 1791786508.961629,
+  "session_handle": "missing",
+  "original_controller_pid": 75738,
+  "process_observation": "ps returned no matching process",
+  "original_actual_exit": null,
+  "original_status": {
+    "status": "CPU-and-Metal-complete",
+    "controls": {
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v5-20261011/run_full_modules.py": "df5ad9f611b491a9f0cf07580e8aed9c3ad898e7b89caf9d1d1310be278e625d",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v5-20261011/progress_capture.py": "6176fd955f7f2bde528c9e1b92cac066faf0e751412a2f8d783c4da1e3aa664d",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v5-20261011/gc_observer.py": "931788a1f5a9fb0141d07511403374272d086ffa583f2abf2393ffad6d492f5f",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/snapshot.json": "71b3803ec773c6f513a8f837e8e3508d1dae4245efb418309645ed4a94a8d12a",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/goal-scope-collection.json": "8d1eb415541e0cd7e39e70e3aab254a762b18d26294f50ed02ad19832e78936b",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/hardware_skip_capture.py": "8805fdb37968025bc0fb603d74378567ef9fc02e27bd0acc9bce5b949bf39962",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/skip_policy.py": "661efbecc16300924c171d1ab909b565f97563935fd1b5ad3adb97f77b183cb7",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/validation_timeout.py": "a079acd3ca1f5f4e6d98aad512f0fc606c1767952e59a9bbd1268d436c59d5aa",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/run.py": "2e1e22a0d2660d1f956996b940ce3b0d7d7a47a796a49a082ea9e19968044c38",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/lineage.json": "103852659c954132ca3a9c90e2a9f23e0ab15630fc1b56edcbebc77a42e76f91",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v9-20261012/test-contract.patch": "bad4d8264050f0986b94ff47a0ef421ffd1e9194f7e9bfb16d6e20e15afdfd9b",
+      "<legacy-source>/brian2-rust/mpi-evidence/training-module-scope-v5-resume-20261011/run.py": "e78c31f711245a89c29c93ce55fbac0b8f608f4216e36a0f11e6389b9416d8f4"
+    },
+    "cloud_calls": 0,
+    "complete_goal_proven": false
+  },
+  "original_status_sha256": "317ca4e6345b31d47f4650b66d99062f2f803822c3958e15ea40ea3dfab36026",
+  "original_controller_log_sha256": "299da3d4565110b92ff1c10993eda54249de0bced7a3e6f96fb72afa4fbc4829",
+  "original_launch_receipt_sha256": "5edfa0d711f87b8e61d237147102b7bc9060907a6fc8882720d8a6e20b952fbc",
+  "observed_at": 1791813520.06594
+}

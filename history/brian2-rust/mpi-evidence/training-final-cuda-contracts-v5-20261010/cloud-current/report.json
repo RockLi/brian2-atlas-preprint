@@ -1,0 +1,2070 @@
+{
+  "passed": true,
+  "actual_wait": 0,
+  "timed_out": false,
+  "seconds": 605.839992621,
+  "identities": {
+    "exitstatus": 0,
+    "collected": [
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+      "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+      "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+      "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+      "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+      "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+      "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+      "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection"
+    ],
+    "reports": [
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.04404305599999958
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 58.19084812599999
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0021600780000028408
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0010498140000123612
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5448092569999972
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0004790220000074896
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0012557449999945902
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 49.95642628
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0005721089999894957
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0009925600000002532
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 1.1117112680000076
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006996909999941181
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0005496889999960786
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 8.853037502000006
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006852340000023105
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0005317400000137695
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 8.549081418000014
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001092880000015839
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.009915108000001283
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.289152673000018
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.003266067000026851
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.038578975000007176
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 7.1804294570000025
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0011193910000031337
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0024615860000096745
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 6.955927693999996
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0012596889999940686
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0009345379999956549
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 1.2007393629999967
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0005184299999996256
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0005812880000064524
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 3.072242630000005
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0033703510000009373
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.03549830299999712
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 7.439819575000001
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0012791460000016741
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0013063610000187964
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 3.4251115870000035
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0020804909999867505
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.037456574000003684
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 32.203005778999994
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00139824999999405
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.03618927399998029
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 97.85443386
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.002864601999988281
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.03651204400000552
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 14.56431858000002
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0024153250000154003
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.035989620999998806
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 1.9955167589999974
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0011676299999976436
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0011546920000000682
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.1249904099999526
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0011462709999818799
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0011350049999805378
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.06469650300005
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001205087000016647
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0014355940000427836
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.0841419029999884
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0015325329999882342
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0027794819999940046
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.0550884079999605
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0013170629999876837
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0019348019999938515
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.08263559400001
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006980369999496361
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0020326580000187278
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.138626123999984
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0009600319999663043
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00233877499999835
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 2.1911209310000004
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0012653420000106053
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0017475860000217835
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 6.137738711999987
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0013716070000100444
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0027449469999965004
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.8677918629999795
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006198309999945195
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0020940329999916685
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.642300619999958
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0011369110000032379
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0022561239999845384
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.88248777900003
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0007550330000185568
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0026547030000187988
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.499871490000032
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0010011659999804579
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0027894679999462824
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.795935532999977
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0012949430000048778
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0020617040000274756
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.389387226999986
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001049466000040411
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0011056669999902624
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 5.442858204000004
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0014211600000066937
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.03449092100004236
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 1.7512033920000363
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0017000759999632464
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.03438727600001812
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.9085656740000445
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.000949595000008685
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.035281488999999056
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 74.67578498
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00047670200001448393
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0012631429999601096
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 19.72539895600005
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0009143610000137414
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0010835530000008475
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 15.630056499999966
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0008934439999848109
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0015666259999989052
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 11.313303206
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00041426399997135377
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0015396089999626383
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5755452090000404
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00048611399995479587
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0014943429999902946
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.6183783489999541
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0012205219999827932
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0006517580000036105
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 17.777597819999926
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0008825870000919167
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0010407319999785614
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5611607079999885
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0009847520000221266
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.000561009999955786
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5328133049999906
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0005131149999897389
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0005425260000038179
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5739279110000552
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0007789370000637064
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0005634860000327535
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5665766520000943
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006457560000399098
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0009750350000103936
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.5093338140000014
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001899283999932777
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.001556909000100859
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 6.505187872999954
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001106327999991663
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.001675289999980123
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 7.170160048999946
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0027413120000119306
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0016196340000078635
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 6.230622826999934
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0004921790000480541
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0009860349999826212
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 6.083463239999901
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0009307130000024699
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0012006069999870306
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 13.138371226000004
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0005289389999916239
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.01243487700003243
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 12.955851532999986
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0014316519999511002
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00226706999990256
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 12.484855202000062
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.001017443000023377
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0026723380000248653
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 12.607248730999913
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0006700669999872844
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0013454090000095675
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.7705345880000323
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0038261429999693064
+      }
+    ],
+    "validation_library_copies": 10,
+    "imported_source_paths": {
+      "brian2.units.fundamentalunits": "/workspace/brian2/units/fundamentalunits.py",
+      "brian2.units.allunits": "/workspace/brian2/units/allunits.py",
+      "brian2.units.unitsafefunctions": "/workspace/brian2/units/unitsafefunctions.py",
+      "brian2.units.stdunits": "/workspace/brian2/units/stdunits.py",
+      "brian2.units": "/workspace/brian2/units/__init__.py",
+      "brian2.numpy_": "/workspace/brian2/numpy_.py",
+      "brian2._version": "/workspace/brian2/_version.py",
+      "brian2.core": "/workspace/brian2/core/__init__.py",
+      "brian2.utils.stringtools": "/workspace/brian2/utils/stringtools.py",
+      "brian2.core.preferences": "/workspace/brian2/core/preferences.py",
+      "brian2.utils.environment": "/workspace/brian2/utils/environment.py",
+      "brian2.utils.logger": "/workspace/brian2/utils/logger.py",
+      "brian2.utils": "/workspace/brian2/utils/__init__.py",
+      "brian2.core.tracking": "/workspace/brian2/core/tracking.py",
+      "brian2.core.names": "/workspace/brian2/core/names.py",
+      "brian2.core.spikesource": "/workspace/brian2/core/spikesource.py",
+      "brian2.utils.caching": "/workspace/brian2/utils/caching.py",
+      "brian2.core.base": "/workspace/brian2/core/base.py",
+      "brian2.core.variables": "/workspace/brian2/core/variables.py",
+      "brian2.core.functions": "/workspace/brian2/core/functions.py",
+      "brian2.parsing": "/workspace/brian2/parsing/__init__.py",
+      "brian2.parsing.rendering": "/workspace/brian2/parsing/rendering.py",
+      "brian2.parsing.sympytools": "/workspace/brian2/parsing/sympytools.py",
+      "brian2.equations.codestrings": "/workspace/brian2/equations/codestrings.py",
+      "brian2.core.namespace": "/workspace/brian2/core/namespace.py",
+      "brian2.utils.topsort": "/workspace/brian2/utils/topsort.py",
+      "brian2.parsing.expressions": "/workspace/brian2/parsing/expressions.py",
+      "brian2.parsing.statements": "/workspace/brian2/parsing/statements.py",
+      "brian2.equations.unitcheck": "/workspace/brian2/equations/unitcheck.py",
+      "brian2.equations.equations": "/workspace/brian2/equations/equations.py",
+      "brian2.equations": "/workspace/brian2/equations/__init__.py",
+      "brian2.parsing.bast": "/workspace/brian2/parsing/bast.py",
+      "brian2.codegen.statements": "/workspace/brian2/codegen/statements.py",
+      "brian2.codegen.optimisation": "/workspace/brian2/codegen/optimisation.py",
+      "brian2.codegen.translation": "/workspace/brian2/codegen/translation.py",
+      "brian2.codegen.indices": "/workspace/brian2/codegen/indices.py",
+      "brian2.codegen.codeobject": "/workspace/brian2/codegen/codeobject.py",
+      "brian2.codegen.permutation_analysis": "/workspace/brian2/codegen/permutation_analysis.py",
+      "brian2.codegen.generators.base": "/workspace/brian2/codegen/generators/base.py",
+      "brian2.utils.filetools": "/workspace/brian2/utils/filetools.py",
+      "brian2.codegen.cpp_prefs": "/workspace/brian2/codegen/cpp_prefs.py",
+      "brian2.codegen.generators.cpp_generator": "/workspace/brian2/codegen/generators/cpp_generator.py",
+      "brian2.codegen.generators.numpy_generator": "/workspace/brian2/codegen/generators/numpy_generator.py",
+      "brian2.codegen.targets": "/workspace/brian2/codegen/targets.py",
+      "brian2.memory": "/workspace/brian2/memory/__init__.py",
+      "brian2.memory.cythondynamicarray": "/workspace/brian2/memory/cythondynamicarray.cpython-312-x86_64-linux-gnu.so",
+      "brian2.memory.dynamicarray": "/workspace/brian2/memory/dynamicarray.py",
+      "brian2.devices.device": "/workspace/brian2/devices/device.py",
+      "brian2.devices": "/workspace/brian2/devices/__init__.py",
+      "brian2.codegen.generators.cython_generator": "/workspace/brian2/codegen/generators/cython_generator.py",
+      "brian2.codegen.generators.GSL_generator": "/workspace/brian2/codegen/generators/GSL_generator.py",
+      "brian2.codegen.generators": "/workspace/brian2/codegen/generators/__init__.py",
+      "brian2.codegen.templates": "/workspace/brian2/codegen/templates.py",
+      "brian2.codegen.runtime.numpy_rt.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/numpy_rt.py",
+      "brian2.codegen.runtime.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/__init__.py",
+      "brian2.utils.filelock": "/workspace/brian2/utils/filelock.py",
+      "brian2.codegen.runtime.cython_rt.extension_manager": "/workspace/brian2/codegen/runtime/cython_rt/extension_manager.py",
+      "brian2.codegen.runtime.cython_rt.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/cython_rt.py",
+      "brian2.codegen.runtime.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/__init__.py",
+      "brian2.codegen.runtime.GSLcython_rt.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/GSLcython_rt.py",
+      "brian2.codegen.runtime.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/__init__.py",
+      "brian2.codegen.runtime": "/workspace/brian2/codegen/runtime/__init__.py",
+      "brian2.codegen._prefs": "/workspace/brian2/codegen/_prefs.py",
+      "brian2.codegen": "/workspace/brian2/codegen/__init__.py",
+      "brian2.importexport.importexport": "/workspace/brian2/importexport/importexport.py",
+      "brian2.importexport.dictlike": "/workspace/brian2/importexport/dictlike.py",
+      "brian2.importexport": "/workspace/brian2/importexport/__init__.py",
+      "brian2.groups.group": "/workspace/brian2/groups/group.py",
+      "brian2.equations.refractory": "/workspace/brian2/equations/refractory.py",
+      "brian2.stateupdaters.base": "/workspace/brian2/stateupdaters/base.py",
+      "brian2.stateupdaters.exact": "/workspace/brian2/stateupdaters/exact.py",
+      "brian2.stateupdaters.explicit": "/workspace/brian2/stateupdaters/explicit.py",
+      "brian2.stateupdaters.exponential_euler": "/workspace/brian2/stateupdaters/exponential_euler.py",
+      "brian2.stateupdaters.GSL": "/workspace/brian2/stateupdaters/GSL.py",
+      "brian2.stateupdaters": "/workspace/brian2/stateupdaters/__init__.py",
+      "brian2.groups.subgroup": "/workspace/brian2/groups/subgroup.py",
+      "brian2.groups.neurongroup": "/workspace/brian2/groups/neurongroup.py",
+      "brian2.groups": "/workspace/brian2/groups/__init__.py",
+      "brian2.core.clocks": "/workspace/brian2/core/clocks.py",
+      "brian2.synapses.parse_synaptic_generator_syntax": "/workspace/brian2/synapses/parse_synaptic_generator_syntax.py",
+      "brian2.utils.arrays": "/workspace/brian2/utils/arrays.py",
+      "brian2.synapses.synapses": "/workspace/brian2/synapses/synapses.py",
+      "brian2.synapses": "/workspace/brian2/synapses/__init__.py",
+      "brian2.core.network": "/workspace/brian2/core/network.py",
+      "brian2.core.magic": "/workspace/brian2/core/magic.py",
+      "brian2.core.operations": "/workspace/brian2/core/operations.py",
+      "brian2.monitors.ratemonitor": "/workspace/brian2/monitors/ratemonitor.py",
+      "brian2.monitors.spikemonitor": "/workspace/brian2/monitors/spikemonitor.py",
+      "brian2.monitors.statemonitor": "/workspace/brian2/monitors/statemonitor.py",
+      "brian2.monitors": "/workspace/brian2/monitors/__init__.py",
+      "brian2.input.binomial": "/workspace/brian2/input/binomial.py",
+      "brian2.input.poissongroup": "/workspace/brian2/input/poissongroup.py",
+      "brian2.input.poissoninput": "/workspace/brian2/input/poissoninput.py",
+      "brian2.input.spikegeneratorgroup": "/workspace/brian2/input/spikegeneratorgroup.py",
+      "brian2.input.timedarray": "/workspace/brian2/input/timedarray.py",
+      "brian2.input": "/workspace/brian2/input/__init__.py",
+      "brian2.spatialneuron.morphology": "/workspace/brian2/spatialneuron/morphology.py",
+      "brian2.spatialneuron.spatialneuron": "/workspace/brian2/spatialneuron/spatialneuron.py",
+      "brian2.spatialneuron": "/workspace/brian2/spatialneuron/__init__.py",
+      "brian2.devices.cpp_standalone.codeobject": "/workspace/brian2/devices/cpp_standalone/codeobject.py",
+      "brian2.devices.cpp_standalone.device": "/workspace/brian2/devices/cpp_standalone/device.py",
+      "brian2.devices.cpp_standalone.GSLcodeobject": "/workspace/brian2/devices/cpp_standalone/GSLcodeobject.py",
+      "brian2.devices.cpp_standalone": "/workspace/brian2/devices/cpp_standalone/__init__.py",
+      "brian2.core.core_preferences": "/workspace/brian2/core/core_preferences.py",
+      "brian2.tests": "/workspace/brian2/tests/__init__.py",
+      "brian2.only": "/workspace/brian2/only.py",
+      "brian2": "/workspace/brian2/__init__.py",
+      "brian2_rust.encoded_array": "/workspace/brian2-rust/python/brian2_rust/encoded_array.py",
+      "brian2_rust.protocol": "/workspace/brian2-rust/python/brian2_rust/protocol.py",
+      "brian2_rust.codegen_sums": "/workspace/brian2-rust/python/brian2_rust/codegen_sums.py",
+      "brian2_rust.schedule": "/workspace/brian2-rust/python/brian2_rust/schedule.py",
+      "brian2_rust.planner": "/workspace/brian2-rust/python/brian2_rust/planner.py",
+      "brian2_rust.plan": "/workspace/brian2-rust/python/brian2_rust/plan.py",
+      "brian2_rust.native": "/workspace/brian2-rust/python/brian2_rust/native.py",
+      "brian2_rust.results": "/workspace/brian2-rust/python/brian2_rust/results.py",
+      "brian2_rust.artifact": "/workspace/brian2-rust/python/brian2_rust/artifact.py",
+      "brian2_rust.capabilities": "/workspace/brian2-rust/python/brian2_rust/capabilities.py",
+      "brian2_rust.monitor_observables": "/workspace/brian2-rust/python/brian2_rust/monitor_observables.py",
+      "brian2_rust.resource_limits": "/workspace/brian2-rust/python/brian2_rust/resource_limits.py",
+      "brian2_rust.spec": "/workspace/brian2-rust/python/brian2_rust/spec.py",
+      "brian2_rust.topology": "/workspace/brian2-rust/python/brian2_rust/topology.py",
+      "brian2_rust.export": "/workspace/brian2-rust/python/brian2_rust/export.py",
+      "brian2_rust.device": "/workspace/brian2-rust/python/brian2_rust/device.py",
+      "brian2_rust.streaming": "/workspace/brian2-rust/python/brian2_rust/streaming.py",
+      "brian2_rust.distributed": "/workspace/brian2-rust/python/brian2_rust/distributed.py",
+      "brian2_rust.gpu_autotune": "/workspace/brian2-rust/python/brian2_rust/gpu_autotune.py",
+      "brian2_rust.gpu_tuning_cache": "/workspace/brian2-rust/python/brian2_rust/gpu_tuning_cache.py",
+      "brian2_rust.wasm": "/workspace/brian2-rust/python/brian2_rust/wasm.py",
+      "brian2_rust.training": "/workspace/brian2-rust/python/brian2_rust/training.py",
+      "brian2_rust.training_graph": "/workspace/brian2-rust/python/brian2_rust/training_graph.py",
+      "brian2_rust.training_equations": "/workspace/brian2-rust/python/brian2_rust/training_equations.py",
+      "brian2_rust.training_inputs": "/workspace/brian2-rust/python/brian2_rust/training_inputs.py",
+      "brian2_rust.training_functions": "/workspace/brian2-rust/python/brian2_rust/training_functions.py",
+      "brian2_rust.training_effects": "/workspace/brian2-rust/python/brian2_rust/training_effects.py",
+      "brian2_rust.training_brian_regular": "/workspace/brian2-rust/python/brian2_rust/training_brian_regular.py",
+      "brian2_rust.training_brian": "/workspace/brian2-rust/python/brian2_rust/training_brian.py",
+      "brian2_rust.training_dynamic": "/workspace/brian2-rust/python/brian2_rust/training_dynamic.py",
+      "brian2_rust.training_queue": "/workspace/brian2-rust/python/brian2_rust/training_queue.py",
+      "brian2_rust.training_brian_events": "/workspace/brian2-rust/python/brian2_rust/training_brian_events.py",
+      "brian2_rust.training_brian_dynamic": "/workspace/brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+      "brian2_rust": "/workspace/brian2-rust/python/brian2_rust/__init__.py",
+      "brian2_rust.training_cuda": "/workspace/brian2-rust/python/brian2_rust/training_cuda.py",
+      "brian2_rust.training_metal": "/workspace/brian2-rust/python/brian2_rust/training_metal.py",
+      "brian2.synapses.cythonspikequeue": "/workspace/brian2/synapses/cythonspikequeue.cpython-312-x86_64-linux-gnu.so",
+      "brian2_rust.training_threshold_noise": "/workspace/brian2-rust/python/brian2_rust/training_threshold_noise.py",
+      "brian2_rust.training_mpi": "/workspace/brian2-rust/python/brian2_rust/training_mpi.py",
+      "brian2_rust.training_callback_noise": "/workspace/brian2-rust/python/brian2_rust/training_callback_noise.py",
+      "brian2_rust.training_batch_random": "/workspace/brian2-rust/python/brian2_rust/training_batch_random.py",
+      "brian2_rust.training_batch_locals": "/workspace/brian2-rust/python/brian2_rust/training_batch_locals.py",
+      "brian2_rust.training_callback_vector": "/workspace/brian2-rust/python/brian2_rust/training_callback_vector.py",
+      "brian2_rust.training_event_captures": "/workspace/brian2-rust/python/brian2_rust/training_event_captures.py"
+    },
+    "outside_payload_imports": {}
+  },
+  "selected": [
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+    "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+    "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+    "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+    "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+    "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+    "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+    "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+    "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+    "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+    "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+    "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+    "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+    "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+    "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection"
+  ],
+  "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.1, pytest-8.4.1, pluggy-1.6.0 -- /usr/local/bin/python\nrootdir: /workspace\nconfigfile: pyproject.toml\ncollecting ... collected 55 items\n\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True] PASSED [  1%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None] PASSED [  3%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True] PASSED [  5%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise] PASSED [  7%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory] PASSED [  9%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective] PASSED [ 10%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise] PASSED [ 12%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8] PASSED [ 14%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise] PASSED [ 16%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2] PASSED [ 18%]\n../../workspace/brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2] PASSED [ 20%]\n../../workspace/brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True] PASSED [ 21%]\n../../workspace/brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2] PASSED [ 23%]\n../../workspace/brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed] PASSED [ 25%]\n../../workspace/brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61] PASSED [ 27%]\n../../workspace/brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein] PASSED [ 29%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde] PASSED [ 30%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic] PASSED [ 32%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde] PASSED [ 34%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic] PASSED [ 36%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde] PASSED [ 38%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic] PASSED [ 40%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde] PASSED [ 41%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic] PASSED [ 43%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde] PASSED [ 45%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic] PASSED [ 47%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde] PASSED [ 49%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic] PASSED [ 50%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde] PASSED [ 52%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic] PASSED [ 54%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde] PASSED [ 56%]\n../../workspace/brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic] PASSED [ 58%]\n../../workspace/brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda] PASSED [ 60%]\n../../workspace/brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True] PASSED [ 61%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False] PASSED [ 63%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True] PASSED [ 65%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False] PASSED [ 67%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True] PASSED [ 69%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False] PASSED [ 70%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True] PASSED [ 72%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False] PASSED [ 74%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True] PASSED [ 76%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False] PASSED [ 78%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True] PASSED [ 80%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False] PASSED [ 81%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True] PASSED [ 83%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False] PASSED [ 85%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True] PASSED [ 87%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False] PASSED [ 89%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True] PASSED [ 90%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False] PASSED [ 92%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True] PASSED [ 94%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False] PASSED [ 96%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True] PASSED [ 98%]\n../../workspace/brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection PASSED [100%]\n\n=============================== warnings summary ===============================\nbrian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]\n  /usr/local/lib/python3.12/site-packages/Cython/Compiler/Main.py:381: FutureWarning: Cython directive 'language_level' not set, using '3str' for now (Py3). This has changed from earlier releases! File: /tmp/b2-queue-snapshot-lzut_08q/_cython_magic_d2c5df637929c37837cf83c06c30b171.pyx\n    tree = Parsing.p_module(s, pxd, full_module_name)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n------------------- generated xml file: /tmp/cuda-tests.xml --------------------\n================== 55 passed, 1 warning in 596.00s (0:09:56) ===================\nWARNING    The object 'implicit_a' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/usr/local/lib/python3.12/site-packages/_pytest/python.py', line 157, in pytest_pyfunc_call\n    result = testfunction(**testargs) [brian2.core.base.unused_brian_object]\nWARNING    The object 'implicit_c' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/usr/local/lib/python3.12/site-packages/_pytest/python.py', line 157, in pytest_pyfunc_call\n    result = testfunction(**testargs) [brian2.core.base.unused_brian_object]\nWARNING    The object 'implicit_syn' is getting deleted, but was never included in a network. This probably means that you did not store the object reference in a variable, or that the variable was not used to construct the network.\nThe object was created here (most recent call only):\n  File '/usr/local/lib/python3.12/site-packages/_pytest/python.py', line 157, in pytest_pyfunc_call\n    result = testfunction(**testargs) [brian2.core.base.unused_brian_object]\n",
+  "junit": "<?xml version=\"1.0\" encoding=\"utf-8\"?><testsuites name=\"pytest tests\"><testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"55\" time=\"596.126\" timestamp=\"2026-10-10T09:11:53.795518+00:00\" hostname=\"modal\"><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]\" time=\"58.237\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]\" time=\"0.546\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]\" time=\"49.958\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]\" time=\"1.113\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_frontend_dynamic_gpu_combinations[cuda-None-refractory]\" time=\"8.854\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_frontend_dynamic_gpu_combinations[cuda-3-selective]\" time=\"8.551\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu\" name=\"test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]\" time=\"2.302\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu_mpi\" name=\"test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]\" time=\"7.220\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu_mpi\" name=\"test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]\" time=\"6.960\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu_mpi\" name=\"test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]\" time=\"1.202\" /><testcase classname=\"brian2-rust.tests.test_training_dynamic_gpu_mpi\" name=\"test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]\" time=\"3.076\" /><testcase classname=\"brian2-rust.tests.test_training_external_state_inputs\" name=\"test_external_state_physics_and_all_table_vjps[cuda-2-True]\" time=\"7.477\" /><testcase classname=\"brian2-rust.tests.test_training_external_state_inputs\" name=\"test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]\" time=\"3.428\" /><testcase classname=\"brian2-rust.tests.test_training_linked\" name=\"test_linked_metal_and_mpi[cuda-2-summed]\" time=\"32.242\" /><testcase classname=\"brian2-rust.tests.test_training_multiclock_synapses\" name=\"test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]\" time=\"97.893\" /><testcase classname=\"brian2-rust.tests.test_training_stochastic_synaptic_endpoints\" name=\"test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]\" time=\"14.603\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]\" time=\"2.033\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]\" time=\"2.127\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]\" time=\"2.067\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]\" time=\"2.087\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]\" time=\"2.059\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]\" time=\"2.085\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]\" time=\"2.142\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]\" time=\"2.195\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]\" time=\"6.141\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]\" time=\"5.871\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]\" time=\"5.646\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]\" time=\"5.885\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]\" time=\"5.504\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]\" time=\"5.800\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]\" time=\"5.392\" /><testcase classname=\"brian2-rust.tests.test_training_fresh_readonly\" name=\"test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]\" time=\"5.445\" /><testcase classname=\"brian2-rust.tests.test_training_event_delay_integrations\" name=\"test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]\" time=\"1.787\" /><testcase classname=\"brian2-rust.tests.test_training_captured_path_delays\" name=\"test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]\" time=\"0.944\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_matches_compiled_brian[cuda-euler-False]\" time=\"74.712\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_matches_compiled_brian[cuda-euler-True]\" time=\"19.728\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_matches_compiled_brian[cuda-rk4-False]\" time=\"15.632\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_matches_compiled_brian[cuda-rk4-True]\" time=\"11.315\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-True-None-False-False]\" time=\"0.578\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-True-None-False-True]\" time=\"0.621\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-True-None-True-False]\" time=\"17.779\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-True-None-True-True]\" time=\"0.563\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-False-2-False-False]\" time=\"0.534\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-False-2-False-True]\" time=\"0.575\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-False-2-True-False]\" time=\"0.568\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_every_float_vjp[cuda-False-2-True-True]\" time=\"0.512\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]\" time=\"6.508\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]\" time=\"7.175\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]\" time=\"6.233\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]\" time=\"6.085\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]\" time=\"13.140\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]\" time=\"12.970\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]\" time=\"12.488\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]\" time=\"12.611\" /><testcase classname=\"brian2-rust.tests.test_training_implicit_refractory\" name=\"test_scalar_temporary_reassignment_keeps_brian_rejection\" time=\"0.776\" /></testsuite></testsuites>",
+  "gpu": "NVIDIA L4, GPU-f3756864-37c9-c6fb-b75e-192aa5502256\n",
+  "payload_sha256": "78919364a6b9f1b4c6e065f9715647200259672500567f5e6cd487042ce6a2b4",
+  "native_linux_sha256": "7c8e690f5ef637ffd3d53b2682c82a7a2984241f1d89873a8c46b1c60aed3cd4",
+  "prebuilt_cuda_library_sha256": "8477f26d597dc182ead1df44328ca584804a0931151b92df76a970424ae683ed",
+  "generated_kernel_sha256": "e916d4d4dad331e2339cd04f24b9a87c435ebe9c912661aabf35866680073a1a",
+  "cpu_image_collection": {
+    "exitstatus": 0,
+    "collected": [
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_dynamic_gpu_all_states_vjp[cuda-True-2-False-3-True]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_native_noise_and_independent_parameter_derivatives[cuda-False-None]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_delayed_history_independent_initial_state_derivatives[cuda-3-True]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-None-refractory]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_frontend_dynamic_gpu_combinations[cuda-3-selective]",
+      "brian2-rust/tests/test_training_dynamic_gpu.py::test_gpu_carry_migration_checkpoint_and_optimizer[cuda-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_owner_dynamic_mpi_matches_serial_and_cpu[cuda-False-True-None-8]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_frontend_mpi_state_carry_migration_checkpoint[cuda-2-summed_noise]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_nonroot_owner_domain_error_aborts_transactionally[cuda-2]",
+      "brian2-rust/tests/test_training_dynamic_gpu_mpi.py::test_mpi_autapse_aliases_preserve_snapshot_and_writeback[cuda-True-True-2]",
+      "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_physics_and_all_table_vjps[cuda-2-True]",
+      "brian2-rust/tests/test_training_external_state_inputs.py::test_external_state_carry_replace_and_new_trainer_restore[cuda-True-2]",
+      "brian2-rust/tests/test_training_linked.py::test_linked_metal_and_mpi[cuda-2-summed]",
+      "brian2-rust/tests/test_training_multiclock_synapses.py::test_multiclock_continuous_summed_full_vjp[cuda-2-True-0.61]",
+      "brian2-rust/tests/test_training_stochastic_synaptic_endpoints.py::test_stochastic_endpoint_batch_draw_addresses_and_mean_vjp[cuda-milstein]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-False-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-None-True-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-False-gradients-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-evaluate-dynamic]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-sde]",
+      "brian2-rust/tests/test_training_fresh_readonly.py::test_fresh_readonly_preserves_checkpoint_and_next_train[cuda-2-True-gradients-dynamic]",
+      "brian2-rust/tests/test_training_event_delay_integrations.py::test_shared_delay_state_adjoint_is_accumulated_across_edges[cuda]",
+      "brian2-rust/tests/test_training_captured_path_delays.py::test_captured_delay_all_bank_initial_vjps[cuda-2-None-increase-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-euler-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_matches_compiled_brian[cuda-rk4-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-True-None-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_every_float_vjp[cuda-False-2-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-2-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-False-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-False]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_implicit_condition_mpi_carry_checkpoint_rollback[cuda-8-True-True]",
+      "brian2-rust/tests/test_training_implicit_refractory.py::test_scalar_temporary_reassignment_keeps_brian_rejection"
+    ],
+    "reports": [],
+    "validation_library_copies": 0,
+    "imported_source_paths": {
+      "brian2.units.fundamentalunits": "/workspace/brian2/units/fundamentalunits.py",
+      "brian2.units.allunits": "/workspace/brian2/units/allunits.py",
+      "brian2.units.unitsafefunctions": "/workspace/brian2/units/unitsafefunctions.py",
+      "brian2.units.stdunits": "/workspace/brian2/units/stdunits.py",
+      "brian2.units": "/workspace/brian2/units/__init__.py",
+      "brian2.numpy_": "/workspace/brian2/numpy_.py",
+      "brian2._version": "/workspace/brian2/_version.py",
+      "brian2.core": "/workspace/brian2/core/__init__.py",
+      "brian2.utils.stringtools": "/workspace/brian2/utils/stringtools.py",
+      "brian2.core.preferences": "/workspace/brian2/core/preferences.py",
+      "brian2.utils.environment": "/workspace/brian2/utils/environment.py",
+      "brian2.utils.logger": "/workspace/brian2/utils/logger.py",
+      "brian2.utils": "/workspace/brian2/utils/__init__.py",
+      "brian2.core.tracking": "/workspace/brian2/core/tracking.py",
+      "brian2.core.names": "/workspace/brian2/core/names.py",
+      "brian2.core.spikesource": "/workspace/brian2/core/spikesource.py",
+      "brian2.utils.caching": "/workspace/brian2/utils/caching.py",
+      "brian2.core.base": "/workspace/brian2/core/base.py",
+      "brian2.core.variables": "/workspace/brian2/core/variables.py",
+      "brian2.core.functions": "/workspace/brian2/core/functions.py",
+      "brian2.parsing": "/workspace/brian2/parsing/__init__.py",
+      "brian2.parsing.rendering": "/workspace/brian2/parsing/rendering.py",
+      "brian2.parsing.sympytools": "/workspace/brian2/parsing/sympytools.py",
+      "brian2.equations.codestrings": "/workspace/brian2/equations/codestrings.py",
+      "brian2.core.namespace": "/workspace/brian2/core/namespace.py",
+      "brian2.utils.topsort": "/workspace/brian2/utils/topsort.py",
+      "brian2.parsing.expressions": "/workspace/brian2/parsing/expressions.py",
+      "brian2.parsing.statements": "/workspace/brian2/parsing/statements.py",
+      "brian2.equations.unitcheck": "/workspace/brian2/equations/unitcheck.py",
+      "brian2.equations.equations": "/workspace/brian2/equations/equations.py",
+      "brian2.equations": "/workspace/brian2/equations/__init__.py",
+      "brian2.parsing.bast": "/workspace/brian2/parsing/bast.py",
+      "brian2.codegen.statements": "/workspace/brian2/codegen/statements.py",
+      "brian2.codegen.optimisation": "/workspace/brian2/codegen/optimisation.py",
+      "brian2.codegen.translation": "/workspace/brian2/codegen/translation.py",
+      "brian2.codegen.indices": "/workspace/brian2/codegen/indices.py",
+      "brian2.codegen.codeobject": "/workspace/brian2/codegen/codeobject.py",
+      "brian2.codegen.permutation_analysis": "/workspace/brian2/codegen/permutation_analysis.py",
+      "brian2.codegen.generators.base": "/workspace/brian2/codegen/generators/base.py",
+      "brian2.utils.filetools": "/workspace/brian2/utils/filetools.py",
+      "brian2.codegen.cpp_prefs": "/workspace/brian2/codegen/cpp_prefs.py",
+      "brian2.codegen.generators.cpp_generator": "/workspace/brian2/codegen/generators/cpp_generator.py",
+      "brian2.codegen.generators.numpy_generator": "/workspace/brian2/codegen/generators/numpy_generator.py",
+      "brian2.codegen.targets": "/workspace/brian2/codegen/targets.py",
+      "brian2.memory": "/workspace/brian2/memory/__init__.py",
+      "brian2.memory.cythondynamicarray": "/workspace/brian2/memory/cythondynamicarray.cpython-312-x86_64-linux-gnu.so",
+      "brian2.memory.dynamicarray": "/workspace/brian2/memory/dynamicarray.py",
+      "brian2.devices.device": "/workspace/brian2/devices/device.py",
+      "brian2.devices": "/workspace/brian2/devices/__init__.py",
+      "brian2.codegen.generators.cython_generator": "/workspace/brian2/codegen/generators/cython_generator.py",
+      "brian2.codegen.generators.GSL_generator": "/workspace/brian2/codegen/generators/GSL_generator.py",
+      "brian2.codegen.generators": "/workspace/brian2/codegen/generators/__init__.py",
+      "brian2.codegen.templates": "/workspace/brian2/codegen/templates.py",
+      "brian2.codegen.runtime.numpy_rt.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/numpy_rt.py",
+      "brian2.codegen.runtime.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/__init__.py",
+      "brian2.utils.filelock": "/workspace/brian2/utils/filelock.py",
+      "brian2.codegen.runtime.cython_rt.extension_manager": "/workspace/brian2/codegen/runtime/cython_rt/extension_manager.py",
+      "brian2.codegen.runtime.cython_rt.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/cython_rt.py",
+      "brian2.codegen.runtime.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/__init__.py",
+      "brian2.codegen.runtime.GSLcython_rt.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/GSLcython_rt.py",
+      "brian2.codegen.runtime.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/__init__.py",
+      "brian2.codegen.runtime": "/workspace/brian2/codegen/runtime/__init__.py",
+      "brian2.codegen._prefs": "/workspace/brian2/codegen/_prefs.py",
+      "brian2.codegen": "/workspace/brian2/codegen/__init__.py",
+      "brian2.importexport.importexport": "/workspace/brian2/importexport/importexport.py",
+      "brian2.importexport.dictlike": "/workspace/brian2/importexport/dictlike.py",
+      "brian2.importexport": "/workspace/brian2/importexport/__init__.py",
+      "brian2.groups.group": "/workspace/brian2/groups/group.py",
+      "brian2.equations.refractory": "/workspace/brian2/equations/refractory.py",
+      "brian2.stateupdaters.base": "/workspace/brian2/stateupdaters/base.py",
+      "brian2.stateupdaters.exact": "/workspace/brian2/stateupdaters/exact.py",
+      "brian2.stateupdaters.explicit": "/workspace/brian2/stateupdaters/explicit.py",
+      "brian2.stateupdaters.exponential_euler": "/workspace/brian2/stateupdaters/exponential_euler.py",
+      "brian2.stateupdaters.GSL": "/workspace/brian2/stateupdaters/GSL.py",
+      "brian2.stateupdaters": "/workspace/brian2/stateupdaters/__init__.py",
+      "brian2.groups.subgroup": "/workspace/brian2/groups/subgroup.py",
+      "brian2.groups.neurongroup": "/workspace/brian2/groups/neurongroup.py",
+      "brian2.groups": "/workspace/brian2/groups/__init__.py",
+      "brian2.core.clocks": "/workspace/brian2/core/clocks.py",
+      "brian2.synapses.parse_synaptic_generator_syntax": "/workspace/brian2/synapses/parse_synaptic_generator_syntax.py",
+      "brian2.utils.arrays": "/workspace/brian2/utils/arrays.py",
+      "brian2.synapses.synapses": "/workspace/brian2/synapses/synapses.py",
+      "brian2.synapses": "/workspace/brian2/synapses/__init__.py",
+      "brian2.core.network": "/workspace/brian2/core/network.py",
+      "brian2.core.magic": "/workspace/brian2/core/magic.py",
+      "brian2.core.operations": "/workspace/brian2/core/operations.py",
+      "brian2.monitors.ratemonitor": "/workspace/brian2/monitors/ratemonitor.py",
+      "brian2.monitors.spikemonitor": "/workspace/brian2/monitors/spikemonitor.py",
+      "brian2.monitors.statemonitor": "/workspace/brian2/monitors/statemonitor.py",
+      "brian2.monitors": "/workspace/brian2/monitors/__init__.py",
+      "brian2.input.binomial": "/workspace/brian2/input/binomial.py",
+      "brian2.input.poissongroup": "/workspace/brian2/input/poissongroup.py",
+      "brian2.input.poissoninput": "/workspace/brian2/input/poissoninput.py",
+      "brian2.input.spikegeneratorgroup": "/workspace/brian2/input/spikegeneratorgroup.py",
+      "brian2.input.timedarray": "/workspace/brian2/input/timedarray.py",
+      "brian2.input": "/workspace/brian2/input/__init__.py",
+      "brian2.spatialneuron.morphology": "/workspace/brian2/spatialneuron/morphology.py",
+      "brian2.spatialneuron.spatialneuron": "/workspace/brian2/spatialneuron/spatialneuron.py",
+      "brian2.spatialneuron": "/workspace/brian2/spatialneuron/__init__.py",
+      "brian2.devices.cpp_standalone.codeobject": "/workspace/brian2/devices/cpp_standalone/codeobject.py",
+      "brian2.devices.cpp_standalone.device": "/workspace/brian2/devices/cpp_standalone/device.py",
+      "brian2.devices.cpp_standalone.GSLcodeobject": "/workspace/brian2/devices/cpp_standalone/GSLcodeobject.py",
+      "brian2.devices.cpp_standalone": "/workspace/brian2/devices/cpp_standalone/__init__.py",
+      "brian2.core.core_preferences": "/workspace/brian2/core/core_preferences.py",
+      "brian2.tests": "/workspace/brian2/tests/__init__.py",
+      "brian2.only": "/workspace/brian2/only.py",
+      "brian2": "/workspace/brian2/__init__.py",
+      "brian2_rust.encoded_array": "/workspace/brian2-rust/python/brian2_rust/encoded_array.py",
+      "brian2_rust.protocol": "/workspace/brian2-rust/python/brian2_rust/protocol.py",
+      "brian2_rust.codegen_sums": "/workspace/brian2-rust/python/brian2_rust/codegen_sums.py",
+      "brian2_rust.schedule": "/workspace/brian2-rust/python/brian2_rust/schedule.py",
+      "brian2_rust.planner": "/workspace/brian2-rust/python/brian2_rust/planner.py",
+      "brian2_rust.plan": "/workspace/brian2-rust/python/brian2_rust/plan.py",
+      "brian2_rust.native": "/workspace/brian2-rust/python/brian2_rust/native.py",
+      "brian2_rust.results": "/workspace/brian2-rust/python/brian2_rust/results.py",
+      "brian2_rust.artifact": "/workspace/brian2-rust/python/brian2_rust/artifact.py",
+      "brian2_rust.capabilities": "/workspace/brian2-rust/python/brian2_rust/capabilities.py",
+      "brian2_rust.monitor_observables": "/workspace/brian2-rust/python/brian2_rust/monitor_observables.py",
+      "brian2_rust.resource_limits": "/workspace/brian2-rust/python/brian2_rust/resource_limits.py",
+      "brian2_rust.spec": "/workspace/brian2-rust/python/brian2_rust/spec.py",
+      "brian2_rust.topology": "/workspace/brian2-rust/python/brian2_rust/topology.py",
+      "brian2_rust.export": "/workspace/brian2-rust/python/brian2_rust/export.py",
+      "brian2_rust.device": "/workspace/brian2-rust/python/brian2_rust/device.py",
+      "brian2_rust.streaming": "/workspace/brian2-rust/python/brian2_rust/streaming.py",
+      "brian2_rust.distributed": "/workspace/brian2-rust/python/brian2_rust/distributed.py",
+      "brian2_rust.gpu_autotune": "/workspace/brian2-rust/python/brian2_rust/gpu_autotune.py",
+      "brian2_rust.gpu_tuning_cache": "/workspace/brian2-rust/python/brian2_rust/gpu_tuning_cache.py",
+      "brian2_rust.wasm": "/workspace/brian2-rust/python/brian2_rust/wasm.py",
+      "brian2_rust.training": "/workspace/brian2-rust/python/brian2_rust/training.py",
+      "brian2_rust.training_graph": "/workspace/brian2-rust/python/brian2_rust/training_graph.py",
+      "brian2_rust.training_equations": "/workspace/brian2-rust/python/brian2_rust/training_equations.py",
+      "brian2_rust.training_inputs": "/workspace/brian2-rust/python/brian2_rust/training_inputs.py",
+      "brian2_rust.training_functions": "/workspace/brian2-rust/python/brian2_rust/training_functions.py",
+      "brian2_rust.training_effects": "/workspace/brian2-rust/python/brian2_rust/training_effects.py",
+      "brian2_rust.training_brian_regular": "/workspace/brian2-rust/python/brian2_rust/training_brian_regular.py",
+      "brian2_rust.training_brian": "/workspace/brian2-rust/python/brian2_rust/training_brian.py",
+      "brian2_rust.training_dynamic": "/workspace/brian2-rust/python/brian2_rust/training_dynamic.py",
+      "brian2_rust.training_queue": "/workspace/brian2-rust/python/brian2_rust/training_queue.py",
+      "brian2_rust.training_brian_events": "/workspace/brian2-rust/python/brian2_rust/training_brian_events.py",
+      "brian2_rust.training_brian_dynamic": "/workspace/brian2-rust/python/brian2_rust/training_brian_dynamic.py",
+      "brian2_rust": "/workspace/brian2-rust/python/brian2_rust/__init__.py"
+    },
+    "outside_payload_imports": {}
+  },
+  "cpu_cuda_source_tests": {
+    "exitstatus": 0,
+    "collected": [
+      "brian2-rust/tests/test_training_cuda_source.py::test_all_cuda_shader_helpers_are_device_functions",
+      "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[False]",
+      "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[True]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[math]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_vjp]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_boundary]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[vjp_activity]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_vjp_activity]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_timed_input]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_poisson]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[scalar_context]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[bitwise]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[sequence]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[boolean_eager]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_shared]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_checkpoint]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_persistent]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_candidate]",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_accepts_all_actual_host_exports",
+      "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_rejects_mangled_sequence_symbol"
+    ],
+    "reports": [
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_all_cuda_shader_helpers_are_device_functions",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00033601699999996626
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_all_cuda_shader_helpers_are_device_functions",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.034503260999999785
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_all_cuda_shader_helpers_are_device_functions",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00030959699999977275
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[False]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0028664329999998905
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[False]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.09014094900000025
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[False]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0003412869999999124
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[True]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0008327920000001932
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[True]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.08198749599999999
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_source.py::test_real_cuda_frontend_checks_scalar_helper_calls[True]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00033604699999978394
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[math]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.13799822100000014
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[math]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00023173800000009237
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[math]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0002818969999998089
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0002708580000003735
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00016128899999978685
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021371800000036245
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_vjp]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00026216799999989604
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_vjp]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015779899999968094
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_vjp]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0002183080000000004
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_boundary]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0004907749999998323
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_boundary]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00016030800000033096
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_boundary]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021653800000009937
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[vjp_activity]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00025340700000020533
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[vjp_activity]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015500799999967896
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[vjp_activity]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0002133180000001289
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_vjp_activity]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0002454969999998724
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_vjp_activity]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015738799999986952
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_vjp_activity]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021106799999959236
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_timed_input]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00026611799999987085
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_timed_input]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0001543390000002809
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_timed_input]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00020946799999999044
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_poisson]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00025359800000002153
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_poisson]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015379900000001
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[static_poisson]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021173799999996135
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[scalar_context]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00027127800000004143
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[scalar_context]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0001553490000003599
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[scalar_context]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021363799999996047
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[bitwise]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0002514879999999664
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[bitwise]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015412800000014215
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[bitwise]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021028800000033598
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[sequence]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00024400699999960196
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[sequence]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00016252800000016165
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[sequence]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00020864800000008898
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[boolean_eager]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00024242799999996123
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[boolean_eager]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00016515900000024786
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[boolean_eager]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0002108779999998589
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_shared]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00024244800000028377
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_shared]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0001535389999998138
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_shared]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021080799999984023
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_checkpoint]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0002437770000001116
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_checkpoint]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.00015098800000012957
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_checkpoint]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00022143800000007374
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_persistent]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00024355699999967229
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_persistent]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0001528689999998889
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_persistent]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00021861799999989273
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_candidate]",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00024256799999999856
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_candidate]",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0001534089999997157
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_actual_cpp_capability_export_is_callable_from_c[poisson_candidate]",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.0002083179999998741
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_accepts_all_actual_host_exports",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.00022850800000018268
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_accepts_all_actual_host_exports",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.0005596640000002928
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_accepts_all_actual_host_exports",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00020913800000021965
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_rejects_mangled_sequence_symbol",
+        "when": "setup",
+        "outcome": "passed",
+        "duration": 0.0007461529999996941
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_rejects_mangled_sequence_symbol",
+        "when": "call",
+        "outcome": "passed",
+        "duration": 0.135611194
+      },
+      {
+        "nodeid": "brian2-rust/tests/test_training_cuda_exports.py::test_preflight_rejects_mangled_sequence_symbol",
+        "when": "teardown",
+        "outcome": "passed",
+        "duration": 0.00038634599999998187
+      }
+    ],
+    "validation_library_copies": 0,
+    "imported_source_paths": {
+      "brian2.units.fundamentalunits": "/workspace/brian2/units/fundamentalunits.py",
+      "brian2.units.allunits": "/workspace/brian2/units/allunits.py",
+      "brian2.units.unitsafefunctions": "/workspace/brian2/units/unitsafefunctions.py",
+      "brian2.units.stdunits": "/workspace/brian2/units/stdunits.py",
+      "brian2.units": "/workspace/brian2/units/__init__.py",
+      "brian2.numpy_": "/workspace/brian2/numpy_.py",
+      "brian2._version": "/workspace/brian2/_version.py",
+      "brian2.core": "/workspace/brian2/core/__init__.py",
+      "brian2.utils.stringtools": "/workspace/brian2/utils/stringtools.py",
+      "brian2.core.preferences": "/workspace/brian2/core/preferences.py",
+      "brian2.utils.environment": "/workspace/brian2/utils/environment.py",
+      "brian2.utils.logger": "/workspace/brian2/utils/logger.py",
+      "brian2.utils": "/workspace/brian2/utils/__init__.py",
+      "brian2.core.tracking": "/workspace/brian2/core/tracking.py",
+      "brian2.core.names": "/workspace/brian2/core/names.py",
+      "brian2.core.spikesource": "/workspace/brian2/core/spikesource.py",
+      "brian2.utils.caching": "/workspace/brian2/utils/caching.py",
+      "brian2.core.base": "/workspace/brian2/core/base.py",
+      "brian2.core.variables": "/workspace/brian2/core/variables.py",
+      "brian2.core.functions": "/workspace/brian2/core/functions.py",
+      "brian2.parsing": "/workspace/brian2/parsing/__init__.py",
+      "brian2.parsing.rendering": "/workspace/brian2/parsing/rendering.py",
+      "brian2.parsing.sympytools": "/workspace/brian2/parsing/sympytools.py",
+      "brian2.equations.codestrings": "/workspace/brian2/equations/codestrings.py",
+      "brian2.core.namespace": "/workspace/brian2/core/namespace.py",
+      "brian2.utils.topsort": "/workspace/brian2/utils/topsort.py",
+      "brian2.parsing.expressions": "/workspace/brian2/parsing/expressions.py",
+      "brian2.parsing.statements": "/workspace/brian2/parsing/statements.py",
+      "brian2.equations.unitcheck": "/workspace/brian2/equations/unitcheck.py",
+      "brian2.equations.equations": "/workspace/brian2/equations/equations.py",
+      "brian2.equations": "/workspace/brian2/equations/__init__.py",
+      "brian2.parsing.bast": "/workspace/brian2/parsing/bast.py",
+      "brian2.codegen.statements": "/workspace/brian2/codegen/statements.py",
+      "brian2.codegen.optimisation": "/workspace/brian2/codegen/optimisation.py",
+      "brian2.codegen.translation": "/workspace/brian2/codegen/translation.py",
+      "brian2.codegen.indices": "/workspace/brian2/codegen/indices.py",
+      "brian2.codegen.codeobject": "/workspace/brian2/codegen/codeobject.py",
+      "brian2.codegen.permutation_analysis": "/workspace/brian2/codegen/permutation_analysis.py",
+      "brian2.codegen.generators.base": "/workspace/brian2/codegen/generators/base.py",
+      "brian2.utils.filetools": "/workspace/brian2/utils/filetools.py",
+      "brian2.codegen.cpp_prefs": "/workspace/brian2/codegen/cpp_prefs.py",
+      "brian2.codegen.generators.cpp_generator": "/workspace/brian2/codegen/generators/cpp_generator.py",
+      "brian2.codegen.generators.numpy_generator": "/workspace/brian2/codegen/generators/numpy_generator.py",
+      "brian2.codegen.targets": "/workspace/brian2/codegen/targets.py",
+      "brian2.memory": "/workspace/brian2/memory/__init__.py",
+      "brian2.memory.cythondynamicarray": "/workspace/brian2/memory/cythondynamicarray.cpython-312-x86_64-linux-gnu.so",
+      "brian2.memory.dynamicarray": "/workspace/brian2/memory/dynamicarray.py",
+      "brian2.devices.device": "/workspace/brian2/devices/device.py",
+      "brian2.devices": "/workspace/brian2/devices/__init__.py",
+      "brian2.codegen.generators.cython_generator": "/workspace/brian2/codegen/generators/cython_generator.py",
+      "brian2.codegen.generators.GSL_generator": "/workspace/brian2/codegen/generators/GSL_generator.py",
+      "brian2.codegen.generators": "/workspace/brian2/codegen/generators/__init__.py",
+      "brian2.codegen.templates": "/workspace/brian2/codegen/templates.py",
+      "brian2.codegen.runtime.numpy_rt.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/numpy_rt.py",
+      "brian2.codegen.runtime.numpy_rt": "/workspace/brian2/codegen/runtime/numpy_rt/__init__.py",
+      "brian2.utils.filelock": "/workspace/brian2/utils/filelock.py",
+      "brian2.codegen.runtime.cython_rt.extension_manager": "/workspace/brian2/codegen/runtime/cython_rt/extension_manager.py",
+      "brian2.codegen.runtime.cython_rt.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/cython_rt.py",
+      "brian2.codegen.runtime.cython_rt": "/workspace/brian2/codegen/runtime/cython_rt/__init__.py",
+      "brian2.codegen.runtime.GSLcython_rt.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/GSLcython_rt.py",
+      "brian2.codegen.runtime.GSLcython_rt": "/workspace/brian2/codegen/runtime/GSLcython_rt/__init__.py",
+      "brian2.codegen.runtime": "/workspace/brian2/codegen/runtime/__init__.py",
+      "brian2.codegen._prefs": "/workspace/brian2/codegen/_prefs.py",
+      "brian2.codegen": "/workspace/brian2/codegen/__init__.py",
+      "brian2.importexport.importexport": "/workspace/brian2/importexport/importexport.py",
+      "brian2.importexport.dictlike": "/workspace/brian2/importexport/dictlike.py",
+      "brian2.importexport": "/workspace/brian2/importexport/__init__.py",
+      "brian2.groups.group": "/workspace/brian2/groups/group.py",
+      "brian2.equations.refractory": "/workspace/brian2/equations/refractory.py",
+      "brian2.stateupdaters.base": "/workspace/brian2/stateupdaters/base.py",
+      "brian2.stateupdaters.exact": "/workspace/brian2/stateupdaters/exact.py",
+      "brian2.stateupdaters.explicit": "/workspace/brian2/stateupdaters/explicit.py",
+      "brian2.stateupdaters.exponential_euler": "/workspace/brian2/stateupdaters/exponential_euler.py",
+      "brian2.stateupdaters.GSL": "/workspace/brian2/stateupdaters/GSL.py",
+      "brian2.stateupdaters": "/workspace/brian2/stateupdaters/__init__.py",
+      "brian2.groups.subgroup": "/workspace/brian2/groups/subgroup.py",
+      "brian2.groups.neurongroup": "/workspace/brian2/groups/neurongroup.py",
+      "brian2.groups": "/workspace/brian2/groups/__init__.py",
+      "brian2.core.clocks": "/workspace/brian2/core/clocks.py",
+      "brian2.synapses.parse_synaptic_generator_syntax": "/workspace/brian2/synapses/parse_synaptic_generator_syntax.py",
+      "brian2.utils.arrays": "/workspace/brian2/utils/arrays.py",
+      "brian2.synapses.synapses": "/workspace/brian2/synapses/synapses.py",
+      "brian2.synapses": "/workspace/brian2/synapses/__init__.py",
+      "brian2.core.network": "/workspace/brian2/core/network.py",
+      "brian2.core.magic": "/workspace/brian2/core/magic.py",
+      "brian2.core.operations": "/workspace/brian2/core/operations.py",
+      "brian2.monitors.ratemonitor": "/workspace/brian2/monitors/ratemonitor.py",
+      "brian2.monitors.spikemonitor": "/workspace/brian2/monitors/spikemonitor.py",
+      "brian2.monitors.statemonitor": "/workspace/brian2/monitors/statemonitor.py",
+      "brian2.monitors": "/workspace/brian2/monitors/__init__.py",
+      "brian2.input.binomial": "/workspace/brian2/input/binomial.py",
+      "brian2.input.poissongroup": "/workspace/brian2/input/poissongroup.py",
+      "brian2.input.poissoninput": "/workspace/brian2/input/poissoninput.py",
+      "brian2.input.spikegeneratorgroup": "/workspace/brian2/input/spikegeneratorgroup.py",
+      "brian2.input.timedarray": "/workspace/brian2/input/timedarray.py",
+      "brian2.input": "/workspace/brian2/input/__init__.py",
+      "brian2.spatialneuron.morphology": "/workspace/brian2/spatialneuron/morphology.py",
+      "brian2.spatialneuron.spatialneuron": "/workspace/brian2/spatialneuron/spatialneuron.py",
+      "brian2.spatialneuron": "/workspace/brian2/spatialneuron/__init__.py",
+      "brian2.devices.cpp_standalone.codeobject": "/workspace/brian2/devices/cpp_standalone/codeobject.py",
+      "brian2.devices.cpp_standalone.device": "/workspace/brian2/devices/cpp_standalone/device.py",
+      "brian2.devices.cpp_standalone.GSLcodeobject": "/workspace/brian2/devices/cpp_standalone/GSLcodeobject.py",
+      "brian2.devices.cpp_standalone": "/workspace/brian2/devices/cpp_standalone/__init__.py",
+      "brian2.core.core_preferences": "/workspace/brian2/core/core_preferences.py",
+      "brian2.tests": "/workspace/brian2/tests/__init__.py",
+      "brian2.only": "/workspace/brian2/only.py",
+      "brian2": "/workspace/brian2/__init__.py"
+    },
+    "outside_payload_imports": {}
+  },
+  "brian_linux_build": {
+    "memory/cythondynamicarray.cpp": "f489f39bb31c08562ba0a738443162c22ee932ab099b843c361c1574567ff0d8",
+    "synapses/cythonspikequeue.cpp": "c4a8fe89b040a665cf64a7f3de6ebd589e3456bc9d5fba37dd0d7e1d1b6adb23",
+    "memory/cythondynamicarray.cpython-312-x86_64-linux-gnu.so": "c8ed1b52962651bf53d76ea012bb05ed0f1fbf2b96a60edc56991c4dc3fca905",
+    "synapses/cythonspikequeue.cpython-312-x86_64-linux-gnu.so": "80c68e853e38019c90146c7d8351d398a54f0b45a080be6c67fd4298da4366d3"
+  },
+  "mpi_preflight": {
+    "passed": true,
+    "results": [
+      {
+        "ranks": 2,
+        "identities": [
+          {
+            "rank": 0,
+            "size": 2,
+            "total": 3.0
+          },
+          {
+            "rank": 1,
+            "size": 2,
+            "total": 3.0
+          }
+        ],
+        "native_matches_serial": true
+      },
+      {
+        "ranks": 4,
+        "identities": [
+          {
+            "rank": 0,
+            "size": 4,
+            "total": 10.0
+          },
+          {
+            "rank": 1,
+            "size": 4,
+            "total": 10.0
+          },
+          {
+            "rank": 2,
+            "size": 4,
+            "total": 10.0
+          },
+          {
+            "rank": 3,
+            "size": 4,
+            "total": 10.0
+          }
+        ],
+        "native_matches_serial": true
+      }
+    ],
+    "compiler": "cc -I/usr/local/include -L/usr/local/lib -Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags -lmpi",
+    "launcher": "HYDRA build details:\n    Version:                                 5.0.1\n    Release Date:                            Fri Apr 10 09:45:31 AM CDT 2026\n    CC:                              cc\n    Configure options:                       --with-device=ch4:ucx,ofi --with-pm=hydra:gforker\n    Process Manager:                         pmi\n    Launchers available:                     ssh rsh fork slurm ll lsf sge manual persist\n    Topology libraries available:            hwloc\n    Resource management kernels available:   user slurm ll lsf sge pbs cobalt\n    Demux engines available:                 poll select\n",
+    "runner": "/workspace/brian2-rust/target/release/b2-train",
+    "shim_source": "/workspace/brian2-rust/python/brian2_rust/training_mpi.c"
+  },
+  "limits": {
+    "gpu": "L4",
+    "physical_gpus": 1,
+    "max_containers": 1,
+    "container_seconds": 900,
+    "pytest_seconds": 720,
+    "retries": 0,
+    "single_use_containers": true
+  },
+  "scope": "current-source CUDA contract regression; local MPI shares device 0; cross-host deferred",
+  "payload_changes": {},
+  "working_directory": "/tmp/b2-cuda-tests-nlzdwlzc",
+  "goal_complete": false
+}
