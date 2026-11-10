@@ -6,6 +6,7 @@ title: "Brian2 Atlas research compendium: A Unified Intermediate Representation 
 authors:
   - family-names: Li
     given-names: Xinjun
+    orcid: "https://orcid.org/0009-0005-8381-0416"
 repository-code: https://github.com/RockLi/brian2-atlas-preprint
 license:
   - Apache-2.0
